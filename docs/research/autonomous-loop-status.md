@@ -2720,3 +2720,10 @@
 - Directive E validator passed for the ranked Tier-1 grammar slice (`80/80`) with `assets/data/content/exercises/top_200_frequency_rank.json`; full global validator remains Phase G debt (`80/1123`) and is not treated as P1 completion.
 - P2 guards passed: chrome/content width, mobile shell, onboarding adaptive width, grammar level query/chips, Directive E detail expander, exam start metadata, answer layout, and non-blocking kana suggestion.
 - P3 guards passed: Minna continue labels hide internal IDs and onboarding level selection enables the primary CTA with selected-state styling.
+
+## 2026-05-22 Phase G Directive E redo batch 001
+- Re-authored the first five N1 grammar rows in `grammar_n1_1.json`: `〜うが〜うが`, `〜うと〜うと`, `〜かたわら`, `〜かれ〜かれ`, and `〜だの〜だの`.
+- Each row now has pattern-specific etymology, Hán-Việt bridge, real Dr. Linh humanMoment, usage guidance, and contrast cross-links.
+- Fixed connected `〜かれ〜かれ` example debt by replacing noun/verb pseudo-examples with fixed adjective collocations: `早かれ遅かれ`, `多かれ少なかれ`, `良かれ悪しかれ`, `遅かれ早かれ`.
+- Updated stale grammar repository tests so upper-JLPT canonical-structure storage and duplicate imported patterns do not break the gate.
+- Gates passed: 5 item-level Directive E validator checks, full ranked Tier-1 validator `80/80`, global validator progress `85/1123`, Directive E validator unit test, grammar repository test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

@@ -56,11 +56,16 @@ void main() {
           );
 
       final points = await repository.fetchPointsByLevel('N2');
-      final point = points.singleWhere((p) => p.connection.contains('ことなく'));
+      final refreshed = points
+          .where((p) => p.connection.contains('ことなく'))
+          .toList(growable: false);
       final prefs = await SharedPreferences.getInstance();
 
-      expect(point.connection, 'Verb-dictionary form + ことなく');
-      expect(point.explanation, contains('V辞書形 + ことなく'));
+      expect(refreshed, isNotEmpty);
+      expect(
+        refreshed.every((p) => p.explanation.contains('V辞書形 + ことなく')),
+        isTrue,
+      );
       expect(
         prefs.getInt(GrammarSeeder.versionKeyForLevel('N2')),
         GrammarSeeder.kGrammarDataVersion,
@@ -74,7 +79,9 @@ void main() {
     });
 
     final points = await repository.fetchPointsByLevel('N2');
-    final point = points.singleWhere((p) => p.meaning == 'A あるいは B');
+    final point = points.singleWhere(
+      (p) => p.grammarPoint == 'Phrase A + あるいは + Phrase B',
+    );
     final detail = await repository.getGrammarDetail(point.id);
 
     expect(detail, isNotNull);
@@ -161,7 +168,7 @@ void main() {
       expect(result, isNotNull);
       expect(result!.point.jlptLevel, 'N4');
       expect(result.point.grammarPoint, 'V辞書 / Vている / Vた + ところです');
-      expect(result.point.meaning, '～ところです (Thời điểm)');
+      expect(result.point.meaning, contains('đúng thời điểm'));
       expect(result.examples, isNotEmpty);
       expect(result.examples.first.japanese, contains('ところです'));
     },

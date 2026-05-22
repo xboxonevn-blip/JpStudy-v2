@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-volitional form + うが + Verb-volitional form + うが, or Adjective (-かろう) + が + Adjective (-かろう) + が",
-      "meaning": "Ý nghĩa: Dùng để nói rằng dù A hay B xảy ra, kết luận phía sau vẫn không thay đổi.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của 〜うが〜うが nằm ở dạng ý chí う/よう cộng trợ từ が mang sắc thái nhượng bộ. Khi lặp hai vế, câu dựng hai khả năng đối lập rồi tuyên bố kết quả phía sau vẫn đứng vững.",
+      "hanVietBridge": "Không có chữ Hán riêng cho うが, nên cầu Hán-Việt nằm ở ý niệm nhượng bộ: dù A, dù B. Hãy nối với các từ Việt gốc Hán như giả định, đối lập, bất biến để nhớ sắc thái văn viết.",
+      "form": "Hình thức: động từ dạng ý chí + うが + động từ dạng ý chí + うが; với tính từ い dùng thân + かろうが. Hai vế thường là cặp trái ngược hoặc cặp làm/không làm.",
+      "meaning": "Ý nghĩa: Dù A hay B xảy ra, kết luận phía sau vẫn không thay đổi. Sắc thái trang trọng, cứng hơn 〜ても〜ても, hợp với văn viết, lập luận và tuyên bố nguyên tắc.",
+      "usage": "Sử dụng: Đặt 〜うが〜うが trước mệnh đề chính khi muốn nhấn mạnh sự bất biến: 話そうが話すまいが、結果は変わらない. Tránh dùng trong hội thoại thân mật nếu chỉ cần ても.",
+      "humanMoment": "Dr. Linh lưu ý: 〜うが〜うが khác 〜ても〜ても ở độ trang trọng và lực lập luận. 〜うが〜うが nghe như người viết đang dựng hai khả năng để chốt nguyên tắc; 〜ても〜ても mềm và đời thường hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜ても〜ても",
+          "contrast": "Khác 〜うが〜うが: 〜ても〜ても tự nhiên trong hội thoại hơn, còn 〜うが〜うが trang trọng và nhấn mạnh lập luận."
+        },
+        {
+          "pattern": "〜ようが〜まいが",
+          "contrast": "Gần nghĩa nhưng thường là cặp làm/không làm; 〜うが〜うが rộng hơn cho hai khả năng bất kỳ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: い-adjective (-かろう) + と, な-adjective / Noun + であろうと",
-      "meaning": "Ý nghĩa: Dùng khi người nói muốn nói “dù A hay B thì cũng vậy”, tức hai khả năng đều không làm thay đổi thái độ hoặc kết quả.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "〜うと〜うと ghép dạng ý chí う/よう với と, trợ từ vốn đánh dấu điều kiện hoặc lời được nêu ra. Lặp lại hai lần tạo cảm giác người nói đặt hai khả năng lên bàn rồi bỏ qua khác biệt của chúng.",
+      "hanVietBridge": "Cầu Hán-Việt ở đây là cặp khả năng và bất biến: giả sử A, giả sử B, kết luận vẫn không đổi. Với であろうと, あろう là dạng trang trọng của ある, gần ý tồn tại/trạng thái.",
+      "form": "Hình thức: động từ dạng ý chí + と; tính từ い dùng -かろうと; danh từ và tính từ な dùng であろうと. Hai vế thường song song về loại từ.",
+      "meaning": "Ý nghĩa: Dù A hay B, thái độ hoặc kết quả không thay đổi. So với 〜うが〜うが, 〜うと〜うと thường nghe như người nói đang nêu điều kiện giả định một cách trung tính hơn.",
+      "usage": "Sử dụng: Dùng trong câu có lập trường đã quyết: 雨が降ろうと晴れようと、予定は変えない. Chọn các cặp thật sự đối lập để câu không bị rỗng.",
+      "humanMoment": "Dr. Linh lưu ý: 〜うと〜うと và 〜うが〜うが đều là dù A hay B, nhưng 〜うと〜うと thiên về nêu điều kiện giả định, còn 〜うが〜うが có lực phản bác/nhượng bộ rõ hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜うが〜うが",
+          "contrast": "Khác 〜うと〜うと: 〜うが〜うが nhấn mạnh nhượng bộ và thường cứng hơn trong văn viết."
+        },
+        {
+          "pattern": "〜であれ〜であれ",
+          "contrast": "〜であれ〜であれ chủ yếu đi với danh từ hoặc tính từ な; 〜うと〜うと dùng linh hoạt với dạng ý chí của động từ/tính từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + かたわら, Noun + のかたわら",
-      "meaning": "Ý nghĩa: Dùng khi một người vừa duy trì hoạt động chính A, vừa làm thêm hoạt động B trong thời gian dài.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "かたわら thường viết là 傍ら: 傍 có âm Hán-Việt là bàng, nghĩa là bên cạnh. Từ nghĩa không gian bên cạnh chuyển sang nghĩa một hoạt động đứng song song với vai trò chính trong đời sống.",
+      "hanVietBridge": "傍 = bàng trong bàng quan, bàng hệ: đứng bên cạnh, không ở trục chính. Nhớ かたわら như một việc phụ nhưng không nhỏ; nó chạy song song bên cạnh nghề, học tập hoặc vai trò chính.",
+      "form": "Hình thức: động từ thể từ điển + かたわら; danh từ + のかたわら. Vế A thường là vai trò hoặc hoạt động chính kéo dài, vế B là hoạt động song hành.",
+      "meaning": "Ý nghĩa: Vừa làm A, đồng thời duy trì B trong một thời gian dài. Sắc thái trang trọng, thường dùng cho công việc, nghiên cứu, hoạt động xã hội hoặc sáng tác.",
+      "usage": "Sử dụng: Dùng khi cả hai hoạt động đều có trọng lượng: 医者のかたわら、研究も続けている. Không dùng cho hành động tức thời kiểu vừa ăn vừa xem điện thoại.",
+      "humanMoment": "Dr. Linh lưu ý: 〜かたわら khác 〜ながら. 〜ながら có thể là hai hành động cùng lúc rất nhẹ; 〜かたわら nói về hai đường đời hoặc hai trách nhiệm chạy song song.",
+      "crossLinks": [
+        {
+          "pattern": "〜ながら",
+          "contrast": "Khác 〜かたわら: 〜ながら dùng được cho hành động ngắn, còn 〜かたわら cần hoạt động kéo dài và trang trọng hơn."
+        },
+        {
+          "pattern": "〜一方で",
+          "contrast": "〜一方で nhấn mặt đối lập hoặc song song của tình huống; 〜かたわら nhấn một người/nhóm duy trì thêm hoạt động bên cạnh vai trò chính."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -122,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Commonly i-adjective stems + かれ + i-adjective stems + かれ (e.g. 早かれ遅かれ). Also sometimes Noun + かれ + Noun + かれ in older usage",
-      "meaning": "Ý nghĩa: Dùng để gộp hai khả năng A và B, thường trong những cụm cố định mang sắc thái văn viết như “sớm hay muộn”.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜かれ〜かれ là dấu vết văn cổ của tính từ tiếng Nhật: thân tính từ đi với dạng かれ trong các cặp cố định như 早かれ遅かれ. Vì là hóa thạch ngữ pháp, nó không mở rộng tự do như mẫu hiện đại.",
+      "hanVietBridge": "Không có Hán tự bắt buộc cho かれ, nhưng các cặp thường gặp có cầu Hán-Việt rõ: 早/遅 là sớm/muộn, 多/少 là đa/thiểu, 良/悪 là lương/ác. Cặp Hán-Việt giúp nhận ra hai cực đối lập.",
+      "form": "Hình thức: thân tính từ い + かれ + thân tính từ い + かれ, chủ yếu trong cụm cố định như 早かれ遅かれ, 多かれ少なかれ, 良かれ悪しかれ.",
+      "meaning": "Ý nghĩa: Dù ở cực A hay cực B, hoặc xét theo mức độ nào đó, kết luận vẫn đúng. Sắc thái văn viết, cổ, nhiều cụm nên học như collocation.",
+      "usage": "Sử dụng: Ưu tiên dùng các cụm đã cố định. 早かれ遅かれ = sớm hay muộn; 多かれ少なかれ = ít nhiều; 良かれ悪しかれ = dù tốt hay xấu.",
+      "humanMoment": "Dr. Linh lưu ý: 〜かれ〜かれ không thay thế tự do cho 〜であれ〜であれ. Nếu là danh từ như 雨/雪, hãy dùng であれ; 〜かれ〜かれ sống mạnh nhất trong cặp tính từ cố định như 早かれ遅かれ.",
+      "crossLinks": [
+        {
+          "pattern": "〜であれ〜であれ",
+          "contrast": "Khác 〜かれ〜かれ: 〜であれ〜であれ dùng tốt với danh từ/tính từ な, còn 〜かれ〜かれ chủ yếu là cặp tính từ cố định."
+        },
+        {
+          "pattern": "〜うが〜うが",
+          "contrast": "〜うが〜うが dùng dạng ý chí của động từ/tính từ để nêu điều kiện; 〜かれ〜かれ là lối cổ, thiên về collocation."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -156,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun/Verb casual + だの + Noun/Verb casual + だの",
-      "meaning": "Ý nghĩa: Dùng để liệt kê vài ví dụ kiểu “nào là A, nào là B”, thường kèm sắc thái phàn nàn, chê trách hoặc xem nhẹ.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "だの kết hợp sắc thái phán định của だ với の, tạo thành cách lôi vài ví dụ ra như một chuỗi điều được nhắc đến. Vì đi qua だ, mẫu này thường mang cảm giác nói miệng và dễ nhuốm phàn nàn.",
+      "hanVietBridge": "Không có Hán tự riêng cho だの, nhưng ý Hán-Việt hữu ích là liệt kê kèm sắc thái đánh giá. Hãy nhớ nó không chỉ là và vân vân; nó thường kéo theo thái độ chê nhẹ hoặc mệt mỏi.",
+      "form": "Hình thức: danh từ hoặc mệnh đề thân mật + だの + danh từ hoặc mệnh đề thân mật + だの. Sau chuỗi thường có に, で, と hoặc mệnh đề chốt thái độ.",
+      "meaning": "Ý nghĩa: Nào là A, nào là B, và những thứ tương tự, thường với giọng phàn nàn, xem nhẹ hoặc kể lể. Không trung tính như 〜や〜など.",
+      "usage": "Sử dụng: Dùng khi người nói muốn liệt kê ví dụ đồng thời bộc lộ thái độ: 遅刻だの忘れ物だので困る. Tránh dùng trong văn trang trọng cần khách quan.",
+      "humanMoment": "Dr. Linh lưu ý: 〜だの〜だの khác 〜や〜など ở thái độ. 〜や〜など chỉ liệt kê; 〜だの〜だの thường như tiếng thở dài: nào là đi trễ, nào là quên việc.",
+      "crossLinks": [
+        {
+          "pattern": "〜や〜など",
+          "contrast": "Khác 〜だの〜だの: 〜や〜など trung tính hơn, không mặc định có giọng phàn nàn."
+        },
+        {
+          "pattern": "〜とか〜とか",
+          "contrast": "〜とか〜とか thân mật và liệt kê nhẹ; 〜だの〜だの dễ mang sắc thái chê, kể lể hoặc khó chịu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

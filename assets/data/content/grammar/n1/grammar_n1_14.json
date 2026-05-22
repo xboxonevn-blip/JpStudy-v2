@@ -112,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ますstem + つ + Verb-ますstem + つ",
-      "meaning": "Ý nghĩa: Dùng để diễn tả hai hành động lặp đi lặp lại hoặc luân phiên nhau.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜つ〜つ là trợ từ cổ つ gắn sau gốc động từ để đặt hai hành động cạnh nhau theo nhịp luân phiên. Mẫu này nay chủ yếu sống trong cụm cố định.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là lúc A lúc B, qua lại giữa hai động tác. Nhịp lặp của hai chữ つ giúp nhớ tính luân phiên.",
+      "form": "Hình thức: động từ gốc ます + つ + động từ gốc ます + つ. Hay gặp 行きつ戻りつ, 抜きつ抜かれつ, 持ちつ持たれつ.",
+      "meaning": "Ý nghĩa: Hai hành động/trạng thái luân phiên qua lại, thường văn chương hoặc thành ngữ, không phải mẫu tự do cho mọi cặp động từ.",
+      "usage": "Sử dụng: Ưu tiên học theo cụm tự nhiên. Không ghép tùy tiện như 食べつ遊びつ nếu chưa chắc cụm đó được dùng thật.",
+      "humanMoment": "Dr. Linh lưu ý: 〜つ〜つ khác 〜たり〜たり. たりたり là liệt kê hành động linh hoạt; つつ là nhịp luân phiên cổ, thường cố định hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜たり〜たり",
+          "contrast": "Khác 〜つ〜つ: 〜たり〜たり liệt kê tự do; 〜つ〜つ văn chương và hay đóng thành cụm luân phiên cố định."
+        },
+        {
+          "pattern": "〜ながら",
+          "contrast": "〜ながら nhấn đồng thời; 〜つ〜つ nhấn qua lại/luân phiên giữa hai phía."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -146,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-て form + からというもの",
-      "meaning": "Ý nghĩa: Dùng để nói kể từ sau một sự kiện, một trạng thái hoặc thói quen đã tiếp tục kéo dài đến hiện tại.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜てからというもの gồm てから: sau khi A, và というもの: cái gọi là khoảng từ đó. Mẫu kéo một đường thời gian từ A tới hiện tại.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là kể từ sau A thì từ đó đến nay. Cụmというもの làm mốc A nặng và kéo dài hơn てから thường.",
+      "form": "Hình thức: động từ thể て + からというもの + trạng thái/thói quen kéo dài. Ví dụ 子供が生まれてからというもの.",
+      "meaning": "Ý nghĩa: Kể từ sau A, tình trạng B đã tiếp tục hoặc thay đổi rõ rệt cho đến nay. Mẫu nhấn sự đổi đời sau một mốc.",
+      "usage": "Sử dụng: Vế sau nên là trạng thái kéo dài hoặc thói quen mới: 忙しくなった, 眠れない, 外食が減った. Nếu chỉ một hành động đơn lẻ, てから đủ hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜てからというもの khác 〜てから. てから chỉ thứ tự sau A; てからというもの nói từ A trở đi đời sống/trạng thái đã đổi hẳn.",
+      "crossLinks": [
+        {
+          "pattern": "〜てから",
+          "contrast": "Khác 〜てからというもの: 〜てから chỉ sau khi; 〜てからというもの nhấn trạng thái kéo dài từ mốc A."
+        },
+        {
+          "pattern": "〜以来",
+          "contrast": "〜以来 cũng là kể từ; 〜てからというもの giàu sắc thái biến đổi đời sống sau mốc hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -180,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-て form + こそ",
-      "meaning": "Ý nghĩa: Dùng để nhấn mạnh chỉ bằng cách làm X thì mới có thể đạt được, hiểu được hoặc chứng minh điều phía sau.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc của 〜てこそ là thể て nối điều kiện/phương tiện với こそ, hạt nhấn mạnh chính điều đó. Nghĩa là chỉ khi làm A thì B mới có giá trị/thành.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là có A thì mới B. Chữ mới giữ lực nhấn của こそ: thiếu A thì B chưa thật sự xảy ra.",
+      "form": "Hình thức: động từ thể て + こそ + kết quả/nhận định. Ví dụ 使ってこそ分かる, 失敗してこそ学べる.",
+      "meaning": "Ý nghĩa: Chỉ bằng cách A, chỉ khi A, thì mới B. Mẫu nhấn A là điều kiện cốt lõi để B có ý nghĩa.",
+      "usage": "Sử dụng: Vế sau thường là hiểu, học, thành công, chứng minh. Nếu chỉ nói sau khi A thì B, dùng てから.",
+      "humanMoment": "Dr. Linh lưu ý: 〜てこそ khác 〜てから. てから là thứ tự thời gian; てこそ là điều kiện có giá trị: phải A thì B mới thật.",
+      "crossLinks": [
+        {
+          "pattern": "〜てから",
+          "contrast": "Khác 〜てこそ: 〜てから chỉ sau khi A; 〜てこそ nhấn A là điều kiện thiết yếu để B thành."
+        },
+        {
+          "pattern": "〜からこそ",
+          "contrast": "〜からこそ nhấn lý do chính vì A; 〜てこそ nhấn chỉ khi làm A thì B mới đạt."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -214,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-て form + は",
-      "meaning": "Ý nghĩa: Dùng để diễn tả một hành động lặp đi lặp lại rồi dẫn đến kết quả không mong muốn hoặc gây phiền.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜ては là thể て nối hành động với は, hạt nêu trường hợp. Khi lặp lại, AてはB đặt mỗi lần A như một trường hợp lại kéo B theo.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là cứ A là lại B. Chữ cứ giữ sắc thái lặp, chữ lại giữ cảm giác phiền/toái thường gặp.",
+      "form": "Hình thức: động từ thể て + は + kết quả lặp lại. Có thể lặp thành AてはB, BてはA.",
+      "meaning": "Ý nghĩa: Mỗi lần A thì lại B, thường là kết quả không mong muốn hoặc vòng lặp gây mệt.",
+      "usage": "Sử dụng: Hợp với thói quen/vòng lặp: 掃除しては散らかる. Nếu chỉ một điều kiện bình thường, と hoặc たびに rõ hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ては khác 〜たびに. たびに trung tính là mỗi lần; ては dễ nghe như cứ làm A là lại vướng B.",
+      "crossLinks": [
+        {
+          "pattern": "〜たびに",
+          "contrast": "Khác 〜ては: 〜たびに trung tính hơn; 〜ては thường gợi vòng lặp hoặc kết quả gây phiền."
+        },
+        {
+          "pattern": "〜そばから",
+          "contrast": "〜そばから nhấn ngay sau A; 〜ては nhấn mỗi lần A thì B lặp lại."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -248,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-て form + は + Verb",
-      "meaning": "Ý nghĩa: Dùng để nói một hành động được lặp lại theo chu kỳ: làm X rồi lại làm Y.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜てはVerb là cùng cơ chế ては, nhưng vế sau hiện rõ hành động lặp. AてはB tạo nhịp cứ làm A rồi lại làm B.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là cứ A rồi lại B. Khi hai vế lặp qua lại, câu có cảm giác một vòng sinh hoạt hoặc vòng phiền.",
+      "form": "Hình thức: động từ thể て + は + động từ/kết quả. Có thể nối nhiều nhịp: 書いては消し、消しては書く.",
+      "meaning": "Ý nghĩa: Làm A rồi lại B, cứ mỗi lần A thì B diễn ra; thường diễn tả chu kỳ, thói quen, hoặc công việc lặp.",
+      "usage": "Sử dụng: Vế sau cần là hành động/kết quả thực sự nối sau A. Nếu muốn chỉ điều kiện một lần, dùng たら hoặc と.",
+      "humanMoment": "Dr. Linh lưu ý: 〜てはVerb khác 〜てからVerb. てから chỉ trình tự một lần; てはVerb đưa cả trình tự ấy vào vòng lặp.",
+      "crossLinks": [
+        {
+          "pattern": "〜てから",
+          "contrast": "Khác 〜てはVerb: 〜てから là sau khi A thì B; 〜てはVerb là cứ A rồi B lặp lại."
+        },
+        {
+          "pattern": "〜つ〜つ",
+          "contrast": "〜つ〜つ là luân phiên cổ/cố định hơn; 〜てはVerb là vòng lặp đời thường hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -673,6 +673,7 @@
       "order": 13,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -694,18 +695,24 @@
       },
       "sense": {
         "senseId": "n5_l20_s013",
-        "meaningVi": "giá cả, vật giá",
+        "meaningVi": "Giá cả, mức giá, vật giá",
         "meaningEn": "prices"
       },
       "search": {
         "termNoAccent": "物価",
         "readingNoAccent": "ふっか",
-        "meaningViNoAccent": "gia ca, vat gia",
+        "meaningViNoAccent": "Gia ca, muc gia, vat gia",
         "hanVietNoAccent": "vat gia"
       },
       "links": {
         "sourceVocabId": "n5_l20_v013",
-        "sourceSenseId": "n5_l20_s013"
+        "sourceSenseId": "n5_l20_s013",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vật giá"

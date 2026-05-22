@@ -2636,3 +2636,9 @@
 - Noted pre-existing `大学` reading/search drift for a separate wrong-reading pass; batch 010 remained meaning-only.
 - Bumped vocab seed revision to 15 so installed DBs refresh this ninth N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 011
+- Applied 5 curated consensus repairs for Minna N5 `信号`, `中`, `背`, `物価`, and `問題`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-011.md`.
+- Skipped warm/cold adjective contrast rows until a nuance-aware pass.
+- Bumped vocab seed revision to 16 so installed DBs refresh this tenth N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

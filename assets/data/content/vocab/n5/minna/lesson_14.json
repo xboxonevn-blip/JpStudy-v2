@@ -2321,6 +2321,7 @@
       "order": 43,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2342,18 +2343,24 @@
       },
       "sense": {
         "senseId": "n5_l14_s043",
-        "meaningVi": "tín hiệu giao thông",
+        "meaningVi": "Đèn tín hiệu",
         "meaningEn": "traffic signal"
       },
       "search": {
         "termNoAccent": "信号",
         "readingNoAccent": "しんこう",
-        "meaningViNoAccent": "tin hieu giao thong",
+        "meaningViNoAccent": "Den tin hieu",
         "hanVietNoAccent": "tin hieu"
       },
       "links": {
         "sourceVocabId": "n5_l14_v043",
-        "sourceSenseId": "n5_l14_s043"
+        "sourceSenseId": "n5_l14_s043",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tín hiệu"

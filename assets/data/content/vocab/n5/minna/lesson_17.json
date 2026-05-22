@@ -1904,6 +1904,7 @@
       "order": 35,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1925,18 +1926,23 @@
       },
       "sense": {
         "senseId": "n5_l17_s035",
-        "meaningVi": "vấn đề, câu hỏi",
+        "meaningVi": "Câu hỏi, vấn đề",
         "meaningEn": "problem / question"
       },
       "search": {
         "termNoAccent": "問題",
         "readingNoAccent": "もんたい",
-        "meaningViNoAccent": "van đe, cau hoi",
+        "meaningViNoAccent": "Cau hoi, van de",
         "hanVietNoAccent": "van de"
       },
       "links": {
         "sourceVocabId": "n5_l17_v035",
-        "sourceSenseId": "n5_l17_s035"
+        "sourceSenseId": "n5_l17_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vấn đề"

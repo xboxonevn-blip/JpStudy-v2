@@ -1666,6 +1666,7 @@
       "order": 31,
       "tags": [
         "body",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1686,18 +1687,23 @@
       },
       "sense": {
         "senseId": "n5_l16_s031",
-        "meaningVi": "lưng, chiều cao cơ thể",
+        "meaningVi": "Chiều cao (cơ thể)",
         "meaningEn": "height / back"
       },
       "search": {
         "termNoAccent": "背",
         "readingNoAccent": "せ",
-        "meaningViNoAccent": "lung, chieu cao co the",
+        "meaningViNoAccent": "Chieu cao (co the)",
         "hanVietNoAccent": "boi"
       },
       "links": {
         "sourceVocabId": "n5_l16_v031",
-        "sourceSenseId": "n5_l16_s031"
+        "sourceSenseId": "n5_l16_s031",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bối"

@@ -1989,6 +1989,7 @@
       "order": 37,
       "tags": [
         "position",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2009,18 +2010,23 @@
       },
       "sense": {
         "senseId": "n5_l10_s037",
-        "meaningVi": "trong",
+        "meaningVi": "Trong, giữa",
         "meaningEn": "inside"
       },
       "search": {
         "termNoAccent": "中",
         "readingNoAccent": "なか",
-        "meaningViNoAccent": "trong",
+        "meaningViNoAccent": "Trong, giua",
         "hanVietNoAccent": "trung"
       },
       "links": {
         "sourceVocabId": "n5_l10_v037",
-        "sourceSenseId": "n5_l10_s037"
+        "sourceSenseId": "n5_l10_s037",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trung"

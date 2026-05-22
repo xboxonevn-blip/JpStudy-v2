@@ -2675,3 +2675,10 @@
 - Added a red-green regression proving malformed same-lesson noun rows stay hidden from lesson-scoped conjugation lookup.
 - Existing lesson widget behavior remains conditional: Minna N5 Bài 1 has no conjugation widget; Bài 8 retains lesson-scoped conjugable items.
 - Gates passed: conjugation content seed test, conjugation lesson widget test, and focused analyzer.
+
+## 2026-05-22 P1 H4/H5 exercise density guard
+- Vocab question generation now cycles small lesson item sets and question types until requested density is reached; 50-question sessions remain available even when the lesson has fewer than 50 terms.
+- Test config now clamps to the generated 50-question cap, so learner UI can show `Câu 1/50` instead of shrinking to low lesson item counts.
+- Exercise validation now rejects literal-answer prompt leakage and placeholder distractors, blocking trivial exercise templates before they ship.
+- Grammar seeding now stores real meaning fields / `directiveE.meaning` ahead of `title`, preventing pattern labels from becoming answer text in generated grammar banks.
+- Gates passed: focused learn/test/exercise/grammar tests including dense grammar bank guard, focused analyzer, and `git diff --check`.

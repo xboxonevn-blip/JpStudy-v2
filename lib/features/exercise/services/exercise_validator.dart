@@ -69,6 +69,18 @@ class ExerciseValidator {
           'choice options omit correct answer: ${exercise.id}',
         );
       }
+      if (exercise.isChoiceBased &&
+          !_allowsPromptAnswerLeak(exercise) &&
+          _containsLiteralAnswer(exercise.prompt, exercise.correctAnswer)) {
+        throw ExerciseValidationException(
+          'choice prompt leaks correct answer: ${exercise.id}',
+        );
+      }
+      if (normalized.any(_isPlaceholderDistractor)) {
+        throw ExerciseValidationException(
+          'placeholder distractor in ${exercise.id}',
+        );
+      }
     }
   }
 
@@ -94,5 +106,32 @@ class ExerciseValidator {
 
   static String _normalizeOption(String value) {
     return value.trim().replaceAll(RegExp(r'\s+'), ' ').toLowerCase();
+  }
+
+  static bool _allowsPromptAnswerLeak(Exercise exercise) {
+    return exercise.tags.any(
+      (tag) => tag.trim().toLowerCase() == 'paircontrast',
+    );
+  }
+
+  static bool _containsLiteralAnswer(String prompt, String answer) {
+    final promptKey = _literalKey(prompt);
+    final answerKey = _literalKey(answer);
+    if (answerKey.runes.length < 2) return false;
+    return promptKey.contains(answerKey);
+  }
+
+  static bool _isPlaceholderDistractor(String value) {
+    final normalized = _normalizeOption(value);
+    return normalized.startsWith('phương án nhiễu') ||
+        normalized.startsWith('distractor ') ||
+        normalized.startsWith('dummy option');
+  }
+
+  static String _literalKey(String value) {
+    return value.trim().toLowerCase().replaceAll(
+      RegExp(r"""[\s\u3000+＋・、。:：`"'「」『』()（）?？!！]+"""),
+      '',
+    );
   }
 }

@@ -141,6 +141,44 @@ void main() {
         throwsA(isA<ExerciseValidationException>()),
       );
     });
+
+    test('rejects choice prompts that literally contain the answer', () {
+      expect(
+        () => ExerciseValidator.validate(
+          _exercise(
+            id: 'literal-answer',
+            itemId: 'grammar:n5:001',
+            type: ExerciseType.recognition,
+            bloomLevel: BloomLevel.l1Remember,
+            correctAnswer: 'N + も',
+            prompt: 'Mẫu nào có nghĩa là "N + も"?',
+            options: const ['N + も', 'N + は', 'N + が', 'N + を'],
+          ),
+        ),
+        throwsA(isA<ExerciseValidationException>()),
+      );
+    });
+
+    test('rejects placeholder distractor labels', () {
+      expect(
+        () => ExerciseValidator.validate(
+          _exercise(
+            id: 'placeholder-option',
+            itemId: 'grammar:n5:001',
+            type: ExerciseType.recognition,
+            bloomLevel: BloomLevel.l1Remember,
+            correctAnswer: 'được phép',
+            options: const [
+              'được phép',
+              'Phương án nhiễu 1',
+              'bị cấm',
+              'không cần',
+            ],
+          ),
+        ),
+        throwsA(isA<ExerciseValidationException>()),
+      );
+    });
   });
 }
 
@@ -150,6 +188,7 @@ Exercise _exercise({
   required ExerciseType type,
   required BloomLevel bloomLevel,
   String correctAnswer = 'a',
+  String? prompt,
   List<String> options = const ['a', 'b', 'c', 'd'],
 }) {
   return Exercise(
@@ -157,7 +196,7 @@ Exercise _exercise({
     itemId: itemId,
     type: type,
     bloomLevel: bloomLevel,
-    prompt: 'Prompt for $id',
+    prompt: prompt ?? 'Prompt for $id',
     correctAnswer: correctAnswer,
     options: options,
     source: ExerciseSource.generated,

@@ -156,7 +156,7 @@ void main() {
     expect(find.text(AppLanguage.en.resumeSessionTitle), findsNothing);
   });
 
-  testWidgets('clamps oversized initial question count down to max cap', (
+  testWidgets('clamps oversized initial question count down to generated cap', (
     tester,
   ) async {
     const oversized = TestConfig(questionCount: 999, timeLimitMinutes: 30);
@@ -176,11 +176,11 @@ void main() {
     await tester.pump();
 
     expect(started, isNotNull);
-    expect(started!.questionCount, 20);
+    expect(started!.questionCount, 50);
   });
 
   testWidgets(
-    'uses maxQuestions as default question count when initialConfig is null',
+    'uses generated cap as default question count when initialConfig is null',
     (tester) async {
       TestConfig? started;
 
@@ -198,7 +198,7 @@ void main() {
       await tester.pump();
 
       expect(started, isNotNull);
-      expect(started!.questionCount, 7);
+      expect(started!.questionCount, 50);
     },
   );
 

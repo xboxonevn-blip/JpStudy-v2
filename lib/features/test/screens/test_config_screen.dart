@@ -38,13 +38,15 @@ class TestConfigScreen extends ConsumerStatefulWidget {
 }
 
 class _TestConfigScreenState extends ConsumerState<TestConfigScreen> {
+  static const _maxGeneratedQuestions = 50;
+
   late TestConfig _config;
   TestSessionSnapshot? _resumeSnapshot;
 
   int get _minQuestionCount =>
       widget.maxQuestions >= 10 ? 10 : widget.maxQuestions;
 
-  int get _questionCap => widget.maxQuestions.clamp(1, 50);
+  int get _questionCap => _maxGeneratedQuestions;
 
   int _clampQuestionCount(int value) {
     final lower = _minQuestionCount.clamp(1, _questionCap);

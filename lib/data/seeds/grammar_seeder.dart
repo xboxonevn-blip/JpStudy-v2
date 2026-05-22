@@ -18,7 +18,7 @@ class GrammarSeeder {
   final GrammarDao _dao;
 
   // Tăng version này lên khi thay đổi file JSON data
-  static const int kGrammarDataVersion = 31;
+  static const int kGrammarDataVersion = 32;
   static const String kKeyGrammarVersion = 'grammar_data_version';
 
   static String versionKeyForLevel(String level) =>
@@ -227,8 +227,7 @@ class GrammarSeeder {
     final structure = stripNonCanonicalGrammarNotes(
       rawStructure.isEmpty ? grammarPointLabel : rawStructure,
     );
-    final titleVi =
-        ((item['title'] ?? item['meaning_vi'] ?? '').toString().trim()).trim();
+    final titleVi = _localizedMeaningFromItem(item);
     final explanationVi = (item['explanation'] ?? item['explanation_vi'] ?? '')
         .toString()
         .trim();
@@ -351,9 +350,7 @@ class GrammarSeeder {
       final structure = stripNonCanonicalGrammarNotes(
         rawStructure.isEmpty ? grammarPointLabel : rawStructure,
       );
-      final titleVi =
-          ((item['title'] ?? item['meaning_vi'] ?? '').toString().trim())
-              .trim();
+      final titleVi = _localizedMeaningFromItem(item);
       final structureEn = normalizeGrammarStructureEn(
         item['structureEn'] as String?,
       );
@@ -529,6 +526,27 @@ class GrammarSeeder {
 
     return <String>{raw, normalized, compact, japaneseCore}
       ..removeWhere((value) => value.isEmpty);
+  }
+
+  static String _localizedMeaningFromItem(Map<String, dynamic> item) {
+    final candidates = [
+      item['meaningVi'],
+      item['meaning_vi'],
+      item['meaning'],
+      _directiveEText(item, 'meaning'),
+      item['title'],
+    ];
+    for (final candidate in candidates) {
+      final value = candidate?.toString().trim() ?? '';
+      if (value.isNotEmpty) return value;
+    }
+    return '';
+  }
+
+  static String? _directiveEText(Map<String, dynamic> item, String key) {
+    final directiveE = item['directiveE'];
+    if (directiveE is! Map<String, dynamic>) return null;
+    return directiveE[key]?.toString();
   }
 
   @visibleForTesting

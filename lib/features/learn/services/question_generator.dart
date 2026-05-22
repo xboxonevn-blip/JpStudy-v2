@@ -29,15 +29,19 @@ class QuestionGenerator {
       candidateItems.shuffle(_random);
     }
 
-    for (int i = 0; i < count && i < candidateItems.length; i++) {
-      final item = candidateItems[i];
-      final type = enabledTypes[_random.nextInt(enabledTypes.length)];
+    for (int i = 0; i < count; i++) {
+      if (shuffleItems && i > 0 && i % candidateItems.length == 0) {
+        candidateItems.shuffle(_random);
+      }
+      final item = candidateItems[i % candidateItems.length];
+      final type = enabledTypes[i % enabledTypes.length];
 
       final question = _generateQuestion(
         item: item,
         type: type,
         allItems: items,
         language: language,
+        sequence: i,
       );
 
       if (question != null) {
@@ -103,14 +107,15 @@ class QuestionGenerator {
     required QuestionType type,
     required List<VocabItem> allItems,
     required AppLanguage language,
+    int? sequence,
   }) {
     switch (type) {
       case QuestionType.multipleChoice:
-        return _generateMultipleChoice(item, allItems, language);
+        return _generateMultipleChoice(item, allItems, language, sequence);
       case QuestionType.trueFalse:
-        return _generateTrueFalse(item, allItems, language);
+        return _generateTrueFalse(item, allItems, language, sequence);
       case QuestionType.fillBlank:
-        return _generateFillBlank(item, language);
+        return _generateFillBlank(item, language, sequence);
     }
   }
 
@@ -118,6 +123,7 @@ class QuestionGenerator {
     VocabItem item,
     List<VocabItem> allItems,
     AppLanguage language,
+    int? sequence,
   ) {
     // Generate 3 wrong options (distractors)
     final distractors = _selectDistractors(item, allItems, count: 3);
@@ -128,7 +134,7 @@ class QuestionGenerator {
     ]..shuffle(_random);
 
     return Question(
-      id: 'mcq_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
+      id: _questionId('mcq', item.id, sequence),
       type: QuestionType.multipleChoice,
       targetItem: item,
       questionText: language.questionMeaningPrompt(item.term),
@@ -141,6 +147,7 @@ class QuestionGenerator {
     VocabItem item,
     List<VocabItem> allItems,
     AppLanguage language,
+    int? sequence,
   ) {
     bool isTrue = _random.nextBool();
 
@@ -181,7 +188,7 @@ class QuestionGenerator {
     }
 
     return Question(
-      id: 'tf_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
+      id: _questionId('tf', item.id, sequence),
       type: QuestionType.trueFalse,
       targetItem: item,
       questionText: language.questionTrueFalsePrompt(item.term, shownMeaning),
@@ -190,7 +197,11 @@ class QuestionGenerator {
     );
   }
 
-  Question _generateFillBlank(VocabItem item, AppLanguage language) {
+  Question _generateFillBlank(
+    VocabItem item,
+    AppLanguage language,
+    int? sequence,
+  ) {
     // Ask for meaning or reading
     var askForMeaning = _random.nextBool();
     if (!askForMeaning && _isKanaOnly(item.term)) {
@@ -199,7 +210,7 @@ class QuestionGenerator {
     if (askForMeaning) {
       final answer = item.displayMeaning(language);
       return Question(
-        id: 'fb_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
+        id: _questionId('fb', item.id, sequence),
         type: QuestionType.fillBlank,
         targetItem: item,
         questionText: language.questionMeaningPrompt(item.term),
@@ -209,7 +220,7 @@ class QuestionGenerator {
       );
     } else {
       return Question(
-        id: 'fb_${item.id}_${DateTime.now().millisecondsSinceEpoch}',
+        id: _questionId('fb', item.id, sequence),
         type: QuestionType.fillBlank,
         targetItem: item,
         questionText: language.questionReadingPrompt(item.term),
@@ -220,6 +231,12 @@ class QuestionGenerator {
             : null,
       );
     }
+  }
+
+  String _questionId(String prefix, int itemId, int? sequence) {
+    if (sequence != null) return '${prefix}_${itemId}_$sequence';
+    final timestamp = DateTime.now().microsecondsSinceEpoch;
+    return '${prefix}_${itemId}_${timestamp}_${_random.nextInt(0x7fffffff)}';
   }
 
   bool _isKanaOnly(String term) {

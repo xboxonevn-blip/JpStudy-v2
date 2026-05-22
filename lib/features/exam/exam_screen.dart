@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/widgets/foundation/foundation.dart';
@@ -128,8 +130,14 @@ class _ExamScreenState extends ConsumerState<ExamScreen> {
       final storage = ref.read(sessionStorageProvider);
       final vocabFuture = repo.getVocabByLevel(level);
       final resumeFuture = storage.loadTestSession(sessionKey);
-      final allVocab = await vocabFuture;
-      final resumeSnapshot = await resumeFuture;
+      final allVocab = await vocabFuture.timeout(
+        const Duration(seconds: 8),
+        onTimeout: () => const <VocabItem>[],
+      );
+      final resumeSnapshot = await resumeFuture.timeout(
+        const Duration(seconds: 2),
+        onTimeout: () => null,
+      );
 
       if (!mounted || _activeLevel != level) {
         return;

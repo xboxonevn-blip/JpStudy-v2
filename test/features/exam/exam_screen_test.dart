@@ -99,12 +99,12 @@ void main() {
     await tester.pump();
 
     expect(
-      find.text('60 min · 95 questions · vocabulary, reading, listening'),
+      find.text('90 min · 95 questions · vocabulary, reading, listening'),
       findsOneWidget,
     );
     expect(
       find.text(
-        '120 min · 105 questions · vocabulary, grammar, reading, listening',
+        '115 min · 105 questions · vocabulary, grammar, reading, listening',
       ),
       findsOneWidget,
     );

@@ -9,6 +9,10 @@ import '../utils/grammar_example_matching.dart';
 import '../utils/grammar_english_notation.dart';
 
 typedef _LessonData = ({int lessonId, List<dynamic> def, List<dynamic>? ex});
+typedef _PreparedGrammarPoint = ({
+  GrammarPointsCompanion point,
+  List<GrammarExamplesCompanion> examples,
+});
 
 class GrammarSeeder {
   final GrammarDao _dao;
@@ -66,7 +70,11 @@ class GrammarSeeder {
 
     // Chạy trong transaction để đảm bảo toàn vẹn dữ liệu
     await db.transaction(() async {
-      await _seedLevelFromData(normalizedLevel, levelData);
+      if (_usesDeterministicBulkSeed(normalizedLevel)) {
+        await _replaceLevelFromData(normalizedLevel, levelData);
+      } else {
+        await _seedLevelFromData(normalizedLevel, levelData);
+      }
     });
 
     await prefs.setInt(
@@ -136,6 +144,181 @@ class GrammarSeeder {
         debugPrint('   -> Error seeding Lesson ${lessonData.lessonId}: $e');
       }
     }
+  }
+
+  bool _usesDeterministicBulkSeed(String level) {
+    return switch (level) {
+      'N1' || 'N2' || 'N3' => true,
+      _ => false,
+    };
+  }
+
+  Future<void> _replaceLevelFromData(
+    String level,
+    List<_LessonData> lessons,
+  ) async {
+    final pointIds =
+        await (_dao.db.selectOnly(_dao.db.grammarPoints)
+              ..addColumns([_dao.db.grammarPoints.id])
+              ..where(_dao.db.grammarPoints.jlptLevel.equals(level)))
+            .map((row) => row.read(_dao.db.grammarPoints.id))
+            .get();
+    final existingIds = pointIds.whereType<int>().toList(growable: false);
+    if (existingIds.isNotEmpty) {
+      await (_dao.db.delete(
+        _dao.db.grammarExamples,
+      )..where((tbl) => tbl.grammarId.isIn(existingIds))).go();
+      await (_dao.db.delete(
+        _dao.db.grammarSrsState,
+      )..where((tbl) => tbl.grammarId.isIn(existingIds))).go();
+      await (_dao.db.delete(
+        _dao.db.grammarPoints,
+      )..where((tbl) => tbl.jlptLevel.equals(level))).go();
+    }
+
+    final points = <GrammarPointsCompanion>[];
+    final examples = <GrammarExamplesCompanion>[];
+    for (final lessonData in lessons) {
+      for (var index = 0; index < lessonData.def.length; index++) {
+        final item = lessonData.def[index];
+        if (item is! Map<String, dynamic>) continue;
+        final prepared = _buildDeterministicPoint(
+          level: level,
+          lessonData: lessonData,
+          item: item,
+          itemIndex: index + 1,
+        );
+        if (prepared == null) continue;
+        points.add(prepared.point);
+        examples.addAll(prepared.examples);
+      }
+      debugPrint('   -> Prepared Lesson ${lessonData.lessonId} ($level)');
+    }
+
+    await _dao.db.batch((batch) {
+      batch.insertAll(_dao.db.grammarPoints, points);
+      batch.insertAll(_dao.db.grammarExamples, examples);
+    });
+    debugPrint(
+      '   -> Bulk seeded ${points.length} grammar points and ${examples.length} examples ($level)',
+    );
+  }
+
+  _PreparedGrammarPoint? _buildDeterministicPoint({
+    required String level,
+    required _LessonData lessonData,
+    required Map<String, dynamic> item,
+    required int itemIndex,
+  }) {
+    final lessonId = lessonData.lessonId;
+    final rawGrammarPoint = item['grammarPoint'] as String?;
+    final rawTitle = item['title'] as String?;
+    final rawTitleEn = item['titleEn'] as String?;
+    final rawStructure = (item['structure'] ?? item['connection'] ?? '')
+        .toString()
+        .trim();
+    final grammarPointLabel = resolveCanonicalGrammarPointSource(
+      grammarPoint: rawGrammarPoint,
+      structure: rawStructure,
+      title: rawTitle,
+      structureEn: item['structureEn'] as String?,
+      titleEn: rawTitleEn,
+    );
+    final structure = stripNonCanonicalGrammarNotes(
+      rawStructure.isEmpty ? grammarPointLabel : rawStructure,
+    );
+    final titleVi =
+        ((item['title'] ?? item['meaning_vi'] ?? '').toString().trim()).trim();
+    final explanationVi = (item['explanation'] ?? item['explanation_vi'] ?? '')
+        .toString()
+        .trim();
+    final explanationEn = (item['explanationEn'] as String? ?? '').trim();
+
+    if (grammarPointLabel.isEmpty || titleVi.isEmpty || structure.isEmpty) {
+      return null;
+    }
+
+    final structureEn = normalizeGrammarStructureEn(
+      item['structureEn'] as String?,
+    );
+    final englishLabel = resolveEnglishGrammarLabel(
+      titleEn: rawTitleEn,
+      meaningEn: rawTitleEn,
+      connectionEn: structureEn,
+      connection: structure,
+      grammarPoint: grammarPointLabel,
+    );
+    final englishMeaning = resolveEnglishGrammarMeaning(
+      meaningEn: rawTitleEn,
+      titleEn: rawTitleEn,
+      connectionEn: structureEn,
+      connection: structure,
+      grammarPoint: grammarPointLabel,
+    );
+    final englishConnection = resolveEnglishGrammarConnection(
+      connectionEn: structureEn,
+      connection: structure,
+      grammarPoint: grammarPointLabel,
+      titleEn: rawTitleEn,
+      meaningEn: rawTitleEn,
+    );
+    final storedTitleEn = englishLabel == 'Target pattern'
+        ? null
+        : englishLabel;
+    final storedMeaningEn = englishMeaning == 'Target pattern'
+        ? null
+        : englishMeaning;
+    final storedConnectionEn = englishConnection == 'Grammar pattern'
+        ? null
+        : englishConnection;
+    final pointId = deterministicGrammarPointIdFor(
+      level: level,
+      lessonId: lessonId,
+      itemIndex: itemIndex,
+    );
+
+    final point = GrammarPointsCompanion.insert(
+      id: Value(pointId),
+      lessonId: Value(lessonId),
+      grammarPoint: grammarPointLabel,
+      titleEn: Value(storedTitleEn),
+      meaning: titleVi,
+      meaningVi: Value(titleVi),
+      meaningEn: Value(storedMeaningEn),
+      connection: structure,
+      connectionEn: Value(storedConnectionEn),
+      explanation: explanationVi,
+      explanationVi: Value(explanationVi),
+      explanationEn: Value(explanationEn.isEmpty ? null : explanationEn),
+      jlptLevel: level,
+      isLearned: const Value(false),
+    );
+
+    final examples = <GrammarExamplesCompanion>[];
+    final exampleBlocks = lessonData.ex;
+    if (exampleBlocks != null) {
+      final matchedExamples = findGrammarExamplesForDefinition(
+        exampleBlocks: exampleBlocks,
+        title: rawTitle,
+        grammarPoint: grammarPointLabel,
+      );
+      if (matchedExamples != null) {
+        for (final ex in matchedExamples) {
+          examples.add(
+            GrammarExamplesCompanion.insert(
+              grammarId: pointId,
+              japanese: ex['sentence'],
+              translation: (ex['translation'] ?? ex['translationEn'] ?? '')
+                  .toString(),
+              translationVi: Value(ex['translation'] as String?),
+              translationEn: Value(ex['translationEn'] as String?),
+            ),
+          );
+        }
+      }
+    }
+
+    return (point: point, examples: examples);
   }
 
   Future<void> _seedOneLesson(String level, _LessonData lessonData) async {
@@ -358,6 +541,21 @@ class GrammarSeeder {
         'N1' => (start: 1, end: 88),
         _ => (start: 1, end: 25),
       };
+
+  @visibleForTesting
+  static int deterministicGrammarPointIdFor({
+    required String level,
+    required int lessonId,
+    required int itemIndex,
+  }) {
+    final base = switch (level.trim().toUpperCase()) {
+      'N1' => 1000000,
+      'N2' => 2000000,
+      'N3' => 3000000,
+      _ => 9000000,
+    };
+    return base + (lessonId * 100) + itemIndex;
+  }
 
   String? _normalizeLevel(String level) {
     final normalized = level.trim().toUpperCase();

@@ -739,3 +739,33 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Low-priority polish should not churn stable widgets without a failing symptom, especially before the full Playwright acceptance pass.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-075 - Upper JLPT grammar seeding uses deterministic bulk rows
+**Phase**: Urgent fix batch P0 follow-up
+**Date**: 2026-05-22 16:45 (Asia/Saigon)
+**Context**: Local Playwright on a fresh web profile showed N3 grammar stuck in the loading fallback for about 165 seconds because the app seeded N3/N2/N1 grammar lesson-by-lesson through many small Drift writes.
+**Options considered**: wait longer in QA | pre-seed all levels at app startup | bulk-replace only upper JLPT grammar rows with deterministic IDs
+**Chosen**: Use deterministic level-scoped IDs and bulk insert N3/N2/N1 grammar points/examples in one batch, leaving N5/N4 seeding unchanged.
+**Rationale**: Shin Kanzen roadmap rendering must be fast on first visit. Upper-level grammar has large generated manifests and low legacy SRS risk, while N5/N4 keep their existing ID behavior for user progress stability.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-076 - Exam prep has a bounded loading fallback
+**Phase**: Urgent fix batch P0 follow-up
+**Date**: 2026-05-22 17:05 (Asia/Saigon)
+**Context**: `/exam` could stay on `Đang chuẩn bị câu hỏi JLPT N5...` while the content DB was still opening and seeding local vocab tracks.
+**Options considered**: keep spinner until content DB finishes | make exam depend on preloaded data only | timeout mock prep and render the no-question empty state
+**Chosen**: Apply an 8-second timeout to the vocab fetch and a 2-second timeout to resume-state loading. On timeout the selected level becomes Ready and shows the existing no-question state.
+**Rationale**: A visible empty state is safer than an indefinite loading card. It satisfies the audit requirement that no-question levels render a user-facing fallback instead of a blank or stuck flow.
+**Reversible**: yes
+**Owner review**: pending
+
+## DECISION-077 - Missing N5/N4 vocab tracks should not be probed
+**Phase**: Urgent fix batch acceptance
+**Date**: 2026-05-22 17:20 (Asia/Saigon)
+**Context**: Local acceptance showed console 404s for `vocab/n5/ShinKanzen/index.json` and `vocab/n5/mimikara/index.json`. These tracks are intentionally absent after the corrected textbook architecture.
+**Options considered**: ignore known 404s in QA | add empty placeholder assets | skip impossible probes in the content seeder
+**Chosen**: Return Minna paths directly for N5/N4 canonical vocab and keep Mimikara seed specs to N3/N2/N1 only.
+**Rationale**: The app should not request assets for tracks that are intentionally not part of the product architecture. Avoiding the request keeps console-error acceptance meaningful.
+**Reversible**: yes
+**Owner review**: pending

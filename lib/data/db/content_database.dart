@@ -1666,6 +1666,9 @@ class ContentDatabase extends _$ContentDatabase {
     required int lessonId,
   }) async {
     final paddedLessonId = lessonId.toString().padLeft(2, '0');
+    if (levelLower == 'n4' || levelLower == 'n5') {
+      return _minnaVocabAssetPath(levelLower, paddedLessonId);
+    }
     final shinkanzenIndexPath =
         'assets/data/content/vocab/$levelLower/ShinKanzen/index.json';
 
@@ -2368,8 +2371,6 @@ class _MimikaraSeedSpec {
 }
 
 const _mimikaraSeedSpecs = <_MimikaraSeedSpec>[
-  _MimikaraSeedSpec('N5', 'n5'),
-  _MimikaraSeedSpec('N4', 'n4'),
   _MimikaraSeedSpec('N3', 'n3'),
   _MimikaraSeedSpec('N2', 'n2'),
   _MimikaraSeedSpec('N1', 'n1'),

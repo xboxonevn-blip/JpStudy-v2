@@ -2548,3 +2548,20 @@
 - L2 onboarding level guard passed: start is disabled before selection,
   enabled after selecting a level, and selected level tiles show primary
   border/check styling.
+
+## 2026-05-22 Urgent fix batch live follow-up
+
+- Found and fixed a live-local first-load risk not covered by the earlier route
+  matrix: upper JLPT grammar seeding on web was writing lesson-by-lesson and
+  kept N3 loading for about 165 seconds on a fresh browser profile.
+- Replaced N3/N2/N1 grammar seeding with deterministic bulk inserts. Local
+  Playwright evidence now shows N3 bulk seed completing in about 2.6 seconds,
+  with screenshots for N3/N2/N1 roadmap counts in `docs/research/`.
+- Found and fixed `/exam` first-load hang when content DB startup blocks vocab
+  queries. Mock prep now exits loading after 8 seconds and renders the visible
+  no-question empty state instead of staying on the spinner.
+- Removed N5/N4 Mimikara seed specs and skipped Shin Kanzen vocab index probes
+  for N5/N4, eliminating local 404 console noise from non-existent tracks.
+- Gates passed: focused analyze, `exam_screen_test`, grammar seeder tests,
+  upper JLPT content integrity, grammar screen tests, Mimikara/textbook Node
+  architecture tests, and `flutter build web --release`.

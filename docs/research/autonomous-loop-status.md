@@ -2284,6 +2284,9 @@
   so the UI renders the expected manifest lesson counts: N3 83, N2 163, N1 88.
 - Bumped `GrammarSeeder.kGrammarDataVersion` to force existing browser
   IndexedDB caches to reseed the expanded upper-JLPT grammar lesson files.
+- Live recheck found the seeder still capped N3/N2/N1 ranges at 25 lessons;
+  the cap is now fixed to N3=83, N2=163, N1=88 and the data version is bumped
+  again so partial v30 browser caches reseed.
 - Gates passed: focused grammar `flutter analyze`,
   `grammar_screen_test`, `upper_jlpt_content_integrity_test`, and
   `flutter build web --release`.

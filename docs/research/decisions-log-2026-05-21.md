@@ -609,3 +609,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This satisfies the live acceptance wording without destabilizing the existing grammar bank, practice routes, or generated content. The section makes the manifest count visible while the version bump ensures existing browsers load the expanded C3 lesson files.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-062 - Upper grammar seeder uses manifest lesson ranges
+**Phase**: Urgent live audit P0 C3 addendum
+**Date**: 2026-05-22 17:45 (local)
+**Context**: Live recheck after the v30 deploy still showed N1 as `25 bài có nội dung` because `GrammarSeeder.lessonRangeForLevel` kept N3/N2/N1 capped at 25 even though the asset tree contains 83/163/88 JSON lesson files.
+**Options considered**: rely on roadmap placeholders only | load every asset directory dynamically | make the seeder range table match the Shin Kanzen manifest counts and bump data version again
+**Chosen**: Seed N3 lessons 1-83, N2 lessons 1-163, and N1 lessons 1-88; bump `GrammarSeeder.kGrammarDataVersion` to 31 so browsers that received partial v30 data reseed.
+**Rationale**: The app already ships deterministic lesson files and tests for these counts. Matching the seeder to the manifest fixes actual runtime content, not only the visible roadmap count.
+**Reversible**: yes
+**Owner review**: pending

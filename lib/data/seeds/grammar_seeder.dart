@@ -14,7 +14,7 @@ class GrammarSeeder {
   final GrammarDao _dao;
 
   // Tăng version này lên khi thay đổi file JSON data
-  static const int kGrammarDataVersion = 30;
+  static const int kGrammarDataVersion = 31;
   static const String kKeyGrammarVersion = 'grammar_data_version';
 
   static String versionKeyForLevel(String level) =>
@@ -57,7 +57,7 @@ class GrammarSeeder {
     );
     final stopwatch = Stopwatch()..start();
 
-    final range = _lessonRangeForLevel(normalizedLevel);
+    final range = lessonRangeForLevel(normalizedLevel);
     final levelData = await _loadLevelJson(
       normalizedLevel,
       range.start,
@@ -348,12 +348,16 @@ class GrammarSeeder {
       ..removeWhere((value) => value.isEmpty);
   }
 
-  ({int start, int end}) _lessonRangeForLevel(String level) => switch (level) {
-    'N5' => (start: 1, end: 25),
-    'N4' => (start: 26, end: 50),
-    'N3' || 'N2' || 'N1' => (start: 1, end: 25),
-    _ => (start: 1, end: 25),
-  };
+  @visibleForTesting
+  static ({int start, int end}) lessonRangeForLevel(String level) =>
+      switch (level) {
+        'N5' => (start: 1, end: 25),
+        'N4' => (start: 26, end: 50),
+        'N3' => (start: 1, end: 83),
+        'N2' => (start: 1, end: 163),
+        'N1' => (start: 1, end: 88),
+        _ => (start: 1, end: 25),
+      };
 
   String? _normalizeLevel(String level) {
     final normalized = level.trim().toUpperCase();

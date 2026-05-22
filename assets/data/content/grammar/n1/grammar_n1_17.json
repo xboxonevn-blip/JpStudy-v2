@@ -158,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + と + きりがない",
-      "meaning": "Ý nghĩa: Dùng để nói nếu bắt đầu làm, kể hoặc nghĩ về X thì sẽ không có điểm dừng.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ときりがない là điều kiện と đặt trước きりがない. きり là điểm cắt/ranh giới; がない phủ định ranh giới ấy, nên hễ A thì không thấy điểm dừng.",
+      "hanVietBridge": "きり có thể nhớ là điểm chấm dứt; ない là không. Aときりがない đi gần tiếng Việt hễ A thì không hết, không biết dừng ở đâu.",
+      "form": "Hình thức: động từ thường + と + きりがない. Ví dụ 考えるときりがない, 挙げるときりがない.",
+      "meaning": "Ý nghĩa: Nếu bắt đầu A thì sẽ kéo dài/lan ra mãi, không có điểm kết.",
+      "usage": "Sử dụng: Hợp với nghĩ, kể, liệt kê, than phiền, đếm. Không dùng cho hành động đơn lẻ có kết thúc rõ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ときりがない khác 〜ばきりがない. ときりがない nghe như hễ chạm vào A là vòng vô tận mở ra; ばきりがない thiên về giả định/liệt kê.",
+      "crossLinks": [
+        {
+          "pattern": "〜ばきりがない",
+          "contrast": "Khác 〜ときりがない: 〜ばきりがない là nếu A thì không hết; 〜ときりがない mạnh hơn ở cảm giác hễ A là kéo dài."
+        },
+        {
+          "pattern": "〜たらきりがない",
+          "contrast": "〜たらきりがない nhấn sau khi bắt đầu thì không dừng; 〜ときりがない nhấn điều kiện tự nhiên hễ A thì vậy."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -192,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ともなく + Verb",
-      "meaning": "Ý nghĩa: Dùng để nói làm X một cách vô thức, không có ý định rõ ràng, rồi dẫn đến hành động hoặc trạng thái phía sau.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ともなく là とも, dù/cũng, cộng なく phủ định sự định hướng rõ. Khi đặt sau động từ tri giác/hành động nhẹ, nó nói A diễn ra lơ đãng, không chủ tâm.",
+      "hanVietBridge": "なく là không; ともなく có thể nhớ là không hẳn là A có chủ ý. 見るともなく見る là nhìn mà không thật sự nhắm vào đâu.",
+      "form": "Hình thức: động từ từ điển + ともなく + động từ sau, thường với 見る, 聞く, 読む, 考える.",
+      "meaning": "Ý nghĩa: Làm A một cách vô thức/lơ đãng, không có mục tiêu rõ.",
+      "usage": "Sử dụng: Động từ trước thường là tri giác hoặc hành động nhẹ. Nếu hành động có chủ ý mạnh, mẫu nghe lệch.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ともなく khác 〜つもりなく. つもりなく chỉ không có ý định; ともなく vẽ trạng thái lơ đãng đang trôi.",
+      "crossLinks": [
+        {
+          "pattern": "〜ともなしに",
+          "contrast": "Khác nhẹ với 〜ともなく: 〜ともなしに thường nối adverbially rõ hơn; cả hai đều là không chủ ý/lơ đãng."
+        },
+        {
+          "pattern": "〜つもりなく",
+          "contrast": "〜つもりなく chỉ không định làm; 〜ともなく diễn tả hành động lơ đãng đang diễn ra."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -226,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ともなしに + Verb",
-      "meaning": "Ý nghĩa: Dùng để nói làm X một cách lơ đãng hoặc không chủ ý.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ともなしに là ともなし, không rõ là có A hay không chủ tâm A, cộng に để biến cả cụm thành trạng ngữ. Nó mô tả hành động nền diễn ra vu vơ.",
+      "hanVietBridge": "なし là không có; ともなしに là không hẳn có ý A mà vẫn A. Tiếng Việt nên dịch là vu vơ, lơ đãng, chẳng chủ ý.",
+      "form": "Hình thức: động từ từ điển + ともなしに + hành động/kết quả sau. Ví dụ 見るともなしに, 聞くともなしに.",
+      "meaning": "Ý nghĩa: Làm A lơ đãng/không chủ ý rồi B xảy ra hoặc nhận ra B.",
+      "usage": "Sử dụng: Hay dùng với 見る, 聞く, 考える, 歩く. Vế sau thường là phát hiện, cảm nhận, hoặc kết quả tình cờ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ともなしに khác 〜ながら. ながら chỉ đồng thời; ともなしに thêm nét không chủ ý, như tâm trí đang thả lỏng.",
+      "crossLinks": [
+        {
+          "pattern": "〜ともなく",
+          "contrast": "Khác nhẹ với 〜ともなしに: 〜ともなしに làm trạng ngữ rõ hơn, thường nối sang kết quả tình cờ."
+        },
+        {
+          "pattern": "〜ながら",
+          "contrast": "〜ながら chỉ hai hành động đồng thời; 〜ともなしに nhấn hành động đầu không có chủ ý rõ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -260,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + なり",
-      "meaning": "Ý nghĩa: Dùng để nói ngay khi làm X thì lập tức Y xảy ra.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜なり là dạng nối cổ sau động từ từ điển, đánh dấu hành động A vừa xảy ra thì B bật ra ngay. Nó không phải danh từ なり trong hình dáng/cách thức.",
+      "hanVietBridge": "Có thể nhớ bằng tiếng Việt vừa A là B ngay. なり đặt sau động từ như một công tắc thời gian: A bật lên, B xảy ra liền.",
+      "form": "Hình thức: động từ từ điển + なり + hành động B. Ví dụ 帰るなり, 着くなり, 開けるなり.",
+      "meaning": "Ý nghĩa: Ngay khi A xảy ra thì B xảy ra lập tức.",
+      "usage": "Sử dụng: B thường là hành động có chủ thể rõ và xảy ra nhanh. Không dùng cho kết quả từ từ hoặc trạng thái kéo dài.",
+      "humanMoment": "Dr. Linh lưu ý: 〜なり khác 〜とすぐに. とすぐに trung tính; なり có sắc thái văn viết và cảm giác B bật ra rất nhanh sau A.",
+      "crossLinks": [
+        {
+          "pattern": "〜とすぐに",
+          "contrast": "Khác 〜なり: 〜とすぐに trung tính; 〜なり văn viết hơn và nhấn nối tiếp tức thì."
+        },
+        {
+          "pattern": "〜が早いか",
+          "contrast": "〜が早いか cũng là vừa A thì B; 〜なり gọn hơn và thường dùng với hành động của cùng/người liên quan."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -294,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun / Verb-dictionary form + にとどまらず + も/ほかのこと",
-      "meaning": "Ý nghĩa: Dùng để nói phạm vi không chỉ dừng ở việc X mà còn mở rộng sang điều khác.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜にとどまらず là とどまる, dừng/lưu lại, ở dạng phủ định とどまらず. に đánh dấu phạm vi A; mẫu nói sự việc không dừng ở A mà lan sang B.",
+      "hanVietBridge": "とどまる là dừng lại; とどまらず là không dừng. Tiếng Việt tự nhiên: không chỉ dừng ở A mà còn mở rộng tới B.",
+      "form": "Hình thức: danh từ hoặc mệnh đề + にとどまらず + Bも/さらにB. Ví dụ 写真撮影にとどまらず動画撮影も.",
+      "meaning": "Ý nghĩa: Không chỉ giới hạn ở A; còn lan sang B.",
+      "usage": "Sử dụng: A là phạm vi ban đầu, B là phạm vi mở rộng. Hợp với tin tức, báo cáo, học thuật, mô tả tác động.",
+      "humanMoment": "Dr. Linh lưu ý: 〜にとどまらず khác 〜だけでなく. だけでなく là không chỉ; にとどまらず thêm ý phạm vi lan rộng vượt khỏi ranh giới A.",
+      "crossLinks": [
+        {
+          "pattern": "〜だけでなく",
+          "contrast": "Khác 〜にとどまらず: 〜だけでなく chỉ cộng thêm B; 〜にとどまらず nhấn không dừng ở phạm vi A."
+        },
+        {
+          "pattern": "〜に限らず",
+          "contrast": "〜に限らず là không chỉ giới hạn ở A; 〜にとどまらず thường nhấn tác động/phạm vi lan thêm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -3009,3 +3009,9 @@
 - Repaired `ずとも` examples so each uses a verb-negative stem instead of noun `なくとも` examples.
 - Global Directive E validator progress is now `320/1123`; next failure starts at `grammar:n1:grammar_n1_40:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 049
+- Re-authored N1 rows `Noun にして初めて`, `Verb ずにはおかない`, `〜とされる`, `Noun にすら`, and `Verb ずにはすまない`.
+- Replaced generic guidance with threshold-realization, inevitable-action, accepted-view passive, even-to focus, and unsettled-obligation teaching.
+- Global Directive E validator progress is now `325/1123`; next failure starts at `grammar:n1:grammar_n1_42:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -2287,6 +2287,10 @@
 - Live recheck found the seeder still capped N3/N2/N1 ranges at 25 lessons;
   the cap is now fixed to N3=83, N2=163, N1=88 and the data version is bumped
   again so partial v30 browser caches reseed.
+- Source-map debugging traced the remaining Playwright console `Error` to
+  Flutter's default reading-order focus traversal reading a focus rect before
+  layout; app-level traversal now uses widget order to avoid that early rect
+  access.
 - Gates passed: focused grammar `flutter analyze`,
   `grammar_screen_test`, `upper_jlpt_content_integrity_test`, and
   `flutter build web --release`.

@@ -619,3 +619,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The app already ships deterministic lesson files and tests for these counts. Matching the seeder to the manifest fixes actual runtime content, not only the visible roadmap count.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-063 - App focus traversal uses widget order on web
+**Phase**: Urgent live audit acceptance
+**Date**: 2026-05-22 18:05 (local)
+**Context**: Playwright live QA still captured a console `Error` before grammar seeding. Source-map resolution mapped the stack to Flutter `ReadingOrderTraversalPolicy.sort -> FocusNode.rect -> RenderBox.semanticBounds`, meaning the default focus traversal policy read a focus rectangle before one render box finished layout.
+**Options considered**: ignore the console error as a Playwright accessibility artifact | remove focusable controls from chrome/banner | wrap the app in `FocusTraversalGroup` with `WidgetOrderTraversalPolicy`
+**Chosen**: Use app-level widget-order focus traversal.
+**Rationale**: Widget order avoids pre-layout rect reads while keeping deterministic keyboard traversal. This fixes the console acceptance failure at the boundary that triggered it instead of hiding errors.
+**Reversible**: yes
+**Owner review**: pending

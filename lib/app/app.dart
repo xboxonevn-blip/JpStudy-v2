@@ -38,8 +38,13 @@ class App extends ConsumerWidget {
       // Disable the animation so theme swaps are instant and crash-free.
       themeAnimationDuration: Duration.zero,
       routerConfig: AppRouter.router,
-      builder: (context, child) => ErrorMonitoringGate(
-        child: AnalyticsConsentBanner(child: child ?? const SizedBox.shrink()),
+      builder: (context, child) => FocusTraversalGroup(
+        policy: WidgetOrderTraversalPolicy(),
+        child: ErrorMonitoringGate(
+          child: AnalyticsConsentBanner(
+            child: child ?? const SizedBox.shrink(),
+          ),
+        ),
       ),
     );
   }

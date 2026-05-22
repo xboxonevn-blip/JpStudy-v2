@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + を経て",
       "meaning": "Ý nghĩa: Dùng để nói đi qua một giai đoạn, quá trình, nơi chốn hoặc bước trung gian trước khi đến kết quả hiện tại",
-      "usage": "Cách dùng: Với Noun を経て, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun を経て, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + を経て thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun を経て không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun là chặng trung gian: nơi chốn, thời gian, thủ tục, thảo luận, rèn luyện. Vế sau là kết quả sau khi đã đi qua chặng đó.",
+      "etymology": "Gốc cấu trúc: 経る nghĩa là đi qua/trải qua, chữ 経 gợi đường dọc, dòng chảy hoặc quá trình. Noun を経て lấy N làm tuyến đường/chặng mà kết quả phải đi qua.",
+      "hanVietBridge": "経 là kinh trong “kinh qua/kinh nghiệm”. を経て = trải qua/đi qua N rồi mới tới kết quả.",
+      "humanMoment": "Lưu ý từ Dr. Linh: を経て luôn có cảm giác có chặng đường. 苦労を経て成功した khác với 苦労して成功した vì nó nhìn gian khổ như một giai đoạn đã đi qua.",
       "crossLinks": [
         {
-          "pattern": "Noun と Noun を兼ねて",
-          "contrast": "Noun を経て cần đọc theo chức năng riêng của mẫu; Noun と Noun を兼ねて có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜を通じて",
+          "contrast": "Khác を経て: を通じて nhấn phương tiện/kênh xuyên suốt; を経て nhấn chặng trung gian trước kết quả."
+        },
+        {
+          "pattern": "〜を通って",
+          "contrast": "〜を通って thường là đi qua nơi chốn vật lý; を経て dùng rộng cho quá trình, thủ tục, thời gian."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + からする",
       "meaning": "Ý nghĩa: Dùng để đưa ra đánh giá hoặc suy luận dựa trên một khía cạnh, lập trường hoặc con số cụ thể",
-      "usage": "Cách dùng: Với Noun からする, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun からする, lõi Noun からする là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + からする thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun からする không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun là căn cứ đánh giá như 態度, 成績, 雰囲気, 数字, 立場. Sau mẫu thường là suy luận: ようだ, はずだ, だろう.",
+      "etymology": "Gốc cấu trúc: から đặt điểm xuất phát của suy luận, する biến điểm ấy thành thao tác đánh giá. Noun からすると/からする nghĩa là “lấy N làm căn cứ mà xét”.",
+      "hanVietBridge": "から là “từ”, する là “làm/xét”. からする nối sang tiếng Việt rất tự nhiên: “xét từ N”.",
+      "humanMoment": "Lưu ý từ Dr. Linh: からする cần một dấu hiệu để suy ra kết luận. 態度からすると là đọc thái độ; không phải chỉ nói nguồn gốc như 東京から.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun からする cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜から見ると",
+          "contrast": "Gần nghĩa, nhưng から見ると nhấn góc nhìn; からすると/からする nhấn căn cứ để suy luận."
+        },
+        {
+          "pattern": "〜から言うと",
+          "contrast": "から言うと đưa nhận xét từ tiêu chí; からすると thường cho kết luận dựa trên dấu hiệu."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + なくして + Sentence ～はない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh rằng nếu không có Noun thì không thể có kết quả phía sau",
-      "usage": "Cách dùng: Với Noun なくして～はない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun なくして～はない, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + なくして + Sentence ～はない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun なくして～はない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun là điều kiện không thể thiếu như 努力, 協力, 信頼, 経験. Vế sau thường có はない/あり得ない/できない để chốt lập luận.",
+      "etymology": "Gốc cấu trúc: なくして là dạng trang trọng của “không có/không thông qua”, còn はない phủ nhận kết quả. Noun なくして〜はない dựng quan hệ điều kiện cần rất mạnh.",
+      "hanVietBridge": "なく là “không có”; cầu nối tiếng Việt là “không có N thì không có B”. Đây là lập luận tất yếu, không phải thiếu nhẹ.",
+      "humanMoment": "Lưu ý từ Dr. Linh: なくして〜はない là câu đóng đinh điều kiện cần. 努力なくして成功はない không khuyên nhẹ; nó tuyên bố không có nỗ lực thì thành công không tồn tại.",
       "crossLinks": [
         {
-          "pattern": "Noun はおろか～も",
-          "contrast": "Noun なくして～はない cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なしに",
+          "contrast": "Gần nghĩa “không có”, nhưng なくして〜はない trang trọng và nhấn điều kiện cần mạnh hơn."
+        },
+        {
+          "pattern": "〜なくてはならない",
+          "contrast": "なくてはならない nói nghĩa vụ phải làm; なくして〜はない nói nếu thiếu N thì kết quả không thể có."
         }
       ],
       "fallbackReference": {

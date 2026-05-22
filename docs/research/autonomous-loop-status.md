@@ -3111,3 +3111,9 @@
 - Repaired one `ないまでも` example that had drifted into `にしても`.
 - Global Directive E validator progress is now `405/1123`; next failure starts at `grammar:n1:grammar_n1_62:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 066
+- Re-authored N1 rows `Noun のことだから`, `Verb ないものでもない`, `～に堪えない`, `Verb/Noun の嫌いがある`, and `Noun のない Noun`.
+- Corrected `嫌いがある` from literal dislike to bad tendency and aligned `のない` with noun-absence examples.
+- Global Directive E validator progress is now `410/1123`; next failure starts at `grammar:n1:grammar_n1_64:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

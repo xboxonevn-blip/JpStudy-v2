@@ -1,12 +1,12 @@
 [
   {
     "lessonId": 64,
-    "title": "Verb の ない Noun",
-    "titleEn": "Used to modify a noun with a negative verb form; a Noun without (Verb)",
-    "structure": "Verb in negative form + の + Noun",
-    "structureEn": "Verb in negative form + の + Noun",
-    "explanation": "Dùng để bổ nghĩa cho danh từ bằng ý nghĩa “không có hành động/trạng thái X”. Đây là cách nối mệnh đề phủ định với danh từ. Cấu trúc: Verb in negative form + の + Noun.",
-    "explanationEn": "VerbのないNoun modifies a noun by describing the absence of the verbs action. It indicates a Noun where the action does not happen or a Noun without that action",
+    "title": "Noun のない Noun",
+    "titleEn": "A noun without another noun; lacking",
+    "structure": "Noun1 + のない + Noun2",
+    "structureEn": "Noun1 + のない + Noun2",
+    "explanation": "Dùng để bổ nghĩa cho danh từ bằng ý nghĩa “không có Noun1”. Đây là cách nói một Noun2 thiếu yếu tố Noun1. Cấu trúc: Noun1 + のない + Noun2.",
+    "explanationEn": "Noun のない Noun modifies a noun by describing the absence of another noun, such as a life without laughter or a place without water",
     "level": "N1",
     "tags": [
       "source-hanabira",
@@ -24,15 +24,20 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb in negative form + の + Noun",
-      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ bằng ý nghĩa “không có hành động/trạng thái X”",
-      "usage": "Cách dùng: Với Verb の ない Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb の ない Noun, lõi Verb の ない Noun là mảnh giữ nhịp ngữ pháp. Hãy tách Verb in negative form + の + Noun thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb の ない Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "form": "Cấu trúc: Noun1 + のない + Noun2",
+      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ bằng ý nghĩa “không có Noun1”",
+      "usage": "Cách dùng: đặt yếu tố bị thiếu ở Noun1, rồi のない trước Noun2 cần mô tả: 笑いのない人生, 水のない場所. Mẫu tạo cụm danh từ “N2 không có N1”.",
+      "etymology": "Gốc rễ: の nối Noun1 với ない, biến “không có Noun1” thành phần bổ nghĩa cho Noun2. ない ở đây phủ định sự tồn tại, không phải phủ định hành động của động từ.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “vô N1 chi N2”. 愛のない結婚 là hôn nhân vô ái/không có tình yêu, không phải một mệnh đề hành động bị phủ định.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のない Noun cho tôi kiểm tra ngay “thiếu cái gì?”. Khác Verb-ない Noun phủ định hành động, のない phủ định sự có mặt của một danh từ.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb の ない Noun cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-ない Noun",
+          "contrast": "Khác Noun のない Noun: Verb-ない phủ định hành động, còn のない nói Noun2 thiếu một danh từ/yếu tố."
+        },
+        {
+          "pattern": "Noun なしの Noun",
+          "contrast": "So với なしの, のない tự nhiên hơn trong nhiều mô tả đời thường như 笑いのない人生."
         }
       ],
       "fallbackReference": {

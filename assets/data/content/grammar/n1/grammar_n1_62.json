@@ -126,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + のことだから",
       "meaning": "Ý nghĩa: Dùng khi dự đoán hoặc giải thích dựa trên tính cách, thói quen hoặc đặc điểm đã biết của Noun",
-      "usage": "Cách dùng: Với Noun のことだから, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun のことだから, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + のことだから thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun のことだから không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt người/tổ chức/sự vật đã quen biết trước のことだから để suy đoán dựa trên tính cách, thói quen, uy tín hoặc kiểu hành xử đã biết. Vế sau thường là “chắc/hẳn sẽ...”.",
+      "etymology": "Gốc rễ: こと gom Noun thành “chuyện/người ấy như một đối tượng đã biết”; だから đưa ra lý do. Noun のことだから nghĩa là vì biết rõ bản chất của N nên dự đoán sau có cơ sở.",
+      "hanVietBridge": "事/こと là “sự”. Noun のことだから giống “xét sự tình/con người N”, nên dịch tự nhiên là “với N thì...” hoặc “biết N rồi nên...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のことだから chỉ dùng khi người nói có ký ức về N. Khác だけに dựa vào tính chất khách quan, のことだから dựa vào hiểu biết quen thuộc về N.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "Noun のことだから cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun だけに",
+          "contrast": "Khác Noun のことだから: だけに dựa vào đặc tính/địa vị, còn のことだから dựa vào hiểu biết quen thuộc về N."
+        },
+        {
+          "pattern": "Noun のことだし",
+          "contrast": "So với のことだし, のことだから đưa lý do rõ hơn và thường dẫn đến dự đoán chắc hơn."
         }
       ],
       "fallbackReference": {

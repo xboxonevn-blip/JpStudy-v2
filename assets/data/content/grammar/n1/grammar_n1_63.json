@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-negative form (ない form) + ものでもない",
       "meaning": "Ý nghĩa: Dùng để nói không phải hoàn toàn không thể hoặc không phải là không có khả năng",
-      "usage": "Cách dùng: Với Verb ないものでもない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ないものでもない, lõi もの là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-negative form (ない form) + ものでもない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ないものでもない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng Verb ないものでもない để phủ nhận “hoàn toàn không V/không thể V”. Sắc thái dè dặt: khả năng có tồn tại, nhưng người nói không muốn khẳng định mạnh.",
+      "etymology": "Gốc rễ: ない phủ định hành động/khả năng; もの biến phần phủ định thành một “điều”; でもない phủ định cả điều ấy. Hai lớp phủ định tạo cửa nhỏ: không phải là không có khả năng V.",
+      "hanVietBridge": "Cầu Hán-Việt: gần “vị tất bất khả” - chưa chắc là không thể. 解けないものでもない là còn có đường giải, nhưng chưa nói là dễ.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ないものでもない là câu nói dè dặt của người chưa muốn hứa. Khác なくもない ngắn và mềm hơn, ないものでもない nghe văn viết và cân nhắc hơn.",
       "crossLinks": [
         {
-          "pattern": "Verbる ものとする",
-          "contrast": "Verb ないものでもない cần đọc theo chức năng riêng của mẫu; Verbる ものとする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なくもない",
+          "contrast": "Khác Verb ないものでもない: なくもない ngắn và hội thoại hơn, ないものでもない cân nhắc/trang trọng hơn."
+        },
+        {
+          "pattern": "〜ないこともない",
+          "contrast": "So với ないこともない, ないものでもない làm khả năng nghe như một điều kiện/khả năng khách quan hơn."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + に堪えない, Noun + に堪えない",
       "meaning": "Ý nghĩa: Dùng để nói không chịu nổi, không đáng để xem/nghe, hoặc quá xúc động không kìm được, tùy danh từ/động từ đi kèm",
-      "usage": "Cách dùng: Với ～に堪えない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に堪えない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + に堪えない, Noun + に堪えない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に堪えない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng Verb/Noun + に堪えない khi không thể chịu nổi hoặc không đáng để xem/nghe/đọc; với danh từ cảm xúc như 感謝, mẫu có thể nói cảm xúc quá lớn không kìm được.",
+      "etymology": "Gốc rễ: 堪える là “chịu đựng/đủ sức chịu”; ない phủ định sức chịu ấy. に đặt đối tượng đánh giá trước mẫu: 見るに堪えない là không đủ chịu để nhìn.",
+      "hanVietBridge": "堪 là Hán-Việt “kham”: chịu nổi, đảm đương được. ～に堪えない vì vậy là “bất kham” trước việc nhìn/nghe/đọc hoặc trước cảm xúc quá mạnh.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～に堪えない có ngưỡng chịu đựng bị vỡ. Khác に堪える là “đáng/đủ chịu được”, に堪えない rơi sang không chịu nổi hoặc không đáng.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～に堪えない cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～に堪える",
+          "contrast": "Khác ～に堪えない: に堪える là đáng/đủ chịu được, còn に堪えない là không chịu nổi hoặc không đáng."
+        },
+        {
+          "pattern": "〜てならない",
+          "contrast": "So với てならない diễn tả cảm xúc tự phát, に堪えない trang trọng hơn và có gốc “không kham nổi”."
         }
       ],
       "fallbackReference": {
@@ -91,12 +101,12 @@
   },
   {
     "lessonId": 63,
-    "title": "Noun の 嫌いがある",
-    "titleEn": "Have a dislike for a particular Noun",
-    "structure": "Noun + の嫌いがある",
-    "structureEn": "Noun + の嫌いがある",
-    "explanation": "Dùng để nói có khuynh hướng không tốt hoặc thói quen xấu liên quan đến Noun. Không phải “ghét”, mà là “có xu hướng”. Cấu trúc: Noun + の嫌いがある.",
-    "explanationEn": "The grammar point Nounの嫌いがある is used to express a dislike for a particular thing, action or situation, indicated by the noun. This structure is somewhat formal or old-fashioned. In casual speech, people more commonly say Noun が嫌い",
+    "title": "Verb/Noun の嫌いがある",
+    "titleEn": "Have a tendency to; have a bad habit of",
+    "structure": "Verb-dictionary form + 嫌いがある / Noun + の嫌いがある",
+    "structureEn": "Verb-dictionary form + 嫌いがある / Noun + の嫌いがある",
+    "explanation": "Dùng để nói có khuynh hướng không tốt hoặc thói quen xấu liên quan đến Noun/Verb. Không phải “ghét”, mà là “có xu hướng”. Cấu trúc: Verb-dictionary form + 嫌いがある / Noun + の嫌いがある.",
+    "explanationEn": "The grammar point 嫌いがある expresses an undesirable tendency or inclination. It is formal and does not mean simply dislike in this pattern",
     "level": "N1",
     "tags": [
       "source-hanabira",
@@ -114,15 +124,20 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + の嫌いがある",
-      "meaning": "Ý nghĩa: Dùng để nói có khuynh hướng không tốt hoặc thói quen xấu liên quan đến Noun",
-      "usage": "Cách dùng: Với Noun の 嫌いがある, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun の 嫌いがある, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + の嫌いがある thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun の 嫌いがある không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "form": "Cấu trúc: Verb-dictionary form + 嫌いがある / Noun + の嫌いがある",
+      "meaning": "Ý nghĩa: Dùng để nói có khuynh hướng không tốt hoặc thói quen xấu liên quan đến Noun/Verb",
+      "usage": "Cách dùng: đặt hành vi hoặc danh từ chỉ khuynh hướng trước 嫌いがある để nhận xét có xu hướng xấu. Mẫu trang trọng, hay dùng trong phê bình: 結論を急ぐ嫌いがある.",
+      "etymology": "Gốc rễ: 嫌い vốn là “điều không ưa”, nhưng trong mẫu 嫌いがある nó trượt sang nghĩa “khuynh hướng lệch”. がある nói khuynh hướng ấy tồn tại trong người/tổ chức/văn bản.",
+      "hanVietBridge": "嫌 gợi “hiềm/ghét”, nhưng ở 嫌いがある không dịch là ghét. Hãy nhớ như “có cái hiềm/khuynh hướng xấu”: hay vội kết luận, hay cường điệu, hay thiên lệch.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb/Noun の嫌いがある là lời phê bình có găng tay. Khác 嫌いだ nói sở thích ghét, 嫌いがある nói một khuynh hướng xấu đang lặp lại.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun の 嫌いがある cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun が嫌いだ",
+          "contrast": "Khác Verb/Noun の嫌いがある: が嫌いだ là ghét, còn 嫌いがある là có khuynh hướng không tốt."
+        },
+        {
+          "pattern": "傾向がある",
+          "contrast": "So với 傾向がある trung tính, 嫌いがある thường mang đánh giá tiêu cực và văn viết hơn."
         }
       ],
       "fallbackReference": {

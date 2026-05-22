@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ますstem + そうもない",
       "meaning": "Ý nghĩa: Dùng để nói dường như không thể hoặc không có khả năng làm được việc gì",
-      "usage": "Cách dùng: Với Verb そうもない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb そうもない, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ますstem + そうもない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb そうもない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Gắn そうもない sau thân ます của động từ để nói khả năng gần như không xảy ra. Hay dùng khi người nói đã nhìn dấu hiệu thực tế và kết luận “khó mà V được”.",
+      "etymology": "Gốc cấu trúc: そう là vẻ/dấu hiệu, も trong そうもない thêm cảm giác “đến cả vẻ ấy cũng không có”, rồi ない phủ định. Vì vậy 終えそうもない không chỉ là “có vẻ không xong” mà là “không thấy nổi một dấu hiệu sẽ xong”.",
+      "hanVietBridge": "相 = tướng/dáng vẻ. 終えそうもない = không thấy dáng vẻ có thể hoàn tất.",
+      "humanMoment": "Lưu ý từ Dr. Linh: そうもない là câu thở dài trước bằng chứng. Khi thấy 今日中に終えそうもない, đừng dịch nhẹ như dự đoán; hãy nghe cảm giác bất khả thi đã hiện ra.",
       "crossLinks": [
         {
+          "pattern": "Verb そうにない",
+          "contrast": "Khác そうにない: そうもない thường nhấn mức độ khó xảy ra mạnh hơn, như “không có cả dấu hiệu”."
+        },
+        {
           "pattern": "Verbる べくもない",
-          "contrast": "Verb そうもない cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "べくもない trang trọng và gần “không thể nào”; そうもない dựa nhiều hơn vào dấu hiệu trước mắt."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + とすれば / い-Adjective + とすれば / な-Adjective + だとすれば / Noun + だとすれば",
       "meaning": "Ý nghĩa: Dùng khi đặt giả định “nếu đúng là X” để đưa ra suy luận, nhận xét hoặc điều kiện phía sau",
-      "usage": "Cách dùng: Với ～とすれば, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とすれば, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + とすれば / い-Adjective + とすれば / な-Adjective + だとすれば / Noun + だとすれば thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とすれば không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt một mệnh đề làm giả định rồi kéo theo suy luận, đánh giá hoặc quyết định. Với danh từ/tính từ na cần だ trước とすれば để mệnh đề đủ hình thức.",
+      "etymology": "Gốc cấu trúc: と trích lại giả định, すれば là “nếu làm/đặt như vậy”. ～とすれば nghĩa là “nếu ta lấy X làm điều kiện đúng”, nên vế sau thường là kết luận logic chứ không chỉ điều kiện thời gian.",
+      "hanVietBridge": "為 = vi/làm. 彼が来るとすれば = nếu lấy việc anh ấy đến làm giả định.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とすれば là thao tác dựng giả thuyết. Khi gặp 彼が嘘だとすれば, hãy tự hỏi: nếu X đúng, người nói sẽ suy ra điều gì ngay sau đó?",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とすれば cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とすると",
+          "contrast": "Khác とすると: cả hai đều giả định, nhưng とすれば thường mềm hơn và hay mở nhận xét/đánh giá."
+        },
+        {
+          "pattern": "〜としたら",
+          "contrast": "としたら gần khẩu ngữ “nếu như”; とすれば nghe như lập luận có điều kiện hơn."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + にもまして",
       "meaning": "Ý nghĩa: Dùng để nói điều phía sau vượt hơn Noun về mức độ",
-      "usage": "Cách dùng: Với Noun にもまして, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun にもまして, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + にもまして thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun にもまして không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt mốc so sánh trước にもまして, rồi nói vế sau vượt mốc ấy. Thường dùng với thời điểm, mức độ, người hoặc tiêu chuẩn đã đủ nổi bật.",
+      "etymology": "Gốc cấu trúc: 増す là tăng/thêm lên. に + も đặt N làm mốc “ngay cả N”, まして kéo nghĩa tăng vượt hơn mốc đó. 昨日にもまして寒い là cái lạnh hôm nay vượt lên trên cả hôm qua.",
+      "hanVietBridge": "増 = tăng. 昨日にもまして = còn tăng hơn cả hôm qua.",
+      "humanMoment": "Lưu ý từ Dr. Linh: にもまして cần một cái thước đo. Khi thấy 昨日にもまして, hãy hỏi “mốc cũ là gì, phần sau vượt mốc ấy ở điểm nào?”",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun にもまして cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜以上に",
+          "contrast": "Khác 以上に: nghĩa gần, nhưng にもまして có sắc thái văn viết và nhấn mốc cũ đã cao rồi."
+        },
+        {
+          "pattern": "〜にもかかわらず",
+          "contrast": "にもかかわらず nói nghịch điều kiện; にもまして nói vượt mức so sánh, không phải nghịch lý."
         }
       ],
       "fallbackReference": {

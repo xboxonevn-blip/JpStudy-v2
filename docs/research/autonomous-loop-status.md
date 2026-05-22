@@ -3021,3 +3021,9 @@
 - Repaired one `そうにない` example so the subject naturally carries the completion prediction.
 - Global Directive E validator progress is now `330/1123`; next failure starts at `grammar:n1:grammar_n1_44:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 051
+- Re-authored N1 rows `Verb そうもない`, `〜とすれば`, `Noun にもまして`, `Verb そばから`, and `〜となったら`.
+- Replaced generic template guidance with near-impossibility, hypothesis, comparison-increase, immediate-recurrence, and formed-situation-condition teaching.
+- Global Directive E validator progress is now `335/1123`; next failure starts at `grammar:n1:grammar_n1_45:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

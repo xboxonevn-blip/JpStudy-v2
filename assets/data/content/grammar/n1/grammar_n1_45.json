@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ますstem + そばから",
       "meaning": "Ý nghĩa: Dùng để nói ngay sau khi làm xong một việc thì việc khác xảy ra, thường là việc làm mất tác dụng của hành động trước",
-      "usage": "Cách dùng: Với Verb そばから, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb そばから, lõi Verb そばから là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ますstem + そばから thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb そばから không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Nói một việc vừa xảy ra xong thì việc khác lập tức xảy ra, thường lặp lại và làm hỏng công sức trước đó. Vế sau hay mang sắc thái phiền, bất lực.",
+      "etymology": "Gốc cấu trúc: そば là “bên cạnh/ngay sát”, から là điểm xuất phát. Verb そばから đặt hành động trước như điểm vừa chạm tới, rồi từ ngay sát điểm đó sự việc sau bật ra.",
+      "hanVietBridge": "側 = trắc/bên cạnh. 片付けるそばから = ngay sát lúc vừa dọn xong thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: そばから là vòng lặp gây mệt. Trong 掃除するそばから散らかす, trọng tâm không phải “sau khi”, mà là vừa xong đã bị phá ngay.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb そばから cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たとたん",
+          "contrast": "Khác たとたん: とたん nhấn khoảnh khắc ngay sau; そばから thường gợi lặp lại và bực bội."
+        },
+        {
+          "pattern": "〜や否や",
+          "contrast": "や否や trang trọng và mô tả tức thời; そばから đời thường hơn, thường kèm cảm giác công sức bị cuốn mất."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + となったら / Noun + となったら",
       "meaning": "Ý nghĩa: Dùng để nói nếu sự việc chuyển thành tình huống X thì sẽ có kết quả hoặc phản ứng phía sau",
-      "usage": "Cách dùng: Với ～となったら, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～となったら, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + となったら / Noun + となったら thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～となったら không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt tình huống X như một trạng thái đã thành chuyện thật, rồi nói phản ứng/hệ quả nếu đã tới mức đó. Sắc thái mạnh hơn điều kiện bình thường.",
+      "etymology": "Gốc cấu trúc: と đánh dấu kết quả/trạng thái được gọi tên, なった là “đã trở thành”, ら là điều kiện. ～となったら vì vậy là “nếu chuyện đã chuyển thành X rồi thì...”.",
+      "hanVietBridge": "成 = thành. 試験に落ちるとなったら = nếu đã thành chuyện trượt kỳ thi thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: となったら không chỉ là “nếu”. Nó đặt người học vào ngưỡng sự việc đã thành hình: đi du lịch thật, trượt thật, chia tay thật thì phản ứng ra sao?",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～となったら cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜となると",
+          "contrast": "Khác となると: となると hay nêu hệ quả khi nói tới X; となったら nghe giả định tình huống đã xảy ra hơn."
+        },
+        {
+          "pattern": "〜としたら",
+          "contrast": "としたら là giả định rộng; となったら nhấn sự việc đã chuyển thành trạng thái X."
         }
       ],
       "fallbackReference": {

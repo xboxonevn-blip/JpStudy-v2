@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-volitional form + にも + (reason/potential negative, etc.)",
       "meaning": "Ý nghĩa: Dùng khi muốn làm X nhưng không thể vì có lý do cản trở",
-      "usage": "Cách dùng: Với Verb ようにも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ようにも, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-volitional form + にも + (reason/potential negative, etc.) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ようにも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt ý định làm bằng dạng ý chí trước ようにも, rồi nêu lý do cản trở hoặc phủ định khả năng phía sau: 話そうにも話せない.",
+      "etymology": "Gốc rễ: よう là ý chí muốn làm; にも gắn thêm cảm giác “ngay cả khi hướng tới việc đó”. Vế sau chặn ý chí ấy bằng lý do bất khả.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “dẫu muốn hành cũng bất khả”. Verb ようにも cần có lực muốn làm và lực cản rõ ràng.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ようにも là mẫu của ý định bị chặn. Khác ようがない chỉ không có cách, ようにも cho thấy đã muốn làm nhưng không thể.",
       "crossLinks": [
         {
-          "pattern": "Verb よう",
-          "contrast": "Verb ようにも cần đọc theo chức năng riêng của mẫu; Verb よう có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ようがない",
+          "contrast": "Khác Verb ようにも: ようがない nhấn không có cách, còn ようにも nhấn ý định bị điều kiện cản."
+        },
+        {
+          "pattern": "Verb ようとしても",
+          "contrast": "So với ようとしても gần nghĩa, ようにも cô đặc hơn và thường dẫn thẳng tới lý do bất khả."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun/Adjective + ぶる → ぶった (past tense), e.g., 偉そうぶった, 大人ぶった",
       "meaning": "Ý nghĩa: Dùng để nói ai đó tỏ vẻ, làm ra vẻ hoặc giả bộ có tính chất nào đó; thường mang sắc thái phê bình",
-      "usage": "Cách dùng: Với ～ぶった, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ぶった, lõi ～ぶった là mảnh giữ nhịp ngữ pháp. Hãy tách Noun/Adjective + ぶる → ぶった (past tense), e.g., 偉そうぶった, 大人ぶった thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ぶった không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn ぶった sau danh từ/tính chất để bổ nghĩa cho thái độ, lời nói, vẻ mặt theo nghĩa làm ra vẻ: 大人ぶった口調, 偉そうぶった態度.",
+      "etymology": "Gốc rễ: ぶった là dạng quá khứ/liên thể của ぶる, “làm ra vẻ/tỏ vẻ”. Nó mô tả dáng vẻ đã được khoác lên, thường có mắt phê bình.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “giả tác vẻ N”. ～ぶった không chỉ giống N; nó nói người đó đang tạo dáng như N.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～ぶった hay có gai phê bình. Khác ～びた mô tả dáng vẻ tự nhiên, ～ぶった khiến người nghe thấy sự làm màu.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～ぶった cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～びた",
+          "contrast": "Khác ～ぶった: びた là mang vẻ tự nhiên, còn ぶった là làm ra vẻ và thường bị chê."
+        },
+        {
+          "pattern": "Noun のふりをする",
+          "contrast": "So với ふりをする là giả vờ nói chung, ～ぶった gắn vào danh từ sau để tả thái độ/giọng/vẻ."
         }
       ],
       "fallbackReference": {

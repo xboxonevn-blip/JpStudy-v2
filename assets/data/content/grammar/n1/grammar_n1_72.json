@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-volitional + と + Verb-negative volitional (～まい) + と",
       "meaning": "Ý nghĩa: Dùng để nói bất kể có làm hay không làm X, điều phía sau vẫn không đổi",
-      "usage": "Cách dùng: Với Verb ようと Verbる まいと, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ようと Verbる まいと, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-volitional + と + Verb-negative volitional (～まい) + と thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ようと Verbる まいと không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: lặp cùng một động từ ở hai hướng ようと...まいと để nói việc phía sau không bị ảnh hưởng dù có làm hay không làm.",
+      "etymology": "Gốc rễ: よう là ý chí làm, まい là phủ định ý chí cổ; と sau mỗi vế đặt hai lựa chọn như hai điều kiện được nêu ra rồi gạt sang bên.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “hành hay bất hành, kết cục vẫn vậy”. Verb ようと Verbるまいと xóa hiệu lực khác biệt giữa hai lựa chọn.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ようと Verbるまいと không phải đang phân vân. Khác ようか...まいか, mẫu này nói dù chọn bên nào kết quả vẫn không đổi.",
       "crossLinks": [
         {
-          "pattern": "Verb よう",
-          "contrast": "Verb ようと Verbる まいと cần đọc theo chức năng riêng của mẫu; Verb よう có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ようが Verbるまいが",
+          "contrast": "Khác Verb ようと Verbるまいと: hai mẫu gần nghĩa, nhưng ようと...まいと nghe văn viết và liệt kê điều kiện rõ hơn."
+        },
+        {
+          "pattern": "Verb ようか Verbるまいか",
+          "contrast": "So với ようか...まいか là do dự, ようと...まいと là nhượng bộ “dù làm hay không”."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Adjective/Noun + びる (to form a verb)",
       "meaning": "Ý nghĩa: Dùng như hậu tố để tạo động từ mang nghĩa trở nên hoặc có vẻ mang tính chất nào đó",
-      "usage": "Cách dùng: Với ～びる, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～びる, lõi ～びる là mảnh giữ nhịp ngữ pháp. Hãy tách Adjective/Noun + びる (to form a verb) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～びる không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn びる sau một số danh từ/tính chất cố định để tạo động từ “mang vẻ/trở nên có màu sắc đó”: 大人びる, 古びる, 田舎びる.",
+      "etymology": "Gốc rễ: びる là hậu tố động từ hóa, làm tính chất trước trở thành quá trình hoặc trạng thái hiện ra. Vì vậy 大人びる là dần mang vẻ người lớn.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “hóa ra sắc thái N”. ～びる biến N/tính chất thành động từ trở nên có dáng dấp ấy, không phải giả vờ.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～びる thường mô tả vẻ tự nhiên hoặc biến đổi. Khác ～ぶる là cố tỏ ra, びる không nhất thiết có ý phê bình.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～びる cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～びた",
+          "contrast": "Khác ～びる: びる là động từ trở nên/mang vẻ, còn びた là dạng bổ nghĩa đã thành phẩm cho danh từ."
+        },
+        {
+          "pattern": "～ぶる",
+          "contrast": "So với ～ぶる là làm ra vẻ, ～びる mô tả dáng vẻ/tính chất hiện ra tự nhiên hơn."
         }
       ],
       "fallbackReference": {

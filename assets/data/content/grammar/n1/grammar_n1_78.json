@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + くらいなら",
       "meaning": "Ý nghĩa: Dùng để nói thà chọn điều khác còn hơn phải làm X",
-      "usage": "Cách dùng: Với Verbる くらいなら, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる くらいなら, lõi くらい là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + くらいなら thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる くらいなら không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt hành động rất muốn tránh trước くらいなら, rồi nêu lựa chọn còn đỡ hơn ở vế sau: 負けるくらいなら試合をしない.",
+      "etymology": "Gốc rễ: くらい đặt X như một mức độ/giới hạn khó chịu; なら biến mức ấy thành điều kiện giả định. Vế sau là phương án người nói chọn để khỏi chạm mức X.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “nếu đến mức phải V thì thà...”. Verbる くらいなら luôn đặt V như ngưỡng người nói không muốn chịu.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる くらいなら cần cảm giác né tránh mạnh. Khác より, nó không so sánh lạnh; nó nói X tệ đến mức chọn Y.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verbる くらいなら cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun/Verb より",
+          "contrast": "Khác Verbる くらいなら: より chỉ so sánh hơn, còn くらいなら đặt X như ngưỡng khó chịu cần tránh."
+        },
+        {
+          "pattern": "Verb ほうがまし",
+          "contrast": "So với ほうがまし nêu lựa chọn đỡ hơn, くらいなら đặt điều tệ ở vế trước làm điều kiện."
         }
       ],
       "fallbackReference": {
@@ -48,8 +53,8 @@
     "lessonId": 78,
     "title": "～もなんでもない",
     "titleEn": "Used to dismiss or negate something’s importance; it’s nothing at all, it doesn’t matter",
-    "structure": "Verb-dictionary form + もなんでもない, い-Adjective + もなんでもない, な-Adjective + なもなんでもない, Noun + もなんでもない",
-    "structureEn": "Verb-dictionary form + もなんでもない, い-Adjective + もなんでもない, な-Adjective + なもなんでもない, Noun + もなんでもない",
+    "structure": "Noun + も/でもなんでもない, い-Adjective くもなんでもない, な-Adjective + でもなんでもない",
+    "structureEn": "Noun + も/でもなんでもない, い-Adjective くもなんでもない, な-Adjective + でもなんでもない",
     "explanation": "Dùng để phủ nhận mạnh rằng điều gì đó chẳng phải X hay chẳng quan trọng gì cả. Có thể hiểu là “không phải... gì hết”. Cấu trúc: Verb-dictionary form + もなんでもない, い-Adjective + もなんでもない, な-Adjective + なもなんでもない, Noun + もなんでもない.",
     "explanationEn": "The ～もなんでもない pattern is used to deny or downplay the significance of something. It can mean it doesn’t matter at all or it’s no big deal",
     "level": "N1",
@@ -69,15 +74,20 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-dictionary form + もなんでもない, い-Adjective + もなんでもない, な-Adjective + なもなんでもない, Noun + もなんでもない",
+      "form": "Cấu trúc: Noun + も/でもなんでもない, い-Adjective くもなんでもない, な-Adjective でもなんでもない",
       "meaning": "Ý nghĩa: Dùng để phủ nhận mạnh rằng điều gì đó chẳng phải X hay chẳng quan trọng gì cả",
-      "usage": "Cách dùng: Với ～もなんでもない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～もなんでもない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + もなんでもない, い-Adjective + もなんでもない, な-Adjective + なもなんでもない, Noun + もなんでもない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～もなんでもない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt nhãn muốn phủ nhận trước も/でもなんでもない để bác mạnh: 冗談もなんでもない, 専門家でもなんでもない, 面白くもなんでもない.",
+      "etymology": "Gốc rễ: も kéo cả nhãn X vào phạm vi phủ định; なんでもない nghĩa là “chẳng là gì cả”. Cả cụm đập bỏ việc gọi sự vật là X.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “phi X, bất thành danh gì”. ～もなんでもない là phủ định nhãn X đến tận gốc, không phải chỉ giảm nhẹ.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～もなんでもない dùng khi người nói muốn bác nhãn. Khác ではない trung tính, nó có lực “chẳng phải X gì hết”.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "～もなんでもない cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun ではない",
+          "contrast": "Khác ～もなんでもない: ではない phủ định thông thường, còn もなんでもない bác mạnh kiểu “chẳng phải X gì”."
+        },
+        {
+          "pattern": "Noun どころではない",
+          "contrast": "So với どころではない là không ở trạng thái để làm/nói X, もなんでもない phủ nhận chính nhãn X."
         }
       ],
       "fallbackReference": {

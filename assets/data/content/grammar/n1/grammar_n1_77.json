@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + が早いか",
       "meaning": "Ý nghĩa: Dùng để nói ngay khi hành động X xảy ra thì hành động Y xảy ra gần như lập tức",
-      "usage": "Cách dùng: Với Verbる が早いか, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる が早いか, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + が早いか thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる が早いか không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt hành động mở màn trước が早いか, rồi hành động kế tiếp ở vế sau để nhấn hai việc nối nhau gần như tức thì.",
+      "etymology": "Gốc rễ: 早い là nhanh/sớm; が nối hành động trước như điểm kích hoạt. か làm câu có sắc thái “vừa kịp X thì đã Y”.",
+      "hanVietBridge": "早 là Hán-Việt “tảo”, sớm/nhanh. Verbる が早いか là “X vừa sớm xảy ra, Y đã theo ngay”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる が早いか cần hai hành động sát nhau. Khác とたんに có thể đời thường hơn, が早いか nghe văn viết và nhanh gọn.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verbる が早いか cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbた とたんに",
+          "contrast": "Khác Verbる が早いか: とたんに dùng sau quá khứ và đời thường hơn, が早いか văn viết hơn với tốc độ tức thì."
+        },
+        {
+          "pattern": "Verbる や否や",
+          "contrast": "So với や否や cũng là ngay khi, が早いか nhấn độ nhanh qua chữ 早い."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (dictionary/ない form) + までだ, い-Adjective + までだ, Noun + までだ",
       "meaning": "Ý nghĩa: Dùng để nói chỉ đến mức X mà thôi, hoặc nếu cần thì chỉ việc làm X",
-      "usage": "Cách dùng: Với ～までだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～までだ, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (dictionary/ない form) + までだ, い-Adjective + までだ, Noun + までだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～までだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng までだ để chốt một ranh giới “chỉ đến X” hoặc một quyết định đơn giản “nếu vậy thì chỉ việc X”.",
+      "etymology": "Gốc rễ: まで là điểm cuối/giới hạn; だ khẳng định. Vì vậy ～までだ đóng câu như một đường biên: không vượt hơn, hoặc chỉ cần đi tới hành động đó.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “chí hạn ở X”. ～までだ không mở thêm lý do dài; nó đóng vấn đề tại mức/hành động X.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～までだ có hai mặt. Khác だけだ trung tính, までだ có cảm giác chốt ranh giới hoặc quyết tâm lạnh gọn.",
       "crossLinks": [
         {
           "pattern": "Verbる までもない",
-          "contrast": "～までだ cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác ～までだ: までもない nói không cần tới mức làm, còn までだ chốt chỉ đến mức/làm X là đủ."
+        },
+        {
+          "pattern": "Noun だけだ",
+          "contrast": "So với だけだ chỉ hạn định, までだ thêm cảm giác điểm cuối hoặc quyết định."
         }
       ],
       "fallbackReference": {

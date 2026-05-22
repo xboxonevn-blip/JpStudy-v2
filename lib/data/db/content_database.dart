@@ -15,7 +15,7 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _vocabSeedRevision = 19;
+const _vocabSeedRevision = 20;
 const _vocabSeedRevisionKeyPrefix = 'vocabSeedRevision';
 const _vocabExampleTemplateFragments = [
   'を使う文を',
@@ -24,6 +24,14 @@ const _vocabExampleTemplateFragments = [
   'Trong giờ học, tôi dùng',
   'với nghĩa',
   'trong một câu ngắn',
+  '資料には',
+  'の説明が載っています',
+  'の入口で友だちに会いました',
+  '姿勢を見せました',
+  'が重要な論点になりました',
+  '朝ご飯に',
+  'に駅で待ち合わせます',
+  '家を出る前に',
 ];
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';

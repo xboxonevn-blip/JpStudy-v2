@@ -68,7 +68,7 @@ function findTermMatches(ja, buckets) {
   for (const char of new Set([...ja])) {
     for (const entry of buckets.get(char) ?? []) {
       if (!ja.includes(entry.term)) continue;
-      if (entry.term.length === 1 && !isAllowedSingleCharTerm(entry.term)) continue;
+      if (entry.term.length === 1 && !isAllowedSingleCharTerm(entry.term, ja)) continue;
       matches.set(entry.vocabId, entry);
     }
   }
@@ -77,8 +77,11 @@ function findTermMatches(ja, buckets) {
   );
 }
 
-function isAllowedSingleCharTerm(term) {
-  return ['私', '誰', '何'].includes(term) || /^[ぁ-んァ-ン]$/.test(term);
+function isAllowedSingleCharTerm(term, ja = '') {
+  if (['私', '誰', '何'].includes(term)) return true;
+  if (!/^[ぁ-んァ-ン]$/.test(term)) return false;
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(^|[「『\\s、。！？!?.])${escaped}($|[」』\\s、。！？!?.])`).test(ja);
 }
 
 function linkedPair(link, jpnSentences, vieSentences) {

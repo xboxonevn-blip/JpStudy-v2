@@ -2695,3 +2695,10 @@
 - Verified onboarding level selection enables the `Bắt đầu` CTA and completes onboarding; the selected level tile already has visible primary-color/check state.
 - Gates passed: `flutter test test/features/home/continue_provider_test.dart test/features/onboarding/level_select_screen_test.dart --reporter expanded`.
 - P0/P1/P2/P3 code fixes are now pushed; next required pass is live Playwright acceptance across desktop/mobile routes.
+
+## 2026-05-22 Urgent fix #25 example sentence anti-template follow-up
+- Rewrote Phase E vocab example wiring source order: Tatoeba JP-VI first, optional owner-local textbook cache second, authored contextual fallback last.
+- Added validator coverage for old template phrases, broad fallback frames, single-kana false Tatoeba matches, and app/runtime stale-seed fragments.
+- Regenerated `examples_corpus.json` and all wired vocab `example_sentences`; Minna N5 Bài 1 `私` remains Tatoeba-backed (`私の番？` / `Đến lượt tôi chưa?`).
+- Bumped vocab seed revision to 20 so installed DBs refresh examples again.
+- Gates passed: Node example/Tatoeba tests, `validate_example_quality`, wiring validate-only, focused Flutter analyzer/tests, and `git diff --check`.

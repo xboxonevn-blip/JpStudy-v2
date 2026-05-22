@@ -17,6 +17,15 @@ const BANNED_JA_PATTERNS = [
   /今日の練習に入れます/,
   /この場面では「[^」]+」と言えます/,
   /授業で「[^」]+」/,
+  /^資料には.+の説明が載っています。?$/,
+  /^.+の入口で友だちに会いました。?$/,
+  /^彼は最後まで.+姿勢を見せました。?$/,
+  /^会議では.+が重要な論点になりました。?$/,
+  /^朝ご飯に.+を食べます。?$/,
+  /^.+に駅で待ち合わせます。?$/,
+  /^毎朝、家を出る前に.+。?$/,
+  /^週末に.+予定です。?$/,
+  /^受付で「.+」と丁寧に言いました。?$/,
   /^ニュースで.+について読みました。?$/,
   /^午後、.+で友だちに会います。?$/,
   /^会議で.+について話しました。?$/,
@@ -153,6 +162,12 @@ function containsTerm(ja, term, reading) {
   if (term.includes('～')) {
     const stem = term.replace(/～/g, '');
     if (stem && ja.includes(stem)) return true;
+  }
+  if (/[うくぐすつぬぶむる]$/.test(term)) {
+    const stem = term.slice(0, -1);
+    if ((stem.length >= 2 || /[\u3400-\u9fff]/.test(stem)) && ja.includes(stem)) {
+      return true;
+    }
   }
   if (reading && reading !== term && ja.includes(reading)) return true;
   return false;

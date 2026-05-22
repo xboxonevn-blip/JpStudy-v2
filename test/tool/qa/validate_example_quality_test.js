@@ -124,27 +124,47 @@ test('does not treat words like restroom or thank you as pronouns', () => {
 });
 
 test('rejects broad authored fallback frames that survive word swaps', () => {
-  const result = validateExample(
+  const entry = {
+    entryId: 'haj_n1_ch01_006',
+    lemma: { vocabId: 'haj_n1_ch01_v006', term: '結成', reading: 'けっせい' },
+    sense: { meaningVi: 'sự hình thành', meaningEn: 'formation' },
+  };
+  const failures = [
     {
-      example_id: 'ex-haj_n1_ch01_v006-001',
       ja: 'ニュースで結成について読みました。',
       vi: 'Tôi đọc tin tức về sự hình thành.',
-      audio_url: '',
-      source: 'jpstudy-authored-contextual',
       source_detail: 'JpStudy-authored noun/context sentence for 結成',
-      license: 'JpStudy authored',
     },
     {
-      entry: {
-        entryId: 'haj_n1_ch01_006',
-        lemma: { vocabId: 'haj_n1_ch01_v006', term: '結成', reading: 'けっせい' },
-        sense: { meaningVi: 'sự hình thành', meaningEn: 'formation' },
-      },
+      ja: '資料には結成の説明が載っています。',
+      vi: 'Trong tài liệu có phần giải thích về sự hình thành.',
+      source_detail: 'JpStudy-authored noun/context sentence for 結成',
     },
-  );
+    {
+      ja: '結成の入口で友だちに会いました。',
+      vi: 'Tôi đã gặp bạn ở lối vào sự hình thành.',
+      source_detail: 'JpStudy-authored place context for 結成',
+    },
+    {
+      ja: '彼は最後まで結成姿勢を見せました。',
+      vi: 'Anh ấy cho thấy thái độ sự hình thành đến cùng.',
+      source_detail: 'JpStudy-authored dictionary-verb context for 結成',
+    },
+  ];
 
-  assert.equal(result.ok, false);
-  assert.match(result.errors.join('\n'), /template|fallback/i);
+  const results = failures.map((example, index) => validateExample(
+    {
+      example_id: `ex-haj_n1_ch01_v006-00${index + 1}`,
+      audio_url: '',
+      source: 'jpstudy-authored-contextual',
+      license: 'JpStudy authored',
+      ...example,
+    },
+    { entry },
+  ));
+
+  assert.equal(results.every((result) => !result.ok), true);
+  assert.match(results.flatMap((result) => result.errors).join('\n'), /template|fallback/i);
 });
 
 test('validateCorpus reports exact failing vocab ids', () => {

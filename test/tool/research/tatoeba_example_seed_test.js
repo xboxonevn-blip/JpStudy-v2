@@ -57,3 +57,29 @@ test('buildSeedPayload keeps curated beginner row ahead of generic matches', () 
   assert.equal(payload.rows[0].ja, '私の番？');
   assert.equal(payload.rows[0].priority, 100);
 });
+
+test('matchLinkedExamples does not match single kana inside unrelated words', () => {
+  const rows = matchLinkedExamples({
+    jpnSentences: new Map([
+      [1, 'あなたの勉強を邪魔しないようにします。'],
+      [2, 'あ！蝶々がいる！'],
+    ]),
+    vieSentences: new Map([
+      [10, 'Tôi sẽ cố không quấy rầy bạn học hành.'],
+      [20, 'Ô kìa, con bươm bướm!'],
+    ]),
+    links: [
+      [1, 10],
+      [2, 20],
+    ],
+    entries: [
+      {
+        vocabId: 'haj_n4_ch04_v005',
+        term: 'あ',
+        reading: 'あ',
+      },
+    ],
+  });
+
+  assert.deepEqual(rows.map((row) => row.ja), ['あ！蝶々がいる！']);
+});

@@ -76,6 +76,80 @@ test('buildExampleCorpus does not wire Tatoeba homophones by reading only', () =
   assert.match(corpus.items.haj_n1_ch01_v012[0].ja, /専修/);
 });
 
+test('buildExampleCorpus uses owner textbook rows before authored fallback', () => {
+  const corpus = buildExampleCorpus([
+    {
+      filePath: 'assets/data/content/vocab/n5/minna/lesson_01.json',
+      payload: {
+        entries: [
+          {
+            entryId: 'n5_l01_s010',
+            lemma: { vocabId: 'n5_l01_v010', term: '会社員', reading: 'かいしゃいん' },
+            sense: { meaningVi: 'nhân viên công ty', meaningEn: 'company employee' },
+          },
+        ],
+      },
+    },
+  ], {
+    textbookRows: [
+      {
+        vocabId: 'n5_l01_v010',
+        term: '会社員',
+        ja: '父は会社員です。',
+        vi: 'Bố tôi là nhân viên công ty.',
+        source: 'owner-local-textbook-example',
+        source_detail: 'Owner local Minna N5 lesson 1 example cache',
+        license: 'owner local source',
+      },
+    ],
+  });
+
+  assert.equal(corpus.items.n5_l01_v010[0].source, 'owner-local-textbook-example');
+  assert.equal(corpus.items.n5_l01_v010[0].ja, '父は会社員です。');
+});
+
+test('buildExampleCorpus keeps Tatoeba ahead of owner textbook rows', () => {
+  const corpus = buildExampleCorpus([
+    {
+      filePath: 'assets/data/content/vocab/n5/minna/lesson_01.json',
+      payload: {
+        entries: [
+          {
+            entryId: 'n5_l01_s001',
+            lemma: { vocabId: 'n5_l01_v001', term: '私', reading: 'わたし' },
+            sense: { meaningVi: 'tôi', meaningEn: 'I' },
+          },
+        ],
+      },
+    },
+  ], {
+    tatoebaRows: [
+      {
+        vocabId: 'n5_l01_v001',
+        term: '私',
+        ja: '私の番？',
+        vi: 'Đến lượt tôi chưa?',
+        sentenceId: 8755524,
+        translationId: 8942182,
+      },
+    ],
+    textbookRows: [
+      {
+        vocabId: 'n5_l01_v001',
+        term: '私',
+        ja: '私は学生です。',
+        vi: 'Tôi là học sinh.',
+        source: 'owner-local-textbook-example',
+        source_detail: 'Owner local Minna N5 lesson 1 example cache',
+        license: 'owner local source',
+      },
+    ],
+  });
+
+  assert.equal(corpus.items.n5_l01_v001[0].source, 'tatoeba-cc-by-2.0');
+  assert.equal(corpus.items.n5_l01_v001[0].ja, '私の番？');
+});
+
 test('buildExampleCorpus fallback authors contextual examples, not templates', () => {
   const corpus = buildExampleCorpus([
     {
@@ -126,9 +200,85 @@ test('buildExampleCorpus does not classify every English i as a pronoun', () => 
 
   const row = corpus.items.haj_n1_ch01_v001[0];
   assert.equal(row.source, 'jpstudy-authored-contextual');
-  assert.match(row.ja, /藻掻く/);
+  assert.match(row.ja, /藻掻/);
   assert.doesNotMatch(row.ja, /日本語を勉強しています/);
   assert.doesNotMatch(row.source_detail, /pronoun context/);
+});
+
+test('buildExampleCorpus authors specific fallback contexts for uncovered N1 items', () => {
+  const corpus = buildExampleCorpus([
+    {
+      filePath: 'assets/data/content/vocab/n1/hajimete/hajimete_ch01.json',
+      payload: {
+        series: 'hajimete',
+        level: 'N1',
+        entries: [
+          {
+            entryId: 'haj_n1_ch01_001',
+            lemma: { vocabId: 'haj_n1_ch01_v001', term: '藻掻く', reading: 'もがく' },
+            sense: {
+              meaningVi: 'vùng vẫy; quằn quại; thiếu kiên nhẫn',
+              meaningEn: 'to struggle;to wriggle;to be impatient',
+            },
+          },
+          {
+            entryId: 'haj_n1_ch01_002',
+            lemma: { vocabId: 'haj_n1_ch01_v002', term: '地元', reading: 'じもと' },
+            sense: { meaningVi: 'địa phương', meaningEn: 'local' },
+          },
+          {
+            entryId: 'haj_n1_ch01_006',
+            lemma: { vocabId: 'haj_n1_ch01_v006', term: '結成', reading: 'けっせい' },
+            sense: { meaningVi: 'sự hình thành', meaningEn: 'formation' },
+          },
+          {
+            entryId: 'haj_n1_ch01_022',
+            lemma: { vocabId: 'haj_n1_ch01_v022', term: '外貨', reading: 'がいか' },
+            sense: { meaningVi: 'hàng nhập khẩu; tiền nước ngoài', meaningEn: 'imported goods;foreign money' },
+          },
+        ],
+      },
+    },
+  ]);
+
+  assert.equal(corpus.items.haj_n1_ch01_v001[0].ja, '水の中で必死に藻掻いた。');
+  assert.equal(corpus.items.haj_n1_ch01_v002[0].ja, '週末は地元の祭りに参加しました。');
+  assert.equal(corpus.items.haj_n1_ch01_v006[0].ja, '新しいチームの結成が発表されました。');
+  assert.equal(corpus.items.haj_n1_ch01_v022[0].ja, '空港で外貨を両替しました。');
+});
+
+test('buildExampleCorpus authors true interjection context for single kana あ', () => {
+  const corpus = buildExampleCorpus([
+    {
+      filePath: 'assets/data/content/vocab/n4/hajimete/hajimete_ch04.json',
+      payload: {
+        entries: [
+          {
+            entryId: 'haj_n4_ch04_005',
+            lemma: { vocabId: 'haj_n4_ch04_v005', term: 'あ', reading: 'あ' },
+            sense: { meaningVi: 'à; ồ', meaningEn: 'ah;oh' },
+          },
+        ],
+      },
+    },
+  ], {
+    tatoebaRows: [
+      {
+        vocabId: 'haj_n4_ch04_v005',
+        term: 'あ',
+        reading: 'あ',
+        ja: 'あなたの勉強を邪魔しないようにします。',
+        vi: 'Tôi sẽ cố không quấy rầy bạn học hành.',
+        sentenceId: 4731,
+        translationId: 5679,
+      },
+    ],
+  });
+
+  const row = corpus.items.haj_n4_ch04_v005[0];
+  assert.equal(row.source, 'jpstudy-authored-contextual');
+  assert.equal(row.ja, 'あ、財布を忘れました。');
+  assert.doesNotMatch(row.ja, /あなた/);
 });
 
 test('wireExamplesIntoVocabPayload populates entries from corpus by vocab id', () => {

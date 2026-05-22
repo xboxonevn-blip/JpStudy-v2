@@ -645,18 +645,18 @@ List<String> _exampleLines(VocabData vocab, AppLanguage language) {
   final meaning = _localizedVocabMeaning(vocab, language);
   return switch (language) {
     AppLanguage.en => [
-      'Practice "$term" as "$meaning".',
-      'Use "$term" in a daily sentence.',
+      'Review "$term" in its lesson context.',
+      'Check how "$term" changes the sentence focus.',
       '$term is an important ${vocab.level} word.',
     ],
     AppLanguage.vi => [
-      '$term を練習します。 — Luyện tập từ "$meaning".',
-      '毎日 $term を使います。 — Dùng "$meaning" mỗi ngày.',
+      '$term を文脈で確認します。 — Ôn "$meaning" trong ngữ cảnh.',
+      '$term の使い所を比べます。 — So sánh tình huống dùng "$meaning".',
       '$term là từ quan trọng ở ${vocab.level}.',
     ],
     AppLanguage.ja => [
-      '$term を練習します。',
-      '毎日 $term を使う文を作ります。',
+      '$term を文脈で確認します。',
+      '$term の使い所を比べます。',
       '$term は${vocab.level}の重要語です。',
     ],
   };

@@ -388,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Simplified phrase + とのことだ",
-      "meaning": "Ý nghĩa: Dùng để truyền đạt lại thông tin đã nghe, được báo hoặc được nói.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc: と trích lại mệnh đề nghe được, の kéo mệnh đề ấy thành “việc/chuyện”, こと là 事, rồi だ chốt thông tin. 〜とのことだ vì vậy nghe như “thông tin được báo là A”, người nói không tự nhận đã chứng kiến.",
+      "hanVietBridge": "事 là sự/việc. とのことだ gần “theo thông tin thì...”, “được báo rằng...”, trang trọng hơn nói thẳng と聞いた.",
+      "form": "Hình thức: mệnh đề thường + とのことだ; danh từ/な-adj thường đi với だとのことだ hoặc Nとのことだ trong thông báo ngắn.",
+      "meaning": "Ý nghĩa: Truyền đạt thông tin nghe/nhận được từ nguồn khác; người nói giữ khoảng cách với tính xác thực.",
+      "usage": "Sử dụng: Hợp thông báo, email, tin nội bộ, lời thuật lại. Thường đi với nguồn như 先生によると, 事務局から, 話では.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とのことだ khác 〜そうだ truyền nghe. とのことだ nghe như báo lại một mẩu thông tin đã được đóng gói; そうだ nhẹ và hội thoại hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜そうだ（伝聞）",
+          "contrast": "Khác 〜とのことだ: そうだ truyền nghe đời thường hơn; とのことだ trang trọng và giống thông báo/nguồn tin."
+        },
+        {
+          "pattern": "〜と聞いた",
+          "contrast": "〜と聞いた nêu hành động nghe của người nói; 〜とのことだ đặt trọng tâm vào nội dung được báo."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

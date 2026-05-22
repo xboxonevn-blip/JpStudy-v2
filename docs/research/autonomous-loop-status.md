@@ -2883,3 +2883,9 @@
 - Separated assumption-for-inference, possibility-setting, situation-transition, natural consequence, and threshold-condition readings.
 - Global Directive E validator progress is now `215/1123`; next failure starts at `grammar:n1:grammar_n1_21:009`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 028
+- Re-authored N1 rows `〜とのことだ`, `〜とはいえ`, `〜とみえて`, `〜とみられる`, and `〜とみると`.
+- Repaired a malformed `〜とみると` example from false `視点でとみると` attachment to `AをBとみると`.
+- Global Directive E validator progress is now `220/1123`; next failure starts at `grammar:n1:grammar_n1_22:005`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

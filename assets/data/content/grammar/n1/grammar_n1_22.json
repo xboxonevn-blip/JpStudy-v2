@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + とはいえ, な-Adjective + だとはいえ, い-Adjective + とはいえ, Verb-casual + とはいえ",
-      "meaning": "Ý nghĩa: Dùng để thừa nhận X nhưng sau đó nêu điều trái với kỳ vọng từ X.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc: と trích cả mệnh đề A, は đưa A lên làm điều được thừa nhận, いえ là dạng từ 言う “nói rằng”. 〜とはいえ nghĩa là “dù nói A là đúng”, rồi vế sau bẻ kỳ vọng từ A.",
+      "hanVietBridge": "言 là ngôn/nói. とはいえ gần “dù nói là A”, “tuy là A nhưng...”; trọng tâm nằm ở cú bẻ sau khi đã nhượng bộ A.",
+      "form": "Hình thức: N + とはいえ; な-adj + だとはいえ; い-adj + とはいえ; động từ thường + とはいえ.",
+      "meaning": "Ý nghĩa: Thừa nhận A đúng một phần, nhưng B không theo kỳ vọng thông thường từ A.",
+      "usage": "Sử dụng: Dùng trong văn viết/trang trọng nhẹ. Vế sau thường là giới hạn, cảnh báo, ngoại lệ, hoặc kết luận trái với cảm giác “đã A thì chắc B”.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とはいえ khác 〜けれども. けれども chỉ nối “nhưng”; とはいえ luôn giữ một mệnh đề đã được công nhận rồi mới bẻ hướng.",
+      "crossLinks": [
+        {
+          "pattern": "〜けれども",
+          "contrast": "Khác 〜とはいえ: けれども là “nhưng” rộng; とはいえ nhấn nhượng bộ A trước khi đưa B."
+        },
+        {
+          "pattern": "〜といえども",
+          "contrast": "〜といえども cổ/trang trọng hơn; 〜とはいえ mềm và dùng rộng hơn trong văn hiện đại."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + とみえて, い-Adjective + とみえて, な-Adjective + だとみえて, Noun + だとみえて",
-      "meaning": "Ý nghĩa: Dùng để suy đoán dựa trên dấu hiệu quan sát được: “có vẻ như”, “chắc là”.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: と trích nội dung suy đoán, 見えて là “hiện ra/trông thấy được”. 〜とみえて nối A như nguyên nhân có vẻ nhìn ra được từ dấu hiệu B phía sau hoặc phía trước.",
+      "hanVietBridge": "見 là kiến/thấy. とみえて gần “có vẻ là A nên B”, nhấn dấu hiệu quan sát được chứ không phải lời đồn.",
+      "form": "Hình thức: động từ thường + とみえて; い-adj + とみえて; な-adj/N + だとみえて.",
+      "meaning": "Ý nghĩa: Có vẻ A, suy ra từ dấu hiệu quan sát được; thường B là bằng chứng cho phán đoán A.",
+      "usage": "Sử dụng: Đặt phán đoán A trước とみえて, rồi nêu hiện tượng làm căn cứ: vắng mặt, xếp hàng, về sớm, ít trả lời.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とみえて khác 〜らしい. らしい có thể dựa tin/nghe; とみえて thường bắt người học nhìn dấu hiệu cụ thể đang lộ ra.",
+      "crossLinks": [
+        {
+          "pattern": "〜らしい",
+          "contrast": "Khác 〜とみえて: らしい có thể dựa trên tin hoặc ấn tượng; とみえて dựa vào dấu hiệu quan sát được."
+        },
+        {
+          "pattern": "〜とみられる",
+          "contrast": "〜とみられる là nhận định khách quan/báo chí; 〜とみえて là suy đoán từ dấu hiệu trước mắt."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + とみられる, Noun + とみられる",
-      "meaning": "Ý nghĩa: Dùng để nói một sự việc được xem là, được cho là hoặc có khả năng là như vậy theo nhận định khách quan.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: と trích nội dung được đánh giá, 見られる là bị động/khả năng của 見る “được nhìn/được xem”. 〜とみられる xóa người đánh giá cụ thể để câu nghe khách quan như văn tin tức.",
+      "hanVietBridge": "見 là kiến/thấy. とみられる dịch tự nhiên là “được cho là/được xem là”, không phải “có vẻ thấy bằng mắt”.",
+      "form": "Hình thức: mệnh đề thường + とみられる; danh từ thường dùng Nとみられる; có thể dùng とみられている khi nhận định đang được duy trì.",
+      "meaning": "Ý nghĩa: Được nhận định/xem là A theo đánh giá khách quan, báo cáo, hoặc quan sát chuyên môn.",
+      "usage": "Sử dụng: Hay gặp trong tin tức: 被害は増えるとみられる, 原因はAとみられる. Tránh dùng cho cảm giác cá nhân quá thân mật.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とみられる khác 〜とみえて. とみえて là “nhìn dấu hiệu nên đoán”; とみられる là giọng báo cáo: người ta đánh giá như vậy.",
+      "crossLinks": [
+        {
+          "pattern": "〜とされる",
+          "contrast": "Khác 〜とみられる: とされる nhấn quy ước/đánh giá được chấp nhận; とみられる nhấn nhận định hiện tại dựa trên bằng chứng."
+        },
+        {
+          "pattern": "〜とみえて",
+          "contrast": "〜とみえて dựa vào dấu hiệu thấy được; 〜とみられる khách quan hơn và hợp báo chí/báo cáo."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -122,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + とみると, い-Adjective + とみると, な-Adjective + だとみると, Noun + だとみると",
-      "meaning": "Ý nghĩa: Dùng khi nhìn nhận một sự việc theo hướng X rồi đưa ra đánh giá hoặc hành động dựa trên cách nhìn đó.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: と trích cách xem/khung đánh giá, 見る là “xem/coi”, と cuối tạo điều kiện. 〜とみると nghĩa là nếu coi A theo khung B thì kết luận sau thay đổi theo cách nhìn ấy.",
+      "hanVietBridge": "見 là kiến/thấy nhưng ở đây là “coi/nhìn nhận”. とみると gần “nếu xem là...”, “xét theo cách coi A là B thì...”.",
+      "form": "Hình thức: AをBとみると; mệnh đề thường + とみると; danh từ/な-adj thường dùng だとみると.",
+      "meaning": "Ý nghĩa: Nếu nhìn nhận/xem một sự việc theo cách A thì B; nhấn khung đánh giá được chọn.",
+      "usage": "Sử dụng: Dùng khi cùng một sự việc đổi kết luận theo góc nhìn: xem là rủi ro, xem là cơ hội, xét như dữ liệu tạm thời.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とみると khác 〜から見ると. から見ると cho góc nhìn từ ai/cái gì; とみると đặt một cách phân loại rồi kéo kết luận từ đó.",
+      "crossLinks": [
+        {
+          "pattern": "〜から見ると",
+          "contrast": "Khác 〜とみると: から見ると nêu điểm nhìn; とみると nêu cách coi/phân loại để suy ra B."
+        },
+        {
+          "pattern": "〜とすると",
+          "contrast": "〜とすると là giả định logic; 〜とみると là giả định theo cách nhìn/đánh giá."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

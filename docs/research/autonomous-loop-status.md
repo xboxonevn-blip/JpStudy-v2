@@ -3045,3 +3045,9 @@
 - Replaced generic template guidance with endless-sequence, concession-brake, speaker-viewpoint, approximate-ceiling, and all-over-sweep teaching.
 - Global Directive E validator progress is now `350/1123`; next failure starts at `grammar:n1:grammar_n1_5:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 055
+- Re-authored N1 rows `Noun + ときたら`, `Noun とは比べものにならない`, `Noun + ともあろう + Noun`, `Noun ともなると`, and `Noun ともなれば`.
+- Replaced generic template guidance with emotional-topic-callout, incomparable-gap, role-based-reproach, stage-change-consequence, and threshold-condition teaching.
+- Global Directive E validator progress is now `355/1123`; next failure starts at `grammar:n1:grammar_n1_5:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

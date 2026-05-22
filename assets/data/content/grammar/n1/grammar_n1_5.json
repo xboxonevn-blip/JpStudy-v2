@@ -114,8 +114,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ときたら",
       "meaning": "Ý nghĩa: Dùng khi nhắc đến một người hoặc sự vật rồi bày tỏ cảm xúc mạnh, thường là bực bội, thất vọng hoặc chê trách.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đặt người/vật/chủ đề trước ときたら để kéo chủ đề đó ra rồi bộc lộ cảm xúc mạnh. Sắc thái hay là chê trách, ngán ngẩm, đôi khi khen cảm thán.",
+      "etymology": "Gốc cấu trúc: ときたら có thể hiểu từ と来たら, “hễ chuyện X đi tới/được nhắc tới thì...”. X được kéo vào sân khấu cảm xúc, rồi vế sau cho thấy thái độ của người nói.",
+      "hanVietBridge": "来 = lai/đến. 彼の態度ときたら = hễ nói đến thái độ của anh ấy thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: ときたら không phải nhãn chủ đề trung tính. Khi thấy 彼の態度ときたら, hãy nghe người nói đã chuẩn bị thở dài hoặc bật cảm xúc.",
+      "crossLinks": [
+        {
+          "pattern": "〜といえば",
+          "contrast": "Khác といえば: といえば chỉ gợi chủ đề; ときたら mang cảm xúc/đánh giá mạnh hơn."
+        },
+        {
+          "pattern": "〜となると",
+          "contrast": "となると nói tình huống dẫn đến hệ quả; ときたら kéo chủ đề ra để bình phẩm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -148,8 +160,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + とは比べものにならない",
       "meaning": "Ý nghĩa: Dùng để nói hai thứ chênh lệch lớn đến mức không thể đem ra so sánh.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Sử dụng: Đặt mốc so sánh trước とは, rồi nói chủ thể quá chênh lệch nên không thể gọi là cùng tầm để so. Thường dùng cho năng lực, mức độ, thiệt hại, tốc độ.",
+      "etymology": "Gốc cấu trúc: 比べもの là vật/đối tượng để đem so sánh, にならない là không thành/không đủ làm. とは比べものにならない nghĩa là so với N thì không thể thành một đối tượng so sánh ngang hàng.",
+      "hanVietBridge": "比 = tỉ/so sánh. 前回とは比べものにならない = không thành thứ có thể so với lần trước.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とは比べものにならない là câu gạt thước đo cũ ra khỏi bàn. Người nói không nói “hơn một chút”; họ nói hai bên lệch hệ quy chiếu.",
+      "crossLinks": [
+        {
+          "pattern": "〜に比べて",
+          "contrast": "Khác に比べて: に比べて chỉ so sánh thường; とは比べものにならない nói chênh lệch đến mức không so nổi."
+        },
+        {
+          "pattern": "〜ようがない",
+          "contrast": "ようがない là không có cách làm; 比べものにならない là không có cơ sở so sánh ngang tầm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -182,8 +206,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ともあろう + Noun",
       "meaning": "Ý nghĩa: Dùng để phê bình hoặc ngạc nhiên vì người có địa vị, vai trò hoặc năng lực Noun lại làm điều không xứng đáng.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đặt vai trò/địa vị đáng kính trước ともあろう rồi nêu hành vi không xứng đáng. Thường đi với 者, 人 và dùng để trách/ngạc nhiên.",
+      "etymology": "Gốc cấu trúc: あろう là dạng suy đoán/trang trọng của ある, とも thêm sắc thái “dù là/đến mức là”. ともあろう N gọi lên chuẩn mực đáng lẽ N phải có, rồi vế sau phá chuẩn ấy.",
+      "hanVietBridge": "有 = hữu/có. 先生ともあろう者 = người vốn có địa vị là giáo viên mà...",
+      "humanMoment": "Lưu ý từ Dr. Linh: ともあろう luôn có chuẩn danh dự phía sau. Nghe 先生ともあろう者が là biết người nói sắp hỏi: sao người ở vai đó lại làm vậy?",
+      "crossLinks": [
+        {
+          "pattern": "Noun たる Noun",
+          "contrast": "Khác たる: たる nêu chuẩn vai trò; ともあろう thường dùng khi hành vi trái chuẩn gây trách móc."
+        },
+        {
+          "pattern": "Noun にあるまじき Noun",
+          "contrast": "にあるまじき trực tiếp nói không xứng; ともあろう dựng vai trò trước rồi để vế sau gây sốc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -216,8 +252,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ともなると",
       "meaning": "Ý nghĩa: Dùng khi nói đến giai đoạn, địa vị hoặc mức độ Noun thì tình hình thay đổi đáng kể.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đặt giai đoạn/sự kiện/địa vị trước ともなると để nói khi đã đến mức đó thì tình hình thay đổi rõ. Vế sau thường mô tả phản ứng tự nhiên hoặc quy mô lớn hơn.",
+      "etymology": "Gốc cấu trúc: なる là trở thành, と mở hệ quả, も thêm sắc thái “đến cả mức N”. ともなると nghĩa là khi sự việc đã chuyển tới cấp N thì bối cảnh phía sau đổi hẳn.",
+      "hanVietBridge": "成 = thành. 夏休みともなると = đến khi thành kỳ nghỉ hè thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: ともなると là mốc đổi thời tiết của câu. Trước N mọi thứ bình thường; đến 試験週間ともなると, hành vi đám đông đổi ngay.",
+      "crossLinks": [
+        {
+          "pattern": "〜となると",
+          "contrast": "Khác となると: nghĩa gần, nhưng ともなると nhấn mức/giai đoạn đã đáng kể hơn."
+        },
+        {
+          "pattern": "〜ともなれば",
+          "contrast": "ともなれば dùng điều kiện “nếu/đến mức N thì”; ともなると thiên về khi đã đến mốc N thì hệ quả xuất hiện."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -250,8 +298,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ともなれば",
       "meaning": "Ý nghĩa: Dùng để giả định hoặc nêu hoàn cảnh khi đạt đến Noun, từ đó kéo theo một kết quả tự nhiên.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đặt hoàn cảnh/địa vị/mốc lớn trước ともなれば để giả định khi đã đạt mức N, hệ quả phía sau là tự nhiên. Hay dùng với 試験, 結婚, リーダー, 夏休み.",
+      "etymology": "Gốc cấu trúc: なる là trở thành, ば là điều kiện, も thêm cảm giác “đến mức N”. ともなれば nghĩa là nếu sự việc đã thành cấp N rồi thì vế sau khó tránh.",
+      "hanVietBridge": "成 = thành. 結婚ともなれば = nếu đã thành chuyện hôn nhân thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: ともなれば đặt một ngưỡng nghiêm túc. Khi câu bước tới 結婚ともなれば, người nói không bàn chuyện nhỏ nữa mà kéo theo trách nhiệm lớn.",
+      "crossLinks": [
+        {
+          "pattern": "〜となれば",
+          "contrast": "Khác となれば: nghĩa gần, nhưng ともなれば nhấn ngưỡng N lớn/đáng kể hơn."
+        },
+        {
+          "pattern": "〜ともなると",
+          "contrast": "ともなると mô tả khi đã tới mốc N; ともなれば nhấn điều kiện và hệ quả nếu tới mốc đó."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

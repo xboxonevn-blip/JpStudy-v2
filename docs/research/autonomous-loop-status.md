@@ -2565,3 +2565,8 @@
 - Gates passed: focused analyze, `exam_screen_test`, grammar seeder tests,
   upper JLPT content integrity, grammar screen tests, Mimikara/textbook Node
   architecture tests, and `flutter build web --release`.
+
+## 2026-05-22 P0 console acceptance follow-up
+- Gated anonymous auth bootstrap behind analytics opt-in or legacy migration need.
+- Local release QA after deferred bootstrap: 0 console errors; no identitytoolkit signUp request.
+- Evidence: docs/research/qa-live-2026-05-22-local-authgate-no-signup.png.

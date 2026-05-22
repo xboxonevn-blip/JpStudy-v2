@@ -769,3 +769,9 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The app should not request assets for tracks that are intentionally not part of the product architecture. Avoiding the request keeps console-error acceptance meaningful.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-078 - Anonymous auth bootstrap is opt-in gated
+- Date: 2026-05-22
+- Decision: Do not run deferred anonymous Firebase sign-in when analytics consent is denied and legacy storage migration is disabled.
+- Rationale: Local/live QA must not leak avoidable identitytoolkit 403 console errors; cloud identity remains available when analytics or migration actually needs it.
+- Verification: flutter analyze lib/main.dart test/main_bootstrap_test.dart; flutter test test/main_bootstrap_test.dart; flutter build web --release; Playwright local authgate showed 0 console errors and no identitytoolkit signUp request after deferred bootstrap.

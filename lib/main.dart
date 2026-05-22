@@ -88,18 +88,31 @@ Future<void> _runDeferredBootstrap(
   } catch (e, st) {
     debugPrint('Kana migration failed: $e\n$st');
   }
-  try {
-    await container
-        .read(anonymousAuthServiceProvider)
-        .ensureAuthenticated(preferences: preferences);
-  } catch (e, st) {
-    debugPrint('Anonymous auth bootstrap failed: $e\n$st');
+  if (shouldRunAnonymousAuthBootstrap(
+    legacyMigrationEnabled: legacyStorageMigrationEnabled,
+    analyticsConsent: preferences.getBool(prefAnalyticsConsent),
+  )) {
+    try {
+      await container
+          .read(anonymousAuthServiceProvider)
+          .ensureAuthenticated(preferences: preferences);
+    } catch (e, st) {
+      debugPrint('Anonymous auth bootstrap failed: $e\n$st');
+    }
   }
 
   try {
     final userId = fb_auth.FirebaseAuth.instance.currentUser?.uid;
     await container.read(errorMonitoringControllerProvider).setUserId(userId);
   } catch (_) {}
+}
+
+@visibleForTesting
+bool shouldRunAnonymousAuthBootstrap({
+  required bool legacyMigrationEnabled,
+  required bool? analyticsConsent,
+}) {
+  return legacyMigrationEnabled || (analyticsConsent ?? false);
 }
 
 Future<void> _activateFirebaseAppCheck() async {

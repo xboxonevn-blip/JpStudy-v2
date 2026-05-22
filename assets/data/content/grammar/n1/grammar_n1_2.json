@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + にせよ + Noun + にせよ (also works with verbs in dictionary form + にせよ)",
-      "meaning": "Ý nghĩa: Dùng để nêu hai khả năng A và B rồi nói rằng kết luận phía sau vẫn không đổi.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "にせよ gồm に + せよ, mệnh lệnh/trang trọng của する theo nghĩa “hãy cho là A”. Lặp AにせよBにせよ đặt hai giả định rồi nói kết luận vẫn giữ.",
+      "hanVietBridge": "せよ có sắc thái “dù cho/giả sử là”. AにせよBにせよ dịch tự nhiên là dù A hay B thì...",
+      "form": "Hình thức: danh từ/mệnh đề A + にせよ + danh từ/mệnh đề B + にせよ + kết luận.",
+      "meaning": "Ý nghĩa: Dù là A hay B thì kết luận phía sau vẫn không đổi.",
+      "usage": "Sử dụng: Dùng cho hai khả năng được đặt song song, thường trang trọng hơn にしろ〜にしろ.",
+      "humanMoment": "Dr. Linh lưu ý: AにせよBにせよ khác AかBか. AかBか chỉ chọn một; にせよ〜にせよ nói chọn bên nào thì kết luận vẫn vậy.",
+      "crossLinks": [
+        {
+          "pattern": "〜にしろ〜にしろ",
+          "contrast": "Gần nghĩa với AにせよBにせよ nhưng にせよ văn viết/trang trọng hơn."
+        },
+        {
+          "pattern": "AかBか",
+          "contrast": "AかBか đặt lựa chọn; AにせよBにせよ đặt hai giả định rồi giữ cùng kết luận."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Phrase A (dictionary/adjective form) + につけ、Phrase B (dictionary/adjective form) + につけ",
-      "meaning": "Ý nghĩa: Dùng khi một cảm xúc, nhận xét hoặc tình trạng xuất hiện trong cả hai trường hợp A và B.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "つけ bắt nguồn từ 付ける, gắn/đính vào. Về cấu trúc, AにつけBにつけ gắn cùng một cảm xúc hoặc nhận xét vào cả hai trường hợp A và B.",
+      "hanVietBridge": "付 là phụ/gắn. につけ〜につけ gần “hễ A hay B đều...”, thường đi với cảm xúc, hồi tưởng, nhận xét lặp lại.",
+      "form": "Hình thức: A + につけ + B + につけ + cảm xúc/nhận xét chung.",
+      "meaning": "Ý nghĩa: Dù trong trường hợp A hay B, cùng một cảm xúc/nhận xét đều xuất hiện.",
+      "usage": "Sử dụng: A và B thường là cặp đối lập hoặc cặp tình huống liên quan, không phải danh sách tùy tiện.",
+      "humanMoment": "Dr. Linh lưu ý: AにつけBにつけ khác AにせよBにせよ. につけ thường kéo theo cảm xúc/nhận xét; にせよ thiên về lập luận bất kể giả định.",
+      "crossLinks": [
+        {
+          "pattern": "AにせよBにせよ",
+          "contrast": "Khác AにつけBにつけ: にせよ đặt hai giả định; につけ thường nói cảm xúc/nhận xét nảy ra ở cả hai."
+        },
+        {
+          "pattern": "AでもBでも",
+          "contrast": "AでもBでも đời thường và rộng; AにつけBにつけ trang trọng hơn, hay đi với cảm xúc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun1 + のやら + Noun2 + のやら (also works with adjectives and verbs + のやら)",
-      "meaning": "Ý nghĩa: Dùng khi người nói không phân biệt được là A hay B, hoặc cảm thấy tình huống mơ hồ, khó xác định.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "の danh hóa từng khả năng, còn trợ từ やら tạo cảm giác mơ hồ “hay là... không rõ”. Lặp AのやらBのやら đặt hai khả năng trong trạng thái bối rối.",
+      "hanVietBridge": "やら gợi không rõ/chẳng biết. AのやらBのやら dịch tự nhiên là không biết là A hay B.",
+      "form": "Hình thức: mệnh đề/danh từ/tính từ A + のやら + B + のやら + không rõ/khó biết.",
+      "meaning": "Ý nghĩa: Không rõ là A hay B; bối rối giữa nhiều khả năng.",
+      "usage": "Sử dụng: Dùng khi người nói thật sự không phân biệt được hoặc cảm thấy tình huống mơ hồ, không dùng để chọn đơn giản.",
+      "humanMoment": "Dr. Linh lưu ý: AのやらBのやら khác AかBか. かBか hỏi lựa chọn; のやらBのやら cho thấy người nói đang lúng túng, chưa nắm được bản chất.",
+      "crossLinks": [
+        {
+          "pattern": "AかBか",
+          "contrast": "Khác AのやらBのやら: AかBか trung tính; のやら〜のやら thêm cảm giác mơ hồ/bối rối."
+        },
+        {
+          "pattern": "いつまで〜のやら",
+          "contrast": "いつまで〜のやら mơ hồ về thời hạn; AのやらBのやら mơ hồ giữa hai khả năng."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

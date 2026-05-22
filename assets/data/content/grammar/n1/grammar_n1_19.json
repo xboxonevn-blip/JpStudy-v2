@@ -388,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ず form + に + すんだ",
-      "meaning": "Ý nghĩa: Dùng để nói may mắn tránh được việc phải làm X hoặc không cần làm X.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Về cấu trúc, ず là dạng phủ định cổ của động từ, に nối với すむ/済む là “xong, ổn, qua được”. 〜ずにすんだ nói việc kết thúc ổn mà không phải làm A.",
+      "hanVietBridge": "済む là xong/ổn. Aずにすんだ gần tiếng Việt “may mà không phải A”, “tránh được việc A”.",
+      "form": "Hình thức: động từ phủ định cổ ず + に + すんだ. Với する thường là せずにすんだ.",
+      "meaning": "Ý nghĩa: Đã không phải A; may mà tránh được A.",
+      "usage": "Sử dụng: Thường nói kết quả may mắn sau nguy cơ, chi phí, trách nhiệm hoặc rắc rối được tránh.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ずにすんだ khác 〜ないでいた. ないでいた chỉ không làm; ずにすんだ nhấn “may mà không cần/không phải làm”.",
+      "crossLinks": [
+        {
+          "pattern": "〜ないで済んだ",
+          "contrast": "Gần nghĩa với 〜ずにすんだ nhưng ないで済んだ đời thường hơn; ずにすんだ trang trọng/gọn hơn."
+        },
+        {
+          "pattern": "〜ずにいる",
+          "contrast": "〜ずにいる chỉ đang không làm A; 〜ずにすんだ nói đã thoát được nhu cầu phải A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -422,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun / i-Adjective / na-Adjective / Verb + だろうとなかろうと",
-      "meaning": "Ý nghĩa: Dùng để nói dù có là X hay không phải X thì điều phía sau vẫn không thay đổi.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Về cấu trúc, だろう là phỏng đoán “có lẽ là A”, なかろう là dạng cổ/trang trọng của “không phải/không có lẽ”. Hai vế + と tạo cặp dù A hay không A.",
+      "hanVietBridge": "だろう là có lẽ, なかろう là không như thế. Aだろうとなかろうと dịch tự nhiên: dù có là A hay không thì...",
+      "form": "Hình thức: danh từ/tính từ/động từ + だろうとなかろうと + kết luận không đổi.",
+      "meaning": "Ý nghĩa: Dù A hay không A thì B vẫn vậy.",
+      "usage": "Sử dụng: Dùng khi muốn nhấn lập trường/hành động không đổi trước hai khả năng đối lập. Sắc thái trang trọng.",
+      "humanMoment": "Dr. Linh lưu ý: 〜だろうとなかろうと khác 〜かどうか. かどうか chỉ hỏi/cân nhắc có hay không; だろうとなかろうと nói kết luận không đổi.",
+      "crossLinks": [
+        {
+          "pattern": "〜かどうか",
+          "contrast": "Khác 〜だろうとなかろうと: 〜かどうか nêu lựa chọn có/không; だろうとなかろうと nhấn bất kể lựa chọn nào."
+        },
+        {
+          "pattern": "〜ようが〜まいが",
+          "contrast": "〜ようが〜まいが dùng với ý chí/hành động; だろうとなかろうと rộng hơn với trạng thái, danh từ, tính từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

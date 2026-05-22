@@ -2739,3 +2739,9 @@
 - Added pattern-specific origin notes for `さて置き`, `であれ`, `まみれ`, `然ることながら`, and `兼ねる`, plus Hán-Việt bridges and contrast cross-links.
 - Global Directive E validator progress is now `95/1123`; next failure starts at `grammar:n1:grammar_n1_10:007`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT integrity tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 004
+- Re-authored N1 rows `〜も相まって`, `〜をおいて他に〜ない`, `〜をもって`, `〜をものともせずに`, and `〜をよそに`.
+- Fixed connected N1 lesson 11 example grammar: `試験が迫っているのをよそに` now uses nominalization before `をよそに`; `遠足の中止を余儀なくされた` now matches the noun frame for `を余儀なくされる`.
+- Global Directive E validator progress is now `100/1123`; next failure starts at `grammar:n1:grammar_n1_11:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + をよそに",
-      "meaning": "Ý nghĩa: Dùng để nói điều phía sau xảy ra bất chấp Noun hoặc không quan tâm đến Noun.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 〜をよそに là よそ/余所: nơi khác, phía ngoài, chuyện ở bên ngoài mình. Đặt A + をよそに tức là để A sang phía ngoài rồi hành động như không bị A chi phối.",
+      "hanVietBridge": "余所 có cầu Hán-Việt là dư/sở: chỗ khác, nơi khác. Nhớ をよそに như đặt dư luận, phản đối, lo lắng của người khác sang một chỗ khác rồi vẫn làm.",
+      "form": "Hình thức: danh từ/cụm danh từ + をよそに + mệnh đề trái kỳ vọng. A thường là 反対, 心配, 批判, 期待, 状況 hoặc dư luận xung quanh.",
+      "meaning": "Ý nghĩa: Bất chấp A, phớt lờ A, mặc cho A vẫn xảy ra. Mẫu này thường có sắc thái người ngoài nhìn vào, đôi khi chê là thiếu quan tâm.",
+      "usage": "Sử dụng: Dùng khi hành động phía sau đi ngược bối cảnh: 親の反対をよそに結婚した. Nếu A là cả mệnh đề, cần danh từ hóa bằng の.",
+      "humanMoment": "Dr. Linh lưu ý: 〜をよそに khác 〜をものともせずに. をものともせずに thường khen dũng khí; をよそに dễ mang sắc thái phớt lờ lời khuyên, phản đối hoặc lo lắng.",
+      "crossLinks": [
+        {
+          "pattern": "〜をものともせずに",
+          "contrast": "Khác 〜をよそに: をものともせずに tích cực hơn, còn をよそに có thể phê bình thái độ phớt lờ."
+        },
+        {
+          "pattern": "〜にもかかわらず",
+          "contrast": "〜にもかかわらず trung tính hơn; 〜をよそに thêm cảm giác bỏ ngoài tai hoặc mặc kệ bối cảnh."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

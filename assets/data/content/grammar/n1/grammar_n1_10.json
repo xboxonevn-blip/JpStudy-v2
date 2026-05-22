@@ -296,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + も相まって",
-      "meaning": "Ý nghĩa: Dùng khi Noun kết hợp với yếu tố khác tạo nên hoặc làm mạnh thêm một kết quả.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜も相まって nằm ở 相まつ/相俟つ: các yếu tố cùng chờ, cùng gặp, rồi hợp lực. 相 có âm Hán-Việt là tương, nghĩa là lẫn nhau, qua lại, cùng nhau.",
+      "hanVietBridge": "相 = tương trong tương tác, tương hỗ. Nhớ も相まって như nhiều yếu tố tương hỗ tạo kết quả: khí hậu cộng đất tốt, nỗ lực cộng thời cơ.",
+      "form": "Hình thức: danh từ/yếu tố A + も相まって + kết quả. A là một yếu tố góp thêm vào các yếu tố khác, không phải nguyên nhân duy nhất.",
+      "meaning": "Ý nghĩa: Cộng thêm A, kết quả càng xảy ra hoặc càng mạnh. Sắc thái trang trọng, hay dùng trong phân tích nguyên nhân, xã hội, kinh tế, truyền thông.",
+      "usage": "Sử dụng: Đặt yếu tố góp phần trước mẫu: 人気も相まって、売り切れた. Vế sau nên là kết quả tổng hợp, không phải hành động tùy tiện của người nói.",
+      "humanMoment": "Dr. Linh lưu ý: 〜も相まって khác 〜のせいで. のせいで thường đổ lỗi một nguyên nhân xấu; も相まって nói các yếu tố cộng hưởng, có thể tốt hoặc xấu.",
+      "crossLinks": [
+        {
+          "pattern": "〜も手伝って",
+          "contrast": "Gần nghĩa nhưng 〜も手伝って đời thường hơn; 〜も相まって trang trọng và phân tích hơn."
+        },
+        {
+          "pattern": "〜に加えて",
+          "contrast": "〜に加えて chỉ thêm yếu tố; 〜も相まって nhấn các yếu tố cùng tạo ra kết quả."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -330,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + をおいて他に + Verb negative form",
-      "meaning": "Ý nghĩa: Dùng để nói ngoài Noun ra không có lựa chọn, người hoặc thứ nào phù hợp hơn.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜をおいて他に〜ない là おく/置く: đặt một thứ ra làm mốc, rồi phủ định mọi lựa chọn khác. 他にない đóng vai khóa cửa: ngoài mốc ấy, không còn ai/điều gì.",
+      "hanVietBridge": "他 = tha trong tha nhân, tha phương: cái khác/người khác. Cầu nhớ là đặt A ra trước, rồi nói tha giả không còn: ngoài A ra không có lựa chọn khác.",
+      "form": "Hình thức: danh từ + をおいて他に + động từ phủ định/ない. Danh từ thường là người, nơi, phương án hoặc thứ được đánh giá là duy nhất/phù hợp nhất.",
+      "meaning": "Ý nghĩa: Ngoài A ra thì không có ai/cái gì khác. Mẫu này thường dùng để khen hoặc nhấn mạnh lựa chọn tối ưu, không chỉ là thiếu lựa chọn.",
+      "usage": "Sử dụng: Dùng trong đánh giá mạnh: この役を任せられる人は彼をおいて他にいない. Vế phủ định phía sau là bắt buộc để hoàn tất mẫu.",
+      "humanMoment": "Dr. Linh lưu ý: 〜をおいて他に〜ない khác 〜しかない. しかない nói chỉ còn một lựa chọn; をおいて他にない thường nâng A lên thành lựa chọn xứng đáng nhất.",
+      "crossLinks": [
+        {
+          "pattern": "〜しかない",
+          "contrast": "Khác 〜をおいて他に〜ない: 〜しかない có thể bất đắc dĩ, còn をおいて他にない thường khen/đề cử mạnh."
+        },
+        {
+          "pattern": "〜に限る",
+          "contrast": "〜に限る nói A là tốt nhất theo kinh nghiệm; 〜をおいて他に〜ない phủ định mọi lựa chọn khác ngoài A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -364,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + をもって",
-      "meaning": "Ý nghĩa: Dùng để chỉ phương tiện, cách thức, căn cứ hoặc mốc thời gian kết thúc/bắt đầu.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜をもって liên quan đến 以て/持って: lấy A làm phương tiện, căn cứ hoặc mốc. Trong văn hiện đại, nó hóa thành mẫu trang trọng dùng trong thông báo và văn bản.",
+      "hanVietBridge": "以 có âm Hán-Việt là dĩ, như dĩ nhiên/dĩ vãng trong nghĩa lấy làm mốc; 持 là trì trong duy trì. Hãy nhớ をもって là lấy A làm căn cứ, phương tiện hoặc mốc thời gian.",
+      "form": "Hình thức: danh từ + をもって. Danh từ có thể là phương tiện/căn cứ như 誠意, 証拠, 方法 hoặc mốc thời gian như 本日, 三月末.",
+      "meaning": "Ý nghĩa: Bằng A, lấy A làm căn cứ, hoặc kể từ/đến mốc A. Sắc thái trang trọng hơn で nhiều, hay gặp trong lễ nghi, thông báo, báo cáo.",
+      "usage": "Sử dụng: Xem danh từ trước mẫu là công cụ hay thời điểm: 本日をもって終了します = kết thúc kể từ/hết hôm nay. Không dùng trong câu đời thường đơn giản thay cho で.",
+      "humanMoment": "Dr. Linh lưu ý: 〜をもって khác で. で là dụng cụ bình thường; をもって nghe như văn bản chính thức đang lấy một căn cứ hoặc mốc để tuyên bố.",
+      "crossLinks": [
+        {
+          "pattern": "で",
+          "contrast": "Khác 〜をもって: で dùng rộng trong đời thường, còn 〜をもって trang trọng và thường là căn cứ/mốc chính thức."
+        },
+        {
+          "pattern": "〜を通じて",
+          "contrast": "〜を通じて nhấn thông qua một kênh/quá trình; 〜をもって nhấn lấy A làm phương tiện, căn cứ hoặc thời điểm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -398,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + をものともせずに",
-      "meaning": "Ý nghĩa: Dùng để nói vẫn hành động mạnh mẽ bất chấp khó khăn, nguy hiểm hoặc trở ngại Noun.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của 〜をものともせずに là ものともする: coi A là điều đáng kể/đáng ngại. Thêm せずに thành không coi A là trở ngại, rồi vẫn tiến hành hành động.",
+      "hanVietBridge": "物 = vật trong Hán-Việt, nhưng ở đây もの mang nghĩa điều/sự việc. Cầu nhớ: không coi khó khăn ấy là một vật cản đáng kể; tinh thần là bất chấp và không nao núng.",
+      "form": "Hình thức: danh từ chỉ khó khăn/nguy hiểm/trở ngại + をものともせずに + hành động mạnh mẽ. Danh từ thường là 批判, 反対, 危険, 困難, 風雪.",
+      "meaning": "Ý nghĩa: Không hề nao núng trước A, bất chấp A mà vẫn làm. Mẫu này thường khen sự gan dạ, bền bỉ hoặc quyết tâm.",
+      "usage": "Sử dụng: Dùng khi chủ thể vượt qua trở ngại rõ ràng: 批判をものともせずに発表した. Không dùng cho phiền phức nhỏ hoặc lựa chọn bình thường.",
+      "humanMoment": "Dr. Linh lưu ý: 〜をものともせずに khác 〜をよそに. をものともせずに thường khen người vượt khó; をよそに có thể chê ai đó phớt lờ dư luận hoặc hoàn cảnh.",
+      "crossLinks": [
+        {
+          "pattern": "〜をよそに",
+          "contrast": "Khác 〜をものともせずに: をよそに nhấn phớt lờ/bất chấp xung quanh, còn をものともせずに nhấn không nao núng trước trở ngại."
+        },
+        {
+          "pattern": "〜にもかかわらず",
+          "contrast": "〜にもかかわらず trung tính hơn; 〜をものともせずに mang sắc thái mạnh và thường tích cực."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

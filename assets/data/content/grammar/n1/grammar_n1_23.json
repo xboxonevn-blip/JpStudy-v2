@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ないform + なくはない, い-Adjective－い + くはない, な-Adjective + ではなくはない, Noun + ではなくはない",
-      "meaning": "Ý nghĩa: Dùng để nói không phải là hoàn toàn không X; vẫn có một mức độ hoặc khả năng nhất định.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc: ない biến A thành phủ định, なく là dạng nối của phủ định ấy, は đưa phần “không A” lên làm điểm đối chiếu, rồi ない phủ định lần nữa. 〜なくはない vì vậy là phủ định kép có nhấn: không phải là không A.",
+      "hanVietBridge": "は ở đây đánh dấu đối lập. できなくはない gần “không phải là không làm được”, thường kéo theo “nhưng...”.",
+      "form": "Hình thức: Vない bỏ い + くはない; い-adj bỏ い + くはない; な-adj/N + ではなくはない.",
+      "meaning": "Ý nghĩa: Không phải hoàn toàn không A; có thể A ở mức nào đó, nhưng người nói không khẳng định mạnh.",
+      "usage": "Sử dụng: Hay đi với dè dặt hoặc điều kiện: làm được nhưng khó, có thời gian nhưng ít, không ghét nhưng không thích lắm.",
+      "humanMoment": "Dr. Linh lưu ý: 〜なくはない khác 〜なくもない. は làm sắc thái đối chiếu rõ hơn: “không phải là không”; も mềm hơn, như mở một khả năng nhỏ.",
+      "crossLinks": [
+        {
+          "pattern": "〜なくもない",
+          "contrast": "Khác 〜なくはない: は nhấn đối chiếu/phủ định kép rõ; も mềm hơn và thường là “cũng không hẳn là không”."
+        },
+        {
+          "pattern": "〜ないことはない",
+          "contrast": "〜ないことはない gần nghĩa nhưng dài và đời thường hơn; 〜なくはない gọn, văn viết hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ないform + なくもない, い-Adjective－い + くもない, な-Adjective + でもない, Noun + でもない",
-      "meaning": "Ý nghĩa: Dùng để nói cũng không hẳn là không X, tức khả năng vẫn tồn tại nhưng không mạnh.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: ない tạo phủ định, なく nối phủ định đó, も thêm ý “cũng”, rồi ない phủ định lần nữa. 〜なくもない mở một khả năng nhỏ: cũng không phải là không A.",
+      "hanVietBridge": "も là cũng. 行かなくもない gần “cũng không phải là không đi”, tức có thể đi nếu điều kiện đủ.",
+      "form": "Hình thức: Vない bỏ い + くもない; い-adj bỏ い + くもない; な-adj/N + でもない trong một số khung tương đương.",
+      "meaning": "Ý nghĩa: Cũng không hẳn là không A; A vẫn có khả năng nhưng yếu, dè dặt hoặc tùy điều kiện.",
+      "usage": "Sử dụng: Dùng để trả lời nước đôi: có thể mua, có thể đi, có thể chấp nhận, nhưng chưa cam kết mạnh.",
+      "humanMoment": "Dr. Linh lưu ý: 〜なくもない khác 〜なくはない. も nghe mềm và mở cửa; は nghe như người nói đang sửa lại một phủ định quá mạnh.",
+      "crossLinks": [
+        {
+          "pattern": "〜なくはない",
+          "contrast": "Khác 〜なくもない: なくはない nhấn “không phải là không”; なくもない mềm hơn, thiên về “cũng có thể”."
+        },
+        {
+          "pattern": "〜かもしれない",
+          "contrast": "〜かもしれない nói khả năng rộng; 〜なくもない thêm thái độ dè dặt/phủ định kép."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun/Adjective + なら + (same Noun/Adjective) + なりに",
-      "meaning": "Ý nghĩa: Dùng để nói nếu là X thì có cách, giá trị hoặc vấn đề theo kiểu của X.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: なら đặt X làm điều kiện/khung, X lặp lại để giữ đúng phạm vi ấy, なりに nghĩa là “theo kiểu/mức của X”. 〜なら〜なりに chấp nhận đặc điểm riêng của X thay vì so với chuẩn khác.",
+      "hanVietBridge": "なりに gần “theo cách/mức riêng”. 初心者なら初心者なりに là “nếu là người mới thì theo cách của người mới”.",
+      "form": "Hình thức: N/adj + なら + cùng N/adj + なりに + đánh giá/hành động.",
+      "meaning": "Ý nghĩa: Nếu là X thì cũng có cách, giá trị, nỗ lực hoặc giới hạn riêng của X.",
+      "usage": "Sử dụng: Dùng khi đánh giá công bằng theo hoàn cảnh: người mới, trẻ con, nhỏ, ít tiền, bận, yếu.",
+      "humanMoment": "Dr. Linh lưu ý: 〜なら〜なりに khác それなりに. それなりに nói “ở mức tương ứng” chung; なら〜なりに chỉ rõ X và đánh giá theo khung X.",
+      "crossLinks": [
+        {
+          "pattern": "それなりに",
+          "contrast": "Khác 〜なら〜なりに: それなりに không cần lặp X; なら〜なりに nêu rõ khung X để đánh giá."
+        },
+        {
+          "pattern": "〜なりのN",
+          "contrast": "〜なりのN bổ nghĩa danh từ như 自分なりの方法; 〜なら〜なりに bổ nghĩa cách hành động/đánh giá."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -122,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + には及ばない",
-      "meaning": "Ý nghĩa: Dùng để nói không cần phải làm đến mức X, hoặc X là không cần thiết.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc: に đánh dấu mức/hành động hướng tới, は đưa nó lên làm điểm xét, 及ばない nghĩa là “không vươn tới/không cần đạt đến mức ấy”. 〜には及ばない nói hành động A vượt quá mức cần thiết.",
+      "hanVietBridge": "及 là cập/đạt tới. するには及ばない gần “không đến mức phải làm”, “chưa cần phải làm tới vậy”.",
+      "form": "Hình thức: V辞書形 + には及ばない; đôi khi Nには及ばない nghĩa là không sánh tới N.",
+      "meaning": "Ý nghĩa: Không cần làm đến mức A; A là quá mức hoặc chưa cần thiết.",
+      "usage": "Sử dụng: Hay dùng trong phản hồi lịch sự: 心配するには及ばない, 礼を言うには及ばない, 説明するには及ばない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜には及ばない khác 〜までもない. までもない nói “không cần tới mức”; には及ばない trang trọng hơn và gợi mức A chưa cần chạm tới.",
+      "crossLinks": [
+        {
+          "pattern": "〜までもない",
+          "contrast": "Khác 〜には及ばない: までもない thông dụng hơn; には及ばない trang trọng và nhấn không cần đạt tới mức A."
+        },
+        {
+          "pattern": "〜にはあたらない",
+          "contrast": "〜にはあたらない là không đáng/không cần đánh giá như A; には及ばない là không cần làm tới hành động A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

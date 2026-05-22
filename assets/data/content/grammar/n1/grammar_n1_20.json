@@ -388,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: い-Adjective + といったらない / な-Adjective + だといったらない / Noun + だといったらない",
-      "meaning": "Ý nghĩa: Dùng để nhấn mạnh một cảm xúc hoặc trạng thái đạt mức rất cao, gần như không gì hơn được.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Về cấu trúc, といったら là “nếu nói đến A thì...”, ない lược phần “không có gì hơn/không thể nói hết”. Cụm này biến A thành điểm cảm thán cực độ.",
+      "hanVietBridge": "言 là nói; ない ở đây là không còn gì để nói thêm. Aといったらない dịch tự nhiên: A không thể tả, A vô cùng.",
+      "form": "Hình thức: い-adj + といったらない; な-adj/danh từ + だ + といったらない; danh từ hóa + といったらない.",
+      "meaning": "Ý nghĩa: A cực kỳ, không thể tả nổi mức độ A.",
+      "usage": "Sử dụng: Dùng cho cảm xúc hoặc trạng thái mạnh, tích cực hoặc tiêu cực. Câu cần có điểm cảm thán thật, không chỉ miêu tả thường.",
+      "humanMoment": "Dr. Linh lưu ý: 〜といったらない khác 〜といったらありゃしない. といったらない gọn hơn; ありゃしない thân mật và nhấn phủ định mạnh hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜といったらありゃしない",
+          "contrast": "Khác 〜といったらない: ありゃしない khẩu ngữ hơn và phủ định mạnh hơn."
+        },
+        {
+          "pattern": "〜といったらありはしない",
+          "contrast": "ありはしない đầy đủ/trang trọng hơn; といったらない ngắn và thường gặp hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -422,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual / い-Adjective / な-Adjective（＋だ） / Noun（＋だ） + ときている",
-      "meaning": "Ý nghĩa: Dùng để nêu một tình trạng đã ở mức đáng chú ý hoặc nghiêm trọng, thường kèm sắc thái không hài lòng.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "と đóng khung tình trạng, きている là “đã đến/đang thành ra như thế”. Cấu trúc 〜ときている trình bày A như một tình thế nổi bật, thường khiến người nói bực hoặc ngán.",
+      "hanVietBridge": "来る là đến; きている gợi tình trạng đã kéo tới mức A. Tiếng Việt tự nhiên: lại còn A, tình hình A như thế.",
+      "form": "Hình thức: mệnh đề/tính từ/danh từ + ときている.",
+      "meaning": "Ý nghĩa: Tình trạng A đã ở mức đáng chú ý/nghiêm trọng; thường có sắc thái không hài lòng.",
+      "usage": "Sử dụng: Hay dùng để nêu lý do khiến kết luận sau dễ hiểu: đã A đến vậy thì B là đương nhiên/khó tránh.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ときている khác 〜とあって. とあって là hoàn cảnh đặc biệt trung tính hơn; ときている thường có giọng “lại còn thế nữa”.",
+      "crossLinks": [
+        {
+          "pattern": "〜とあって",
+          "contrast": "Khác 〜ときている: 〜とあって nêu dịp/hoàn cảnh; 〜ときている nhấn tình trạng đáng chú ý, thường tiêu cực."
+        },
+        {
+          "pattern": "〜だけに",
+          "contrast": "〜だけに nối lý do-hệ quả; 〜ときている thêm cảm giác tình hình đã tới mức đáng nói."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

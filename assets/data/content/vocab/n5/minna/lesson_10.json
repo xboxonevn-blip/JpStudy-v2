@@ -1544,6 +1544,7 @@
       "order": 29,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1565,18 +1566,23 @@
       },
       "sense": {
         "senseId": "n5_l10_s029",
-        "meaningVi": "bến xe, điểm lên xe",
+        "meaningVi": "Bến xe, điểm lên xuống xe",
         "meaningEn": "boarding place"
       },
       "search": {
         "termNoAccent": "乗り場",
         "readingNoAccent": "のりは",
-        "meaningViNoAccent": "ben xe, điem len xe",
+        "meaningViNoAccent": "Ben xe, diem len xuong xe",
         "hanVietNoAccent": "thang truong"
       },
       "links": {
         "sourceVocabId": "n5_l10_v029",
-        "sourceSenseId": "n5_l10_s029"
+        "sourceSenseId": "n5_l10_s029",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thặng trường"

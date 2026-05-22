@@ -853,3 +853,9 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 - Decision: Apply five N5 Minna meaning repairs for `信号`, `中`, `背`, `物価`, and `問題`, while skipping adjective rows such as `暖かい`/`温かい` where the kanji distinction carries pedagogical nuance.
 - Rationale: The batch improves clear context labels and lesson-specific meanings without flattening high-value contrast pairs.
 - Verification: `node --test test/tool/research/vocab_app_diff_test.js test/tool/research/vocab_app_diff_apply_test.js test/tool/qa/validate_example_quality_test.js`; `node tool/qa/validate_example_quality.js`; `node tool/migration/wire_example_sentences.js --validate-only`; `flutter analyze lib/data/db/content_database.dart assets/data/content/vocab/n5/minna`; `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart --reporter expanded`; `git diff --check`.
+
+## DECISION-092 - Batch 012 keeps low-risk common-word repairs
+- Date: 2026-05-22
+- Decision: Apply five N5 Minna repairs for `小さい`, `少し`, `上着`, `乗り場`, and `食べ物`, all from consensus rows where the canonical gloss is clearer or more natural in Vietnamese.
+- Rationale: These are low-risk common-word updates and do not remove family/register/kanji nuance.
+- Verification: `node --test test/tool/research/vocab_app_diff_test.js test/tool/research/vocab_app_diff_apply_test.js test/tool/qa/validate_example_quality_test.js`; `node tool/qa/validate_example_quality.js`; `node tool/migration/wire_example_sentences.js --validate-only`; `flutter analyze lib/data/db/content_database.dart assets/data/content/vocab/n5/minna`; `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart --reporter expanded`; `git diff --check`.

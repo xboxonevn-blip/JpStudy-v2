@@ -2186,6 +2186,7 @@
       "order": 40,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2206,18 +2207,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s040",
-        "meaningVi": "một ít, một chút",
+        "meaningVi": "Ít, một ít",
         "meaningEn": "a little / a few"
       },
       "search": {
         "termNoAccent": "少し",
         "readingNoAccent": "すこし",
-        "meaningViNoAccent": "mot it, mot chut",
+        "meaningViNoAccent": "It, mot it",
         "hanVietNoAccent": "thieu"
       },
       "links": {
         "sourceVocabId": "n5_l09_v040",
-        "sourceSenseId": "n5_l09_s040"
+        "sourceSenseId": "n5_l09_s040",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thiểu"

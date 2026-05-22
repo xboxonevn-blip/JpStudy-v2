@@ -22,16 +22,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + だけあって, い-Adjective + だけあって, な-Adjective + なだけあって, Noun + だけあって",
-      "meaning": "Ý nghĩa: Dùng khi kết quả hoặc phẩm chất đúng như kỳ vọng dựa trên danh tiếng, kinh nghiệm hoặc đặc điểm đã nêu.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "form": "Cấu trúc: Verb-casual + だけあって, い-Adjective + だけあって, な-Adjective + なだけあって, Noun + だけあって",
+      "meaning": "Ý nghĩa: Kết quả đúng như kỳ vọng dựa trên danh tiếng, kinh nghiệm, hoặc đặc điểm đã nêu",
+      "usage": "Cách dùng: đặt căn cứ đánh giá trước だけあって, rồi nêu kết quả “quả đúng là/không hổ là” ở vế sau: 有名なだけあって、料理がうまい.",
+      "etymology": "Gốc rễ: だけ chỉ mức/độ tương ứng; あって là “có/tồn tại”. だけあって nói vì đúng có mức/đặc điểm ấy, kết quả phía sau mới xứng đáng như vậy.",
+      "hanVietBridge": "だけあって không có kanji lõi; cầu nghĩa là “có đúng cái mức ấy nên...”. Tiếng Việt tự nhiên: quả đúng là, không hổ là.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～だけあって luôn cần một kỳ vọng đã có trước. Khác だけに có thể nêu hệ quả tốt/xấu, だけあって thường xác nhận danh tiếng hoặc năng lực.",
+      "crossLinks": [
+        {
+          "pattern": "～だけに",
+          "contrast": "Khác ～だけあって: だけに nêu hệ quả từ đặc điểm, còn だけあって nhấn đúng như kỳ vọng/danh tiếng."
+        },
+        {
+          "pattern": "さすが",
+          "contrast": "So với さすが là cảm thán, だけあって nối trực tiếp căn cứ với kết quả trong câu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "grammar"
       }
     }
   },
@@ -58,16 +70,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + だけましだ, い-Adjective + だけましだ, な-Adjective + だけましだ, Noun + だけましだ",
-      "meaning": "Ý nghĩa: Dùng khi tình huống không tốt nhưng vẫn còn đỡ hơn một khả năng tệ hơn.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "form": "Cấu trúc: Verb-casual + だけましだ, い-Adjective + だけましだ, な-Adjective + だけましだ, Noun + だけましだ",
+      "meaning": "Ý nghĩa: Tình huống không tốt nhưng vẫn còn đỡ hơn một khả năng tệ hơn",
+      "usage": "Cách dùng: đặt phần còn cứu vãn được trước だけましだ, rồi ngầm so với tình huống xấu hơn: 遅れただけましだ, 来られないよりいい.",
+      "etymology": "Gốc rễ: だけ giới hạn phần tích cực còn lại; まし là “đỡ hơn”. だけましだ nghĩa là chỉ riêng điểm đó thôi cũng làm tình huống bớt tệ.",
+      "hanVietBridge": "まし không có kanji lõi; cầu nghĩa là “khá hơn/đỡ hơn”. ～だけましだ nên dịch là “ít ra còn...”, không phải khen thật sự tốt.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～だけましだ là lời tự an ủi trong tình huống dở. Khác いい nghĩa là tốt, まし chỉ nói chưa rơi xuống đáy.",
+      "crossLinks": [
+        {
+          "pattern": "ないよりましだ",
+          "contrast": "Khác ～だけましだ: ないよりましだ so trực tiếp với không có, còn だけましだ giữ điểm cứu vãn trước だけ."
+        },
+        {
+          "pattern": "まだましだ",
+          "contrast": "So với まだましだ chung chung, ～だけましだ chỉ rõ điểm nào làm tình huống còn đỡ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "grammar"
       }
     }
   },
@@ -94,16 +118,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-past + ところ",
-      "meaning": "Ý nghĩa: Dùng khi vừa hoàn thành một hành động và ngay sau đó nêu kết quả, phát hiện hoặc nhận xét.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "form": "Cấu trúc: Verb-past + ところ",
+      "meaning": "Ý nghĩa: Vừa làm xong V thì nêu kết quả, phát hiện, hoặc nhận xét ngay sau đó",
+      "usage": "Cách dùng: dùng Verb-たところ khi hành động vừa hoàn tất và kết quả/phát hiện theo ngay sau: 聞いたところ、まだ未定だった.",
+      "etymology": "Gốc rễ: ところ là “chỗ/điểm”. Sau Verb-た, nó chỉ đúng điểm ngay sau khi hành động hoàn tất; từ điểm đó người nói nhìn thấy kết quả.",
+      "hanVietBridge": "所 là Hán-Việt “sở”: chỗ/điểm. ～たところ = tại điểm vừa V xong, nên hợp dịch “vừa/thử V thì...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～たところ có cảm giác mở cửa ra thấy kết quả. Khác たら rộng hơn, たところ nhấn phát hiện ngay sau khi làm.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-たら",
+          "contrast": "Khác ～たところ: たら có thể là điều kiện rộng, còn たところ nhấn kết quả/phát hiện ngay sau hành động."
+        },
+        {
+          "pattern": "Verb-てみたら",
+          "contrast": "So với てみたら nhấn thử làm, たところ nhấn điểm sau khi hành động hoàn tất và kết quả xuất hiện."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },

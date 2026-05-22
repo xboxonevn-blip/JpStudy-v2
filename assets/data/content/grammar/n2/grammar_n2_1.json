@@ -262,16 +262,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Phrase A + すなわち + Phrase B",
-      "meaning": "Ý nghĩa: Dùng khi B diễn giải, tóm lại hoặc nói rõ bản chất của A.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "form": "Cấu trúc: Phrase A + すなわち + Phrase B",
+      "meaning": "Ý nghĩa: B diễn giải, định nghĩa, hoặc nói rõ bản chất của A",
+      "usage": "Cách dùng: dùng すなわち khi B là cách nói rõ hơn, tên gọi chính xác hơn, hoặc kết luận tóm lại của A. Hai vế phải tương đương hoặc gần tương đương.",
+      "etymology": "Gốc rễ: すなわち thường viết 即ち; 即 là “ngay chính là/đúng là”. Vì vậy B không phải thông tin mới rời rạc, mà là bản chất hoặc cách gọi trực tiếp của A.",
+      "hanVietBridge": "即 có Hán-Việt “tức”. A すなわち B gần đúng với “A, tức là B”; đây là cầu nối rất trực tiếp cho người Việt.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A すなわち B là dấu bằng trong câu. Khác つまり có thể tóm ý mềm, すなわち nghe định nghĩa và trang trọng hơn.",
+      "crossLinks": [
+        {
+          "pattern": "A つまり B",
+          "contrast": "Khác すなわち: つまり tóm lại mềm hơn, còn すなわち định nghĩa/đồng nhất A với B rõ hơn."
+        },
+        {
+          "pattern": "A 言い換えれば B",
+          "contrast": "So với 言い換えれば là “nói cách khác”, すなわち ngắn và có giọng định danh hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "grammar"
       }
     }
   },
@@ -298,16 +310,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A (Sentence) + すると + B (Sentence)",
-      "meaning": "Ý nghĩa: Dùng khi sau hành động hoặc tình huống A thì B xảy ra, xuất hiện hoặc được nhận ra như một hệ quả tự nhiên.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "form": "Cấu trúc: A (Sentence) + すると + B (Sentence)",
+      "meaning": "Ý nghĩa: Sau A thì B xảy ra, xuất hiện, hoặc được nhận ra như hệ quả tự nhiên",
+      "usage": "Cách dùng: dùng すると sau một hành động/tình huống đã nêu để dẫn B như điều xảy ra tiếp theo hoặc kết quả nhận thấy: ボタンを押す。するとドアが開く.",
+      "etymology": "Gốc rễ: する là “làm”; と tạo quan hệ “khi/nếu điều ấy xảy ra”. すると đóng gói A thành điểm kích hoạt, rồi B xuất hiện theo sau.",
+      "hanVietBridge": "すると không có kanji lõi; cầu nghĩa là “làm vậy thì/thế rồi”. Người Việt nên đọc B là hệ quả hoặc diễn biến tiếp, không phải chỉ là câu nối rời.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A。すると B。giống một camera quay tiếp sau A. Khác それから chỉ tuần tự, すると thường có cảm giác B bật ra từ A.",
+      "crossLinks": [
+        {
+          "pattern": "それから",
+          "contrast": "Khác すると: それから chỉ thứ tự “sau đó”, còn すると thường gợi B xảy ra như hệ quả/diễn biến từ A."
+        },
+        {
+          "pattern": "そうすると",
+          "contrast": "So với そうすると nhấn “nếu làm như vậy thì”, すると có thể kể diễn biến tự nhiên trong chuyện đã xảy ra."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   }

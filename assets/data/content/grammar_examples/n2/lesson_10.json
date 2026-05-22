@@ -11,10 +11,10 @@
   "examples": [
     {
       "grammarPoint": "～だけあって",
-      "sentence": "彼は日本語が上手だけあって、日本人のように話すことができる。",
-      "translation": "Đúng là anh ấy giỏi tiếng Nhật, nói được như người Nhật.",
-      "translationEn": "As expected from his good Japanese skills, he can speak like a native",
-      "romaji": "Kare wa nihongo ga jōzu dake atte, nihonjin no yō ni hanasu koto ga dekiru.",
+      "sentence": "彼は日本語が上手なだけあって、自然な発音で話せる。",
+      "translation": "Đúng là anh ấy giỏi tiếng Nhật, phát âm rất tự nhiên.",
+      "translationEn": "As expected from someone good at Japanese, he can speak with natural pronunciation.",
+      "romaji": "Kare wa nihongo ga jouzu na dake atte, shizen na hatsuon de hanaseru.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -24,7 +24,7 @@
       "grammarPoint": "～だけあって",
       "sentence": "このレストランは有名だけあって、料理がとても美味しい。",
       "translation": "Nhà hàng này nổi tiếng quả không sai, món ăn rất ngon.",
-      "translationEn": "No wonder this restaurant is famous; the food is very delicious",
+      "translationEn": "No wonder this restaurant is famous; the food is very delicious.",
       "romaji": "Kono resutoran wa yūmei dake atte, ryōri ga totemo oishii.",
       "tags": [
         "source-hanabira",
@@ -35,8 +35,8 @@
       "grammarPoint": "～だけあって",
       "sentence": "彼女は経験豊富なだけあって、その問題を簡単に解決できた。",
       "translation": "Đúng là cô ấy giàu kinh nghiệm, cô ấy giải quyết vấn đề đó rất dễ dàng.",
-      "translationEn": "Its natural that shes experienced; she solved the problem easily",
-      "romaji": "Kanojo wa keiken hōfu na dake atte, sono mondai o kantan ni kaiketsu dekita.",
+      "translationEn": "As expected from her experience, she solved the problem easily.",
+      "romaji": "Kanojo wa keiken houfu na dake atte, sono mondai o kantan ni kaiketsu dekita.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -46,8 +46,8 @@
       "grammarPoint": "～だけあって",
       "sentence": "彼は優秀な学生だけあって、いつもテストの点数が高い。",
       "translation": "Đúng là học sinh xuất sắc, anh ấy luôn đạt điểm cao trong các bài kiểm tra.",
-      "translationEn": "As expected of an excellent student, he always scores high on tests",
-      "romaji": "Kare wa yūshū na gakusei dake atte, itsumo tesuto no tensū ga takai.",
+      "translationEn": "As expected of an excellent student, he always scores high on tests.",
+      "romaji": "Kare wa yuushuu na gakusei dake atte, itsumo tesuto no tensuu ga takai.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -55,10 +55,10 @@
     },
     {
       "grammarPoint": "～だけましだ",
-      "sentence": "失敗するだけましだ。もっと大変なことにならなくてよかった。",
-      "translation": "Ít ra chỉ là thất bại; may mà chuyện không nghiêm trọng hơn.",
-      "translationEn": "At least we only failed—it could’ve been much worse",
-      "romaji": "Shippai suru dake mashi da. Motto taihen na koto ni naranakute yokatta.",
+      "sentence": "失敗しただけましだ。けがをしなくてよかった。",
+      "translation": "Ít ra chỉ là thất bại; may mà không bị thương.",
+      "translationEn": "At least it was only a failure; I am glad no one was hurt.",
+      "romaji": "Shippai shita dake mashi da. Kega o shinakute yokatta.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -66,10 +66,10 @@
     },
     {
       "grammarPoint": "～だけましだ",
-      "sentence": "遅れるだけましだ。来られないよりはいい。",
-      "translation": "Ít ra tôi chỉ đến muộn, còn hơn là không thể đến.",
-      "translationEn": "At least I’m only late. It’s better than not being able to come at all",
-      "romaji": "Okureru dake mashi da. Korarenai yori wa ii.",
+      "sentence": "遅れただけましだ。来られないよりはいい。",
+      "translation": "Ít ra chỉ đến muộn, còn hơn là không thể đến.",
+      "translationEn": "At least being late is better than not being able to come at all.",
+      "romaji": "Okureta dake mashi da. Korarenai yori wa ii.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -77,10 +77,10 @@
     },
     {
       "grammarPoint": "～だけましだ",
-      "sentence": "小さな部屋だけましだ。全く部屋がないよりはいい。",
-      "translation": "Ít ra chúng ta còn có một căn phòng nhỏ, còn hơn là không có phòng nào.",
-      "translationEn": "At least we have a small room; it’s better than having no room at all",
-      "romaji": "Chīsana heya dake mashi da. Mattaku heya ga nai yori wa ii.",
+      "sentence": "小さくても部屋があるだけましだ。全くないよりはいい。",
+      "translation": "Dù nhỏ nhưng ít ra còn có phòng, vẫn hơn là không có gì.",
+      "translationEn": "Even if it is small, having a room at all is better than having none.",
+      "romaji": "Chiisakute mo heya ga aru dake mashi da. Mattaku nai yori wa ii.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"
@@ -88,10 +88,10 @@
     },
     {
       "grammarPoint": "～だけましだ",
-      "sentence": "彼が結婚しないだけましだ。大変なことになるところだったよ。",
-      "translation": "Ít ra anh ấy không kết hôn; suýt nữa mọi chuyện đã rắc rối rồi.",
-      "translationEn": "At least he’s not getting married—things could have gotten complicated",
-      "romaji": "Kare ga kekkon shinai dake mashi da. Taihen na koto ni naru tokoro datta yo.",
+      "sentence": "財布をなくしただけましだ。パスポートまでなくさなくてよかった。",
+      "translation": "Ít ra chỉ mất ví; may mà không mất cả hộ chiếu.",
+      "translationEn": "At least I only lost my wallet; I am glad I did not lose my passport too.",
+      "romaji": "Saifu o nakushita dake mashi da. Pasupooto made nakusanakute yokatta.",
       "tags": [
         "source-hanabira",
         "vi-editorial-codex-pass"

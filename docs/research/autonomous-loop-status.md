@@ -3225,3 +3225,9 @@
 - Repaired `あるいは` examples to use natural same-rank alternatives.
 - Global Directive E validator progress is now `500/1123`; next failure starts at `grammar:n2:grammar_n2_1:006`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-23 Phase G Directive E redo batch 085
+- Re-authored N2 rows `A すなわち B`, `A。すると B。`, `～だけあって`, `～だけましだ`, and `～たところ`.
+- Repaired `だけあって` and `だけましだ` examples for natural attachment and lesser-bad context.
+- Global Directive E validator progress is now `505/1123`; next failure starts at `grammar:n2:grammar_n2_10:004`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

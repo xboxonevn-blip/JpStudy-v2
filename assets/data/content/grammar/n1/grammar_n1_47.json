@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + となれば, い-Adjective + となれば, な-Adjective + だとなれば, Noun + だとなれば",
       "meaning": "Ý nghĩa: Dùng để nói nếu tình huống đã đến mức X thì điều phía sau là tự nhiên hoặc cần thiết",
-      "usage": "Cách dùng: Với ～となれば, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～となれば, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + となれば, い-Adjective + となれば, な-Adjective + だとなれば, Noun + だとなれば thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～となれば không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Nêu tình huống đã thành mức X rồi nói điều phía sau là hệ quả, phản ứng hoặc việc cần làm. Sắc thái thường là “nếu đã tới chuyện X thì...”.",
+      "etymology": "Gốc cấu trúc: と gọi tên trạng thái, なる là trở thành, ば là điều kiện. ～となれば nghĩa là nếu trạng thái đã chuyển thành X, thì hệ quả phía sau trở nên tự nhiên hoặc cần thiết.",
+      "hanVietBridge": "成 = thành. 雨だとなれば = nếu đã thành chuyện trời mưa thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: となれば nghe như người nói đã chấp nhận một ngưỡng. Một khi 難しいとなれば, phản ứng phía sau không còn là tùy hứng mà là điều phải tính.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～となれば cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜となると",
+          "contrast": "Khác となると: となると nêu hệ quả khi vấn đề chuyển sang X; となれば nhấn điều kiện “nếu đã là X”."
+        },
+        {
+          "pattern": "〜となったら",
+          "contrast": "となったら giả định tình huống đã xảy ra cụ thể hơn; となれば thường nghe như lập luận điều kiện trang trọng."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 + に即した + Noun2",
       "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ theo nghĩa “dựa trên”, “phù hợp với”, “bám sát” Noun",
-      "usage": "Cách dùng: Với Noun に即した Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に即した Noun, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + に即した + Noun2 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に即した Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng に即した trước danh từ để bổ nghĩa: N2 được thiết kế/đánh giá/ứng xử bám sát N1. Hay gặp với 現実, 法律, ニーズ, 方針.",
+      "etymology": "Gốc cấu trúc: 即する là bám sát, phù hợp ngay với một chuẩn cụ thể. に即した biến chuẩn ấy thành phần bổ nghĩa cho danh từ sau, như 現実に即した計画 = kế hoạch sát thực tế.",
+      "hanVietBridge": "即 = tức/sát ngay. 法律に即した対応 = cách xử lý bám sát pháp luật.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に即した luôn hỏi “bám sát cái gì?”. Trong 社会のニーズに即した教育改革, cải cách không chung chung; nó phải áp vào nhu cầu xã hội.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun に即した Noun cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に沿った",
+          "contrast": "Khác に沿った: 沿う là đi theo đường/hướng; に即した nhấn bám sát chuẩn, thực tế, luật hoặc nhu cầu."
+        },
+        {
+          "pattern": "〜に基づいた",
+          "contrast": "に基づいた nhấn căn cứ nguồn gốc; に即した nhấn sự phù hợp sát với tình hình/chuẩn hiện tại."
         }
       ],
       "fallbackReference": {

@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-た form + ら + (same Verb-た form) + で",
       "meaning": "Ý nghĩa: Dùng để nói nếu X xảy ra thì lại có vấn đề hoặc tình huống riêng của X; dù xảy ra hay không cũng có điều phải tính",
-      "usage": "Cách dùng: Với Verb たら Verb たで, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb たら Verb たで, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-た form + ら + (same Verb-た form) + で thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb たら Verb たで không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Lặp cùng động từ dạng た để nói nếu X xảy ra thì trong kịch bản X lại có vấn đề/cách xử lý riêng. Thường đi cặp với “không X thì cũng...”.",
+      "etymology": "Gốc cấu trúc: たら mở điều kiện, phần Verb たで dùng で để đóng khung “trong trường hợp đã V”. 行ったら行ったで nghĩa là nếu đã đi thì riêng chuyện đi cũng có cái khó.",
+      "hanVietBridge": "条件 + 場 = điều kiện + trường hợp. 行ったら行ったで = đi thì trong trường hợp đã đi lại...",
+      "humanMoment": "Lưu ý từ Dr. Linh: たら たで là thế tiến thoái lưỡng nan. Người nói không chỉ nêu điều kiện; họ nói mỗi nhánh đều có hóa đơn riêng.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Verb たら Verb たで cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なら〜で",
+          "contrast": "Khác なら〜で: nghĩa gần nhưng たら たで nhấn kịch bản sau khi hành động đã xảy ra."
+        },
+        {
+          "pattern": "〜ば〜で",
+          "contrast": "ば〜で cũng nêu một nhánh điều kiện; たら たで thường tự nhiên hơn với chuyện cụ thể đã xảy ra."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Simplified phrase + とのことだ",
       "meaning": "Ý nghĩa: Dùng để truyền đạt lại thông tin đã nghe, được báo hoặc được nói",
-      "usage": "Cách dùng: Với ～とのことだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とのことだ, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Simplified phrase + とのことだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とのことだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng để truyền đạt thông tin nghe/được báo từ nguồn khác. Mệnh đề trước と được gói thành “nội dung thông báo”; câu nghe trang trọng hơn そうだ.",
+      "etymology": "Gốc cấu trúc: と trích nguyên nội dung, のこと biến nội dung ấy thành “việc/chuyện được nói tới”, だ chốt thành thông tin truyền đạt. とのことだ vì vậy giữ khoảng cách với nguồn tin.",
+      "hanVietBridge": "事 = sự/việc. 試験がないとのことだ = theo thông tin được báo, việc là không có kỳ thi.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とのことだ là giọng người đưa tin cẩn thận. Khi thấy 来年引っ越すとのことだ, hãy giữ khoảng cách: đây là thông tin được nghe lại, không phải người nói tự chứng kiến.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "～とのことだ cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜そうだ",
+          "contrast": "Khác そうだ báo tin: そうだ thân mật hơn; とのことだ trang trọng và nhấn nguồn thông báo."
+        },
+        {
+          "pattern": "〜ということだ",
+          "contrast": "ということだ có thể kết luận/giải thích; とのことだ thiên về truyền đạt thông tin nghe được."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + に即して + Verb",
       "meaning": "Ý nghĩa: Dùng khi hành động được thực hiện dựa trên hoặc phù hợp với Noun",
-      "usage": "Cách dùng: Với Noun に即して Verb, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に即して Verb, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に即して + Verb thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に即して Verb không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt chuẩn trước に即して để nói hành động/phán đoán được làm sát theo chuẩn ấy. Hay dùng với 法律, ルール, 現実, 方針, 状況.",
+      "etymology": "Gốc cấu trúc: 即する là áp sát, ăn khớp với một chuẩn cụ thể. に即して đứng trước động từ để nói hành động không tự do chung chung mà phải bám sát N trong lúc thực hiện.",
+      "hanVietBridge": "即 = tức/sát ngay. 法律に即して判断する = phán đoán bám sát pháp luật.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に即して đặt đường ray cho hành động. Trong ルールに即して行動する, vấn đề không phải “theo” mơ hồ mà là hành động không được lệch khỏi quy tắc.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun に即して Verb cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に沿って",
+          "contrast": "Khác に沿って: 沿って đi theo đường/hướng; に即して nhấn bám sát chuẩn hoặc thực tế khi hành động."
+        },
+        {
+          "pattern": "〜に基づいて",
+          "contrast": "に基づいて nhấn cơ sở/căn cứ; に即して nhấn sự phù hợp sát với tình hình hay quy tắc."
         }
       ],
       "fallbackReference": {

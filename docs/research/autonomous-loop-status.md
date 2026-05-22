@@ -3033,3 +3033,9 @@
 - Replaced generic template guidance with criterion-independence, irreversible-trigger, threshold-topic, forerunner-timing, and agreed-fiction-request teaching.
 - Global Directive E validator progress is now `340/1123`; next failure starts at `grammar:n1:grammar_n1_47:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 053
+- Re-authored N1 rows `〜となれば`, `Noun に即した Noun`, `Verb たら Verb たで`, `〜とのことだ`, and `Noun に即して Verb`.
+- Replaced generic template guidance with threshold-condition, standards-aligned modifier, branch-specific-downside, reported-information, and standards-aligned-action teaching.
+- Global Directive E validator progress is now `345/1123`; next failure starts at `grammar:n1:grammar_n1_49:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

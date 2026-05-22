@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-た form + ら + きりがない",
       "meaning": "Ý nghĩa: Dùng để nói nếu bắt đầu làm, kể hoặc nghĩ về điều gì thì sẽ không có điểm dừng",
-      "usage": "Cách dùng: Với Verb たら きりがない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb たら きりがない, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-た form + ら + きりがない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb たら きりがない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau động từ dạng たら để nói hễ bắt đầu V thì không có điểm dừng. Hay dùng cho kể chuyện, sửa lỗi, lo nghĩ, uống, mua, hoặc đòi hỏi lặp mãi.",
+      "etymology": "Gốc cấu trúc: きり là ranh giới/điểm cắt, がない là không có. Verb たら きりがない nghĩa là nếu bước vào hành động V thì không còn đường cắt để dừng chuỗi ấy lại.",
+      "hanVietBridge": "切 = thiết/cắt. 直したらきりがない = sửa thì không có điểm cắt kết thúc.",
+      "humanMoment": "Lưu ý từ Dr. Linh: たらきりがない là câu đặt phanh. Người nói không chỉ bảo “nhiều”; họ sợ vừa mở việc V ra là chuỗi đó chạy mãi.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb たら きりがない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜始めたら止まらない",
+          "contrast": "Khác 始めたら止まらない: nghĩa gần nhưng たらきりがない nhấn không có điểm kết thúc/giới hạn."
+        },
+        {
+          "pattern": "〜てもきりがない",
+          "contrast": "てもきりがない nói dù làm cũng không hết; たらきりがない nhấn hễ bắt đầu làm thì dây dưa vô tận."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + とはいえ, な-Adjective + だとはいえ, い-Adjective + とはいえ, Verb-casual + とはいえ",
       "meaning": "Ý nghĩa: Dùng để thừa nhận X nhưng sau đó nêu điều trái với kỳ vọng từ X",
-      "usage": "Cách dùng: Với ～とはいえ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とはいえ, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + とはいえ, な-Adjective + だとはいえ, い-Adjective + とはいえ, Verb-casual + とはいえ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とはいえ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Trước mẫu là điều được thừa nhận; vế sau bẻ lại bằng thông tin trái kỳ vọng. Dùng được với danh từ, tính từ, động từ, thường văn viết/trang trọng.",
+      "etymology": "Gốc cấu trúc: と trích điều được nói, は đưa nó lên làm điểm nhấn, いえ là dạng của 言う “dù nói là”. ～とはいえ nghĩa là tuy có thể nói X, nhưng vế sau giới hạn X.",
+      "hanVietBridge": "言 = ngôn/nói. 若いとはいえ = tuy nói là trẻ nhưng...",
+      "humanMoment": "Lưu ý từ Dr. Linh: とはいえ là cái phanh sau lời thừa nhận. Khi đọc 若いとはいえ, đừng dừng ở “trẻ”; hãy chờ vế sau nói điều trái dự đoán.",
       "crossLinks": [
         {
-          "pattern": "Noun はおろか～も",
-          "contrast": "～とはいえ cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とは言っても",
+          "contrast": "Khác とは言っても: nghĩa gần nhưng とはいえ gọn và văn viết hơn."
+        },
+        {
+          "pattern": "〜けれども",
+          "contrast": "けれども là đối lập chung; とはいえ nhấn điều được thừa nhận trước rồi giới hạn nó."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + に言わせれば",
       "meaning": "Ý nghĩa: Dùng để nêu ý kiến theo cách nhìn của Noun: “nếu hỏi Noun thì”",
-      "usage": "Cách dùng: Với Noun に言わせれば, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に言わせれば, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に言わせれば thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に言わせれば không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt người/nhóm trước に言わせれば để đưa ý kiến từ góc nhìn của họ. Vế sau thường là nhận xét chủ quan, đánh giá chuyên môn hoặc cách họ sẽ nói.",
+      "etymology": "Gốc cấu trúc: 言わせる là “để/cho ai nói”, ば là nếu. Noun に言わせれば nghĩa là nếu để N nói ra ý kiến, tức lấy lời/quan điểm của N làm khung đánh giá.",
+      "hanVietBridge": "言 = ngôn/nói. 父に言わせれば = nếu để bố tôi nói thì/theo bố tôi.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に言わせれば luôn gắn với một cái miệng cụ thể. Đừng đọc như sự thật khách quan; đó là thế giới nhìn qua người được nêu trước に.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun に言わせれば cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜によれば",
+          "contrast": "Khác によれば: によれば thường dẫn nguồn tin; に言わせれば nhấn quan điểm/đánh giá nếu để người đó nói."
+        },
+        {
+          "pattern": "〜にしてみれば",
+          "contrast": "にしてみれば là từ lập trường của N; に言わせれば nghe như trích cách N sẽ phát biểu."
         }
       ],
       "fallbackReference": {

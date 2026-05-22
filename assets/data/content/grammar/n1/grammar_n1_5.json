@@ -22,8 +22,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + といったところだ",
       "meaning": "Ý nghĩa: Dùng để nói mức độ chỉ khoảng Noun hoặc cùng lắm là Noun, thường hàm ý không nhiều hơn mức đó.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đặt con số/mức độ/danh mục trước といったところだ để nói mức ước lượng thấp hoặc giới hạn trên. Câu thường hàm ý “chỉ khoảng đó thôi”.",
+      "etymology": "Gốc cấu trúc: といった là “có thể gọi là”, ところ là điểm/vùng. といったところだ đặt N vào một vùng ước lượng, không khẳng định chính xác tuyệt đối mà khoanh mức gần đúng.",
+      "hanVietBridge": "所 = sở/chỗ/điểm. 1000語といったところだ = khoảng mức 1000 từ là cùng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といったところだ là cây thước khiêm tốn. Người nói không khoe mức cao; họ khoanh lại: nhiều nhất cũng chỉ đến vùng N.",
+      "crossLinks": [
+        {
+          "pattern": "〜くらいだ",
+          "contrast": "Khác くらいだ: くらい trung tính hơn; といったところだ thường có sắc thái đánh giá giới hạn/thấp."
+        },
+        {
+          "pattern": "〜というところだ",
+          "contrast": "というところだ gần nghĩa; といったところだ mềm hơn và nghe như ước lượng sơ bộ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -56,8 +68,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 + といわず + Noun2 + といわず + (rest of the sentence)",
       "meaning": "Ý nghĩa: Dùng để nói không phân biệt A hay B, toàn bộ đều chịu cùng một tác động hoặc có cùng trạng thái.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Nêu hai ví dụ A và B bằng といわず...といわず để nói không riêng A hay B mà toàn bộ phạm vi đều như vậy. Vế sau thường là tác động phủ khắp.",
+      "etymology": "Gốc cấu trúc: 言わず là “không nói/không gọi riêng”. A といわず B といわず nghĩa là không cần tách gọi A hay B; cả vùng gồm A, B và những phần liên quan đều chịu chung trạng thái.",
+      "hanVietBridge": "言 = ngôn/nói. 冬といわず夏といわず = không riêng nói mùa đông hay mùa hè.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といわず...といわず không chọn hai mục để so sánh; nó quét cả mặt bàn. Hễ A hay B được nêu, toàn phạm vi phía sau đều dính.",
+      "crossLinks": [
+        {
+          "pattern": "〜を問わず",
+          "contrast": "Khác を問わず: を問わず nói bất kể tiêu chí; といわず...といわず nêu hai điểm mẫu rồi quét toàn phạm vi."
+        },
+        {
+          "pattern": "〜であれ〜であれ",
+          "contrast": "であれ...であれ liệt kê lựa chọn; といわず...といわず nhấn không phân biệt A/B, tất cả cùng chịu tác động."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

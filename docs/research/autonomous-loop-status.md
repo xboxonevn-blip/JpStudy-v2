@@ -2708,3 +2708,15 @@
 - Removed the false 8-second empty-state timeout from exam setup; slow first-run seed now stays in loading state.
 - Added regressions for nonempty N1-N5 exam banks and slow seed behavior.
 - Live Playwright proof archived: `docs/research/qa-live-2026-05-22-accept-exam-n{1..5}-asset-fixed.png`.
+
+## 2026-05-22 P0 urgent batch verified after C1 hardening
+- P0 C1: committed and pushed `6e7f4963`; focused analyzer/tests passed; live N1-N5 exam level clicks show start CTA instead of blank/false-empty state.
+- P0 C2: existing route guards confirm `/profile` redirects to `/me`, legacy `/vocab/series/minna/lesson/1` redirects to `/lesson/1?level=N5`, and unknown routes render the friendly not-found page.
+- P0 C3: current Shin Kanzen manifest/content counts are N3=83, N2=163, N1=88 with non-empty lesson item indexes.
+- Fresh live route matrix passed `36/36` routes on `jpstudy.web.app` at `2026-05-22T11:45:04.802Z`.
+
+## 2026-05-22 P1/P2/P3 urgent batch evidence sweep
+- P1 guards passed: Minna orphan cleanup, lesson-specific conjugation, Directive E progressive disclosure, 50-question exercise density, vocab catalog, example quality, example wiring, and exercise validation.
+- Directive E validator passed for the ranked Tier-1 grammar slice (`80/80`) with `assets/data/content/exercises/top_200_frequency_rank.json`; full global validator remains Phase G debt (`80/1123`) and is not treated as P1 completion.
+- P2 guards passed: chrome/content width, mobile shell, onboarding adaptive width, grammar level query/chips, Directive E detail expander, exam start metadata, answer layout, and non-blocking kana suggestion.
+- P3 guards passed: Minna continue labels hide internal IDs and onboarding level selection enables the primary CTA with selected-state styling.

@@ -2973,3 +2973,9 @@
 - Repaired one `ではすまない` example so the Japanese naturally marks "only X is not enough" with `だけではすまない`.
 - Global Directive E validator progress is now `290/1123`; next failure starts at `grammar:n1:grammar_n1_34:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 043
+- Re-authored N1 rows `Verbる / Noun(である) + 限り(は)`, `〜とあれば`, `Noun なり Noun なり`, `Verb がてら`, and `〜といえども`.
+- Replaced generic template notes with boundary-condition, decisive-condition, alternative-list, side-task, and formal-concession guidance.
+- Global Directive E validator progress is now `295/1123`; next failure starts at `grammar:n1:grammar_n1_35:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

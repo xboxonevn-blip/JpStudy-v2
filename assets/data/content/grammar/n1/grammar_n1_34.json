@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + 限り(は) Noun(である) + 限り(は)",
       "meaning": "Ý nghĩa: Dùng để nói trong phạm vi điều kiện đó còn đúng thì kết luận phía sau vẫn đúng",
-      "usage": "Cách dùng: Với Verbる / Noun(である) + 限り(は) (kagiri (wa)), hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる / Noun(である) + 限り(は) (kagiri (wa)), lõi 限り là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + 限り(は) Noun(である) + 限り(は) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる / Noun(である) + 限り(は) (kagiri (wa)) không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước là điều kiện còn hiệu lực; vế sau là điều tiếp tục đúng trong ranh giới ấy. Thường đi với cam kết, nghĩa vụ, quyền hạn hoặc trạng thái kéo dài.",
+      "etymology": "Gốc cấu trúc: 限 là hạn/giới hạn; 限り là phạm vi tới đâu thì hiệu lực tới đó. は biến phạm vi này thành chủ đề ràng buộc: chừng nào X còn đúng, kết luận sau vẫn đứng.",
+      "hanVietBridge": "限 = hạn. 生きている限りは = trong hạn còn sống, chừng nào còn sống.",
+      "humanMoment": "Lưu ý từ Dr. Linh: 限り(は) vẽ một đường biên. Câu sau không hứa vô hạn; nó chỉ sống trong biên X còn đúng.",
       "crossLinks": [
         {
           "pattern": "Noun を限りに",
-          "contrast": "Verbる / Noun(である) + 限り(は) (kagiri (wa)) cần đọc theo chức năng riêng của mẫu; Noun を限りに có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "を限りに đánh dấu mốc kết thúc/thay đổi; 限り(は) giữ điều kiện đang còn hiệu lực."
+        },
+        {
+          "pattern": "〜かぎりでは",
+          "contrast": "かぎりでは giới hạn theo phạm vi thông tin/nghe thấy; 限り(は) giới hạn theo điều kiện tồn tại."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + とあれば / い-Adjective + とあれば / な-Adjective + だとあれば / Noun + だとあれば",
       "meaning": "Ý nghĩa: Dùng để nói nếu đúng là hoàn cảnh X thì người nói sẵn sàng làm hoặc điều phía sau là đương nhiên",
-      "usage": "Cách dùng: Với ～とあれば, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とあれば, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + とあれば / い-Adjective + とあれば / な-Adjective + だとあれば / Noun + だとあれば thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とあれば không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước nêu điều kiện đủ quan trọng để vế sau trở thành phản ứng đương nhiên, sẵn sàng hoặc khó tránh. Hay gặp trong lời hứa, động cơ mạnh, cơ hội đặc biệt.",
+      "etymology": "Gốc cấu trúc: と đóng khung mệnh đề như một điều được nêu ra; あれば là nếu có/nếu đúng là có tình huống ấy. とあれば vì vậy không chỉ là “nếu”, mà là “đã có điều kiện A thì B là phản ứng tự nhiên”.",
+      "hanVietBridge": "ある = có. 無料とあれば = nếu có chuyện là miễn phí, thì phản ứng sau dễ hiểu.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とあれば có lực kéo hành động. Người nói nghe điều kiện X và gần như lập tức thấy B là điều phải làm hoặc sẽ xảy ra.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とあれば cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とあって",
+          "contrast": "Khác とあれば: とあって nói vì thực tế có hoàn cảnh A nên B xảy ra; とあれば đặt A như điều kiện đủ để B sẽ/đáng làm."
+        },
+        {
+          "pattern": "〜なら",
+          "contrast": "なら là điều kiện rộng; とあれば nhấn điều kiện đặc biệt khiến phản ứng phía sau trở nên tự nhiên."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + なり + Noun + なり",
       "meaning": "Ý nghĩa: Dùng để nêu vài lựa chọn cùng loại và gợi ý người nghe chọn một trong số đó",
-      "usage": "Cách dùng: Với Noun なり Noun なり, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun なり Noun なり, lõi Noun なり Noun なり là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + なり + Noun + なり thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun なり Noun なり không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Hai danh từ phải cùng loại lựa chọn. Người nói không chốt đúng A hay B, mà đưa vài phương án đại diện rồi thúc người nghe chọn một cái phù hợp.",
+      "etymology": "Gốc cấu trúc: なり vốn là dạng cổ gắn với xác nhận “là/ấy là”, rồi trong lặp AなりBなり trở thành nhịp nêu lựa chọn. Lặp lại なり giúp câu mở danh sách ví dụ mà không khóa vào đúng hai mục.",
+      "hanVietBridge": "AなりBなり = A hay B chẳng hạn. Danh sách là gợi ý, không phải phép cộng A+B.",
+      "humanMoment": "Lưu ý từ Dr. Linh: なり...なり là câu mở đường cho hành động. Nếu người nói muốn liệt kê vui vẻ kiểu “nào là”, thường không dùng nhịp này.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun なり Noun なり cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とか〜とか",
+          "contrast": "Khác とか...とか: とか liệt kê ví dụ trung tính; なり...なり thường kèm ý chọn/làm một trong các phương án ấy."
+        },
+        {
+          "pattern": "〜でも",
+          "contrast": "でも đưa một ví dụ đủ được; なり...なり đưa nhiều lựa chọn cùng nhóm để người nghe tự chọn."
         }
       ],
       "fallbackReference": {

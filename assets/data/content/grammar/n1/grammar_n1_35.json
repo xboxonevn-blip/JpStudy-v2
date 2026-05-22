@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (dictionary or -ます stem) + がてら",
       "meaning": "Ý nghĩa: Dùng khi nhân tiện làm một hành động thì làm thêm hành động khác trong cùng dịp",
-      "usage": "Cách dùng: Với Verb がてら, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb がてら, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (dictionary or -ます stem) + がてら thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb がてら không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Hành động trước là dịp chính hoặc hoạt động đang tiện đường; hành động sau được làm kèm trong cùng dịp. Hợp với đi bộ, mua sắm, ghé thăm, vận động nhẹ.",
+      "etymology": "Gốc cấu trúc: がてら là tiểu từ nối cổ mang nghĩa “nhân lúc/tiện thể khi làm”. Với Verb がてら, động tác trước tạo khung dịp, còn vế sau là việc tranh thủ gắn vào khung ấy.",
+      "hanVietBridge": "がてら = nhân tiện/lúc đang làm. 散歩がてら = nhân lúc đi dạo.",
+      "humanMoment": "Lưu ý từ Dr. Linh: がてら không phải hai việc nặng ngang nhau. Hãy nghe câu như một chuyến đi có việc chính, rồi người nói kẹp thêm việc phụ.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb がてら cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ついでに",
+          "contrast": "Khác ついでに: ついでに là tiện thể rộng và đời thường; がてら trang trọng hơn nhẹ, thường gắn với hoạt động/di chuyển làm dịp."
+        },
+        {
+          "pattern": "Noun かたがた",
+          "contrast": "かたがた trang trọng, có sắc thái xã giao hai mục đích; がてら đời thường hơn và thiên về tiện đường."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + といえども / Verb-plain form + といえども / Adjective + といえども",
       "meaning": "Ý nghĩa: Dùng để nói dù là X, dù được gọi là X, thì vẫn có điều ngoại lệ hoặc hạn chế",
-      "usage": "Cách dùng: Với ～といえども, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～といえども, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + といえども / Verb-plain form + といえども / Adjective + といえども thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～といえども không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước nêu một danh hiệu, trạng thái hoặc nhận định tưởng như đủ mạnh; vế sau giới hạn lại kỳ vọng đó. Sắc thái văn viết, trang trọng hơn ても.",
+      "etymology": "Gốc cấu trúc: といえども bắt từ と言えども, tức “dù có nói là A”. ども là dấu nhượng bộ cổ; cả cụm giữ cảm giác trang trọng: thừa nhận A trên lời nói, rồi bẻ sang ngoại lệ ở vế sau.",
+      "hanVietBridge": "言う = nói; といえども = dù nói là/dù được gọi là. 天才といえども = dù là thiên tài.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といえども luôn có một chiếc phanh sau lời khen/nhãn gọi. Câu sau nói: đừng để danh xưng A làm bạn quên giới hạn thật.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "～といえども cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ても",
+          "contrast": "ても là nhượng bộ thông dụng; といえども trang trọng hơn và thường gắn với nhãn gọi/đánh giá lớn."
+        },
+        {
+          "pattern": "〜とはいえ",
+          "contrast": "とはいえ thường chuyển ý mềm “nói vậy nhưng”; といえども có giọng văn viết mạnh hơn, như bác bỏ kỳ vọng từ A."
         }
       ],
       "fallbackReference": {

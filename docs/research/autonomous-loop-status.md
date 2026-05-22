@@ -2484,3 +2484,21 @@
   validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
   --check` (line-ending warnings only). Global Directive E validator is now
   `78/80` Tier-1 grammar items passed; 2 expected failures remain.
+
+## 2026-05-22 Phase G Tier-1 items 079-080
+
+- Re-authored `grammar:n5:grammar_n5_16:001-002` with pattern-specific
+  Directive E content for te-form sequence `V1て、[V2て、] ～ ます` and
+  ordered-after action `V1て から V2`.
+- Added 20 hand-crafted templates: 10 per item, covering form, meaning,
+  usage, context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `V1て、[V2て、] ～ ます`: te-form strings actions in natural order; it does
+    not add "after finishing" emphasis by itself.
+  - `V1て から V2`: `から` after te-form marks "only after V1 is complete, V2
+    happens".
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `80/80` Tier-1 grammar items passed; Phase G templates cover `800` Tier-1
+  grammar templates.

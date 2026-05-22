@@ -689,3 +689,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Learners confuse these because the surface all begins with Vて. Actor-role plus allow/ban polarity gives a reusable decision test.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-070 - Final grammar Tier-1 closes on sequence nuance
+**Phase**: Phase G Option C Tier-1 grammar
+**Date**: 2026-05-22 13:25 (Asia/Saigon)
+**Context**: The last two grammar validator failures were `Vて` action sequence and `Vてから`, which are easy to over-translate as the same "and/then".
+**Options considered**: merge them into the prior te-form batch | leave them for mixed vocab/grammar rank work | finish the grammar validator set with a two-item final batch
+**Chosen**: Finish the grammar validator set now with a two-item batch and contrast `Vて` soft sequence against `Vてから` completed-prior-action order.
+**Rationale**: The two items form a natural pair and close the 80/80 grammar quality gate without mixing in the upcoming vocab Tier-1 work.
+**Reversible**: yes
+**Owner review**: pending

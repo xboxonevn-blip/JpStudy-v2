@@ -1,3 +1,4 @@
+import 'package:drift/drift.dart' hide isNotNull, isNull;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/data/db/content_database.dart';
@@ -82,6 +83,43 @@ void main() {
       lesson8.map((entry) => entry.kind),
       everyElement(isIn({'verb', 'i_adjective', 'na_adjective'})),
     );
+  });
+
+  test('lesson-scoped lookup ignores malformed non-conjugable rows', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+    final db = ContentDatabase(executor: NativeDatabase.memory());
+    addTearDown(db.close);
+    final repo = ConjugationRepository(db);
+    final gakuseiVocab = await _vocabBySourceId(db, 'n5_l01_v009');
+
+    await db
+        .into(db.conjugationLemma)
+        .insert(
+          ConjugationLemmaCompanion.insert(
+            id: const Value(999999),
+            contentVocabId: gakuseiVocab.id,
+            contentEntryId: 'malformed_noun',
+            term: '学生',
+            reading: const Value('がくせい'),
+            dictionaryForm: '学生',
+            dictionaryReading: const Value('がくせい'),
+            kind: 'noun',
+            conjugationClass: 'noun',
+            posTagsJson: '["noun"]',
+            jmdictEntrySeq: '999999',
+            sourceVocabId: const Value('n5_l01_v009'),
+            sourceSenseId: const Value('n5_l01_s009'),
+            level: 'N5',
+            series: 'minna',
+            lessonId: 1,
+            matchMethod: 'test',
+          ),
+        );
+
+    final lesson1 = await repo.fetchByLesson('N5', 1, series: 'minna');
+
+    expect(lesson1, isEmpty);
   });
 }
 

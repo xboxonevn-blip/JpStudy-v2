@@ -7,6 +7,8 @@ final conjugationRepositoryProvider = Provider<ConjugationRepository>((ref) {
   return ConjugationRepository(ref.watch(contentDatabaseProvider));
 });
 
+const _conjugableKinds = ['verb', 'i_adjective', 'na_adjective'];
+
 class ConjugationRepository {
   ConjugationRepository(this._db);
 
@@ -14,7 +16,11 @@ class ConjugationRepository {
 
   Future<ConjugationLemmaData?> findByContentVocabId(int contentVocabId) {
     return (_db.select(_db.conjugationLemma)
-          ..where((tbl) => tbl.contentVocabId.equals(contentVocabId))
+          ..where(
+            (tbl) =>
+                tbl.contentVocabId.equals(contentVocabId) &
+                tbl.kind.isIn(_conjugableKinds),
+          )
           ..limit(1))
         .getSingleOrNull();
   }
@@ -26,7 +32,11 @@ class ConjugationRepository {
       return Future.value(const []);
     }
     final query = _db.select(_db.conjugationLemma)
-      ..where((tbl) => tbl.contentVocabId.isIn(contentVocabIds))
+      ..where(
+        (tbl) =>
+            tbl.contentVocabId.isIn(contentVocabIds) &
+            tbl.kind.isIn(_conjugableKinds),
+      )
       ..orderBy([
         (tbl) => OrderingTerm.asc(tbl.lessonId),
         (tbl) => OrderingTerm.asc(tbl.term),
@@ -42,7 +52,11 @@ class ConjugationRepository {
 
   Future<List<ConjugationLemmaData>> fetchByLevel(String level) {
     final query = _db.select(_db.conjugationLemma)
-      ..where((tbl) => tbl.level.equals(level.trim().toUpperCase()))
+      ..where(
+        (tbl) =>
+            tbl.level.equals(level.trim().toUpperCase()) &
+            tbl.kind.isIn(_conjugableKinds),
+      )
       ..orderBy([
         (tbl) => OrderingTerm.asc(tbl.lessonId),
         (tbl) => OrderingTerm.asc(tbl.term),
@@ -60,7 +74,8 @@ class ConjugationRepository {
       ..where(
         (tbl) =>
             tbl.level.equals(level.trim().toUpperCase()) &
-            tbl.lessonId.equals(lessonId),
+            tbl.lessonId.equals(lessonId) &
+            tbl.kind.isIn(_conjugableKinds),
       )
       ..orderBy([
         (tbl) => OrderingTerm.asc(tbl.term),
@@ -87,6 +102,7 @@ class ConjugationRepository {
     }
 
     final query = _db.select(_db.conjugationLemma);
+    query.where((tbl) => tbl.kind.isIn(_conjugableKinds));
     if (normalizedSourceVocabId != null && normalizedSourceVocabId.isNotEmpty) {
       query.where(
         (tbl) => tbl.sourceVocabId.equals(normalizedSourceVocabId),

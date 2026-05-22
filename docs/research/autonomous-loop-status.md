@@ -2669,3 +2669,9 @@
 - Added regressions for no generated kanji coverage rows and no stale Minna manifest vocab refs.
 - Gates passed: Minna vocab quality test, focused analyzer, DB/repository seed tests, example validator, example wiring validate-only, and generated-kanji row scan.
 - Note: global migration validator still reports broad upper-JLPT/Mimikara manifest drift outside this H1 batch; continue P1 with scoped gates.
+
+## 2026-05-22 P1 H2 lesson-specific conjugation guard
+- Added repository-level conjugable kind filtering for verbs, i-adjectives, and na-adjectives.
+- Added a red-green regression proving malformed same-lesson noun rows stay hidden from lesson-scoped conjugation lookup.
+- Existing lesson widget behavior remains conditional: Minna N5 Bài 1 has no conjugation widget; Bài 8 retains lesson-scoped conjugable items.
+- Gates passed: conjugation content seed test, conjugation lesson widget test, and focused analyzer.

@@ -160,8 +160,20 @@
     "directiveE": {
       "form": "Hình thức: Noun 1 + にひきかえ + Noun 2 + は",
       "meaning": "Ý nghĩa: Dùng để đối chiếu hai sự vật hoặc hai người, nhấn mạnh sự khác biệt rõ rệt giữa A và B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: đặt mốc so sánh A trước にひきかえ, rồi đưa B + は phía sau để nhấn B trái hẳn A, thường có cảm giác đánh giá tốt/xấu rõ.",
+      "etymology": "Gốc rễ: ひきかえ viết từ 引き換え, nghĩa là đổi/thay qua lại. に đánh dấu mốc A, は đưa B lên sân khấu để đối chiếu trực diện với A.",
+      "hanVietBridge": "引 là Hán-Việt “dẫn”, 換 là “hoán”. Noun にひきかえ Noun は giống đặt hai phía để “đối hoán” mức độ hoặc phẩm chất.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にひきかえ Noun は cần độ lệch mạnh. Khác に対して trung tính, にひきかえ thường làm người nghe cảm thấy một bên nổi bật trái ngược.",
+      "crossLinks": [
+        {
+          "pattern": "Noun に対して",
+          "contrast": "Khác Noun にひきかえ Noun は: に対して chỉ đối lập/đối với, còn にひきかえ nhấn sự trái ngược rõ và thường có đánh giá."
+        },
+        {
+          "pattern": "Noun と違って",
+          "contrast": "So với と違って đời thường hơn, にひきかえ trang trọng hơn và đặt A/B vào thế đối chiếu mạnh."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -194,8 +206,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + にもまして",
       "meaning": "Ý nghĩa: Dùng để nói điều phía sau vượt hơn Noun về mức độ.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: đặt chuẩn so sánh trước にもまして để nói điều phía sau còn vượt chuẩn ấy hơn nữa: 昨日にもまして寒い.",
+      "etymology": "Gốc rễ: まして đến từ 増す, “tăng lên/vượt lên”. にも đặt N làm mốc “ngay cả so với N”, rồi まして đẩy mức độ phía sau cao hơn mốc đó.",
+      "hanVietBridge": "増 là Hán-Việt “tăng”. Noun にもまして là “tăng/vượt hơn cả N”, nên hợp với tính chất có thang độ như lạnh, quan trọng, đẹp.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にもまして cần một thang đo. Khác より chỉ so sánh hơn, にもまして làm N nghe đã cao rồi mà vế sau còn cao hơn.",
+      "crossLinks": [
+        {
+          "pattern": "Noun より",
+          "contrast": "Khác Noun にもまして: より chỉ hơn, còn にもまして nhấn vượt hơn cả một mốc vốn đã đáng kể."
+        },
+        {
+          "pattern": "Noun 以上に",
+          "contrast": "So với 以上に gần nghĩa, にもまして văn viết hơn và giữ sắc thái mức độ tăng vượt."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -228,8 +252,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + によらず",
       "meaning": "Ý nghĩa: Dùng để nói không bị phụ thuộc hoặc không phân biệt theo Noun.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt tiêu chí phân loại trước によらず để nói kết quả/quy định phía sau không thay đổi theo tiêu chí ấy: 年齢によらず参加できる.",
+      "etymology": "Gốc rễ: よる trong mẫu này gần 依る, “dựa vào/phụ thuộc vào”; ず là phủ định cổ. によらず nghĩa là không dựa vào N để phân biệt.",
+      "hanVietBridge": "依 là Hán-Việt “y”, nương dựa. Noun によらず = “bất y N”, tức không căn cứ vào tuổi, quốc tịch, mùa, phương pháp...",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun によらず hợp với tiêu chí có nhiều giá trị. Khác にかかわらず, によらず nghe như quy tắc không dựa trên phân loại N.",
+      "crossLinks": [
+        {
+          "pattern": "Noun にかかわらず",
+          "contrast": "Khác Noun によらず: にかかわらず là bất kể liên quan, còn によらず nhấn không dựa vào tiêu chí N."
+        },
+        {
+          "pattern": "Noun を問わず",
+          "contrast": "So với を問わず, によらず trang trọng tương tự nhưng giữ sắc thái không căn cứ/phụ thuộc vào N."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -262,8 +298,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + に先駆けて",
       "meaning": "Ý nghĩa: Dùng để nói một việc diễn ra trước người khác, nơi khác hoặc thời điểm thông thường.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: đặt nhóm, nơi, thời điểm, hoặc sự kiện chuẩn trước に先駆けて để nói việc phía sau diễn ra trước chuẩn đó, thường có sắc thái đi đầu.",
+      "etymology": "Gốc rễ: 先 là trước; 駆ける là chạy lao tới. に先駆けて gợi hình ảnh chạy trước đội hình, nên không chỉ “trước” mà còn “tiên phong”.",
+      "hanVietBridge": "先 là “tiên”, 駆 là “khu”. Noun に先駆けて gần “tiên khu trước N”: phát hành, công bố, triển khai trước người/nơi khác.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に先駆けて có màu tiên phong. Khác 前に chỉ thời gian trước, に先駆けて làm hành động nghe như đi đầu xu hướng.",
+      "crossLinks": [
+        {
+          "pattern": "Noun に先立って",
+          "contrast": "Khác Noun に先駆けて: に先立って chỉ trước một sự kiện, còn に先駆けて thêm sắc thái đi trước/tiên phong."
+        },
+        {
+          "pattern": "Noun の前に",
+          "contrast": "So với の前に đời thường, に先駆けて trang trọng hơn và thường dùng cho công bố, triển khai, phát hành."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -296,8 +344,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 + に即した + Noun2",
       "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ theo nghĩa “dựa trên”, “phù hợp với”, “bám sát” Noun.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt nguyên tắc, thực tế, nhu cầu, luật, hoặc chính sách trước に即した để bổ nghĩa cho phương án/hành động bám sát cơ sở đó.",
+      "etymology": "Gốc rễ: 即す là bám sát/phù hợp ngay với một cơ sở. に đánh dấu cơ sở, した biến cả cụm thành bổ ngữ cho danh từ sau.",
+      "hanVietBridge": "即 là Hán-Việt “tức”, sát ngay với điều đang có. Noun に即した Noun là N2 được thiết kế bám sát N1, không xa thực tế.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に即した Noun hay đi với 現実, 実態, 方針, 法. Khác に基づいた thiên về căn cứ, に即した nhấn bám sát thực tế/cơ sở.",
+      "crossLinks": [
+        {
+          "pattern": "Noun に基づいた Noun",
+          "contrast": "Khác Noun に即した Noun: に基づいた nhấn căn cứ/nguồn, còn に即した nhấn phù hợp và bám sát cơ sở."
+        },
+        {
+          "pattern": "Noun に沿った Noun",
+          "contrast": "So với に沿った là đi theo đường hướng, に即した mạnh hơn về sát với thực tế, luật, nhu cầu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

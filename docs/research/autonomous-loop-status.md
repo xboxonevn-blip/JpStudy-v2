@@ -3141,3 +3141,9 @@
 - Replaced template prose with threshold, endpoint, target-marking, and range-expansion explanations.
 - Global Directive E validator progress is now `430/1123`; next failure starts at `grammar:n1:grammar_n1_7:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 071
+- Re-authored N1 rows `Noun にひきかえ Noun は`, `Noun にもまして`, `Noun によらず`, `Noun に先駆けて`, and `Noun に即した Noun`.
+- Replaced template prose with contrast, benchmark, no-dependence, pioneering-order, and basis-fit explanations.
+- Global Directive E validator progress is now `435/1123`; next failure starts at `grammar:n1:grammar_n1_7:009`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -66,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + はさておき",
-      "meaning": "Ý nghĩa: Dùng khi tạm gác Noun sang một bên để chuyển sang điều quan trọng hơn hoặc cần bàn trước.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của 〜はさておき là さて置き: đặt chuyện đó sang một bên. は đánh dấu đề tài bị tạm gác, còn 置く giữ nghĩa đặt xuống/để đó trước khi chuyển sang điểm cần bàn.",
+      "hanVietBridge": "置 có cầu Hán-Việt là trí trong bố trí, an trí: đặt vào một vị trí. Nhớ はさておき như thao tác đặt một vấn đề sang bên cạnh, không phải phủ nhận nó.",
+      "form": "Hình thức: danh từ/cụm danh từ + はさておき. Sau mẫu là mệnh đề người nói muốn ưu tiên bàn hoặc đánh giá trước.",
+      "meaning": "Ý nghĩa: Tạm gác A sang một bên, chưa bàn A vội. Sắc thái văn nói lịch sự hoặc văn viết mềm, dùng khi muốn đổi trọng tâm mà không bỏ qua hoàn toàn vấn đề A.",
+      "usage": "Sử dụng: Dùng trong thảo luận: 結果はさておき、努力は評価したい. A thường là chuyện có thể quan trọng, nhưng chưa phải điểm cần xử lý ngay.",
+      "humanMoment": "Dr. Linh lưu ý: 〜はさておき khác 〜はともかく. Cả hai đều tạm gác, nhưng はさておき giống động tác đặt hồ sơ qua một bên; はともかく đời thường và rộng hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜はともかく",
+          "contrast": "Gần nghĩa nhưng 〜はともかく thường đời thường hơn; 〜はさておき có cảm giác chuyển đề tài có kiểm soát."
+        },
+        {
+          "pattern": "〜はおろか〜も",
+          "contrast": "〜はおろか〜も nhấn thang mức độ, không phải tạm gác chủ đề như 〜はさておき."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -100,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + はどうであれ",
-      "meaning": "Ý nghĩa: Dùng để nói dù Noun như thế nào thì điều phía sau vẫn không thay đổi.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của 〜はどうであれ là どう + であれ: dù nó ở trạng thái thế nào đi nữa. であれ là dạng giả định của である, đặt trạng thái của danh từ thành điều kiện bị bỏ qua.",
+      "hanVietBridge": "Cầu Hán-Việt là trạng thái và bất kể: kết quả, lý do, hình thức có ra sao thì kết luận không đổi. Với 結果, âm Hán-Việt là kết quả; chính kết quả bị tạm gạt khỏi quyết định.",
+      "form": "Hình thức: danh từ + はどうであれ. Danh từ thường là 結果, 理由, 事情, 形, 内容 hoặc một yếu tố có thể thay đổi trạng thái.",
+      "meaning": "Ý nghĩa: Bất kể A như thế nào, điều phía sau vẫn đúng hoặc vẫn sẽ làm. Mẫu này nhấn sự không phụ thuộc vào trạng thái của A.",
+      "usage": "Sử dụng: Hợp với tuyên bố quyết tâm hoặc nguyên tắc: 理由はどうであれ、暴力は許されない. Không dùng để liệt kê hai lựa chọn cụ thể; khi đó dùng 〜であれ〜であれ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜はどうであれ khác 〜であれ〜であれ. はどうであれ hỏi A ra sao cũng mặc; であれ〜であれ đặt hai khả năng A/B cụ thể lên bàn.",
+      "crossLinks": [
+        {
+          "pattern": "〜であれ〜であれ",
+          "contrast": "Khác 〜はどうであれ: 〜であれ〜であれ nêu hai khả năng cụ thể, còn はどうであれ bao trùm mọi trạng thái của một danh từ."
+        },
+        {
+          "pattern": "〜にかかわらず",
+          "contrast": "〜にかかわらず trung tính và hành chính hơn; 〜はどうであれ có sắc thái người nói chủ động gạt trạng thái ấy sang bên."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -134,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + まみれ",
-      "meaning": "Ý nghĩa: Dùng để nói một vật hoặc người bị phủ đầy Noun, thường là thứ bẩn, khó chịu hoặc tiêu cực như bùn, máu, mồ hôi.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của まみれ là ý bị dính, bị vấy, bị phủ kín bởi một thứ gì đó. Nó không chỉ nói có một chút; cảm giác là thứ đó bám khắp bề mặt hoặc phủ nặng lên tình trạng.",
+      "hanVietBridge": "Không có Hán tự bắt buộc cho まみれ, nhưng cầu Hán-Việt là nhiễm/phủ/vấy: bùn đất, máu, mồ hôi, bụi, nợ, bê bối. Các từ này đều có sắc thái không sạch hoặc không mong muốn.",
+      "form": "Hình thức: danh từ + まみれ. Danh từ đứng trước thường là thứ tiêu cực hoặc gây khó chịu như 泥, 血, 汗, 埃, 借金, スキャンダル.",
+      "meaning": "Ý nghĩa: Phủ đầy, vấy đầy, chìm trong A. Sắc thái tiêu cực mạnh hơn だらけ ở cảm giác bám dính hoặc tình trạng lem luốc.",
+      "usage": "Sử dụng: Dùng cho bề mặt/cơ thể/tình trạng bị bao phủ: 泥まみれ, 血まみれ, 借金まみれ. Tránh dùng với thứ tích cực như hoa hoặc lời khen.",
+      "humanMoment": "Dr. Linh lưu ý: 〜まみれ khác 〜だらけ. だらけ chỉ nhiều thứ không mong muốn; まみれ có cảm giác bám kín, lem luốc, như áo dính đầy bùn hay đời sống ngập trong nợ.",
+      "crossLinks": [
+        {
+          "pattern": "〜だらけ",
+          "contrast": "Khác 〜まみれ: 〜だらけ là nhiều/đầy lỗi hoặc thứ xấu, còn 〜まみれ nhấn bị phủ, bị vấy, bị bám khắp."
+        },
+        {
+          "pattern": "〜ずくめ",
+          "contrast": "〜ずくめ có thể tích cực hoặc trung tính như toàn màu đen/toàn điều tốt; 〜まみれ gần như luôn tiêu cực."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -168,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun1 + もさることながら + Noun2 + も",
-      "meaning": "Ý nghĩa: Dùng để nói A đã đáng chú ý, nhưng B cũng rất đáng chú ý hoặc còn quan trọng hơn.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 〜もさることながら là さる/然る: điều đó đúng như vậy, cộng ことながら: trong khi công nhận điều ấy. Nói cách khác, A cũng đáng kể, nhưng B cũng cần được nêu mạnh.",
+      "hanVietBridge": "然 có âm Hán-Việt là nhiên, như tự nhiên, tất nhiên: đúng là như vậy. Cầu nhớ: A tất nhiên đáng nói, nhưng B cũng quan trọng, thường còn là điểm người nói muốn nhấn.",
+      "form": "Hình thức: danh từ A + もさることながら + danh từ B + も. A được công nhận trước, B được đưa lên sau để nhấn thêm.",
+      "meaning": "Ý nghĩa: A cũng đáng chú ý, nhưng B cũng đáng chú ý/quan trọng. Sắc thái trang trọng, hợp với đánh giá năng lực, chất lượng, ưu điểm hoặc nguyên nhân.",
+      "usage": "Sử dụng: Dùng khi cả hai mặt đều tốt hoặc đáng kể: 味もさることながら、サービスもいい. Vế B thường là điểm muốn người nghe chú ý hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜もさることながら khác 〜だけでなく〜も. だけでなく chỉ thêm B; もさることながら vừa công nhận A vừa nâng B lên như điểm đáng bàn.",
+      "crossLinks": [
+        {
+          "pattern": "〜だけでなく〜も",
+          "contrast": "Khác 〜もさることながら: 〜だけでなく〜も trung tính hơn, còn 〜もさることながら trang trọng và đánh giá cao cả hai mặt."
+        },
+        {
+          "pattern": "〜はおろか〜も",
+          "contrast": "〜はおろか〜も thường nhấn mức độ tiêu cực/tối thiểu; 〜もさることながら thường dùng cho ưu điểm hoặc yếu tố đáng chú ý."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + も兼ねて",
-      "meaning": "Ý nghĩa: Dùng khi một hành động đồng thời có thêm mục đích hoặc vai trò Noun.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜も兼ねて nằm ở 兼ねる, chữ 兼 có âm Hán-Việt là kiêm: giữ hai vai trò cùng lúc. も thêm nghĩa cũng, nên hành động chính đồng thời kiêm thêm mục đích A.",
+      "hanVietBridge": "兼 = kiêm trong kiêm nhiệm, kiêm chức. Người Việt đã có sẵn ý một việc gánh hai vai: đi công tác kiêm thăm bạn, đi bộ kiêm vận động.",
+      "form": "Hình thức: danh từ mục đích/vai trò + も兼ねて + hành động chính. Danh từ trước mẫu là mục đích phụ hoặc vai trò được gộp vào chuyến đi/hành động.",
+      "meaning": "Ý nghĩa: Nhân tiện cũng để A, đồng thời kiêm A. Mẫu này nhấn một hành động phục vụ nhiều mục đích, thường rất tự nhiên trong kế hoạch.",
+      "usage": "Sử dụng: Dùng với danh từ như 散歩, 見学, 休養, 仕事, 勉強: 散歩も兼ねて駅まで歩く. Tránh đặt việc chính trước も兼ねて; việc chính thường nằm sau.",
+      "humanMoment": "Dr. Linh lưu ý: 〜も兼ねて khác 〜ついでに. ついでに là tiện thể làm thêm; も兼ねて nghe có chủ ý hơn, như một hành động được thiết kế để kiêm hai mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "〜ついでに",
+          "contrast": "Khác 〜も兼ねて: 〜ついでに là nhân tiện phụ thêm, còn 〜も兼ねて cho thấy mục đích phụ đã nằm trong kế hoạch."
+        },
+        {
+          "pattern": "〜ながら",
+          "contrast": "〜ながら nói hai hành động song song; 〜も兼ねて nói một hành động kiêm thêm mục đích/vai trò."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -2733,3 +2733,9 @@
 - Fixed connected `〜とも〜とも` example debt by replacing unrelated `とも` particle examples with real ambiguity/indeterminacy frames using `言えない`, `つかない`, `判断しにくい`, and `言っていない`.
 - Global Directive E validator progress is now `90/1123`; next failure starts at `grammar:n1:grammar_n1_10:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 003
+- Re-authored N1 lesson 10 rows `〜はさておき`, `〜はどうであれ`, `〜まみれ`, `〜もさることながら`, and `〜も兼ねて`.
+- Added pattern-specific origin notes for `さて置き`, `であれ`, `まみれ`, `然ることながら`, and `兼ねる`, plus Hán-Việt bridges and contrast cross-links.
+- Global Directive E validator progress is now `95/1123`; next failure starts at `grammar:n1:grammar_n1_10:007`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT integrity tests, grammar detail screen test, and `git diff --check`.

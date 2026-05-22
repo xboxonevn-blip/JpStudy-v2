@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ない form + ではおかない",
       "meaning": "Ý nghĩa: Dùng để nói điều gì chắc chắn sẽ khiến một hành động hoặc phản ứng xảy ra; không thể để yên mà không làm",
-      "usage": "Cách dùng: Với Verb ないではおかない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ないではおかない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ない form + ではおかない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ないではおかない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt Verb-ないではおかない sau hành động/phản ứng tất yếu để nói “không thể để yên mà không V” hoặc “nhất định sẽ V”. Chủ ngữ thường là sự kiện/nguyên nhân khiến phản ứng xảy ra.",
+      "etymology": "Gốc rễ: おく là “để nguyên/đặt đó”; おかない phủ định “không để nguyên”. Verb-ないでは tạo điều kiện “trong trạng thái không V”. Ghép lại thành: không thể để sự việc ở trạng thái chưa V.",
+      "hanVietBridge": "Cầu Hán-Việt: nghe như “bất khả bất V”. Verb ないではおかない dùng hai lớp phủ định để đẩy về khẳng định mạnh: sẽ làm, sẽ gây ra, không để yên.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ないではおかない cần một lực đẩy. Khác までもない là “khỏi cần làm”, mẫu này nói sự việc sẽ không chịu đứng yên cho tới khi phản ứng V xảy ra.",
       "crossLinks": [
         {
           "pattern": "Verbる までもない",
-          "contrast": "Verb ないではおかない cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác Verb ないではおかない: までもない phủ nhu cầu làm V, còn ないではおかない ép V xảy ra."
+        },
+        {
+          "pattern": "Verb ずにはおかない",
+          "contrast": "So với ずにはおかない, ないではおかない cùng nghĩa nhưng mềm/hiện đại hơn ở hình thức phủ định."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ないform + なくはない, い-Adjective－い + くはない, な-Adjective + ではなくはない, Noun + ではなくはない",
       "meaning": "Ý nghĩa: Dùng để nói không phải là hoàn toàn không X; vẫn có một mức độ hoặc khả năng nhất định",
-      "usage": "Cách dùng: Với ～なくはない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～なくはない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ないform + なくはない, い-Adjective－い + くはない, な-Adjective + ではなくはない, Noun + ではなくはない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～なくはない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng ～なくはない để phủ nhận phủ định một cách dè dặt: không phải là không X, nhưng cũng chưa muốn khẳng định mạnh. Hay đi kèm vế sau nêu điều kiện, do dự, hoặc hạn chế.",
+      "etymology": "Gốc rễ: なく là dạng phủ định/danh hóa của “không X”; は đưa chính phần “không X” lên làm chủ đề; ない phủ định nó lần nữa. Cấu trúc tạo nghĩa lấp lửng: X có tồn tại, nhưng không mạnh.",
+      "hanVietBridge": "Cầu Hán-Việt: giống “phi bất” trong văn Hán-Việt: không phải không. Tiếng Việt tự nhiên là “không phải là không...”, thường hàm ý còn ngại, còn điều kiện.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～なくはない là câu trả lời nửa mở cửa. Khác ないことはない gần cùng nghĩa nhưng mềm hơn trong hội thoại, なくはない nghe rõ thao tác phủ định kép.",
       "crossLinks": [
         {
-          "pattern": "Noun はおろか～も",
-          "contrast": "～なくはない cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ないことはない",
+          "contrast": "Khác ～なくはない chủ yếu ở nhịp: ないことはない mềm/hội thoại hơn, なくはない cô đọng và rõ phủ định kép."
+        },
+        {
+          "pattern": "〜わけではない",
+          "contrast": "So với わけではない phủ nhận kết luận, ～なくはない thừa nhận một khả năng/mức độ nhỏ."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + のいかんによっては",
       "meaning": "Ý nghĩa: Dùng để nói tùy vào Noun mà có thể xảy ra một kết quả khác, thường là kết quả đáng chú ý hoặc cần lưu ý",
-      "usage": "Cách dùng: Với Noun のいかんによっては, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun のいかんによっては, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + のいかんによっては thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun のいかんによっては không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, tình hình, phản ứng trước のいかんによっては để nói “tùy N ra sao, có trường hợp...”. Phía sau thường là kết quả đáng lưu ý hoặc phương án thay đổi.",
+      "etymology": "Gốc rễ: いかん/如何 là “ra sao”; によって là “dựa vào/tùy theo”; は đánh dấu nhánh điều kiện đáng chú ý. Cả cụm biến chất lượng của N thành tiêu chí làm kết quả sau có thể đổi.",
+      "hanVietBridge": "如何 là “như hà”, 依/因 trong よる gợi “tùy thuộc”. Noun のいかんによっては nên nghe là “tùy N ra sao thì có trường hợp...”, trang trọng hơn 次第では.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんによっては luôn có chữ “có thể” ẩn phía sau. Khác のいかんにかかわらず đóng mọi nhánh, mẫu này mở một nhánh đặc biệt tùy tình trạng N.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun のいかんによっては cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun のいかんでは",
+          "contrast": "Khác Noun のいかんによっては rất nhỏ: のいかんでは mở điều kiện trực tiếp, によっては nhấn tiêu chí/nhân tố làm kết quả đổi."
+        },
+        {
+          "pattern": "Noun のいかんにかかわらず",
+          "contrast": "So với にかかわらず phủ nhận phụ thuộc, のいかんによっては nói kết quả phụ thuộc vào N."
         }
       ],
       "fallbackReference": {

@@ -3087,3 +3087,9 @@
 - Repaired one invalid `ながらも` example (`雨が降っているながらも`) to a natural noun-state construction.
 - Global Directive E validator progress is now `385/1123`; next failure starts at `grammar:n1:grammar_n1_59:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 062
+- Re-authored N1 rows `Verb ないではおかない`, `～なくはない`, `Noun のいかんによっては`, `Noun なしには～ない`, and `Noun ならいざ知らず`.
+- Repaired weak lesson-59 examples so `ないではおかない` has a clear causal force and `なくはない` shows real reserved affirmation.
+- Global Directive E validator progress is now `390/1123`; next failure starts at `grammar:n1:grammar_n1_6:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

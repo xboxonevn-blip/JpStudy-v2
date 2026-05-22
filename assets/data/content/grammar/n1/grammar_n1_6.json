@@ -22,8 +22,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + なしには + Verb-negative",
       "meaning": "Ý nghĩa: Dùng để nói rằng nếu không có Noun thì điều phía sau không thể xảy ra.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: đặt Noun trước なしには rồi theo sau bằng vị ngữ phủ định để nói N là điều kiện không thể thiếu. Mẫu hợp với năng lực, tồn tại, tiến triển: 水なしには生きられない.",
+      "etymology": "Gốc rễ: なし là “không có”; に は biến sự thiếu vắng ấy thành điều kiện được nêu làm chủ đề; vị ngữ phủ định phía sau hoàn tất khung “không có N thì không thể V”.",
+      "hanVietBridge": "Cầu Hán-Việt: 無/なし là “vô”, còn phủ định phía sau là lớp “bất”. Noun なしには～ない gần “vô N bất khả V”: không có N thì việc sau không thành.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: với Noun なしには～ない, hãy tìm thứ nếu rút ra thì cả câu sập. Khác なしでは～ない gần hơn với điều kiện nói thường, なしには nghe nhấn mạnh/trang trọng hơn.",
+      "crossLinks": [
+        {
+          "pattern": "Noun なしでは～ない",
+          "contrast": "Khác Noun なしには～ない ở sắc thái: なしでは trực tiếp/hội thoại hơn, なしには nhấn điều kiện cần mạnh hơn."
+        },
+        {
+          "pattern": "Noun なくして～はない",
+          "contrast": "So với なくして～はない trang trọng và khẩu hiệu hơn, なしには～ない mềm hơn nhưng vẫn nhấn tính không thể thiếu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -56,8 +68,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 + ならいざ知らず + Noun2 (comment)",
       "meaning": "Ý nghĩa: Dùng để nói “nếu là Noun thì còn hiểu được, nhưng trường hợp này thì không”.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt trường hợp còn có thể chấp nhận ở Noun1ならいざ知らず, rồi đưa Noun2/trường hợp thật ở vế sau để bác bỏ, phê bình, hoặc nói là quá sức.",
+      "etymology": "Gốc rễ: なら đặt giả định; いざ知らず là cách nói cổ “chuyện ấy thì chưa biết/để sang bên”. Cả cụm nghĩa là: nếu là Noun1 thì còn để đó, nhưng Noun2 thì không chấp nhận được.",
+      "hanVietBridge": "知 là Hán-Việt “tri”. いざ知らず có sắc thái “bất tri/không bàn tới”; vì vậy Noun ならいざ知らず tạo cầu “N1 thì chưa bàn, còn N2 thì...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun ならいざ知らず luôn có hai mức so sánh. Khác Nならともかく trung tính hơn, ならいざ知らず thường mang giọng “cái kia còn được, cái này thì quá rồi”.",
+      "crossLinks": [
+        {
+          "pattern": "Noun ならともかく",
+          "contrast": "Khác Noun ならいざ知らず: ならともかく mềm và trung tính hơn, ならいざ知らず thường phê bình mạnh hơn."
+        },
+        {
+          "pattern": "Noun はおろか",
+          "contrast": "So với はおろか đi từ mức cao xuống mức thấp cũng không đạt, ならいざ知らず đối chiếu một trường hợp còn hiểu được với trường hợp bị bác bỏ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

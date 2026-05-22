@@ -204,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: chữ 折 vốn là “nếp gấp/khúc rẽ”, rồi mở rộng thành “dịp, lúc một việc chuyển sang chặng khác”. Trong 〜折に, danh từ/động từ trước tạo bối cảnh trang trọng cho hành động sau.",
+      "hanVietBridge": "折 đọc Hán-Việt là chiết: gấp, bẻ, khúc. Hãy nhớ “đến khúc/dịp A thì làm B”, lịch sự hơn とき.",
       "form": "Hình thức: Verb-dictionary form + 折に, Verb-た形 + 折に, Noun + の折に",
       "meaning": "Ý nghĩa: Dùng để chỉ thời điểm hoặc dịp khi một việc xảy ra.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "usage": "Sử dụng: Hợp thư tín, thông báo, trao đổi lịch sự. Với danh từ dùng の折に; với động từ dùng dạng từ điển hoặc た để nói dịp sắp tới/đã xảy ra.",
+      "humanMoment": "Dr. Linh lưu ý: 〜折に không phải の sở hữu. Nó đóng khung một “dịp” trang trọng; nếu câu chỉ là lúc bình thường hằng ngày, とき tự nhiên hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜とき",
+          "contrast": "Khác 〜折に: とき trung tính/đời thường; 折に lịch sự và có cảm giác “nhân dịp”."
+        },
+        {
+          "pattern": "〜際に",
+          "contrast": "〜際に cũng trang trọng, nhưng thường dùng cho thủ tục/sự kiện; 〜折に mềm hơn trong thư từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "極まりない ghép 極まり “điểm tận cùng” với ない. Cấu trúc phủ định này không làm nghĩa yếu đi, mà nói trạng thái ấy “không còn biên để đo”, nên thành cực độ.",
+      "hanVietBridge": "極 là cực: cực điểm, tận cùng. 危険極まりない gần “nguy hiểm đến cực điểm”, thường dùng để phê bình mạnh.",
       "form": "Hình thức: な-Adjective（語幹）+ 極まりない, い-Adjective（連用形）+ こと + 極まりない, Noun + の極まりない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh mức độ cực kỳ của một trạng thái, thường là tính chất tiêu cực hoặc cảm xúc mạnh.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "usage": "Sử dụng: Hay đi với gốc な-adj tiêu cực như 危険, 失礼, 非常識. Văn viết/trang trọng; tránh dùng cho khen nhẹ hoặc cảm xúc đời thường.",
+      "humanMoment": "Dr. Linh lưu ý: 〜極まりない là chiếc búa nhấn cực độ. Nói 危険極まりない là phán xét rất mạnh, khác với 危険だね bình thường.",
+      "crossLinks": [
+        {
+          "pattern": "〜極まる",
+          "contrast": "Gần nghĩa với 〜極まりない; 極まる nghe như trạng thái đã đạt cực điểm, còn 極まりない nhấn “không còn giới hạn”."
+        },
+        {
+          "pattern": "〜この上ない",
+          "contrast": "〜この上ない có thể khen tích cực; 〜極まりない thường phê bình/đánh giá tiêu cực."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -272,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: 極まる là động từ tự động từ 極める, nghĩa là một trạng thái tự đi tới điểm cực hạn. Trong 〜極まる, tính chất trước không chỉ “rất”, mà đã chạm mức cao nhất trong đánh giá của người nói.",
+      "hanVietBridge": "極 là cực, 極まる là “đạt cực điểm”. 失礼極まる có sắc thái “vô lễ đến cùng cực”, văn viết và nặng lời.",
       "form": "Hình thức: な-Adjective（語幹）+ 極まる, い-Adjective（連用形）+ こと + 極まる, etc",
       "meaning": "Ý nghĩa: Dùng để nói một trạng thái đạt đến mức cực điểm.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Chủ yếu trong cụm cố định với な-adj/gốc danh tính tiêu cực như 失礼, 非常識, 遺憾. Không dùng như 極める có tân ngữ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜極まる đặt dấu chấm rất cứng vào đánh giá. Nếu chỉ muốn nói “rất”, hãy dùng とても; 極まる nghe như lời kết luận chính thức.",
+      "crossLinks": [
+        {
+          "pattern": "〜極まりない",
+          "contrast": "Gần nghĩa, nhưng 〜極まる nhấn trạng thái đạt cực điểm; 〜極まりない nhấn mức độ không giới hạn."
+        },
+        {
+          "pattern": "極める",
+          "contrast": "極める là ngoại động từ “đạt/đào sâu đến cùng”; 〜極まる trong mẫu này là tự động từ, không nhận tân ngữ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -306,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "足りない là phủ định của 足りる “đủ, đáp ứng mức cần”. Chữ 足 gợi cái chân/đủ phần cần có; phủ định ない biến trọng tâm thành khoảng thiếu còn phải bù.",
+      "hanVietBridge": "足 thường gắn với “túc”: đầy đủ. 時間が足りない là “thời gian bất túc/không đủ”, không phải phủ định khả năng.",
       "form": "Hình thức: Noun + (が) 足りない, Verb-casual + ほど/だけ + (が) 足りない",
       "meaning": "Ý nghĩa: Dùng để nói không đủ về số lượng, mức độ hoặc điều kiện.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đo một mức chuẩn rồi nói phần hiện có chưa chạm chuẩn đó: thời gian, chi tiết, năng lực, tiền, điều kiện. Không dùng cho “không thể” thay cho できない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜足りない luôn hỏi “thiếu so với chuẩn nào?”. 詳細が足りない là thiếu chi tiết cần có, khác với 説明できない là không giải thích được.",
+      "crossLinks": [
+        {
+          "pattern": "不足している",
+          "contrast": "Gần nghĩa với 〜足りない nhưng 不足している trang trọng/danh từ hóa hơn; 足りない tự nhiên trong hội thoại."
+        },
+        {
+          "pattern": "〜に足る",
+          "contrast": "Khác 〜足りない: 足りない nói thiếu; 〜に足る nói đủ giá trị/xứng đáng để làm tiêu chuẩn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -340,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: chữ 足 trong 足る giữ ý “đủ”, văn viết/cổ hơn 足りる. Khi đi thành 〜に足る + Noun, に đánh dấu tiêu chuẩn đánh giá: đủ để được tin, đọc, xét, gọi là điều gì.",
+      "hanVietBridge": "足 là túc/đủ. 信頼に足る人物 = người “đủ để tin cậy”, nên dịch tự nhiên là “đáng tin cậy”.",
       "form": "Hình thức: Noun/Verb-dictionary form + に足る + Noun",
       "meaning": "Ý nghĩa: Dùng để nói đủ tư cách, đủ giá trị hoặc xứng đáng để được xem là Noun.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Văn viết/trang trọng, hay gặp với 信頼, 信用, 検討, 読む. Danh từ sau là người/vật được đánh giá là đủ giá trị theo tiêu chuẩn trước.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に足る không nói “còn thiếu”. Nó trao chứng nhận: 信頼に足る人物 là người đủ trọng lượng để đặt niềm tin.",
+      "crossLinks": [
+        {
+          "pattern": "〜足りない",
+          "contrast": "Khác 〜に足る: 足りない là chưa đủ; に足る là đủ giá trị/xứng đáng theo một tiêu chuẩn."
+        },
+        {
+          "pattern": "〜価値がある",
+          "contrast": "〜価値がある đời thường hơn; 〜に足る trang trọng và thường đứng trước danh từ như 評価に足る資料."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

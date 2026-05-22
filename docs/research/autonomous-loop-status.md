@@ -2925,3 +2925,9 @@
 - Repaired malformed example Japanese across emphatic dismissal, premise, near-action, and permission rows.
 - Global Directive E validator progress is now `250/1123`; next failure starts at `grammar:n1:grammar_n1_25:005`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 035
+- Re-authored N1 rows `〜折に`, `〜極まりない`, `〜極まる`, `〜足りない`, and `〜に足る + Noun`.
+- Replaced generic の/negative filler with pattern-specific etymology, Hán-Việt bridge, Dr. Linh guidance, and contrast links.
+- Global Directive E validator progress is now `255/1123`; next failure starts at `grammar:n1:grammar_n1_25:010`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

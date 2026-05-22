@@ -38,7 +38,7 @@ class HomeOverviewGrid extends StatelessWidget {
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
         childAspectRatio: columns == 1 ? 3.0 : 1.35,
-        mainAxisExtent: columns == 1 ? 118 : 154,
+        mainAxisExtent: columns == 1 ? 124 : 154,
       ),
       children: [
         _OverviewCard(

@@ -2682,3 +2682,10 @@
 - Exercise validation now rejects literal-answer prompt leakage and placeholder distractors, blocking trivial exercise templates before they ship.
 - Grammar seeding now stores real meaning fields / `directiveE.meaning` ahead of `title`, preventing pattern labels from becoming answer text in generated grammar banks.
 - Gates passed: focused learn/test/exercise/grammar tests including dense grammar bank guard, focused analyzer, and `git diff --check`.
+
+## 2026-05-22 P1/P2 wrap verification
+- Verified vocab catalog renders 10 textbook programs from `textbook_index.json`: 5 Hajimete, 2 Minna, and 3 Mimikara; Mimikara N5/N4 remains hidden.
+- Re-ran P2 regressions for full-width chrome/content widths, onboarding adaptive frame, grammar level switcher, Directive E progressive disclosure, exam metadata/start screens, shared answer layout, and non-blocking kana suggestion.
+- Fixed a 1px mobile overflow in the home overview grid by increasing single-column card extent from 118px to 124px.
+- Kept official JLPT exam durations from the JLPT test-section table; audit's N5 `60 phút` example conflicts with the official N5 total.
+- Continuing P3 polish next: review label ID leak and onboarding CTA selected-state verification.

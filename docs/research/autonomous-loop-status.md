@@ -3219,3 +3219,9 @@
 - Repaired examples around emotional apex, formal extremity, minimum-level emphasis, and range expansion.
 - Global Directive E validator progress is now `495/1123`; next failure starts at `grammar:n2:grammar_n2_1:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-23 Phase G Directive E redo batch 084
+- Re-authored N2 connector rows `A あるいは B`, `A。おまけに B。`, `A。さて B。`, `A。しかも B。`, and `A。したがって B。`.
+- Repaired `あるいは` examples to use natural same-rank alternatives.
+- Global Directive E validator progress is now `500/1123`; next failure starts at `grammar:n2:grammar_n2_1:006`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

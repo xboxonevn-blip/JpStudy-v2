@@ -22,16 +22,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Phrase A + あるいは + Phrase B",
-      "meaning": "Ý nghĩa: Dùng khi nêu các lựa chọn có thể xảy ra, như A hoặc B, đôi khi hàm ý chọn một trong hai.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "form": "Cấu trúc: Phrase A + あるいは + Phrase B",
+      "meaning": "Ý nghĩa: Nêu hai khả năng hoặc lựa chọn A/B, thường trang trọng hơn または",
+      "usage": "Cách dùng: đặt hai lựa chọn cùng loại hai bên あるいは: オンラインあるいは会場, 現金あるいはカード. Mẫu hợp thông báo, quy định, hướng dẫn.",
+      "etymology": "Gốc rễ: あるいは thường viết 或いは; 或 chỉ một khả năng trong vài khả năng. は đưa lựa chọn ấy lên bàn so sánh, nên mẫu mở hai nhánh thay thế nhau.",
+      "hanVietBridge": "或 có Hán-Việt “hoặc”. あるいは vì vậy là cầu nối rất trực tiếp với tiếng Việt “hoặc”, nhưng sắc thái viết/trang trọng hơn または trong nhiều văn bản.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A あるいは B cần hai phương án cùng hạng. Đừng dùng nó để thêm thông tin kiểu “hơn nữa”; đó là việc của しかも hoặc おまけに.",
+      "crossLinks": [
+        {
+          "pattern": "A または B",
+          "contrast": "Khác A あるいは B: または trung tính và phổ biến hơn, còn あるいは trang trọng/viết hơn."
+        },
+        {
+          "pattern": "A もしくは B",
+          "contrast": "So với もしくは trong văn bản quy định, あるいは mềm hơn và dùng rộng trong giải thích."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },
@@ -58,16 +70,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Sentence A + おまけに + Sentence B",
-      "meaning": "Ý nghĩa: Dùng để thêm thông tin vào điều vừa nói, thường là thêm một điểm khiến tình huống đáng chú ý hơn, nặng hơn hoặc bất lợi hơn.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "form": "Cấu trúc: Sentence A + おまけに + Sentence B",
+      "meaning": "Ý nghĩa: Thêm B như một điểm cộng thêm vào A, thường làm tình huống nặng hơn hoặc đáng chú ý hơn",
+      "usage": "Cách dùng: sau một câu đã đủ ý, đặt おまけに trước thông tin thêm cùng chiều đánh giá: 遅刻した。おまけに宿題も忘れた.",
+      "etymology": "Gốc rễ: おまけ là “phần kèm thêm/phần tặng thêm”. に biến phần kèm ấy thành trạng ngữ nối câu, nên B là gánh nặng hoặc điểm cộng thêm chồng lên A.",
+      "hanVietBridge": "おまけに không có kanji lõi; nhớ bằng ý “phần phụ kèm thêm”. Tiếng Việt tự nhiên là “đã vậy còn”, nhất là khi B làm tình huống xấu hơn.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A。おまけに B。có cảm giác chất thêm một túi nữa lên vai. Khác しかも trung tính hơn, おまけに thường nghe đời thường và hơi than.",
+      "crossLinks": [
+        {
+          "pattern": "A。しかも B。",
+          "contrast": "Khác おまけに: しかも nhấn bổ sung đáng chú ý, còn おまけに nghe như điểm kèm thêm, thường bất lợi hoặc than phiền."
+        },
+        {
+          "pattern": "A。さらに B。",
+          "contrast": "So với さらに trang trọng/trung tính hơn, おまけに thân mật hơn và có vị “đã vậy còn”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },
@@ -94,16 +118,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A + さて + B",
-      "meaning": "Ý nghĩa: Dùng khi chuyển sang chủ đề, bước xử lý hoặc hành động tiếp theo.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "form": "Cấu trúc: A + さて + B",
+      "meaning": "Ý nghĩa: Báo hiệu chuyển sang chủ đề, bước xử lý, hoặc hành động tiếp theo",
+      "usage": "Cách dùng: dùng さて ở đầu câu/đầu đoạn sau khi khép một phần trước đó: さて、次の問題に入りましょう. Nó là tín hiệu đổi mạch.",
+      "etymology": "Gốc rễ: さて là từ nối diễn ngôn, không phải thể て của một động từ đang nối hành động. Nó đặt một vạch ngắt mềm: phần trước xong, bây giờ sang việc mới.",
+      "hanVietBridge": "さて không có kanji lõi; cầu nghĩa là “nào/vậy thì”. Người Việt nên nghe nó như tiếng người dẫn chương trình chuyển mục.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A。さて B。là tiếng lật trang. Khác ところで đổi sang chuyện khác, さて thường chuyển sang bước kế tiếp đã có trong dòng xử lý.",
+      "crossLinks": [
+        {
+          "pattern": "ところで",
+          "contrast": "Khác さて: ところで đổi chủ đề đột ngột hơn, còn さて thường chuyển sang bước tiếp theo."
+        },
+        {
+          "pattern": "それでは",
+          "contrast": "So với それでは có sắc thái “vậy thì” dựa trên phần trước, さて nhẹ hơn và dùng như tín hiệu bắt đầu mục mới."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "grammar"
       }
     }
   },
@@ -130,16 +166,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Statement A + 。しかも + Statement B。",
-      "meaning": "Ý nghĩa: Dùng để bổ sung thông tin B cho điều đã nói ở A, đồng thời nhấn mạnh rằng B làm nội dung mạnh hơn hoặc đáng chú ý hơn.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "form": "Cấu trúc: Statement A + 。しかも + Statement B。",
+      "meaning": "Ý nghĩa: Bổ sung B vào A và nhấn rằng B làm nhận định mạnh hơn hoặc đáng chú ý hơn",
+      "usage": "Cách dùng: đặt しかも ở đầu câu/giữa hai câu khi B cùng hướng đánh giá với A và làm A thuyết phục hơn: 安い。しかも品質がいい.",
+      "etymology": "Gốc rễ: しかも có gốc 然も, nghĩa là “như thế mà còn”. も thêm sắc thái “cũng/thậm chí”, nên B không chỉ thêm mà còn nâng trọng lượng của A.",
+      "hanVietBridge": "然 là “nhiên” trong tự nhiên/như vậy. しかも có thể nhớ là “đã như vậy, lại còn...”, hợp dịch “hơn nữa/không những thế”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A。しかも B。làm người nghe gật mạnh hơn sau B. Khác おまけに có vị chất thêm, しかも sạch và lập luận hơn.",
+      "crossLinks": [
+        {
+          "pattern": "A。おまけに B。",
+          "contrast": "Khác しかも: おまけに thường đời thường và có vị “đã vậy còn”, còn しかも nhấn bổ sung đáng chú ý/lập luận."
+        },
+        {
+          "pattern": "A。さらに B。",
+          "contrast": "So với さらに, しかも thường làm B nổi bật như bằng chứng tăng sức nặng cho A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },
@@ -166,16 +214,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A + したがって + B",
-      "meaning": "Ý nghĩa: Dùng để nối nguyên nhân, tiền đề hoặc sự thật ở A với kết quả hay kết luận ở B.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "form": "Cấu trúc: A + したがって + B",
+      "meaning": "Ý nghĩa: Nối tiền đề/nguyên nhân A với kết luận hoặc hệ quả logic B",
+      "usage": "Cách dùng: dùng したがって trong văn viết, thuyết minh, báo cáo khi B theo logic từ A: 気温が下がる。したがって需要が増える.",
+      "etymology": "Gốc rễ: したがって là dạng て của 従う, “đi theo/tuân theo”. B đi theo A như hệ quả đi theo tiền đề, nên mẫu tạo quan hệ suy luận rõ.",
+      "hanVietBridge": "従 có Hán-Việt “tòng/tùng”: đi theo. したがって = theo đó/do đó; B là kết luận đi theo A, không chỉ là câu tiếp theo ngẫu nhiên.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: A。したがって B。nghe như một dòng lập luận. Khác だから thân mật hơn, したがって yêu cầu A đủ sức làm tiền đề cho B.",
+      "crossLinks": [
+        {
+          "pattern": "A。だから B。",
+          "contrast": "Khác したがって: だから thân mật/hội thoại hơn, còn したがって trang trọng và logic hơn."
+        },
+        {
+          "pattern": "A。そのため B。",
+          "contrast": "So với そのため nêu nguyên nhân-kết quả thực tế, したがって nhấn kết luận suy ra từ tiền đề."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },

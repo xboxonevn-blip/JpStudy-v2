@@ -66,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を + 余儀なくされる",
-      "meaning": "Ý nghĩa: Dùng để nói bị buộc phải rơi vào một tình huống hoặc phải chấp nhận một lựa chọn ngoài ý muốn.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 〜を余儀なくされる nằm ở 余儀: lựa chọn khác, cách khác. 余儀ない nghĩa là không còn cách nào khác, thêm される thành bị buộc phải chấp nhận tình huống ấy.",
+      "hanVietBridge": "余 = dư, 儀 = nghi trong Hán-Việt. Có thể nhớ 余儀 như phương án/dáng cách còn dư; 余儀なく là không còn phương án nào dư ra để chọn.",
+      "form": "Hình thức: danh từ kết quả/tình huống + を余儀なくされる. Danh từ thường là 中止, 変更, 退学, 避難, 辞任, 入院.",
+      "meaning": "Ý nghĩa: Bị buộc phải làm hoặc chấp nhận A vì hoàn cảnh ngoài ý muốn. Sắc thái trang trọng, thường gặp trong tin tức, báo cáo, văn bản công vụ.",
+      "usage": "Sử dụng: Đặt kết quả bị ép buộc trước を: 台風で避難を余儀なくされた. Nếu muốn dùng động từ, hãy danh từ hóa thành 中止/延期/変更 thay vì để nguyên Vる.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を余儀なくされる khác 〜ざるを得ない. ざるを得ない là bản thân không còn cách nào ngoài làm; を余儀なくされる nhấn sức ép bên ngoài buộc chủ thể rơi vào kết quả A.",
+      "crossLinks": [
+        {
+          "pattern": "〜ざるを得ない",
+          "contrast": "Khác 〜を余儀なくされる: 〜ざるを得ない đi với động từ và nói không còn cách làm khác; を余儀なくされる đi với danh từ kết quả bị ép."
+        },
+        {
+          "pattern": "〜を余儀なくさせる",
+          "contrast": "〜を余儀なくさせる là chủ thể/sự việc khiến người khác bị buộc; 〜を余儀なくされる là bên bị buộc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -100,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を前提として",
-      "meaning": "Ý nghĩa: Dùng khi lấy Noun làm giả định, điều kiện nền hoặc cơ sở để bàn tiếp.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を前提として nằm ở 前提: điều được đặt phía trước làm nền cho lập luận. 前 là trước, 提 là đưa lên/đặt ra; として biến tiền đề ấy thành vai trò cơ sở.",
+      "hanVietBridge": "前提 = tiền đề trong tiếng Việt. Người học Việt có lợi thế trực tiếp: tiền đề là điều phải tạm chấp nhận trước khi lập kế hoạch, tranh luận hoặc tính toán.",
+      "form": "Hình thức: danh từ/cụm danh từ + を前提として + nhận định/kế hoạch. Cũng có dạng ことを前提として khi tiền đề là cả mệnh đề.",
+      "meaning": "Ý nghĩa: Lấy A làm tiền đề, giả định hoặc điều kiện nền. Sắc thái trang trọng, hợp với kế hoạch, hợp đồng, chính sách, lập luận.",
+      "usage": "Sử dụng: Dùng khi vế sau phụ thuộc vào A: 参加者が全員来ることを前提として準備する. Nếu A sai, kế hoạch phía sau có thể phải đổi.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を前提として khác 〜を条件として. 前提 là nền giả định để bàn tiếp; 条件 là điều kiện phải thỏa để việc xảy ra.",
+      "crossLinks": [
+        {
+          "pattern": "〜を前提にして",
+          "contrast": "Gần nghĩa, nhưng 〜を前提として trang trọng và văn bản hơn; 〜を前提にして mềm hơn trong mô tả kế hoạch."
+        },
+        {
+          "pattern": "〜を条件として",
+          "contrast": "〜を条件として nhấn điều kiện bắt buộc; 〜を前提として nhấn giả định nền cho lập luận/kế hoạch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -134,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を前提にして",
-      "meaning": "Ý nghĩa: Dùng để nói một kế hoạch, nhận định hoặc hành động được xây dựng trên giả định Noun.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を前提にして cũng là 前提, tức tiền đề được đặt trước. にして làm cho A thành trạng thái nền mà người nói dựa vào khi lập kế hoạch hoặc hành động.",
+      "hanVietBridge": "前提 = tiền đề: tiền là trước, đề là nêu/đặt ra. Hãy nhớ mẫu này như đặt một điều kiện nền trước mặt rồi mới xây kế hoạch lên trên.",
+      "form": "Hình thức: danh từ/cụm danh từ + を前提にして + hành động/kế hoạch. Với mệnh đề, dùng ことを前提にして.",
+      "meaning": "Ý nghĩa: Dựa trên giả định A, lấy A làm tiền đề để làm việc phía sau. Sắc thái mềm hơn を前提として, vẫn đủ trang trọng cho kế hoạch.",
+      "usage": "Sử dụng: 合格を前提にして準備する = chuẩn bị với giả định sẽ đỗ. Cẩn thận: mẫu này không bảo đảm A đúng, chỉ nói vế sau đang dựa trên A.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を前提にして và 〜を前提として gần nhau, nhưng にして nghe như thao tác lập kế hoạch cụ thể hơn; として nghe văn bản và khái niệm hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜を前提として",
+          "contrast": "Khác 〜を前提にして: 〜を前提として trang trọng/khái niệm hơn; 〜を前提にして mềm và gần hành động lập kế hoạch hơn."
+        },
+        {
+          "pattern": "〜つもりで",
+          "contrast": "〜つもりで là với ý định/cảm giác coi như; 〜を前提にして là giả định nền cho kế hoạch hoặc nhận định."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -168,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を境に(して)",
-      "meaning": "Ý nghĩa: Dùng để chỉ Noun là mốc ranh giới khiến tình hình thay đổi từ đó về sau.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を境にして là 境: ranh giới, đường phân cách. を đánh dấu sự kiện/thời điểm làm vạch chia, còn にして biến nó thành mốc từ đó tình hình đổi chiều.",
+      "hanVietBridge": "境 có âm Hán-Việt là cảnh trong biên cảnh, cảnh giới. Người Việt có từ ranh giới; hãy nhớ を境にして là lấy A làm đường ranh trước/sau.",
+      "form": "Hình thức: danh từ thời điểm/sự kiện + を境に(して) + thay đổi. Danh từ thường là năm, mùa, tuổi, sự kiện, cái chết, khủng hoảng.",
+      "meaning": "Ý nghĩa: Từ mốc A trở đi, tình hình thay đổi rõ. Mẫu này không chỉ nói thời gian; nó nhấn đường ranh tạo khác biệt trước và sau.",
+      "usage": "Sử dụng: 父の死を境に性格が変わった. Vế sau nên có thay đổi trạng thái, xu hướng, thái độ hoặc hoàn cảnh.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を境にして khác 〜を機にして. 境 là ranh giới trước/sau; 機 là cơ hội để bắt đầu thay đổi.",
+      "crossLinks": [
+        {
+          "pattern": "〜を機にして",
+          "contrast": "Khác 〜を境にして: 〜を機にして nhấn dịp/cơ hội hành động, còn 〜を境にして nhấn ranh giới khiến trước-sau khác nhau."
+        },
+        {
+          "pattern": "〜以来",
+          "contrast": "〜以来 chỉ từ sau một mốc thời gian; 〜を境にして nhấn sự thay đổi qua ranh giới đó."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + を機にして",
-      "meaning": "Ý nghĩa: Dùng khi lấy Noun làm dịp hoặc cơ hội để bắt đầu một việc mới hay thay đổi tình trạng.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜を機にして là 機: thời cơ, cơ hội, máy khởi động. を đánh dấu sự kiện làm dịp, còn にして biến nó thành điểm bắt đầu cho hành động mới.",
+      "hanVietBridge": "機 có âm Hán-Việt là cơ trong cơ hội, thời cơ, cơ chế. Cầu nhớ rất trực tiếp: lấy A làm cơ hội để chuyển sang bước mới.",
+      "form": "Hình thức: danh từ sự kiện/dịp + を機にして + thay đổi/hành động mới. Cũng gặp dạng ngắn を機に.",
+      "meaning": "Ý nghĩa: Nhân dịp A, lấy A làm cơ hội để bắt đầu hoặc thay đổi. Mẫu này thường tích cực hoặc trung tính, không chỉ là mốc thời gian.",
+      "usage": "Sử dụng: 卒業を機にして一人暮らしを始めた. Vế sau nên là hành động/chuyển hướng có chủ ý nhờ sự kiện A.",
+      "humanMoment": "Dr. Linh lưu ý: 〜を機にして khác 〜を境にして. 機 là thời cơ để làm gì đó; 境 là đường ranh khiến trạng thái trước-sau khác.",
+      "crossLinks": [
+        {
+          "pattern": "〜を境にして",
+          "contrast": "Khác 〜を機にして: 〜を境にして nhấn ranh giới thay đổi, còn 〜を機にして nhấn cơ hội để bắt đầu."
+        },
+        {
+          "pattern": "〜にあたって",
+          "contrast": "〜にあたって nói vào dịp chuẩn bị làm việc lớn; 〜を機にして nói lấy dịp đó làm cơ hội đổi mới."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

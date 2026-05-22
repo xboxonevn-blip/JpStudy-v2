@@ -2745,3 +2745,9 @@
 - Fixed connected N1 lesson 11 example grammar: `試験が迫っているのをよそに` now uses nominalization before `をよそに`; `遠足の中止を余儀なくされた` now matches the noun frame for `を余儀なくされる`.
 - Global Directive E validator progress is now `100/1123`; next failure starts at `grammar:n1:grammar_n1_11:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 005
+- Re-authored N1 lesson 11 rows `〜を余儀なくされる`, `〜を前提として`, `〜を前提にして`, `〜を境にして`, and `〜を機にして`.
+- Tightened contrast guidance around forced-result noun frames, tiền đề, ranh giới, and cơ hội so these are no longer generic `て`/condition advice.
+- Global Directive E validator progress is now `105/1123`; next failure starts at `grammar:n1:grammar_n1_11:007`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

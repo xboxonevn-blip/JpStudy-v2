@@ -629,3 +629,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Widget order avoids pre-layout rect reads while keeping deterministic keyboard traversal. This fixes the console acceptance failure at the boundary that triggered it instead of hiding errors.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-064 - Default grammar mastery sessions use 50 questions
+**Phase**: Urgent live audit final acceptance
+**Date**: 2026-05-22 08:55 (Asia/Saigon)
+**Context**: Final Playwright journey showed `/grammar-practice` rendering `Câu 1/20`, although the grammar exercise bank itself satisfied the `>=50` density guard. The runtime route still had a fallback pool cap and default mastery target below Directive F.1.
+**Options considered**: leave route-specific quick practice short | only update visible label | align default mastery route with the 50-question density contract
+**Chosen**: Raise the fallback point pool to 50 and set the default `GrammarSessionType.mastery` count to 50, with a widget regression test asserting the session opens at `Question 1 of 50`.
+**Rationale**: Acceptance requires the learner-facing route to expose a 50-question session, not only the underlying bank. This keeps the UI, runtime session, and density contract aligned.
+**Reversible**: yes
+**Owner review**: pending

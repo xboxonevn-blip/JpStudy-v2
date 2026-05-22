@@ -2301,3 +2301,24 @@
 - Final Firebase deploy `b65b1307` live-verified console errors at 0 and
   Shin Kanzen roadmap/content counts: N3 83/83, N2 163/163, N1 88/88.
   Screenshots archived as `qa-live-2026-05-22-grammar-n{1,2,3}.png`.
+
+## 2026-05-22 final live acceptance density addendum
+
+- Live journey QA found `/grammar-practice` still starting at `Câu 1/20`
+  even after the grammar bank density guard passed. Root cause: the default
+  mastery route still capped fallback points at 20 and target count at 25.
+- Committed and deployed `2943fdac` (`fix(grammar): run mastery sessions at
+  fifty questions`): default mastery now opens at 50 questions and has a widget
+  regression test for `Question 1 of 50`.
+- Fresh gates passed: focused `flutter analyze`,
+  `grammar_practice_screen_test`, `grammar_question_generator_test`, and
+  `flutter build web --release`.
+- Firebase Hosting redeployed to `https://jpstudy.web.app`; live desktop and
+  mobile screenshots show `Câu 1/50`, and Playwright console errors/warnings
+  remained `0` for the final mobile density check.
+- Fresh post-deploy no-screenshot route matrix rerun passed `154/154` routes
+  with `failed=0`; the 154 archived route screenshots remain under
+  `docs/research/qa-live-2026-05-22-route-*.png`.
+- Final visual proof archived for home chrome, vocab catalog, grammar detail
+  disclosure/attribution, Minna lesson 1/8 conjugation behavior, and grammar
+  practice desktop/mobile under `docs/research/qa-live-2026-05-22-*.png`.

@@ -532,6 +532,29 @@ void main() {
   );
 
   test(
+    'getVocabByLevel prepares a nonempty exam bank for every JLPT level',
+    () async {
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+
+      for (final level in ['N5', 'N4', 'N3', 'N2', 'N1']) {
+        final items = await repository.getVocabByLevel(level);
+
+        expect(items, isNotEmpty, reason: '$level should have exam vocab');
+        expect(
+          items.every((item) => item.level == level),
+          isTrue,
+          reason: '$level bank should not mix JLPT levels',
+        );
+        expect(
+          items.every((item) => item.meaning.trim().isNotEmpty),
+          isTrue,
+          reason: '$level bank should have learner-facing meanings',
+        );
+      }
+    },
+  );
+
+  test(
     'curriculum storage lesson IDs keep same-number levels separate',
     () async {
       final n5StorageId = LessonRepository.curriculumStorageLessonId('N5', 1);

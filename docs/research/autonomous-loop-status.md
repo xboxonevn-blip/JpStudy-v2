@@ -2702,3 +2702,9 @@
 - Regenerated `examples_corpus.json` and all wired vocab `example_sentences`; Minna N5 Bài 1 `私` remains Tatoeba-backed (`私の番？` / `Đến lượt tôi chưa?`).
 - Bumped vocab seed revision to 20 so installed DBs refresh examples again.
 - Gates passed: Node example/Tatoeba tests, `validate_example_quality`, wiring validate-only, focused Flutter analyzer/tests, and `git diff --check`.
+
+## 2026-05-22 P0 C1 JLPT exam level click hardening
+- Fixed JLPT exam banks so N5/N4 load Minna assets and N3/N2/N1 load Mimikara assets before DB fallback.
+- Removed the false 8-second empty-state timeout from exam setup; slow first-run seed now stays in loading state.
+- Added regressions for nonempty N1-N5 exam banks and slow seed behavior.
+- Live Playwright proof archived: `docs/research/qa-live-2026-05-22-accept-exam-n{1..5}-asset-fixed.png`.

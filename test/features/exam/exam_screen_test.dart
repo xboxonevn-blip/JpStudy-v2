@@ -17,17 +17,24 @@ import 'package:jpstudy/features/test/screens/test_config_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class _FakeLessonRepository extends LessonRepository {
-  _FakeLessonRepository({required this.items, this.throwOnFetch = false})
-    : super(
-        AppDatabase(executor: NativeDatabase.memory()),
-        ContentDatabase(executor: NativeDatabase.memory()),
-      );
+  _FakeLessonRepository({
+    required this.items,
+    this.throwOnFetch = false,
+    this.delay = Duration.zero,
+  }) : super(
+         AppDatabase(executor: NativeDatabase.memory()),
+         ContentDatabase(executor: NativeDatabase.memory()),
+       );
 
   final List<VocabItem> items;
   final bool throwOnFetch;
+  final Duration delay;
 
   @override
   Future<List<VocabItem>> getVocabByLevel(String level) async {
+    if (delay > Duration.zero) {
+      await Future<void>.delayed(delay);
+    }
     if (throwOnFetch) {
       throw Exception('boom');
     }
@@ -175,6 +182,32 @@ void main() {
       find.textContaining(AppLanguage.en.mockExamTitle('N5')),
       findsWidgets,
     );
+  });
+
+  testWidgets('keeps loading instead of emptying while first seed is slow', (
+    tester,
+  ) async {
+    final repo = _FakeLessonRepository(
+      items: const [_sampleItem],
+      delay: const Duration(seconds: 9),
+    );
+    final storage = _FakeSessionStorage();
+
+    await tester.pumpWidget(buildExamScreen(repo: repo, storage: storage));
+    await tester.pump();
+
+    await tester.tap(find.text('JLPT N5'));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 8));
+
+    expect(find.text('Preparing JLPT N5 questions...'), findsOneWidget);
+    expect(find.text('No N5 exam questions yet'), findsNothing);
+
+    await tester.pump(const Duration(seconds: 2));
+    await tester.pumpAndSettle();
+
+    expect(find.text('JLPT N5 start screen'), findsOneWidget);
+    expect(find.text('Start exam'), findsOneWidget);
   });
 
   testWidgets('all JLPT level choices prepare a nonblank start state', (

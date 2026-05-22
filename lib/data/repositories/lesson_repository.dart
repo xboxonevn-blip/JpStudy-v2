@@ -799,9 +799,86 @@ class LessonRepository {
         .toList();
   }
 
-  // Fetch Minna vocabulary for a JLPT level by default to avoid mixing tracks in legacy flows.
-  Future<List<VocabItem>> getVocabByLevel(String level) {
-    return getVocabByLevelAndSeries(level, 'minna');
+  // Fetch the canonical exam/search vocabulary bank for a JLPT level.
+  // N5/N4 keep Minna first; upper levels use Mimikara, then Hajimete as
+  // the broad fallback. This keeps legacy flows nonempty without mixing JLPT
+  // levels or exposing deleted Mimikara N5/N4 tracks.
+  Future<List<VocabItem>> getVocabByLevel(String level) async {
+    final normalizedLevel = level.trim().toUpperCase();
+    final assetItems = await _loadCanonicalExamVocabFromAssets(normalizedLevel);
+    if (assetItems.isNotEmpty) return assetItems;
+
+    final seriesPriority = switch (normalizedLevel) {
+      'N5' || 'N4' => const ['minna', 'hajimete'],
+      'N3' || 'N2' || 'N1' => const ['mimikara', 'hajimete', 'ShinKanzen'],
+      _ => const ['minna'],
+    };
+
+    for (final series in seriesPriority) {
+      final items = await _getEnsuredVocabByLevelAndSeries(
+        normalizedLevel,
+        series,
+      );
+      if (items.isNotEmpty) return items;
+    }
+    return const [];
+  }
+
+  Future<List<VocabItem>> _loadCanonicalExamVocabFromAssets(
+    String level,
+  ) async {
+    if (level == 'N5' || level == 'N4') {
+      final startLesson = level == 'N5' ? 1 : 26;
+      final endLesson = level == 'N5' ? 25 : 50;
+      final rowLists = await Future.wait([
+        for (var lessonId = startLesson; lessonId <= endLesson; lessonId++)
+          _loadLessonVocabRowsFromAssets(
+            lessonId: lessonId,
+            currentLevelLabel: level,
+          ),
+      ]);
+      return [
+        for (final rows in rowLists)
+          for (final row in rows) _mapContentVocabToItem(row),
+      ];
+    }
+
+    if (level == 'N3' || level == 'N2' || level == 'N1') {
+      final terms = await _loadBundledMimikaraTerms(
+        VocabSeriesTermsArgs(level: level, series: 'mimikara'),
+      );
+      return [
+        for (final term in terms)
+          VocabItem(
+            id: term.id,
+            term: term.term,
+            reading: term.reading,
+            meaning: term.definition,
+            meaningEn: term.definitionEn,
+            kanjiMeaning: term.kanjiMeaning,
+            exampleSentences: parseVocabExampleSentences(
+              term.exampleSentencesJson,
+            ),
+            level: level,
+          ),
+      ];
+    }
+
+    return const [];
+  }
+
+  Future<List<VocabItem>> _getEnsuredVocabByLevelAndSeries(
+    String level,
+    String series,
+  ) async {
+    await _contentDb.ensureVocabSeriesSeededForLevel(level, series: series);
+    final cacheKey = '$level:$series';
+    final cached = _vocabByLevelSeriesCache[cacheKey];
+    if (cached != null && cached.isNotEmpty) return cached;
+    if (cached != null && cached.isEmpty) {
+      _vocabByLevelSeriesCache.remove(cacheKey);
+    }
+    return getVocabByLevelAndSeries(level, series);
   }
 
   /// COUNT(*) variant — use when only the number of terms is needed.

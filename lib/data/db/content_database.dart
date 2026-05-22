@@ -677,6 +677,30 @@ class ContentDatabase extends _$ContentDatabase {
     return _ensureVocabSeedRevisionForLevel(level);
   }
 
+  Future<void> ensureVocabSeriesSeededForLevel(
+    String level, {
+    required String series,
+  }) async {
+    final normalizedLevel = level.trim().toUpperCase();
+    final normalizedSeries = series.trim();
+    if (normalizedSeries == 'minna' || normalizedSeries == 'ShinKanzen') {
+      final specs = _contentSeedSpecs.where(
+        (s) => s.levelLabel == normalizedLevel && s.series == normalizedSeries,
+      );
+      await _ensureMinnaVocabularySeeded(specs);
+      return;
+    }
+    if (normalizedSeries == 'hajimete') {
+      await _ensureHajimeteVocabularySeeded(
+        _hajimeteSeedSpecs.where((s) => s.levelLabel == normalizedLevel),
+      );
+      return;
+    }
+    if (normalizedSeries == 'mimikara') {
+      await _ensureMimikaraVocabularySeededForLevel(normalizedLevel);
+    }
+  }
+
   Future<bool> _ensureKanjiContentCurrent() async {
     var repaired = false;
     repaired = await _selfHealKanjiMeaningJaColumn() || repaired;
@@ -973,6 +997,11 @@ class ContentDatabase extends _$ContentDatabase {
 
   Future<void> _ensureMimikaraVocabularySeededForActiveLevel() async {
     final activeLevel = await _activeStudyLevelLabel();
+    await _ensureMimikaraVocabularySeededForLevel(activeLevel);
+  }
+
+  Future<void> _ensureMimikaraVocabularySeededForLevel(String level) async {
+    final activeLevel = level.trim().toUpperCase();
     final specs = _mimikaraSeedSpecs.where((s) => s.levelLabel == activeLevel);
     final levelCol = vocab.level;
     final countExpr = vocab.id.count();

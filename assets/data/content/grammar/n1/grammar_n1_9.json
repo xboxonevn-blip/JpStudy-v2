@@ -20,16 +20,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + のいかんによらず",
-      "meaning": "Ý nghĩa: Dùng để nói kết quả không thay đổi dù Noun ở trạng thái nào.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "form": "Cấu trúc: Noun + のいかんによらず",
+      "meaning": "Ý nghĩa: Dùng để nói kết quả không thay đổi dù Noun ở trạng thái nào",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, điều kiện, tuổi tác, quốc tịch trước のいかんによらず để nói kết luận phía sau không phụ thuộc vào N ra sao. Mẫu trang trọng, hợp quy định/thông báo.",
+      "etymology": "Gốc rễ: いかん/如何 là “ra sao”; よる là “dựa vào/phụ thuộc”; よらず phủ định sự phụ thuộc. Cả cụm nghĩa là không dựa vào việc N như thế nào mà vẫn giữ kết luận sau.",
+      "hanVietBridge": "如何 là “như hà”; よらず gợi “bất y” - không dựa vào. Noun のいかんによらず nên dịch là “bất kể N ra sao”, không phải “tùy N”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんによらず khóa kết quả lại trước mọi biến thể của N. Khác のいかんによっては mở nhánh tùy N, によらず nói N không được quyền làm kết quả đổi.",
+      "crossLinks": [
+        {
+          "pattern": "Noun のいかんによっては",
+          "contrast": "Khác Noun のいかんによらず: によっては nói kết quả có thể đổi tùy N, còn によらず nói không đổi."
+        },
+        {
+          "pattern": "Noun のいかんにかかわらず",
+          "contrast": "So với にかかわらず, によらず ngắn hơn nhưng cùng phủ nhận sự phụ thuộc vào việc N ra sao."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },
@@ -54,16 +66,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun1 + のごとき + Noun2",
-      "meaning": "Ý nghĩa: Dùng để so sánh danh từ phía sau với Noun theo nghĩa “như”, “tựa như”.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "form": "Cấu trúc: Noun1 + のごとき + Noun2",
+      "meaning": "Ý nghĩa: Dùng để so sánh danh từ phía sau với Noun theo nghĩa “như”, “tựa như”",
+      "usage": "Cách dùng: đặt hình ảnh so sánh ở Noun1 のごとき trước danh từ chính Noun2. Mẫu văn chương/trang trọng hơn のような, thường tạo cảm giác mạnh hoặc cổ kính: 神のごとき存在.",
+      "etymology": "Gốc rễ: ごとき viết 如き, dạng cổ của “như/tựa như”. の nối hình ảnh so sánh Noun1 với Noun2, còn き làm cụm ấy bổ nghĩa cho danh từ phía sau.",
+      "hanVietBridge": "如 là Hán-Việt “như”. Noun のごとき Noun vì vậy có thể nhớ là “N2 như N1”, nhưng giọng văn trang trọng hơn “như” hằng ngày.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のごとき Noun không chỉ so sánh, nó nâng tông văn lên. Khác のような trung tính, ごとき làm câu nghe như văn viết, diễn văn, hoặc miêu tả mạnh.",
+      "crossLinks": [
+        {
+          "pattern": "Noun のような Noun",
+          "contrast": "Khác Noun のごとき Noun: のような trung tính và thông dụng hơn, のごとき cổ/trang trọng hơn."
+        },
+        {
+          "pattern": "Noun みたいな Noun",
+          "contrast": "So với みたいな hội thoại, のごとき thuộc văn viết và tạo sắc thái nghiêm hoặc cường điệu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },
@@ -88,16 +112,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + のことだから",
-      "meaning": "Ý nghĩa: Dùng khi dự đoán hoặc giải thích dựa trên tính cách, thói quen hoặc đặc điểm đã biết của Noun.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "form": "Cấu trúc: Noun + のことだから",
+      "meaning": "Ý nghĩa: Dùng khi dự đoán hoặc giải thích dựa trên tính cách, thói quen hoặc đặc điểm đã biết của Noun",
+      "usage": "Cách dùng: đặt người/tổ chức/sự vật đã quen biết trước のことだから để suy đoán dựa trên tính cách, thói quen, uy tín hoặc kiểu hành xử đã biết. Vế sau thường là “chắc/hẳn sẽ...”.",
+      "etymology": "Gốc rễ: こと gom Noun thành “chuyện/người ấy như một đối tượng đã biết”; だから đưa ra lý do. Noun のことだから nghĩa là vì biết rõ bản chất của N nên dự đoán sau có cơ sở.",
+      "hanVietBridge": "事/こと là “sự”. Noun のことだから giống “xét sự tình/con người N”, nên dịch tự nhiên là “với N thì...” hoặc “biết N rồi nên...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のことだから chỉ dùng khi người nói có ký ức về N. Khác だけに dựa vào tính chất khách quan, のことだから dựa vào hiểu biết quen thuộc về N.",
+      "crossLinks": [
+        {
+          "pattern": "Noun だけに",
+          "contrast": "Khác Noun のことだから: だけに dựa vào đặc tính/địa vị, còn のことだから dựa vào hiểu biết quen thuộc về N."
+        },
+        {
+          "pattern": "Noun のことだし",
+          "contrast": "So với のことだし, のことだから đưa lý do rõ hơn và thường dẫn đến dự đoán chắc hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "grammar"
       }
     }
   },
@@ -122,16 +158,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + の嫌いがある",
-      "meaning": "Ý nghĩa: Dùng để nói có khuynh hướng không tốt hoặc thói quen xấu liên quan đến Noun.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "form": "Cấu trúc: Verb-dictionary form + 嫌いがある / Noun + の嫌いがある",
+      "meaning": "Ý nghĩa: Dùng để nói có khuynh hướng không tốt hoặc thói quen xấu liên quan đến Noun/Verb",
+      "usage": "Cách dùng: đặt hành vi hoặc danh từ chỉ khuynh hướng trước 嫌いがある để nhận xét có xu hướng xấu. Mẫu trang trọng, hay dùng trong phê bình: 結論を急ぐ嫌いがある.",
+      "etymology": "Gốc rễ: 嫌い vốn là “điều không ưa”, nhưng trong mẫu 嫌いがある nó trượt sang nghĩa “khuynh hướng lệch”. がある nói khuynh hướng ấy tồn tại trong người/tổ chức/văn bản.",
+      "hanVietBridge": "嫌 gợi “hiềm/ghét”, nhưng ở Noun の嫌いがある không dịch là ghét. Hãy nhớ như “có cái hiềm/khuynh hướng xấu”: hay vội kết luận, hay cường điệu, hay thiên lệch.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun の嫌いがある là lời phê bình có găng tay. Khác 嫌いだ nói sở thích ghét, 嫌いがある nói một khuynh hướng xấu đang lặp lại.",
+      "crossLinks": [
+        {
+          "pattern": "Noun が嫌いだ",
+          "contrast": "Khác Noun の嫌いがある: が嫌いだ là ghét, còn 嫌いがある là có khuynh hướng không tốt."
+        },
+        {
+          "pattern": "傾向がある",
+          "contrast": "So với 傾向がある trung tính, 嫌いがある thường mang đánh giá tiêu cực và văn viết hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "particles"
+        "guideSection": "grammar"
       }
     }
   },
@@ -156,16 +204,28 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + の手前",
-      "meaning": "Ý nghĩa: Dùng khi vì thể diện, vị thế hoặc ánh nhìn của Noun mà người nói khó làm khác đi.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "form": "Cấu trúc: Noun + の手前 / Verb-た + 手前",
+      "meaning": "Ý nghĩa: Dùng khi vì thể diện, vị thế hoặc ánh nhìn của Noun mà người nói khó làm khác đi",
+      "usage": "Cách dùng: đặt người/nhóm trước の手前 hoặc việc đã nói/làm trước た手前 để nêu áp lực thể diện: trước mặt N, hoặc đã lỡ V rồi nên khó làm khác.",
+      "etymology": "Gốc rễ: 手前 là “phía trước tay/mặt trước”. Từ vị trí trước mặt người khác, mẫu mở rộng thành ánh nhìn xã hội và thể diện: 皆の手前 là dưới mắt mọi người.",
+      "hanVietBridge": "Cầu Hán-Việt: nhớ “diện tiền/thể diện”. Noun の手前 không chỉ là vị trí trước mặt, mà là cái mặt xã hội khiến người nói bị ràng buộc.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun の手前 có người chứng kiến trong bóng câu. Khác 前に chỉ thời gian/vị trí trước, 手前 buộc người nói giữ mặt hoặc giữ lời.",
+      "crossLinks": [
+        {
+          "pattern": "Noun の前に",
+          "contrast": "Khác Noun の手前: の前に chỉ trước về vị trí/thời gian, の手前 thêm áp lực thể diện hoặc vị thế."
+        },
+        {
+          "pattern": "Verb-た以上",
+          "contrast": "So với た以上 nhấn trách nhiệm logic sau khi đã làm, た手前 nhấn giữ mặt/giữ lời sau việc đã xảy ra."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "grammar"
       }
     }
   },

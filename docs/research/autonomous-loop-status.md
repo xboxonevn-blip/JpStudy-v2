@@ -3207,3 +3207,9 @@
 - Repaired examples around action constraints, formal worthiness, blocked volition, and emotional-limit statements.
 - Global Directive E validator progress is now `485/1123`; next failure starts at `grammar:n1:grammar_n1_9:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-23 Phase G Directive E redo batch 082
+- Re-authored N1 rows `Noun のいかんによらず`, `Noun のごとき Noun`, `Noun のことだから`, `Noun の嫌いがある`, and `Noun の手前`.
+- Repaired examples around literary simile, tendency-not-dislike, and face-pressure `手前`.
+- Global Directive E validator progress is now `490/1123`; next failure starts at `grammar:n1:grammar_n1_9:006`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

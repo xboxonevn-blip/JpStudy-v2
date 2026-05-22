@@ -2464,3 +2464,23 @@
   validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
   --check` (line-ending warnings only). Global Directive E validator is now
   `73/80` Tier-1 grammar items passed; 7 expected failures remain.
+
+## 2026-05-22 Phase G Tier-1 items 074-078
+
+- Re-authored `grammar:n5:grammar_n5_14:004` and
+  `grammar:n5:grammar_n5_15:001-004` with pattern-specific Directive E content
+  for offer `ましょうか`, permission `てもいいですか`, prohibition
+  `てはいけません`, state `ています`, and formal permission `てもかまいません`.
+- Added 50 hand-crafted templates: 10 per item, covering form, meaning, usage,
+  context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `Vましょうか`: speaker offers to do V for the listener.
+  - `Vてもいいですか`: speaker asks permission to do V.
+  - `Vてはいけません`: rule/prohibition; V is not allowed.
+  - `Vています` state: result or status such as `結婚しています`, not always
+    an action in progress.
+  - `Vてもかまいません`: formal/lite permission, "doing V is not a problem".
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `78/80` Tier-1 grammar items passed; 2 expected failures remain.

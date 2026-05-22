@@ -134,10 +134,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vましょうか",
-      "meaning": "Ý nghĩa: Dùng khi người nói đề nghị làm giúp người nghe một việc gì đó.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: ましょう là dạng ý chí/lời đề nghị lịch sự của ます; thêm か thành câu hỏi. Khi nói Vましょうか, người nói tự đưa mình ra làm việc V cho người nghe cân nhắc.",
+      "hanVietBridge": "Cầu Hán-Việt: gần với 'để tôi... nhé?' trong tiếng Việt. Không phải rủ cùng làm, mà là người nói đề nghị ra tay giúp.",
+      "form": "Hình thức: Vます-stem + ましょうか. Ví dụ: 手伝いましょうか.",
+      "meaning": "Ý nghĩa: người nói đề nghị làm giúp người nghe một việc gì đó.",
+      "usage": "Sử dụng: dùng khi thấy người nghe cần hỗ trợ; chờ người nghe đồng ý rồi hãy làm.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: 手伝いましょうか là 'để tôi giúp nhé?', khác với 手伝いませんか là rủ người kia cùng giúp. Chủ thể hành động trong ましょうか nghiêng về người nói.",
+      "crossLinks": [
+        {
+          "pattern": "Vます + ませんか",
+          "contrast": "Phân biệt: ませんか rủ người nghe cùng làm; ましょうか là người nói đề nghị làm giúp."
+        },
+        {
+          "pattern": "Vて ください",
+          "contrast": "Khác: てください yêu cầu người nghe làm; ましょうか hỏi xem mình có nên làm giúp không."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

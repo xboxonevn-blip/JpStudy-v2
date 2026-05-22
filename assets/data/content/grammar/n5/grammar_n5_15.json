@@ -14,10 +14,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて もいいですか",
-      "meaning": "Ý nghĩa: Dùng để xin phép làm gì đó.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: Vて mở hành động, も nghĩa là 'dù/cũng', いい là 'được/ổn', thêm ですか thành câu xin phép. Ý lõi là 'làm V cũng ổn chứ?'.",
+      "hanVietBridge": "Cầu Hán-Việt: liên hệ 'khả dĩ' trong tiếng Việt: có được phép hay không. 写真を撮ってもいいですか = chụp ảnh có được không?",
+      "form": "Hình thức: Vて + もいいですか. Ví dụ: ここで写真を撮ってもいいですか.",
+      "meaning": "Ý nghĩa: xin phép làm V.",
+      "usage": "Sử dụng: dùng trước khi làm việc có thể ảnh hưởng người khác hoặc quy định nơi chốn.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: てもいいですか hỏi quyền trước khi làm. Khác với てください, bạn không nhờ ai làm; bạn xin phép để chính mình làm.",
+      "crossLinks": [
+        {
+          "pattern": "Vて は いけません",
+          "contrast": "Phân biệt: てもいいですか xin phép; てはいけません nói không được phép."
+        },
+        {
+          "pattern": "Vて ください",
+          "contrast": "Khác: てください yêu cầu người nghe làm; てもいいですか xin phép cho mình làm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -42,10 +54,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて は いけません",
-      "meaning": "Ý nghĩa: Dùng để nói không được phép làm một việc gì đó, thường trong quy tắc, nội quy hoặc luật lệ.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc: Vて nêu hành động, は đưa hành động ấy lên làm điều đang xét, いけません nghĩa là 'không ổn/không được'. Cả cụm thành quy tắc cấm làm V.",
+      "hanVietBridge": "Cầu Hán-Việt: gần với 'bất khả' trong nội quy: không thể/không được làm. ここで吸ってはいけません = không được hút ở đây.",
+      "form": "Hình thức: Vて + は + いけません. Ví dụ: ここでタバコを吸ってはいけません.",
+      "meaning": "Ý nghĩa: không được phép làm V; thường là luật, nội quy, hoặc quy tắc.",
+      "usage": "Sử dụng: dùng khi nêu cấm đoán rõ; sắc thái mạnh hơn lời khuyên không nên.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: てはいけません là biển cấm, không phải góp ý nhẹ. Nó đối lập trực tiếp với てもいいですか/てもいいです về phép làm.",
+      "crossLinks": [
+        {
+          "pattern": "Vて もいいですか",
+          "contrast": "Phân biệt: てもいいですか hỏi có được làm không; てはいけません trả lời rằng không được làm."
+        },
+        {
+          "pattern": "Vないでください",
+          "contrast": "Khác: ないでください là lời yêu cầu đừng làm; てはいけません là quy tắc/cấm đoán."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -70,10 +94,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて います",
-      "meaning": "Ý nghĩa: `Vています` không chỉ diễn tả hành động đang làm, mà còn có thể diễn tả trạng thái kéo dài như đã kết hôn, đang biết, đang sống ở đâu hoặc đang làm nghề gì.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: Vて nối hành động với います, nghĩa gốc là tồn tại trong trạng thái sau V. Vì vậy 結婚しています không phải 'đang kết hôn ngay lúc này' mà là đang ở trạng thái đã kết hôn.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ 'trạng thái kéo dài'. 知っています là đang có tri thức/biết, 住んでいます là đang cư trú.",
+      "form": "Hình thức: Vて + います. Ví dụ: 結婚しています, 知っています, 住んでいます.",
+      "meaning": "Ý nghĩa: diễn tả trạng thái kéo dài sau hành động hoặc tình trạng hiện tại.",
+      "usage": "Sử dụng: dùng với hôn nhân, nơi ở, nghề nghiệp, biết/không biết; không dịch máy móc thành 'đang V' cho mọi động từ.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: 結婚しています là 'đã kết hôn', không phải 'đang làm lễ cưới'. Cùng Vています nhưng khác với 今読んでいます là hành động đang diễn ra.",
+      "crossLinks": [
+        {
+          "pattern": "Vて います (Đang làm)",
+          "contrast": "Phân biệt: lesson 14 dùng cho hành động đang diễn ra; lesson 15 nhấn trạng thái kéo dài sau hành động."
+        },
+        {
+          "pattern": "Vます",
+          "contrast": "Khác: Vます nêu thói quen/tương lai; Vています trạng thái cho biết tình trạng hiện tại."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -98,10 +134,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + もかまいません",
-      "meaning": "Ý nghĩa: Dùng để cho phép hoặc nói rằng làm việc đó cũng không sao.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: Vて + も là 'dù làm V cũng', かまいません là 'không phiền/không sao'. Cả cụm nói làm V cũng không gây vấn đề, nên lịch sự hơn てもいいです.",
+      "hanVietBridge": "Cầu Hán-Việt: liên hệ 'vô phương hại' trong tiếng Việt: làm vậy cũng không hại/không sao. ここに座ってもかまいません = ngồi đây cũng không sao.",
+      "form": "Hình thức: Vて + もかまいません. Câu hỏi: Vてもかまいませんか.",
+      "meaning": "Ý nghĩa: cho phép hoặc nói làm V cũng không sao; có sắc thái trang trọng hơn てもいいです.",
+      "usage": "Sử dụng: dùng trong dịch vụ, hướng dẫn, thông báo lịch sự; khi hỏi, thêm か ở cuối.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: かまいません nghe như 'không phiền đâu'. Nó cùng hướng với てもいいです, nhưng lịch sự và mềm hơn, khác hẳn てはいけません.",
+      "crossLinks": [
+        {
+          "pattern": "Vて もいいですか",
+          "contrast": "Phân biệt: てもいいですか là xin phép phổ thông; てもかまいませんか trang trọng hơn."
+        },
+        {
+          "pattern": "Vて は いけません",
+          "contrast": "Khác: てもかまいません cho phép; てはいけません cấm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

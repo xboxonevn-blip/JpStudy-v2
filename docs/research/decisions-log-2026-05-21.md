@@ -679,3 +679,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The learner must not memorize Vて as only "and"; suffix-aware contrast prevents confusing request, invitation, and progressive states.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-069 - Permission/prohibition drills use actor-role contrast
+**Phase**: Phase G Option C Tier-1
+**Date**: 2026-05-22 12:50 (Asia/Saigon)
+**Context**: Batch 074-078 covers offer `ましょうか`, permission `てもいいですか`, prohibition `てはいけません`, result-state `ています`, and formal permission `てもかまいません`.
+**Options considered**: teach each as a single translation | group all as generic te-form suffixes | make actor-role and permission polarity the main contrast axis
+**Chosen**: Author templates around who acts and whether the action is allowed, forbidden, requested, offered, or described as a state.
+**Rationale**: Learners confuse these because the surface all begins with Vて. Actor-role plus allow/ban polarity gives a reusable decision test.
+**Reversible**: yes
+**Owner review**: pending

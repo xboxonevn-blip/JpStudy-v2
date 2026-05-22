@@ -2841,3 +2841,9 @@
 - Repaired one `〜かと思いきや` example so tense and event sequence match the surprise-turn pattern.
 - Global Directive E validator progress is now `180/1123`; next failure starts at `grammar:n1:grammar_n1_19:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 021
+- Re-authored N1 rows `〜がゆえに`, `〜がゆえのN`, `AからBに至るまで`, `〜ごとく`, and `〜こととて`.
+- Corrected `〜ごとく` structure away from false `Verb-て` attachment and replaced weak `〜こととて` examples with formal circumstance/apology frames.
+- Global Directive E validator progress is now `185/1123`; next failure starts at `grammar:n1:grammar_n1_19:009`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -2584,3 +2584,9 @@
 - Found a focused route-smoke regression: search proof was checking a desktop-wide-only label, and a long foundation status chip overflowed by 2.7px in bounded content.
 - Fixed `AppChip` to truncate long labels inside finite constraints and added a narrow-chip regression test.
 - Gates passed: focused analyzer, foundation/route smoke tests, full route/exam focused group, Node example/content/Phase-G validators, `flutter build web --release`, and `docs/research/local-route-matrix-2026-05-22.md`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 002
+- Applied 5 consensus-backed wrong-meaning repairs for Minna N5 lessons 5, 6, 12, 17, and 22; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-002.md`.
+- Added `vi-source-verified` and source consensus links to the touched rows without adding owner-only approval tags.
+- Bumped vocab seed revision to 7 so existing local/web DBs refresh the edited N5 vocab meanings.
+- Gates passed: vocab diff Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

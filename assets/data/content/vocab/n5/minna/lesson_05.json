@@ -2529,6 +2529,7 @@
       "order": 46,
       "tags": [
         "question",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2550,18 +2551,23 @@
       },
       "sense": {
         "senseId": "n5_l05_s046",
-        "meaningVi": "mồng mấy, mấy ngày",
+        "meaningVi": "Ngày mấy, mấy ngày",
         "meaningEn": "what day / how many days"
       },
       "search": {
         "termNoAccent": "何日",
         "readingNoAccent": "なんにち",
-        "meaningViNoAccent": "mong may, may ngay",
+        "meaningViNoAccent": "Ngay may, may ngay",
         "hanVietNoAccent": "ha nhat"
       },
       "links": {
         "sourceVocabId": "n5_l05_v046",
-        "sourceSenseId": "n5_l05_s046"
+        "sourceSenseId": "n5_l05_s046",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hà nhật"

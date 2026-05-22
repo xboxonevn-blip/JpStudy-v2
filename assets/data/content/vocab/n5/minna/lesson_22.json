@@ -830,6 +830,7 @@
       "order": 16,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -851,18 +852,23 @@
       },
       "sense": {
         "senseId": "n5_l22_s016",
-        "meaningVi": "tủ tường (kiểu Nhật)",
+        "meaningVi": "Chỗ để chăn gối trong một căn phòng kiểu nhật",
         "meaningEn": "Japanese-style closet"
       },
       "search": {
         "termNoAccent": "押し入れ",
         "readingNoAccent": "おしいれ",
-        "meaningViNoAccent": "tu tuong (kieu nhat)",
+        "meaningViNoAccent": "Cho de chan goi trong mot can phong kieu nhat",
         "hanVietNoAccent": "ap nhap"
       },
       "links": {
         "sourceVocabId": "n5_l22_v016",
-        "sourceSenseId": "n5_l22_s016"
+        "sourceSenseId": "n5_l22_s016",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "áp nhập"

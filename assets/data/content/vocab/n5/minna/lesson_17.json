@@ -1237,6 +1237,7 @@
       "order": 23,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1258,18 +1259,24 @@
       },
       "sense": {
         "senseId": "n5_l17_s023",
-        "meaningVi": "đồ lót",
+        "meaningVi": "Quần áo lót",
         "meaningEn": "underwear"
       },
       "search": {
         "termNoAccent": "下着",
         "readingNoAccent": "したき",
-        "meaningViNoAccent": "do lot",
+        "meaningViNoAccent": "Quan ao lot",
         "hanVietNoAccent": "ha truoc"
       },
       "links": {
         "sourceVocabId": "n5_l17_v023",
-        "sourceSenseId": "n5_l17_s023"
+        "sourceSenseId": "n5_l17_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hạ trước"

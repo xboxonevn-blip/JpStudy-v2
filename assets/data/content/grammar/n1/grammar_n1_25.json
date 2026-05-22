@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + ものとして, い-Adjective + ものとして, な-Adjective + なものとして, Noun + のものとして",
-      "meaning": "Ý nghĩa: Dùng để đặt một giả định hoặc xem điều gì là tiền đề khi hành động, phán đoán hoặc quy định.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc: もの danh từ hóa một tiền đề, として đặt tiền đề ấy làm vai trò/khung xử lý. 〜ものとして nghĩa là xem A như điều đã định để ra quyết định, tính toán hoặc áp dụng quy định.",
+      "hanVietBridge": "もの là vật/sự, として là với tư cách/xem như. Aものとして gần “coi như A”, “trên giả định A”.",
+      "form": "Hình thức: mệnh đề thường + ものとして; N/な-adj + であるものとして; trong văn quy định có thể gặp Nのものとして.",
+      "meaning": "Ý nghĩa: Xem A là tiền đề/giả định để hành động, phán đoán, tính toán hoặc áp dụng quy định.",
+      "usage": "Sử dụng: Hợp văn bản quy định, kế hoạch, giả định làm việc. Không dùng の máy móc cho mọi danh từ; nhiều trường hợp cần であるものとして.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ものとして khác 〜として. として nói vai trò trực tiếp; ものとして đặt cả mệnh đề A như tiền đề được coi là đúng.",
+      "crossLinks": [
+        {
+          "pattern": "〜として",
+          "contrast": "Khác 〜ものとして: として là với tư cách; ものとして là xem một điều là tiền đề/giả định."
+        },
+        {
+          "pattern": "〜と仮定して",
+          "contrast": "〜と仮定して nói giả định rõ; 〜ものとして trang trọng/quy định hơn, như tiền đề xử lý."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-negative stem + んがために",
-      "meaning": "Ý nghĩa: Dùng để nhấn mạnh mục đích mạnh mẽ “để làm X”, thường mang sắc thái trang trọng, quyết tâm.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc ん ở đây là dạng cổ của trợ động từ ý chí/phủ định cổ gắn vào 未然形, không phải ない hiện đại. 〜んがために tạo mục đích trang trọng: dồn hành động phía sau vào việc đạt A.",
+      "hanVietBridge": "ため là vị/mục đích. 合格せんがために gần “vì mục đích đỗ cho bằng được”, cứng và văn viết hơn 合格するために.",
+      "form": "Hình thức: Vない bỏ ない + んがために; ngoại lệ する -> せんがために.",
+      "meaning": "Ý nghĩa: Để đạt A, vì mục đích A với sắc thái trang trọng/quyết tâm.",
+      "usage": "Sử dụng: Hay gặp trong văn viết, diễn văn, bình luận. Chủ ngữ thường làm hành động sau với mục tiêu mạnh, không phải mục đích sinh hoạt nhẹ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜んがために khác 〜ために. ために trung tính; んがために nghe cổ, mạnh, như người nói đang dồn sức để đạt mục tiêu.",
+      "crossLinks": [
+        {
+          "pattern": "〜ために",
+          "contrast": "Khác 〜んがために: ために trung tính; んがために cổ/trang trọng và nhấn quyết tâm."
+        },
+        {
+          "pattern": "〜べく",
+          "contrast": "〜べく cũng mục đích trang trọng; んがために có sắc thái văn chương/quyết ý mạnh hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-negative stem + ん + ばかりに",
-      "meaning": "Ý nghĩa: Dùng để nói trạng thái như sắp làm X hoặc thái độ như muốn nói X, dù chưa thực sự xảy ra.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc ん gắn vào 未然形 tạo cảm giác “sắp A/như muốn A”, ばかり là gần như chỉ còn việc đó, に biến cụm thành trạng ngữ. 〜んばかりに mô tả biểu hiện ở sát ngưỡng xảy ra A.",
+      "hanVietBridge": "ばかり là chỉ/gần như. 泣かんばかりに là gần như sắp khóc; 倒れんばかりに là như sắp ngã quỵ.",
+      "form": "Hình thức: Vない bỏ ない + んばかりに; thường gặp 泣かんばかりに, 倒れんばかりに, 飛び出さんばかりに.",
+      "meaning": "Ý nghĩa: Như sắp A; biểu hiện/hành động mạnh đến mức gần như A xảy ra.",
+      "usage": "Sử dụng: Vế sau là cử chỉ, vẻ mặt, trạng thái biểu hiện. Với lời ngầm “như muốn nói”, dùng 言わんばかりに rõ hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜んばかりに khác 〜そうになる. そうになる nói suýt xảy ra thật; んばかりに thường là cách vẻ ngoài trông như sắp A.",
+      "crossLinks": [
+        {
+          "pattern": "〜そうになる",
+          "contrast": "Khác 〜んばかりに: そうになる là suýt xảy ra; んばかりに mô tả vẻ/biểu hiện như sắp xảy ra."
+        },
+        {
+          "pattern": "〜と言わんばかりに",
+          "contrast": "〜と言わんばかりに là như muốn nói một câu; 〜んばかりに rộng hơn cho trạng thái sắp A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -122,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-て form + も差し支えない, Noun + が差し支えない",
-      "meaning": "Ý nghĩa: Dùng để nói không có trở ngại, không sao nếu làm X, hoặc có thể xem là ổn.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc 差し支え là trở ngại/bất tiện cản đường; ない phủ định trở ngại ấy. 〜ても差し支えない vì vậy không chỉ là “được” mà là “làm vậy không gây vấn đề/trở ngại”.",
+      "hanVietBridge": "差し支え là sai chi/ngăn trở trong nghĩa Hán-Việt gần “trở ngại”. 差し支えない là không có trở ngại, không phương hại.",
+      "form": "Hình thức: Vて + も差し支えない; い-adjくても差し支えない; N/な-adj + でも差し支えない.",
+      "meaning": "Ý nghĩa: Không sao, không gây trở ngại nếu A; có thể A trong ngữ cảnh lịch sự/trang trọng.",
+      "usage": "Sử dụng: Hợp email, quy định, xin phép, thông báo. Thân mật hơn có thể dùng 構わない hoặc 問題ない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜差し支えない khác 〜構わない. 構わない đời thường hơn; 差し支えない nghe lịch sự và nhấn “không gây trở ngại”.",
+      "crossLinks": [
+        {
+          "pattern": "〜構わない",
+          "contrast": "Khác 〜差し支えない: 構わない thân mật/trung tính hơn; 差し支えない trang trọng và lịch sự hơn."
+        },
+        {
+          "pattern": "問題ない",
+          "contrast": "問題ない nói không vấn đề rộng; 差し支えない nhấn không cản trở hoặc không gây bất tiện."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

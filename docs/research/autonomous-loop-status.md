@@ -2919,3 +2919,9 @@
 - Repaired malformed `ぶった/ぶって/ぶる` examples and added one `Vるまでだ` fallback-action example.
 - Global Directive E validator progress is now `245/1123`; next failure starts at `grammar:n1:grammar_n1_24:010`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 034
+- Re-authored N1 rows `〜もなんでもない`, `〜ものとして`, `〜んがために`, `〜んばかりに`, and `〜差し支えない`.
+- Repaired malformed example Japanese across emphatic dismissal, premise, near-action, and permission rows.
+- Global Directive E validator progress is now `250/1123`; next failure starts at `grammar:n1:grammar_n1_25:005`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

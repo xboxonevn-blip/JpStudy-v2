@@ -434,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + もなんでもない, い-Adjective + もなんでもない, な-Adjective + なもなんでもない, Noun + もなんでもない",
-      "meaning": "Ý nghĩa: Dùng để phủ nhận mạnh rằng điều gì đó chẳng phải X hay chẳng quan trọng gì cả.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc: なんでもない là “không là gì/không đáng kể”; khi đi sau Xでも hoặc Xも, mẫu phủ nhận mạnh nhãn X. Nó không chỉ phủ định sự thật mà còn gạt bỏ giá trị hoặc tầm quan trọng của X.",
+      "hanVietBridge": "何でもない là “chẳng là gì”. 先生でもなんでもない là không phải thầy cô gì cả; 問題でもなんでもない là chẳng phải vấn đề gì.",
+      "form": "Hình thức thường gặp: N/な-adj + でもなんでもない; mệnh đề danh từ hóa + ことなど問題でもなんでもない.",
+      "meaning": "Ý nghĩa: Hoàn toàn không phải X; X chẳng đáng kể/chẳng quan trọng gì.",
+      "usage": "Sử dụng: Dùng để phủ nhận mạnh hoặc hạ thấp điều người khác gọi là X. Tránh gắn trực tiếp sau động từ thường mà không danh từ hóa.",
+      "humanMoment": "Dr. Linh lưu ý: 〜もなんでもない khác 〜ではない. ではない chỉ phủ định; でもなんでもない gạt phăng nhãn đó: “X gì đâu mà X”.",
+      "crossLinks": [
+        {
+          "pattern": "〜ではない",
+          "contrast": "Khác 〜もなんでもない: ではない phủ định trung tính; もなんでもない phủ định mạnh và xem X không đáng kể."
+        },
+        {
+          "pattern": "〜にすぎない",
+          "contrast": "〜にすぎない hạ thấp thành “chỉ là”; もなんでもない phủ nhận hẳn nhãn X."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

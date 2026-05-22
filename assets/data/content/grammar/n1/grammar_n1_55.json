@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-て form + は + Verb",
       "meaning": "Ý nghĩa: Dùng để nói một hành động được lặp lại theo chu kỳ: làm X rồi lại làm Y",
-      "usage": "Cách dùng: Với Verb ては Verb, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ては Verb, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + は + Verb thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ては Verb không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng để nói mỗi lần làm X thì lại làm/xảy ra Y, tạo một chu kỳ lặp. Vế sau là hành động/hệ quả được kích hoạt bởi mỗi lần X.",
+      "etymology": "Gốc cấu trúc: て nối hành động X, は biến X thành mốc lặp, rồi động từ sau là phản ứng lặp lại. Verb ては Verb vì vậy là “cứ X là lại Y”.",
+      "hanVietBridge": "反復 = phản phục/lặp lại. 飲んでは止めさせる = cứ uống là lại bắt dừng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ては Verb giống nhật ký lặp. Mỗi lần vế trước bật lên, vế sau lại diễn ra; đừng đọc như một lần nối hành động.",
       "crossLinks": [
         {
-          "pattern": "Noun はおろか～も",
-          "contrast": "Verb ては Verb cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たびに",
+          "contrast": "Khác たびに: たびに trung tính; ては Verb thường nhấn vòng lặp hành động rõ hơn."
+        },
+        {
+          "pattern": "Verb ては",
+          "contrast": "Verb ては có thể để trạng thái/hệ quả rộng; Verb ては Verb nêu rõ động từ lặp ở vế sau."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-plain form + と言わんばかりの Noun",
       "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ theo nghĩa “như thể muốn nói rằng",
-      "usage": "Cách dùng: Với ～と言わんばかりの Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～と言わんばかりの Noun, lõi ばかり là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-plain form + と言わんばかりの Noun thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～と言わんばかりの Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt thông điệp ngầm trước と言わんばかりの để bổ nghĩa cho danh từ như 笑顔, 視線, 態度, 表情. Danh từ ấy như đang nói thay miệng.",
+      "etymology": "Gốc cấu trúc: と trích thông điệp, 言わん là dạng văn cổ “muốn/định nói”, ばかり là gần như, の nối sang danh từ. Cả cụm biến một nét mặt/thái độ thành lời nói ngầm.",
+      "hanVietBridge": "言 = ngôn/nói. 話しかけると言わんばかりの視線 = ánh mắt như muốn nói hãy bắt chuyện.",
+      "humanMoment": "Lưu ý từ Dr. Linh: と言わんばかりの là bong bóng thoại vô hình trên danh từ. Nụ cười, ánh mắt, dáng vẻ đều mang một câu chưa phát ra.",
       "crossLinks": [
         {
           "pattern": "～と言わんばかりに",
-          "contrast": "～と言わんばかりの Noun cần đọc theo chức năng riêng của mẫu; ～と言わんばかりに có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác bản に: と言わんばかりに bổ nghĩa cách hành động; と言わんばかりの bổ nghĩa danh từ."
+        },
+        {
+          "pattern": "〜かのような",
+          "contrast": "かのような là “như thể” rộng; と言わんばかりの nhấn thông điệp như lời nói ngầm."
         }
       ],
       "fallbackReference": {

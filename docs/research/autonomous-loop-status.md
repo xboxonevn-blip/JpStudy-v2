@@ -3069,3 +3069,9 @@
 - Repaired one malformed lesson 52 `とみると` example so the Japanese matches the target pattern.
 - Global Directive E validator progress is now `370/1123`; next failure starts at `grammar:n1:grammar_n1_54:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 059
+- Re-authored N1 rows `Verb ては`, `〜と言わんばかりに`, `Verb ぬいて`, `Verb ては Verb`, and `〜と言わんばかりの Noun`.
+- Renamed lesson-54 `ぬいて` from noun-exclusion to verb-completion and aligned its examples.
+- Global Directive E validator progress is now `375/1123`; next failure starts at `grammar:n1:grammar_n1_55:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

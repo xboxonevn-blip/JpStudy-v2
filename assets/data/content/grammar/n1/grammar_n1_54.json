@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-て form + は",
       "meaning": "Ý nghĩa: Dùng để diễn tả một hành động lặp đi lặp lại rồi dẫn đến kết quả không mong muốn hoặc gây phiền",
-      "usage": "Cách dùng: Với Verb ては, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ては, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + は thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ては không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau động từ thể て để nói mỗi lần X xảy ra thì một trạng thái/hệ quả lại lặp lại. Hay dùng khi chu kỳ ấy gây phiền, mệt hoặc khó kiểm soát.",
+      "etymology": "Gốc cấu trúc: て nối hành động, は đưa hành động ấy lên như mốc lặp lại. Verb ては biến X thành “cứ mỗi lần X thì...”, khác với một lần xảy ra đơn lẻ.",
+      "hanVietBridge": "反復 = phản phục/lặp lại. 会っては緊張する = cứ gặp là lại hồi hộp.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ては là cái vòng lặp. Khi thấy 掃除しては散らかる, trọng tâm là cứ dọn xong thì chu kỳ bừa lại bật lên.",
       "crossLinks": [
         {
-          "pattern": "Noun はおろか～も",
-          "contrast": "Verb ては cần đọc theo chức năng riêng của mẫu; Noun はおろか～も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たびに",
+          "contrast": "Khác たびに: たびに trung tính hơn; ては thường gợi chu kỳ lặp gây cảm giác phiền hoặc dai dẳng."
+        },
+        {
+          "pattern": "Verb ては Verb",
+          "contrast": "ては Verb nêu rõ hành động thứ hai; Verb ては có thể để hệ quả/trạng thái sau rộng hơn."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-volitional + と言わんばかりに, い-Adjective + と言わんばかりに, な-Adjective + だと言わんばかりに, Noun + だと言わんばかりに",
       "meaning": "Ý nghĩa: Dùng để mô tả hành động, thái độ hoặc vẻ mặt như thể đang nói ra một thông điệp nào đó, dù không nói trực tiếp",
-      "usage": "Cách dùng: Với ～と言わんばかりに, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～と言わんばかりに, lõi ばかり là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-volitional + と言わんばかりに, い-Adjective + と言わんばかりに, な-Adjective + だと言わんばかりに, Noun + だと言わんばかりに thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～と言わんばかりに không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng để mô tả hành động/thái độ/vẻ mặt như thể đang nói ra thông điệp X, dù không nói trực tiếp. Phần sau に bổ nghĩa cho cách hành động.",
+      "etymology": "Gốc cấu trúc: と trích thông điệp, 言わん là dạng văn cổ “muốn/định nói”, ばかり là gần như/chỉ còn. と言わんばかりに nghĩa là hành động gần như đang nói X.",
+      "hanVietBridge": "言 = ngôn/nói. 優勝したと言わんばかりに笑った = cười như muốn nói mình đã thắng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: と言わんばかりに là phụ đề cho cơ thể. Người không nói bằng miệng, nhưng nét mặt/hành động đã bật câu X lên.",
       "crossLinks": [
         {
           "pattern": "～と言わんばかりの Noun",
-          "contrast": "～と言わんばかりに cần đọc theo chức năng riêng của mẫu; ～と言わんばかりの Noun có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác bản の: と言わんばかりに bổ nghĩa hành động; と言わんばかりの bổ nghĩa danh từ như 笑顔/態度."
+        },
+        {
+          "pattern": "〜かのように",
+          "contrast": "かのように là “như thể” rộng; と言わんばかりに nhấn thông điệp không nói ra."
         }
       ],
       "fallbackReference": {
@@ -91,12 +101,12 @@
   },
   {
     "lessonId": 54,
-    "title": "Noun + ぬいて（nuite)",
-    "titleEn": "This is a way to express minus or except for some specific noun",
-    "structure": "Noun + ぬいて",
-    "structureEn": "Noun + ぬいて",
-    "explanation": "Dùng để nói ngoại trừ Noun, không tính Noun vào phạm vi đang xét. Có thể hiểu là “không kể”, “trừ”. Cấu trúc: Noun + ぬいて.",
-    "explanationEn": "The grammar point Noun + ぬいて is used when you want to exclude a certain noun from the whole or mention something about everything else except for a specific noun. Its usually translated in English as minus or except for",
+    "title": "Verb ぬいて",
+    "titleEn": "do through to the end; push through",
+    "structure": "Verb-stem + ぬいて",
+    "structureEn": "Verb-stem + ぬいて",
+    "explanation": "Dùng để nói làm một việc đến cùng, xuyên qua giai đoạn khó hoặc hoàn tất sau khi nỗ lực. Cấu trúc: Verb-stem + ぬいて.",
+    "explanationEn": "Verb-stem + ぬいて expresses doing something through to the end, thinking it through, or pushing through a difficult process.",
     "level": "N1",
     "tags": [
       "source-hanabira",
@@ -114,15 +124,20 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + ぬいて",
-      "meaning": "Ý nghĩa: Dùng để nói ngoại trừ Noun, không tính Noun vào phạm vi đang xét",
-      "usage": "Cách dùng: Với Noun + ぬいて（nuite), hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun + ぬいて（nuite), lõi Noun + ぬいて（nuite) là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + ぬいて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun + ぬいて（nuite) không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "form": "Cấu trúc: Verb-stem + ぬいて",
+      "meaning": "Ý nghĩa: Dùng để nói làm một việc đến cùng, xuyên qua giai đoạn khó hoặc hoàn tất sau khi nỗ lực",
+      "usage": "Cách dùng: Gắn ぬいて sau thân ます để nói đã nghĩ/làm/vượt qua đến tận cuối. Hay dùng với 考えぬいて, 乗りぬいて, 読みぬいて.",
+      "etymology": "Gốc cấu trúc: 抜く là rút xuyên qua/làm cho thông suốt. Khi đứng sau thân động từ, ぬいて giữ hình ảnh xuyên qua toàn bộ quá trình cho đến cuối.",
+      "hanVietBridge": "抜 = bạt/rút xuyên. 考えぬいて = suy nghĩ xuyên đến tận cùng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ぬいて không chỉ là “xong”. Trong 考えぬいて, người học phải nghe sức bền: nghĩ qua hết lớp khó rồi mới ra đáp án.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun + ぬいて（nuite) cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ぬく",
+          "contrast": "Khác ぬく: ぬく là dạng từ điển/kết thúc; ぬいて là dạng nối để dẫn sang kết quả phía sau."
+        },
+        {
+          "pattern": "〜きる",
+          "contrast": "きる nhấn làm hết/sạch; ぬく/ぬいて nhấn vượt xuyên qua quá trình, thường có nỗ lực."
         }
       ],
       "fallbackReference": {

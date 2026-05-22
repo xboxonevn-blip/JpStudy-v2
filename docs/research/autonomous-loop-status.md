@@ -2829,3 +2829,9 @@
 - Aligned the blocked-volition row with its `ようにも〜れない` examples and replaced stiff `べからざる` examples with natural fixed-style frames.
 - Global Directive E validator progress is now `170/1123`; next failure starts at `grammar:n1:grammar_n1_18:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 019
+- Re-authored N1 rows `〜べく`, `〜べくもない`, `〜までもない`, `〜ものとする`, and `〜や否や`.
+- Repaired `〜ものとする` examples so the rule/legal register uses real verb obligations instead of `Nとする` classification frames.
+- Global Directive E validator progress is now `175/1123`; next failure starts at `grammar:n1:grammar_n1_18:009`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

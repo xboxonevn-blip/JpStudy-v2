@@ -506,7 +506,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
         widget.mode != GrammarPracticeMode.ghost &&
         constrainToSelectedLevel) {
       points = await repo.fetchPointsByLevel(selectedLevel);
-      points = points.take(20).toList(growable: false);
+      points = points.take(50).toList(growable: false);
     }
 
     // Single batch query for all examples — replaces N*2 queries from
@@ -632,7 +632,7 @@ class _GrammarPracticeScreenState extends ConsumerState<GrammarPracticeScreen> {
       case GrammarSessionType.quick:
         return 10;
       case GrammarSessionType.mastery:
-        return 25;
+        return 50;
       case GrammarSessionType.mock:
         return 35;
     }

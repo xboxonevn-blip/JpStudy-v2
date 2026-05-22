@@ -195,6 +195,45 @@ void main() {
     },
   );
 
+  testWidgets('default mastery practice opens as a fifty-question session', (
+    tester,
+  ) async {
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    addTearDown(() async {
+      await db.close();
+    });
+
+    for (var i = 1; i <= 50; i++) {
+      await seedPoint(
+        db,
+        lessonId: i,
+        jlptLevel: 'N5',
+        grammarPoint: 'N5 pattern $i',
+        titleEn: 'N5 pattern $i',
+        meaningEn: 'meaning $i',
+        sentence: 'これは例文$iです。',
+        translationEn: 'This is example $i.',
+      );
+    }
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          databaseProvider.overrideWithValue(db),
+          appLanguageProvider.overrideWith(
+            (ref) => AppLanguageController.test(AppLanguage.en),
+          ),
+          studyLevelProvider.overrideWith((ref) => StudyLevel.n5),
+        ],
+        child: const MaterialApp(home: GrammarPracticeScreen()),
+      ),
+    );
+
+    await pumpUntilFound(tester, find.text('Question 1 of 50'));
+
+    expect(find.text('Question 1 of 50'), findsOneWidget);
+  });
+
   testWidgets('practice gate runs a focused fifty-question check', (
     tester,
   ) async {

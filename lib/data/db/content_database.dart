@@ -15,8 +15,16 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _vocabSeedRevision = 4;
+const _vocabSeedRevision = 6;
 const _vocabSeedRevisionKeyPrefix = 'vocabSeedRevision';
+const _vocabExampleTemplateFragments = [
+  'を使う文を',
+  '文を一つ作り',
+  'を使った文',
+  'Trong giờ học, tôi dùng',
+  'với nghĩa',
+  'trong một câu ngắn',
+];
 const _grammarSeedRevision = 29;
 const _grammarSeedRevisionKey = 'grammarSeedRevision';
 const _conjugationLemmaAssetPath =
@@ -657,6 +665,10 @@ class ContentDatabase extends _$ContentDatabase {
     return _ensureVocabSeedRevisionForActiveLevel();
   }
 
+  Future<bool> ensureVocabContentCurrentForLevel(String level) {
+    return _ensureVocabSeedRevisionForLevel(level);
+  }
+
   Future<bool> _ensureKanjiContentCurrent() async {
     var repaired = false;
     repaired = await _selfHealKanjiMeaningJaColumn() || repaired;
@@ -760,12 +772,45 @@ class ContentDatabase extends _$ContentDatabase {
     final storedRevision = revisionRows.isEmpty
         ? null
         : int.tryParse('${revisionRows.single.data['value']}');
-    if (storedRevision != null && storedRevision >= _vocabSeedRevision) {
+    final examplesHealthy = await _vocabExampleSeedHealthy(normalizedLevel);
+    if (storedRevision != null &&
+        storedRevision >= _vocabSeedRevision &&
+        examplesHealthy) {
       return false;
     }
 
     await _reseedVocabularyForLevel(normalizedLevel);
     await _markContentRevision(key, _vocabSeedRevision);
+    return true;
+  }
+
+  Future<bool> _vocabExampleSeedHealthy(String normalizedLevel) async {
+    final clauses = _vocabExampleTemplateFragments
+        .map((_) => 'example_sentences_json LIKE ?')
+        .join(' OR ');
+    final rows = await customSelect(
+      'SELECT COUNT(*) AS count FROM vocab '
+      'WHERE level = ? AND ($clauses)',
+      variables: [
+        Variable<String>(normalizedLevel),
+        for (final fragment in _vocabExampleTemplateFragments)
+          Variable<String>('%$fragment%'),
+      ],
+    ).getSingle();
+    final bannedCount = (rows.data['count'] as int?) ?? 0;
+    if (bannedCount > 0) return false;
+
+    if (normalizedLevel == 'N5') {
+      final sentinelRows = await customSelect(
+        'SELECT example_sentences_json FROM vocab '
+        "WHERE level = 'N5' AND series = 'minna' AND term = '私' "
+        'LIMIT 1',
+      ).get();
+      if (sentinelRows.isEmpty) return false;
+      final examples = '${sentinelRows.single.data['example_sentences_json']}';
+      return examples.contains('私の番？') &&
+          examples.contains('tatoeba-cc-by-2.0');
+    }
     return true;
   }
 

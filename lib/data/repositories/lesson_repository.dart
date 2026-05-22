@@ -1212,6 +1212,9 @@ class LessonRepository {
     int? sourceLessonId,
   }) async {
     final existing = await fetchTerms(lessonId);
+    if (_hasTemplateExampleSentences(existing)) {
+      await _contentDb.ensureVocabContentCurrentForLevel(currentLevelLabel);
+    }
 
     // Check if existing terms are the dummy ones and should be replaced
     final isDummy =
@@ -1262,10 +1265,17 @@ class LessonRepository {
       )..where((tbl) => tbl.lessonId.equals(lessonId))).go();
     }
 
-    final vocabList = await _fetchLessonVocabFromContent(
+    var vocabList = await _fetchLessonVocabFromContent(
       sourceLessonId ?? lessonId,
       currentLevelLabel,
     );
+    if (vocabList.isEmpty) {
+      await _contentDb.ensureVocabContentCurrentForLevel(currentLevelLabel);
+      vocabList = await _fetchLessonVocabFromContent(
+        sourceLessonId ?? lessonId,
+        currentLevelLabel,
+      );
+    }
     if (vocabList.isEmpty) {
       return;
     }
@@ -1289,6 +1299,21 @@ class LessonRepository {
           ),
         );
       }
+    });
+  }
+
+  bool _hasTemplateExampleSentences(List<UserLessonTermData> terms) {
+    const bannedFragments = [
+      'を使う文を',
+      '文を一つ作り',
+      'を使った文',
+      'Trong giờ học, tôi dùng',
+      'với nghĩa',
+      'trong một câu ngắn',
+    ];
+    return terms.any((term) {
+      final examples = term.exampleSentencesJson;
+      return bannedFragments.any(examples.contains);
     });
   }
 

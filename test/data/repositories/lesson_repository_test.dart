@@ -271,6 +271,56 @@ void main() {
     },
   );
 
+  test(
+    'seedTermsIfEmpty repairs requested level examples when active level differs',
+    () async {
+      await db.close();
+      await contentDb.close();
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N4'});
+      db = AppDatabase(executor: NativeDatabase.memory());
+      contentDb = ContentDatabase(executor: NativeDatabase.memory());
+      repository = LessonRepository(db, contentDb);
+
+      const lessonId = 1;
+      await repository.ensureLesson(
+        lessonId: lessonId,
+        level: 'N5',
+        title: 'N5 stale example sync test',
+      );
+      await db
+          .into(db.userLessonTerm)
+          .insert(
+            UserLessonTermCompanion.insert(
+              id: const Value(7101),
+              lessonId: lessonId,
+              term: const Value('私'),
+              reading: const Value('わたし'),
+              definition: const Value('tôi'),
+              definitionEn: const Value('I; me'),
+              exampleSentencesJson: const Value(
+                '[{"example_id":"old","ja":"授業で「私」を使う文を一つ作りました.",'
+                '"vi":"Trong giờ học, tôi dùng 「私」 với nghĩa \\"tôi\\" trong một câu ngắn.",'
+                '"audio_url":"","source":"original-jpstudy"}]',
+              ),
+              orderIndex: const Value(1),
+              isLearned: const Value(true),
+            ),
+          );
+      await contentDb.customStatement(
+        "INSERT OR REPLACE INTO content_meta (key, value) "
+        "VALUES ('vocabSeedRevision:N5', '5')",
+      );
+
+      await repository.seedTermsIfEmpty(lessonId, 'N5');
+
+      final terms = await repository.fetchTerms(lessonId);
+      expect(terms.single.exampleSentencesJson, contains('tatoeba-cc-by-2.0'));
+      expect(terms.single.exampleSentencesJson, contains('私の番？'));
+      expect(terms.single.exampleSentencesJson, isNot(contains('を使う文')));
+      expect(terms.single.isLearned, isTrue);
+    },
+  );
+
   test('seedTermsIfEmpty reads upper-level ShinKanzen lesson tags', () async {
     const lessonId = 901;
     await repository.ensureLesson(

@@ -775,3 +775,15 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 - Decision: Do not run deferred anonymous Firebase sign-in when analytics consent is denied and legacy storage migration is disabled.
 - Rationale: Local/live QA must not leak avoidable identitytoolkit 403 console errors; cloud identity remains available when analytics or migration actually needs it.
 - Verification: flutter analyze lib/main.dart test/main_bootstrap_test.dart; flutter test test/main_bootstrap_test.dart; flutter build web --release; Playwright local authgate showed 0 console errors and no identitytoolkit signUp request after deferred bootstrap.
+
+## DECISION-079 - Example sentences require a real-context validator
+- Date: 2026-05-22
+- Decision: Replace generated vocab example filler with validated real-context examples. Tatoeba CC-BY 2.0 rows are preferred when cached; owner/local textbook rows can be supplied through the same row shape; otherwise JpStudy-authored contextual examples are allowed only if the validator passes.
+- Rationale: The old corpus was 100% generated from reusable frames, so it failed the Directive E teaching test. A quality gate has to reject template phrases before content reaches vocab, grammar, or reading pipelines.
+- Verification: `node --test test/tool/qa/validate_example_quality_test.js test/tool/migration/wire_example_sentences_test.js`; `node tool/qa/validate_example_quality.js`; hard banned phrase scan over `assets/data/content`.
+
+## DECISION-080 - Vocab example quality uses sentinels, not version only
+- Date: 2026-05-22
+- Decision: Treat vocab seed revision as necessary but insufficient. If stored vocab content still contains banned example-template fragments, reseed the affected level and then sync stale user lesson terms from content.
+- Rationale: Live local QA found a browser profile that had already consumed the revision bump while retaining old template examples. A content-quality sentinel prevents revision drift from freezing bad examples in installed databases.
+- Verification: `flutter test test/data/db/content_database_lazy_seed_test.dart test/data/repositories/lesson_repository_test.dart test/features/lesson/lesson_detail_screen_test.dart test/data/models/vocab_item_test.dart test/features/flashcards/enhanced_flashcard_screen_test.dart --reporter expanded`; local Playwright screenshot `docs/research/qa-live-2026-05-22-example25-minna-card.png`.

@@ -126,6 +126,87 @@ void main() {
     },
   );
 
+  test(
+    'runtime vocab content ensure upgrades template example sentence installs',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final db = ContentDatabase(executor: NativeDatabase.memory());
+      addTearDown(db.close);
+
+      await db.customStatement(
+        "UPDATE vocab SET example_sentences_json = "
+        "'[{\"example_id\":\"old\",\"ja\":\"授業で「私」を使う文を一つ作りました。\","
+        "\"vi\":\"Trong giờ học, tôi dùng 「私」 với nghĩa \\\"tôi\\\" trong một câu ngắn.\","
+        "\"audio_url\":\"\",\"source\":\"original-jpstudy\"}]' "
+        "WHERE level = 'N5' AND series = 'minna' AND term = '私'",
+      );
+      await db.customStatement(
+        "INSERT OR REPLACE INTO content_meta (key, value) "
+        "VALUES ('vocabSeedRevision:N5', '5')",
+      );
+
+      final repaired = await db.ensureVocabContentCurrentForActiveLevel();
+
+      final row =
+          await (db.select(db.vocab)
+                ..where(
+                  (tbl) =>
+                      tbl.level.equals('N5') &
+                      tbl.series.equals('minna') &
+                      tbl.term.equals('私'),
+                )
+                ..limit(1))
+              .getSingle();
+
+      expect(repaired, isTrue);
+      expect(row.exampleSentencesJson, contains('tatoeba-cc-by-2.0'));
+      expect(row.exampleSentencesJson, isNot(contains('授業で')));
+      expect(row.exampleSentencesJson, isNot(contains('Trong giờ học')));
+    },
+  );
+
+  test(
+    'runtime vocab content ensure repairs current revision template examples',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});
+      final db = ContentDatabase(executor: NativeDatabase.memory());
+      addTearDown(db.close);
+
+      await db.customStatement(
+        "UPDATE vocab SET example_sentences_json = "
+        "'[{\"example_id\":\"old\",\"ja\":\"授業で「私」を使う文を一つ作りました.\","
+        "\"vi\":\"Trong giờ học, tôi dùng 「私」 với nghĩa \\\"tôi\\\" trong một câu ngắn.\","
+        "\"audio_url\":\"\",\"source\":\"original-jpstudy\"}]' "
+        "WHERE level = 'N5' AND series = 'minna' AND term = '私'",
+      );
+      await db.customStatement(
+        "INSERT OR REPLACE INTO content_meta (key, value) "
+        "VALUES ('vocabSeedRevision:N5', '6')",
+      );
+
+      final repaired = await db.ensureVocabContentCurrentForActiveLevel();
+
+      final row =
+          await (db.select(db.vocab)
+                ..where(
+                  (tbl) =>
+                      tbl.level.equals('N5') &
+                      tbl.series.equals('minna') &
+                      tbl.term.equals('私'),
+                )
+                ..limit(1))
+              .getSingle();
+
+      expect(repaired, isTrue);
+      expect(row.exampleSentencesJson, contains('tatoeba-cc-by-2.0'));
+      expect(row.exampleSentencesJson, contains('私の番？'));
+      expect(row.exampleSentencesJson, isNot(contains('を使う文')));
+      expect(row.exampleSentencesJson, isNot(contains('Trong giờ học')));
+    },
+  );
+
   test('seeds kanji Han-Viet labels into decomposition metadata', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({'onboarding.level': 'N5'});

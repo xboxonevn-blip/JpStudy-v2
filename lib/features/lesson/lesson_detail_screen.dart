@@ -18,6 +18,7 @@ import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/models/lesson_term_display.dart';
 import 'package:jpstudy/data/models/mistake_context.dart';
+import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/conjugation_repository.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
 import 'package:jpstudy/core/services/fsrs_service.dart';

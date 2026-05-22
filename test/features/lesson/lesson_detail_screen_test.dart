@@ -23,6 +23,7 @@ UserLessonTermData _term(
   String definition, {
   String reading = '',
   String? definitionEn,
+  String exampleSentencesJson = '[]',
 }) => UserLessonTermData(
   id: id,
   lessonId: 1,
@@ -33,7 +34,7 @@ UserLessonTermData _term(
   mnemonicVi: '',
   mnemonicEn: '',
   kanjiMeaning: '',
-  exampleSentencesJson: '[]',
+  exampleSentencesJson: exampleSentencesJson,
   isStarred: false,
   isLearned: false,
   orderIndex: id,
@@ -392,6 +393,39 @@ void main() {
     );
     expect(find.byKey(const ValueKey('lesson_shortcut_hints')), findsOneWidget);
     expect(find.textContaining('1 / 2'), findsOneWidget);
+  });
+
+  testWidgets('context flashcard back shows real example sentence', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1000, 1200);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      buildScreen([
+        _term(
+          1,
+          '私',
+          'tôi',
+          reading: 'わたし',
+          exampleSentencesJson:
+              '[{"example_id":"tatoeba-8755524","ja":"私の番？","vi":"Đến lượt tôi chưa?","source":"tatoeba-cc-by-2.0"}]',
+        ),
+      ], language: AppLanguage.vi),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    await tester.tap(find.text('Ngữ cảnh'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('私').first);
+    await tester.pumpAndSettle();
+
+    expect(find.text('私の番？'), findsOneWidget);
+    expect(find.text('Đến lượt tôi chưa?'), findsOneWidget);
+    expect(find.textContaining('を使う文'), findsNothing);
   });
 
   testWidgets('mode picker includes conjugation only for conjugable lessons', (

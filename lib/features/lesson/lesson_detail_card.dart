@@ -216,7 +216,15 @@ class _CardContent extends StatelessWidget {
     }
 
     final hintMeaning = resolvedTerm.displayDefinition(language);
-    final contextHint = _contextHint(resolvedTerm, language, hintMeaning);
+    final contextExamples = showExampleMode
+        ? _contextExamples(resolvedTerm)
+        : const <VocabExampleSentence>[];
+    final contextHint = _contextHint(
+      resolvedTerm,
+      language,
+      hintMeaning,
+      contextExamples,
+    );
     final showBack = isFlipped && hintMeaning.trim().isNotEmpty;
     final hintSource = showExampleMode ? contextHint : hintMeaning;
     final frontHint = compactHint
@@ -245,6 +253,7 @@ class _CardContent extends StatelessWidget {
             palette: palette,
             meaning: frontHint,
             kanjiMeaning: resolvedTerm.kanjiMeaning,
+            examples: contextExamples,
           );
 
     final back = frontShowsJapanese
@@ -254,6 +263,7 @@ class _CardContent extends StatelessWidget {
             palette: palette,
             meaning: backMeaning,
             kanjiMeaning: resolvedTerm.kanjiMeaning,
+            examples: contextExamples,
           )
         : _japaneseFace(
             key: ValueKey('back_japanese_$showExampleMode'),
@@ -387,6 +397,7 @@ class _CardContent extends StatelessWidget {
     required AppThemePalette palette,
     required String meaning,
     required String kanjiMeaning,
+    required List<VocabExampleSentence> examples,
   }) {
     return _CardFace(
       key: key,
@@ -409,6 +420,32 @@ class _CardContent extends StatelessWidget {
             style: TextStyle(fontSize: 18, color: palette.ink),
             textAlign: TextAlign.center,
           ),
+          if (examples.isNotEmpty) ...[
+            const SizedBox(height: 18),
+            for (var index = 0; index < examples.length; index++) ...[
+              Text(
+                examples[index].ja,
+                style: TextStyle(
+                  fontSize: 17,
+                  color: palette.ink,
+                  fontWeight: FontWeight.w700,
+                  height: 1.35,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 6),
+              Text(
+                examples[index].vi,
+                style: TextStyle(
+                  fontSize: 15,
+                  color: palette.ink.withValues(alpha: 0.72),
+                  height: 1.35,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              if (index < examples.length - 1) const SizedBox(height: 12),
+            ],
+          ],
           if (language == AppLanguage.vi && kanjiMeaning.trim().isNotEmpty) ...[
             const SizedBox(height: 20),
             Text(
@@ -439,13 +476,27 @@ class _CardContent extends StatelessWidget {
     UserLessonTermData term,
     AppLanguage language,
     String fallback,
+    List<VocabExampleSentence> examples,
   ) {
+    if (examples.isNotEmpty) {
+      final example = examples.first;
+      return switch (language) {
+        AppLanguage.ja => example.ja,
+        AppLanguage.en || AppLanguage.vi => '${example.ja}\n${example.vi}',
+      };
+    }
     final mnemonic = switch (language) {
       AppLanguage.vi => term.mnemonicVi,
       AppLanguage.en || AppLanguage.ja => term.mnemonicEn,
     };
     final clean = mnemonic.trim();
     return clean.isEmpty ? fallback : clean;
+  }
+
+  List<VocabExampleSentence> _contextExamples(UserLessonTermData term) {
+    return parseVocabExampleSentences(
+      term.exampleSentencesJson,
+    ).take(1).toList(growable: false);
   }
 
   String _compactHint(String meaning, int seed) {

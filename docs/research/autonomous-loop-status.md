@@ -2570,3 +2570,11 @@
 - Gated anonymous auth bootstrap behind analytics opt-in or legacy migration need.
 - Local release QA after deferred bootstrap: 0 console errors; no identitytoolkit signUp request.
 - Evidence: docs/research/qa-live-2026-05-22-local-authgate-no-signup.png.
+
+## 2026-05-22 Urgent fix #25 example sentence anti-template gate
+- Rewrote vocab example wiring around real-context examples: Tatoeba CC-BY rows first, cached owner/local rows next, authored contextual fallback last.
+- Added `tool/qa/validate_example_quality.js` to reject example template filler and scan corpus, wired vocab files, and broader content for banned frames.
+- Regenerated `examples_corpus.json` and all wired vocab `example_sentences`; banned template scan over `assets/data/content` returned no matches.
+- Minna N5 Bài 1 `私` now uses a Tatoeba CC-BY example instead of the old classroom template.
+- Added content/user-lesson repair guards so stale local installs at vocab seed revision 5 or 6 are reseeded when template example fragments remain.
+- Local Playwright release proof: Minna N5 Bài 1 `私` context/flip shows `私の番？` / `Đến lượt tôi chưa?`; no old `Trong giờ học...` template remains. Evidence: `docs/research/qa-live-2026-05-22-example25-minna-card.png`.

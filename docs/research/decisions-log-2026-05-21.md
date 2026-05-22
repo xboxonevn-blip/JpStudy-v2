@@ -639,3 +639,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Acceptance requires the learner-facing route to expose a 50-question session, not only the underlying bank. This keeps the UI, runtime session, and density contract aligned.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-065 - Phase F acceptance uses live asset plus UI spot proof
+**Phase**: Phase F reading comprehension scale-up
+**Date**: 2026-05-22 09:45 (Asia/Saigon)
+**Context**: Phase F had already generated a large reading corpus, but the autonomous status needed fresh proof that the deployed Firebase bundle, not only local files, exposed the scaled content and that the JLPT reading UI could open passages across levels.
+**Options considered**: rely on local validator only | click every one of 968 deployed passages | combine live asset validation, random sample inspection, and N1-N5 UI list/open screenshots
+**Chosen**: Validate the deployed reading corpus asset for counts and required fields, sample 20 passages from the live asset, and archive Playwright screenshots for N1-N5 desktop list/opened states plus N5 mobile list/opened states.
+**Rationale**: This proves the deployed data surface and the learner-facing route without spending the phase budget on 968 repetitive visual clicks. Local validators and widget tests cover schema/density regressions; live screenshots cover route rendering and passage opening.
+**Reversible**: yes
+**Owner review**: pending

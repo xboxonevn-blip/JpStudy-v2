@@ -2340,3 +2340,19 @@
   `qa-live-2026-05-22-phase-e-flashcard-examples.png`.
 - Phase E is verified complete; continuing Phase F reading-comprehension scale-up
   next.
+
+## 2026-05-22 Phase F reading-comprehension scale-up verified
+
+- Live Firebase asset check confirmed `968` reading passages across `484`
+  lesson slots: N5 `150`, N4 `150`, N3 `166`, N2 `326`, N1 `176`; every lesson
+  slot has at least two passages and the 20-passage random sample had valid
+  `passage_id`, title, Japanese body, and 3 questions.
+- Gates passed: `node tool/qa/validate_exercises.js`,
+  `node --test test/tool/research/exercise_assets_test.js`, focused
+  `flutter analyze`, and JLPT reading widget/mobile tests.
+- Live Playwright proof covered N1-N5 desktop list + opened passage screens and
+  N5 mobile list + opened passage screen with 0 app console errors.
+- Screenshots archived as
+  `qa-live-2026-05-22-phase-f-reading-*.png`.
+- Phase F is verified complete; continuing Phase G Option C tooling/content
+  quality next.

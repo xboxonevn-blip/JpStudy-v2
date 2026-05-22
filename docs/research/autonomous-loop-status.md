@@ -2322,3 +2322,21 @@
 - Final visual proof archived for home chrome, vocab catalog, grammar detail
   disclosure/attribution, Minna lesson 1/8 conjugation behavior, and grammar
   practice desktop/mobile under `docs/research/qa-live-2026-05-22-*.png`.
+
+## 2026-05-22 Phase E example sentences verified
+
+- Phase E implementation is present on `main` via `56acc1be`: vocab rows carry
+  `example_sentences[]`, `user_lesson_term` mirrors them as
+  `exampleSentencesJson`, and `EnhancedFlashcard` renders up to two examples on
+  the back side with a JP/VI toggle.
+- Current asset validation passed: `node tool/migration/wire_example_sentences.js
+  --validate-only` validated 314 vocab files; `19,465/19,465` vocab entries
+  have at least one valid example sentence.
+- Gates passed: focused `flutter analyze`, `enhanced_flashcard_screen_test`,
+  and `wire_example_sentences_test.js`.
+- Live proof on `https://jpstudy.web.app/#/vocab/hajimete/chapter?level=N5`
+  shows the card back rendering the `Example` panel with JP text and 0 console
+  errors/warnings. Screenshot archived as
+  `qa-live-2026-05-22-phase-e-flashcard-examples.png`.
+- Phase E is verified complete; continuing Phase F reading-comprehension scale-up
+  next.

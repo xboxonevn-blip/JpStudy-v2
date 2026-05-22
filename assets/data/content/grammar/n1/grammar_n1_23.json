@@ -434,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + に難くない (commonly with 想像する, 理解する, 察する, etc.)",
-      "meaning": "Ý nghĩa: Dùng để nói không khó để tưởng tượng, hiểu hoặc đoán ra điều gì.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc chữ 難い đọc かたい trong mẫu này, nghĩa là khó làm. Khi đi với に và phủ định ない, 〜に難くない thành “không khó để A”, thường cố định với 想像・理解・察する trong văn trang trọng.",
+      "hanVietBridge": "難 là nan/khó. 想像に難くない là “không khó tưởng tượng”; 察するに難くない là “không khó suy ra”.",
+      "form": "Hình thức: N + に難くない với 想像/理解; V辞書形 + に難くない với 察するなど.",
+      "meaning": "Ý nghĩa: Không khó để tưởng tượng, hiểu, đoán hoặc suy xét điều gì.",
+      "usage": "Sử dụng: Hợp văn viết, phân tích, bình luận. Không dùng cho “bài tập dễ” bình thường; dùng cho khả năng suy đoán/hiểu.",
+      "humanMoment": "Dr. Linh lưu ý: 〜に難くない khác 簡単だ. 簡単だ nói việc dễ; に難くない nói người đọc có thể suy ra/hiểu điều đó không khó.",
+      "crossLinks": [
+        {
+          "pattern": "簡単だ",
+          "contrast": "Khác 〜に難くない: 簡単だ là dễ nói chung; に難くない trang trọng và gắn với suy đoán/hiểu."
+        },
+        {
+          "pattern": "〜やすい",
+          "contrast": "〜やすい nói dễ làm hành động; に難くない nói không khó để tưởng tượng/hiểu/đoán."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

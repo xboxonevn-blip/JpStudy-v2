@@ -2907,3 +2907,9 @@
 - Repaired one `〜に至った` example so the process reaches a natural endpoint.
 - Global Directive E validator progress is now `235/1123`; next failure starts at `grammar:n1:grammar_n1_23:010`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 032
+- Re-authored N1 rows `〜に難くない`, `〜のはNぐらいのものだ`, `〜ば〜ものを`, `〜びた`, and `〜びる`.
+- Polished `〜びた/〜びる` examples so the suffix split and romaji are correct.
+- Global Directive E validator progress is now `240/1123`; next failure starts at `grammar:n1:grammar_n1_24:005`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

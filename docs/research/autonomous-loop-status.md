@@ -3075,3 +3075,9 @@
 - Renamed lesson-54 `ぬいて` from noun-exclusion to verb-completion and aligned its examples.
 - Global Directive E validator progress is now `375/1123`; next failure starts at `grammar:n1:grammar_n1_55:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 060
+- Re-authored N1 rows `〜ぬく`, `Verb てまでも`, `〜ながらに`, `Noun+のいかんだ`, and `Verb てみせる`.
+- Repaired unnatural examples for `ぬく`, `のいかん`, and `てみせる` so examples match the target grammar.
+- Global Directive E validator progress is now `380/1123`; next failure starts at `grammar:n1:grammar_n1_57:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

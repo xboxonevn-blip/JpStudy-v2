@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-て form + までも",
       "meaning": "Ý nghĩa: Dùng để nói sẵn sàng làm cả X để đạt mục đích, hoặc “đến mức phải làm X”",
-      "usage": "Cách dùng: Với Verb てまでも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb てまでも, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + までも thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb てまでも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt việc hy sinh hoặc biện pháp bất thường ở Verb-て trước までも, rồi nêu mục tiêu phía sau. Sắc thái là mục tiêu đủ quan trọng để đi xa đến mức đó.",
+      "etymology": "Gốc rễ: まで là “đến tận”, も kéo thêm ý “ngay cả”. Verb てまでも gom một hành động thành mốc cực hạn mà người nói sẵn sàng chạm tới: 寝る時間を削ってまでも là đến mức cắt cả giấc ngủ.",
+      "hanVietBridge": "Liên tưởng “đến mức” của まで: đường ưu tiên đi tới tận điểm hy sinh. Tiếng Việt nên dịch bằng “dù phải...”, tránh dịch cứng từng mảnh thành “đến cũng”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb てまでも cần một cái giá thật ở vế trước. Nếu thay bằng việc bình thường hằng ngày, câu mất lực; so với までもない, mẫu này đi về hướng “dám trả giá”, không phải “khỏi cần làm”.",
       "crossLinks": [
         {
           "pattern": "Verbる までもない",
-          "contrast": "Verb てまでも cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác Verb てまでも: までもない nói “không cần đến mức làm”, còn てまでも nói “dù phải làm đến mức đó”."
+        },
+        {
+          "pattern": "Verb-てでも",
+          "contrast": "So với てでも, てまでも nghe trang trọng và nhấn mốc cực hạn mạnh hơn."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Common set phrases: 生まれながらに, 涙ながらに, 昔ながらに, 子供ながらに, etc",
       "meaning": "Ý nghĩa: Dùng để nói một trạng thái vẫn giữ nguyên từ trước đến nay hoặc xảy ra ngay trong trạng thái đó",
-      "usage": "Cách dùng: Với ～ながらに, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ながらに, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Common set phrases: 生まれながらに, 涙ながらに, 昔ながらに, 子供ながらに, etc thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ながらに không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: chủ yếu xuất hiện trong cụm cố định như 生まれながらに, 涙ながらに, 昔ながらに, 子供ながらに. Mẫu giữ nguyên trạng thái hoặc cho thấy hành động xảy ra ngay trong trạng thái đó.",
+      "etymology": "Gốc rễ: ながら vốn kéo hai lớp ý cùng tồn tại; に biến cả cụm thành trạng thái nền cho mệnh đề sau. Trong 生まれながらに, trạng thái “từ lúc sinh ra” không phải hành động song song mà là nền bẩm sinh kéo dài.",
+      "hanVietBridge": "Cầu Hán-Việt: hãy nghĩ “trạng thái nền” hơn “đang làm”. 生まれながらに gần “bẩm sinh”, 昔ながらに gần “như cũ/từ xưa”, 涙ながらに là “trong nước mắt”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～ながらに không phải mọi “vừa... vừa...” đều thay vào được. Tôi kiểm tra xem cụm có tính cố định như 生まれながらに hay 涙ながらに; còn hành động song song bình thường thì dùng ながら.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～ながらに cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-stem + ながら",
+          "contrast": "Khác ～ながらに: ながら thường nói hai hành động song song, còn ながらに là trạng thái/cụm cố định."
+        },
+        {
+          "pattern": "～まま",
+          "contrast": "So với ～まま giữ nguyên trạng thái rộng hơn, ～ながらに thường văn viết và gắn với các cụm quen thuộc."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + のいかんだ/Noun + のいかんでは",
       "meaning": "Ý nghĩa: Dùng để nói kết quả phụ thuộc vào nội dung, tình trạng hoặc mức độ của Noun",
-      "usage": "Cách dùng: Với Noun+のいかんだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun+のいかんだ, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + のいかんだ/Noun + のいかんでは thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun+のいかんだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, tình trạng hoặc mức độ trước のいかんだ để nói phán quyết phụ thuộc vào nội dung ấy. Văn viết, thông báo, quy định; thường gặp 結果のいかんで/努力のいかんによって.",
+      "etymology": "Gốc rễ: いかん viết 如何: 何 “hà/cái gì” + 如 “như thế nào”. の nối danh từ thành câu hỏi ngầm “tình trạng của N ra sao”; だ chốt kết luận phụ thuộc vào trạng thái đó, không phải hỏi trực tiếp.",
+      "hanVietBridge": "如何 có Hán-Việt “như hà”: ra sao. Vì vậy 結果のいかんだ là “tùy kết quả ra sao”, trang trọng hơn 次第だ và xa hơn よる trong văn nói.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: với Noun+のいかんだ, hãy nhìn danh từ trước の như chiếc cân chính thức: kết quả, thái độ, mức độ. So với 次第だ, いかん nghe như văn bản xét duyệt hơn là lời nói thường ngày.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun+のいかんだ cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun + 次第だ",
+          "contrast": "Khác Noun+のいかんだ ở sắc thái: 次第だ tự nhiên hơn trong hội thoại, のいかんだ trang trọng và cứng hơn."
+        },
+        {
+          "pattern": "Noun + による",
+          "contrast": "So với による, のいかんだ nhấn việc xét nội dung/mức độ của danh từ trước khi ra quyết định."
         }
       ],
       "fallbackReference": {

@@ -14,10 +14,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N を Số lượng từ + V",
-      "meaning": "Ý nghĩa: Từ chỉ số lượng thường đứng ngay trước động từ, không cần thêm trợ từ sau số lượng.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: を giữ vai trò đánh dấu vật bị tác động, còn cụm số lượng như ３つ hoặc ２枚 chen ngay trước động từ để đo chính hành động. Không thêm に/で sau số lượng vì bản thân số lượng đã làm trạng ngữ định lượng.",
+      "hanVietBridge": "Cầu Hán-Việt: 数量 là 'số lượng'; hãy đọc câu theo trục đối tượng -> lượng -> hành động, giống tiếng Việt 'ăn cam ba quả' nhưng tiếng Nhật giữ を sau danh từ.",
+      "form": "Hình thức: N を + số lượng/counter + V. Ví dụ: みかんを３つ食べました。",
+      "meaning": "Ý nghĩa: làm hành động V với đúng số lượng N được nêu.",
+      "usage": "Sử dụng: dùng khi số lượng đo trực tiếp đối tượng của hành động; đặt số lượng sát động từ để người nghe chờ hành động gì xảy ra với lượng đó.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: với Nを３つ食べました, đừng đặt ３つ sau を như một danh từ mới. を vẫn ôm みかん; ３つ chỉ đo hành động ăn, khác với に khi nói tần suất.",
+      "crossLinks": [
+        {
+          "pattern": "S (thời gian) に ～回 V",
+          "contrast": "Phân biệt: Nを３つV đo số lượng vật trong một lần hành động, còn １週間に２回V đo tần suất trong một khoảng thời gian."
+        },
+        {
+          "pattern": "N だけ",
+          "contrast": "Khác: だけ giới hạn phạm vi 'chỉ N', không đếm số lượng như ３つ/２枚."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -42,10 +54,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S (thời gian) に ～回 V",
-      "meaning": "Ý nghĩa: Dùng để nói tần suất làm một việc trong một khoảng thời gian.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: に ở đây không chỉ nơi chốn mà neo một khung thời gian; 回 là chữ Hán 'hồi/lần'. Cấu trúc thời gianに số回 V nghĩa là đặt bao nhiêu lần hành động vào một đơn vị thời gian.",
+      "hanVietBridge": "Cầu Hán-Việt: 回 đọc Hán-Việt là 'hồi', quen trong 'một hồi, nhiều hồi'. Dùng nó như đơn vị đếm lần: １日に３回 = ba lần trong một ngày.",
+      "form": "Hình thức: khoảng thời gian + に + số + 回 + V. Ví dụ: １週間に２回泳ぎます。",
+      "meaning": "Ý nghĩa: diễn tả tần suất làm V trong một khoảng thời gian.",
+      "usage": "Sử dụng: đặt khung thời gian trước に, rồi số lần với 回; phù hợp cho thói quen, lịch học, lịch làm việc.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: １週間に２回 không phải 'vào hai lần' mà là 'trong một tuần hai lần'. に đang chia lịch, khác với Nを３つV đo số lượng đồ vật.",
+      "crossLinks": [
+        {
+          "pattern": "N を Số lượng từ + V",
+          "contrast": "Phân biệt: mẫu を + số lượng đo đối tượng của hành động; thời gianに～回 đo số lần trong một khung thời gian."
+        },
+        {
+          "pattern": "どのくらい V ますか",
+          "contrast": "Khác: どのくらい hỏi khoảng bao lâu/bao nhiêu; ～に～回 trả lời cụ thể về tần suất."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -70,10 +94,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: どのくらい V ますか",
-      "meaning": "Ý nghĩa: `どのくらい` dùng để hỏi độ dài thời gian, số lượng ước chừng hoặc mức độ.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: どの là 'mức nào/cái nào', くらい là khoảng chừng/mức độ. Ghép lại thành câu hỏi về độ dài, lượng hoặc mức: người nói chưa cần con số chính xác, chỉ cần một khoảng ước lượng.",
+      "hanVietBridge": "Cầu Hán-Việt: hãy nhớ bằng cặp 'độ lượng': どのくらい hỏi độ dài, độ nhiều, độ thường. Tiếng Việt nói 'khoảng bao lâu', tiếng Nhật gói ý đó vào くらい.",
+      "form": "Hình thức: どのくらい + Vますか. Ví dụ: どのくらいかかりますか。",
+      "meaning": "Ý nghĩa: hỏi khoảng thời gian, số lượng ước chừng hoặc mức độ.",
+      "usage": "Sử dụng: dùng khi câu trả lời có thể là ２時間, ３つ, １週間に２回, hoặc một mức độ gần đúng.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: どのくらい không ép người nghe trả lời tuyệt đối chính xác. Nó mở cửa cho 'khoảng...', khác với 何回 khi chỉ hỏi số lần.",
+      "crossLinks": [
+        {
+          "pattern": "S (thời gian) に ～回 V",
+          "contrast": "Phân biệt: どのくらい là câu hỏi mở về lượng/mức; thời gianに～回 là một kiểu câu trả lời cụ thể về tần suất."
+        },
+        {
+          "pattern": "何回",
+          "contrast": "Khác: 何回 hỏi số lần rõ hơn, còn どのくらい có thể hỏi thời lượng hoặc mức độ rộng hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -98,10 +134,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N だけ",
-      "meaning": "Ý nghĩa: `だけ` đứng sau danh từ, nghĩa là “chỉ N thôi, không có gì khác”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: だけ vốn mang ý 'đúng chừng ấy, chỉ phần ấy'. Khi đứng sau danh từ, nó khoanh phạm vi lại như vẽ một vòng tròn quanh N và loại phần còn lại ra ngoài.",
+      "hanVietBridge": "Cầu Hán-Việt: liên hệ với 'độc/chỉ' trong tiếng Việt: 休みは日曜日だけです = ngày nghỉ chỉ độc/chỉ có chủ nhật.",
+      "form": "Hình thức: N + だけ. Ví dụ: 日曜日だけ, これだけ。",
+      "meaning": "Ý nghĩa: chỉ N thôi; không bao gồm thứ khác.",
+      "usage": "Sử dụng: đặt sau danh từ hoặc lượng muốn giới hạn; khi đứng trong câu, các trợ từ khác có thể đi sau だけ tùy vai trò.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: だけ giống cái khung khoanh đỏ quanh một lựa chọn. 日曜日だけ khác với 日曜日も; だけ đóng cửa phần còn lại, も mở thêm.",
+      "crossLinks": [
+        {
+          "pattern": "N も",
+          "contrast": "Phân biệt: も thêm 'cũng/cả', còn だけ giới hạn 'chỉ'. Hai sắc thái đi ngược nhau."
+        },
+        {
+          "pattern": "N1やN2など",
+          "contrast": "Khác: や...など mở danh sách ví dụ; だけ thu hẹp danh sách còn một phạm vi."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

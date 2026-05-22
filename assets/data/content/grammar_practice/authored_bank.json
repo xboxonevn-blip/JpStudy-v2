@@ -12511,6 +12511,1114 @@
         "など chỉ dùng cho người sống.",
         "や bắt buộc kể hết danh sách."
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-form-l1-001",
+      "template_id": "tpl-grammar-n5-059-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn vị trí đúng của số lượng: みかんを ___ 食べました。",
+      "answer_template": "３つ",
+      "distractor_strategy": "quantifier-before-verb",
+      "teaching_note": "Số lượng đứng ngay trước động từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "３つ",
+        "に３つ",
+        "で３つ",
+        "３つを"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-form-l1-002",
+      "template_id": "tpl-grammar-n5-059-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đặt số lượng đúng trong mẫu Nを số lượng V?",
+      "answer_template": "りんごを２つ買いました。",
+      "distractor_strategy": "particle-after-quantity-trap",
+      "teaching_note": "Không thêm trợ từ sau ２つ trong mẫu này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "りんごを２つ買いました。",
+        "りんごを２つを買いました。",
+        "りんごに２つ買いました。",
+        "りんごを買いました２つ。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-059-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "パンを２つ食べました nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi đã ăn hai cái bánh mì.",
+      "distractor_strategy": "quantity-object-meaning",
+      "teaching_note": "２つ đo số lượng パン được ăn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Tôi đã ăn hai cái bánh mì.",
+        "Tôi ăn bánh mì hai lần mỗi ngày.",
+        "Hai người ăn bánh mì.",
+        "Tôi chỉ ăn bánh mì."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-059-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong 本を３冊読みました, ３冊 đo phần nào?",
+      "answer_template": "Đo số quyển sách được đọc.",
+      "distractor_strategy": "counter-role-recall",
+      "teaching_note": "Counter gắn với đối tượng của hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-usage-l3-005",
+      "template_id": "tpl-grammar-n5-059-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tôi uống hai cốc nước - 水 / を / ２杯 / 飲みました",
+      "answer_template": "水を２杯飲みました。",
+      "distractor_strategy": "counter-production-order",
+      "teaching_note": "２杯 đứng trước 飲みました.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "水",
+        "を",
+        "２杯",
+        "飲みました"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-usage-l3-006",
+      "template_id": "tpl-grammar-n5-059-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi mua ba cái vé.",
+      "answer_template": "切符を３枚買いました。",
+      "distractor_strategy": "mai-counter-production",
+      "teaching_note": "Vé là vật mỏng nên dùng 枚 trong ví dụ cơ bản.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-context-l3-007",
+      "template_id": "tpl-grammar-n5-059-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Ở cửa hàng, bạn muốn nói đã mua hai quyển sách. Câu nào hợp?",
+      "answer_template": "本を２冊買いました。",
+      "distractor_strategy": "book-counter-context",
+      "teaching_note": "冊 đếm sách/quyển.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "本を２冊買いました。",
+        "本に２冊買いました。",
+        "本を２回買いました。",
+        "本だけ２冊です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-context-l2-008",
+      "template_id": "tpl-grammar-n5-059-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói số lượng đồ vật, không nói tần suất?",
+      "answer_template": "りんごを３つ食べます。",
+      "distractor_strategy": "quantity-vs-frequency-context",
+      "teaching_note": "３つ là lượng đồ vật; ３回 là số lần.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "りんごを３つ食べます。",
+        "１日に３回食べます。",
+        "りんごだけ食べます。",
+        "りんごも食べます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-059-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: bạn ăn 3 quả quýt trong bữa sáng. Câu nào đúng nhất?",
+      "answer_template": "みかんを３つ食べました。",
+      "distractor_strategy": "quantity-analysis",
+      "teaching_note": "L4: chọn mẫu đo vật, không chọn mẫu tần suất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "みかんを３つ食べました。",
+        "みかんに３回食べました。",
+        "みかんだけ３つ食べましたか。",
+        "３つにみかんを食べました。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-059-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-059-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_11:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng ３つ và ３回?",
+      "answer_template": "３つ đếm đồ vật; ３回 đếm số lần.",
+      "distractor_strategy": "counter-vs-kai-analysis",
+      "teaching_note": "L4: lượng vật và tần suất không cùng vai.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "３つ đếm đồ vật; ３回 đếm số lần.",
+        "３つ và ３回 luôn thay thế được nhau.",
+        "３回 chỉ dùng sau を.",
+        "３つ luôn cần に phía trước."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-form-l1-001",
+      "template_id": "tpl-grammar-n5-060-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền mẫu tần suất: １週間 ___ ２回泳ぎます。",
+      "answer_template": "に",
+      "distractor_strategy": "time-frame-ni",
+      "teaching_note": "に neo khung thời gian cho số lần.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "に",
+        "を",
+        "で",
+        "が"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-form-l1-002",
+      "template_id": "tpl-grammar-n5-060-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu đúng cho 'mỗi tháng hai lần'.",
+      "answer_template": "１か月に２回",
+      "distractor_strategy": "frequency-frame-order",
+      "teaching_note": "Khung thời gian + に + số回.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "１か月に２回",
+        "２回に１か月",
+        "１か月を２回",
+        "２回を１か月"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-060-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "１日に３回薬を飲みます nghĩa là gì?",
+      "answer_template": "Tôi uống thuốc ba lần trong một ngày.",
+      "distractor_strategy": "frequency-meaning",
+      "teaching_note": "１日に đặt khung một ngày; ３回 là ba lần.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Tôi uống thuốc ba lần trong một ngày.",
+        "Tôi uống ba viên thuốc một lần.",
+        "Tôi chỉ uống thuốc hôm nay.",
+        "Tôi uống thuốc lúc ba giờ."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-060-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong １年に４回, 回 cho biết gì?",
+      "answer_template": "Số lần xảy ra trong một năm.",
+      "distractor_strategy": "kai-role-recall",
+      "teaching_note": "回 là counter cho lần/lượt.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-usage-l3-005",
+      "template_id": "tpl-grammar-n5-060-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tôi học tiếng Nhật ba lần một tuần - １週間 / に / ３回 / 日本語を / 勉強します",
+      "answer_template": "１週間に３回日本語を勉強します。",
+      "distractor_strategy": "frequency-production-order",
+      "teaching_note": "Tần suất đứng trước hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "１週間",
+        "に",
+        "３回",
+        "日本語を",
+        "勉強します"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-usage-l3-006",
+      "template_id": "tpl-grammar-n5-060-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi đi bệnh viện một tháng một lần.",
+      "answer_template": "１か月に１回病院へ行きます。",
+      "distractor_strategy": "monthly-frequency-production",
+      "teaching_note": "１か月に１回 là một lần trong một tháng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-context-l3-007",
+      "template_id": "tpl-grammar-n5-060-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn mô tả lịch tập: bơi hai lần mỗi tuần. Câu nào đúng?",
+      "answer_template": "１週間に２回泳ぎます。",
+      "distractor_strategy": "weekly-frequency-context",
+      "teaching_note": "Dùng に sau khung １週間.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "１週間に２回泳ぎます。",
+        "１週間を２回泳ぎます。",
+        "２回に１週間泳ぎます。",
+        "１週間だけ泳ぎます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-context-l2-008",
+      "template_id": "tpl-grammar-n5-060-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói tần suất, không nói số lượng đồ vật?",
+      "answer_template": "１日に２回食べます。",
+      "distractor_strategy": "frequency-vs-object-count-context",
+      "teaching_note": "回 đếm lần; つ đếm vật.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "１日に２回食べます。",
+        "りんごを２つ食べます。",
+        "りんごだけ食べます。",
+        "２つ買います。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-060-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: lịch ghi Mon/Wed/Fri học tiếng Nhật. Câu nào tóm tắt đúng?",
+      "answer_template": "１週間に３回日本語を勉強します。",
+      "distractor_strategy": "schedule-frequency-analysis",
+      "teaching_note": "L4: ba ngày trong tuần là ba lần mỗi tuần.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "１週間に３回日本語を勉強します。",
+        "日本語を３つ勉強します。",
+        "１週間だけ日本語を勉強します。",
+        "３回に１週間日本語を勉強します。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-060-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-060-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_11:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng に trong tần suất và に chỉ thời điểm?",
+      "answer_template": "１週間に２回 là khung tần suất; ７時に là thời điểm.",
+      "distractor_strategy": "ni-frequency-vs-time-analysis",
+      "teaching_note": "L4: cùng に nhưng vai trò khác theo danh từ trước nó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "１週間に２回 là khung tần suất; ７時に là thời điểm.",
+        "１週間に２回 luôn nghĩa là lúc hai giờ.",
+        "７時に luôn cần 回 phía sau.",
+        "に không dùng với thời gian."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-form-l1-001",
+      "template_id": "tpl-grammar-n5-061-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền câu hỏi: ___ かかりますか。",
+      "answer_template": "どのくらい",
+      "distractor_strategy": "duration-question-word",
+      "teaching_note": "どのくらい hỏi khoảng bao lâu/bao nhiêu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どのくらい",
+        "だれ",
+        "どこ",
+        "なにを"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-form-l1-002",
+      "template_id": "tpl-grammar-n5-061-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào dùng đúng どのくらい để hỏi thời lượng?",
+      "answer_template": "どのくらい勉強しますか。",
+      "distractor_strategy": "question-word-placement",
+      "teaching_note": "どのくらい đứng trước động từ/cụm cần hỏi mức.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どのくらい勉強しますか。",
+        "だれ勉強しますか。",
+        "どのくらいを勉強しますか。",
+        "勉強どのくらいですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-061-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "どのくらいかかりますか nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Mất khoảng bao lâu?",
+      "distractor_strategy": "duration-meaning",
+      "teaching_note": "かかります hỏi thời gian/chi phí cần thiết.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Mất khoảng bao lâu?",
+        "Ai sẽ đi?",
+        "Đi ở đâu?",
+        "Chỉ mất một lần?"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-061-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "どのくらい thường cho phép kiểu trả lời nào?",
+      "answer_template": "Một khoảng thời gian, số lượng hoặc mức độ ước chừng.",
+      "distractor_strategy": "approximate-answer-recall",
+      "teaching_note": "くらい mang sắc thái khoảng chừng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-usage-l3-005",
+      "template_id": "tpl-grammar-n5-061-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Bạn học khoảng bao lâu? - どのくらい / 勉強します / か",
+      "answer_template": "どのくらい勉強しますか。",
+      "distractor_strategy": "duration-question-production",
+      "teaching_note": "か kết thúc câu hỏi lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どのくらい",
+        "勉強します",
+        "か"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-usage-l3-006",
+      "template_id": "tpl-grammar-n5-061-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Từ nhà đến trường mất khoảng bao lâu?",
+      "answer_template": "うちから学校までどのくらいかかりますか。",
+      "distractor_strategy": "travel-time-production",
+      "teaching_note": "から...まで đặt đoạn đường; どのくらい hỏi thời lượng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-context-l3-007",
+      "template_id": "tpl-grammar-n5-061-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn hỏi nhân viên: đi Tokyo mất bao lâu. Câu nào hợp?",
+      "answer_template": "東京までどのくらいかかりますか。",
+      "distractor_strategy": "travel-context",
+      "teaching_note": "どのくらいかかりますか rất tự nhiên khi hỏi thời gian di chuyển.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "東京までどのくらいかかりますか。",
+        "東京までだれがかかりますか。",
+        "東京だけかかりますか。",
+        "東京を３つかかりますか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-context-l2-008",
+      "template_id": "tpl-grammar-n5-061-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào hỏi mức độ/khoảng, không hỏi người?",
+      "answer_template": "どのくらい読みますか。",
+      "distractor_strategy": "question-word-context",
+      "teaching_note": "だれ hỏi người; どのくらい hỏi lượng/mức.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どのくらい読みますか。",
+        "だれが読みますか。",
+        "どこで読みますか。",
+        "何を読みますか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-061-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: câu trả lời là '２時間ぐらいです'. Câu hỏi nào hợp nhất?",
+      "answer_template": "どのくらいかかりますか。",
+      "distractor_strategy": "answer-fit-analysis",
+      "teaching_note": "L4: ２時間ぐらい trả lời cho câu hỏi thời lượng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どのくらいかかりますか。",
+        "何回行きますか。",
+        "だれが行きますか。",
+        "何を買いますか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-061-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-061-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_11:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng どのくらい và 何回?",
+      "answer_template": "どのくらい hỏi khoảng/mức; 何回 hỏi số lần.",
+      "distractor_strategy": "donokurai-vs-nankai-analysis",
+      "teaching_note": "L4: hai câu hỏi có loại đáp án khác nhau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どのくらい hỏi khoảng/mức; 何回 hỏi số lần.",
+        "どのくらい chỉ hỏi người.",
+        "何回 trả lời bằng ２時間.",
+        "Hai mẫu luôn giống nhau."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-form-l1-001",
+      "template_id": "tpl-grammar-n5-062-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền 'chỉ': 日曜日 ___ 休みです。",
+      "answer_template": "だけ",
+      "distractor_strategy": "only-particle",
+      "teaching_note": "だけ đứng sau danh từ bị giới hạn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "だけ",
+        "も",
+        "や",
+        "と"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-form-l1-002",
+      "template_id": "tpl-grammar-n5-062-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào dùng đúng Nだけ?",
+      "answer_template": "水だけ飲みます。",
+      "distractor_strategy": "dake-position",
+      "teaching_note": "だけ bám sau danh từ 水.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "水だけ飲みます。",
+        "だけ水飲みます。",
+        "水をだけ飲みます。",
+        "水にだけを飲みます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-062-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "休みは日曜日だけです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Ngày nghỉ chỉ có chủ nhật.",
+      "distractor_strategy": "only-meaning",
+      "teaching_note": "だけ loại những ngày khác ra ngoài.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Ngày nghỉ chỉ có chủ nhật.",
+        "Chủ nhật cũng là ngày nghỉ.",
+        "Chủ nhật và thứ bảy là ngày nghỉ.",
+        "Chủ nhật không phải ngày nghỉ."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-062-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "だけ thêm sắc thái gì cho danh từ trước nó?",
+      "answer_template": "Giới hạn phạm vi vào đúng danh từ đó.",
+      "distractor_strategy": "limit-scope-recall",
+      "teaching_note": "だけ là marker giới hạn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-usage-l3-005",
+      "template_id": "tpl-grammar-n5-062-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tôi chỉ mua một quyển sách - 本 / だけ / 買いました",
+      "answer_template": "本だけ買いました。",
+      "distractor_strategy": "only-production-order",
+      "teaching_note": "だけ đứng sau 本.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "本",
+        "だけ",
+        "買いました"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-usage-l3-006",
+      "template_id": "tpl-grammar-n5-062-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi chỉ hiểu tiếng Nhật một chút.",
+      "answer_template": "日本語は少しだけわかります。",
+      "distractor_strategy": "adverbial-only-production",
+      "teaching_note": "少しだけ giới hạn mức độ hiểu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-context-l3-007",
+      "template_id": "tpl-grammar-n5-062-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn nói chỉ uống nước, không uống trà/cà phê. Câu nào hợp?",
+      "answer_template": "水だけ飲みます。",
+      "distractor_strategy": "only-drink-context",
+      "teaching_note": "だけ loại các đồ uống khác.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "水だけ飲みます。",
+        "水も飲みます。",
+        "水やお茶を飲みます。",
+        "水を３杯飲みます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-context-l2-008",
+      "template_id": "tpl-grammar-n5-062-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào giới hạn phạm vi, không mở thêm danh sách?",
+      "answer_template": "日曜日だけ休みです。",
+      "distractor_strategy": "limit-vs-add-context",
+      "teaching_note": "だけ thu hẹp; や/も mở thêm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "日曜日だけ休みです。",
+        "日曜日も休みです。",
+        "土曜日や日曜日が休みです。",
+        "日曜日に２回休みます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-062-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: quán chỉ nghỉ chủ nhật, không nghỉ thứ bảy. Câu nào đúng nhất?",
+      "answer_template": "休みは日曜日だけです。",
+      "distractor_strategy": "only-day-analysis",
+      "teaching_note": "L4: chỉ một ngày nên dùng だけ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "休みは日曜日だけです。",
+        "休みは日曜日もです。",
+        "休みは土曜日や日曜日です。",
+        "休みは日曜日に２回です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-062-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-062-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_11:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng だけ và も?",
+      "answer_template": "だけ giới hạn 'chỉ'; も thêm 'cũng/cả'.",
+      "distractor_strategy": "dake-vs-mo-analysis",
+      "teaching_note": "L4: だけ và も kéo nghĩa theo hai hướng trái nhau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "だけ giới hạn 'chỉ'; も thêm 'cũng/cả'.",
+        "だけ và も luôn giống nhau.",
+        "も giới hạn một thứ duy nhất.",
+        "だけ luôn đếm số lần."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-form-l1-001",
+      "template_id": "tpl-grammar-n5-063-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn quá khứ của あついです.",
+      "answer_template": "あつかったです",
+      "distractor_strategy": "i-adjective-past",
+      "teaching_note": "Tính từ い bỏ い thêm かったです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "あつかったです",
+        "あついでした",
+        "あつくでした",
+        "あついかったです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-form-l1-002",
+      "template_id": "tpl-grammar-n5-063-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn quá khứ lịch sự của しずかです.",
+      "answer_template": "しずかでした",
+      "distractor_strategy": "na-adjective-past",
+      "teaching_note": "Tính từ な dùng でした ở quá khứ lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "しずかでした",
+        "しずかったです",
+        "しずかいでした",
+        "しずかくなかったです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-063-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "きのうは寒かったです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Hôm qua trời đã lạnh.",
+      "distractor_strategy": "past-adjective-meaning",
+      "teaching_note": "かったです đưa tính chất về quá khứ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Hôm qua trời đã lạnh.",
+        "Hôm qua trời không lạnh.",
+        "Ngày mai trời lạnh.",
+        "Hôm qua tôi đi lạnh."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-063-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Vì sao あついでした sai trong N5 chuẩn?",
+      "answer_template": "Vì tính từ い tự đổi thành あつかったです, không gắn trực tiếp でした.",
+      "distractor_strategy": "i-adjective-copula-trap",
+      "teaching_note": "Không trộn đuôi い nguyên dạng với でした.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-usage-l3-005",
+      "template_id": "tpl-grammar-n5-063-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Hôm qua đã bận - きのう / は / 忙しかったです",
+      "answer_template": "きのうは忙しかったです。",
+      "distractor_strategy": "i-adjective-past-production",
+      "teaching_note": "忙しい -> 忙しかったです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "きのう",
+        "は",
+        "忙しかったです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-usage-l3-006",
+      "template_id": "tpl-grammar-n5-063-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tuần trước tôi rảnh.",
+      "answer_template": "先週は暇でした。",
+      "distractor_strategy": "na-adjective-past-production",
+      "teaching_note": "暇 là tính từ な, dùng でした.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-context-l3-007",
+      "template_id": "tpl-grammar-n5-063-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn nói món ăn hôm qua ngon. Câu nào đúng?",
+      "answer_template": "きのうの料理はおいしかったです。",
+      "distractor_strategy": "oishii-past-context",
+      "teaching_note": "おいしい -> おいしかったです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "きのうの料理はおいしかったです。",
+        "きのうの料理はおいしいでした。",
+        "きのうの料理はおいしかったでした。",
+        "きのうの料理はおいしくです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-context-l2-008",
+      "template_id": "tpl-grammar-n5-063-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào là quá khứ của tính từ な, không phải tính từ い?",
+      "answer_template": "町は静かでした。",
+      "distractor_strategy": "na-vs-i-context",
+      "teaching_note": "静か đi với でした.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "町は静かでした。",
+        "町は寒かったです。",
+        "町は高かったです。",
+        "町は新しかったです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-063-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: tính từ là たのしい, nói 'chuyến đi đã vui'. Câu nào đúng?",
+      "answer_template": "旅行は楽しかったです。",
+      "distractor_strategy": "i-adjective-analysis",
+      "teaching_note": "L4: nhận diện い-adjective rồi đổi い -> かったです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "旅行は楽しかったです。",
+        "旅行は楽しいでした。",
+        "旅行は楽しかったでした。",
+        "旅行は楽しくでした。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-063-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-063-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_12:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng quá khứ của tính từ い và な?",
+      "answer_template": "高い -> 高かったです; 便利 -> 便利でした.",
+      "distractor_strategy": "i-na-past-analysis",
+      "teaching_note": "L4: hai nhóm tính từ có hai đường biến hóa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "高い -> 高かったです; 便利 -> 便利でした.",
+        "高い -> 高いでした; 便利 -> 便利かったです.",
+        "Cả hai nhóm đều thêm かったです.",
+        "Cả hai nhóm đều giữ nguyên rồi thêm でした."
+      ]
     }
   ]
 }

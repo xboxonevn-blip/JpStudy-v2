@@ -2398,3 +2398,25 @@
   validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
   --check` (line-ending warnings only). Global Directive E validator is now
   `58/80` Tier-1 grammar items passed; 22 expected failures remain.
+
+## 2026-05-22 Phase G Tier-1 items 059-063
+
+- Re-authored `grammar:n5:grammar_n5_11:001-004` and
+  `grammar:n5:grammar_n5_12:001` with pattern-specific Directive E content for
+  quantity counters, frequency per time, `どのくらい`, `だけ`, and adjective past
+  tense.
+- Added 50 hand-crafted templates: 10 per item, covering form, meaning, usage,
+  context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `Nを数量詞V`: `を` keeps the object role; the quantity measures the action,
+    not a new particle phrase.
+  - `時間に～回V`: `に` anchors a time frame; `回` counts occurrences inside it.
+  - `どのくらいVますか`: asks for an approximate duration, quantity, or degree;
+    it is broader than `何回`.
+  - `Nだけ`: narrows the scope to N, unlike `も` adding another member.
+  - `Aい->Aかったです / Aな->Aでした`: i-adjectives change their own ending;
+    na-adjectives use the copula past.
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `63/80` Tier-1 grammar items passed; 17 expected failures remain.

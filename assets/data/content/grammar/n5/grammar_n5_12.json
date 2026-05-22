@@ -14,10 +14,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Aい -> Aかったです / Aな -> Aでした",
-      "meaning": "Ý nghĩa: Dùng để nói một tính chất đã đúng trong quá khứ.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: tính từ い tự mang đuôi biến hóa nên bỏ い rồi thêm かったです; tính từ な gần danh từ hơn, nên quá khứ lịch sự mượn でした. Hai đường này khác nhau vì bản chất ngữ pháp của hai nhóm tính từ khác nhau.",
+      "hanVietBridge": "Cầu Hán-Việt: hãy nghĩ 'tính chất đã qua'. Nhóm い tự đổi thân từ; nhóm な cần hệ copula です/でした giống câu danh từ.",
+      "form": "Hình thức: Aい -> Aかったです; Aな -> Aでした. Ví dụ: あつい -> あつかったです, ひま -> ひまでした。",
+      "meaning": "Ý nghĩa: nói một tính chất đã đúng trong quá khứ.",
+      "usage": "Sử dụng: dùng khi đánh giá thời tiết, đồ ăn, nơi chốn, cảm giác ở thời điểm đã qua; không dùng でした trực tiếp sau tính từ い.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: あついでした nghe sai vì tính từ い đã có máy biến hóa riêng. あつかったです khác với ひまでした: một bên đổi đuôi い, một bên đổi です.",
+      "crossLinks": [
+        {
+          "pattern": "Aい -> Aくないです / Aな -> Aじゃありません",
+          "contrast": "Phân biệt: phủ định đổi sang くない/じゃありません, còn quá khứ khẳng định dùng かったです/でした."
+        },
+        {
+          "pattern": "N1 は N2 でした",
+          "contrast": "Khác: danh từ dùng でした giống tính từ な, nhưng tính từ い không đi thẳng với でした."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

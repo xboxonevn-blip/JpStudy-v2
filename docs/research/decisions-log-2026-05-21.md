@@ -649,3 +649,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This proves the deployed data surface and the learner-facing route without spending the phase budget on 968 repetitive visual clicks. Local validators and widget tests cover schema/density regressions; live screenshots cover route rendering and passage opening.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-066 - Phase G Tier-1 batches continue in 5-item slices
+**Phase**: Phase G Option C Tier-1
+**Date**: 2026-05-22 10:35 (Asia/Saigon)
+**Context**: Tier-1 grammar content still had 22 validator failures after item 058, and the owner required roughly 5 items per commit with real Directive E voice plus authored templates.
+**Options considered**: author all remaining failures in one commit | split Directive E and exercise templates into separate commits | continue 5-item slices that pair Directive E rewrite with 10 templates per item
+**Chosen**: Continue 5-item slices; batch 059-063 covers quantity counters, frequency per time, `どのくらい`, `だけ`, and adjective past tense in one commit.
+**Rationale**: Pairing explanation quality and exercise coverage keeps each item shippable, keeps review scope small, and matches Directive A/F validation boundaries.
+**Reversible**: yes
+**Owner review**: pending

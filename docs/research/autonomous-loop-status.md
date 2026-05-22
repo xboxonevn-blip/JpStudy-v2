@@ -2775,3 +2775,9 @@
 - Corrected `〜そばから` structure from masu-stem to dictionary/た-form and repaired two `〜そうにない` examples for natural attachment.
 - Global Directive E validator progress is now `125/1123`; next failure starts at `grammar:n1:grammar_n1_13:008`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 010
+- Re-authored N1 rows `〜たが最後`, `〜たことにしてください`, `〜たら〜たで`, `〜たらきりがない`, and `〜たら最後`.
+- Fixed a `〜たら〜たで` romaji typo and tightened the `たが最後`/`たら最後`/`たらきりがない` contrast chain.
+- Global Directive E validator progress is now `130/1123`; next failure starts at `grammar:n1:grammar_n1_14:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

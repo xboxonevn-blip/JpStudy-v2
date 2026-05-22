@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-た form + ら + きりがない",
-      "meaning": "Ý nghĩa: Dùng để nói nếu bắt đầu làm, kể hoặc nghĩ về điều gì thì sẽ không có điểm dừng.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜たらきりがない là 切り/きり: điểm cắt, giới hạn, chỗ dừng. ない phủ định giới hạn ấy: đã bắt đầu A thì không thấy điểm dừng.",
+      "hanVietBridge": "切 có âm Hán-Việt là thiết/cắt. きりがない là không có vết cắt kết thúc; việc A mở ra một chuỗi kéo dài mãi.",
+      "form": "Hình thức: động từ thể た + ら + きりがない. Hay dùng với 考えたら, 数えたら, 言い出したら, 貸したら.",
+      "meaning": "Ý nghĩa: Nếu bắt đầu A thì không có hồi kết, không biết đâu là điểm dừng. Thường khuyên không nên sa vào A.",
+      "usage": "Sử dụng: A nên là việc có thể kéo dài/vòng lặp: 文句を言ったらきりがない. Nếu nhấn hậu quả không cứu vãn, dùng たら最後.",
+      "humanMoment": "Dr. Linh lưu ý: 〜たらきりがない khác 〜たら最後. きりがない là không có điểm dừng; たら最後 là một khi A thì hậu quả coi như chốt.",
+      "crossLinks": [
+        {
+          "pattern": "〜たら最後",
+          "contrast": "Khác 〜たらきりがない: 〜たら最後 nhấn không quay lại; 〜たらきりがない nhấn kéo dài không hết."
+        },
+        {
+          "pattern": "〜始めると止まらない",
+          "contrast": "〜始めると止まらない đời thường hơn; 〜たらきりがない khái quát và văn viết hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-た form + ら最後",
-      "meaning": "Ý nghĩa: Dùng để nói một khi đã làm X thì tình huống sẽ chuyển sang hướng không thể cứu vãn, thường là tiêu cực.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜たら最後 là 最後: tối hậu, cuối cùng. たら đặt giả định nếu A xảy ra; 最後 biến A thành điểm chốt sau đó khó cứu.",
+      "hanVietBridge": "最後 = tối hậu. Hãy nhớ たら最後 như nếu A xảy ra thì đó là chặng tối hậu: mọi chuyện chuyển sang hướng không thể lùi.",
+      "form": "Hình thức: động từ thể た + ら最後 + hậu quả tiêu cực/khó dừng. Ví dụ 始めたら最後, 怒らせたら最後.",
+      "meaning": "Ý nghĩa: Một khi A xảy ra thì coi như hết, không quay lại được, thường kéo theo hậu quả xấu hoặc mất kiểm soát.",
+      "usage": "Sử dụng: Dùng với cảnh báo/giả định: 彼を怒らせたら最後. Nếu chỉ nói bắt đầu rồi kéo dài không hết, たらきりがない hợp hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜たら最後 khác 〜たが最後. たら最後 đặt điều kiện cảnh báo; たが最後 nghe như điểm chốt văn viết sau khi A xảy ra.",
+      "crossLinks": [
+        {
+          "pattern": "〜たが最後",
+          "contrast": "Khác 〜たら最後: 〜たら最後 là nếu A thì hết đường; 〜たが最後 kể A như mốc đã chốt trong văn cứng hơn."
+        },
+        {
+          "pattern": "〜たらきりがない",
+          "contrast": "〜たらきりがない nhấn không có hồi kết; 〜たら最後 nhấn hậu quả không quay lại."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

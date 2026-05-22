@@ -709,3 +709,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This fixes a concrete route mismatch while preserving existing navigation. The regression tests cover the audit symptoms without changing already-correct route/error-boundary behavior.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-072 - P1 audit items require evidence before new edits
+**Phase**: Urgent fix batch P1
+**Date**: 2026-05-22 14:45 (Asia/Saigon)
+**Context**: The live audit listed six P1 issues, but current `main` already contained targeted fixes for Minna vocab quality, lesson-scoped conjugation, grammar Directive E progressive disclosure, 50-question grammar practice, authored Tier-1 templates, and the 10-program vocab catalog.
+**Options considered**: rework every P1 area immediately | trust prior commits without fresh checks | run focused guards first and patch only failing surfaces
+**Chosen**: Treat P1 as an evidence sweep unless a focused guard or live check fails. Run the existing data/widget/template validators, then move to P2 after logging the verified state.
+**Rationale**: This avoids destabilizing already-correct surfaces while still respecting the audit. Any later Playwright mismatch becomes a concrete failing symptom with a targeted patch.
+**Reversible**: yes
+**Owner review**: pending

@@ -2514,3 +2514,18 @@
   through route smoke tests; the friendly not-found page remains active.
 - Re-verified Shin Kanzen grammar architecture: lesson indexes and shipped
   grammar files remain N3=83, N2=163, N1=88.
+
+## 2026-05-22 Urgent fix batch P1 evidence sweep
+
+- H1 Minna vocab quality guard passed: Minna N5/N4 has no generated kanji
+  coverage rows; lesson 1 keeps lesson words rather than orphan kanji glosses.
+- H2 conjugation lesson guard passed: Minna N5 Bài 1 hides conjugation, while
+  lesson-scoped conjugable lessons render only their own verbs/adjectives.
+- H3 grammar detail guard passed: Directive E depth is progressively disclosed
+  under `Tìm hiểu sâu hơn`, examples collapse only for long lists, and legacy
+  `KẾT NỐI` duplication is absent from the detail widget tests.
+- H4/H5 grammar exercise guards passed for current Tier-1 scope: 800 authored
+  templates across 80 grammar items, five angles, Bloom L1-L4, and runtime
+  sessions open as 50-question checks.
+- H6 vocab catalog guard passed: textbook index renders 10 vocab programs from
+  Hajimete, Minna, and Mimikara, with Mimikara restricted to N3/N2/N1.

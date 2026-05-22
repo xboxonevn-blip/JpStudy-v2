@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + に堪える, Noun + に堪える",
       "meaning": "Ý nghĩa: Dùng để nói một việc đáng để làm hoặc đủ sức chịu được sự đánh giá, thử thách",
-      "usage": "Cách dùng: Với ～に堪える, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に堪える, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + に堪える, Noun + に堪える thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に堪える không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng Verb/Noun + に堪える khi việc đó đủ đáng để xem/nghe/đọc hoặc đủ sức chịu sự đánh giá. Hay gặp 読むに堪える, 見るに堪える, 参考に堪える.",
+      "etymology": "Gốc rễ: 堪える là “chịu được/đủ sức kham”; に đặt tiêu chí đánh giá trước nó. 読むに堪える nghĩa là nội dung đủ sức chịu việc đọc, tức đáng đọc.",
+      "hanVietBridge": "堪 là Hán-Việt “kham”: kham nổi, chịu nổi. ～に堪える là “khả kham” trước việc đọc/nghe/xem hoặc đánh giá.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～に堪える là con dấu “đủ đáng”. Khác に堪えない rơi xuống không chịu nổi/không đáng, に堪える nói chất lượng còn đứng vững trước mắt người đọc/nghe.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～に堪える cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～に堪えない",
+          "contrast": "Khác ～に堪える: に堪える là đáng/đủ chịu được, còn に堪えない là không chịu nổi hoặc không đáng."
+        },
+        {
+          "pattern": "Noun に耐える",
+          "contrast": "So với 耐える chịu áp lực vật lý/tinh thần, 堪える trong 読むに堪える đánh giá mức đáng đọc/nghe/xem."
         }
       ],
       "fallbackReference": {
@@ -96,10 +101,10 @@
   },
   {
     "lessonId": 64,
-    "title": "Noun の手前",
-    "titleEn": "Expresses the idea of Before doing something; on the verge of",
-    "structure": "Noun + の手前",
-    "structureEn": "Noun + の手前",
+    "title": "Noun の手前 / Verbた手前",
+    "titleEn": "Because of face, position, or having already done/said something",
+    "structure": "Noun + の手前 / Verb-た + 手前",
+    "structureEn": "Noun + の手前 / Verb-た + 手前",
     "explanation": "Dùng khi vì thể diện, vị thế hoặc ánh nhìn của Noun mà người nói khó làm khác đi. Có thể hiểu là “vì trước mặt Noun”, “do phải giữ thể diện với Noun”. Cấu trúc: Noun + の手前.",
     "explanationEn": "This grammar point is used to express the idea of being on the verge of doing something, or just before some major action/event. Nouns that are frequently used with this structure often denote an action or event (試験の手前, 選挙の手前, etc.)",
     "level": "N1",
@@ -119,15 +124,20 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + の手前",
+      "form": "Cấu trúc: Noun + の手前 / Verb-た + 手前",
       "meaning": "Ý nghĩa: Dùng khi vì thể diện, vị thế hoặc ánh nhìn của Noun mà người nói khó làm khác đi",
-      "usage": "Cách dùng: Với Noun の手前, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun の手前, lõi Noun の手前 là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + の手前 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun の手前 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt người/nhóm trước の手前 hoặc việc đã nói/làm trước た手前 để nêu áp lực thể diện: trước mặt N, hoặc đã lỡ V rồi nên khó làm khác.",
+      "etymology": "Gốc rễ: 手前 là “phía trước tay/mặt trước”. Từ vị trí trước mặt người khác, mẫu mở rộng thành ánh nhìn xã hội và thể diện: 皆の手前 là dưới mắt mọi người.",
+      "hanVietBridge": "Cầu Hán-Việt: nhớ “diện tiền/thể diện”. Noun の手前 không chỉ là vị trí trước mặt, mà là cái mặt xã hội khiến người nói bị ràng buộc.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun の手前 có người chứng kiến trong bóng câu. Khác 前に chỉ thời gian/vị trí trước, 手前 buộc người nói giữ mặt hoặc giữ lời.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun の手前 cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun の前に",
+          "contrast": "Khác Noun の手前: の前に chỉ trước về vị trí/thời gian, の手前 thêm áp lực thể diện hoặc vị thế."
+        },
+        {
+          "pattern": "Verb-た以上",
+          "contrast": "So với た以上 nhấn trách nhiệm logic sau khi đã làm, た手前 nhấn giữ mặt/giữ lời sau việc đã xảy ra."
         }
       ],
       "fallbackReference": {

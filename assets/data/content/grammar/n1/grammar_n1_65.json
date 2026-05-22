@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-conditional form (ば) + きりがない",
       "meaning": "Ý nghĩa: Dùng để nói nếu bắt đầu làm, nói hoặc liệt kê X thì sẽ không có điểm dừng",
-      "usage": "Cách dùng: Với Verb ば きりがない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ば きりがない, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-conditional form (ば) + きりがない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ば きりがない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt hành động bắt đầu liệt kê, nói, đếm, phàn nàn ở dạng ば trước きりがない. Mẫu nói nếu mở chuỗi ấy ra thì sẽ không có điểm dừng.",
+      "etymology": "Gốc rễ: きり là “điểm cắt/điểm kết”; がない phủ định điểm kết ấy. Verb ば dựng điều kiện “nếu bắt đầu V”, nên toàn mẫu là nếu V thì không có chỗ cắt.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “vô tận” nhưng có nút khởi động. 欠点を数えればきりがない là hễ bắt đầu đếm khuyết điểm thì không thấy điểm dừng.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ば きりがない cần một danh sách hoặc chuỗi có thể kéo dài. Khác たらきりがない rất gần nghĩa, ば nghe như điều kiện khái quát hơn.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb ば きりがない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb たら きりがない",
+          "contrast": "Khác Verb ば きりがない chủ yếu ở sắc thái: ば khái quát hơn, たら gần tình huống cụ thể hơn."
+        },
+        {
+          "pattern": "Verb ては Verb",
+          "contrast": "So với ては Verb mô tả chu kỳ lặp, ばきりがない đánh giá chuỗi ấy không có hồi kết."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + に耐える",
       "meaning": "Ý nghĩa: Dùng để nói chịu đựng hoặc chống chọi được với Noun, như áp lực, đau đớn, thử thách",
-      "usage": "Cách dùng: Với ～に耐える, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に耐える, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に耐える thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に耐える không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt áp lực, đau đớn, gió, động đất, thử thách trước に耐える để nói chủ thể chịu đựng hoặc chống chọi được. Đây là sức bền trước lực tác động.",
+      "etymology": "Gốc rễ: 耐える là “chịu đựng/chống chịu”; に đánh dấu lực hoặc hoàn cảnh mà chủ thể phải chịu. 強風に耐える là đứng vững trước gió mạnh.",
+      "hanVietBridge": "耐 là Hán-Việt “nại”: chịu được. Noun に耐える là “nại N”, khác với 堪える khi đánh giá một thứ có đáng đọc/nghe/xem hay không.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～に耐える có sức ép thật trong câu. Khác に堪える là đáng chịu sự đánh giá, に耐える là cơ thể/công trình/tinh thần chịu lực.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～に耐える cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～に堪える",
+          "contrast": "Khác ～に耐える: 耐える chịu áp lực, còn 堪える trong 読むに堪える là đáng/đủ chịu sự đánh giá."
+        },
+        {
+          "pattern": "Noun に耐えられない",
+          "contrast": "So với phủ định 耐えられない là không chịu nổi lực, に耐える nói chủ thể vẫn đứng vững."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + の極み",
       "meaning": "Ý nghĩa: Dùng để nói Noun đạt đến mức tột cùng, thường với các danh từ chỉ cảm xúc như 感激, 光栄, 無念",
-      "usage": "Cách dùng: Với Noun の極み, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun の極み, lõi Noun の極み là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + の極み thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun の極み không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ cảm xúc/giá trị trước の極み để nói trạng thái đạt mức tột cùng: 光栄の極み, 感激の極み, 贅沢の極み. Sắc thái trang trọng, thường dùng trong lời phát biểu.",
+      "etymology": "Gốc rễ: 極み là điểm cực hạn/đỉnh cuối của một thang. の nối cảm xúc hoặc giá trị vào điểm cực ấy, tạo nghĩa “cực điểm của N”.",
+      "hanVietBridge": "極 là Hán-Việt “cực” trong cực hạn. Noun の極み chính là “cực điểm của N”, nên hợp với danh từ như vinh dự, cảm kích, xa hoa, tiếc nuối.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun の極み không dành cho cảm xúc vừa vừa. Khác 極めて chỉ là phó từ “rất”, の極み biến N thành đỉnh cao trang trọng.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun の極み cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "極めて",
+          "contrast": "Khác Noun の極み: 極めて là phó từ “rất”, còn の極み là danh từ hóa đỉnh điểm của N."
+        },
+        {
+          "pattern": "Noun の至り",
+          "contrast": "So với の至り cũng chỉ cực điểm cảm xúc, の極み nhấn đỉnh/cực hạn rõ hơn."
         }
       ],
       "fallbackReference": {

@@ -2865,3 +2865,9 @@
 - Fixed a malformed `ではすまない` example to `謝るだけではすまない` and clarified `つもり` as intention/self-perception rather than only schedule.
 - Global Directive E validator progress is now `200/1123`; next failure starts at `grammar:n1:grammar_n1_20:004`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 025
+- Re-authored N1 rows `〜とあって`, `〜とあれば`, `〜といえども`, `〜といったらありはしない`, and `〜といったらありゃしない`.
+- Repaired one colloquial exclamation example so `ありゃしない` attaches to a natural nominalized degree phrase.
+- Global Directive E validator progress is now `205/1123`; next failure starts at `grammar:n1:grammar_n1_20:009`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

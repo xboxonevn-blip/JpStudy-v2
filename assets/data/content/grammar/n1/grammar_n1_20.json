@@ -158,10 +158,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + とあって / (Sometimes Verb + とあって, depending on context)",
-      "meaning": "Ý nghĩa: Dùng để nêu một hoàn cảnh đặc biệt làm nguyên nhân cho tình trạng phía sau.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "と trích dẫn/đóng khung hoàn cảnh, あって là dạng て của ある: “vì đang có hoàn cảnh A”. Cấu trúc này biến A thành lý do đáng chú ý cho cảnh tượng phía sau.",
+      "hanVietBridge": "ある là có/tồn tại; とあって gần “vì có hoàn cảnh A nên...”. Tiếng Việt tự nhiên: vì đúng dịp/là A nên.",
+      "form": "Hình thức: danh từ/mệnh đề + とあって + tình trạng kết quả.",
+      "meaning": "Ý nghĩa: Vì hoàn cảnh đặc biệt A nên B xảy ra.",
+      "usage": "Sử dụng: Hay gặp trong tin tức, mô tả sự kiện, đám đông, dịp đặc biệt. A thường là lý do nổi bật, không phải lý do bình thường.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とあって khác 〜ので. ので chỉ vì; とあって làm A nghe như hoàn cảnh đặc biệt giải thích cảnh phía sau.",
+      "crossLinks": [
+        {
+          "pattern": "〜ので",
+          "contrast": "Khác 〜とあって: 〜ので nêu lý do rộng; 〜とあって nhấn dịp/hoàn cảnh đáng chú ý."
+        },
+        {
+          "pattern": "〜とあれば",
+          "contrast": "〜とあれば là điều kiện “nếu đúng là A”; 〜とあって là nguyên nhân trong hoàn cảnh đã có."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -192,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + とあれば / い-Adjective + とあれば / な-Adjective + だとあれば / Noun + だとあれば",
-      "meaning": "Ý nghĩa: Dùng để nói nếu đúng là hoàn cảnh X thì người nói sẵn sàng làm hoặc điều phía sau là đương nhiên.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "と đóng khung nội dung giả định, あれば là “nếu có/nếu tồn tại”. Về cấu trúc, 〜とあれば nghĩa là nếu hoàn cảnh A đúng là có, phản ứng B là tự nhiên/sẵn sàng.",
+      "hanVietBridge": "あれば là nếu có; とあれば gần “nếu đúng là A thì...”. Sắc thái mạnh hơn điều kiện なら vì B thường là phản ứng đương nhiên.",
+      "form": "Hình thức: mệnh đề thường + とあれば; danh từ/な-adj thường dùng だとあれば.",
+      "meaning": "Ý nghĩa: Nếu đúng là A thì B là đương nhiên/người nói sẵn sàng B.",
+      "usage": "Sử dụng: Dùng cho điều kiện có sức thúc đẩy hành động: vì gia đình, vì khách hàng, nếu miễn phí, nếu cần.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とあれば khác 〜なら. なら chỉ đặt điều kiện; とあれば làm điều kiện nghe đủ mạnh để kéo phản ứng phía sau.",
+      "crossLinks": [
+        {
+          "pattern": "〜なら",
+          "contrast": "Khác 〜とあれば: 〜なら trung tính; 〜とあれば nhấn nếu đúng là A thì hành động/kết luận phía sau tất nhiên."
+        },
+        {
+          "pattern": "〜とあって",
+          "contrast": "〜とあって nêu hoàn cảnh đã có; 〜とあれば nêu điều kiện giả định hoặc được xác nhận."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -226,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + といえども / Verb-plain form + といえども / Adjective + といえども",
-      "meaning": "Ý nghĩa: Dùng để nói dù là X, dù được gọi là X, thì vẫn có điều ngoại lệ hoặc hạn chế.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "といえども đến từ と言えども: “dù có thể nói là A”. ども là yếu tố nhượng bộ cổ, nên cấu trúc giữ nhãn A nhưng mở ra ngoại lệ/hạn chế phía sau.",
+      "hanVietBridge": "言 là nói; といえども gần “dù nói là A”. Tiếng Việt tự nhiên: dù là A đi nữa, vẫn B.",
+      "form": "Hình thức: danh từ / động từ thường / tính từ + といえども + mệnh đề trái kỳ vọng.",
+      "meaning": "Ý nghĩa: Dù là/được gọi là A, vẫn có ngoại lệ hoặc hạn chế B.",
+      "usage": "Sử dụng: Trang trọng hơn ても. Hợp khi muốn phá một giả định mạnh như chuyên gia, thiên tài, mùa xuân.",
+      "humanMoment": "Dr. Linh lưu ý: 〜といえども khác 〜ても. ても dùng rộng; といえども nghe trang trọng và thường thách thức một nhãn/uy tín lớn.",
+      "crossLinks": [
+        {
+          "pattern": "〜ても",
+          "contrast": "Khác 〜といえども: 〜ても trung tính; 〜といえども trang trọng và nhấn “dù mang danh A”."
+        },
+        {
+          "pattern": "〜とはいえ",
+          "contrast": "〜とはいえ mềm hơn trong văn nói/văn viết; 〜といえども cổ và trang trọng hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -260,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + といったらありはしない / な-Adjective + といったらありはしない",
-      "meaning": "Ý nghĩa: Dùng để cảm thán mức độ cực kỳ mạnh của một trạng thái, thường là tiêu cực.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Về cấu trúc, といったら là “nếu nói đến A thì...”, ありはしない là phủ định nhấn mạnh “không hề có”. Cả cụm phóng đại rằng mức độ của A không còn gì để so hoặc nói thêm.",
+      "hanVietBridge": "言 là nói; 有りはしない là không có. Aといったらありはしない dịch tự nhiên: A đến mức không thể tả/không gì bằng.",
+      "form": "Hình thức: danh từ / な-adj + といったらありはしない.",
+      "meaning": "Ý nghĩa: A cực kỳ đến mức không thể tả; cảm thán mức độ rất mạnh.",
+      "usage": "Sử dụng: Dùng trong văn viết/giọng nhấn mạnh, thường với cảm xúc rõ. ありはしない trang trọng hơn dạng co ありゃしない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜といったらありはしない khác 〜といったらない. ありはしない nghe đầy đủ/trang trọng hơn; といったらない gọn hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜といったらない",
+          "contrast": "Khác 〜といったらありはしない: といったらない gọn hơn; ありはしない nhấn phủ định đầy đủ hơn."
+        },
+        {
+          "pattern": "〜といったらありゃしない",
+          "contrast": "ありゃしない là dạng co, thân mật hơn của ありはしない."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -294,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + といったらありゃしない / い-Adjective + といったらありゃしない / な-Adjective + だ + といったらありゃしない / Noun + だ + といったらありゃしない",
-      "meaning": "Ý nghĩa: Dùng trong văn nói để nhấn mạnh mức độ cực đoan: “khỏi phải nói là...",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "ありゃしない là dạng co thân mật của ありはしない. Khi đi sau といったら, cấu trúc biến cảm thán thành “nói đến A thì không còn gì hơn/không thể tả”.",
+      "hanVietBridge": "ありゃ là co âm của 有りは. といったらありゃしない dịch tự nhiên: A không thể tả nổi, khỏi phải nói là A đến mức nào.",
+      "form": "Hình thức: động từ/tính từ/danh từ + といったらありゃしない.",
+      "meaning": "Ý nghĩa: Cực kỳ A; A đến mức không thể tả, với giọng thân mật/cảm thán.",
+      "usage": "Sử dụng: Văn nói, cảm xúc mạnh. Không dùng trong báo cáo trang trọng trừ khi cố ý tạo giọng khẩu ngữ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜といったらありゃしない khác 〜といったらありはしない. ありゃしない là dạng co, nghe đời thường và cảm xúc hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜といったらありはしない",
+          "contrast": "Khác 〜といったらありゃしない: ありはしない đầy đủ/trang trọng hơn; ありゃしない thân mật hơn."
+        },
+        {
+          "pattern": "〜といったらない",
+          "contrast": "〜といったらない cũng nhấn cực độ; ありゃしない thêm màu khẩu ngữ/phủ định mạnh."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

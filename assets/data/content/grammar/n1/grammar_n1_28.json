@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + を禁じ得ない",
       "meaning": "Ý nghĩa: Dùng để nói không thể kìm nén một cảm xúc hoặc phản ứng trước Noun",
-      "usage": "Cách dùng: Với Noun を禁じ得ない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun を禁じ得ない, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + を禁じ得ない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun を禁じ得ない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun thường là cảm xúc/phản ứng như 驚き, 怒り, 同情, 笑い. Chủ thể cố giữ nhưng cảm xúc vẫn bật ra.",
+      "etymology": "Gốc cấu trúc: 禁じる là cấm/kìm lại, 得ない là “không thể làm được”. Noun を禁じ得ない nghĩa đen là không thể cấm/kìm N, nên thành không khỏi cảm thấy N.",
+      "hanVietBridge": "禁 là cấm, 得 là đắc/được. 驚きを禁じ得ない = không thể “cấm” sự kinh ngạc trong mình.",
+      "humanMoment": "Lưu ý từ Dr. Linh: を禁じ得ない chỉ hợp với cảm xúc tự trào lên. Nếu là hành động bắt buộc khách quan, hãy nghĩ tới ざるを得ない.",
       "crossLinks": [
         {
-          "pattern": "Noun と Noun を兼ねて",
-          "contrast": "Noun を禁じ得ない cần đọc theo chức năng riêng của mẫu; Noun と Noun を兼ねて có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ずにはいられない",
+          "contrast": "Gần nghĩa không kìm được, nhưng ずにはいられない thường là hành động; を禁じ得ない thường là cảm xúc/danh từ phản ứng."
+        },
+        {
+          "pattern": "〜ざるを得ない",
+          "contrast": "Khác を禁じ得ない: ざるを得ない là buộc phải làm; 禁じ得ない là không nén nổi cảm xúc."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Number + Counter + からある",
       "meaning": "Ý nghĩa: Dùng sau số lượng, độ dài hoặc trọng lượng để nhấn mạnh con số lớn: “có tới”, “không dưới”",
-      "usage": "Cách dùng: Với Noun からある, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun からある, lõi Noun からある là mảnh giữ nhịp ngữ pháp. Hãy tách Number + Counter + からある thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun からある không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đứng sau số lượng lớn: 500個からある, 40階からある, 10キロからある. Người nói nhấn quy mô vượt kỳ vọng.",
+      "etymology": "Gốc cấu trúc: から đặt mốc xuất phát thấp nhất, ある xác nhận tồn tại. Number + Counter + からある vì vậy không phải “từ đâu”, mà là “ít nhất đã có từ con số ấy trở lên”.",
+      "hanVietBridge": "Cầu nối tiếng Việt: “từ con số ấy trở lên/có tới”. からある luôn làm con số nghe lớn hơn, không dùng cho lượng nhỏ trung tính.",
+      "humanMoment": "Lưu ý từ Dr. Linh: からある là kính lúp đặt lên số lượng. 500個からある không chỉ báo 500 món; nó bảo người nghe “nhiều đấy”.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun からある cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜以上",
+          "contrast": "Khác 〜からある: 〜以上 là “trên/từ mức”; 〜からある thêm cảm giác con số lớn đáng chú ý."
+        },
+        {
+          "pattern": "〜に及ぶ",
+          "contrast": "〜に及ぶ cũng nói đạt tới số lớn; からある trực tiếp gắn sau số lượng và khẩu khí nhấn mạnh hơn."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + と相まって",
       "meaning": "Ý nghĩa: Dùng khi Noun kết hợp với yếu tố khác làm cho kết quả mạnh hơn hoặc rõ hơn",
-      "usage": "Cách dùng: Với Noun と相まって, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun と相まって, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + と相まって thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun と相まって không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Hai yếu tố cùng tác động làm kết quả tăng rõ: 天気の良さと相まって成功した. Hợp văn viết, phân tích, bình luận.",
+      "etymology": "Gốc cấu trúc: 相 là “lẫn nhau/cùng nhau”, まって trong 相まって giữ ý phối hợp. と đánh dấu yếu tố kết hợp; toàn mẫu nói A cộng hưởng với B để tạo kết quả.",
+      "hanVietBridge": "相 là tương. と相まって hãy nhớ “tương hợp/cộng hưởng với”, không chỉ là “và”.",
+      "humanMoment": "Lưu ý từ Dr. Linh: と相まって cần hiệu ứng cộng hưởng. Nếu hai thứ chỉ đứng cạnh nhau trong danh sách, dùng と; nếu chúng làm kết quả mạnh hơn, dùng 相まって.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "Noun と相まって cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とともに",
+          "contrast": "Khác と相まって: 〜とともに chỉ cùng với/đồng thời; と相まって nhấn cộng hưởng tạo kết quả mạnh hơn."
+        },
+        {
+          "pattern": "〜と合わせて",
+          "contrast": "〜と合わせて là kết hợp chung; と相まって có sắc thái hai yếu tố thúc đẩy nhau."
         }
       ],
       "fallbackReference": {

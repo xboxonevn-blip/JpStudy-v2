@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + がてら",
       "meaning": "Ý nghĩa: Dùng khi nhân tiện làm A thì làm luôn B, hoặc kết hợp hai việc trong cùng một dịp",
-      "usage": "Cách dùng: Với Noun がてら, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun がてら, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + がてら thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun がてら không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đi với danh từ hành động sinh hoạt như 散歩, 買い物, ドライブ. Việc sau là việc làm kèm trong cùng dịp, thường nhẹ và đời thường.",
+      "etymology": "Gốc cấu trúc: がてら là hậu tố gắn vào hoạt động để nói “nhân lúc làm A, tiện làm B”. Nó không đánh dấu hai hành động ngang hàng tuyệt đối, mà lấy A làm dịp phụ trợ cho B.",
+      "hanVietBridge": "Không có Hán tự lõi cần nhớ; cầu nối tiếng Việt là “nhân tiện/tiện thể”. がてら nhẹ hơn かたがた.",
+      "humanMoment": "Lưu ý từ Dr. Linh: がてら có mùi sinh hoạt. 散歩がてら買う tự nhiên; お礼がてら伺う trang trọng hơn nên thường chọn かたがた.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun がてら cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜かたがた",
+          "contrast": "Khác がてら: かたがた trang trọng/xã giao; がてら thân mật hơn, dùng cho việc tiện thể đời thường."
+        },
+        {
+          "pattern": "〜ついでに",
+          "contrast": "〜ついでに nhấn tiện lúc làm A; がてら mềm hơn và thường gắn trực tiếp với danh từ hoạt động."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + ともなれば",
       "meaning": "Ý nghĩa: Dùng để giả định hoặc nêu hoàn cảnh khi đạt đến Noun, từ đó kéo theo một kết quả tự nhiên",
-      "usage": "Cách dùng: Với Noun ともなれば, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun ともなれば, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + ともなれば thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun ともなれば không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun thường là vai trò, mùa, cấp độ, sự kiện lớn. Vế sau nêu kết quả/đòi hỏi tự nhiên nếu đã đến ngưỡng ấy.",
+      "etymology": "Gốc cấu trúc: と đánh dấu trạng thái “trở thành N”, も thêm sắc thái “đến mức N”, なれば mở điều kiện. ともなれば vì vậy là điều kiện ngưỡng, không phải thời điểm đơn giản.",
+      "hanVietBridge": "なる là “thành”; ともなれば gần “nếu đã thành/đến mức N thì...”. Hãy nghe sắc thái ngưỡng trong chữ “mức”.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ともなれば cho người học thấy luật chơi đổi khi đạt mốc. 試験ともなれば căng thẳng không phải vì “khi”, mà vì đó là ngưỡng quan trọng.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "Noun ともなれば cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ともなると",
+          "contrast": "Gần nghĩa, nhưng ともなれば thiên về giả định/điều kiện; ともなると thiên về khi thực tế đạt ngưỡng."
+        },
+        {
+          "pattern": "〜となれば",
+          "contrast": "となれば có thể là điều kiện thường; ともなれば nhấn mốc lớn hoặc vai trò đáng kể hơn."
         }
       ],
       "fallbackReference": {

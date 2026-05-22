@@ -2689,3 +2689,9 @@
 - Fixed a 1px mobile overflow in the home overview grid by increasing single-column card extent from 118px to 124px.
 - Kept official JLPT exam durations from the JLPT test-section table; audit's N5 `60 phút` example conflicts with the official N5 total.
 - Continuing P3 polish next: review label ID leak and onboarding CTA selected-state verification.
+
+## 2026-05-22 P3 polish verification
+- Verified Minna next-lesson labels hide internal storage IDs such as `905014` and render learner-facing labels like `Minna no Nihongo I — Bài 1`.
+- Verified onboarding level selection enables the `Bắt đầu` CTA and completes onboarding; the selected level tile already has visible primary-color/check state.
+- Gates passed: `flutter test test/features/home/continue_provider_test.dart test/features/onboarding/level_select_screen_test.dart --reporter expanded`.
+- P0/P1/P2/P3 code fixes are now pushed; next required pass is live Playwright acceptance across desktop/mobile routes.

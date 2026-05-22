@@ -52,6 +52,32 @@ const _topicPoint = GrammarPoint(
   isLearned: false,
 );
 
+const _n1Lesson1Point = GrammarPoint(
+  id: 101,
+  lessonId: 1,
+  grammarPoint: '〜を禁じ得ない',
+  meaning: 'không thể kìm',
+  meaningVi: 'không thể kìm',
+  meaningEn: 'cannot help',
+  connection: 'Noun を禁じ得ない',
+  explanation: 'Shows a feeling that cannot be held back.',
+  jlptLevel: 'N1',
+  isLearned: false,
+);
+
+const _n1Lesson88Point = GrammarPoint(
+  id: 188,
+  lessonId: 88,
+  grammarPoint: '〜をものともせず',
+  meaning: 'bất chấp',
+  meaningVi: 'bất chấp',
+  meaningEn: 'in defiance of',
+  connection: 'Noun をものともせず',
+  explanation: 'Shows acting despite a serious obstacle.',
+  jlptLevel: 'N1',
+  isLearned: false,
+);
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -240,6 +266,29 @@ void main() {
     await _pump(tester);
 
     expect(find.textContaining('No grammar loaded for N5'), findsOneWidget);
+  });
+
+  testWidgets('upper JLPT grammar renders Shin Kanzen lesson roadmap', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1440, 2400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      _buildScreen(
+        language: AppLanguage.vi,
+        level: StudyLevel.n1,
+        points: const [_n1Lesson1Point, _n1Lesson88Point],
+      ),
+    );
+    await _pump(tester);
+
+    expect(find.text('Lộ trình Shin Kanzen N1'), findsOneWidget);
+    expect(find.text('88 bài'), findsOneWidget);
+    expect(find.text('Bài 01'), findsOneWidget);
+    expect(find.text('Bài 88'), findsOneWidget);
   });
 
   testWidgets('loading bank shows bounded learner-facing fallback', (

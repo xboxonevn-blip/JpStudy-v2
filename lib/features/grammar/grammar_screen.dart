@@ -17,6 +17,7 @@ import 'package:jpstudy/features/content_quality/widgets/content_draft_quality_n
 import 'package:jpstudy/features/foundations/widgets/foundations_soft_suggest_gate.dart';
 import 'package:jpstudy/features/grammar/grammar_providers.dart';
 import 'package:jpstudy/features/grammar/screens/grammar_practice_screen.dart';
+import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 String _tr(
   AppLanguage language, {
@@ -176,6 +177,14 @@ class _GrammarHubContentState extends State<_GrammarHubContent> {
         const SizedBox(height: AppSpacing.md),
         if (isDraftQualityLevel(levelLabel)) ...[
           ContentDraftQualityNote(language: language),
+          const SizedBox(height: AppSpacing.md),
+        ],
+        if (_isShinkanzenGrammarLevel(levelLabel)) ...[
+          _ShinkanzenGrammarRoadmap(
+            language: language,
+            levelLabel: levelLabel,
+            points: points,
+          ),
           const SizedBox(height: AppSpacing.md),
         ],
         AppFluidGrid(
@@ -406,6 +415,262 @@ class _GrammarHubContentState extends State<_GrammarHubContent> {
         ),
       ],
     );
+  }
+}
+
+bool _isShinkanzenGrammarLevel(String levelLabel) {
+  return const {'N3', 'N2', 'N1'}.contains(levelLabel.toUpperCase());
+}
+
+int _shinkanzenGrammarLessonCount(String levelLabel) {
+  return switch (levelLabel.toUpperCase()) {
+    'N3' => 83,
+    'N2' => 163,
+    'N1' => 88,
+    _ => 0,
+  };
+}
+
+Map<int, List<GrammarPoint>> _pointsByLesson(List<GrammarPoint> points) {
+  final grouped = <int, List<GrammarPoint>>{};
+  for (final point in points) {
+    final lessonId = point.lessonId;
+    if (lessonId == null || lessonId <= 0) continue;
+    grouped.putIfAbsent(lessonId, () => <GrammarPoint>[]).add(point);
+  }
+  return grouped;
+}
+
+class _ShinkanzenGrammarRoadmap extends StatelessWidget {
+  const _ShinkanzenGrammarRoadmap({
+    required this.language,
+    required this.levelLabel,
+    required this.points,
+  });
+
+  final AppLanguage language;
+  final String levelLabel;
+  final List<GrammarPoint> points;
+
+  @override
+  Widget build(BuildContext context) {
+    final expectedLessons = _shinkanzenGrammarLessonCount(levelLabel);
+    final grouped = _pointsByLesson(points);
+    final populatedLessons = grouped.length;
+    final palette = context.appPalette;
+
+    return AppSectionCard(
+      key: ValueKey('shinkanzen_grammar_roadmap_$levelLabel'),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AppSectionHeader(
+            title: _title(language, levelLabel),
+            caption: _caption(
+              language,
+              expectedLessons: expectedLessons,
+              populatedLessons: populatedLessons,
+              totalPoints: points.length,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Wrap(
+            spacing: AppSpacing.sm,
+            runSpacing: AppSpacing.sm,
+            children: [
+              AppStatusChip(
+                label: _lessonCountLabel(language, expectedLessons),
+                tone: AppStatusTone.primary,
+              ),
+              AppStatusChip(
+                label: _populatedCountLabel(language, populatedLessons),
+                tone: populatedLessons >= expectedLessons
+                    ? AppStatusTone.success
+                    : AppStatusTone.warning,
+              ),
+              AppStatusChip(
+                label: _pointCountLabel(language, points.length),
+                tone: AppStatusTone.neutral,
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.lg),
+          AppFluidGrid(
+            minItemWidth: 210,
+            maxColumns: 4,
+            children: [
+              for (var lessonId = 1; lessonId <= expectedLessons; lessonId++)
+                _ShinkanzenLessonCard(
+                  language: language,
+                  levelLabel: levelLabel,
+                  lessonId: lessonId,
+                  points: grouped[lessonId] ?? const <GrammarPoint>[],
+                  palette: palette,
+                ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _title(AppLanguage language, String levelLabel) {
+    return switch (language) {
+      AppLanguage.en => 'Shin Kanzen $levelLabel roadmap',
+      AppLanguage.vi => 'Lộ trình Shin Kanzen $levelLabel',
+      AppLanguage.ja => '新完全マスター $levelLabel ロードマップ',
+    };
+  }
+
+  String _caption(
+    AppLanguage language, {
+    required int expectedLessons,
+    required int populatedLessons,
+    required int totalPoints,
+  }) {
+    return switch (language) {
+      AppLanguage.en =>
+        '$expectedLessons lessons from the manifest; $populatedLessons have loaded grammar points, $totalPoints patterns total.',
+      AppLanguage.vi =>
+        '$expectedLessons bài từ manifest; $populatedLessons bài đã có mẫu ngữ pháp, tổng $totalPoints mẫu.',
+      AppLanguage.ja =>
+        'マニフェスト上は$expectedLessons課。$populatedLessons課に文法項目があり、合計$totalPointsパターンです。',
+    };
+  }
+
+  String _lessonCountLabel(AppLanguage language, int count) {
+    return switch (language) {
+      AppLanguage.en => '$count lessons',
+      AppLanguage.vi => '$count bài',
+      AppLanguage.ja => '$count課',
+    };
+  }
+
+  String _populatedCountLabel(AppLanguage language, int count) {
+    return switch (language) {
+      AppLanguage.en => '$count populated',
+      AppLanguage.vi => '$count bài có nội dung',
+      AppLanguage.ja => '$count課に内容あり',
+    };
+  }
+
+  String _pointCountLabel(AppLanguage language, int count) {
+    return switch (language) {
+      AppLanguage.en => '$count patterns',
+      AppLanguage.vi => '$count mẫu',
+      AppLanguage.ja => '$count文型',
+    };
+  }
+}
+
+class _ShinkanzenLessonCard extends StatelessWidget {
+  const _ShinkanzenLessonCard({
+    required this.language,
+    required this.levelLabel,
+    required this.lessonId,
+    required this.points,
+    required this.palette,
+  });
+
+  final AppLanguage language;
+  final String levelLabel;
+  final int lessonId;
+  final List<GrammarPoint> points;
+  final AppThemePalette palette;
+
+  @override
+  Widget build(BuildContext context) {
+    final firstPoint = points.isEmpty ? null : points.first;
+    return AppSectionCard(
+      key: ValueKey('shinkanzen_${levelLabel}_lesson_$lessonId'),
+      padding: const EdgeInsets.all(AppSpacing.md),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  _lessonTitle(language, lessonId),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w900,
+                    color: palette.ink,
+                  ),
+                ),
+              ),
+              AppStatusChip(
+                label: _pointLabel(language, points.length),
+                tone: points.isEmpty
+                    ? AppStatusTone.warning
+                    : AppStatusTone.primary,
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.sm),
+          Text(
+            _preview(language, points),
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              height: 1.35,
+              fontWeight: FontWeight.w600,
+              color: palette.ink.withValues(alpha: 0.72),
+            ),
+          ),
+          if (firstPoint != null) ...[
+            const SizedBox(height: AppSpacing.md),
+            AppButton(
+              label: _openLabel(language),
+              icon: Icons.arrow_forward_rounded,
+              variant: AppButtonVariant.ghost,
+              compact: true,
+              onPressed: () =>
+                  context.push(AppRouteLocation.grammarDetail(firstPoint.id)),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  String _lessonTitle(AppLanguage language, int lessonId) {
+    final padded = lessonId.toString().padLeft(2, '0');
+    return switch (language) {
+      AppLanguage.en => 'Lesson $padded',
+      AppLanguage.vi => 'Bài $padded',
+      AppLanguage.ja => '第$padded課',
+    };
+  }
+
+  String _pointLabel(AppLanguage language, int count) {
+    return switch (language) {
+      AppLanguage.en => '$count patterns',
+      AppLanguage.vi => '$count mẫu',
+      AppLanguage.ja => '$count文型',
+    };
+  }
+
+  String _preview(AppLanguage language, List<GrammarPoint> points) {
+    if (points.isEmpty) {
+      return switch (language) {
+        AppLanguage.en => 'No grammar points loaded for this slot yet.',
+        AppLanguage.vi => 'Chưa có mẫu ngữ pháp trong ô này.',
+        AppLanguage.ja => 'この枠には文法項目がまだありません。',
+      };
+    }
+    return points
+        .take(3)
+        .map((point) => point.grammarPoint)
+        .where((value) => value.trim().isNotEmpty)
+        .join(' · ');
+  }
+
+  String _openLabel(AppLanguage language) {
+    return switch (language) {
+      AppLanguage.en => 'Open first pattern',
+      AppLanguage.vi => 'Mở mẫu đầu',
+      AppLanguage.ja => '最初の文型を開く',
+    };
   }
 }
 

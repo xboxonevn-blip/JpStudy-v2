@@ -2275,3 +2275,16 @@
   and `flutter build web --release`.
 - Urgent P0-P3 code fixes are committed; final live Playwright acceptance pass
   remains next.
+
+## 2026-05-22 P0 live acceptance addendum
+
+- Rebuilt and deployed `build/web` to Firebase Hosting after the first live QA
+  pass showed the public bundle was stale versus `main`.
+- Added an upper-JLPT Shin Kanzen grammar roadmap on `/grammar?level=N3/N2/N1`
+  so the UI renders the expected manifest lesson counts: N3 83, N2 163, N1 88.
+- Gates passed: focused grammar `flutter analyze`,
+  `grammar_screen_test`, and `flutter build web --release`.
+- Live spot checks after deploy confirmed `/profile` redirects to `/me`,
+  friendly 404 renders, JLPT N5 exam start renders, grammar detail uses
+  progressive disclosure, vocab catalog shows 10 programs, and Mimikara is
+  limited to N3/N2/N1.

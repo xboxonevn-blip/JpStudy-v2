@@ -2757,3 +2757,9 @@
 - Fixed connected `〜を皮切りにして` example debt so examples show a real sequence opener, not a single habit-start frame.
 - Global Directive E validator progress is now `110/1123`; next failure starts at `grammar:n1:grammar_n1_12:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 007
+- Re-authored N1 lesson 12 rows `〜を限りに`, `〜並み`, `〜前提で`, `〜限り(は)`, and `〜がてら`.
+- Corrected `〜がてら` metadata from verb-only to `Verb-ます stem / action noun + がてら`, matching the lesson examples.
+- Global Directive E validator progress is now `115/1123`; next failure starts at `grammar:n1:grammar_n1_12:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

@@ -2356,3 +2356,24 @@
   `qa-live-2026-05-22-phase-f-reading-*.png`.
 - Phase F is verified complete; continuing Phase G Option C tooling/content
   quality next.
+
+## 2026-05-22 Phase G Tier-1 items 049-053
+
+- Re-authored `grammar:n5:grammar_n5_9:002-006` with pattern-specific
+  Directive E content for preference/skill `が`, `どんなNが好き`, degree
+  adverbs, reason `から`, and `どうして`.
+- Added 50 hand-crafted templates: 10 per item, covering form, meaning, usage,
+  context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `Nが好き/嫌い/上手/下手です`: `が` points to the target of feeling or skill;
+    it is not the direct-object `を`.
+  - `どんなNが好きですか`: ask for a kind inside N, then mark that kind as the
+    liked target with `が好き`.
+  - `よく/だいたい/たくさん/少し/全然`: these adverbs measure amount, frequency,
+    or degree; `全然` pulls the N5 sentence toward negation.
+  - `S1から、S2`: the reason clause stands before `から`; the result comes after.
+  - `どうして`: asks for cause; a natural answer often ends with `から`.
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `53/80` Tier-1 grammar items passed; 27 expected failures remain.

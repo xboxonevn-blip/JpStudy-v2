@@ -10285,6 +10285,1118 @@
         "/grammar-practice",
         "/jlpt/mock"
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-form-l1-001",
+      "template_id": "tpl-grammar-n5-049-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền trợ từ: 私は音楽 ___ 好きです。",
+      "answer_template": "が",
+      "distractor_strategy": "preference-ga-vs-object-location",
+      "teaching_note": "好き cần đối tượng cảm giác với が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "が",
+        "を",
+        "に",
+        "で"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-form-l1-002",
+      "template_id": "tpl-grammar-n5-049-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn đuôi đúng: サッカーが上手 ___。",
+      "answer_template": "です",
+      "distractor_strategy": "na-adjective-copula-ending",
+      "teaching_note": "上手 là tính từ kiểu danh từ, cần です trong câu lịch sự.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "です",
+        "ます",
+        "を",
+        "から"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-049-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "日本語が好きです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi thích tiếng Nhật.",
+      "distractor_strategy": "preference-vs-action",
+      "teaching_note": "好き diễn tả cảm giác, không phải hành động học/viết.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Tôi thích tiếng Nhật.",
+        "Tôi học tiếng Nhật.",
+        "Tiếng Nhật đi đến tôi.",
+        "Tôi viết tiếng Nhật."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-049-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong Nが上手です, が đánh dấu điều gì?",
+      "answer_template": "Đối tượng/kỹ năng mà người đó giỏi.",
+      "distractor_strategy": "ga-skill-target-recall",
+      "teaching_note": "が chỉ kỹ năng/đối tượng được đánh giá.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-usage-l3-005",
+      "template_id": "tpl-grammar-n5-049-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: thích phim Nhật — 日本の映画 / が / 好き / です",
+      "answer_template": "日本の映画が好きです",
+      "distractor_strategy": "preference-sentence-order",
+      "teaching_note": "Đặt đối tượng sở thích trước が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "日本の映画",
+        "が",
+        "好き",
+        "です"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-usage-l3-006",
+      "template_id": "tpl-grammar-n5-049-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi không thích cá.",
+      "answer_template": "魚が嫌いです。",
+      "distractor_strategy": "kirai-production",
+      "teaching_note": "嫌い dùng cùng khung が...です.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-context-l3-007",
+      "template_id": "tpl-grammar-n5-049-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn nói mình giỏi tennis. Câu nào đúng?",
+      "answer_template": "テニスが上手です。",
+      "distractor_strategy": "skill-ga-context",
+      "teaching_note": "Kỹ năng dùng が với 上手/下手.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "テニスが上手です。",
+        "テニスを上手です。",
+        "テニスに上手です。",
+        "テニスで上手です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-context-l2-008",
+      "template_id": "tpl-grammar-n5-049-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói “kém tiếng Nhật”, không nói “ghét tiếng Nhật”?",
+      "answer_template": "日本語が下手です。",
+      "distractor_strategy": "heta-vs-kirai-context",
+      "teaching_note": "下手 là kém, 嫌い là không thích.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "日本語が下手です。",
+        "日本語が嫌いです。",
+        "日本語が好きです。",
+        "日本語があります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-049-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: cần nói sở thích, không nói hành động học. Câu nào hợp?",
+      "answer_template": "日本語が好きです。",
+      "distractor_strategy": "preference-vs-action-analysis",
+      "teaching_note": "L4: phân biệt cảm giác が với hành động を.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "日本語が好きです。",
+        "日本語を勉強します。",
+        "日本語へ行きます。",
+        "日本語で食べます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-049-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-049-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_9:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào sai vì dùng を với 好き?",
+      "answer_template": "音楽を好きです。",
+      "distractor_strategy": "wrong-particle-analysis",
+      "teaching_note": "好き/嫌い/上手/下手 lấy が trong mẫu này.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "音楽を好きです。",
+        "音楽が好きです。",
+        "音楽が嫌いです。",
+        "音楽が上手です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-form-l1-001",
+      "template_id": "tpl-grammar-n5-050-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền đúng: ___ 映画が好きですか。",
+      "answer_template": "どんな",
+      "distractor_strategy": "donna-before-noun",
+      "teaching_note": "どんな đứng trước danh từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どんな",
+        "どう",
+        "どこ",
+        "いつ"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-form-l1-002",
+      "template_id": "tpl-grammar-n5-050-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu hỏi đúng để hỏi thích loại nhạc nào.",
+      "answer_template": "どんな音楽が好きですか。",
+      "distractor_strategy": "kind-question-form",
+      "teaching_note": "どんな + N + が好きですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どんな音楽が好きですか。",
+        "どう音楽が好きですか。",
+        "音楽はどこが好きですか。",
+        "何時音楽が好きですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-050-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "どんな本が好きですか hỏi gì?",
+      "answer_template": "Bạn thích loại sách nào?",
+      "distractor_strategy": "meaning-kind-preference",
+      "teaching_note": "どんな hỏi loại/đặc điểm trong nhóm N.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Bạn thích loại sách nào?",
+        "Bạn có sách ở đâu?",
+        "Bạn đã đọc sách chưa?",
+        "Sách tiếng Nhật là gì?"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-050-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Câu trả lời nào hợp với どんな食べ物が好きですか.",
+      "answer_template": "辛い食べ物が好きです。",
+      "distractor_strategy": "answer-type-kind-preference",
+      "teaching_note": "Trả lời bằng loại/mô tả món ăn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "辛い食べ物が好きです。",
+        "図書館です。",
+        "昨日行きました。",
+        "五時です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-usage-l3-005",
+      "template_id": "tpl-grammar-n5-050-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: bạn thích loại thể thao nào? — スポーツ / が / どんな / 好きですか",
+      "answer_template": "どんなスポーツが好きですか。",
+      "distractor_strategy": "donna-ga-suki-order",
+      "teaching_note": "どんな dính với danh từ, rồi dùng が好き.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どんな",
+        "スポーツ",
+        "が",
+        "好きですか"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-usage-l3-006",
+      "template_id": "tpl-grammar-n5-050-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu hỏi: Bạn thích loại nhạc nào?",
+      "answer_template": "どんな音楽が好きですか。",
+      "distractor_strategy": "music-kind-preference-production",
+      "teaching_note": "音楽 là N sau どんな.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-context-l3-007",
+      "template_id": "tpl-grammar-n5-050-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn chuẩn bị chọn phim cho nhóm và muốn biết gu phim. Câu nào hợp?",
+      "answer_template": "どんな映画が好きですか。",
+      "distractor_strategy": "preference-context",
+      "teaching_note": "Hỏi gu trước khi chọn dùng どんな映画が好きですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どんな映画が好きですか。",
+        "映画はどうですか。",
+        "映画はどこですか。",
+        "映画を見ましたか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-context-l2-008",
+      "template_id": "tpl-grammar-n5-050-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu hỏi nào không phải hỏi cảm nhận sau khi xem?",
+      "answer_template": "どんな映画が好きですか。",
+      "distractor_strategy": "not-impression-question",
+      "teaching_note": "どんな hỏi loại phim yêu thích.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どんな映画が好きですか。",
+        "映画はどうですか。",
+        "映画はおもしろいですか。",
+        "もう映画を見ましたか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-050-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích mục tiêu: hỏi “gu sách”, không hỏi “sách đó thế nào”. Câu nào đúng?",
+      "answer_template": "どんな本が好きですか。",
+      "distractor_strategy": "donna-vs-dou-analysis",
+      "teaching_note": "L4: gu/loại dùng どんなNが好き.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どんな本が好きですか。",
+        "本はどうですか。",
+        "本はどこですか。",
+        "本がありますか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-050-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-050-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_9:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu trả lời nào đúng loại thông tin cho どんな音楽が好きですか.",
+      "answer_template": "静かな音楽が好きです。",
+      "distractor_strategy": "answer-type-analysis",
+      "teaching_note": "Cần loại/đặc điểm âm nhạc, không phải nơi/thời gian/hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "静かな音楽が好きです。",
+        "音楽は部屋です。",
+        "音楽は六時です。",
+        "音楽を買いました。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-form-l1-001",
+      "template_id": "tpl-grammar-n5-051-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền phó từ hợp với phủ định mạnh: ___ わかりません。",
+      "answer_template": "全然",
+      "distractor_strategy": "zenzen-negative-form",
+      "teaching_note": "全然 trong N5 thường đi với phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "全然",
+        "たくさん",
+        "だいたい",
+        "よく"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-form-l1-002",
+      "template_id": "tpl-grammar-n5-051-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu tự nhiên nhất.",
+      "answer_template": "少しわかります。",
+      "distractor_strategy": "adverb-before-verb",
+      "teaching_note": "Phó từ đứng trước động từ/cụm cần bổ nghĩa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "少しわかります。",
+        "少しですわかります。",
+        "わかります少し。",
+        "少しをわかります。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-051-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "たくさん食べます nghĩa là gì?",
+      "answer_template": "Ăn nhiều.",
+      "distractor_strategy": "takusan-meaning",
+      "teaching_note": "たくさん đo lượng nhiều.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Ăn nhiều.",
+        "Không ăn gì.",
+        "Ăn một chút.",
+        "Ăn vào hôm qua."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-051-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "だいたいわかります diễn tả mức hiểu thế nào?",
+      "answer_template": "Hiểu đại khái/phần lớn.",
+      "distractor_strategy": "daitai-recall",
+      "teaching_note": "だいたい là đại thể, không phải hiểu hoàn toàn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-usage-l3-005",
+      "template_id": "tpl-grammar-n5-051-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tôi hoàn toàn không hiểu — 全然 / わかりません",
+      "answer_template": "全然わかりません。",
+      "distractor_strategy": "zenzen-negative-production",
+      "teaching_note": "Ghép 全然 với đuôi phủ định.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "全然",
+        "わかりません"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-usage-l3-006",
+      "template_id": "tpl-grammar-n5-051-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi có một chút thời gian.",
+      "answer_template": "少し時間があります。",
+      "distractor_strategy": "sukoshi-arimasu-production",
+      "teaching_note": "少し bổ nghĩa cho mức “có thời gian”.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-context-l3-007",
+      "template_id": "tpl-grammar-n5-051-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn hiểu bài khoảng 70%, không hoàn toàn. Câu nào hợp?",
+      "answer_template": "だいたいわかります。",
+      "distractor_strategy": "daitai-context",
+      "teaching_note": "だいたい = phần lớn/đại khái.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "だいたいわかります。",
+        "全然わかりません。",
+        "たくさん食べます。",
+        "少し行きます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-context-l2-008",
+      "template_id": "tpl-grammar-n5-051-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Bạn muốn nói “tôi thường đọc báo”. Câu nào hợp nhất?",
+      "answer_template": "よく新聞を読みます。",
+      "distractor_strategy": "yoku-frequency-context",
+      "teaching_note": "よく có thể diễn tả thường xuyên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "よく新聞を読みます。",
+        "全然新聞を読みます。",
+        "少し新聞です。",
+        "たくさん新聞が嫌いです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-051-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: câu nào tự nhiên ở N5 khi dùng 全然?",
+      "answer_template": "全然わかりません。",
+      "distractor_strategy": "zenzen-polarity-analysis",
+      "teaching_note": "L4: 全然 kéo về phủ định trong chuẩn N5.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "全然わかりません。",
+        "全然わかります。",
+        "全然食べます。",
+        "全然好きです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-051-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-051-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_9:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng “một chút” và “nhiều”?",
+      "answer_template": "少しあります nhưng たくさんあります là nhiều hơn.",
+      "distractor_strategy": "degree-adverb-analysis",
+      "teaching_note": "L4: các phó từ đo mức khác nhau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "少しあります nhưng たくさんあります là nhiều hơn.",
+        "少し và たくさん luôn giống nhau.",
+        "全然 luôn dùng với khẳng định.",
+        "だいたい nghĩa là không bao giờ."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-form-l1-001",
+      "template_id": "tpl-grammar-n5-052-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền đúng: 雨です ___、行きません。",
+      "answer_template": "から",
+      "distractor_strategy": "reason-kara-form",
+      "teaching_note": "から đứng sau vế lý do.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "から",
+        "まで",
+        "と",
+        "を"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-form-l1-002",
+      "template_id": "tpl-grammar-n5-052-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn trật tự đúng cho “vì bận nên không đi”.",
+      "answer_template": "忙しいですから、行きません。",
+      "distractor_strategy": "reason-result-order",
+      "teaching_note": "S1から、S2 = lý do rồi kết quả.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "忙しいですから、行きません。",
+        "から忙しいです、行きません。",
+        "忙しいまで、行きません。",
+        "忙しいですを、行きません。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-052-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "暑いですから、窓を開けます nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Vì nóng nên mở cửa sổ.",
+      "distractor_strategy": "kara-reason-meaning",
+      "teaching_note": "から sau câu chỉ lý do.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Vì nóng nên mở cửa sổ.",
+        "Mở cửa sổ từ nơi nóng.",
+        "Cửa sổ nóng.",
+        "Đến cửa sổ lúc nóng."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-052-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong S1から、S2, S1 là gì?",
+      "answer_template": "Lý do/nguyên nhân.",
+      "distractor_strategy": "reason-clause-recall",
+      "teaching_note": "Vế trước から giải thích vì sao.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-usage-l3-005",
+      "template_id": "tpl-grammar-n5-052-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Vì không có thời gian nên không ăn — 時間がありません / から / 食べません",
+      "answer_template": "時間がありませんから、食べません。",
+      "distractor_strategy": "kara-production-order",
+      "teaching_note": "Đưa から sau câu lý do đã đủ nghĩa.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "時間がありません",
+        "から",
+        "食べません"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-usage-l3-006",
+      "template_id": "tpl-grammar-n5-052-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Vì mai thi nên hôm nay học.",
+      "answer_template": "明日テストですから、今日勉強します。",
+      "distractor_strategy": "reason-test-production",
+      "teaching_note": "S1 là lý do; S2 là hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-context-l3-007",
+      "template_id": "tpl-grammar-n5-052-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn từ chối đi vì bận. Câu nào hợp?",
+      "answer_template": "忙しいですから、行きません。",
+      "distractor_strategy": "refusal-reason-context",
+      "teaching_note": "Từ chối + lý do dùng から.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "忙しいですから、行きません。",
+        "忙しいですまで、行きません。",
+        "忙しいですと行きません。",
+        "忙しいですを行きません。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-context-l2-008",
+      "template_id": "tpl-grammar-n5-052-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nêu nguyên nhân-kết quả, không phải khoảng từ-đến?",
+      "answer_template": "雨ですから、帰ります。",
+      "distractor_strategy": "reason-vs-range-context",
+      "teaching_note": "Sから là lý do; NからNまで là khoảng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "雨ですから、帰ります。",
+        "九時から五時までです。",
+        "東京から京都まで行きます。",
+        "友達と行きます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-052-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: cần nối “trời mưa” với quyết định “không đi”. Câu nào đúng?",
+      "answer_template": "雨ですから、行きません。",
+      "distractor_strategy": "reason-analysis",
+      "teaching_note": "L4: vế thời tiết là lý do, đặt から sau vế đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "雨ですから、行きません。",
+        "雨から学校まで行きません。",
+        "雨と行きません。",
+        "雨を行きません。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-052-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-052-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_9:005",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu hỏi どうして行きませんか. Câu trả lời nào tự nhiên nhất?",
+      "answer_template": "忙しいですから。",
+      "distractor_strategy": "why-answer-kara-analysis",
+      "teaching_note": "どうして hỏi lý do; trả lời bằng から.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "忙しいですから。",
+        "映画が好きです。",
+        "駅はどこですか。",
+        "日本語が上手です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-form-l1-001",
+      "template_id": "tpl-grammar-n5-053-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền từ hỏi lý do: ___ 行きませんか。",
+      "answer_template": "どうして",
+      "distractor_strategy": "doushite-reason-question",
+      "teaching_note": "どうして hỏi vì sao.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どうして",
+        "どんな",
+        "どこ",
+        "いつ"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-form-l1-002",
+      "template_id": "tpl-grammar-n5-053-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn câu hỏi đúng để hỏi “tại sao không ăn?”.",
+      "answer_template": "どうして食べませんか。",
+      "distractor_strategy": "why-question-form",
+      "teaching_note": "どうして đứng trước câu hỏi lý do.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どうして食べませんか。",
+        "どんな食べませんか。",
+        "どう食べ物ですか。",
+        "どこ食べませんか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-053-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "どうしてですか nghĩa gần nhất là gì?",
+      "answer_template": "Tại sao vậy?",
+      "distractor_strategy": "doushite-meaning",
+      "teaching_note": "どうして hỏi lý do.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Tại sao vậy?",
+        "Ở đâu vậy?",
+        "Loại gì vậy?",
+        "Mấy giờ vậy?"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-053-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Câu trả lời thường dùng gì khi đáp どうして?",
+      "answer_template": "Một vế lý do, thường kết thúc bằng から.",
+      "distractor_strategy": "why-answer-recall",
+      "teaching_note": "どうして mở câu hỏi; から đưa lý do.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-usage-l3-005",
+      "template_id": "tpl-grammar-n5-053-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tại sao không đi? — どうして / 行きません / か",
+      "answer_template": "どうして行きませんか。",
+      "distractor_strategy": "doushite-order",
+      "teaching_note": "どうして đứng đầu; か đóng câu hỏi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どうして",
+        "行きません",
+        "か"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-usage-l3-006",
+      "template_id": "tpl-grammar-n5-053-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu hỏi: Tại sao hôm nay học?",
+      "answer_template": "どうして今日勉強しますか。",
+      "distractor_strategy": "why-study-production",
+      "teaching_note": "Hỏi lý do bằng どうして + câu + か.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-context-l3-007",
+      "template_id": "tpl-grammar-n5-053-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn nghe “今日は行きません”. Muốn hỏi lý do. Câu nào hợp?",
+      "answer_template": "どうしてですか。",
+      "distractor_strategy": "why-followup-context",
+      "teaching_note": "Sau một phát biểu, どうしてですか hỏi lý do.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どうしてですか。",
+        "どんなですか。",
+        "どこですか。",
+        "もう行きましたか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-context-l2-008",
+      "template_id": "tpl-grammar-n5-053-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào hỏi lý do, không hỏi cảm nhận?",
+      "answer_template": "どうして行きませんか。",
+      "distractor_strategy": "why-vs-impression-context",
+      "teaching_note": "どうして hỏi vì sao, không hỏi thế nào.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "どうして行きませんか。",
+        "旅行はどうですか。",
+        "どんな旅行ですか。",
+        "旅行はどこですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-053-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích mục tiêu: cần hỏi nguyên nhân của việc nghỉ học. Câu nào đúng?",
+      "answer_template": "どうして休みますか。",
+      "distractor_strategy": "why-cause-analysis",
+      "teaching_note": "L4: hỏi nguyên nhân hành động dùng どうして.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どうして休みますか。",
+        "どんな休みますか。",
+        "休みはどうですか。",
+        "休みが好きですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-053-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-053-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_9:006",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào là cặp hỏi-đáp đúng?",
+      "answer_template": "どうして行きませんか。— 忙しいですから。",
+      "distractor_strategy": "why-answer-pair-analysis",
+      "teaching_note": "どうして nối tự nhiên với câu trả lời lý do + から.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どうして行きませんか。— 忙しいですから。",
+        "どんな本ですか。— 忙しいですから。",
+        "映画はどうですか。— 忙しいですから。",
+        "何時ですか。— 忙しいですから。"
+      ]
     }
   ]
 }

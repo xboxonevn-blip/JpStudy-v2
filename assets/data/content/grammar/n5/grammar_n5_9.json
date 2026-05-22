@@ -58,16 +58,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N が 好き/嫌い/上手/下手 です",
-      "meaning": "Ý nghĩa: Dùng `が` với các tính từ nói về sở thích hoặc năng lực.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "N が 好き/嫌い/上手/下手 です dùng が để đưa đối tượng cảm giác hoặc kỹ năng ra trước mặt người nghe. 好き và 嫌い là tính từ kiểu danh từ; 上手/下手 ghép 手 = tay, nghĩa gốc là tay cao/tay thấp rồi mở rộng thành giỏi/kém một việc.",
+      "hanVietBridge": "好 là hảo trong hiếu hảo, 嫌 là hiềm trong hiềm nghi; 上 là thượng, 下 là hạ, 手 là thủ. Người Việt có thể nhớ 上手 như “tay trên” = khéo, 下手 như “tay dưới” = vụng.",
+      "form": "Hình thức: N が 好き/嫌い/上手/下手 です. Danh từ trước が là thứ mình thích, không thích, giỏi hoặc kém.",
+      "meaning": "Ý nghĩa: nói sở thích hoặc năng lực đối với N. が không dịch là “là”; nó đánh dấu đối tượng mà cảm giác/kỹ năng hướng tới.",
+      "usage": "Sử dụng: hợp với đồ ăn, môn học, thể thao, ngôn ngữ, kỹ năng. 私は日本語が好きです nói “về tôi, tiếng Nhật là thứ tôi thích”.",
+      "humanMoment": "Dr. Linh lưu ý: trong N が 好き/嫌い/上手/下手 です, が giống mũi tên chỉ đúng “đối tượng cảm giác/kỹ năng”. 日本語が好きです khác 日本語を勉強します: một bên là thích tiếng Nhật, một bên là học tiếng Nhật.",
+      "crossLinks": [
+        {
+          "pattern": "N が あります / わかります",
+          "contrast": "cùng dùng が, nhưng あります/わかります nói thứ có/hiểu; 好き/上手 nói đối tượng cảm giác/kỹ năng."
+        },
+        {
+          "pattern": "NをV",
+          "contrast": "を đánh dấu vật bị hành động tác động; 好き/嫌い không phải hành động tác động nên dùng が."
+        },
+        {
+          "pattern": "Aい / Aな",
+          "contrast": "好き/嫌い/上手/下手 xử sự như tính từ な, nên đứng trước danh từ cần な khi bổ nghĩa."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "adjectives-and-particles"
       }
     }
   },
@@ -86,16 +102,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: どんな N が 好きですか",
-      "meaning": "Ý nghĩa: Dùng để hỏi cụ thể người nghe thích loại N nào.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "どんな N が 好きですか kết hợp どんな, một từ hỏi đứng trước danh từ để hỏi “loại/tính chất nào”, với が 好きですか. Cấu trúc không hỏi có thích hay không; nó hỏi trong nhóm N thì loại nào là đối tượng yêu thích.",
+      "hanVietBridge": "Có thể nối với Hán-Việt “chủng loại” và chữ 好 = hảo. どんな映画が好きですか không hỏi định nghĩa của phim, mà hỏi “loại phim nào là hảo/sở thích của bạn”.",
+      "form": "Hình thức: どんな + N + が + 好きですか. どんな phải đứng sát trước danh từ N; が đánh dấu loại N được thích.",
+      "meaning": "Ý nghĩa: hỏi người nghe thích loại N nào. Câu trả lời thường là Aい/Aな + N hoặc một tên thể loại cụ thể.",
+      "usage": "Sử dụng: hỏi về sách, phim, nhạc, món ăn, thể thao: どんな音楽が好きですか. Không dùng để hỏi cảm nhận sau khi trải nghiệm.",
+      "humanMoment": "Dr. Linh lưu ý: どんな N が 好きですか khác N は どうですか. どんな映画が好きですか hỏi gu phim trước khi chọn; 映画はどうですか hỏi ấn tượng về một bộ phim đã được nhắc tới.",
+      "crossLinks": [
+        {
+          "pattern": "どんな N ですか",
+          "contrast": "đều hỏi “loại N nào”, nhưng どんなNが好きですか thêm sở thích bằng が好き."
+        },
+        {
+          "pattern": "N は どうですか",
+          "contrast": "どうですか hỏi cảm nhận/tình trạng của N đã biết; どんなN hỏi loại/đặc điểm của N."
+        },
+        {
+          "pattern": "何が好きですか",
+          "contrast": "何 hỏi thích cái gì nói chung; どんなN hỏi loại nào bên trong một nhóm N."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "question-words"
       }
     }
   },
@@ -114,16 +146,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Phó từ chỉ mức độ + V",
-      "meaning": "Ý nghĩa: Các phó từ chỉ mức độ.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "よく, だいたい, たくさん, 少し, 全然 là các phó từ đặt trước phần được đo: hành động, số lượng hoặc mức độ. 少し có chữ 少 = ít; 全然 ghép 全 = toàn và 然 = trạng thái, nên khi đi với phủ định tạo cảm giác “hoàn toàn không”.",
+      "hanVietBridge": "少 là thiểu trong thiểu số; 全 là toàn trong toàn bộ; 然 là nhiên trong tự nhiên. だいたい thường viết 大体 = đại thể, giúp nhớ nghĩa “phần lớn/đại khái”.",
+      "form": "Hình thức: phó từ + V/A/cụm phủ định. Ví dụ: よくわかります, たくさん食べます, 少しあります, 全然わかりません.",
+      "meaning": "Ý nghĩa: đo tần suất, lượng hoặc mức độ. よく có thể là thường hoặc rõ; だいたい là phần lớn/đại khái; たくさん là nhiều; 少し là một chút; 全然 thường kéo về phủ định.",
+      "usage": "Sử dụng: đặt phó từ trước động từ hoặc cụm cần bổ nghĩa. Cẩn thận với 全然: trong N5, hãy ghép với đuôi phủ định như わかりません.",
+      "humanMoment": "Dr. Linh lưu ý: よく/だいたい/たくさん/少し/全然 không cùng một “mức âm lượng”. 全然 phải kéo câu xuống phủ định: 全然わかりません. Nếu viết 全然わかります ở N5, tai người Nhật sẽ khựng lại.",
+      "crossLinks": [
+        {
+          "pattern": "とても A / あまり A negative",
+          "contrast": "khác ở phạm vi: とても/あまり chủ yếu đo tính từ, còn よく/たくさん/少し/全然 trong bài này đo động từ hoặc mức hiểu/có."
+        },
+        {
+          "pattern": "N が あります / わかります",
+          "contrast": "phó từ đứng trước あります/わかります để nói có/hiểu nhiều hay ít."
+        },
+        {
+          "pattern": "Vます / Vません",
+          "contrast": "phó từ không tự chia thì/phủ định; phần cuối Vます/Vません mới quyết định thời và cực tính."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "adverbs"
       }
     }
   },
@@ -142,10 +190,26 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S1 (Lý do) から、 S2 (Kết quả)",
-      "meaning": "Ý nghĩa: `から` đứng sau mệnh đề chỉ lý do, rồi nối sang kết quả phía sau.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "から ban đầu rất dễ hiểu như “từ điểm xuất phát”. Khi đặt sau S1, nó biến cả mệnh đề S1 thành điểm xuất phát về lý do; S2 là kết quả đi ra từ điểm đó. Cấu trúc vì thế là một mũi tên nguyên nhân -> kết quả.",
+      "hanVietBridge": "Nối với Hán-Việt “nguyên nhân” và “kết quả”: S1 là nguyên nhân, S2 là kết quả. Người Việt nói “vì... nên...”; tiếng Nhật đặt から sau vế lý do.",
+      "form": "Hình thức: S1 から、S2. Vế trước から là lý do; vế sau là kết quả, quyết định hoặc hành động tiếp theo.",
+      "meaning": "Ý nghĩa: vì S1 nên S2. から giải thích nguyên nhân theo cách trực tiếp, phù hợp hội thoại N5.",
+      "usage": "Sử dụng: dùng sau câu danh từ, tính từ hoặc động từ đã đủ khung: 忙しいですから、行きません. Đừng đặt から ở đầu câu theo trật tự tiếng Việt.",
+      "humanMoment": "Dr. Linh lưu ý: S1 から、S2 không phải “から = từ” theo nghĩa địa điểm nữa, nhưng vẫn giữ cảm giác điểm xuất phát. 雨ですから、行きません: quyết định không đi xuất phát từ mưa.",
+      "crossLinks": [
+        {
+          "pattern": "N1 から N2 まで",
+          "contrast": "khác ở nghĩa: NからNまで là khoảng từ-đến, còn SからS là lý do dẫn tới kết quả."
+        },
+        {
+          "pattern": "どうして",
+          "contrast": "どうして hỏi lý do; câu trả lời thường dùng から để đưa lý do."
+        },
+        {
+          "pattern": "S1 が、S2",
+          "contrast": "が bẻ hướng/tương phản; から nối nguyên nhân với kết quả."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -170,16 +234,32 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: どうして ～ か",
-      "meaning": "Ý nghĩa: `どうして` dùng để hỏi lý do.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "どうして ghép cảm giác どう = như thế nào với して = làm, nên gốc nghĩa gần “làm thế nào mà thành ra vậy?”. Khi thêm か trong câu hỏi, nó hướng người nghe tới lý do, không phải cách làm cụ thể.",
+      "hanVietBridge": "Nối với Hán-Việt “lý do” và “nguyên nhân”. どうして mở cửa hỏi nguyên nhân; から thường đóng câu trả lời bằng lý do.",
+      "form": "Hình thức: どうして + S + か. Trong hội thoại cũng có thể nghe どうしてですか sau một phát biểu cần giải thích.",
+      "meaning": "Ý nghĩa: tại sao, vì sao. Câu trả lời tự nhiên thường nêu lý do và kết thúc bằng から.",
+      "usage": "Sử dụng: hỏi nguyên nhân của hành động, trạng thái hoặc quyết định: どうして行きませんか. Tránh dùng khi chỉ muốn hỏi cảm nhận hay loại danh từ.",
+      "humanMoment": "Dr. Linh lưu ý: どうして ～ か hỏi “vì sao chuyện đó xảy ra?”. Nó khác どうですか, vốn hỏi ấn tượng/trạng thái. Hỏi どうして行きませんか thì hãy chờ một lý do, thường có から.",
+      "crossLinks": [
+        {
+          "pattern": "S1 から、S2",
+          "contrast": "khác vai trò: どうして hỏi lý do, còn から đưa lý do trong câu trả lời hoặc mệnh đề nguyên nhân."
+        },
+        {
+          "pattern": "N は どうですか",
+          "contrast": "どうですか hỏi “thế nào/cảm nhận ra sao”; どうして hỏi “vì sao”."
+        },
+        {
+          "pattern": "どんな N ですか",
+          "contrast": "どんな hỏi loại/đặc điểm của danh từ; どうして hỏi nguyên nhân của cả sự việc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "question-words"
       }
     }
   }

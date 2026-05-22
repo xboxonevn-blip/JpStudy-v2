@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-た form + ら最後",
       "meaning": "Ý nghĩa: Dùng để nói một khi đã làm X thì tình huống sẽ chuyển sang hướng không thể cứu vãn, thường là tiêu cực",
-      "usage": "Cách dùng: Với Verb たら最後, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb たら最後, lõi Verb たら最後 là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-た form + ら最後 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb たら最後 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau động từ dạng たら để nói nếu đã làm/xảy ra X thì cục diện coi như khó cứu, khó dừng hoặc không quay lại được. Vế sau thường là hậu quả tiêu cực.",
+      "etymology": "Gốc cấu trúc: 最後 là điểm cuối cùng; たら đặt hành động làm điều kiện. Verb たら最後 biến X thành ranh giới cuối: vượt qua ranh giới ấy thì hệ quả phía sau khóa lại.",
+      "hanVietBridge": "最後 = tối hậu/sau cùng. 怒らせたら最後 = nếu lỡ làm giận thì coi như hết đường.",
+      "humanMoment": "Lưu ý từ Dr. Linh: たら最後 là biển cảnh báo trước cửa. Khi thấy 始めたら最後, hãy nghe “đừng mở cánh cửa này nếu chưa chấp nhận hậu quả”.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb たら最後 cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb たが最後",
+          "contrast": "Khác たが最後: nghĩa gần, たが最後 văn viết/cứng hơn; たら最後 điều kiện trực tiếp hơn."
+        },
+        {
+          "pattern": "〜たとたん",
+          "contrast": "たとたん nhấn ngay sau khoảnh khắc; たら最後 nhấn hậu quả khó cứu sau khi X xảy ra."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + とみえて, い-Adjective + とみえて, な-Adjective + だとみえて, Noun + だとみえて",
       "meaning": "Ý nghĩa: Dùng để suy đoán dựa trên dấu hiệu quan sát được: “có vẻ như”, “chắc là”",
-      "usage": "Cách dùng: Với ～とみえて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とみえて, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + とみえて, い-Adjective + とみえて, な-Adjective + だとみえて, Noun + だとみえて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とみえて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng khi người nói suy đoán từ dấu hiệu quan sát được. Vế sau thường nêu bằng chứng như hành vi, tình trạng, hàng người, việc về sớm.",
+      "etymology": "Gốc cấu trúc: と đánh dấu nội dung được suy đoán, 見えて là “trông có vẻ/hiện ra”. ～とみえて nghĩa là X hiện ra như vậy qua dấu hiệu, nên câu không phải phỏng đoán rỗng.",
+      "hanVietBridge": "見 = kiến/thấy. 疲れているとみえて = nhìn dấu hiệu thì có vẻ đang mệt.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とみえて luôn cần dấu vết. Nếu đọc 人気だとみえて, hãy tìm bằng chứng phía sau: 行列ができている mới làm suy đoán đứng vững.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とみえて cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ようだ",
+          "contrast": "Khác ようだ: ようだ là “có vẻ” rộng; とみえて nhấn suy đoán dựa trên dấu hiệu nhìn thấy."
+        },
+        {
+          "pattern": "〜らしい",
+          "contrast": "らしい có thể dựa vào tin nghe/đặc tính; とみえて thường bám vào bằng chứng quan sát trong câu."
         }
       ],
       "fallbackReference": {

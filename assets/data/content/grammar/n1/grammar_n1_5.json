@@ -344,8 +344,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + と相まって",
       "meaning": "Ý nghĩa: Dùng khi Noun kết hợp với yếu tố khác làm cho kết quả mạnh hơn hoặc rõ hơn.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Sử dụng: Đặt yếu tố kết hợp trước と相まって để nói yếu tố đó cộng hưởng với yếu tố khác và làm kết quả mạnh/rõ hơn. Thường dùng trong văn viết, phân tích.",
+      "etymology": "Gốc cấu trúc: 相 là lẫn nhau/cùng nhau; 相まって nghĩa là các yếu tố đi cùng và tác động qua lại. Noun と相まって không chỉ nối “và”, mà nói N hợp lực với yếu tố khác tạo kết quả.",
+      "hanVietBridge": "相 = tương/lẫn nhau. 努力と運と相まって = nỗ lực và may mắn cộng hưởng với nhau.",
+      "humanMoment": "Lưu ý từ Dr. Linh: と相まって là câu cộng hưởng. Hãy tìm hai lực: N đứng trước と và lực còn lại trong câu; kết quả mạnh lên vì chúng chạm nhau.",
+      "crossLinks": [
+        {
+          "pattern": "〜とともに",
+          "contrast": "Khác とともに: とともに chỉ cùng với; と相まって nhấn cộng hưởng tạo kết quả."
+        },
+        {
+          "pattern": "〜に加えて",
+          "contrast": "に加えて là thêm vào; と相まって là các yếu tố hợp lực với nhau."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -378,8 +390,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + なくして + Sentence ～はない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh rằng nếu không có Noun thì không thể có kết quả phía sau.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Sử dụng: Đặt điều kiện không thể thiếu trước なくして, rồi phủ định kết quả sau はない/できない. Sắc thái trang trọng, nhấn “thiếu N thì không có Y”.",
+      "etymology": "Gốc cấu trúc: なくして là “không có/thiếu”, はない phủ định kết quả. Noun なくして～はない dựng N như nền bắt buộc; bỏ nền ấy đi thì kết quả sau không tồn tại.",
+      "hanVietBridge": "無 = vô/không. 努力なくして成功はない = không có nỗ lực thì không có thành công.",
+      "humanMoment": "Lưu ý từ Dr. Linh: なくして～はない là câu đặt móng. Khi thấy 努力なくして, hãy hỏi: kết quả nào sụp xuống nếu thiếu viên móng này?",
+      "crossLinks": [
+        {
+          "pattern": "〜なしでは〜ない",
+          "contrast": "Khác なしでは: nghĩa gần nhưng なくして～はない trang trọng và nhấn điều kiện nền mạnh hơn."
+        },
+        {
+          "pattern": "〜がなければ〜ない",
+          "contrast": "がなければ là điều kiện thường; なくして～はない có sắc thái khẩu hiệu/nhấn mạnh hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -412,8 +436,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + なしでは～ない",
       "meaning": "Ý nghĩa: Dùng để nói điều phía sau không thể xảy ra nếu thiếu Noun.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Sử dụng: Đặt thứ cần thiết trước なしでは rồi phủ định khả năng/trạng thái phía sau. Sắc thái trực tiếp hơn なくして, hay dùng trong đời thường và văn viết.",
+      "etymology": "Gốc cấu trúc: なし là không có, では đặt tình trạng thiếu N làm điều kiện, rồi vế sau phủ định. Noun なしでは～ない nghĩa là trong tình trạng không có N thì Y không thể xảy ra.",
+      "hanVietBridge": "無 = vô/không. 水なしでは生きられない = không có nước thì không thể sống.",
+      "humanMoment": "Lưu ý từ Dr. Linh: なしでは～ない là câu thử rút một bộ phận khỏi hệ thống. Nếu rút 水 ra, 生きられない xuất hiện ngay.",
+      "crossLinks": [
+        {
+          "pattern": "〜なくして〜はない",
+          "contrast": "Khác なくして: なくして trang trọng/nhấn mạnh hơn; なしでは nói điều kiện thiếu N trực tiếp hơn."
+        },
+        {
+          "pattern": "〜なしに",
+          "contrast": "なしに có thể nối hành động “không làm N mà”; なしでは～ない thường gắn với phủ định khả năng/kết quả."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

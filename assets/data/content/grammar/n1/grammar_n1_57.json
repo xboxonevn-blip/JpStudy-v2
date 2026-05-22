@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ますstem (or plain minus る) + ながら + の + Noun",
       "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ bằng ý nghĩa hai việc hoặc hai trạng thái diễn ra đồng thời",
-      "usage": "Cách dùng: Với ～ながらの Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ながらの Noun, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ますstem (or plain minus る) + ながら + の + Noun thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ながらの Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt Verb-ます stem + ながらの trước danh từ để biến “đang/vừa làm X” thành cụm bổ nghĩa cho Noun. Ví dụ 見ながらの夕食 là “bữa tối trong lúc xem”, không phải hai mệnh đề tách rời.",
+      "etymology": "Gốc rễ: ながら giữ ý hai việc/trạng thái cùng tồn tại; の biến cả cụm ながら thành phần bổ nghĩa danh từ. Vì vậy 読みながらの運転 đóng gói hoàn cảnh “vừa đọc” để mô tả 運転.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ theo “đồng thời + thuộc về danh từ”. の giống móc nối sở thuộc, nên ながらの không kết câu mà gắn hoàn cảnh song hành trực tiếp vào danh từ phía sau.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: với ～ながらの Noun, tôi luôn hỏi “danh từ nào đang bị nhuộm bởi hành động song song?”. Khác ながら nối hai vế, ながらの kéo cả cảnh đó vào một danh từ.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～ながらの Noun cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-stem + ながら",
+          "contrast": "Khác ～ながらの Noun: ながら nối hai hành động trong câu, còn ながらの bổ nghĩa cho một danh từ."
+        },
+        {
+          "pattern": "～ながらに",
+          "contrast": "So với ～ながらに là trạng thái/cụm cố định, ～ながらの Noun là cụm song hành làm tính ngữ cho danh từ."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + のいかんでは",
       "meaning": "Ý nghĩa: Dùng để nói tùy vào Noun mà kết quả có thể thay đổi",
-      "usage": "Cách dùng: Với Noun のいかんでは, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun のいかんでは, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + のいかんでは thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun のいかんでは không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, điều kiện, tình hình trước のいかんでは để nói “tùy N ra sao thì có thể...”. Phía sau thường là quyết định, thay đổi, khả năng xảy ra trong văn trang trọng.",
+      "etymology": "Gốc rễ: いかん viết 如何, nghĩa là “ra sao/như thế nào”. の nối danh từ với câu hỏi ngầm ấy, còn では mở khung điều kiện: nếu tình trạng của N là một kiểu nào đó, kết quả sau sẽ đổi.",
+      "hanVietBridge": "如何 đọc Hán-Việt là “như hà”: như thế nào. Noun のいかんでは vì vậy là “trong trường hợp N ra sao”, gần văn bản xét duyệt hơn câu nói thường ngày “tùy N”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: với Noun のいかんでは, hãy tìm nút quyết định sau dấu phẩy. Khác Noun+のいかんだ chốt “phụ thuộc vào N”, のいかんでは mở nhánh “nếu N thế này thì...”.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Noun のいかんでは cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun+のいかんだ",
+          "contrast": "Khác Noun のいかんでは: のいかんだ nêu quan hệ phụ thuộc chung, còn のいかんでは mở điều kiện cho hệ quả cụ thể."
+        },
+        {
+          "pattern": "Noun + 次第では",
+          "contrast": "So với 次第では, のいかんでは trang trọng hơn và nhấn việc xét tình trạng/nội dung của danh từ."
         }
       ],
       "fallbackReference": {

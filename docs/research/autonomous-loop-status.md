@@ -3081,3 +3081,9 @@
 - Repaired unnatural examples for `ぬく`, `のいかん`, and `てみせる` so examples match the target grammar.
 - Global Directive E validator progress is now `380/1123`; next failure starts at `grammar:n1:grammar_n1_57:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 061
+- Re-authored N1 rows `～ながらの Noun`, `Noun のいかんでは`, `Verb てやまない`, `～ながらも`, and `Noun のいかんにかかわらず`.
+- Repaired one invalid `ながらも` example (`雨が降っているながらも`) to a natural noun-state construction.
+- Global Directive E validator progress is now `385/1123`; next failure starts at `grammar:n1:grammar_n1_59:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

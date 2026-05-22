@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-て form + やまない (common with certain verbs)",
       "meaning": "Ý nghĩa: Dùng với các động từ cảm xúc để nói cảm xúc đó luôn mạnh mẽ và không dứt",
-      "usage": "Cách dùng: Với Verb てやまない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb てやまない, lõi Verb てやまない là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + やまない (common with certain verbs) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb てやまない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn Verb-てやまない với động từ cảm xúc/tinh thần như 願って, 祈って, 愛して, 尊敬して, 期待して. Mẫu trang trọng, nói cảm xúc đó không ngừng và vẫn còn mạnh.",
+      "etymology": "Gốc rễ: やむ/止む là “dừng lại”; やまない là “không dừng”. Khi đi sau Verb-て, nó mô tả cảm xúc sau hành động ấy cứ tiếp tục chảy: 願ってやまない là mong không nguôi.",
+      "hanVietBridge": "止 là Hán-Việt “chỉ” trong “đình chỉ”: dừng. Verb てやまない đảo ngược bằng phủ định, nên người Việt nên nghe như “không thôi/không nguôi” chứ không phải hành động lặp liên tục.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb てやまない cần một động từ có trái tim ở trong đó. Khác ずにはいられない là không kìm được hành động, てやまない là cảm xúc bền và trang trọng.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb てやまない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ずにはいられない",
+          "contrast": "Khác Verb てやまない: ずにはいられない là không nhịn được hành động, còn てやまない là cảm xúc không nguôi."
+        },
+        {
+          "pattern": "〜てならない",
+          "contrast": "So với てならない là cảm giác tự phát mạnh, てやまない trang trọng hơn và thường dùng với lời chúc/kính trọng."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb stem + ながらも, い-Adjective + ながらも, な-Adjective/Noun + ながらも",
       "meaning": "Ý nghĩa: Dùng để nói dù đang ở trạng thái X hoặc dù có tính chất X, điều phía sau vẫn xảy ra trái với kỳ vọng",
-      "usage": "Cách dùng: Với ～ながらも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ながらも, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb stem + ながらも, い-Adjective + ながらも, な-Adjective/Noun + ながらも thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ながらも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt trạng thái/tính chất trước ～ながらも, rồi nêu điều trái kỳ vọng phía sau. Dùng được với Verb stem, い-adj, な-adj/Noun + ながらも; trọng tâm là “dù X nhưng vẫn Y”.",
+      "etymology": "Gốc rễ: ながら giữ ý “trong trạng thái ấy/cùng lúc ấy”, も thêm sắc thái “ngay cả vậy”. Vì thế 貧しいながらも không chỉ là “nghèo”, mà là “ngay trong tình trạng nghèo ấy, kết quả sau vẫn khác kỳ vọng”.",
+      "hanVietBridge": "Cầu Hán-Việt: nhớ cặp “trạng thái + nghịch chuyển”. も giống dấu nhấn “vẫn/cũng”, giúp tiếng Việt dịch tự nhiên bằng “dù... nhưng vẫn...” thay vì “vừa... vừa...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～ながらも có một cú bẻ lái sau mẫu. Nếu hai việc chỉ xảy ra song song, dùng ながら; nếu sau mẫu đi ngược dự đoán, ながらも mới đúng.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～ながらも cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-stem + ながら",
+          "contrast": "Khác ～ながらも: ながら nói song hành, còn ながらも nói nhượng bộ/trái kỳ vọng."
+        },
+        {
+          "pattern": "〜ものの",
+          "contrast": "So với ものの, ながらも mềm hơn và thường gắn sát trạng thái/tính chất ngay trước mẫu."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + のいかんにかかわらず",
       "meaning": "Ý nghĩa: Dùng để nói không phụ thuộc vào Noun, bất kể Noun như thế nào",
-      "usage": "Cách dùng: Với Noun のいかんにかかわらず, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun のいかんにかかわらず, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + のいかんにかかわらず thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun のいかんにかかわらず không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, tuổi tác, kinh nghiệm, điều kiện trước のいかんにかかわらず để nói quy tắc phía sau không thay đổi dù N ra sao. Sắc thái rất trang trọng.",
+      "etymology": "Gốc rễ: いかん/如何 là “ra sao”; かかわらず là “không liên quan/không bị ràng buộc”. Cả cụm nói trạng thái của N có ra sao đi nữa thì quyết định phía sau vẫn không phụ thuộc vào nó.",
+      "hanVietBridge": "如何 là “như hà”, 関 là “quan” trong liên quan. Noun のいかんにかかわらず vì vậy là “không liên quan đến N ra sao”, phù hợp văn bản quy định hơn lời nói thân mật.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんにかかわらず đóng cửa mọi nhánh điều kiện. Khác のいかんでは mở cửa “tùy N mà đổi”, mẫu này nói “N ra sao cũng không đổi”.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun のいかんにかかわらず cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun のいかんでは",
+          "contrast": "Khác Noun のいかんにかかわらず: のいかんでは phụ thuộc vào N, còn にかかわらず phủ nhận sự phụ thuộc đó."
+        },
+        {
+          "pattern": "Noun + にかかわらず",
+          "contrast": "So với にかかわらず thường, thêm のいかん làm câu trang trọng hơn và nhấn “N ra sao”."
         }
       ],
       "fallbackReference": {

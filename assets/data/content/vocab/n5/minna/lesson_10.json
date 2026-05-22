@@ -1600,6 +1600,7 @@
       "order": 30,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1620,18 +1621,23 @@
       },
       "sense": {
         "senseId": "n5_l10_s030",
-        "meaningVi": "tỉnh, huyện",
+        "meaningVi": "Tỉnh",
         "meaningEn": "prefecture"
       },
       "search": {
         "termNoAccent": "県",
         "readingNoAccent": "けん",
-        "meaningViNoAccent": "tinh, huyen",
+        "meaningViNoAccent": "Tinh",
         "hanVietNoAccent": "huyen"
       },
       "links": {
         "sourceVocabId": "n5_l10_v030",
-        "sourceSenseId": "n5_l10_s030"
+        "sourceSenseId": "n5_l10_s030",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "huyện"

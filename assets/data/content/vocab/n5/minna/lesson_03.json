@@ -437,6 +437,7 @@
       "order": 9,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -458,18 +459,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s009",
-        "meaningVi": "lớp học",
+        "meaningVi": "Phòng học",
         "meaningEn": "classroom"
       },
       "search": {
         "termNoAccent": "教室",
         "readingNoAccent": "きょうしつ",
-        "meaningViNoAccent": "lop hoc",
+        "meaningViNoAccent": "Phong hoc",
         "hanVietNoAccent": "giao that"
       },
       "links": {
         "sourceVocabId": "n5_l03_v009",
-        "sourceSenseId": "n5_l03_s009"
+        "sourceSenseId": "n5_l03_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giáo thất"

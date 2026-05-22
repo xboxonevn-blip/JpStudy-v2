@@ -2602,3 +2602,9 @@
 - Deliberately skipped weak/narrow canonical replacements such as `課長 -> Tổ trưởng`; those need later source review rather than blind automation.
 - Bumped vocab seed revision to 9 so installed DBs refresh this third N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 005
+- Applied 5 curated consensus repairs for Minna N5 `教室`, `狭い`, `靴`, `君`, and `県`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-005.md`.
+- Skipped family-member rows that would lose self/other nuance; those remain for a contrast-aware review pass.
+- Bumped vocab seed revision to 10 so installed DBs refresh this fourth N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

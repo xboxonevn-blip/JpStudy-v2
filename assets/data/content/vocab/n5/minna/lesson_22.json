@@ -1278,6 +1278,7 @@
       "order": 24,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1298,18 +1299,23 @@
       },
       "sense": {
         "senseId": "n5_l22_s024",
-        "meaningVi": "đôi giày",
+        "meaningVi": "Giày",
         "meaningEn": "shoes"
       },
       "search": {
         "termNoAccent": "靴",
         "readingNoAccent": "くつ",
-        "meaningViNoAccent": "doi giay",
+        "meaningViNoAccent": "Giay",
         "hanVietNoAccent": "ngoa"
       },
       "links": {
         "sourceVocabId": "n5_l22_v024",
-        "sourceSenseId": "n5_l22_s024"
+        "sourceSenseId": "n5_l22_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ngoa"

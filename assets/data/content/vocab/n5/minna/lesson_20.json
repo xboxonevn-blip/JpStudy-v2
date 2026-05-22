@@ -345,6 +345,7 @@
       "order": 7,
       "tags": [
         "pronoun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -365,18 +366,23 @@
       },
       "sense": {
         "senseId": "n5_l20_s007",
-        "meaningVi": "cậu (dùng với người ngang hàng/cấp dưới)",
+        "meaningVi": "Cậu, bạn (cách gọi thân mật của あなた)",
         "meaningEn": "you (informal)"
       },
       "search": {
         "termNoAccent": "君",
         "readingNoAccent": "きみ",
-        "meaningViNoAccent": "cau (dung voi nguoi ngang hang/cap duoi)",
+        "meaningViNoAccent": "Cau, ban (cach goi than mat cua あなた)",
         "hanVietNoAccent": "quan"
       },
       "links": {
         "sourceVocabId": "n5_l20_v007",
-        "sourceSenseId": "n5_l20_s007"
+        "sourceSenseId": "n5_l20_s007",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "quân"

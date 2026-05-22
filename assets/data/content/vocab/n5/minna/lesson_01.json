@@ -292,6 +292,7 @@
       "order": 6,
       "tags": [
         "pronoun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -312,18 +313,23 @@
       },
       "sense": {
         "senseId": "n5_l01_s006",
-        "meaningVi": "mọi người",
+        "meaningVi": "Các bạn, các anh, các chị, mọi người",
         "meaningEn": "everyone"
       },
       "search": {
         "termNoAccent": "皆さん",
         "readingNoAccent": "みなさん",
-        "meaningViNoAccent": "moi nguoi",
+        "meaningViNoAccent": "Cac ban, cac anh, cac chi, moi nguoi",
         "hanVietNoAccent": "giai"
       },
       "links": {
         "sourceVocabId": "n5_l01_v006",
-        "sourceSenseId": "n5_l01_s006"
+        "sourceSenseId": "n5_l01_s006",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giai"

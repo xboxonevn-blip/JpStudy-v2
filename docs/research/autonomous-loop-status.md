@@ -2590,3 +2590,9 @@
 - Added `vi-source-verified` and source consensus links to the touched rows without adding owner-only approval tags.
 - Bumped vocab seed revision to 7 so existing local/web DBs refresh the edited N5 vocab meanings.
 - Gates passed: vocab diff Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 003
+- Added curated `--entryIds` support to the vocab diff fixer so later batches can skip weak canonical rows instead of applying first-N blindly.
+- Applied 5 consensus-backed repairs for Minna N5 `夏`, `家内`, `海`, `皆さん`, and `絵`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-003.md`.
+- Bumped vocab seed revision to 8 so installed DBs refresh this second N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

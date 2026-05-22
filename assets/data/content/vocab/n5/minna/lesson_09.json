@@ -995,6 +995,7 @@
       "order": 19,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1015,18 +1016,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s019",
-        "meaningVi": "tranh",
+        "meaningVi": "Tranh, hội họa",
         "meaningEn": "picture / drawing"
       },
       "search": {
         "termNoAccent": "絵",
         "readingNoAccent": "え",
-        "meaningViNoAccent": "tranh",
+        "meaningViNoAccent": "Tranh, hoi hoa",
         "hanVietNoAccent": "hoi"
       },
       "links": {
         "sourceVocabId": "n5_l09_v019",
-        "sourceSenseId": "n5_l09_s019"
+        "sourceSenseId": "n5_l09_s019",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hội"
@@ -1889,6 +1895,7 @@
       "order": 35,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1910,18 +1917,24 @@
       },
       "sense": {
         "senseId": "n5_l09_s035",
-        "meaningVi": "vợ (mình)",
+        "meaningVi": "Vợ (dùng khi nói về vợ mình)",
         "meaningEn": "wife (one's own)"
       },
       "search": {
         "termNoAccent": "家内",
         "readingNoAccent": "かない",
-        "meaningViNoAccent": "vo (minh)",
+        "meaningViNoAccent": "Vo (dung khi noi ve vo minh)",
         "hanVietNoAccent": "gia noi"
       },
       "links": {
         "sourceVocabId": "n5_l09_v035",
-        "sourceSenseId": "n5_l09_s035"
+        "sourceSenseId": "n5_l09_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "gia nội"

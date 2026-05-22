@@ -4,6 +4,7 @@ const test = require('node:test');
 const {
   applyMeaningFixesToPayload,
   mergeSourceVerifiedTag,
+  parseCsvList,
   selectMeaningFixes,
 } = require('../../../tool/research/apply_vocab_app_diff_fixes');
 
@@ -29,6 +30,23 @@ test('selectMeaningFixes keeps high-confidence consensus rows for target level a
   });
 
   assert.deepEqual(selected.map((item) => item.term), ['学校']);
+});
+
+test('selectMeaningFixes can pin a curated entry-id batch', () => {
+  const rows = [
+    row({ entryId: 'safe-1', term: '夏', meaningVi: 'mùa hạ', canonicalMeaningVi: 'Mùa hè' }),
+    row({ entryId: 'skip-1', term: '課長', meaningVi: 'tổ trưởng, trưởng khoa', canonicalMeaningVi: 'Tổ trưởng' }),
+    row({ entryId: 'safe-2', term: '海', meaningVi: 'biển', canonicalMeaningVi: 'Biển, đại dương' }),
+  ];
+
+  const selected = selectMeaningFixes(rows, {
+    level: 'N5',
+    series: 'minna',
+    limit: 10,
+    entryIds: ['safe-2', 'safe-1'],
+  });
+
+  assert.deepEqual(selected.map((item) => item.entryId), ['safe-1', 'safe-2']);
 });
 
 test('applyMeaningFixesToPayload updates meaning, search, tags, and source consensus', () => {
@@ -71,6 +89,13 @@ test('mergeSourceVerifiedTag places source verification before legacy human appr
   const tags = mergeSourceVerifiedTag(['person', ownerTag]);
 
   assert.deepEqual(tags, ['person', 'vi-source-verified', ownerTag]);
+});
+
+test('parseCsvList trims blanks for curated CLI batches', () => {
+  assert.deepEqual(parseCsvList(' n5_l01_s001, ,n5_l02_s003 '), [
+    'n5_l01_s001',
+    'n5_l02_s003',
+  ]);
 });
 
 function row(overrides = {}) {

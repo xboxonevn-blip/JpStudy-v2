@@ -1009,6 +1009,7 @@
       "order": 19,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1029,18 +1030,23 @@
       },
       "sense": {
         "senseId": "n5_l12_s019",
-        "meaningVi": "mùa hạ",
+        "meaningVi": "Mùa hè",
         "meaningEn": "summer"
       },
       "search": {
         "termNoAccent": "夏",
         "readingNoAccent": "なつ",
-        "meaningViNoAccent": "mua ha",
+        "meaningViNoAccent": "Mua he",
         "hanVietNoAccent": "ha"
       },
       "links": {
         "sourceVocabId": "n5_l12_v019",
-        "sourceSenseId": "n5_l12_s019"
+        "sourceSenseId": "n5_l12_s019",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hạ"
@@ -1504,6 +1510,7 @@
       "order": 28,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1524,18 +1531,23 @@
       },
       "sense": {
         "senseId": "n5_l12_s028",
-        "meaningVi": "biển",
+        "meaningVi": "Biển, đại dương",
         "meaningEn": "sea / ocean"
       },
       "search": {
         "termNoAccent": "海",
         "readingNoAccent": "うみ",
-        "meaningViNoAccent": "bien",
+        "meaningViNoAccent": "Bien, dai duong",
         "hanVietNoAccent": "hai"
       },
       "links": {
         "sourceVocabId": "n5_l12_v028",
-        "sourceSenseId": "n5_l12_s028"
+        "sourceSenseId": "n5_l12_s028",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hải"

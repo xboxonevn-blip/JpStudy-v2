@@ -27,12 +27,14 @@ function stripAccents(value) {
     .replace(/Đ/g, 'D');
 }
 
-function selectMeaningFixes(rows, { level, series, limit = 50 } = {}) {
+function selectMeaningFixes(rows, { level, series, limit = 50, entryIds = [] } = {}) {
   const normalizedLevel = String(level || '').toUpperCase();
   const normalizedSeries = String(series || '').trim();
+  const selectedEntryIds = new Set(entryIds.map((id) => String(id).trim()).filter(Boolean));
   return rows
     .filter((row) => !normalizedLevel || row.level === normalizedLevel)
     .filter((row) => !normalizedSeries || row.series === normalizedSeries)
+    .filter((row) => selectedEntryIds.size === 0 || selectedEntryIds.has(row.entryId))
     .filter((row) => row.canonicalStatus === 'CONSENSUS')
     .filter((row) => (row.canonicalSources || []).length >= 2)
     .filter((row) => hasMeaningTokenOverlap(row.meaningVi, row.canonicalMeaningVi))
@@ -163,6 +165,13 @@ function parseArgs(argv) {
   return args;
 }
 
+function parseCsvList(value) {
+  return String(value || '')
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
 function main() {
   const args = parseArgs(process.argv);
   const level = (args.level || 'N5').toUpperCase();
@@ -179,6 +188,7 @@ function main() {
     level,
     series,
     limit,
+    entryIds: parseCsvList(args.entryIds),
   });
 
   for (const [relativePath, rows] of groupByPath(fixes)) {
@@ -216,5 +226,6 @@ module.exports = {
   applyMeaningFixesToPayload,
   hasMeaningTokenOverlap,
   mergeSourceVerifiedTag,
+  parseCsvList,
   selectMeaningFixes,
 };

@@ -699,3 +699,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The two items form a natural pair and close the 80/80 grammar quality gate without mixing in the upcoming vocab Tier-1 work.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-071 - P0 route fix targets missing route registration first
+**Phase**: Urgent fix batch P0
+**Date**: 2026-05-22 14:05 (Asia/Saigon)
+**Context**: Live audit reported blank/404 flows. Current main already had the `/profile` redirect, friendly route-not-found screen, `/vocab/series/minna/lesson/:id` legacy redirect, JLPT exam start/empty states, and corrected Shin Kanzen grammar lesson counts. The remaining route root cause found in code was `AppRoutePath.vocabShinkanzen`: constants and navigation helpers existed, but `buildVocabRoutes()` did not register the route.
+**Options considered**: rely on the generic not-found page | remove dead Shin Kanzen navigation helpers | register the route and add route/exam regression tests
+**Chosen**: Register `/vocab/shinkanzen`, default direct hits to N3, and add focused tests covering Shin Kanzen route resolution plus `/exam` level-click start/empty states.
+**Rationale**: This fixes a concrete route mismatch while preserving existing navigation. The regression tests cover the audit symptoms without changing already-correct route/error-boundary behavior.
+**Reversible**: yes
+**Owner review**: pending

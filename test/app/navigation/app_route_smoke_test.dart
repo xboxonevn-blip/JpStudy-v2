@@ -10,6 +10,7 @@ import 'package:jpstudy/features/me/screens/data_settings_screen.dart';
 import 'package:jpstudy/features/practice/practice_screen.dart';
 import 'package:jpstudy/features/progress/progress_screen.dart';
 import 'package:jpstudy/features/search/search_screen.dart';
+import 'package:jpstudy/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/study_hub/study_hub_screen.dart';
 import 'package:jpstudy/features/test/screens/home_mock_exam_screen.dart';
 
@@ -210,6 +211,12 @@ void main() {
     var uri = AppRouter.router.routeInformationProvider.value.uri;
     expect(uri.path, '/lesson/1');
     expect(uri.queryParameters['level'], 'N5');
+
+    await pumpSmokeRoute(tester, '/vocab/shinkanzen?level=N3');
+    uri = AppRouter.router.routeInformationProvider.value.uri;
+    expect(uri.path, '/vocab/shinkanzen');
+    expect(uri.queryParameters['level'], 'N3');
+    expect(find.byType(ShinkanzenLessonCatalogScreen), findsOneWidget);
 
     await pumpSmokeRoute(tester, '/not-a-real-route');
     expect(find.text('Page not found'), findsOneWidget);

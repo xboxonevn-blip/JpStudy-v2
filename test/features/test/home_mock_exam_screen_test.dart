@@ -12,6 +12,7 @@ import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/content_database.dart';
 import 'package:jpstudy/data/models/vocab_item.dart';
 import 'package:jpstudy/data/repositories/lesson_repository.dart';
+import 'package:jpstudy/features/exam/exam_screen.dart';
 import 'package:jpstudy/features/test/models/home_mock_exam_launch_args.dart';
 import 'package:jpstudy/features/test/models/test_config.dart';
 import 'package:jpstudy/features/test/screens/home_mock_exam_screen.dart';
@@ -119,6 +120,31 @@ Widget buildExamCenter({StudyLevel? level}) => ProviderScope(
   child: const MaterialApp(home: ExamCenterHubScreen()),
 );
 
+Widget buildLegacyExamScreen({
+  StudyLevel? level,
+  required LessonRepository repo,
+  SessionStorage? storage,
+}) => ProviderScope(
+  overrides: [
+    appLanguageProvider.overrideWith(
+      (ref) => AppLanguageController.test(AppLanguage.en),
+    ),
+    studyLevelProvider.overrideWith((ref) => level),
+    lessonRepositoryProvider.overrideWithValue(repo),
+    if (storage != null) sessionStorageProvider.overrideWithValue(storage),
+  ],
+  child: const MaterialApp(home: ExamScreen()),
+);
+
+VocabItem _examVocab(String level, int id) => VocabItem(
+  id: id,
+  term: '語$id',
+  reading: 'ご$id',
+  meaning: 'từ $id',
+  meaningEn: 'word $id',
+  level: level,
+);
+
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
@@ -156,6 +182,83 @@ void main() {
     await db.close();
     await cdb.close();
   });
+
+  testWidgets('legacy exam route opens a start screen for every JLPT level', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1200, 1600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    final cdb = ContentDatabase(executor: NativeDatabase.memory());
+    final repo = FakeMockLessonRepository(
+      db,
+      cdb,
+      itemsByLevel: {
+        for (final entry in ['N1', 'N2', 'N3', 'N4', 'N5'].indexed)
+          entry.$2: [_examVocab(entry.$2, entry.$1 + 1)],
+      },
+    );
+    final storage = _FakeSessionStorage();
+
+    await tester.pumpWidget(
+      buildLegacyExamScreen(level: StudyLevel.n5, repo: repo, storage: storage),
+    );
+    await tester.pump();
+
+    for (final level in ['N5', 'N4', 'N3', 'N2', 'N1']) {
+      final levelLabel = find.text('JLPT $level').first;
+      await tester.ensureVisible(levelLabel);
+      await tester.tap(levelLabel);
+      await tester.pump();
+      await tester.pumpAndSettle(const Duration(milliseconds: 100));
+
+      expect(find.text('JLPT $level start screen'), findsOneWidget);
+      expect(find.text('Start exam'), findsOneWidget);
+      expect(storage.lastLoadKey, 'mock_$level');
+    }
+
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+    await db.close();
+    await cdb.close();
+  });
+
+  testWidgets(
+    'legacy exam route renders an empty state instead of a blank page',
+    (tester) async {
+      final db = AppDatabase(executor: NativeDatabase.memory());
+      final cdb = ContentDatabase(executor: NativeDatabase.memory());
+      final repo = FakeMockLessonRepository(
+        db,
+        cdb,
+        itemsByLevel: const {'N5': []},
+      );
+
+      await tester.pumpWidget(
+        buildLegacyExamScreen(
+          level: StudyLevel.n5,
+          repo: repo,
+          storage: _FakeSessionStorage(),
+        ),
+      );
+      await tester.pump();
+
+      await tester.tap(find.text('JLPT N5'));
+      await tester.pump();
+      await tester.pumpAndSettle(const Duration(milliseconds: 100));
+
+      expect(find.text('No N5 exam questions yet'), findsOneWidget);
+      expect(find.textContaining('Pick another JLPT level'), findsOneWidget);
+
+      await tester.pumpWidget(Container());
+      await tester.pump(const Duration(milliseconds: 100));
+      await db.close();
+      await cdb.close();
+    },
+  );
 
   testWidgets('shows JLPT mock exam title for selected level', (tester) async {
     final db = AppDatabase(executor: NativeDatabase.memory());

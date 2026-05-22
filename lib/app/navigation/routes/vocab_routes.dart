@@ -8,6 +8,7 @@ import 'package:jpstudy/features/vocab/screens/hajimete_chapter_catalog_screen.d
 import 'package:jpstudy/features/vocab/screens/hajimete_chapter_detail_screen.dart';
 import 'package:jpstudy/features/vocab/screens/minna_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/mimikara_unit_catalog_screen.dart';
+import 'package:jpstudy/features/vocab/screens/shinkanzen_lesson_catalog_screen.dart';
 import 'package:jpstudy/features/vocab/screens/term_review_screen.dart';
 import 'package:jpstudy/features/vocab/screens/vocab_detail_screen.dart';
 import 'package:jpstudy/features/vocab/screens/vocab_match_session_screen.dart';
@@ -83,6 +84,19 @@ List<RouteBase> buildVocabRoutes() {
         return MimikaraUnitCatalogScreen(
           levelCode: levelCode,
           title: query['title'] ?? 'Mimikara $levelCode',
+          subtitle: query['subtitle'],
+        );
+      },
+    ),
+    GoRoute(
+      path: AppRoutePath.vocabShinkanzen,
+      name: AppRouteName.vocabShinkanzen,
+      builder: (context, state) {
+        final query = state.uri.queryParameters;
+        final levelCode = (query['level'] ?? 'N3').toUpperCase();
+        return ShinkanzenLessonCatalogScreen(
+          levelCode: levelCode,
+          title: query['title'] ?? 'Shin Kanzen Master $levelCode',
           subtitle: query['subtitle'],
         );
       },

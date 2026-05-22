@@ -2502,3 +2502,15 @@
   --check` (line-ending warnings only). Global Directive E validator is now
   `80/80` Tier-1 grammar items passed; Phase G templates cover `800` Tier-1
   grammar templates.
+
+## 2026-05-22 Urgent fix batch P0 route/exam hardening
+
+- Registered `/vocab/shinkanzen` so existing Shin Kanzen navigation helpers no
+  longer fall through to the route-not-found surface.
+- Added regression coverage for `/exam` level clicks across N1-N5: each level
+  renders a start screen and the empty-content state renders a visible
+  fallback instead of a blank page.
+- Re-verified `/profile`, `/vocab/series/minna/lesson/1`, and missing routes
+  through route smoke tests; the friendly not-found page remains active.
+- Re-verified Shin Kanzen grammar architecture: lesson indexes and shipped
+  grammar files remain N3=83, N2=163, N1=88.

@@ -1453,6 +1453,8 @@ class LessonRepository {
     int lessonId,
     String currentLevelLabel,
   ) async {
+    if (lessonId <= 0) return const [];
+
     final dbLevel = currentLevelLabel; // e.g. "N5", "N4"
     final canonicalSeries = _seriesForCanonicalLevel(dbLevel);
     final lessonTag = _lessonSeriesTag(canonicalSeries, lessonId);
@@ -1545,6 +1547,8 @@ class LessonRepository {
     required String levelLower,
     required int lessonId,
   }) async {
+    if (lessonId <= 0) return const {};
+
     final canonicalRows = await _loadCanonicalLessonVocabEntries(
       levelLower: levelLower,
       lessonId: lessonId,
@@ -1571,6 +1575,8 @@ class LessonRepository {
     required int lessonId,
     required String currentLevelLabel,
   }) async {
+    if (lessonId <= 0) return const [];
+
     final levelLower = currentLevelLabel.toLowerCase().trim();
     final canonicalRows = await _loadCanonicalLessonVocabEntries(
       levelLower: levelLower,
@@ -1633,6 +1639,10 @@ class LessonRepository {
     required int lessonId,
   }) async {
     final paddedLessonId = lessonId.toString().padLeft(2, '0');
+    if (levelLower == 'n4' || levelLower == 'n5') {
+      return _minnaVocabAssetPath(levelLower, paddedLessonId);
+    }
+
     final shinkanzenIndexPath =
         'assets/data/content/vocab/$levelLower/ShinKanzen/index.json';
 

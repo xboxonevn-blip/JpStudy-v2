@@ -1,6 +1,10 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/core/analytics/analytics_service.dart';
 import 'package:jpstudy/data/db/app_database.dart';
@@ -365,6 +369,86 @@ void main() {
     expect(terms.single.term, '相変わらず');
     expect(terms.single.definition, 'như mọi khi; vẫn như cũ');
     expect(terms.single.definitionEn, 'as ever; as usual; the same');
+  });
+
+  test(
+    'seedTermsIfEmpty uses Minna assets directly for N5 without ShinKanzen probes',
+    () async {
+      final loadedAssets = <String>[];
+      final messenger =
+          TestWidgetsFlutterBinding.ensureInitialized().defaultBinaryMessenger;
+      const forbiddenAssets = [
+        'assets/data/content/vocab/n5/ShinKanzen/index.json',
+        'assets/data/content/vocab/n5/minna/lesson_00.json',
+      ];
+      const expectedAsset = 'assets/data/content/vocab/n5/minna/lesson_01.json';
+
+      for (final asset in [...forbiddenAssets, expectedAsset]) {
+        rootBundle.evict(asset);
+      }
+      addTearDown(() {
+        messenger.setMockMessageHandler('flutter/assets', null);
+        for (final asset in [...forbiddenAssets, expectedAsset]) {
+          rootBundle.evict(asset);
+        }
+      });
+      messenger.setMockMessageHandler('flutter/assets', (message) async {
+        final key = utf8.decode(message!.buffer.asUint8List());
+        loadedAssets.add(key);
+        if (forbiddenAssets.contains(key)) {
+          throw StateError('unexpected asset probe: $key');
+        }
+        final file = File(key);
+        if (!file.existsSync()) return null;
+        return ByteData.sublistView(
+          Uint8List.fromList(await file.readAsBytes()),
+        );
+      });
+
+      await repository.ensureLesson(
+        lessonId: 1,
+        level: 'N5',
+        title: 'N5 lesson 1',
+      );
+      await repository.seedTermsIfEmpty(1, 'N5');
+
+      expect(loadedAssets, contains(expectedAsset));
+      expect(loadedAssets.where(forbiddenAssets.contains), isEmpty);
+      expect(await repository.fetchTerms(1), isNotEmpty);
+    },
+  );
+
+  test('seedTermsIfEmpty ignores invalid source lesson ids', () async {
+    final loadedAssets = <String>[];
+    final messenger =
+        TestWidgetsFlutterBinding.ensureInitialized().defaultBinaryMessenger;
+    const forbiddenAsset = 'assets/data/content/vocab/n5/minna/lesson_00.json';
+
+    rootBundle.evict(forbiddenAsset);
+    addTearDown(() {
+      messenger.setMockMessageHandler('flutter/assets', null);
+      rootBundle.evict(forbiddenAsset);
+    });
+    messenger.setMockMessageHandler('flutter/assets', (message) async {
+      final key = utf8.decode(message!.buffer.asUint8List());
+      loadedAssets.add(key);
+      if (key == forbiddenAsset) {
+        throw StateError('unexpected asset probe: $key');
+      }
+      final file = File(key);
+      if (!file.existsSync()) return null;
+      return ByteData.sublistView(Uint8List.fromList(await file.readAsBytes()));
+    });
+
+    await repository.ensureLesson(
+      lessonId: 0,
+      level: 'N5',
+      title: 'Invalid lesson',
+    );
+    await repository.seedTermsIfEmpty(0, 'N5', sourceLessonId: 0);
+
+    expect(loadedAssets, isNot(contains(forbiddenAsset)));
+    expect(await repository.fetchTerms(0), isEmpty);
   });
 
   test(

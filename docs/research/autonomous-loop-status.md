@@ -2655,3 +2655,9 @@
 - Bumped vocab seed revision to 18 so stale installs refresh regenerated example sentences.
 - Gates passed: Node example/Tatoeba/vocab diff tests, example validator, wiring validate-only, focused Flutter analyzer, DB/repository/vocab/flashcard tests, `flutter build web --release`, and `git diff --check`.
 - Local release proof: browser-fetched `assets/data/content/vocab/n5/minna/lesson_01.json` shows `私` example `私の番？` / `Đến lượt tôi chưa?`, source `tatoeba-cc-by-2.0`; old `Trong giờ học...` template absent.
+
+## 2026-05-22 P1 asset probe hardening
+- Fixed lesson seeding so invalid source lesson IDs do not probe `lesson_00.json`.
+- Resolved N4/N5 vocab assets directly to Minna instead of probing missing Shin Kanzen vocab indexes.
+- Added repository regressions for both cases and archived live proof at `docs/research/qa-live-2026-05-22-p1-asset-probe-exam.png`.
+- Continuing P1: Minna vocab orphan audit, lesson-specific conjugation, Directive E grammar disclosure, exercise density, and vocab catalog verification.

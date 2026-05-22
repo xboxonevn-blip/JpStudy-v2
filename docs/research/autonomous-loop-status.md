@@ -2835,3 +2835,9 @@
 - Repaired `〜ものとする` examples so the rule/legal register uses real verb obligations instead of `Nとする` classification frames.
 - Global Directive E validator progress is now `175/1123`; next failure starts at `grammar:n1:grammar_n1_18:009`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 020
+- Re-authored N1 rows `〜始末だ`, `〜嫌いがある`, `いつまで〜のやら`, potential `〜が Verbられる`, and `〜かと思いきや`.
+- Repaired one `〜かと思いきや` example so tense and event sequence match the surprise-turn pattern.
+- Global Directive E validator progress is now `180/1123`; next failure starts at `grammar:n1:grammar_n1_19:004`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

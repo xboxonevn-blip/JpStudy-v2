@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: いつまで + Verb (dictionary form) + のやら",
-      "meaning": "Ý nghĩa: Dùng để bày tỏ không biết tình trạng sẽ kéo dài đến bao giờ.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "のやら kết hợp の danh hóa với trợ từ やら, một hạt nghi vấn/mơ hồ trong văn nói-văn viết. いつまで đặt phía trước biến câu thành nỗi không biết thời hạn kết thúc.",
+      "hanVietBridge": "やら gợi “chẳng rõ là...”; いつまで + のやら gần “không biết đến bao giờ mới...”. Sắc thái là thở dài, lo lắng hoặc bất lực.",
+      "form": "Hình thức: いつまで + mệnh đề/động từ thường + のやら. Ví dụ いつまで続くのやら.",
+      "meaning": "Ý nghĩa: Không biết tình trạng này sẽ kéo dài đến bao giờ.",
+      "usage": "Sử dụng: Dùng khi người nói không kiểm soát được thời hạn và có cảm xúc mệt mỏi/lo lắng. Không phải câu hỏi cần đáp án ngay.",
+      "humanMoment": "Dr. Linh lưu ý: いつまで + のやら khác いつまでですか. ですか hỏi thông tin; のやら là tiếng thở dài vì chưa thấy điểm kết.",
+      "crossLinks": [
+        {
+          "pattern": "いつまでですか",
+          "contrast": "Khác いつまで + のやら: いつまでですか hỏi trực tiếp; のやら tự nói với cảm giác mơ hồ/bất lực."
+        },
+        {
+          "pattern": "〜ことやら",
+          "contrast": "〜ことやら cũng mơ hồ/cảm thán; いつまで〜のやら giới hạn vào thời hạn kéo dài."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: ❶ (Group 1) Verb: 書く → 書ける / 飲む → 飲める, etc. ❷ (Group 2) Verb-ます stem + られる (食べる→食べられる、見る→見られる)",
-      "meaning": "Ý nghĩa: Dùng để diễn tả khả năng hoặc năng lực làm một việc.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Dạng khả năng đổi đuôi động từ để đưa “có thể A” vào chính động từ: 書く thành 書ける, 食べる thành 食べられる. Trợ từ が thường đánh dấu thứ/năng lực làm được.",
+      "hanVietBridge": "られる có nhiều chức năng, nhưng ở đây là khả năng. が nối năng lực với đối tượng: 日本語が話せる là “nói được tiếng Nhật”.",
+      "form": "Hình thức: nhóm 1 đổi u -> eru như 書く -> 書ける; nhóm 2 thêm られる như 食べる -> 食べられる; đối tượng thường đi với が.",
+      "meaning": "Ý nghĩa: Có thể A; có năng lực/điều kiện làm A.",
+      "usage": "Sử dụng: Kiểm tra đây là khả năng, không phải bị động hay kính ngữ. Với đối tượng năng lực, が tự nhiên hơn を trong nhiều câu.",
+      "humanMoment": "Dr. Linh lưu ý: 書ける/食べられる khác bị động られる. Nếu câu có “ai bị làm gì”, đó là bị động; nếu nói năng lực làm được, đó là khả năng.",
+      "crossLinks": [
+        {
+          "pattern": "受身の〜られる",
+          "contrast": "Khác dạng khả năng: bị động られる có người/vật chịu tác động; khả năng nói chủ thể làm được A."
+        },
+        {
+          "pattern": "〜ことができる",
+          "contrast": "〜ことができる rõ và trang trọng hơn; dạng khả năng như 書ける gọn và tự nhiên trong hội thoại."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Sentence + かと思いきや (Verb plain form, i-/na-Adjective, or Noun + だ + かと思いきや)",
-      "meaning": "Ý nghĩa: Dùng khi tưởng rằng X sẽ xảy ra, nhưng kết quả lại khác hẳn hoặc bất ngờ.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Về cấu trúc, かと思う là “nghĩ rằng có phải A không/ tưởng là A”; きや là dạng cổ tạo cú ngoặt bất ngờ. 〜かと思いきや giữ giả định A rồi bẻ sang kết quả ngược.",
+      "hanVietBridge": "思 là nghĩ; きや tạo sắc thái “nào ngờ”. Tiếng Việt tự nhiên: cứ tưởng A, nào ngờ B.",
+      "form": "Hình thức: mệnh đề thường + かと思いきや + kết quả trái dự đoán. Với danh từ/な-adj thường có だ trước か.",
+      "meaning": "Ý nghĩa: Cứ tưởng là A, nào ngờ lại B.",
+      "usage": "Sử dụng: Vế sau phải làm kỳ vọng ở vế trước bị đảo hoặc lệch rõ. Nếu chỉ thêm thông tin bình thường, không dùng mẫu này.",
+      "humanMoment": "Dr. Linh lưu ý: 〜かと思いきや khác 〜と思ったら. 思ったら dùng rộng cho “vừa nghĩ/thì”; 思いきや cần cú bẻ lái bất ngờ rõ.",
+      "crossLinks": [
+        {
+          "pattern": "〜と思ったら",
+          "contrast": "Khác 〜かと思いきや: 〜と思ったら dùng rộng; 〜かと思いきや văn viết hơn và nhấn kết quả trái dự đoán."
+        },
+        {
+          "pattern": "〜かと思えば",
+          "contrast": "〜かと思えば có thể nối hai trạng thái trái nhau; 〜かと思いきや nhấn người nói đã tưởng A nhưng thực tế B."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

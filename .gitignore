@@ -89,6 +89,12 @@ node_modules/
 .firebase/
 output/
 output-live-*.png
+# Ephemeral live-audit artifacts (Claude/Codex browser QA, do not commit)
+/audit-*.png
+/reaudit-*.png
+/reaudit-*.yml
+/snapshot-*.yml
+/jpstudy-*.png
 tooling/_tmpcache/
 tooling/__pycache__/
 

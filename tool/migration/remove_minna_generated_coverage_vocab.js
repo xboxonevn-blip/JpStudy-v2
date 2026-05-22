@@ -26,9 +26,11 @@ function jsonFiles(dir) {
 }
 
 function isGeneratedCoverage(entry) {
+  const tags = Array.isArray(entry?.tags) ? entry.tags : [];
   return (
     entry?.classification?.origin === 'generated_coverage' ||
-    (Array.isArray(entry?.tags) && entry.tags.includes('kanji-coverage'))
+    tags.includes('kanji-coverage') ||
+    tags.includes('kanji-example')
   );
 }
 

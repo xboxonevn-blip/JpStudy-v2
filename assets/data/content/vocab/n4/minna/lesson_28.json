@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 28,
-  "entryCount": 54,
+  "entryCount": 52,
   "entries": [
     {
       "entryId": "n4_l28_s001",
@@ -2872,117 +2872,6 @@
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 123382; translation 8956520",
           "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l28_s053",
-      "lessonId": 28,
-      "level": "N4",
-      "order": 53,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l28_v053",
-        "term": "売店",
-        "reading": "ばいてん",
-        "kanji": [
-          "売",
-          "店"
-        ],
-        "labels": {
-          "hanViet": "mại điếm"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l28_s053",
-        "meaningVi": "Quầy bán hàng",
-        "meaningEn": "Shop, Stand"
-      },
-      "search": {
-        "termNoAccent": "売店",
-        "readingNoAccent": "はいてん",
-        "meaningViNoAccent": "quay ban hang",
-        "hanVietNoAccent": "mai diem"
-      },
-      "links": {
-        "sourceVocabId": "n4_l28_v053",
-        "sourceSenseId": "n4_l28_s053"
-      },
-      "legacy": {
-        "kanjiMeaning": "mại điếm"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n4_l28_v053-001",
-          "ja": "資料には売店の説明が載っています。",
-          "vi": "Trong tài liệu có phần giải thích về Quầy bán hàng.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored noun/context sentence for 売店",
-          "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l28_s054",
-      "lessonId": 28,
-      "level": "N4",
-      "order": 54,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l28_v054",
-        "term": "踊り",
-        "reading": "おどり",
-        "kanji": [
-          "踊"
-        ],
-        "labels": {
-          "hanViet": "dũng"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l28_s054",
-        "meaningVi": "Điệu nhảy",
-        "meaningEn": "Dance"
-      },
-      "search": {
-        "termNoAccent": "踊り",
-        "readingNoAccent": "おとり",
-        "meaningViNoAccent": "dieu nhay",
-        "hanVietNoAccent": "dung"
-      },
-      "links": {
-        "sourceVocabId": "n4_l28_v054",
-        "sourceSenseId": "n4_l28_s054"
-      },
-      "legacy": {
-        "kanjiMeaning": "dũng"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n4_l28_v054-001",
-          "ja": "資料には踊りの説明が載っています。",
-          "vi": "Trong tài liệu có phần giải thích về Điệu nhảy.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored noun/context sentence for 踊り",
-          "license": "JpStudy authored"
         }
       ]
     }

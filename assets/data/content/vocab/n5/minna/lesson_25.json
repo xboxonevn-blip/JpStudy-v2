@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 25,
-  "entryCount": 30,
+  "entryCount": 29,
   "entries": [
     {
       "entryId": "n5_l25_s001",
@@ -1605,62 +1605,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 175041; translation 1697163",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l25_s030",
-      "lessonId": 25,
-      "level": "N5",
-      "order": 30,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l25_v030",
-        "term": "参考",
-        "reading": "さんこう",
-        "kanji": [
-          "参",
-          "考"
-        ],
-        "labels": {
-          "hanViet": "tham khảo"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l25_s030",
-        "meaningVi": "Tham khảo",
-        "meaningEn": "Reference"
-      },
-      "search": {
-        "termNoAccent": "参考",
-        "readingNoAccent": "さんこう",
-        "meaningViNoAccent": "tham khao",
-        "hanVietNoAccent": "tham khao"
-      },
-      "links": {
-        "sourceVocabId": "n5_l25_v030",
-        "sourceSenseId": "n5_l25_s030"
-      },
-      "legacy": {
-        "kanjiMeaning": "tham khảo"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-156084-vie-510220",
-          "ja": "私は手もとによい参考書を持っていない。",
-          "vi": "Tôi không có cuốn sách tham khảo tốt nào trong tay.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 156084; translation 510220",
           "license": "CC-BY 2.0"
         }
       ]

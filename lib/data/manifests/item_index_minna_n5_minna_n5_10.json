@@ -505,7 +505,7 @@
       "surface": "乗り場",
       "reading": "のりば",
       "label_ja": "乗り場",
-      "label_vi": "bến xe, điểm lên xe",
+      "label_vi": "Bến xe, điểm lên xuống xe",
       "order": 29,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_10.json",
@@ -520,7 +520,7 @@
       "surface": "県",
       "reading": "けん",
       "label_ja": "県",
-      "label_vi": "tỉnh, huyện",
+      "label_vi": "Tỉnh",
       "order": 30,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_10.json",
@@ -625,7 +625,7 @@
       "surface": "中",
       "reading": "なか",
       "label_ja": "中",
-      "label_vi": "trong",
+      "label_vi": "Trong, giữa",
       "order": 37,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_10.json",
@@ -841,51 +841,6 @@
         "file": "vocab/n5/minna/lesson_10.json",
         "entry_id": "n5_l10_s051",
         "key": "vocab/n5/minna/lesson_10.json#vocab:n5_l10_s051"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_10.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:10:後ろ",
-      "type": "vocab",
-      "surface": "後ろ",
-      "reading": "うしろ",
-      "label_ja": "後ろ",
-      "label_vi": "Phía sau",
-      "order": 52,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_10.json",
-        "entry_id": "n5_l10_s052",
-        "key": "vocab/n5/minna/lesson_10.json#vocab:n5_l10_s052"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_10.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:10:後",
-      "type": "vocab",
-      "surface": "後",
-      "reading": "あと",
-      "label_ja": "後",
-      "label_vi": "sau",
-      "order": 53,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_10.json",
-        "entry_id": "n5_l10_s053",
-        "key": "vocab/n5/minna/lesson_10.json#vocab:n5_l10_s053"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_10.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:10:左右",
-      "type": "vocab",
-      "surface": "左右",
-      "reading": "さゆう",
-      "label_ja": "左右",
-      "label_vi": "trái phải, tả hữu",
-      "order": 54,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_10.json",
-        "entry_id": "n5_l10_s054",
-        "key": "vocab/n5/minna/lesson_10.json#vocab:n5_l10_s054"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_10.json"
     }

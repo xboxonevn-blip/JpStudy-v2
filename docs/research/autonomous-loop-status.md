@@ -2661,3 +2661,11 @@
 - Resolved N4/N5 vocab assets directly to Minna instead of probing missing Shin Kanzen vocab indexes.
 - Added repository regressions for both cases and archived live proof at `docs/research/qa-live-2026-05-22-p1-asset-probe-exam.png`.
 - Continuing P1: Minna vocab orphan audit, lesson-specific conjugation, Directive E grammar disclosure, exercise density, and vocab catalog verification.
+
+## 2026-05-22 P1 H1 Minna vocab orphan cleanup
+- Removed 101 `kanji-example` rows from Minna N5/N4 vocab assets; these belonged to kanji/example practice, not textbook lesson vocab.
+- Synced Minna item manifests so stale single-kanji refs no longer appear in lesson navigation; current manifest totals: `minna_n5=1278`, `minna_n4=1374`.
+- Bumped vocab seed revision to 19 so installed DBs refresh the pruned Minna lesson vocab.
+- Added regressions for no generated kanji coverage rows and no stale Minna manifest vocab refs.
+- Gates passed: Minna vocab quality test, focused analyzer, DB/repository seed tests, example validator, example wiring validate-only, and generated-kanji row scan.
+- Note: global migration validator still reports broad upper-JLPT/Mimikara manifest drift outside this H1 batch; continue P1 with scoped gates.

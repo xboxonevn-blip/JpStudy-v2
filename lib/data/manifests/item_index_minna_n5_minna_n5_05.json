@@ -175,7 +175,7 @@
       "surface": "駅",
       "reading": "えき",
       "label_ja": "駅",
-      "label_vi": "nhà ga",
+      "label_vi": "Ga, nhà ga",
       "order": 6,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_05.json",
@@ -250,7 +250,7 @@
       "surface": "新幹線",
       "reading": "しんかんせん",
       "label_ja": "新幹線",
-      "label_vi": "tàu Shinkansen",
+      "label_vi": "Tàu shinkansen (tàu điện siêu tốc)",
       "order": 11,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_05.json",
@@ -775,7 +775,7 @@
       "surface": "何日",
       "reading": "なんにち",
       "label_ja": "何日",
-      "label_vi": "mồng mấy, mấy ngày",
+      "label_vi": "Ngày mấy, mấy ngày",
       "order": 46,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_05.json",
@@ -931,126 +931,6 @@
         "file": "vocab/n5/minna/lesson_05.json",
         "entry_id": "n5_l05_s056",
         "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s056"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:七",
-      "type": "vocab",
-      "surface": "七",
-      "reading": "なな",
-      "label_ja": "七",
-      "label_vi": "Số 7",
-      "order": 57,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s057",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s057"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:七月",
-      "type": "vocab",
-      "surface": "七月",
-      "reading": "しちがつ",
-      "label_ja": "七月",
-      "label_vi": "Tháng 7",
-      "order": 58,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s058",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s058"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:八",
-      "type": "vocab",
-      "surface": "八",
-      "reading": "はち",
-      "label_ja": "八",
-      "label_vi": "Số 8",
-      "order": 59,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s059",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s059"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:八百",
-      "type": "vocab",
-      "surface": "八百",
-      "reading": "はっぴゃく",
-      "label_ja": "八百",
-      "label_vi": "800",
-      "order": 60,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s060",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s060"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:九",
-      "type": "vocab",
-      "surface": "九",
-      "reading": "きゅう",
-      "label_ja": "九",
-      "label_vi": "Số 9",
-      "order": 61,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s061",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s061"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:九月",
-      "type": "vocab",
-      "surface": "九月",
-      "reading": "くがつ",
-      "label_ja": "九月",
-      "label_vi": "Tháng 9",
-      "order": 62,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s062",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s062"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:十",
-      "type": "vocab",
-      "surface": "十",
-      "reading": "じゅう",
-      "label_ja": "十",
-      "label_vi": "Số 10",
-      "order": 63,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s063",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s063"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:05:十月",
-      "type": "vocab",
-      "surface": "十月",
-      "reading": "じゅうがつ",
-      "label_ja": "十月",
-      "label_vi": "Tháng 10",
-      "order": 64,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_05.json",
-        "entry_id": "n5_l05_s064",
-        "key": "vocab/n5/minna/lesson_05.json#vocab:n5_l05_s064"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_05.json"
     }

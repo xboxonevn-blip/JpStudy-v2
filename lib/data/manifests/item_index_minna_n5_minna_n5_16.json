@@ -520,7 +520,7 @@
       "surface": "背",
       "reading": "せ",
       "label_ja": "背",
-      "label_vi": "lưng, chiều cao cơ thể",
+      "label_vi": "Chiều cao (cơ thể)",
       "order": 31,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_16.json",
@@ -835,7 +835,7 @@
       "surface": "大学",
       "reading": "だいがく",
       "label_ja": "大学",
-      "label_vi": "đại học",
+      "label_vi": "Trường đại học",
       "order": 52,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_16.json",
@@ -940,7 +940,7 @@
       "surface": "次に",
       "reading": "つぎに",
       "label_ja": "次に",
-      "label_vi": "Kế tiếp",
+      "label_vi": "Tiếp theo, sau đó",
       "order": 59,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_16.json",
@@ -1021,141 +1021,6 @@
         "file": "vocab/n5/minna/lesson_16.json",
         "entry_id": "n5_l16_s064",
         "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s064"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:首",
-      "type": "vocab",
-      "surface": "首",
-      "reading": "くび",
-      "label_ja": "首",
-      "label_vi": "Cổ",
-      "order": 65,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s065",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s065"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:心",
-      "type": "vocab",
-      "surface": "心",
-      "reading": "こころ",
-      "label_ja": "心",
-      "label_vi": "Trái tim, tấm lòng",
-      "order": 66,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s066",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s066"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:教科書",
-      "type": "vocab",
-      "surface": "教科書",
-      "reading": "きょうかしょ",
-      "label_ja": "教科書",
-      "label_vi": "Sách giáo khoa",
-      "order": 67,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s067",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s067"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:内",
-      "type": "vocab",
-      "surface": "内",
-      "reading": "うち",
-      "label_ja": "内",
-      "label_vi": "bên trong",
-      "order": 68,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s068",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s068"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:病",
-      "type": "vocab",
-      "surface": "病",
-      "reading": "やみ",
-      "label_ja": "病",
-      "label_vi": "ốm",
-      "order": 69,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s069",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s069"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:科",
-      "type": "vocab",
-      "surface": "科",
-      "reading": "か",
-      "label_ja": "科",
-      "label_vi": "khoa học",
-      "order": 70,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s070",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s070"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:声明",
-      "type": "vocab",
-      "surface": "声明",
-      "reading": "せいめい",
-      "label_ja": "声明",
-      "label_vi": "tuyên bố",
-      "order": 71,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s071",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s071"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:頭痛",
-      "type": "vocab",
-      "surface": "頭痛",
-      "reading": "ずつう",
-      "label_ja": "頭痛",
-      "label_vi": "đau đầu",
-      "order": 72,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s072",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s072"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:16:顔付き",
-      "type": "vocab",
-      "surface": "顔付き",
-      "reading": "かおつき",
-      "label_ja": "顔付き",
-      "label_vi": "diện mạo, nét mặt",
-      "order": 73,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_16.json",
-        "entry_id": "n5_l16_s073",
-        "key": "vocab/n5/minna/lesson_16.json#vocab:n5_l16_s073"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_16.json"
     }

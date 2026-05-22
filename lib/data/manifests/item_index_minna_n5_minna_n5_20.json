@@ -160,7 +160,7 @@
       "surface": "君",
       "reading": "きみ",
       "label_ja": "君",
-      "label_vi": "cậu (dùng với người ngang hàng/cấp dưới)",
+      "label_vi": "Cậu, bạn (cách gọi thân mật của あなた)",
       "order": 7,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_20.json",
@@ -250,7 +250,7 @@
       "surface": "物価",
       "reading": "ぶっか",
       "label_ja": "物価",
-      "label_vi": "giá cả, vật giá",
+      "label_vi": "Giá cả, mức giá, vật giá",
       "order": 13,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_20.json",
@@ -265,7 +265,7 @@
       "surface": "着物",
       "reading": "きもの",
       "label_ja": "着物",
-      "label_vi": "Kimono",
+      "label_vi": "Kimono (trang phục truyền thống của nhật bản)",
       "order": 14,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_20.json",
@@ -505,7 +505,7 @@
       "surface": "言葉",
       "reading": "ことば",
       "label_ja": "言葉",
-      "label_vi": "từ/ngôn ngữ",
+      "label_vi": "Từ, tiếng",
       "order": 30,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_20.json",
@@ -571,51 +571,6 @@
         "file": "vocab/n5/minna/lesson_20.json",
         "entry_id": "n5_l20_s034",
         "key": "vocab/n5/minna/lesson_20.json#vocab:n5_l20_s034"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_20.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:20:止",
-      "type": "vocab",
-      "surface": "止",
-      "reading": "さし",
-      "label_ja": "止",
-      "label_vi": "dừng",
-      "order": 35,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_20.json",
-        "entry_id": "n5_l20_s035",
-        "key": "vocab/n5/minna/lesson_20.json#vocab:n5_l20_s035"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_20.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:20:雨戸",
-      "type": "vocab",
-      "surface": "雨戸",
-      "reading": "あまど",
-      "label_ja": "雨戸",
-      "label_vi": "cửa chớp chống bão",
-      "order": 36,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_20.json",
-        "entry_id": "n5_l20_s036",
-        "key": "vocab/n5/minna/lesson_20.json#vocab:n5_l20_s036"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_20.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:20:雪崩",
-      "type": "vocab",
-      "surface": "雪崩",
-      "reading": "なだれ",
-      "label_ja": "雪崩",
-      "label_vi": "lở tuyết",
-      "order": 37,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_20.json",
-        "entry_id": "n5_l20_s037",
-        "key": "vocab/n5/minna/lesson_20.json#vocab:n5_l20_s037"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_20.json"
     }

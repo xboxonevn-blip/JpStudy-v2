@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 8,
-  "entryCount": 68,
+  "entryCount": 66,
   "entries": [
     {
       "entryId": "n5_l08_s001",
@@ -3618,117 +3618,6 @@
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored adjective context for いらっしゃってください",
           "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l08_s067",
-      "lessonId": 8,
-      "level": "N5",
-      "order": 67,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l08_v067",
-        "term": "良い",
-        "reading": "よい",
-        "kanji": [
-          "良"
-        ],
-        "labels": {
-          "hanViet": "lương"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l08_s067",
-        "meaningVi": "Tốt",
-        "meaningEn": "Good"
-      },
-      "search": {
-        "termNoAccent": "良い",
-        "readingNoAccent": "よい",
-        "meaningViNoAccent": "tot",
-        "hanVietNoAccent": "luong"
-      },
-      "links": {
-        "sourceVocabId": "n5_l08_v067",
-        "sourceSenseId": "n5_l08_s067"
-      },
-      "legacy": {
-        "kanjiMeaning": "lương"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-4711-vie-5671",
-          "ja": "何と言ったら良いか分かりません。",
-          "vi": "Tôi hết lời để nói.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 4711; translation 5671",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l08_s068",
-      "lessonId": 8,
-      "level": "N5",
-      "order": 68,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l08_v068",
-        "term": "安心",
-        "reading": "あんしん",
-        "kanji": [
-          "安",
-          "心"
-        ],
-        "labels": {
-          "hanViet": "an tâm"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l08_s068",
-        "meaningVi": "An tâm",
-        "meaningEn": "Relief"
-      },
-      "search": {
-        "termNoAccent": "安心",
-        "readingNoAccent": "あんしん",
-        "meaningViNoAccent": "an tam",
-        "hanVietNoAccent": "an tam"
-      },
-      "links": {
-        "sourceVocabId": "n5_l08_v068",
-        "sourceSenseId": "n5_l08_s068"
-      },
-      "legacy": {
-        "kanjiMeaning": "an tâm"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-77320-vie-9013941",
-          "ja": "老後を安心して暮らしたかったら今から貯蓄を始めなさい。",
-          "vi": "Nếu bạn mong muốn một cuộc sống yên ả lúc về già, thì bây giờ hãy bắt đầu tiết kiệm đi.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 77320; translation 9013941",
-          "license": "CC-BY 2.0"
         }
       ]
     }

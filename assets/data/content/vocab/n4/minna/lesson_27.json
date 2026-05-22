@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 27,
-  "entryCount": 58,
+  "entryCount": 57,
   "entries": [
     {
       "entryId": "n4_l27_s001",
@@ -3152,62 +3152,6 @@
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored time context for 日曜日大工",
           "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l27_s058",
-      "lessonId": 27,
-      "level": "N4",
-      "order": 58,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l27_v058",
-        "term": "小鳥",
-        "reading": "ことり",
-        "kanji": [
-          "小",
-          "鳥"
-        ],
-        "labels": {
-          "hanViet": "tiểu điểu"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l27_s058",
-        "meaningVi": "Chim non",
-        "meaningEn": "Small bird"
-      },
-      "search": {
-        "termNoAccent": "小鳥",
-        "readingNoAccent": "ことり",
-        "meaningViNoAccent": "chim non",
-        "hanVietNoAccent": "tieu dieu"
-      },
-      "links": {
-        "sourceVocabId": "n4_l27_v058",
-        "sourceSenseId": "n4_l27_s058"
-      },
-      "legacy": {
-        "kanjiMeaning": "tiểu điểu"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-80542-vie-8931301",
-          "ja": "明日の朝、起床したときには太陽が輝いて、小鳥がさえずっているだろう。",
-          "vi": "Sáng mai tôi thức dậy, mặt trời sẽ tỏa sáng, còn những chú chim nhỏ sẽ hót líu lo.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 80542; translation 8931301",
-          "license": "CC-BY 2.0"
         }
       ]
     }

@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 1,
-  "entryCount": 42,
+  "entryCount": 40,
   "entries": [
     {
       "entryId": "n5_l01_s001",
@@ -2208,119 +2208,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 9712443; translation 9715441",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l01_s041",
-      "lessonId": 1,
-      "level": "N5",
-      "order": 41,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l01_v041",
-        "term": "日本人",
-        "reading": "にほんじん",
-        "kanji": [
-          "日",
-          "本",
-          "人"
-        ],
-        "labels": {
-          "hanViet": "nhật bản nhân"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l01_s041",
-        "meaningVi": "Người Nhật",
-        "meaningEn": "Japanese person"
-      },
-      "search": {
-        "termNoAccent": "日本人",
-        "readingNoAccent": "にほんしん",
-        "meaningViNoAccent": "nguoi nhat",
-        "hanVietNoAccent": "nhat ban nhan"
-      },
-      "links": {
-        "sourceVocabId": "n5_l01_v041",
-        "sourceSenseId": "n5_l01_s041"
-      },
-      "legacy": {
-        "kanjiMeaning": "nhật bản nhân"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-81256-vie-9734430",
-          "ja": "毎年、多くの日本人が海外へ旅行する。",
-          "vi": "Mỗi năm có nhiều người Nhật đi du lịch nước ngoài.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 81256; translation 9734430",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l01_s042",
-      "lessonId": 1,
-      "level": "N5",
-      "order": 42,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l01_v042",
-        "term": "三人",
-        "reading": "さんにん",
-        "kanji": [
-          "三",
-          "人"
-        ],
-        "labels": {
-          "hanViet": "ba nhân"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l01_s042",
-        "meaningVi": "3 người",
-        "meaningEn": "Three people"
-      },
-      "search": {
-        "termNoAccent": "三人",
-        "readingNoAccent": "さんにん",
-        "meaningViNoAccent": "3 nguoi",
-        "hanVietNoAccent": "ba nhan"
-      },
-      "links": {
-        "sourceVocabId": "n5_l01_v042",
-        "sourceSenseId": "n5_l01_s042"
-      },
-      "legacy": {
-        "kanjiMeaning": "ba nhân"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-169494-vie-8989693",
-          "ja": "三人寄れば文殊の知恵って言うだろ。みんなで考えれば、いい案が浮かぶかもしれないよ。",
-          "vi": "Người ta có câu, một cây làm chẳng nên non, ba cây chụm lại nên hòn núi cao mà, có phải không? Nếu chúng ta cùng nhau suy nghĩ, biết đâu lại nghĩ ra được một ý tưởng hay.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 169494; translation 8989693",
           "license": "CC-BY 2.0"
         }
       ]

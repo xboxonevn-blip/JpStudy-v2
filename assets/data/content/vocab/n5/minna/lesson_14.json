@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 14,
-  "entryCount": 47,
+  "entryCount": 45,
   "entries": [
     {
       "entryId": "n5_l14_s001",
@@ -2480,117 +2480,6 @@
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 4924; translation 5753",
           "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l14_s046",
-      "lessonId": 14,
-      "level": "N5",
-      "order": 46,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l14_v046",
-        "term": "協力",
-        "reading": "きょうりょく",
-        "kanji": [
-          "協",
-          "力"
-        ],
-        "labels": {
-          "hanViet": "hiếp lực"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l14_s046",
-        "meaningVi": "Hợp lực",
-        "meaningEn": "Cooperation"
-      },
-      "search": {
-        "termNoAccent": "協力",
-        "readingNoAccent": "きょうりょく",
-        "meaningViNoAccent": "hop luc",
-        "hanVietNoAccent": "hiep luc"
-      },
-      "links": {
-        "sourceVocabId": "n5_l14_v046",
-        "sourceSenseId": "n5_l14_s046"
-      },
-      "legacy": {
-        "kanjiMeaning": "hiếp lực"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n5_l14_v046-001",
-          "ja": "資料には協力の説明が載っています。",
-          "vi": "Trong tài liệu có phần giải thích về Hợp lực.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored noun/context sentence for 協力",
-          "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l14_s047",
-      "lessonId": 14,
-      "level": "N5",
-      "order": 47,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l14_v047",
-        "term": "代わります",
-        "reading": "かわります",
-        "kanji": [
-          "代"
-        ],
-        "labels": {
-          "hanViet": "đại"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l14_s047",
-        "meaningVi": "Thay thế",
-        "meaningEn": "Replace"
-      },
-      "search": {
-        "termNoAccent": "代わります",
-        "readingNoAccent": "かわります",
-        "meaningViNoAccent": "thay the",
-        "hanVietNoAccent": "dai"
-      },
-      "links": {
-        "sourceVocabId": "n5_l14_v047",
-        "sourceSenseId": "n5_l14_s047"
-      },
-      "legacy": {
-        "kanjiMeaning": "đại"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n5_l14_v047-001",
-          "ja": "代わりますの入口で友だちに会いました。",
-          "vi": "Tôi đã gặp bạn ở lối vào Thay thế.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 代わります",
-          "license": "JpStudy authored"
         }
       ]
     }

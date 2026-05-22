@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 7,
-  "entryCount": 55,
+  "entryCount": 53,
   "entries": [
     {
       "entryId": "n5_l07_s001",
@@ -2873,118 +2873,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 111083; translation 8964039",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l07_s054",
-      "lessonId": 7,
-      "level": "N5",
-      "order": 54,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l07_v054",
-        "term": "練習",
-        "reading": "れんしゅう",
-        "kanji": [
-          "練",
-          "習"
-        ],
-        "labels": {
-          "hanViet": "luyện tập"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l07_s054",
-        "meaningVi": "Luyện tập",
-        "meaningEn": "Practice"
-      },
-      "search": {
-        "termNoAccent": "練習",
-        "readingNoAccent": "れんしゅう",
-        "meaningViNoAccent": "luyen tap",
-        "hanVietNoAccent": "luyen tap"
-      },
-      "links": {
-        "sourceVocabId": "n5_l07_v054",
-        "sourceSenseId": "n5_l07_s054"
-      },
-      "legacy": {
-        "kanjiMeaning": "luyện tập"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-74756-vie-8795021",
-          "ja": "小説だって絵と同様に練習が必要なんだから。",
-          "vi": "Bởi vì việc viết tiểu thuyết cũng cần phải luyện tập giống như việc vẽ tranh vậy.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 74756; translation 8795021",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l07_s055",
-      "lessonId": 7,
-      "level": "N5",
-      "order": 55,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l07_v055",
-        "term": "友人",
-        "reading": "ゆうじん",
-        "kanji": [
-          "友",
-          "人"
-        ],
-        "labels": {
-          "hanViet": "hữu nhân"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l07_s055",
-        "meaningVi": "Thân hữu",
-        "meaningEn": "Friend (formal)"
-      },
-      "search": {
-        "termNoAccent": "友人",
-        "readingNoAccent": "ゆうしん",
-        "meaningViNoAccent": "than huu",
-        "hanVietNoAccent": "huu nhan"
-      },
-      "links": {
-        "sourceVocabId": "n5_l07_v055",
-        "sourceSenseId": "n5_l07_s055"
-      },
-      "legacy": {
-        "kanjiMeaning": "hữu nhân"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-5299-vie-5908",
-          "ja": "午後はずっと友人とおしゃべりをして過ごした。",
-          "vi": "Tôi tốn hết buổi chiều tán chuyện với đám bạn.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 5299; translation 5908",
           "license": "CC-BY 2.0"
         }
       ]

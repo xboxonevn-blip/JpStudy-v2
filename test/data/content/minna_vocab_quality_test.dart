@@ -13,7 +13,8 @@ void main() {
     expect(files, isNotEmpty);
 
     for (final file in files) {
-      final payload = jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
+      final payload =
+          jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
       final entries = (payload['entries'] as List).cast<Map<String, dynamic>>();
 
       expect(payload['entryCount'], entries.length, reason: file.path);
@@ -26,7 +27,8 @@ void main() {
       for (final entry in entries) {
         final classification =
             entry['classification'] as Map<String, dynamic>? ?? const {};
-        final tags = (entry['tags'] as List? ?? const <Object?>[]).cast<Object?>();
+        final tags = (entry['tags'] as List? ?? const <Object?>[])
+            .cast<Object?>();
         expect(
           classification['origin'],
           isNot('generated_coverage'),
@@ -35,6 +37,11 @@ void main() {
         expect(
           tags,
           isNot(contains('kanji-coverage')),
+          reason: '${file.path} ${entry['entryId']}',
+        );
+        expect(
+          tags,
+          isNot(contains('kanji-example')),
           reason: '${file.path} ${entry['entryId']}',
         );
       }
@@ -59,6 +66,47 @@ void main() {
     expect(terms, isNot(contains('来')));
     expect(terms, contains('会社員'));
     expect(terms, contains('学生'));
+  });
+
+  test('Minna manifest vocab refs match current lesson assets', () {
+    for (final level in ['n5', 'n4']) {
+      final textbookId = 'minna_$level';
+      final assetDir = Directory('assets/data/content/vocab/$level/minna');
+      for (final assetFile in _jsonFiles(assetDir)) {
+        final payload =
+            jsonDecode(assetFile.readAsStringSync()) as Map<String, dynamic>;
+        final lessonId = payload['lessonId'] as int;
+        final relativeAsset =
+            'vocab/$level/minna/${assetFile.uri.pathSegments.last}';
+        final validKeys = {
+          for (final entry
+              in (payload['entries'] as List).cast<Map<String, dynamic>>())
+            '$relativeAsset#vocab:${entry['entryId']}',
+        };
+        final manifestFile = File(
+          'lib/data/manifests/item_index_${textbookId}_${textbookId}_${lessonId.toString().padLeft(2, '0')}.json',
+        );
+        expect(manifestFile.existsSync(), isTrue, reason: manifestFile.path);
+        final manifest =
+            jsonDecode(manifestFile.readAsStringSync()) as Map<String, dynamic>;
+        final items = (manifest['items'] as List).cast<Map<String, dynamic>>();
+        final vocabRefs = items.where((item) {
+          if (item['type'] != 'vocab') return false;
+          final legacyRef = item['legacy_ref'] as Map<String, dynamic>? ?? {};
+          return legacyRef['file'] == relativeAsset;
+        }).toList();
+
+        expect(vocabRefs, hasLength(validKeys.length), reason: assetFile.path);
+        for (final item in vocabRefs) {
+          final legacyRef = item['legacy_ref'] as Map<String, dynamic>? ?? {};
+          expect(
+            validKeys,
+            contains(legacyRef['key']),
+            reason: '${manifestFile.path} ${legacyRef['key']}',
+          );
+        }
+      }
+    }
   });
 }
 

@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 35,
-  "entryCount": 49,
+  "entryCount": 48,
   "entries": [
     {
       "entryId": "n4_l35_s001",
@@ -2645,62 +2645,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 5123; translation 5819",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l35_s049",
-      "lessonId": 35,
-      "level": "N4",
-      "order": 49,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l35_v049",
-        "term": "注意",
-        "reading": "ちゅうい",
-        "kanji": [
-          "注",
-          "意"
-        ],
-        "labels": {
-          "hanViet": "chú ý"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l35_s049",
-        "meaningVi": "Chú ý",
-        "meaningEn": "Caution"
-      },
-      "search": {
-        "termNoAccent": "注意",
-        "readingNoAccent": "ちゅうい",
-        "meaningViNoAccent": "chu y",
-        "hanVietNoAccent": "chu y"
-      },
-      "links": {
-        "sourceVocabId": "n4_l35_v049",
-        "sourceSenseId": "n4_l35_s049"
-      },
-      "legacy": {
-        "kanjiMeaning": "chú ý"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-78520-vie-8987292",
-          "ja": "落下物に注意！",
-          "vi": "Chú ý vật rơi!",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 78520; translation 8987292",
           "license": "CC-BY 2.0"
         }
       ]

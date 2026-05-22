@@ -325,7 +325,7 @@
       "surface": "午前",
       "reading": "ごぜん",
       "label_ja": "午前",
-      "label_vi": "buổi sáng (AM)",
+      "label_vi": "Sáng (trước 12 giờ)",
       "order": 18,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_04.json",
@@ -340,7 +340,7 @@
       "surface": "午後",
       "reading": "ごご",
       "label_ja": "午後",
-      "label_vi": "buổi chiều (PM)",
+      "label_vi": "Chiều (sau 12 giờ)",
       "order": 19,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_04.json",
@@ -415,7 +415,7 @@
       "surface": "一昨日",
       "reading": "おととい",
       "label_ja": "一昨日",
-      "label_vi": "hôm kia",
+      "label_vi": "Ngày hôm kia",
       "order": 24,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_04.json",
@@ -430,7 +430,7 @@
       "surface": "昨日",
       "reading": "きのう",
       "label_ja": "昨日",
-      "label_vi": "hôm qua",
+      "label_vi": "Ngày hôm qua",
       "order": 25,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_04.json",
@@ -580,7 +580,7 @@
       "surface": "映画",
       "reading": "えいが",
       "label_ja": "映画",
-      "label_vi": "phim ảnh",
+      "label_vi": "Phim, điện ảnh",
       "order": 35,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_04.json",
@@ -976,96 +976,6 @@
         "file": "vocab/n5/minna/lesson_04.json",
         "entry_id": "n5_l04_s061",
         "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s061"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:04:四",
-      "type": "vocab",
-      "surface": "四",
-      "reading": "よん",
-      "label_ja": "四",
-      "label_vi": "Số 4",
-      "order": 62,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_04.json",
-        "entry_id": "n5_l04_s062",
-        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s062"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:04:四月",
-      "type": "vocab",
-      "surface": "四月",
-      "reading": "しがつ",
-      "label_ja": "四月",
-      "label_vi": "Tháng 4",
-      "order": 63,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_04.json",
-        "entry_id": "n5_l04_s063",
-        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s063"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:04:五",
-      "type": "vocab",
-      "surface": "五",
-      "reading": "ご",
-      "label_ja": "五",
-      "label_vi": "Số 5",
-      "order": 64,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_04.json",
-        "entry_id": "n5_l04_s064",
-        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s064"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:04:五月",
-      "type": "vocab",
-      "surface": "五月",
-      "reading": "ごがつ",
-      "label_ja": "五月",
-      "label_vi": "Tháng 5",
-      "order": 65,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_04.json",
-        "entry_id": "n5_l04_s065",
-        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s065"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:04:六",
-      "type": "vocab",
-      "surface": "六",
-      "reading": "ろく",
-      "label_ja": "六",
-      "label_vi": "Số 6",
-      "order": 66,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_04.json",
-        "entry_id": "n5_l04_s066",
-        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s066"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:04:六百",
-      "type": "vocab",
-      "surface": "六百",
-      "reading": "ろっぴゃく",
-      "label_ja": "六百",
-      "label_vi": "600",
-      "order": 67,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_04.json",
-        "entry_id": "n5_l04_s067",
-        "key": "vocab/n5/minna/lesson_04.json#vocab:n5_l04_s067"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_04.json"
     }

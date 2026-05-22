@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 17,
-  "entryCount": 43,
+  "entryCount": 41,
   "entries": [
     {
       "entryId": "n5_l17_s001",
@@ -2299,116 +2299,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 79989; translation 9734318",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l17_s042",
-      "lessonId": 17,
-      "level": "N5",
-      "order": 42,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l17_v042",
-        "term": "朝ごはん",
-        "reading": "あさごはん",
-        "kanji": [
-          "朝"
-        ],
-        "labels": {
-          "hanViet": "triều"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l17_s042",
-        "meaningVi": "Bữa sáng",
-        "meaningEn": "Breakfast"
-      },
-      "search": {
-        "termNoAccent": "朝こはん",
-        "readingNoAccent": "あさこはん",
-        "meaningViNoAccent": "bua sang",
-        "hanVietNoAccent": "trieu"
-      },
-      "links": {
-        "sourceVocabId": "n5_l17_v042",
-        "sourceSenseId": "n5_l17_s042"
-      },
-      "legacy": {
-        "kanjiMeaning": "triều"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-2390179-vie-8943002",
-          "ja": "私はいつも朝ごはんを食べない。",
-          "vi": "Tôi không phải lúc nào cũng ăn sáng.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 2390179; translation 8943002",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l17_s043",
-      "lessonId": 17,
-      "level": "N5",
-      "order": 43,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l17_v043",
-        "term": "昼ごはん",
-        "reading": "ひるごはん",
-        "kanji": [
-          "昼"
-        ],
-        "labels": {
-          "hanViet": "trú"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l17_s043",
-        "meaningVi": "Bữa trưa",
-        "meaningEn": "Lunch"
-      },
-      "search": {
-        "termNoAccent": "昼こはん",
-        "readingNoAccent": "ひるこはん",
-        "meaningViNoAccent": "bua trua",
-        "hanVietNoAccent": "tru"
-      },
-      "links": {
-        "sourceVocabId": "n5_l17_v043",
-        "sourceSenseId": "n5_l17_s043"
-      },
-      "legacy": {
-        "kanjiMeaning": "trú"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-4562187-vie-8969941",
-          "ja": "もう昼ごはんを食べきったよ。",
-          "vi": "Tôi đã ăn xong bữa trưa rồi đấy.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 4562187; translation 8969941",
           "license": "CC-BY 2.0"
         }
       ]

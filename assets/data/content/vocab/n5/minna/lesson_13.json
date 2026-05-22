@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 13,
-  "entryCount": 47,
+  "entryCount": 46,
   "entries": [
     {
       "entryId": "n5_l13_s001",
@@ -2570,62 +2570,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 2147117; translation 2654704",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l13_s047",
-      "lessonId": 13,
-      "level": "N5",
-      "order": 47,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l13_v047",
-        "term": "食事",
-        "reading": "しょくじ",
-        "kanji": [
-          "食",
-          "事"
-        ],
-        "labels": {
-          "hanViet": "thực sự"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l13_s047",
-        "meaningVi": "Bữa ăn",
-        "meaningEn": "Meal"
-      },
-      "search": {
-        "termNoAccent": "食事",
-        "readingNoAccent": "しょくし",
-        "meaningViNoAccent": "bua an",
-        "hanVietNoAccent": "thuc su"
-      },
-      "links": {
-        "sourceVocabId": "n5_l13_v047",
-        "sourceSenseId": "n5_l13_s047"
-      },
-      "legacy": {
-        "kanjiMeaning": "thực sự"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-5222-vie-5857",
-          "ja": "食事中本を読んだ。",
-          "vi": "Tôi đọc sách lúc ăn cơm.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 5222; translation 5857",
           "license": "CC-BY 2.0"
         }
       ]

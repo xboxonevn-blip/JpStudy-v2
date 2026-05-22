@@ -385,7 +385,7 @@
       "surface": "上着",
       "reading": "うわぎ",
       "label_ja": "上着",
-      "label_vi": "áo khoác, áo ngoài",
+      "label_vi": "Áo khoác",
       "order": 22,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_17.json",
@@ -400,7 +400,7 @@
       "surface": "下着",
       "reading": "したぎ",
       "label_ja": "下着",
-      "label_vi": "đồ lót",
+      "label_vi": "Quần áo lót",
       "order": 23,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_17.json",
@@ -520,7 +520,7 @@
       "surface": "お大事に",
       "reading": "おだいじに",
       "label_ja": "お大事に",
-      "label_vi": "chúc mau khỏe (với người ốm)",
+      "label_vi": "Anh/chị nhớ giữ gìn sức khỏe",
       "order": 31,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_17.json",
@@ -580,7 +580,7 @@
       "surface": "問題",
       "reading": "もんだい",
       "label_ja": "問題",
-      "label_vi": "vấn đề, câu hỏi",
+      "label_vi": "Câu hỏi, vấn đề",
       "order": 35,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_17.json",
@@ -595,7 +595,7 @@
       "surface": "答え",
       "reading": "こたえ",
       "label_ja": "答え",
-      "label_vi": "trả lời",
+      "label_vi": "Câu trả lời",
       "order": 36,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_17.json",
@@ -676,111 +676,6 @@
         "file": "vocab/n5/minna/lesson_17.json",
         "entry_id": "n5_l17_s041",
         "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s041"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:朝ごはん",
-      "type": "vocab",
-      "surface": "朝ごはん",
-      "reading": "あさごはん",
-      "label_ja": "朝ごはん",
-      "label_vi": "Bữa sáng",
-      "order": 42,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s042",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s042"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:昼ごはん",
-      "type": "vocab",
-      "surface": "昼ごはん",
-      "reading": "ひるごはん",
-      "label_ja": "昼ごはん",
-      "label_vi": "Bữa trưa",
-      "order": 43,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s043",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s043"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:夕",
-      "type": "vocab",
-      "surface": "夕",
-      "reading": "ゆう",
-      "label_ja": "夕",
-      "label_vi": "chiều tối",
-      "order": 44,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s044",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s044"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:始",
-      "type": "vocab",
-      "surface": "始",
-      "reading": "はじめる",
-      "label_ja": "始",
-      "label_vi": "bắt đầu",
-      "order": 45,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s045",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s045"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:終",
-      "type": "vocab",
-      "surface": "終",
-      "reading": "おわる",
-      "label_ja": "終",
-      "label_vi": "kết thúc",
-      "order": 46,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s046",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s046"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:始終",
-      "type": "vocab",
-      "surface": "始終",
-      "reading": "しじゅう",
-      "label_ja": "始終",
-      "label_vi": "suốt từ đầu đến cuối",
-      "order": 47,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s047",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s047"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:17:終了",
-      "type": "vocab",
-      "surface": "終了",
-      "reading": "しゅうりょう",
-      "label_ja": "終了",
-      "label_vi": "kết thúc",
-      "order": 48,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_17.json",
-        "entry_id": "n5_l17_s048",
-        "key": "vocab/n5/minna/lesson_17.json#vocab:n5_l17_s048"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_17.json"
     }

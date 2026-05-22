@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 11,
-  "entryCount": 67,
+  "entryCount": 65,
   "entries": [
     {
       "entryId": "n5_l11_s001",
@@ -3593,118 +3593,6 @@
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 227788; translation 8997696",
           "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l11_s066",
-      "lessonId": 11,
-      "level": "N5",
-      "order": 66,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l11_v066",
-        "term": "外国人",
-        "reading": "がいこくじん",
-        "kanji": [
-          "外",
-          "国",
-          "人"
-        ],
-        "labels": {
-          "hanViet": "ngoại quốc nhân"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l11_s066",
-        "meaningVi": "Người nước ngoài",
-        "meaningEn": "Foreigner"
-      },
-      "search": {
-        "termNoAccent": "外国人",
-        "readingNoAccent": "かいこくしん",
-        "meaningViNoAccent": "nguoi nuoc ngoai",
-        "hanVietNoAccent": "ngoai quoc nhan"
-      },
-      "links": {
-        "sourceVocabId": "n5_l11_v066",
-        "sourceSenseId": "n5_l11_s066"
-      },
-      "legacy": {
-        "kanjiMeaning": "ngoại quốc nhân"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-79217-vie-5759851",
-          "ja": "裕子は外国人と話したことがない。",
-          "vi": "Yuko chưa từng nói chuyện với người nước ngoài.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 79217; translation 5759851",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l11_s067",
-      "lessonId": 11,
-      "level": "N5",
-      "order": 67,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l11_v067",
-        "term": "女",
-        "reading": "おんな",
-        "kanji": [
-          "女"
-        ],
-        "labels": {
-          "hanViet": "nữ"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l11_s067",
-        "meaningVi": "Phụ nữ",
-        "meaningEn": "Woman"
-      },
-      "search": {
-        "termNoAccent": "女",
-        "readingNoAccent": "おんな",
-        "meaningViNoAccent": "phu nu",
-        "hanVietNoAccent": "nu"
-      },
-      "links": {
-        "sourceVocabId": "n5_l11_v067",
-        "sourceSenseId": "n5_l11_s067"
-      },
-      "legacy": {
-        "kanjiMeaning": "nữ"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n5_l11_v067-001",
-          "ja": "資料には女の説明が載っています。",
-          "vi": "Trong tài liệu có phần giải thích về Phụ nữ.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored noun/context sentence for 女",
-          "license": "JpStudy authored"
         }
       ]
     }

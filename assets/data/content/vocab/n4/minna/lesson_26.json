@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 26,
-  "entryCount": 68,
+  "entryCount": 66,
   "entries": [
     {
       "entryId": "n4_l26_s001",
@@ -3661,120 +3661,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 4845; translation 5720",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l26_s067",
-      "lessonId": 26,
-      "level": "N4",
-      "order": 67,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l26_v067",
-        "term": "私立大学",
-        "reading": "しりつだいがく",
-        "kanji": [
-          "私",
-          "立",
-          "大",
-          "学"
-        ],
-        "labels": {
-          "hanViet": "tư lập đại học"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l26_s067",
-        "meaningVi": "Đại học tư thục",
-        "meaningEn": "Private university"
-      },
-      "search": {
-        "termNoAccent": "私立大学",
-        "readingNoAccent": "しりつたいかく",
-        "meaningViNoAccent": "dai hoc tu thuc",
-        "hanVietNoAccent": "tu lap dai hoc"
-      },
-      "links": {
-        "sourceVocabId": "n4_l26_v067",
-        "sourceSenseId": "n4_l26_s067"
-      },
-      "legacy": {
-        "kanjiMeaning": "tư lập đại học"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n4_l26_v067-001",
-          "ja": "私立大学の入口で友だちに会いました。",
-          "vi": "Tôi đã gặp bạn ở lối vào Đại học tư thục.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 私立大学",
-          "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l26_s068",
-      "lessonId": 26,
-      "level": "N4",
-      "order": 68,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l26_v068",
-        "term": "夫婦",
-        "reading": "ふうふ",
-        "kanji": [
-          "夫",
-          "婦"
-        ],
-        "labels": {
-          "hanViet": "phu phụ"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l26_s068",
-        "meaningVi": "Vợ chồng",
-        "meaningEn": "Married couple"
-      },
-      "search": {
-        "termNoAccent": "夫婦",
-        "readingNoAccent": "ふうふ",
-        "meaningViNoAccent": "vo chong",
-        "hanVietNoAccent": "phu phu"
-      },
-      "links": {
-        "sourceVocabId": "n4_l26_v068",
-        "sourceSenseId": "n4_l26_s068"
-      },
-      "legacy": {
-        "kanjiMeaning": "phu phụ"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-150741-vie-8992629",
-          "ja": "似た者夫婦。",
-          "vi": "Nồi nào úp vung nấy.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 150741; translation 8992629",
           "license": "CC-BY 2.0"
         }
       ]

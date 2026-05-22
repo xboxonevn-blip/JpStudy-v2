@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 50,
-  "entryCount": 48,
+  "entryCount": 47,
   "entries": [
     {
       "entryId": "n4_l50_s001",
@@ -2597,62 +2597,6 @@
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored place context for 江戸東京博物館",
-          "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l50_s048",
-      "lessonId": 50,
-      "level": "N4",
-      "order": 48,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l50_v048",
-        "term": "参加します",
-        "reading": "さんかします",
-        "kanji": [
-          "参",
-          "加"
-        ],
-        "labels": {
-          "hanViet": "tham gia"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l50_s048",
-        "meaningVi": "Tham gia",
-        "meaningEn": "Participate"
-      },
-      "search": {
-        "termNoAccent": "参加します",
-        "readingNoAccent": "さんかします",
-        "meaningViNoAccent": "tham gia",
-        "hanVietNoAccent": "tham gia"
-      },
-      "links": {
-        "sourceVocabId": "n4_l50_v048",
-        "sourceSenseId": "n4_l50_s048"
-      },
-      "legacy": {
-        "kanjiMeaning": "tham gia"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n4_l50_v048-001",
-          "ja": "受付で「参加します」と丁寧に言いました。",
-          "vi": "Ở quầy tiếp tân, tôi nói lịch sự: \"Tham gia\".",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored polite-phrase context for 参加します",
           "license": "JpStudy authored"
         }
       ]

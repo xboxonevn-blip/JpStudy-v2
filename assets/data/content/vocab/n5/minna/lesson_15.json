@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 15,
-  "entryCount": 30,
+  "entryCount": 29,
   "entries": [
     {
       "entryId": "n5_l15_s001",
@@ -1617,62 +1617,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 79292; translation 515851",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l15_s030",
-      "lessonId": 15,
-      "level": "N5",
-      "order": 30,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l15_v030",
-        "term": "広場",
-        "reading": "ひろば",
-        "kanji": [
-          "広",
-          "場"
-        ],
-        "labels": {
-          "hanViet": "quảng trường"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l15_s030",
-        "meaningVi": "Quảng trường",
-        "meaningEn": "Square (plaza)"
-      },
-      "search": {
-        "termNoAccent": "広場",
-        "readingNoAccent": "ひろは",
-        "meaningViNoAccent": "quang truong",
-        "hanVietNoAccent": "quang truong"
-      },
-      "links": {
-        "sourceVocabId": "n5_l15_v030",
-        "sourceSenseId": "n5_l15_s030"
-      },
-      "legacy": {
-        "kanjiMeaning": "quảng trường"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-912365-vie-8961725",
-          "ja": "その広場は人で埋め尽くされている。",
-          "vi": "Trong hội trường đó có đầy ắp người.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 912365; translation 8961725",
           "license": "CC-BY 2.0"
         }
       ]

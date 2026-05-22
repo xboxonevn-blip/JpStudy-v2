@@ -370,7 +370,7 @@
       "surface": "絵",
       "reading": "え",
       "label_ja": "絵",
-      "label_vi": "tranh",
+      "label_vi": "Tranh, hội họa",
       "order": 19,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -535,7 +535,7 @@
       "surface": "ご主人",
       "reading": "ごしゅじん",
       "label_ja": "ご主人",
-      "label_vi": "chồng (người khác)",
+      "label_vi": "Chồng (dùng khi nói về chồng người khác)",
       "order": 30,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -565,7 +565,7 @@
       "surface": "主人",
       "reading": "しゅじん",
       "label_ja": "主人",
-      "label_vi": "chồng (mình)",
+      "label_vi": "Chồng (dùng khi nói về chồng mình)",
       "order": 32,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -580,7 +580,7 @@
       "surface": "奥さん",
       "reading": "おくさん",
       "label_ja": "奥さん",
-      "label_vi": "vợ (người khác)",
+      "label_vi": "Vợ (dùng khi nói về vợ người khác)",
       "order": 33,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -595,7 +595,7 @@
       "surface": "妻",
       "reading": "つま",
       "label_ja": "妻",
-      "label_vi": "vợ (mình)",
+      "label_vi": "Vợ (dùng khi nói về vợ mình)",
       "order": 34,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -610,7 +610,7 @@
       "surface": "家内",
       "reading": "かない",
       "label_ja": "家内",
-      "label_vi": "vợ (mình)",
+      "label_vi": "Vợ (dùng khi nói về vợ mình)",
       "order": 35,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -685,7 +685,7 @@
       "surface": "少し",
       "reading": "すこし",
       "label_ja": "少し",
-      "label_vi": "một ít, một chút",
+      "label_vi": "Ít, một ít",
       "order": 40,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_09.json",
@@ -916,51 +916,6 @@
         "file": "vocab/n5/minna/lesson_09.json",
         "entry_id": "n5_l09_s055",
         "key": "vocab/n5/minna/lesson_09.json#vocab:n5_l09_s055"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_09.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:09:旅",
-      "type": "vocab",
-      "surface": "旅",
-      "reading": "たび",
-      "label_ja": "旅",
-      "label_vi": "Chuyến đi",
-      "order": 56,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_09.json",
-        "entry_id": "n5_l09_s056",
-        "key": "vocab/n5/minna/lesson_09.json#vocab:n5_l09_s056"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_09.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:09:好",
-      "type": "vocab",
-      "surface": "好",
-      "reading": "いい",
-      "label_ja": "好",
-      "label_vi": "thích",
-      "order": 57,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_09.json",
-        "entry_id": "n5_l09_s057",
-        "key": "vocab/n5/minna/lesson_09.json#vocab:n5_l09_s057"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_09.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:09:漢",
-      "type": "vocab",
-      "surface": "漢",
-      "reading": "かん",
-      "label_ja": "漢",
-      "label_vi": "hán",
-      "order": 58,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_09.json",
-        "entry_id": "n5_l09_s058",
-        "key": "vocab/n5/minna/lesson_09.json#vocab:n5_l09_s058"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_09.json"
     }

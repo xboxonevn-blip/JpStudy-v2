@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 22,
-  "entryCount": 28,
+  "entryCount": 27,
   "entries": [
     {
       "entryId": "n5_l22_s001",
@@ -1488,62 +1488,6 @@
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 5032; translation 5792",
           "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l22_s028",
-      "lessonId": 22,
-      "level": "N5",
-      "order": 28,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l22_v028",
-        "term": "一回",
-        "reading": "いっかい",
-        "kanji": [
-          "一",
-          "回"
-        ],
-        "labels": {
-          "hanViet": "nhất hồi"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l22_s028",
-        "meaningVi": "Một lần",
-        "meaningEn": "One time"
-      },
-      "search": {
-        "termNoAccent": "一回",
-        "readingNoAccent": "いっかい",
-        "meaningViNoAccent": "mot lan",
-        "hanVietNoAccent": "nhat hoi"
-      },
-      "links": {
-        "sourceVocabId": "n5_l22_v028",
-        "sourceSenseId": "n5_l22_s028"
-      },
-      "legacy": {
-        "kanjiMeaning": "nhất hồi"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n5_l22_v028-001",
-          "ja": "一回に駅で待ち合わせます。",
-          "vi": "Tôi hẹn gặp ở ga vào Một lần.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for 一回",
-          "license": "JpStudy authored"
         }
       ]
     }

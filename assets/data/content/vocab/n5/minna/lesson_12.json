@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 12,
-  "entryCount": 56,
+  "entryCount": 54,
   "entries": [
     {
       "entryId": "n5_l12_s001",
@@ -2992,118 +2992,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 4781; translation 5700",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l12_s055",
-      "lessonId": 12,
-      "level": "N5",
-      "order": 55,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l12_v055",
-        "term": "友人",
-        "reading": "ゆうじん",
-        "kanji": [
-          "友",
-          "人"
-        ],
-        "labels": {
-          "hanViet": "hữu nhân"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l12_s055",
-        "meaningVi": "Thân hữu",
-        "meaningEn": "Friend (formal)"
-      },
-      "search": {
-        "termNoAccent": "友人",
-        "readingNoAccent": "ゆうしん",
-        "meaningViNoAccent": "than huu",
-        "hanVietNoAccent": "huu nhan"
-      },
-      "links": {
-        "sourceVocabId": "n5_l12_v055",
-        "sourceSenseId": "n5_l12_s055"
-      },
-      "legacy": {
-        "kanjiMeaning": "hữu nhân"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-5299-vie-5908",
-          "ja": "午後はずっと友人とおしゃべりをして過ごした。",
-          "vi": "Tôi tốn hết buổi chiều tán chuyện với đám bạn.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 5299; translation 5908",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l12_s056",
-      "lessonId": 12,
-      "level": "N5",
-      "order": 56,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l12_v056",
-        "term": "何人",
-        "reading": "なんにん",
-        "kanji": [
-          "何",
-          "人"
-        ],
-        "labels": {
-          "hanViet": "hà nhân"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l12_s056",
-        "meaningVi": "Mấy người",
-        "meaningEn": "How many people"
-      },
-      "search": {
-        "termNoAccent": "何人",
-        "readingNoAccent": "なんにん",
-        "meaningViNoAccent": "may nguoi",
-        "hanVietNoAccent": "ha nhan"
-      },
-      "links": {
-        "sourceVocabId": "n5_l12_v056",
-        "sourceSenseId": "n5_l12_s056"
-      },
-      "legacy": {
-        "kanjiMeaning": "hà nhân"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-4777-vie-5698",
-          "ja": "親友は何人いる？",
-          "vi": "Bạn có bao nhiêu bạn thân?",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 4777; translation 5698",
           "license": "CC-BY 2.0"
         }
       ]

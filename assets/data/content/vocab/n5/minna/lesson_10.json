@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 10,
-  "entryCount": 52,
+  "entryCount": 51,
   "entries": [
     {
       "entryId": "n5_l10_s001",
@@ -2802,61 +2802,6 @@
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored noun/context sentence for どうもすみません",
           "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l10_s052",
-      "lessonId": 10,
-      "level": "N5",
-      "order": 52,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l10_v052",
-        "term": "後ろ",
-        "reading": "うしろ",
-        "kanji": [
-          "後"
-        ],
-        "labels": {
-          "hanViet": "hậu"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l10_s052",
-        "meaningVi": "Phía sau",
-        "meaningEn": "Behind"
-      },
-      "search": {
-        "termNoAccent": "後ろ",
-        "readingNoAccent": "うしろ",
-        "meaningViNoAccent": "phia sau",
-        "hanVietNoAccent": "hau"
-      },
-      "links": {
-        "sourceVocabId": "n5_l10_v052",
-        "sourceSenseId": "n5_l10_s052"
-      },
-      "legacy": {
-        "kanjiMeaning": "hậu"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-894825-vie-10299560",
-          "ja": "びっくりした！いきなり後ろから脅かさないでよ！",
-          "vi": "Giật hết cả mình! Đừng có mà hù dọa tôi từ đằng sau nữa!",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 894825; translation 10299560",
-          "license": "CC-BY 2.0"
         }
       ]
     }

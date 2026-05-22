@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N5",
   "lessonId": 6,
-  "entryCount": 55,
+  "entryCount": 53,
   "entries": [
     {
       "entryId": "n5_l06_s001",
@@ -2930,118 +2930,6 @@
           "audio_url": "",
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 195390; translation 6216737",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l06_s054",
-      "lessonId": 6,
-      "level": "N5",
-      "order": 54,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l06_v054",
-        "term": "買い物",
-        "reading": "かいもの",
-        "kanji": [
-          "買",
-          "物"
-        ],
-        "labels": {
-          "hanViet": "mãi vật"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l06_s054",
-        "meaningVi": "Mua sắm",
-        "meaningEn": "Shopping"
-      },
-      "search": {
-        "termNoAccent": "買い物",
-        "readingNoAccent": "かいもの",
-        "meaningViNoAccent": "mua sam",
-        "hanVietNoAccent": "mai vat"
-      },
-      "links": {
-        "sourceVocabId": "n5_l06_v054",
-        "sourceSenseId": "n5_l06_s054"
-      },
-      "legacy": {
-        "kanjiMeaning": "mãi vật"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-5051-vie-5801",
-          "ja": "買い物に行かなければならない。一時間で戻るよ。",
-          "vi": "Tôi đi mua sắm một chút. Một tiếng sau trở lại.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 5051; translation 5801",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n5_l06_s055",
-      "lessonId": 6,
-      "level": "N5",
-      "order": 55,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n5_l06_v055",
-        "term": "読書",
-        "reading": "どくしょ",
-        "kanji": [
-          "読",
-          "書"
-        ],
-        "labels": {
-          "hanViet": "độc thư"
-        }
-      },
-      "sense": {
-        "senseId": "n5_l06_s055",
-        "meaningVi": "Việc đọc sách",
-        "meaningEn": "Reading books"
-      },
-      "search": {
-        "termNoAccent": "読書",
-        "readingNoAccent": "とくしょ",
-        "meaningViNoAccent": "viec doc sach",
-        "hanVietNoAccent": "doc thu"
-      },
-      "links": {
-        "sourceVocabId": "n5_l06_v055",
-        "sourceSenseId": "n5_l06_s055"
-      },
-      "legacy": {
-        "kanjiMeaning": "độc thư"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-123382-vie-8956520",
-          "ja": "読書は一種の習慣で、一度この習慣が身につけば、それを失うことは決してない。",
-          "vi": "Đọc sách là một loại thói quen mà một khi đã luyện tập được thì sẽ vĩnh viễn không bao giờ mất đi.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 123382; translation 8956520",
           "license": "CC-BY 2.0"
         }
       ]

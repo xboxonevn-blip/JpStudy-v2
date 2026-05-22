@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 43,
-  "entryCount": 37,
+  "entryCount": 36,
   "entries": [
     {
       "entryId": "n4_l43_s001",
@@ -1973,61 +1973,6 @@
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored verb context for ～と言います",
           "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l43_s037",
-      "lessonId": 43,
-      "level": "N4",
-      "order": 37,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "mixed",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l43_v037",
-        "term": "変な",
-        "reading": "へんな",
-        "kanji": [
-          "変"
-        ],
-        "labels": {
-          "hanViet": "biến"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l43_s037",
-        "meaningVi": "Lạ",
-        "meaningEn": "Strange"
-      },
-      "search": {
-        "termNoAccent": "変な",
-        "readingNoAccent": "へんな",
-        "meaningViNoAccent": "la",
-        "hanVietNoAccent": "bien"
-      },
-      "links": {
-        "sourceVocabId": "n4_l43_v037",
-        "sourceSenseId": "n4_l43_s037"
-      },
-      "legacy": {
-        "kanjiMeaning": "biến"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-1638021-vie-8861431",
-          "ja": "変な日本語だなとは思ったのですが、日本人が書いたんだから正しい日本語のはずだと思ったんです。",
-          "vi": "Tôi cho rằng tiếng Nhật trong câu đó có gì đó sai sai, nhưng vì nó được viết bởi một người Nhật cho nên tôi nghĩ đó là tiếng Nhật chuẩn.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 1638021; translation 8861431",
-          "license": "CC-BY 2.0"
         }
       ]
     }

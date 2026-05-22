@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 42,
-  "entryCount": 70,
+  "entryCount": 69,
   "entries": [
     {
       "entryId": "n4_l42_s001",
@@ -3812,62 +3812,6 @@
           "source": "tatoeba-cc-by-2.0",
           "source_detail": "Tatoeba sentence 893265; translation 11584754",
           "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l42_s070",
-      "lessonId": 42,
-      "level": "N4",
-      "order": 70,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l42_v070",
-        "term": "二倍",
-        "reading": "にばい",
-        "kanji": [
-          "二",
-          "倍"
-        ],
-        "labels": {
-          "hanViet": "hai bội"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l42_s070",
-        "meaningVi": "Gấp đôi",
-        "meaningEn": "Double"
-      },
-      "search": {
-        "termNoAccent": "二倍",
-        "readingNoAccent": "にはい",
-        "meaningViNoAccent": "gap doi",
-        "hanVietNoAccent": "hai boi"
-      },
-      "links": {
-        "sourceVocabId": "n4_l42_v070",
-        "sourceSenseId": "n4_l42_s070"
-      },
-      "legacy": {
-        "kanjiMeaning": "hai bội"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n4_l42_v070-001",
-          "ja": "資料には二倍の説明が載っています。",
-          "vi": "Trong tài liệu có phần giải thích về Gấp đôi.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored noun/context sentence for 二倍",
-          "license": "JpStudy authored"
         }
       ]
     }

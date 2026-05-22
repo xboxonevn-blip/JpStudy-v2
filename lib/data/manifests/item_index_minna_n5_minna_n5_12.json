@@ -205,7 +205,7 @@
       "surface": "温かい",
       "reading": "あたたかい",
       "label_ja": "温かい",
-      "label_vi": "ấm (cảm giác)",
+      "label_vi": "Ấm",
       "order": 10,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_12.json",
@@ -340,7 +340,7 @@
       "surface": "夏",
       "reading": "なつ",
       "label_ja": "夏",
-      "label_vi": "mùa hạ",
+      "label_vi": "Mùa hè",
       "order": 19,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_12.json",
@@ -475,7 +475,7 @@
       "surface": "海",
       "reading": "うみ",
       "label_ja": "海",
-      "label_vi": "biển",
+      "label_vi": "Biển, đại dương",
       "order": 28,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_12.json",
@@ -550,7 +550,7 @@
       "surface": "すき焼き",
       "reading": "すきやき",
       "label_ja": "すき焼き",
-      "label_vi": "món Sukiyaki",
+      "label_vi": "Sukiyaki (món thịt bò nấu rau)",
       "order": 33,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_12.json",
@@ -565,7 +565,7 @@
       "surface": "刺身",
       "reading": "さしみ",
       "label_ja": "刺身",
-      "label_vi": "món Sashimi",
+      "label_vi": "Sashimi (món gỏi cá sống)",
       "order": 34,
       "legacy_ref": {
         "file": "vocab/n5/minna/lesson_12.json",
@@ -871,66 +871,6 @@
         "file": "vocab/n5/minna/lesson_12.json",
         "entry_id": "n5_l12_s054",
         "key": "vocab/n5/minna/lesson_12.json#vocab:n5_l12_s054"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_12.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:12:友人",
-      "type": "vocab",
-      "surface": "友人",
-      "reading": "ゆうじん",
-      "label_ja": "友人",
-      "label_vi": "Thân hữu",
-      "order": 55,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_12.json",
-        "entry_id": "n5_l12_s055",
-        "key": "vocab/n5/minna/lesson_12.json#vocab:n5_l12_s055"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_12.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:12:何人",
-      "type": "vocab",
-      "surface": "何人",
-      "reading": "なんにん",
-      "label_ja": "何人",
-      "label_vi": "Mấy người",
-      "order": 56,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_12.json",
-        "entry_id": "n5_l12_s056",
-        "key": "vocab/n5/minna/lesson_12.json#vocab:n5_l12_s056"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_12.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:12:校",
-      "type": "vocab",
-      "surface": "校",
-      "reading": "きょう",
-      "label_ja": "校",
-      "label_vi": "trường học",
-      "order": 57,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_12.json",
-        "entry_id": "n5_l12_s057",
-        "key": "vocab/n5/minna/lesson_12.json#vocab:n5_l12_s057"
-      },
-      "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_12.json"
-    },
-    {
-      "item_id": "vocab:n5:minna_n5:12:毎",
-      "type": "vocab",
-      "surface": "毎",
-      "reading": "ごとに",
-      "label_ja": "毎",
-      "label_vi": "mỗi",
-      "order": 58,
-      "legacy_ref": {
-        "file": "vocab/n5/minna/lesson_12.json",
-        "entry_id": "n5_l12_s058",
-        "key": "vocab/n5/minna/lesson_12.json#vocab:n5_l12_s058"
       },
       "exercise_bank_ref": "exercises/n5/minna_n5/minna_n5_12.json"
     }

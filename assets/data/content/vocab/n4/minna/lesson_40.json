@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 40,
-  "entryCount": 63,
+  "entryCount": 61,
   "entries": [
     {
       "entryId": "n4_l40_s001",
@@ -3357,119 +3357,6 @@
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored polite-phrase context for うわさします",
-          "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l40_s062",
-      "lessonId": 40,
-      "level": "N4",
-      "order": 62,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l40_v062",
-        "term": "数字",
-        "reading": "すうじ",
-        "kanji": [
-          "数",
-          "字"
-        ],
-        "labels": {
-          "hanViet": "số tự"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l40_s062",
-        "meaningVi": "Chữ số",
-        "meaningEn": "Number, Digit"
-      },
-      "search": {
-        "termNoAccent": "数字",
-        "readingNoAccent": "すうし",
-        "meaningViNoAccent": "chu so",
-        "hanVietNoAccent": "so tu"
-      },
-      "links": {
-        "sourceVocabId": "n4_l40_v062",
-        "sourceSenseId": "n4_l40_s062"
-      },
-      "legacy": {
-        "kanjiMeaning": "số tự"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-2457054-vie-490533",
-          "ja": "水道メーターの数字を読んで下さい。",
-          "vi": "Vui lòng đọc các con số trên đồng hồ đo nước.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 2457054; translation 490533",
-          "license": "CC-BY 2.0"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l40_s063",
-      "lessonId": 40,
-      "level": "N4",
-      "order": 63,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l40_v063",
-        "term": "入学式",
-        "reading": "にゅうがくしき",
-        "kanji": [
-          "入",
-          "学",
-          "式"
-        ],
-        "labels": {
-          "hanViet": "nhập học thức"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l40_s063",
-        "meaningVi": "Lễ nhập học",
-        "meaningEn": "Entrance ceremony"
-      },
-      "search": {
-        "termNoAccent": "入学式",
-        "readingNoAccent": "にゅうかくしき",
-        "meaningViNoAccent": "le nhap hoc",
-        "hanVietNoAccent": "nhap hoc thuc"
-      },
-      "links": {
-        "sourceVocabId": "n4_l40_v063",
-        "sourceSenseId": "n4_l40_s063"
-      },
-      "legacy": {
-        "kanjiMeaning": "nhập học thức"
-      },
-      "example_sentences": [
-        {
-          "example_id": "ex-n4_l40_v063-001",
-          "ja": "資料には入学式の説明が載っています。",
-          "vi": "Trong tài liệu có phần giải thích về Lễ nhập học.",
-          "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored noun/context sentence for 入学式",
           "license": "JpStudy authored"
         }
       ]

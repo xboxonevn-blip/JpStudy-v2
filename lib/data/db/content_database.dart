@@ -15,7 +15,7 @@ part 'content_database.g.dart';
 
 const _kanjiSeedRevision = 90;
 const _kanjiSeedRevisionKey = 'kanjiSeedRevision';
-const _vocabSeedRevision = 18;
+const _vocabSeedRevision = 19;
 const _vocabSeedRevisionKeyPrefix = 'vocabSeedRevision';
 const _vocabExampleTemplateFragments = [
   'を使う文を',

@@ -4,7 +4,7 @@
   "series": "minna",
   "level": "N4",
   "lessonId": 32,
-  "entryCount": 64,
+  "entryCount": 63,
   "entries": [
     {
       "entryId": "n4_l32_s001",
@@ -3463,62 +3463,6 @@
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored people/role context for お金持ち",
           "license": "JpStudy authored"
-        }
-      ]
-    },
-    {
-      "entryId": "n4_l32_s064",
-      "lessonId": 32,
-      "level": "N4",
-      "order": 64,
-      "tags": [
-        "kanji-example",
-        "vi-human-approved"
-      ],
-      "classification": {
-        "script": "kanji",
-        "hasKanji": true,
-        "origin": "generated_example_backfill"
-      },
-      "lemma": {
-        "vocabId": "n4_l32_v064",
-        "term": "禁止",
-        "reading": "きんし",
-        "kanji": [
-          "禁",
-          "止"
-        ],
-        "labels": {
-          "hanViet": "cấm chỉ"
-        }
-      },
-      "sense": {
-        "senseId": "n4_l32_s064",
-        "meaningVi": "Cấm",
-        "meaningEn": "Prohibition"
-      },
-      "search": {
-        "termNoAccent": "禁止",
-        "readingNoAccent": "きんし",
-        "meaningViNoAccent": "cam",
-        "hanVietNoAccent": "cam chi"
-      },
-      "links": {
-        "sourceVocabId": "n4_l32_v064",
-        "sourceSenseId": "n4_l32_s064"
-      },
-      "legacy": {
-        "kanjiMeaning": "cấm chỉ"
-      },
-      "example_sentences": [
-        {
-          "example_id": "tat-1268950-vie-9734486",
-          "ja": "この映画は大人向けで未成年禁止です。",
-          "vi": "Bộ phim này chỉ dành cho người lớn, cấm trẻ vị thành niên xem.",
-          "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 1268950; translation 9734486",
-          "license": "CC-BY 2.0"
         }
       ]
     }

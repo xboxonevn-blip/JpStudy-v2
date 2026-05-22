@@ -659,3 +659,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: Pairing explanation quality and exercise coverage keeps each item shippable, keeps review scope small, and matches Directive A/F validation boundaries.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-067 - Comparison and desire forms keep contrast-first drills
+**Phase**: Phase G Option C Tier-1
+**Date**: 2026-05-22 11:20 (Asia/Saigon)
+**Context**: Batch 064-068 covers forms that learners often mix by function: `より` vs `どちらが` vs `いちばん`, and `ほしい` vs `たい`.
+**Options considered**: write isolated form drills only | emphasize Vietnamese translation first | make contrast the backbone of Directive E cross-links and L4 templates
+**Chosen**: Author every item with at least one cross-link and L4 task that forces the learner to choose the right comparison/desire frame from context.
+**Rationale**: These patterns pass only when learners distinguish question vs statement, two-choice vs many-choice, and wanting a noun vs wanting an action.
+**Reversible**: yes
+**Owner review**: pending

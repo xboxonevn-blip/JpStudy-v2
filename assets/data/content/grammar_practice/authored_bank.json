@@ -13619,6 +13619,1124 @@
         "Cả hai nhóm đều thêm かったです.",
         "Cả hai nhóm đều giữ nguyên rồi thêm でした."
       ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-form-l1-001",
+      "template_id": "tpl-grammar-n5-064-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền mốc so sánh: 東京は大阪 ___ 大きいです。",
+      "answer_template": "より",
+      "distractor_strategy": "comparative-yori-marker",
+      "teaching_note": "より đứng sau mốc so sánh.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "より",
+        "だけ",
+        "も",
+        "で"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-form-l1-002",
+      "template_id": "tpl-grammar-n5-064-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu N1はN2よりAです?",
+      "answer_template": "新幹線はバスより速いです。",
+      "distractor_strategy": "yori-position",
+      "teaching_note": "N2より đứng trước tính từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "新幹線はバスより速いです。",
+        "新幹線よりバスは速いです。",
+        "新幹線はバスで速いです。",
+        "新幹線はバスだけ速いです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-064-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "このかばんはあのかばんより高いです nghĩa là gì?",
+      "answer_template": "Cái cặp này đắt hơn cái cặp kia.",
+      "distractor_strategy": "comparative-meaning",
+      "teaching_note": "あのかばんより là mốc bị so.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Cái cặp này đắt hơn cái cặp kia.",
+        "Cái cặp kia đắt hơn cái cặp này.",
+        "Hai cái cặp đắt như nhau.",
+        "Chỉ có cái cặp này đắt."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-064-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong N1はN2よりAです, N2より đóng vai gì?",
+      "answer_template": "Mốc so sánh để nói N1 A hơn.",
+      "distractor_strategy": "yori-role-recall",
+      "teaching_note": "より không đánh dấu bên thắng; nó đánh dấu mốc.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-usage-l3-005",
+      "template_id": "tpl-grammar-n5-064-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: tàu điện rẻ hơn taxi - 電車 / は / タクシー / より / 安いです",
+      "answer_template": "電車はタクシーより安いです。",
+      "distractor_strategy": "comparative-production-order",
+      "teaching_note": "より bám vào タクシー.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "電車",
+        "は",
+        "タクシー",
+        "より",
+        "安いです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-usage-l3-006",
+      "template_id": "tpl-grammar-n5-064-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: mùa đông lạnh hơn mùa thu.",
+      "answer_template": "冬は秋より寒いです。",
+      "distractor_strategy": "season-comparison-production",
+      "teaching_note": "秋より là mốc so với mùa thu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-context-l3-007",
+      "template_id": "tpl-grammar-n5-064-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn so sánh xe đạp và ô tô: ô tô nhanh hơn. Câu nào hợp?",
+      "answer_template": "車は自転車より速いです。",
+      "distractor_strategy": "vehicle-comparison-context",
+      "teaching_note": "Bên nhanh hơn làm chủ đề; bên còn lại đi với より.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "車は自転車より速いです。",
+        "自転車は車より速いです。",
+        "車は自転車だけ速いです。",
+        "車と自転車とどちらですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-context-l2-008",
+      "template_id": "tpl-grammar-n5-064-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào là khẳng định so sánh, không phải câu hỏi lựa chọn?",
+      "answer_template": "大阪は京都よりにぎやかです。",
+      "distractor_strategy": "statement-vs-question-context",
+      "teaching_note": "より tạo câu khẳng định hơn kém.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "大阪は京都よりにぎやかです。",
+        "大阪と京都とどちらがにぎやかですか。",
+        "大阪でどこがいちばんにぎやかですか。",
+        "大阪だけにぎやかです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-064-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: A cao 170cm, B cao 160cm. Câu nào đúng?",
+      "answer_template": "AさんはBさんより高いです。",
+      "distractor_strategy": "comparison-analysis",
+      "teaching_note": "L4: bên có tính chất cao hơn đứng trước は.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "AさんはBさんより高いです。",
+        "BさんはAさんより高いです。",
+        "AさんとBさんとどちらが低いですか。",
+        "Aさんだけ高くないです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-064-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-064-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_12:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng より và どちらが?",
+      "answer_template": "より dùng trong khẳng định hơn; どちらが hỏi bên nào hơn.",
+      "distractor_strategy": "yori-vs-dochira-analysis",
+      "teaching_note": "L4: câu hỏi lựa chọn và câu khẳng định không cùng chức năng.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "より dùng trong khẳng định hơn; どちらが hỏi bên nào hơn.",
+        "より luôn dùng để hỏi.",
+        "どちらが luôn dùng trong câu khẳng định.",
+        "Hai mẫu thay nhau được trong mọi câu."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-form-l1-001",
+      "template_id": "tpl-grammar-n5-065-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền từ 'nhất': クラスで誰が ___ 背が高いですか。",
+      "answer_template": "いちばん",
+      "distractor_strategy": "superlative-ichiban",
+      "teaching_note": "いちばん đánh dấu mức cao nhất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "いちばん",
+        "より",
+        "だけ",
+        "どちら"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-form-l1-002",
+      "template_id": "tpl-grammar-n5-065-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu phạm viで...がいちばんAですか?",
+      "answer_template": "日本でどこがいちばん寒いですか。",
+      "distractor_strategy": "superlative-scope-form",
+      "teaching_note": "で khoanh phạm vi; が đánh dấu ứng viên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "日本でどこがいちばん寒いですか。",
+        "日本はどこより寒いですか。",
+        "日本をどこがいちばん寒いですか。",
+        "日本でどこだけ寒いですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-065-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "ベトナムでどこがいちばん暑いですか nghĩa là gì?",
+      "answer_template": "Ở Việt Nam, nơi nào nóng nhất?",
+      "distractor_strategy": "superlative-meaning",
+      "teaching_note": "ベトナムで là phạm vi chọn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Ở Việt Nam, nơi nào nóng nhất?",
+        "Việt Nam nóng hơn nơi nào?",
+        "Việt Nam chỉ nóng ở đâu?",
+        "Việt Nam và nơi nào nóng hơn?"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-065-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Trong 学校で誰がいちばん若いですか, 学校で cho biết gì?",
+      "answer_template": "Phạm vi để chọn người trẻ nhất.",
+      "distractor_strategy": "scope-de-recall",
+      "teaching_note": "で khoanh sân so sánh nhất.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-usage-l3-005",
+      "template_id": "tpl-grammar-n5-065-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Trong lớp, ai là người cao nhất? - クラス / で / 誰 / が / いちばん / 背が高いです / か",
+      "answer_template": "クラスで誰がいちばん背が高いですか。",
+      "distractor_strategy": "superlative-production-order",
+      "teaching_note": "Ứng viên chưa biết đi với が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "クラス",
+        "で",
+        "誰",
+        "が",
+        "いちばん",
+        "背が高いです",
+        "か"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-usage-l3-006",
+      "template_id": "tpl-grammar-n5-065-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Trong năm, tháng nào lạnh nhất?",
+      "answer_template": "一年で何月がいちばん寒いですか。",
+      "distractor_strategy": "month-superlative-production",
+      "teaching_note": "一年で đặt phạm vi cả năm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-context-l3-007",
+      "template_id": "tpl-grammar-n5-065-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn hỏi trong menu món nào rẻ nhất. Câu nào hợp?",
+      "answer_template": "メニューで何がいちばん安いですか。",
+      "distractor_strategy": "menu-superlative-context",
+      "teaching_note": "何が hỏi món nào trong phạm vi menu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "メニューで何がいちばん安いですか。",
+        "メニューは何より安いですか。",
+        "メニューだけ何が安いですか。",
+        "メニューと何とどちらが安いですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-context-l2-008",
+      "template_id": "tpl-grammar-n5-065-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào hỏi hạng nhất trong phạm vi nhiều lựa chọn?",
+      "answer_template": "学校で誰がいちばん元気ですか。",
+      "distractor_strategy": "superlative-vs-binary-context",
+      "teaching_note": "いちばん chọn số một trong phạm vi.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "学校で誰がいちばん元気ですか。",
+        "田中さんと山田さんとどちらが元気ですか。",
+        "田中さんは山田さんより元気です。",
+        "田中さんだけ元気です。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-065-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: có ba thành phố, bạn muốn hỏi thành phố đông nhất. Câu nào đúng?",
+      "answer_template": "この三つの町でどこがいちばんにぎやかですか。",
+      "distractor_strategy": "multi-option-superlative-analysis",
+      "teaching_note": "L4: nhiều hơn hai lựa chọn cần phạm viでいちばん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "この三つの町でどこがいちばんにぎやかですか。",
+        "この三つの町とどちらがにぎやかですか。",
+        "この三つの町はどこよりにぎやかですか。",
+        "この三つの町だけにぎやかですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-065-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-065-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_12:003",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng いちばん và より?",
+      "answer_template": "いちばん chọn nhất trong phạm vi; より so với một mốc.",
+      "distractor_strategy": "ichiban-vs-yori-analysis",
+      "teaching_note": "L4: một mẫu chọn hạng nhất, một mẫu so hai điểm.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "いちばん chọn nhất trong phạm vi; より so với một mốc.",
+        "いちばん luôn cần đúng hai lựa chọn.",
+        "より luôn chọn hạng nhất.",
+        "Hai mẫu không khác nhau."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-form-l1-001",
+      "template_id": "tpl-grammar-n5-066-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền câu hỏi lựa chọn: コーヒーとお茶と ___ が好きですか。",
+      "answer_template": "どちら",
+      "distractor_strategy": "binary-choice-dochira",
+      "teaching_note": "どちら hỏi bên nào trong hai bên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どちら",
+        "いちばん",
+        "より",
+        "だけ"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-form-l1-002",
+      "template_id": "tpl-grammar-n5-066-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu N1とN2とどちらがAですか?",
+      "answer_template": "春と秋とどちらが好きですか。",
+      "distractor_strategy": "dochira-form",
+      "teaching_note": "Hai lựa chọn đều đi với と.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "春と秋とどちらが好きですか。",
+        "春は秋よりどちらが好きですか。",
+        "春で秋がいちばん好きですか。",
+        "春だけ秋と好きですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-066-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "大阪と京都とどちらが静かですか nghĩa là gì?",
+      "answer_template": "Giữa Osaka và Kyoto, nơi nào yên tĩnh hơn?",
+      "distractor_strategy": "binary-comparison-meaning",
+      "teaching_note": "どちらが hỏi bên nào hơn trong hai bên.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Giữa Osaka và Kyoto, nơi nào yên tĩnh hơn?",
+        "Osaka yên tĩnh hơn Kyoto.",
+        "Kyoto là nơi yên tĩnh nhất Nhật Bản.",
+        "Chỉ Osaka yên tĩnh."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-066-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "Câu trả lời thường dùng mẫu nào sau câu hỏi どちらがAですか?",
+      "answer_template": "NのほうがAです.",
+      "distractor_strategy": "houga-answer-recall",
+      "teaching_note": "のほうが nhấn bên được chọn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-usage-l3-005",
+      "template_id": "tpl-grammar-n5-066-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: cà phê và trà, bạn thích bên nào hơn? - コーヒー / と / お茶 / と / どちら / が / 好きです / か",
+      "answer_template": "コーヒーとお茶とどちらが好きですか。",
+      "distractor_strategy": "binary-choice-production",
+      "teaching_note": "Cần đủ hai と để đặt hai lựa chọn cạnh nhau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "コーヒー",
+        "と",
+        "お茶",
+        "と",
+        "どちら",
+        "が",
+        "好きです",
+        "か"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-usage-l3-006",
+      "template_id": "tpl-grammar-n5-066-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: giữa xe buýt và tàu điện, cái nào tiện hơn?",
+      "answer_template": "バスと電車とどちらが便利ですか。",
+      "distractor_strategy": "transport-binary-production",
+      "teaching_note": "便利 là tính từ な, nhưng câu hỏi vẫn dùng Aですか.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-context-l3-007",
+      "template_id": "tpl-grammar-n5-066-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn chỉ có hai lựa chọn: thứ bảy hoặc chủ nhật. Câu nào hỏi ngày nào tốt hơn?",
+      "answer_template": "土曜日と日曜日とどちらがいいですか。",
+      "distractor_strategy": "two-day-choice-context",
+      "teaching_note": "どちら phù hợp khi chỉ có hai lựa chọn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "土曜日と日曜日とどちらがいいですか。",
+        "土曜日で日曜日がいちばんいいですか。",
+        "土曜日は日曜日だけいいですか。",
+        "土曜日より日曜日とどちらですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-context-l2-008",
+      "template_id": "tpl-grammar-n5-066-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào hỏi giữa đúng hai lựa chọn?",
+      "answer_template": "犬と猫とどちらが好きですか。",
+      "distractor_strategy": "binary-vs-superlative-context",
+      "teaching_note": "犬と猫と đặt hai bên ngang nhau.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "犬と猫とどちらが好きですか。",
+        "動物で何がいちばん好きですか。",
+        "犬は猫より好きです。",
+        "犬だけ好きです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-066-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: người nghe phải chọn một trong hai phim. Câu nào đúng nhất?",
+      "answer_template": "この映画とあの映画とどちらがおもしろいですか。",
+      "distractor_strategy": "binary-film-analysis",
+      "teaching_note": "L4: hai phim nên dùng どちら, không dùng いちばん.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "この映画とあの映画とどちらがおもしろいですか。",
+        "映画で何がいちばんおもしろいですか。",
+        "この映画はあの映画だけおもしろいですか。",
+        "この映画よりどちらがおもしろいですか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-066-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-066-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_12:004",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng どちら và いちばん?",
+      "answer_template": "どちら hỏi giữa hai lựa chọn; いちばん chọn nhất trong phạm vi.",
+      "distractor_strategy": "dochira-vs-ichiban-analysis",
+      "teaching_note": "L4: số lượng ứng viên quyết định mẫu.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "どちら hỏi giữa hai lựa chọn; いちばん chọn nhất trong phạm vi.",
+        "どちら dùng cho nhiều hơn ba lựa chọn.",
+        "いちばん chỉ dùng cho đúng hai lựa chọn.",
+        "Hai mẫu luôn thay thế được nhau."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-form-l1-001",
+      "template_id": "tpl-grammar-n5-067-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Điền trợ từ trong mẫu muốn có: 新しいかばん ___ ほしいです。",
+      "answer_template": "が",
+      "distractor_strategy": "hoshii-ga-object",
+      "teaching_note": "Đối tượng mong muốn đi với が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "が",
+        "を",
+        "に",
+        "で"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-form-l1-002",
+      "template_id": "tpl-grammar-n5-067-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu Nがほしいです?",
+      "answer_template": "時間がほしいです。",
+      "distractor_strategy": "hoshii-noun-form",
+      "teaching_note": "ほしい dùng với danh từ muốn có.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "時間がほしいです。",
+        "時間をほしいです。",
+        "時間にほしいです。",
+        "時間が食べたいです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-067-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "水がほしいです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi muốn có nước.",
+      "distractor_strategy": "want-noun-meaning",
+      "teaching_note": "ほしい nói muốn có đồ vật/điều gì đó.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Tôi muốn có nước.",
+        "Tôi muốn uống nước.",
+        "Nước muốn tôi.",
+        "Tôi thích uống nước mỗi ngày."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-067-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "ほしい là loại từ nào trong mẫu Nがほしいです?",
+      "answer_template": "Tính từ い diễn tả trạng thái muốn có.",
+      "distractor_strategy": "hoshii-i-adjective-recall",
+      "teaching_note": "Vì là tính từ い, ほしい chia như tính từ い.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-usage-l3-005",
+      "template_id": "tpl-grammar-n5-067-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tôi muốn có máy ảnh mới - 新しい / カメラ / が / ほしいです",
+      "answer_template": "新しいカメラがほしいです。",
+      "distractor_strategy": "want-noun-production-order",
+      "teaching_note": "Danh từ mong muốn đi trước が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "新しい",
+        "カメラ",
+        "が",
+        "ほしいです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-usage-l3-006",
+      "template_id": "tpl-grammar-n5-067-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi muốn có thời gian.",
+      "answer_template": "時間がほしいです。",
+      "distractor_strategy": "abstract-noun-hoshii-production",
+      "teaching_note": "時間 là thứ muốn có, nên dùng が.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-context-l3-007",
+      "template_id": "tpl-grammar-n5-067-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Sinh nhật sắp đến, bạn muốn có đồng hồ. Câu nào hợp?",
+      "answer_template": "時計がほしいです。",
+      "distractor_strategy": "birthday-want-context",
+      "teaching_note": "Đồ vật muốn có dùng ほしい.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "時計がほしいです。",
+        "時計を行きたいです。",
+        "時計が食べたいです。",
+        "時計にほしいです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-context-l2-008",
+      "template_id": "tpl-grammar-n5-067-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói muốn có đồ vật, không nói muốn làm hành động?",
+      "answer_template": "車がほしいです。",
+      "distractor_strategy": "hoshii-vs-tai-context",
+      "teaching_note": "車 là danh từ đồ vật; lái xe mới là hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "車がほしいです。",
+        "車を運転したいです。",
+        "日本へ行きたいです。",
+        "水を飲みたいです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-067-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: người nói thiếu tiền để mua vé. Câu nào nói muốn có tiền?",
+      "answer_template": "お金がほしいです。",
+      "distractor_strategy": "want-possession-analysis",
+      "teaching_note": "L4: muốn có tiền là Nがほしい, không phải Vたい.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "お金がほしいです。",
+        "お金を買いたいです。",
+        "お金へ行きたいです。",
+        "お金でほしいです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-067-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-067-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_13:001",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng ほしい và たい?",
+      "answer_template": "ほしい muốn có N; たい muốn làm V.",
+      "distractor_strategy": "hoshii-vs-tai-analysis",
+      "teaching_note": "L4: danh từ sở hữu và hành động là hai loại mong muốn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "ほしい muốn có N; たい muốn làm V.",
+        "ほしい luôn gắn vào động từ.",
+        "たい chỉ dùng sau danh từ.",
+        "Hai mẫu không khác gì nhau."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-form-l1-001",
+      "template_id": "tpl-grammar-n5-068-form-l1-001",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Chọn dạng muốn làm của 行きます.",
+      "answer_template": "行きたいです",
+      "distractor_strategy": "masu-stem-tai",
+      "teaching_note": "Bỏ ます, giữ 行き, thêm たいです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "行きたいです",
+        "行くたいです",
+        "行きますたいです",
+        "行ってたいです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-form-l1-002",
+      "template_id": "tpl-grammar-n5-068-form-l1-002",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "form",
+      "bloom_level": "L1",
+      "type": "recognition",
+      "prompt_template": "Câu nào đúng mẫu Vます bỏ ます + たいです?",
+      "answer_template": "日本へ行きたいです。",
+      "distractor_strategy": "tai-form",
+      "teaching_note": "たい gắn với thân ます của động từ.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "日本へ行きたいです。",
+        "日本へ行くたいです。",
+        "日本へ行きますたいです。",
+        "日本がほしいです行きます。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-meaning-l2-003",
+      "template_id": "tpl-grammar-n5-068-meaning-l2-003",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "すしを食べたいです nghĩa tự nhiên nhất là gì?",
+      "answer_template": "Tôi muốn ăn sushi.",
+      "distractor_strategy": "want-to-do-meaning",
+      "teaching_note": "食べたい là muốn ăn.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "Tôi muốn ăn sushi.",
+        "Tôi muốn có sushi.",
+        "Sushi muốn ăn tôi.",
+        "Tôi đã ăn sushi."
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-meaning-l2-004",
+      "template_id": "tpl-grammar-n5-068-meaning-l2-004",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "meaning",
+      "bloom_level": "L2",
+      "type": "recall",
+      "prompt_template": "たい gắn vào phần nào của động từ?",
+      "answer_template": "Thân ます sau khi bỏ ます.",
+      "distractor_strategy": "tai-stem-recall",
+      "teaching_note": "読みます -> 読みたいです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-usage-l3-005",
+      "template_id": "tpl-grammar-n5-068-usage-l3-005",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Sắp xếp: Tôi muốn xem phim - 映画 / を / 見 / たいです",
+      "answer_template": "映画を見たいです。",
+      "distractor_strategy": "tai-production-order",
+      "teaching_note": "見ます bỏ ます thành 見, rồi thêm たいです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "映画",
+        "を",
+        "見",
+        "たいです"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-usage-l3-006",
+      "template_id": "tpl-grammar-n5-068-usage-l3-006",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "usage",
+      "bloom_level": "L3",
+      "type": "production",
+      "prompt_template": "Viết câu: Tôi muốn uống cà phê.",
+      "answer_template": "コーヒーを飲みたいです。",
+      "distractor_strategy": "drink-tai-production",
+      "teaching_note": "飲みます -> 飲みたいです.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-context-l3-007",
+      "template_id": "tpl-grammar-n5-068-context-l3-007",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L3",
+      "type": "recognition",
+      "prompt_template": "Bạn đang lên kế hoạch du lịch, muốn đi Kyoto. Câu nào hợp?",
+      "answer_template": "京都へ行きたいです。",
+      "distractor_strategy": "travel-desire-context",
+      "teaching_note": "Đi là hành động nên dùng 行きたい.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "京都へ行きたいです。",
+        "京都がほしいです。",
+        "京都を買いたいです。",
+        "京都だけ行きますか。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-context-l2-008",
+      "template_id": "tpl-grammar-n5-068-context-l2-008",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "context",
+      "bloom_level": "L2",
+      "type": "recognition",
+      "prompt_template": "Câu nào nói muốn làm hành động, không nói muốn có đồ vật?",
+      "answer_template": "日本語を勉強したいです。",
+      "distractor_strategy": "tai-vs-hoshii-context",
+      "teaching_note": "勉強する là hành động.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id"
+      ],
+      "options_template": [
+        "日本語を勉強したいです。",
+        "新しい本がほしいです。",
+        "時間がほしいです。",
+        "友達がほしいです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-contrast-l4-009",
+      "template_id": "tpl-grammar-n5-068-contrast-l4-009",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Phân tích: người nói muốn ăn, không chỉ muốn sở hữu đồ ăn. Câu nào đúng?",
+      "answer_template": "ハンバーガーを食べたいです。",
+      "distractor_strategy": "action-desire-analysis",
+      "teaching_note": "L4: hành động ăn cần Vたい.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "ハンバーガーを食べたいです。",
+        "ハンバーガーがほしいです。",
+        "ハンバーガーを食べますほしいです。",
+        "ハンバーガーにたいです。"
+      ]
+    },
+    {
+      "id": "tpl-grammar-n5-068-contrast-l4-010",
+      "template_id": "tpl-grammar-n5-068-contrast-l4-010",
+      "item_id": "grammar:n5:grammar_n5_13:002",
+      "tier": "tier1",
+      "angle": "contrast",
+      "bloom_level": "L4",
+      "type": "readingComp",
+      "prompt_template": "Câu nào phân biệt đúng たい và ませんか?",
+      "answer_template": "たい nói mong muốn của mình; ませんか dùng để mời/rủ.",
+      "distractor_strategy": "tai-vs-masenka-analysis",
+      "teaching_note": "L4: mong muốn cá nhân khác với lời mời.",
+      "consumerRoutes": [
+        "/grammar-practice",
+        "/lesson/:id",
+        "/jlpt/mock"
+      ],
+      "options_template": [
+        "たい nói mong muốn của mình; ませんか dùng để mời/rủ.",
+        "たい luôn là lời mời.",
+        "ませんか chỉ nói mong muốn cá nhân.",
+        "Hai mẫu luôn giống nghĩa."
+      ]
     }
   ]
 }

@@ -54,10 +54,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 は N2 より A です",
-      "meaning": "Ý nghĩa: Dùng để so sánh hai thứ: N1 có tính chất A hơn N2.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc: より có lõi nghĩa 'từ/so với một điểm mốc'. Trong so sánh, N2より đặt N2 làm mốc thấp hơn, rồi N1は nêu chủ đề được đánh giá bằng tính từ A.",
+      "hanVietBridge": "Cầu Hán-Việt: đọc より như 'so với'. Câu đi theo trục chủ đề -> mốc so sánh -> tính chất: 東京は大阪より大きいです = Tokyo lớn hơn so với Osaka.",
+      "form": "Hình thức: N1 は N2 より A です. Ví dụ: 東京は大阪より大きいです。",
+      "meaning": "Ý nghĩa: N1 có tính chất A hơn N2.",
+      "usage": "Sử dụng: dùng khi đã chọn một bên làm chủ đề chính; より đứng ngay sau mốc so sánh.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: より không phải chữ 'hơn' trôi tự do. Nó bám vào N2 để làm mốc, khác với Nのほうが khi bạn muốn nhấn bên được chọn.",
+      "crossLinks": [
+        {
+          "pattern": "N1 と N2 と どちらが A ですか",
+          "contrast": "Phân biệt: どちらが hỏi chọn bên nào hơn; N1はN2よりAです là câu trả lời/khẳng định một bên hơn."
+        },
+        {
+          "pattern": "N のほうが A です",
+          "contrast": "Khác: のほうが nhấn bên thắng trong lựa chọn, còn より đánh dấu mốc bị đem ra so."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -82,10 +94,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 (phạm vi) で 何/どこ/誰 が いちばん A ですか",
-      "meaning": "Ý nghĩa: Dùng để hỏi trong một phạm vi, cái gì/nơi nào/ai là A nhất.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: で khoanh phạm vi xét chọn, 何/どこ/誰 nêu loại ứng viên, が đánh dấu ứng viên sẽ nhận ngôi đầu, còn いちばん nghĩa là số một/nhất trong phạm vi ấy.",
+      "hanVietBridge": "Cầu Hán-Việt: いちばん tương ứng ý 'nhất'. Hãy đọc như câu tiếng Việt 'trong lớp, ai là người cao nhất?', với で là vòng phạm vi.",
+      "form": "Hình thức: phạm vi + で + 何/どこ/誰 + が + いちばん + A + ですか.",
+      "meaning": "Ý nghĩa: hỏi cái gì, nơi nào, hoặc ai là A nhất trong một phạm vi.",
+      "usage": "Sử dụng: dùng cho câu hỏi so sánh nhất; câu trả lời thường là NがいちばんAです.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: trong 日本でどこがいちばん寒いですか, で là cái sân thi đấu, が là người thắng. Đừng đổi sang は khi đang hỏi ứng viên chưa biết.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 より A です",
+          "contrast": "Phân biệt: より so hai bên; いちばん chọn hạng nhất trong một phạm vi có nhiều ứng viên."
+        },
+        {
+          "pattern": "N1 と N2 と どちらが A ですか",
+          "contrast": "Khác: どちら hỏi giữa hai lựa chọn; いちばん hỏi nhất trong một tập rộng hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -110,10 +134,22 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 と N2 と どちらが A ですか",
-      "meaning": "Ý nghĩa: Dùng để hỏi giữa N1 và N2, bên nào A hơn.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: と đặt hai lựa chọn cạnh nhau, どちら nghĩa là 'bên nào trong hai bên', が đánh dấu bên sẽ mang tính chất A hơn. Câu hỏi cần hai mốc rõ trước khi hỏi hơn kém.",
+      "hanVietBridge": "Cầu Hán-Việt: đọc どちら như 'đằng nào/bên nào'. Cấu trúc giống câu Việt 'A và B, bên nào rẻ hơn?' nhưng tiếng Nhật đánh dấu lựa chọn thắng bằng が.",
+      "form": "Hình thức: N1 と N2 と どちらが A ですか. Trả lời: NのほうがAです.",
+      "meaning": "Ý nghĩa: hỏi giữa hai lựa chọn, bên nào có tính chất A hơn.",
+      "usage": "Sử dụng: dùng khi chỉ có hai lựa chọn chính; nếu nhiều lựa chọn, chuyển sang phạm viでいちばん.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: どちらが là câu hỏi bắt người nghe chọn một bên. Vì vậy câu trả lời tự nhiên là Nのほうが, khác với より khi bạn tự dựng câu so sánh.",
+      "crossLinks": [
+        {
+          "pattern": "N1 は N2 より A です",
+          "contrast": "Phân biệt: どちらが hỏi bên nào hơn; より dùng trong câu khẳng định một bên hơn mốc còn lại."
+        },
+        {
+          "pattern": "N1 (phạm vi) で 何/どこ/誰 が いちばん A ですか",
+          "contrast": "Khác: どちら giới hạn hai lựa chọn, còn いちばん chọn nhất trong cả phạm vi."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

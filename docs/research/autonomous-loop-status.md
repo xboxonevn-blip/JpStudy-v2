@@ -2420,3 +2420,26 @@
   validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
   --check` (line-ending warnings only). Global Directive E validator is now
   `63/80` Tier-1 grammar items passed; 17 expected failures remain.
+
+## 2026-05-22 Phase G Tier-1 items 064-068
+
+- Re-authored `grammar:n5:grammar_n5_12:002-004` and
+  `grammar:n5:grammar_n5_13:001-002` with pattern-specific Directive E content
+  for comparative `より`, superlative `いちばん`, binary-choice `どちらが`,
+  noun desire `ほしい`, and action desire `たい`.
+- Added 50 hand-crafted templates: 10 per item, covering form, meaning, usage,
+  context, contrast, and Bloom L1-L4.
+- Teaching Test paraphrases:
+  - `N1はN2よりAです`: `より` marks the comparison baseline, not the winning
+    side.
+  - `範囲で...がいちばんAですか`: `で` frames the field; `いちばん` asks for the
+    top candidate.
+  - `N1とN2とどちらがAですか`: two choices only; answer naturally with
+    `NのほうがAです`.
+  - `Nがほしいです`: wants possession of N; `が` marks the desired object.
+  - `Vます stem + たいです`: wants to do V; build from the ます-stem, not from
+    plain-form V.
+- Gates passed: item-scoped Directive E validator, Phase G template validator,
+  validator unit tests, `grammar_practice_bank_guard_test`, and `git diff
+  --check` (line-ending warnings only). Global Directive E validator is now
+  `68/80` Tier-1 grammar items passed; 12 expected failures remain.

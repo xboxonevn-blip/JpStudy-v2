@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ますstem + そうにない",
       "meaning": "Ý nghĩa: Dùng để nói một việc có vẻ khó xảy ra hoặc không có dấu hiệu sẽ xảy ra",
-      "usage": "Cách dùng: Với Verb そうにない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb そうにない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ますstem + そうにない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb そうにない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau thân ます để dự đoán dựa trên dấu hiệu hiện tại rằng hành động khó xảy ra. Không dùng để phủ định ý chí chắc chắn của người nói.",
+      "etymology": "Gốc cấu trúc: そう là vẻ/dấu hiệu bên ngoài, に nối thành trạng thái, ない phủ định khả năng trông thấy. Verb そうにない nghĩa là nhìn tình hình hiện tại thì không thấy dấu hiệu V sẽ xảy ra.",
+      "hanVietBridge": "相/そう = dáng vẻ. 降りそうにない = không có vẻ sẽ rơi/mưa.",
+      "humanMoment": "Lưu ý từ Dr. Linh: そうにない là mắt nhìn hiện trường. Người nói không bói tương lai; họ đọc dấu hiệu trước mắt rồi đoán “khó V”.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Verb そうにない cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜そうもない",
+          "contrast": "Khác nhẹ: そうもない thường nhấn phủ định mạnh hơn; そうにない trung tính hơn trong dự đoán từ dấu hiệu."
+        },
+        {
+          "pattern": "〜そうではない",
+          "contrast": "そうではない phủ định vẻ ngoài/tính chất; そうにない dự đoán hành động/sự việc khó xảy ra."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + とすると / い-Adjective + とすると / な-Adjective + だとすると / Noun + だとすると",
       "meaning": "Ý nghĩa: Dùng để giả định một tình huống rồi suy ra kết luận phía sau",
-      "usage": "Cách dùng: Với ～とすると, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とすると, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + とすると / い-Adjective + とすると / な-Adjective + だとすると / Noun + だとすると thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とすると không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước là giả định được đặt tạm để suy luận. Vế sau thường là kết quả logic, dự đoán, tính toán hoặc câu hỏi tiếp theo.",
+      "etymology": "Gốc cấu trúc: と trích mệnh đề giả định, する là thao tác “lấy làm/đặt là”. とすると nghĩa là nếu ta đặt X là đúng, thì suy ra hoặc phải xét Y.",
+      "hanVietBridge": "する = làm/đặt. 彼が来るとすると = nếu đặt chuyện anh ấy đến là đúng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とすると là bút chì của người suy luận. Bạn tạm khoanh X, rồi tính bước tiếp theo.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とすると cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜としたら",
+          "contrast": "Khác としたら: cả hai giả định, nhưng とすると thường nghe như suy luận logic hơn."
+        },
+        {
+          "pattern": "〜としたところで",
+          "contrast": "とすると dùng giả định để mở suy luận; としたところで thường giả định rồi phủ định hiệu quả/kết quả."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun 1 + にひきかえ + Noun 2 + は",
       "meaning": "Ý nghĩa: Dùng để đối chiếu hai sự vật hoặc hai người, nhấn mạnh sự khác biệt rõ rệt giữa A và B",
-      "usage": "Cách dùng: Với Noun にひきかえ Noun は, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun にひきかえ Noun は, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun 1 + にひきかえ + Noun 2 + は thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun にひきかえ Noun は không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun1 là nền so sánh; Noun2 là chủ đề chính được đối lập rõ. Thường mang đánh giá tốt-xấu hoặc khác biệt mạnh.",
+      "etymology": "Gốc cấu trúc: 引き換え là đổi/chuyển sang cái khác. にひきかえ đặt A làm điểm đem ra đổi chiều nhìn sang B, nên câu nhấn tương phản rõ giữa hai bên.",
+      "hanVietBridge": "引換 = hoán đổi/đổi lại. 昔にひきかえ今は = trái với ngày xưa, bây giờ thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: にひきかえ là cú xoay gương. Người nói soi A trước, rồi xoay sang B để làm khác biệt nổi bật.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun にひきかえ Noun は cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に対して",
+          "contrast": "Khác に対して: に対して chỉ đối lập/đối với rộng; にひきかえ nhấn tương phản đánh giá mạnh hơn."
+        },
+        {
+          "pattern": "〜反面",
+          "contrast": "反面 nói mặt trái trong cùng một sự việc; にひきかえ so hai người/vật/thời điểm khác nhau."
         }
       ],
       "fallbackReference": {

@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + としたところで / い-Adjective + としたところで / な-Adjective + だとしたところで / Noun + だとしたところで",
       "meaning": "Ý nghĩa: Dùng để nói ngay cả giả sử X xảy ra thì kết quả cũng không thay đổi hoặc không có nhiều ý nghĩa",
-      "usage": "Cách dùng: Với ～としたところで, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～としたところで, lõi ところ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + としたところで / い-Adjective + としたところで / な-Adjective + だとしたところで / Noun + だとしたところで thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～としたところで không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt giả định X rồi nói dù X có đúng/xảy ra thì kết quả cũng không đáng kể hoặc không đổi. Vế sau thường phủ định, nghi ngờ, vô ích.",
+      "etymology": "Gốc cấu trúc: とする là “giả sử/xem như X”, ところで đặt giả định ấy tại một điểm rồi bẻ sang kết quả. としたところで vì vậy là “ngay cả đặt X làm giả định thì...”.",
+      "hanVietBridge": "所 = điểm/chỗ. 来るとしたところで = dù đặt giả định là anh ấy đến thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: としたところで thường đã có kết luận lạnh phía sau. Người nói thử cho X xảy ra, rồi vẫn bảo: cũng chẳng cứu được gì.",
       "crossLinks": [
         {
-          "pattern": "Noun というところだ",
-          "contrast": "～としたところで cần đọc theo chức năng riêng của mẫu; Noun というところだ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜としても",
+          "contrast": "Khác としても: としても chỉ “dù giả sử”; としたところで mạnh hơn về cảm giác vô ích/kết quả không đổi."
+        },
+        {
+          "pattern": "〜とすると",
+          "contrast": "とすると dùng giả định để suy luận; としたところで dùng giả định rồi thường phủ định tác dụng của nó."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + にとどまらず + Noun + も",
       "meaning": "Ý nghĩa: Dùng để nói phạm vi không dừng lại ở Noun mà còn lan sang điều khác",
-      "usage": "Cách dùng: Với Noun にとどまらず～も, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun にとどまらず～も, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + にとどまらず + Noun + も thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun にとどまらず～も không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun trước là phạm vi ban đầu; vế sau nói phạm vi còn lan sang nơi/người/lĩnh vực khác. Hay dùng cho ảnh hưởng, tác động, hỗ trợ, tài năng.",
+      "etymology": "Gốc cấu trúc: 留まる là dừng/lưu lại, とどまらず là không dừng lại. にとどまらず đặt N làm điểm không bị giới hạn; も phía sau báo phần mở rộng thêm.",
+      "hanVietBridge": "留 = lưu/dừng lại. 日本語にとどまらず = không dừng ở tiếng Nhật.",
+      "humanMoment": "Lưu ý từ Dr. Linh: にとどまらず là câu lan sóng. Hãy tìm điểm xuất phát N, rồi xem sóng lan tới đâu ở vế sau.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun にとどまらず～も cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜だけでなく〜も",
+          "contrast": "Khác だけでなく: nghĩa gần nhưng にとどまらず nhấn phạm vi không dừng ở điểm ban đầu."
+        },
+        {
+          "pattern": "〜に限らず",
+          "contrast": "に限らず nói không giới hạn trong N; にとどまらず thường mô tả sự lan rộng/tác động vượt khỏi N."
         }
       ],
       "fallbackReference": {

@@ -3015,3 +3015,9 @@
 - Replaced generic guidance with threshold-realization, inevitable-action, accepted-view passive, even-to focus, and unsettled-obligation teaching.
 - Global Directive E validator progress is now `325/1123`; next failure starts at `grammar:n1:grammar_n1_42:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 050
+- Re-authored N1 rows `〜としたところで`, `Noun にとどまらず〜も`, `Verb そうにない`, `〜とすると`, and `Noun にひきかえ Noun は`.
+- Repaired one `そうにない` example so the subject naturally carries the completion prediction.
+- Global Directive E validator progress is now `330/1123`; next failure starts at `grammar:n1:grammar_n1_44:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

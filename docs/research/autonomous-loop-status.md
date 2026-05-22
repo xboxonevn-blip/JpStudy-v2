@@ -2805,3 +2805,9 @@
 - Tightened examples/metadata: `〜ように` now uses a potential-goal example, and `〜ようが〜まいが` now keeps the lesson examples inside verb frames instead of adjective alternation.
 - Global Directive E validator progress is now `150/1123`; next failure starts at `grammar:n1:grammar_n1_16:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 015
+- Re-authored N1 lesson 16 rows `〜ようがない`, `〜ようと〜まいと`, `〜ようにも`, `〜ようにも〜れない`, and `〜ようもない`.
+- Repaired `〜ようにも〜れない` examples so the repeated verb appears in potential-negative form, making the difference from broader `〜ようにも` visible.
+- Global Directive E validator progress is now `155/1123`; next failure starts at `grammar:n1:grammar_n1_16:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

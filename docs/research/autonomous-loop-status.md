@@ -2997,3 +2997,9 @@
 - Replaced early lesson-4 template fields with full Directive E etymology, Hán-Việt bridge, Dr. Linh note, and cross-links.
 - Global Directive E validator progress is now `310/1123`; next failure starts at `grammar:n1:grammar_n1_4:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 047
+- Re-authored N1 rows `Noun ですら`, `Noun でなくてなんだろう`, `Noun ではあるまいし`, `Noun と Noun を兼ねて`, and `Noun といい Noun といい`.
+- Replaced early lesson-4 template filler with formal even-focus, rhetorical assertion, rejected-assumption, dual-role, and paired-aspect guidance.
+- Global Directive E validator progress is now `315/1123`; next failure starts at `grammar:n1:grammar_n1_4:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

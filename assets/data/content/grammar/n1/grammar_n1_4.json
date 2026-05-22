@@ -114,8 +114,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ですら",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh “ngay cả Noun cũng...”, thường trong văn viết hoặc ngữ cảnh trang trọng.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: Đặt sau danh từ để kéo N lên làm ví dụ cực đoan: ngay cả N mà cũng/không. Hay dùng trong văn viết, lập luận, phê bình.",
+      "etymology": "Gốc cấu trúc: すら là trợ từ nhấn mạnh “ngay cả”, です giữ sắc thái lịch sự/trang trọng trước すら. Noun ですら vì vậy làm N thành ví dụ đáng lẽ phải khác nhưng vẫn bị kéo vào nhận xét.",
+      "hanVietBridge": "すら = ngay cả. 専門家ですら = ngay cả chuyên gia.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ですら tạo cú sốc chuẩn kỳ vọng. Nếu cả N còn như vậy, người nghe tự hiểu những trường hợp thấp hơn cũng vậy.",
+      "crossLinks": [
+        {
+          "pattern": "Noun さえ",
+          "contrast": "Khác さえ: さえ thông dụng hơn; ですら trang trọng hơn và thường đứng trong lập luận viết."
+        },
+        {
+          "pattern": "Noun たりとも〜ない",
+          "contrast": "たりとも〜ない phủ định đơn vị nhỏ tuyệt đối; ですら chỉ nêu N như ví dụ “ngay cả”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -148,8 +160,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + でなくてなんだろう",
       "meaning": "Ý nghĩa: Dùng như câu hỏi tu từ để khẳng định mạnh rằng điều đó chính là Noun.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: Đặt sau danh từ muốn khẳng định mạnh. Câu hỏi tu từ không chờ câu trả lời; nó ép người nghe thừa nhận “đúng là N”.",
+      "etymology": "Gốc cấu trúc: でなくて là phủ định của である, なんだろう hỏi “là gì đây”. Noun でなくてなんだろう dùng hình thức hỏi để nói: nếu không gọi là N thì không còn tên nào hợp hơn.",
+      "hanVietBridge": "でなくて = nếu không phải; なんだろう = là gì đây. 愛でなくてなんだろう = nếu không phải tình yêu thì là gì.",
+      "humanMoment": "Lưu ý từ Dr. Linh: でなくてなんだろう là khẳng định đội lốt câu hỏi. Người nói đã chốt N trong lòng rồi.",
+      "crossLinks": [
+        {
+          "pattern": "〜にほかならない",
+          "contrast": "Khác にほかならない: cả hai khẳng định chính là N, nhưng でなくてなんだろう mạnh nhờ câu hỏi tu từ."
+        },
+        {
+          "pattern": "Noun というものだ",
+          "contrast": "というものだ nêu bản chất/đánh giá chung; でなくてなんだろう ép kết luận rằng trường hợp này chính là N."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -182,8 +206,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ではあるまいし",
       "meaning": "Ý nghĩa: Dùng để nói “đâu phải là Noun mà...”, phủ nhận một giả định làm cơ sở cho hành động hoặc nhận xét.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: Dùng để bác một giả định làm lý do cho hành động/lo lắng. Thường theo sau là nhận xét kiểu “đừng/không cần/không nên làm đến mức đó”.",
+      "etymology": "Gốc cấu trúc: では đặt N như giả định, あるまい là phủ định/phỏng đoán cổ “chắc không phải”, し nối lý do. ではあるまいし nghĩa là “đâu phải N đâu mà...”.",
+      "hanVietBridge": "あるまい = chắc không phải/không phải đâu. 子供ではあるまいし = đâu phải trẻ con.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ではあるまいし gạt một cái cớ khỏi bàn. Người nói đang bảo: đừng hành xử như thể N là thật.",
+      "crossLinks": [
+        {
+          "pattern": "Noun じゃあるまいし",
+          "contrast": "Khác じゃあるまいし: じゃ là khẩu ngữ; ではあるまいし trang trọng, viết hoặc nói cứng hơn."
+        },
+        {
+          "pattern": "〜わけではない",
+          "contrast": "わけではない phủ định một kết luận; ではあるまいし bác giả định rồi dùng nó làm lý do phản ứng."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -216,8 +252,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + と + Noun + を兼ねて",
       "meaning": "Ý nghĩa: Dùng khi một hành động hoặc sự vật đồng thời đảm nhận hai mục đích, vai trò hoặc chức năng.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: Nêu hai vai trò, mục đích hoặc chức năng mà một người/vật/hành động đảm nhiệm cùng lúc. Thường dùng cho chức vụ, phòng, chuyến đi, sự kiện.",
+      "etymology": "Gốc cấu trúc: 兼ねる là kiêm/gộp hai chức năng, と nối hai danh từ cùng hàng, を đánh dấu cặp vai trò được kiêm. AとBを兼ねて nói một việc mang đồng thời hai mục đích.",
+      "hanVietBridge": "兼 = kiêm. 社長と経理部長を兼ねて = kiêm chủ tịch và trưởng phòng kế toán.",
+      "humanMoment": "Lưu ý từ Dr. Linh: と...を兼ねて không phải chỉ “và”. Nó nói một thân/việc đang gánh hai chiếc mũ cùng lúc.",
+      "crossLinks": [
+        {
+          "pattern": "Noun かたがた",
+          "contrast": "Khác かたがた: かたがた là hai mục đích xã giao/trang trọng; 兼ねて nhấn một việc/vai trò kiêm hai chức năng."
+        },
+        {
+          "pattern": "Noun がてら",
+          "contrast": "がてら là tiện làm thêm việc phụ; 兼ねて nói hai vai trò/mục đích cùng được đảm nhiệm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -250,8 +298,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 + といい + Noun2 + といい + Comment",
       "meaning": "Ý nghĩa: Dùng để nêu hai khía cạnh A và B rồi đưa ra nhận xét chung cho cả hai.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: Nêu hai mặt/khía cạnh cùng nhóm rồi đưa ra đánh giá chung. A và B là bằng chứng đại diện cho kết luận phía sau.",
+      "etymology": "Gốc cấu trúc: と đánh dấu từng danh từ được đưa lên làm điểm xét, いい lặp lại như “nói về A cũng vậy, nói về B cũng vậy”. Nhịp lặp giúp gom hai mặt vào một đánh giá.",
+      "hanVietBridge": "といい...といい = xét về A cũng như B. 味といい香りといい = về vị lẫn hương.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といい...といい là cách đưa hai bằng chứng lên bàn rồi chốt một nhận xét. Đừng dịch thành liệt kê rời rạc.",
+      "crossLinks": [
+        {
+          "pattern": "Noun なり Noun なり",
+          "contrast": "Khác なり...なり: なり nêu lựa chọn; といい...といい nêu hai khía cạnh để đánh giá chung."
+        },
+        {
+          "pattern": "〜とか〜とか",
+          "contrast": "とか...とか liệt kê ví dụ lỏng; といい...といい có nhịp đánh giá rõ sau hai ví dụ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

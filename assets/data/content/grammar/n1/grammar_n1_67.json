@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (masu stem) + やしない",
       "meaning": "Ý nghĩa: Dùng để phủ định mạnh trong văn nói: “chẳng đời nào”, “không hề”",
-      "usage": "Cách dùng: Với Verb やしない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb やしない, lõi Verb やしない là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (masu stem) + やしない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb やしない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn やしない sau thân ます để phủ định mạnh trong văn nói: 泣きやしない, 買いやしない. Sắc thái thân mật, bực, hoặc bác bỏ thẳng.",
+      "etymology": "Gốc rễ: やしない là dạng khẩu ngữ mạnh của はしない. は đưa hành động lên làm điểm đối lập, しない phủ định; âm は thường trượt thành や trong lời nói.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “tuyệt bất V” trong khẩu khí đời thường. Verb やしない không chỉ là không V, mà là “đời nào V/chẳng V đâu”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb やしない có nhiệt trong giọng nói. Khác しない trung tính, やしない thường là phản ứng gạt phắt hoặc tự trấn an mạnh.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb やしない cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb はしない",
+          "contrast": "Khác Verb やしない: はしない vẫn chuẩn/trung tính hơn, やしない là khẩu ngữ mạnh."
+        },
+        {
+          "pattern": "Verb っこない",
+          "contrast": "So với っこない nhấn không có khả năng xảy ra, やしない nhấn người nói bác bỏ hành động."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (dictionary form) + に越したことはない, い-Adjective + に越したことはない, な-Adjective/Noun + である + に越したことはない",
       "meaning": "Ý nghĩa: Dùng để nói nếu có thể thì X là tốt nhất, không gì hơn X",
-      "usage": "Cách dùng: Với ～に越したことはない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に越したことはない, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (dictionary form) + に越したことはない, い-Adjective + に越したことはない, な-Adjective/Noun + である + に越したことはない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に越したことはない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt hành động/trạng thái lý tưởng trước に越したことはない để nói không gì tốt hơn X, dù có thể không bắt buộc. Hay dùng như lời khuyên thận trọng.",
+      "etymology": "Gốc rễ: 越す là “vượt qua”; ことはない phủ nhận có việc nào vượt hơn. に đánh dấu X là chuẩn tốt nhất: X に越したことはない = không có lựa chọn nào vượt X.",
+      "hanVietBridge": "越 là Hán-Việt “việt”: vượt. ～に越したことはない nghĩa là không gì vượt qua X, nên dịch “X là tốt nhất/không gì bằng X”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～に越したことはない là lời khuyên không ép buộc nhưng rất chắc. Khác べきだ ra nghĩa vụ, に越したことはない nói chọn X là tối ưu.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "～に越したことはない cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb べきだ",
+          "contrast": "Khác ～に越したことはない: べきだ là nên/phải theo chuẩn, còn に越したことはない chỉ nói X là lựa chọn tốt nhất."
+        },
+        {
+          "pattern": "Verb ほうがいい",
+          "contrast": "So với ほうがいい, に越したことはない trang trọng hơn và nhấn không gì vượt được X."
         }
       ],
       "fallbackReference": {

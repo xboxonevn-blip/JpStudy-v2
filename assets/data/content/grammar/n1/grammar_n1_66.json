@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (masu stem) + もしないで",
       "meaning": "Ý nghĩa: Dùng để phê bình việc thậm chí không làm một hành động tối thiểu",
-      "usage": "Cách dùng: Với Verb もしないで, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb もしないで, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (masu stem) + もしないで thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb もしないで không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt thân ます của hành động tối thiểu trước もしないで để phê bình việc thậm chí không làm bước đó mà đã làm việc sau: 調べもしないで答える.",
+      "etymology": "Gốc rễ: も là “ngay cả”; しないで là “không làm mà...”. Khi gắn với thân động từ, Verb もしないで biến hành động thành mức tối thiểu bị bỏ qua.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “vị hành tối thiểu”. 読みもしないで là chưa làm cả bước đọc tối thiểu, nên tiếng Việt tự nhiên là “không hề/không buồn đọc mà...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb もしないで thường có giọng trách. Khác Verb ないで trung tính hơn, もしないで nhấn “đến cả việc đó cũng không làm”.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Verb もしないで cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ないで",
+          "contrast": "Khác Verb もしないで: ないで chỉ không làm, còn もしないで nhấn đến cả bước tối thiểu cũng bỏ qua."
+        },
+        {
+          "pattern": "Verb ようともしない",
+          "contrast": "So với ようともしない là không có ý định thử, もしないで tập trung vào việc đã bỏ qua bước tối thiểu trước hành động sau."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-てform + に至った or Noun / Verb-dictionary + に至る (more general)",
       "meaning": "Ý nghĩa: Dùng để nói một quá trình cuối cùng dẫn đến kết quả hoặc điểm đến X",
-      "usage": "Cách dùng: Với ～に至った, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に至った, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-てform + に至った or Noun / Verb-dictionary + に至る (more general) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に至った không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng に至った để tường thuật một quá trình đã đi đến kết quả, kết luận hoặc mức độ cuối. Chủ ngữ thường là vấn đề, điều tra, nỗ lực, quá trình xã hội.",
+      "etymology": "Gốc rễ: 至る là “đi tới/đạt tới”; に đánh dấu điểm đến. に至った là dạng quá khứ: sau nhiều bước, sự việc đã chạm tới điểm kết quả đó.",
+      "hanVietBridge": "至 là Hán-Việt “chí”: đi đến. 成功に至った là đi đến thành công, 対立に至った là dẫn tới đối lập/xung đột.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～に至った cần có con đường trước điểm đến. Khác になった chỉ nói thành X, に至った cho thấy quá trình dẫn tới X.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "～に至った cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun になった",
+          "contrast": "Khác ～に至った: になった nói kết quả chuyển thành X, còn に至った nhấn quá trình đi tới kết quả ấy."
+        },
+        {
+          "pattern": "Noun に至るまで",
+          "contrast": "So với に至るまで là phạm vi kéo tới điểm cuối, に至った là đã đạt tới kết quả cuối."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + の至り",
       "meaning": "Ý nghĩa: Dùng để diễn tả mức độ cực điểm của cảm xúc hoặc trạng thái, thường trong cách nói trang trọng như 光栄の至り",
-      "usage": "Cách dùng: Với Noun の 至り, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun の 至り, lõi Noun の 至り là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + の至り thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun の 至り không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ cảm xúc/trạng thái trước の至り để nói “đến tột cùng của N”. Hay gặp 光栄の至り, 感激の至り, 若気の至り, 恥の至り trong văn trang trọng.",
+      "etymology": "Gốc rễ: 至り là danh từ từ 至る, “đi tới điểm cuối”. の nối cảm xúc/trạng thái với điểm đến cuối cùng ấy, tạo nghĩa cực điểm của cảm xúc/trạng thái.",
+      "hanVietBridge": "至 là Hán-Việt “chí” trong chí cực. Noun の至り là trạng thái đã đi tới tận cùng của N, gần “cực điểm/tột cùng”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun の至り nghe như lời phát biểu trang trọng. Khác の極み cũng là cực điểm, の至り hay đứng với cảm xúc xã giao như 光栄, 感激, 恥.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun の 至り cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun の極み",
+          "contrast": "Khác Noun の至り: cả hai đều cực điểm, nhưng の至り thường nghe như lời trang trọng/cảm xúc xã giao hơn."
+        },
+        {
+          "pattern": "極めて",
+          "contrast": "So với 極めて là phó từ “rất”, の至り biến cảm xúc/trạng thái thành danh từ cực điểm."
         }
       ],
       "fallbackReference": {

@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + はおろか + Noun + も",
-      "meaning": "Ý nghĩa: Dùng để nói “chưa nói đến A, ngay cả B cũng...”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của 〜はおろか〜も nằm ở おろか, nghĩa là khỏi nói đến, chưa cần bàn đến. は đặt A làm mốc cao hơn, còn も kéo B vào như điều thấp hơn mà cũng không đạt hoặc cũng xảy ra.",
+      "hanVietBridge": "おろか không có Hán tự học viên cần nhớ, nhưng cầu Hán-Việt là thứ bậc mức độ: A là điều thượng cấp, B là điều tối thiểu. Cách nghĩ này giống nói chưa bàn đại học, tiểu học còn chưa xong.",
+      "form": "Hình thức: danh từ/cụm danh từ A + はおろか + danh từ/cụm danh từ B + も/さえ. A thường là điều lớn hơn, B là điều cơ bản hơn.",
+      "meaning": "Ý nghĩa: Chưa nói đến A, ngay cả B cũng không/đã. Mẫu này nhấn mạnh độ nghiêm trọng bằng cách đưa một mốc cao rồi hạ xuống mốc thấp hơn.",
+      "usage": "Sử dụng: Hay đi với phủ định hoặc đánh giá mạnh: 漢字はおろか、ひらがなも読めない. Hãy kiểm tra thang mức độ A > B; đảo sai thứ tự sẽ làm câu mất lực.",
+      "humanMoment": "Dr. Linh lưu ý: 〜はおろか〜も khác 〜だけでなく〜も. 〜だけでなく chỉ thêm thông tin; 〜はおろか〜も có thang mức độ và thường làm người nghe giật mình vì cả mức tối thiểu cũng không đạt.",
+      "crossLinks": [
+        {
+          "pattern": "〜だけでなく〜も",
+          "contrast": "Khác 〜はおろか〜も: 〜だけでなく〜も liệt kê trung tính, còn 〜はおろか〜も nhấn thang mức độ mạnh."
+        },
+        {
+          "pattern": "〜どころか",
+          "contrast": "〜どころか thường đảo kỳ vọng trong một mệnh đề; 〜はおろか〜も đặt hai mốc A/B rõ ràng trên thang mức độ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

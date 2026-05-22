@@ -2727,3 +2727,9 @@
 - Fixed connected `〜かれ〜かれ` example debt by replacing noun/verb pseudo-examples with fixed adjective collocations: `早かれ遅かれ`, `多かれ少なかれ`, `良かれ悪しかれ`, `遅かれ早かれ`.
 - Updated stale grammar repository tests so upper-JLPT canonical-structure storage and duplicate imported patterns do not break the gate.
 - Gates passed: 5 item-level Directive E validator checks, full ranked Tier-1 validator `80/80`, global validator progress `85/1123`, Directive E validator unit test, grammar repository test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 002
+- Re-authored five more failing N1 grammar rows: `〜であれ〜であれ`, `〜というか〜というか`, `〜とも〜とも`, `〜にしろ〜にしろ`, and `〜はおろか〜も`.
+- Fixed connected `〜とも〜とも` example debt by replacing unrelated `とも` particle examples with real ambiguity/indeterminacy frames using `言えない`, `つかない`, `判断しにくい`, and `言っていない`.
+- Global Directive E validator progress is now `90/1123`; next failure starts at `grammar:n1:grammar_n1_10:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

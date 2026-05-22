@@ -250,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun A + であれ + Noun B + であれ",
-      "meaning": "Ý nghĩa: Dùng để nói rằng mệnh đề phía sau đúng trong cả hai trường hợp A và B.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 〜であれ〜であれ là である ở dạng mệnh lệnh/giả định あれ: hãy cho là A, hãy cho là B. Khi lặp lại, câu biến hai danh từ/trạng thái thành hai khả năng rồi nói kết luận vẫn giữ nguyên.",
+      "hanVietBridge": "Cầu Hán-Việt nằm ở ý tồn tại/trạng thái: A hay B đều là hai trạng thái được đặt lên bàn cân. Với danh từ Hán-Nhật như 経験者/初心者, hãy đọc cặp kinh nghiệm giả/người mới để thấy hai cực đối lập.",
+      "form": "Hình thức: danh từ A + であれ + danh từ B + であれ. Có thể dùng với tính từ な qua dạng であれ; hai vế nên cùng loại từ và thường đối lập rõ.",
+      "meaning": "Ý nghĩa: Dù là A hay B, mệnh đề phía sau vẫn đúng. Sắc thái trang trọng, dùng để nói nguyên tắc áp dụng cho cả hai trường hợp.",
+      "usage": "Sử dụng: Hợp với câu quy định, nhận định xã hội, lập luận: 経験者であれ初心者であれ、この説明は必要だ. Tránh dùng với cặp hành động; khi đó hãy chọn 〜うが〜うが hoặc 〜にしろ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜であれ〜であれ khác 〜かれ〜かれ ở chỗ nó nhận danh từ/trạng thái rất tự nhiên. Nếu muốn nói nam/nữ, người mới/người cũ, dùng であれ; 〜かれ〜かれ dành cho cặp tính từ cố định.",
+      "crossLinks": [
+        {
+          "pattern": "〜かれ〜かれ",
+          "contrast": "Khác 〜であれ〜であれ: 〜かれ〜かれ chủ yếu là cặp tính từ cố định, còn 〜であれ〜であれ đi tốt với danh từ."
+        },
+        {
+          "pattern": "〜にしろ〜にしろ",
+          "contrast": "〜にしろ〜にしろ linh hoạt hơn với động từ và tình huống giả định; 〜であれ〜であれ trang trọng, nặng về trạng thái/danh tính."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -284,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Phrase A + というか + Phrase B + というか",
-      "meaning": "Ý nghĩa: Dùng khi người nói lưỡng lự không biết nên gọi sự việc là A hay B, hoặc muốn sửa cách nói từ A sang B cho sát hơn.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của 〜というか〜というか là と + 言う + か: gọi là A chăng, hay gọi là B chăng. Việc lặp lại cho thấy người nói đang thử hai nhãn ngôn ngữ để tìm cách diễn đạt sát hơn.",
+      "hanVietBridge": "言 có âm Hán-Việt là ngôn, như ngôn ngữ, phát ngôn. 〜というか là thao tác về lời gọi/tên gọi: không đổi sự vật, chỉ đổi nhãn diễn đạt cho đúng sắc thái.",
+      "form": "Hình thức: cụm A + というか + cụm B + というか. A và B thường là hai cách gọi, hai đánh giá hoặc hai tính từ miêu tả cùng một tình huống.",
+      "meaning": "Ý nghĩa: Nói là A hay B thì cũng chưa chắc; đúng hơn là đang tìm từ diễn tả. Có thể dùng để tự sửa lời, làm mềm phán đoán, hoặc diễn tả cảm giác khó gọi tên.",
+      "usage": "Sử dụng: Dùng trong hội thoại hoặc bình luận mềm: 無礼というか、正直すぎるというか. Vế sau thường gần hơn với ý người nói thật sự muốn chốt.",
+      "humanMoment": "Dr. Linh lưu ý: 〜というか〜というか khác 〜というより. 〜というより thường sửa mạnh từ A sang B; 〜というか〜というか giữ cảm giác lưỡng lự, như đang chọn từ trước mặt người nghe.",
+      "crossLinks": [
+        {
+          "pattern": "〜というより",
+          "contrast": "Khác 〜というか〜というか: 〜というより phủ A để đẩy sang B mạnh hơn, còn 〜というか〜というか lưỡng lự và mềm hơn."
+        },
+        {
+          "pattern": "〜といえば",
+          "contrast": "〜といえば dùng để nhắc/chuyển chủ đề từ một từ khóa; 〜というか〜というか dùng để chỉnh cách gọi một tình huống."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -318,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + とも + Noun + とも (or sometimes Verb forms for each A, B)",
-      "meaning": "Ý nghĩa: Dùng để nêu hai khả năng A và B khi chưa xác định rõ bên nào đúng, hoặc khi kết luận áp dụng cho cả hai khả năng.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 〜とも〜とも là trợ từ と đặt một khả năng thành lời được nêu, cộng も để gom thêm khả năng thứ hai. Vì vậy mẫu hay đi với 言えない, 分からない, 判断できない: chưa chốt được gọi là A hay B.",
+      "hanVietBridge": "Không có Hán tự riêng cho とも, nhưng khi đi với 言える/言えない thì 言 = ngôn. Hãy nhớ đây là bài toán định danh: có thể gọi là A không, có thể gọi là B không, hay chưa thể kết luận.",
+      "form": "Hình thức: danh từ/tính từ/mệnh đề A + とも + B + とも, thường kết với 言えない, つかない, 判断できない hoặc câu phủ định về việc xác định.",
+      "meaning": "Ý nghĩa: Không thể nói rõ là A hay B, hoặc chưa biết khả năng nào đúng. Mẫu này không giống とも nghĩa cùng với; nó là cặp khả năng được đem ra phán đoán.",
+      "usage": "Sử dụng: Dùng khi phân loại mơ hồ: 青とも緑ともつかない色. Nếu muốn nói cả A lẫn B cùng tham gia, đó là と + も bình thường, không phải mẫu N1 này.",
+      "humanMoment": "Dr. Linh lưu ý: 〜とも〜とも rất dễ bị lẫn với とも = cùng với/cả. Hãy tìm động từ chốt như 言えない hoặc つかない; nếu có, câu đang nói không phân định được A hay B.",
+      "crossLinks": [
+        {
+          "pattern": "〜ともなく",
+          "contrast": "Khác 〜とも〜とも: 〜ともなく nói hành động mơ hồ không chủ ý, còn 〜とも〜とも đặt hai nhãn/khả năng để phân định."
+        },
+        {
+          "pattern": "〜であれ〜であれ",
+          "contrast": "〜であれ〜であれ nói kết luận áp dụng cho cả A và B; 〜とも〜とも thường nói chưa thể gọi rõ là A hay B."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -352,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun A + にしろ + Noun B + にしろ, or Verb-casual A + にしろ + Verb-casual B + にしろ",
-      "meaning": "Ý nghĩa: Dùng để nói rằng dù xét theo trường hợp A hay trường hợp B, nhận định phía sau vẫn đúng.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 〜にしろ〜にしろ là に + しろ, dạng mệnh lệnh/giả định của する: cứ cho là A, cứ cho là B. Lặp lại hai lần tạo khung dù xét trường hợp nào thì kết luận vẫn vậy.",
+      "hanVietBridge": "Cầu Hán-Việt nằm ở thao tác giả định và xử lý: đặt từng trường hợp vào bàn cân rồi rút kết luận chung. Với 合格/不合格, người Việt thấy ngay cặp hợp cách/bất hợp cách: đậu hay trượt.",
+      "form": "Hình thức: danh từ A + にしろ + danh từ B + にしろ; cũng dùng với động từ/tính từ ở dạng thường + にしろ. Hai vế nên cân xứng.",
+      "meaning": "Ý nghĩa: Dù là A hay B, nhận định phía sau vẫn đúng. Sắc thái lập luận, thường dùng khi cân nhắc các khả năng trước khi khuyên, phê bình hoặc kết luận.",
+      "usage": "Sử dụng: Dùng cho cả danh từ và mệnh đề: 行くにしろ行かないにしろ、連絡してください. Nếu chỉ có một vế, 〜にしろ vẫn có nghĩa dù là/cho dù.",
+      "humanMoment": "Dr. Linh lưu ý: 〜にしろ〜にしろ gần 〜にせよ〜にせよ, nhưng にしろ nghe trực tiếp hơn, như người nói đặt hai phương án rồi yêu cầu xử lý. 〜であれ〜であれ trang trọng và danh từ hơn.",
+      "crossLinks": [
+        {
+          "pattern": "〜にせよ〜にせよ",
+          "contrast": "Gần nghĩa với 〜にしろ〜にしろ nhưng 〜にせよ thường văn viết và mềm hơn một chút."
+        },
+        {
+          "pattern": "〜であれ〜であれ",
+          "contrast": "〜であれ〜であれ thiên về danh từ/trạng thái; 〜にしろ〜にしろ linh hoạt hơn với động từ và lời khuyên thực tế."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -2799,3 +2799,9 @@
 - Corrected connected examples: `〜ないまでも` now uses a real negative verb frame, `〜ないものでもない` now avoids the awkward `間違いないものでもない`, and `〜のないNoun` metadata now matches noun-absence examples.
 - Global Directive E validator progress is now `145/1123`; next failure starts at `grammar:n1:grammar_n1_15:008`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 014
+- Re-authored N1 rows `〜もしないで`, `〜やしない`, `〜ように`, `〜ようか〜まいか`, and `〜ようが〜まいが`.
+- Tightened examples/metadata: `〜ように` now uses a potential-goal example, and `〜ようが〜まいが` now keeps the lesson examples inside verb frames instead of adjective alternation.
+- Global Directive E validator progress is now `150/1123`; next failure starts at `grammar:n1:grammar_n1_16:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

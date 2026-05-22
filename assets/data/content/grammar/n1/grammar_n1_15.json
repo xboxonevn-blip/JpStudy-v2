@@ -342,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb (masu stem) + もしないで",
-      "meaning": "Ý nghĩa: Dùng để phê bình việc thậm chí không làm một hành động tối thiểu.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc của 〜もしないで là thân ます của động từ, thêm も để nhấn ngay cả, rồi しないで là không làm mà. Cấu trúc này trách việc bỏ qua một bước tối thiểu trước khi làm việc khác.",
+      "hanVietBridge": "も là cả/ngay cả; しないで là không làm mà. Ghép lại, 調べもしないで gần với tiếng Việt ngay cả tra cũng không tra mà đã làm.",
+      "form": "Hình thức: động từ thân ます + もしないで + hành động sau. Ví dụ 調べもしないで, 読みもしないで.",
+      "meaning": "Ý nghĩa: Làm B mà thậm chí không làm A, thường mang sắc thái phê bình hoặc ngạc nhiên.",
+      "usage": "Sử dụng: A phải là bước tối thiểu đáng lẽ cần làm trước B. Nếu chỉ muốn nói không làm A một cách trung tính, dùng ないで.",
+      "humanMoment": "Dr. Linh lưu ý: 〜もしないで khác 〜ないで. ないで chỉ không làm A rồi B; もしないで thêm mũi nhấn ngay cả A cũng không, nên dễ nghe trách móc.",
+      "crossLinks": [
+        {
+          "pattern": "〜ないで",
+          "contrast": "Khác 〜もしないで: 〜ないで trung tính hơn; 〜もしないで nhấn bỏ qua cả việc tối thiểu."
+        },
+        {
+          "pattern": "〜もせずに",
+          "contrast": "〜もせずに trang trọng hơn; 〜もしないで đời thường hơn và hay dùng trong phê bình."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -376,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb (masu stem) + やしない",
-      "meaning": "Ý nghĩa: Dùng để phủ định mạnh trong văn nói: “chẳng đời nào”, “không hề”.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 〜やしない là thân ます + や + しない, một phủ định khẩu ngữ mạnh gần với はしない. や làm câu bật giọng bác bỏ: đời nào lại làm A.",
+      "hanVietBridge": "しない là không làm; phần や làm giọng nói bật lên như không đời nào. Trong tiếng Việt, 泣きやしない nên dịch là đời nào khóc, không phải chỉ không khóc.",
+      "form": "Hình thức: động từ thân ます + やしない. Ví dụ 泣きやしない, 言いやしない, 買いやしない.",
+      "meaning": "Ý nghĩa: Phủ định mạnh, thân mật: không hề A, chẳng đời nào A.",
+      "usage": "Sử dụng: Hợp trong hội thoại, độc thoại, hoặc câu cảm xúc. Tránh trong văn trang trọng vì sắc thái thô/thân mật.",
+      "humanMoment": "Dr. Linh lưu ý: 〜やしない khác 〜はしない. はしない có thể chỉ nhấn đối lập; やしない nghe gắt hơn, như người nói đang gạt phăng khả năng A.",
+      "crossLinks": [
+        {
+          "pattern": "〜はしない",
+          "contrast": "Khác 〜やしない: 〜はしない nhấn không làm A; 〜やしない là phủ định khẩu ngữ mạnh hơn."
+        },
+        {
+          "pattern": "〜っこない",
+          "contrast": "〜っこない nói không thể/không có chuyện A xảy ra; 〜やしない là người/chủ thể sẽ không đời nào làm A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -393,9 +417,9 @@
     "lessonId": 15,
     "title": "Verb よう",
     "titleEn": "Expresses the way/manner of doing something or in order to / so that / try to",
-    "structure": "Verb (dictionary or negative form) + ように (する / etc.)",
-    "structureEn": "Verb (dictionary or negative form) + ように (する / etc.)",
-    "explanation": "Dùng để nói cách thức làm một việc hoặc mục đích/định hướng hành động, tùy cấu trúc đi kèm như ようにする. Cấu trúc: Verb (dictionary or negative form) + ように (する / etc.).",
+    "structure": "Verb/plain clause + ように (する / etc.)",
+    "structureEn": "Verb/plain clause + ように (する / etc.)",
+    "explanation": "Dùng để nói cách thức làm một việc hoặc mục đích/định hướng hành động, tùy cấu trúc đi kèm như ようにする. Cấu trúc: Verb/plain clause + ように (する / etc.).",
     "explanationEn": "This usage of よう most commonly appears as 「Verb辞書形 + ように」. It can mean in order to do something, so that something happens, or in the way someone does something. It is also used in expressions like ～ようにする (to make an effort to) or ～ように言う (to tell someone to do something)",
     "level": "N1",
     "tags": [
@@ -410,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb (dictionary or negative form) + ように (する / etc.)",
-      "meaning": "Ý nghĩa: Dùng để nói cách thức làm một việc hoặc mục đích/định hướng hành động, tùy cấu trúc đi kèm như ようにする.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của よう là 様, dáng vẻ/cách thức. Khi đi với ように, nó biến mệnh đề trước thành mục tiêu, trạng thái mong muốn, hoặc cách làm để vế sau hướng tới.",
+      "hanVietBridge": "様 có Hán-Việt là dạng, dáng. Vì vậy ように nối rất tự nhiên với như/cách/sao cho: 解けるように là sao cho giải được, 言ったように là như đã nói.",
+      "form": "Hình thức: động từ/mệnh đề thường + ように + động từ sau; các cụm hay gặp là ようにする, ように言う, ようになる.",
+      "meaning": "Ý nghĩa: Diễn tả mục tiêu sao cho A, cách giống như A, hoặc thói quen/cố gắng hướng tới A tùy động từ sau.",
+      "usage": "Sử dụng: Nếu vế trước là mục tiêu ngoài kiểm soát trực tiếp, ように tự nhiên hơn ために. Nếu là hành động tự chủ rõ ràng, ために thường gọn hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ように khác 〜ために. ために là để làm A có chủ ý rõ; ように thường là sao cho trạng thái A xảy ra hoặc theo cách A.",
+      "crossLinks": [
+        {
+          "pattern": "〜ために",
+          "contrast": "Khác 〜ように: 〜ために nhấn mục đích chủ ý; 〜ように nhấn trạng thái/mục tiêu cần đạt."
+        },
+        {
+          "pattern": "〜みたいに",
+          "contrast": "〜みたいに là giống như theo cảm giác/ví dụ; ように có thể trang trọng hơn và cũng dùng cho mục tiêu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

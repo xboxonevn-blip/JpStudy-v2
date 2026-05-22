@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-volitional form + か + Verb-volitional negative form (まい) + か",
-      "meaning": "Ý nghĩa: Dùng để diễn tả sự phân vân có nên làm hay không làm một việc.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜ようか〜まいか là ý chí 〜よう đặt cạnh phủ định ý chí cổ まい, mỗi vế có か. Hai câu hỏi nhỏ kẹp cùng một động từ để diễn tả lưỡng lự có làm hay không.",
+      "hanVietBridge": "よう là ý định hãy/sẽ; まい là sẽ không/đừng. Với hai か, mẫu này gần tiếng Việt làm hay không làm đây, nói trong đầu trước khi quyết.",
+      "form": "Hình thức: động từ ý chí + か + cùng động từ dạng る + まい + か. Với する thường là しようかしまいか.",
+      "meaning": "Ý nghĩa: Phân vân có nên làm A hay không làm A.",
+      "usage": "Sử dụng: Hai vế phải là cùng một hành động đối lập. Hay đi với 迷う, 悩む, 考える để nói quyết định chưa chốt.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ようか〜まいか khác 〜かどうか. かどうか chỉ whether; ようか〜まいか cho thấy người nói đang cân nhắc hai ý chí trái nhau.",
+      "crossLinks": [
+        {
+          "pattern": "〜かどうか",
+          "contrast": "Khác 〜ようか〜まいか: 〜かどうか hỏi có hay không rộng hơn; 〜ようか〜まいか là phân vân tự mình có làm hay không."
+        },
+        {
+          "pattern": "〜ようと思う",
+          "contrast": "〜ようと思う đã nghiêng về làm; 〜ようか〜まいか vẫn chưa quyết."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-volitional form + が + Verb-negative volitional form + が",
-      "meaning": "Ý nghĩa: Dùng để nói dù có làm hay không làm X thì kết quả hoặc thái độ vẫn không thay đổi.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ようが〜まいが là dạng ý chí 〜よう nối với が, rồi phủ định ý chí まい cũng nối với が. Hai nhánh làm/không làm bị đặt ngang nhau trước một kết quả không đổi.",
+      "hanVietBridge": "よう là ý định làm; まい là ý định không làm. Cặp が...が tạo cầu dù A hay không A, trong tiếng Việt là dù có làm hay không thì cũng vậy.",
+      "form": "Hình thức: động từ ý chí + が + cùng động từ dạng る + まい + が + kết quả/quan điểm. Với する thường là しようがしまいが.",
+      "meaning": "Ý nghĩa: Dù A hay không A, kết quả, quyết định, hoặc thái độ ở vế sau vẫn không thay đổi.",
+      "usage": "Sử dụng: Vế sau cần đứng vững bất kể hai khả năng trước. Không dùng nếu người nói thật sự đang phân vân quyết định.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ようが〜まいが khác 〜ようか〜まいか. ようか〜まいか là còn lưỡng lự; ようが〜まいが là đã nói kết quả không đổi.",
+      "crossLinks": [
+        {
+          "pattern": "〜ようか〜まいか",
+          "contrast": "Khác 〜ようが〜まいが: 〜ようか〜まいか hỏi có làm hay không; 〜ようが〜まいが nói làm hay không cũng không ảnh hưởng."
+        },
+        {
+          "pattern": "〜ても〜なくても",
+          "contrast": "〜ても〜なくても đời thường hơn; 〜ようが〜まいが trang trọng/cứng hơn và nhấn hai ý chí đối lập."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

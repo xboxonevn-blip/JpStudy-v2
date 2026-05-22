@@ -2298,3 +2298,6 @@
   friendly 404 renders, JLPT N5 exam start renders, grammar detail uses
   progressive disclosure, vocab catalog shows 10 programs, and Mimikara is
   limited to N3/N2/N1.
+- Final Firebase deploy `b65b1307` live-verified console errors at 0 and
+  Shin Kanzen roadmap/content counts: N3 83/83, N2 163/163, N1 88/88.
+  Screenshots archived as `qa-live-2026-05-22-grammar-n{1,2,3}.png`.

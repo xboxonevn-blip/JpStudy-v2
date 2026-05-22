@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + のは + Noun + ぐらいのものだ, い-Adjective + のは + Noun + ぐらいのものだ, etc",
       "meaning": "Ý nghĩa: Dùng để nói chỉ có Noun là đáng kể hoặc là trường hợp duy nhất, những thứ khác gần như không có",
-      "usage": "Cách dùng: Với ～のは Noun ぐらいのものだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～のは Noun ぐらいのものだ, lõi もの là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + のは + Noun + ぐらいのものだ, い-Adjective + のは + Noun + ぐらいのものだ, etc thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～のは Noun ぐらいのものだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt mệnh đề trước のは, rồi nêu danh từ duy nhất còn đáng kể trước ぐらいのものだ để hạ thấp toàn bộ tình huống về “chỉ cỡ N”.",
+      "etymology": "Gốc rễ: の biến mệnh đề thành danh từ, は đưa nó lên làm chủ đề. ぐらい giới hạn mức độ, ものだ đóng khung nhận xét: điều đáng kể chỉ khoảng N đó thôi.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “duy còn N”. ～のは Noun ぐらいのものだ không liệt kê nhiều thứ; nó bóp tình huống xuống một điểm duy nhất.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～のは Noun ぐらいのものだ thường có vị mỉa hoặc đánh giá thấp. Khác だけだ trung tính, ぐらいのものだ nghe như “chỉ được chừng ấy”.",
       "crossLinks": [
         {
-          "pattern": "Verbる ものとする",
-          "contrast": "～のは Noun ぐらいのものだ cần đọc theo chức năng riêng của mẫu; Verbる ものとする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun だけだ",
+          "contrast": "Khác ～のは Noun ぐらいのものだ: だけだ chỉ nói duy nhất, còn ぐらいのものだ thêm sắc thái đánh giá thấp."
+        },
+        {
+          "pattern": "Noun にすぎない",
+          "contrast": "So với にすぎない là “chỉ là”, ぐらいのものだ thường bình luận cả tình huống trước のは."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 + はおろか + Noun2 + まで",
       "meaning": "Ý nghĩa: Dùng để nói không chỉ A mà đến cả B cũng vậy, trong đó B thường là mức độ xa hơn hoặc bất ngờ hơn",
-      "usage": "Cách dùng: Với Noun はおろか～まで, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun はおろか～まで, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + はおろか + Noun2 + まで thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun はおろか～まで không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt A trước はおろか như điều chưa cần bàn, rồi dùng B + まで để kéo phạm vi tới mức xa hơn hoặc bất ngờ hơn A.",
+      "etymology": "Gốc rễ: おろか là “chưa đáng đem ra nói”; は gác A sang bên. まで đánh dấu điểm vươn tới, nên Noun はおろか～まで tạo thang lan rộng tới B.",
+      "hanVietBridge": "Cầu Hán-Việt: đọc như “A bất cập luận, chí B cũng tới”. Noun はおろか～まで nhấn biên độ lan xa đến B, không chỉ mức tối thiểu.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun はおろか～まで cần B nghe xa hơn hoặc bất ngờ hơn A. Khác ～すら, まで nhấn phạm vi chạm tới tận điểm B.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Noun はおろか～まで cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun はおろか～すら",
+          "contrast": "Khác Noun はおろか～まで: すら nhấn mức tối thiểu cũng vậy, còn まで nhấn phạm vi lan tới mức xa hơn."
+        },
+        {
+          "pattern": "Noun どころか",
+          "contrast": "So với どころか thường đảo kỳ vọng mạnh, はおろか～まで xây thang “không chỉ A, đến B”."
         }
       ],
       "fallbackReference": {

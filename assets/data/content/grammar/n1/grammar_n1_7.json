@@ -22,8 +22,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + にして初めて",
       "meaning": "Ý nghĩa: Dùng để nói chỉ sau khi đạt đến Noun hoặc ở hoàn cảnh Noun thì lần đầu tiên mới nhận ra, hiểu được hoặc xảy ra điều gì.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: đặt giai đoạn/địa vị/hoàn cảnh trước にして初めて để nói chỉ khi đạt N thì sự nhận ra hoặc trải nghiệm phía sau mới xảy ra lần đầu.",
+      "etymology": "Gốc rễ: に đánh dấu giai đoạn làm mốc; して là cách nói trang trọng “ở/qua tư cách đó”; 初めて là lần đầu. Cả cụm dựng một ngưỡng nhận thức.",
+      "hanVietBridge": "初 là Hán-Việt “sơ”. Noun にして初めて là “đến ngưỡng N mới sơ nhận/sơ nghiệm”, tức lần đầu hiểu sau khi đã ở N.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にして初めて cần cảm giác muộn hoặc đạt ngưỡng. Khác てから chỉ sau khi, にして初めて nhấn lần đầu vỡ ra điều gì.",
+      "crossLinks": [
+        {
+          "pattern": "Verbてから",
+          "contrast": "Khác Noun にして初めて: てから chỉ thứ tự sau-trước, còn にして初めて nhấn lần đầu nhận ra khi đạt mốc N."
+        },
+        {
+          "pattern": "Noun になって初めて",
+          "contrast": "So với になって初めて đời thường hơn, にして初めて trang trọng và nén mốc N mạnh hơn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -56,8 +68,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + にすら",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh “ngay cả Noun cũng”, thường nhằm cho thấy mức độ bất ngờ hoặc cực đoan.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt danh từ làm đích/điểm chạm trước にすら để nhấn rằng ngay cả điểm ấy cũng bị bao vào nhận xét, thường trong câu phủ định hoặc bất ngờ.",
+      "etymology": "Gốc rễ: に đánh dấu đích, đối tượng, hoặc mốc; すら là hạt nhấn “ngay cả”. Noun にすら vì thế kéo một điểm tưởng hiển nhiên vào vùng bất ngờ.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “chí N cũng”. Noun にすら mạnh hơn にも vì nó chọn N như mốc tối thiểu mà vẫn không đạt hoặc vẫn bị tác động.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にすら không chỉ là にも trang trí. Khác にも, にすら thường làm người đọc nghe thấy “đến mức ngay cả N”.",
+      "crossLinks": [
+        {
+          "pattern": "Noun にも",
+          "contrast": "Khác Noun にすら: にも có thể chỉ “cũng”, còn にすら nhấn mức cực đoan/ngay cả N."
+        },
+        {
+          "pattern": "Noun さえ",
+          "contrast": "So với さえ linh hoạt hơn về vị trí, にすら giữ rõ vai trò に của danh từ trong câu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -90,8 +114,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + にとどまらず + Noun + も",
       "meaning": "Ý nghĩa: Dùng để nói phạm vi không dừng lại ở Noun mà còn lan sang điều khác.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt phạm vi ban đầu trước にとどまらず, rồi thêm phạm vi mở rộng với も/にも để nói ảnh hưởng không dừng ở A mà lan sang B.",
+      "etymology": "Gốc rễ: とどまる là dừng/lưu lại; ず là phủ định cổ. にとどまらず nghĩa đen là “không dừng ở N”, nên vế sau phải mở rộng phạm vi.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “bất lưu ở A, còn cập B”. Noun にとどまらず～も là mẫu mở rộng phạm vi, không phải chỉ nối hai danh từ ngang hàng.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にとどまらず～も cần mũi tên lan rộng. Khác だけでなく, にとどまらず nhấn phạm vi vượt khỏi ranh giới A.",
+      "crossLinks": [
+        {
+          "pattern": "Noun だけでなく～も",
+          "contrast": "Khác Noun にとどまらず～も: だけでなく chỉ cộng thêm, còn にとどまらず nhấn không dừng ở phạm vi đầu."
+        },
+        {
+          "pattern": "Noun はおろか～まで",
+          "contrast": "So với はおろか～まで xây thang mức độ, にとどまらず～も mở rộng phạm vi ảnh hưởng."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

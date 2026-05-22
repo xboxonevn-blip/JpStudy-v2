@@ -3093,3 +3093,9 @@
 - Repaired weak lesson-59 examples so `ないではおかない` has a clear causal force and `なくはない` shows real reserved affirmation.
 - Global Directive E validator progress is now `390/1123`; next failure starts at `grammar:n1:grammar_n1_6:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 063
+- Re-authored N1 rows `Noun + ならでは`, `Noun なり Noun なり`, `Noun なりとも`, `Noun に Noun を重ねて`, and `Noun にあっては`.
+- Replaced early lesson-6 generic filler with uniqueness, open alternatives, minimum-amount, layered-accumulation, and formal-circumstance teaching.
+- Global Directive E validator progress is now `395/1123`; next failure starts at `grammar:n1:grammar_n1_6:008`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

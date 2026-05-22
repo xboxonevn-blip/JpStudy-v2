@@ -114,8 +114,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + ならでは",
       "meaning": "Ý nghĩa: Dùng để nói một đặc điểm, giá trị hoặc khả năng chỉ có ở Noun.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: đặt Noun trước ならでは để khen hoặc nêu đặc điểm chỉ Noun đó mới có. Thường đi với の + danh từ hoặc ものだ: 京都ならではの雰囲気, 彼ならではの発想.",
+      "etymology": "Gốc rễ: なら là điều kiện “nếu là N”, では đóng khung trường hợp ấy. Khi cố định thành ならでは, cụm không còn là điều kiện thường mà thành nhãn độc quyền: chỉ trong trường hợp N mới có giá trị đó.",
+      "hanVietBridge": "Cầu Hán-Việt: nhớ bằng “độc hữu/đặc hữu”. Noun ならでは không dịch là “nếu là” mà là “đúng chất N”, “riêng N mới có”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: với Noun + ならでは, hãy tìm lời khen độc quyền. Khác Nならば mở điều kiện thật, ならでは đóng dấu “chỉ N mới tạo ra sắc thái này”.",
+      "crossLinks": [
+        {
+          "pattern": "Noun ならば",
+          "contrast": "Khác Noun + ならでは: ならば là điều kiện nếu N, còn ならでは là tính độc đáo chỉ N mới có."
+        },
+        {
+          "pattern": "Noun ならではの Noun",
+          "contrast": "So với dạng kết câu ならではだ, ならではの chỉ là biến thể bổ nghĩa trực tiếp cho danh từ sau."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -148,8 +160,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + なり + Noun + なり",
       "meaning": "Ý nghĩa: Dùng để nêu vài lựa chọn cùng loại và gợi ý người nghe chọn một trong số đó.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: lặp Noun なり Noun なり để đưa vài lựa chọn cùng loại, thường kèm lời gợi ý/hướng dẫn “A hay B chẳng hạn cũng được”. Không dùng để liệt kê đóng kín toàn bộ danh sách.",
+      "etymology": "Gốc rễ: なり có nguồn cổ với nghĩa “dù là/cho là”. Khi lặp AなりBなり, người nói đặt hai nhãn cùng loại làm ví dụ mở, giống “A cũng được, B cũng được”.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “hoặc giả A, hoặc giả B”. Noun なり Noun なり đưa lựa chọn minh họa, nên tiếng Việt nên thêm “chẳng hạn” khi cần.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun なり Noun なり nghe như người nói đang mở đường cho bạn chọn một phương án. Khác AかBか hỏi chọn bên nào, なり...なり chỉ nêu ví dụ cùng nhóm.",
+      "crossLinks": [
+        {
+          "pattern": "A か B か",
+          "contrast": "Khác Noun なり Noun なり: か...か hỏi/lựa chọn rõ giữa A và B, còn なり...なり nêu ví dụ mở."
+        },
+        {
+          "pattern": "A や B など",
+          "contrast": "So với や/など chỉ liệt kê, なり...なり thường hàm ý “hãy chọn/làm một cái gì đó như A hoặc B”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -182,8 +206,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + なりとも",
       "meaning": "Ý nghĩa: Dùng để nói “dù chỉ là Noun cũng được”, nhấn mạnh một mức tối thiểu hoặc một lượng nhỏ vẫn có giá trị.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt lượng nhỏ/tối thiểu trước なりとも để nói “dù chỉ N cũng được”. Hay gặp trong mong muốn, nhờ vả, hoặc đề nghị khi người nói hạ tiêu chuẩn xuống mức tối thiểu.",
+      "etymology": "Gốc rễ: なり gợi “dù là”, とも thêm sắc thái “ngay cả nếu”. Noun なりとも vì vậy gom thành hình ảnh: ngay cả một đơn vị N nhỏ nhất cũng có giá trị trong tình huống này.",
+      "hanVietBridge": "Cầu Hán-Việt: nhớ “tối thiểu khả dĩ”. 一言なりとも không phải “một lời hoặc gì đó”, mà là “dù chỉ một lời thôi cũng quý”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun なりとも có giọng hạ mình hoặc nài một mức tối thiểu. Khác なり...なり đưa lựa chọn, なりとも bám vào một lượng nhỏ và nói “chỉ vậy cũng được”.",
+      "crossLinks": [
+        {
+          "pattern": "Noun なり Noun なり",
+          "contrast": "Khác Noun なりとも: なり...なり nêu lựa chọn, còn なりとも nhấn mức tối thiểu “dù chỉ N”."
+        },
+        {
+          "pattern": "Noun でも",
+          "contrast": "So với Nでも rộng và hội thoại hơn, なりとも trang trọng hơn và thường nhấn lượng rất nhỏ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -216,8 +252,20 @@
     "directiveE": {
       "form": "Hình thức: Noun に Noun を重ねて",
       "meaning": "Ý nghĩa: Dùng để diễn tả hành động hoặc trạng thái lặp đi lặp lại, chồng chất theo thời gian.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: lặp cùng một danh từ theo mẫu Noun に Noun を重ねて để nói một loại việc/trạng thái chồng thêm qua thời gian: 努力に努力を重ねて, 失敗に失敗を重ねて.",
+      "etymology": "Gốc rễ: 重ねる là “xếp/chồng lớp”. N に N を đặt một lớp N lên một lớp N khác, rồi 重ねて nối sang kết quả; hình ảnh là tích lũy lặp lại, không phải chỉ hai lần.",
+      "hanVietBridge": "重 là Hán-Việt “trùng/trọng”, gợi lớp chồng lớp. Noun に Noun を重ねて nên dịch bằng “chồng chất/hết lần này đến lần khác” tùy danh từ.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に Noun を重ねて cho tôi thấy một chồng hồ sơ ngày càng cao. Khác 何度も chỉ đếm lặp lại, 重ねて nhấn tích lũy thành sức nặng.",
+      "crossLinks": [
+        {
+          "pattern": "何度も",
+          "contrast": "Khác Noun に Noun を重ねて: 何度も chỉ nói nhiều lần, còn 重ねて nhấn các lần ấy chồng thành kết quả."
+        },
+        {
+          "pattern": "Verb ては Verb",
+          "contrast": "So với Verb ては Verb là chu kỳ lặp, Noun に Noun を重ねて là tích lũy theo lớp bằng danh từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -250,8 +298,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + にあっては",
       "meaning": "Ý nghĩa: Dùng để nêu một hoàn cảnh, môi trường hoặc lập trường đặc biệt, trong đó điều phía sau xảy ra hoặc được xem là đúng.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: đặt hoàn cảnh, thời kỳ, môi trường hoặc vị thế trước にあっては để nói “trong tình thế N thì...”. Mẫu trang trọng, hợp văn viết, phân tích xã hội, kinh tế, tổ chức.",
+      "etymology": "Gốc rễ: あって là dạng て của ある, “đang ở/tồn tại”; に đánh dấu nơi/tình thế; は đưa tình thế ấy lên làm khung chủ đề. にあっては nghĩa là xét khi đang ở trong N.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “xứ cảnh” hoặc “trong bối cảnh”. Noun にあっては không chỉ là địa điểm vật lý, mà là người/sự việc đang nằm trong hoàn cảnh N.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にあっては dựng sân khấu nghiêm túc trước khi nói kết luận. Khác において trung tính hơn, にあっては làm hoàn cảnh nghe nặng và đặc biệt.",
+      "crossLinks": [
+        {
+          "pattern": "Noun において",
+          "contrast": "Khác Noun にあっては: において nêu nơi/lĩnh vực trung tính, にあっては nhấn hoàn cảnh đặc biệt đang bao quanh sự việc."
+        },
+        {
+          "pattern": "Noun のもとで",
+          "contrast": "So với のもとで là dưới điều kiện/sự quản lý, にあっては trang trọng hơn và đặt N làm bối cảnh phân tích."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

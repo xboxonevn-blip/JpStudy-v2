@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-て form + こそ",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh chỉ bằng cách làm X thì mới có thể đạt được, hiểu được hoặc chứng minh điều phía sau",
-      "usage": "Cách dùng: Với Verb てこそ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb てこそ, lõi Verb てこそ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + こそ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb てこそ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt hành động cần thiết trước てこそ để nói chỉ khi làm X thì điều phía sau mới có giá trị, mới hiểu được hoặc mới đạt được.",
+      "etymology": "Gốc cấu trúc: て nối hành động với kết quả, こそ là trợ từ nhấn mạnh “chính là”. Verb てこそ biến hành động X thành điều kiện trọng tâm, không phải một bước phụ.",
+      "hanVietBridge": "強調 = cường điệu/nhấn mạnh. 使ってこそ = chính vì dùng thật thì mới...",
+      "humanMoment": "Lưu ý từ Dr. Linh: てこそ là câu bắt người học chạm tay vào việc. 実際に使ってこそ nói: chưa dùng thật thì chưa hiểu giá trị.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb てこそ cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜て初めて",
+          "contrast": "Khác て初めて: て初めて nhấn lần đầu nhận ra sau X; てこそ nhấn X là điều kiện đúng/đáng giá."
+        },
+        {
+          "pattern": "〜からこそ",
+          "contrast": "からこそ nhấn lý do; てこそ nhấn hành động/trải nghiệm cần làm."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: どんなに + Verb-volitional + うが, どんなに + い-Adjective(～かろう) + が, どんなに + な-Adjective + だろうが",
       "meaning": "Ý nghĩa: Dùng để nói dù mức độ X có lớn đến đâu thì kết quả phía sau vẫn không thay đổi",
-      "usage": "Cách dùng: Với どんなに～うが, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong どんなに～うが, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách どんなに + Verb-volitional + うが, どんなに + い-Adjective(～かろう) + が, どんなに + な-Adjective + だろうが thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: どんなに～うが không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng どんなに với dạng ý chí/かろう/だろう + が để nói dù mức độ X có cao đến đâu, vế sau vẫn không đổi.",
+      "etymology": "Gốc cấu trúc: どんなに hỏi mức độ “đến đâu”, う/かろう/だろう dựng giả định cực hạn, が bẻ sang kết quả không đổi. どんなに～うが vì vậy khóa mọi mức độ của X lại.",
+      "hanVietBridge": "如何 = như hà/thế nào. どんなに頑張ろうが = dù cố đến mức nào đi nữa.",
+      "humanMoment": "Lưu ý từ Dr. Linh: どんなに～うが là câu thử cực hạn. Người nói đẩy X lên mức cao nhất rồi vẫn giữ kết luận phía sau.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "どんなに～うが cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "どんなに〜ても",
+          "contrast": "Khác ても: nghĩa gần, nhưng うが/かろうが cứng và văn viết hơn."
+        },
+        {
+          "pattern": "いくら〜ても",
+          "contrast": "いくら〜ても cũng nói dù bao nhiêu; どんなに～うが nhấn mức độ bất kỳ, trang trọng hơn."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 + をぬいた + Noun2",
       "meaning": "Ý nghĩa: Dùng để nói một danh từ đã được loại trừ khỏi tổng thể hoặc khỏi danh sách đang xét",
-      "usage": "Cách dùng: Với Noun ぬいた Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun ぬいた Noun, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + をぬいた + Noun2 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun ぬいた Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt phần bị loại trước をぬいた để bổ nghĩa danh từ sau: N2 là phiên bản đã bỏ N1. Dùng cho thành phần món ăn, người trong danh sách, yếu tố trong kế hoạch.",
+      "etymology": "Gốc cấu trúc: 抜く là rút/nhổ/lấy ra. をぬいた Noun nói một thành phần đã bị rút khỏi tổng thể, rồi danh từ sau là tổng thể còn lại sau khi loại bỏ.",
+      "hanVietBridge": "抜 = bạt/rút ra. にんじんをぬいたサラダ = salad đã rút/bỏ cà rốt.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ぬいた luôn để lại một khoảng trống. Khi thấy 砂糖をぬいたコーヒー, hãy tưởng tượng ly cà phê sau khi thành phần ấy bị lấy ra.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Noun ぬいた Noun cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜を除いた",
+          "contrast": "Khác を除いた: nghĩa gần và trang trọng hơn; をぬいた nghe trực tiếp như rút/bỏ thành phần."
+        },
+        {
+          "pattern": "〜なしの",
+          "contrast": "なしの chỉ “không có”; をぬいた nhấn hành động loại bỏ khỏi tổng thể ban đầu."
         }
       ],
       "fallbackReference": {

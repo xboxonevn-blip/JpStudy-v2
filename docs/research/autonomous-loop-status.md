@@ -3063,3 +3063,9 @@
 - Replaced generic template guidance with scope-expansion, alternating-action, objective-assessment, soft-scope-expansion, and sustained-aftershock teaching.
 - Global Directive E validator progress is now `365/1123`; next failure starts at `grammar:n1:grammar_n1_52:002`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 058
+- Re-authored N1 rows `〜とみると`, `Noun に限る`, `Verb てこそ`, `どんなに～うが`, and `Noun ぬいた Noun`.
+- Repaired one malformed lesson 52 `とみると` example so the Japanese matches the target pattern.
+- Global Directive E validator progress is now `370/1123`; next failure starts at `grammar:n1:grammar_n1_54:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

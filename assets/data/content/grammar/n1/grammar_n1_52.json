@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + とみると, い-Adjective + とみると, な-Adjective + だとみると, Noun + だとみると",
       "meaning": "Ý nghĩa: Dùng khi nhìn nhận một sự việc theo hướng X rồi đưa ra đánh giá hoặc hành động dựa trên cách nhìn đó",
-      "usage": "Cách dùng: Với ～とみると, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とみると, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + とみると, い-Adjective + とみると, な-Adjective + だとみると, Noun + だとみると thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とみると không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt cách nhìn/giả định trước とみると để nói nếu xem sự việc là X thì đánh giá hoặc hướng xử lý phía sau thay đổi theo X.",
+      "etymology": "Gốc cấu trúc: と đánh dấu nội dung được xem xét, 見る là nhìn/xem xét, と sau cùng mở kết quả khi nhìn như vậy. ～とみると nghĩa là nếu nhìn nhận X theo khung đó thì...",
+      "hanVietBridge": "見 = kiến/thấy/xem. 新入社員だとみると = nếu xem là nhân viên mới thì...",
+      "humanMoment": "Lưu ý từ Dr. Linh: とみると là đổi ống kính. Khi đọc 優秀な学生だとみると, hãy hỏi: nếu gắn nhãn ấy, kết luận phía sau còn hợp lý không?",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とみると cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜から見ると",
+          "contrast": "Khác から見ると: から見ると nói từ góc nhìn; とみると nói nếu xem/đánh giá là X."
+        },
+        {
+          "pattern": "〜とみられる",
+          "contrast": "とみられる là được nhìn nhận khách quan; とみると là chủ động đặt cách nhìn rồi suy ra."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + に限る",
       "meaning": "Ý nghĩa: Dùng để nói Noun là lựa chọn tốt nhất hoặc phù hợp nhất trong tình huống đó",
-      "usage": "Cách dùng: Với Noun に限る, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に限る, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に限る thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に限る không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng để nói trong tình huống này, N là lựa chọn tốt nhất/đáng chọn nhất. Thường xuất hiện sau cụm tình huống như 寒い冬には, 疲れたときは.",
+      "etymology": "Gốc cấu trúc: 限る là giới hạn. Noun に限る nghĩa là giới hạn lựa chọn tốt nhất vào N; các lựa chọn khác bị đẩy ra ngoài vòng ưu tiên.",
+      "hanVietBridge": "限 = hạn/giới hạn. 温かいお茶に限る = giới hạn lựa chọn tốt nhất ở trà nóng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に限る là câu chốt gu/kinh nghiệm. Người nói không liệt kê nhiều phương án; họ đóng vòng tròn quanh N.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun に限る cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に越したことはない",
+          "contrast": "Khác に越したことはない: に越したことはない nói không gì hơn nếu có; に限る chốt N là lựa chọn hay nhất."
+        },
+        {
+          "pattern": "〜が一番だ",
+          "contrast": "が一番だ nói tốt nhất trực tiếp; に限る mang sắc thái kinh nghiệm/tình huống tự nhiên hơn."
         }
       ],
       "fallbackReference": {

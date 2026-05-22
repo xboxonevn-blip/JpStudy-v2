@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + ことなしに",
       "meaning": "Ý nghĩa: Dùng để diễn tả làm hoặc xảy ra điều phía sau mà không làm X",
-      "usage": "Cách dùng: Với Verbる こと なし に, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる こと なし に, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + ことなしに thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる こと なし に không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt hành động bị bỏ qua trước ことなしに để nói việc phía sau xảy ra mà không qua bước đó: 確認することなしに決める.",
+      "etymology": "Gốc rễ: こと biến động từ thành “việc V”; なし là không có; に biến cả cụm thành trạng ngữ. Nghĩa đen là “trong trạng thái không có việc V”.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “vô sự V mà...”. Verbる ことなしに trang trọng hơn ないで vì nó danh từ hóa hành động thành một bước bị thiếu.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる ことなしに thường dùng cho quy trình bị bỏ qua. Khác ないで đời thường, ことなしに nghe văn viết và có tính thủ tục.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "Verbる こと なし に cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ないで",
+          "contrast": "Khác Verbる ことなしに: ないで đời thường hơn, còn ことなしに trang trọng và xem V như một bước/quy trình."
+        },
+        {
+          "pattern": "Verb ずに",
+          "contrast": "So với ずに, ことなしに cứng và văn viết hơn, hợp với kiểm tra, xác nhận, thủ tục."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + ものとして, い-Adjective + ものとして, な-Adjective + なものとして, Noun + のものとして",
       "meaning": "Ý nghĩa: Dùng để đặt một giả định hoặc xem điều gì là tiền đề khi hành động, phán đoán hoặc quy định",
-      "usage": "Cách dùng: Với ～ものとして, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ものとして, lõi もの là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + ものとして, い-Adjective + ものとして, な-Adjective + なものとして, Noun + のものとして thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ものとして không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng ものとして để đặt một nội dung làm giả định/tiền đề khi xử lý, tính toán, đánh giá hoặc ra quy định.",
+      "etymology": "Gốc rễ: もの biến mệnh đề thành “điều/sự việc”; として nghĩa là “với tư cách/xem như”. Cả cụm dựng một tiền đề được coi là đúng.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “dĩ X vi tiền đề”. ～ものとして không kể sự thật chắc chắn; nó nói hãy xử lý trên giả định X.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～ものとして hợp với quy định và giả định. Khác ものとする, ものとして thường là trạng thái tiền đề cho hành động sau.",
       "crossLinks": [
         {
           "pattern": "Verbる ものとする",
-          "contrast": "～ものとして cần đọc theo chức năng riêng của mẫu; Verbる ものとする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "contrast": "Khác ～ものとして: ものとする là quyết định/quy định xem như X, còn ものとして dùng X làm tiền đề để xử lý."
+        },
+        {
+          "pattern": "Noun と仮定して",
+          "contrast": "So với と仮定して trực tiếp là giả định, ものとして trang trọng hơn và hay gặp trong quy định."
         }
       ],
       "fallbackReference": {

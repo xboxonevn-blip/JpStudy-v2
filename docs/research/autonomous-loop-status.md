@@ -3171,3 +3171,9 @@
 - Repaired malformed examples for `が早いか` and `もなんでもない`.
 - Global Directive E validator progress is now `455/1123`; next failure starts at `grammar:n1:grammar_n1_79:001`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 076
+- Re-authored N1 rows `Verbる ことなしに`, `～ものとして`, `Noun に限ったことではない`, `Noun に限ったことでもない`, and `Noun/Verb に限る`.
+- Repaired weak `ことなしに` and `ものとして` examples and broadened `に限る` structure.
+- Global Directive E validator progress is now `460/1123`; next failure starts at `grammar:n1:grammar_n1_8:004`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

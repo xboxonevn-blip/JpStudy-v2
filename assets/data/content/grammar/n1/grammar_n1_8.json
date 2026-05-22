@@ -22,8 +22,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + に限ったことではない",
       "meaning": "Ý nghĩa: Dùng để nói vấn đề hoặc hiện tượng không chỉ giới hạn ở Noun.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: đặt phạm vi tưởng như là trường hợp riêng trước に限ったことではない để nói hiện tượng ấy không chỉ nằm trong phạm vi đó.",
+      "etymology": "Gốc rễ: 限る là giới hạn; 限ったこと là “chuyện bị giới hạn vào N”. ではない phủ nhận giới hạn ấy, mở vấn đề ra ngoài N.",
+      "hanVietBridge": "限 là Hán-Việt “hạn”. Noun に限ったことではない nghĩa là “không phải chuyện hữu hạn trong N”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に限ったことではない thường dùng để mở rộng vấn đề xã hội. Khác Nだけではない, nó nghe trang trọng và phân tích hơn.",
+      "crossLinks": [
+        {
+          "pattern": "Noun だけではない",
+          "contrast": "Khác Noun に限ったことではない: だけではない đời thường hơn, còn に限ったことではない nhấn phủ nhận phạm vi giới hạn."
+        },
+        {
+          "pattern": "Noun に限らない",
+          "contrast": "So với に限らない ngắn gọn, に限ったことではない nhấn “đây không phải chuyện riêng của N”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -56,8 +68,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + に限ったことでもない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh rằng điều đang nói không chỉ xảy ra với Noun, mà còn có ở những trường hợp khác.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: dùng に限ったことでもない để bác nhẹ hơn hoặc thêm sắc thái “cũng không hẳn chỉ riêng N” trong một nhận định mở rộng phạm vi.",
+      "etymology": "Gốc rễ: 限ったこと là chuyện bị giới hạn; でもない phủ định với も, khiến câu nghe như “ngay cả việc gọi nó là riêng N cũng không đúng”.",
+      "hanVietBridge": "限 là “hạn”. Noun に限ったことでもない là phủ định mềm của “hữu hạn ở N”, mở phạm vi sang các trường hợp khác.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に限ったことでもない rất gần に限ったことではない, nhưng でもない có giọng mềm, như chỉnh lại một giả định.",
+      "crossLinks": [
+        {
+          "pattern": "Noun に限ったことではない",
+          "contrast": "Khác Noun に限ったことでもない: ではない khẳng định phủ định thẳng, でもない mềm hơn và có sắc thái “cũng không hẳn”."
+        },
+        {
+          "pattern": "Noun に限らない",
+          "contrast": "So với に限らない ngắn gọn, に限ったことでもない nhấn chuyện/hiện tượng không riêng N."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -71,9 +95,9 @@
     "lessonId": 8,
     "title": "Noun に限る",
     "titleEn": "Expresses the idea that nothing but, nothing is better than",
-    "structure": "Noun + に限る",
-    "structureEn": "Noun + に限る",
-    "explanation": "Dùng để nói Noun là lựa chọn tốt nhất hoặc phù hợp nhất trong tình huống đó. Có thể hiểu là “không gì bằng Noun”. Cấu trúc: Noun + に限る.",
+    "structure": "Noun / Verb-dictionary form + に限る",
+    "structureEn": "Noun / Verb-dictionary form + に限る",
+    "explanation": "Dùng để nói Noun hoặc hành động là lựa chọn tốt nhất trong tình huống đó. Có thể hiểu là “không gì bằng X”. Cấu trúc: Noun / Verb-dictionary form + に限る.",
     "explanationEn": "The noun に限る grammar point is used to express the idea that there is nothing better than the noun mentioned in the specific context. It is often used to give personal opinions, advice, or recommendations",
     "level": "N1",
     "tags": [
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + に限る",
+      "form": "Hình thức: Noun / Verb-dictionary form + に限る",
       "meaning": "Ý nghĩa: Dùng để nói Noun là lựa chọn tốt nhất hoặc phù hợp nhất trong tình huống đó.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: dùng に限る để chốt lựa chọn tốt nhất trong tình huống: 寒い日は温かいお茶に限る, 困った時は相談するに限る.",
+      "etymology": "Gốc rễ: 限る là giới hạn. Khi nói X に限る, người nói như tự giới hạn lựa chọn vào X vì xem X là tốt nhất.",
+      "hanVietBridge": "限 là Hán-Việt “hạn”. Noun/Verb に限る nghĩa là “hạn lựa chọn vào X”, nên tiếng Việt tự nhiên là “không gì bằng X”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に限る nghe chắc như lời kinh nghiệm. Khác に越したことはない thận trọng hơn, に限る chốt thẳng “X là nhất”.",
+      "crossLinks": [
+        {
+          "pattern": "～に越したことはない",
+          "contrast": "Khác Noun に限る: に越したことはない là X tốt nhất nếu được, còn に限る chốt mạnh X là lựa chọn số một."
+        },
+        {
+          "pattern": "Noun が一番だ",
+          "contrast": "So với が一番だ đời thường, に限る mang giọng lời khuyên/kinh nghiệm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

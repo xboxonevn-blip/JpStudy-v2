@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ますstem + つ + Verb-ますstem + つ",
       "meaning": "Ý nghĩa: Dùng để diễn tả hai hành động lặp đi lặp lại hoặc luân phiên nhau",
-      "usage": "Cách dùng: Với Verb つ Verb つ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb つ Verb つ, lõi Verb つ Verb つ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ますstem + つ + Verb-ますstem + つ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb つ Verb つ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng thân ます của hai động từ, lặp つ sau mỗi thân, để nói hai hành động luân phiên qua lại. Hay gặp trong cặp cố định như 行きつ戻りつ.",
+      "etymology": "Gốc cấu trúc: つ ở đây là dạng nối cổ, tạo nhịp song song giữa hai thân động từ. Verb つ Verb つ không cộng hai việc một lần, mà làm chúng qua lại/đan xen nhiều lượt.",
+      "hanVietBridge": "反復 = phản phục/lặp lại. 行きつ戻りつ = đi rồi lại về, qua lại nhiều lượt.",
+      "humanMoment": "Lưu ý từ Dr. Linh: つ Verb つ là nhịp con lắc. Khi thấy 行きつ戻りつ, đừng dịch thành hai hành động đơn; hãy tưởng tượng chuyển động qua lại.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "Verb つ Verb つ cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たり〜たりする",
+          "contrast": "Khác たり〜たり: たり liệt kê hành động; Verb つ Verb つ nhấn sự luân phiên qua lại, văn viết hơn."
+        },
+        {
+          "pattern": "〜ながら",
+          "contrast": "ながら nói đồng thời; Verb つ Verb つ nói thay phiên/qua lại."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + とみられる, Noun + とみられる",
       "meaning": "Ý nghĩa: Dùng để nói một sự việc được xem là, được cho là hoặc có khả năng là như vậy theo nhận định khách quan",
-      "usage": "Cách dùng: Với ～とみられる, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とみられる, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + とみられる, Noun + とみられる thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とみられる không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng trong tin tức, báo cáo, phân tích để nói sự việc được xem/được nhận định là X. Chủ thể đánh giá thường ẩn, tạo giọng khách quan.",
+      "etymology": "Gốc cấu trúc: と đánh dấu nội dung nhận định, 見られる là bị/được nhìn nhận. ～とみられる chuyển “người ta nhìn X như vậy” thành giọng khách quan, khác với ý kiến cá nhân trực tiếp.",
+      "hanVietBridge": "見 = kiến/thấy. 被害は増加するとみられる = thiệt hại được nhận định sẽ tăng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: とみられる là giọng bản tin. Khi đọc 増加するとみられる, hãy nghe một nhận định thận trọng, không phải lời hứa chắc chắn.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～とみられる cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜とみえて",
+          "contrast": "Khác とみえて: とみえて dựa vào dấu hiệu quan sát trong câu; とみられる là nhận định khách quan/báo cáo."
+        },
+        {
+          "pattern": "〜と思われる",
+          "contrast": "と思われる gần nghĩa; とみられる thường báo chí hơn và nhấn “được nhìn nhận”."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + に限ったことでもない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh rằng điều đang nói không chỉ xảy ra với Noun, mà còn có ở những trường hợp khác",
-      "usage": "Cách dùng: Với Noun に限ったことでもない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun に限ったことでもない, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に限ったことでもない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun に限ったことでもない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Nói một điều không chỉ là chuyện riêng của N, thậm chí không nên xem N là trường hợp đặc biệt. でも làm phủ định mềm hơn và rộng hơn.",
+      "etymology": "Gốc cấu trúc: 限る là giới hạn, こと là sự việc, でもない là “cũng không phải”. に限ったことでもない nghĩa là “cũng không phải chuyện bị đóng khung trong N”.",
+      "hanVietBridge": "限 = hạn/giới hạn. 日本に限ったことでもない = cũng không phải chuyện chỉ giới hạn ở Nhật.",
+      "humanMoment": "Lưu ý từ Dr. Linh: に限ったことでもない là cách hạ giọng khi mở rộng phạm vi. Người nói gỡ nhãn “riêng N” mà không cần nói quá mạnh.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "Noun に限ったことでもない cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に限ったことではない",
+          "contrast": "Khác ではない: でもない mềm hơn, còn ではない phủ định ranh giới trực tiếp hơn."
+        },
+        {
+          "pattern": "〜だけの問題ではない",
+          "contrast": "だけの問題ではない nói không chỉ là vấn đề của N; に限ったことでもない nhấn chuyện không bị giới hạn ở N."
         }
       ],
       "fallbackReference": {

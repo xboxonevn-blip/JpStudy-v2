@@ -1,11 +1,11 @@
 [
   {
     "lessonId": 18,
-    "title": "Verbる にも Verb れない",
+    "title": "Verb ようにも Verb れない",
     "titleEn": "Expresses: Even if I try/want to do something, I cannot",
     "structure": "Verb-volitional + にも + Verb-potential negative",
     "structureEn": "Verb-volitional + にも + Verb-potential negative",
-    "explanation": "Dùng để nói dù muốn làm X cũng không thể làm được. Mẫu này nhấn mạnh tình thế mắc kẹt hoặc bất lực. Cấu trúc: Verb-volitional + にも + Verb-potential negative.",
+    "explanation": "Dùng để nói dù muốn hoặc cố làm X cũng không thể làm được. Mẫu này nhấn mạnh tình thế mắc kẹt hoặc bất lực. Cấu trúc: Verb-volitional + にも + Verb-potential negative.",
     "explanationEn": "This pattern emphasizes that a person wants or attempts to do something (often in volitional form), but is incapable of doing so. It is often used with potential verbs in negative form: Even if I try to , I cant",
     "level": "N1",
     "tags": [
@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-volitional + にも + Verb-potential negative",
-      "meaning": "Ý nghĩa: Dùng để nói dù muốn làm X cũng không thể làm được.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ようにも〜れない là ý chí 〜よう cộng にも, rồi động từ lặp lại ở khả năng phủ định. Hai nửa nói rõ: có ý hướng A, nhưng khả năng A bị chặn.",
+      "hanVietBridge": "よう là ý muốn/hướng làm; れない là không thể. 走ろうにも走れない dịch sát là muốn chạy cũng không chạy được.",
+      "form": "Hình thức: động từ ý chí + にも + cùng động từ ở khả năng phủ định. Ví dụ 走ろうにも走れない, 忘れようにも忘れられない.",
+      "meaning": "Ý nghĩa: Dù muốn/cố A cũng không thể A được.",
+      "usage": "Sử dụng: Dùng khi cần nhấn sự bất lực rõ. Nếu chỉ nói điều kiện làm A đã khó, dùng động từ từ điển + にも.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ようにも〜れない khác Verbるにも. ようにも〜れない có ý chí bị chặn; Verbるにも chỉ nói ngay cả để A cũng cần/vướng điều kiện.",
+      "crossLinks": [
+        {
+          "pattern": "Verbるにも",
+          "contrast": "Khác 〜ようにも〜れない: Verbるにも nêu điều kiện để làm A; ようにも〜れない nêu muốn A nhưng không thể A."
+        },
+        {
+          "pattern": "〜たくても〜できない",
+          "contrast": "〜たくても〜できない đời thường hơn; 〜ようにも〜れない trang trọng hơn và nhấn ý chí bị khóa."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + べからざる + Noun",
-      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ theo nghĩa “không được làm”, “không nên làm”.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜べからざる là べし, nên/phải, chuyển sang phủ định cổ べからず rồi thành dạng bổ nghĩa べからざる trước danh từ. Nó đóng dấu cấm/không thể chấp nhận lên danh từ sau.",
+      "hanVietBridge": "べし là nên/phải; ざる là phủ định cổ không. べからざるN trong tiếng Việt là N không thể/không được chấp nhận, như 許すべからざる行為.",
+      "form": "Hình thức: động từ từ điển + べからざる + danh từ. Ví dụ 許すべからざる行為, 忘れるべからざる教訓.",
+      "meaning": "Ý nghĩa: Danh từ sau là thứ không được/không thể A; sắc thái rất trang trọng, cổ.",
+      "usage": "Sử dụng: Hay gặp trong cụm cố định, văn chính luận, pháp lý, đạo đức. Không dùng trong hội thoại nhẹ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜べからざる khác 〜てはいけない. てはいけない là cấm trực tiếp; べからざる biến lệnh cấm thành nhãn trang trọng cho danh từ.",
+      "crossLinks": [
+        {
+          "pattern": "〜べからず",
+          "contrast": "Khác 〜べからざるNoun: 〜べからず kết câu như lệnh cấm; 〜べからざる bổ nghĩa cho danh từ."
+        },
+        {
+          "pattern": "〜てはいけない",
+          "contrast": "〜てはいけない đời thường hơn; 〜べからざる trang trọng/cổ và thường dùng trong cụm danh từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -88,10 +112,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ru + べからず",
-      "meaning": "Ý nghĩa: Dùng để ra lệnh cấm mạnh: “không được làm”, “chớ làm”.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜べからず là trợ động từ cổ べし, nên/phải, ở dạng phủ định べからず. Sau động từ từ điển, nó tạo lệnh cấm kiểu văn biển báo/quy tắc.",
+      "hanVietBridge": "べし là nên/phải; ず là không. べからず vì vậy là chớ/không được, nghe như khẩu hiệu hoặc điều cấm trang trọng.",
+      "form": "Hình thức: động từ từ điển + べからず. Ví dụ 嘘をつくべからず, ルールを破るべからず.",
+      "meaning": "Ý nghĩa: Chớ A, tuyệt đối không được A; cấm mạnh.",
+      "usage": "Sử dụng: Dùng trong biển báo, quy tắc, khẩu hiệu, văn cổ/trang trọng. Trong hội thoại thường dùng してはいけない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜べからず khác 〜てはいけない. てはいけない là cấm thông thường; べからず nghe như chữ khắc trên bảng luật.",
+      "crossLinks": [
+        {
+          "pattern": "〜てはいけない",
+          "contrast": "Khác 〜べからず: 〜てはいけない dùng rộng trong đời thường; 〜べからず cổ/trang trọng và mạnh hơn."
+        },
+        {
+          "pattern": "〜べからざるNoun",
+          "contrast": "〜べからざるNoun bổ nghĩa danh từ; 〜べからず kết câu như một lệnh cấm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

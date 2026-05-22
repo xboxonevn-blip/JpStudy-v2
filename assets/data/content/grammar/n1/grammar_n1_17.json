@@ -388,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + にはあたらない",
-      "meaning": "Ý nghĩa: Dùng để nói không cần thiết phải làm X hoặc không đáng để làm X.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜にはあたらない là に đánh dấu hành động/đánh giá, は nêu chủ đề, rồi あたらない từ 当たる, không tương ứng/không đáng. Mẫu phủ định việc A là điều cần làm.",
+      "hanVietBridge": "当たる có Hán-Việt là đương/đáng chạm tới. あたらない ở đây là không đáng tới mức A; tiếng Việt tự nhiên là không cần/không đáng A.",
+      "form": "Hình thức: động từ từ điển + にはあたらない. Ví dụ 心配するにはあたらない, 謝るにはあたらない.",
+      "meaning": "Ý nghĩa: Không cần, không đáng, hoặc chưa tới mức phải A.",
+      "usage": "Sử dụng: A thường là phản ứng mạnh như lo lắng, xin lỗi, hoảng loạn, ca ngợi. Sắc thái văn viết/trang trọng.",
+      "humanMoment": "Dr. Linh lưu ý: 〜にはあたらない khác 〜必要はない. 必要はない chỉ không cần; にはあたらない thêm đánh giá rằng A chưa xứng mức đó.",
+      "crossLinks": [
+        {
+          "pattern": "〜必要はない",
+          "contrast": "Khác 〜にはあたらない: 〜必要はない trung tính; 〜にはあたらない đánh giá A không đáng/không tới mức cần."
+        },
+        {
+          "pattern": "〜までもない",
+          "contrast": "〜までもない là chưa cần đến mức A; 〜にはあたらない trang trọng hơn và hay dùng với phản ứng/đánh giá."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -422,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + にも + (reason it cant be done)",
-      "meaning": "Ý nghĩa: Dùng khi muốn làm X nhưng khó hoặc không thể vì một lý do nào đó.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜にも trong mẫu này là に đánh dấu hướng/hành động cần làm, も thêm sắc thái ngay cả để A. Vế sau nêu điều kiện khó, nên A cũng đã vướng chứ chưa nói tới việc lớn hơn.",
+      "hanVietBridge": "にも có thể nhớ là ngay cả để. 行くにもタクシーが必要だ nghĩa là ngay cả muốn đi cũng cần taxi, không phải chỉ thêm một に.",
+      "form": "Hình thức: động từ từ điển + にも + điều kiện/khó khăn. Ví dụ 受けるにもお金が足りない, 行くにもタクシーが必要だ.",
+      "meaning": "Ý nghĩa: Ngay cả để làm A cũng cần/vướng B; A không dễ thực hiện.",
+      "usage": "Sử dụng: Vế sau thường là chi phí, điều kiện, phương tiện, hoặc hoàn cảnh cản trở. Không phải mẫu mục đích như ために.",
+      "humanMoment": "Dr. Linh lưu ý: 〜にも khác 〜ためにも. ためにも là để phục vụ mục tiêu; にも ở đây là ngay cả làm A cũng đã khó/cần điều kiện.",
+      "crossLinks": [
+        {
+          "pattern": "〜ためにも",
+          "contrast": "Khác 〜にも: 〜ためにも là vì mục tiêu A; 〜にも nói ngay cả để A cũng vướng/cần điều kiện."
+        },
+        {
+          "pattern": "〜ようにも",
+          "contrast": "〜ようにも nhấn muốn làm mà bị chặn; 〜にも có thể chỉ điều kiện cần để làm A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

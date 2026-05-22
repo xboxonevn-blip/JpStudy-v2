@@ -1114,6 +1114,7 @@
       "order": 21,
       "tags": [
         "phrase",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1135,18 +1136,24 @@
       },
       "sense": {
         "senseId": "n5_l19_s021",
-        "meaningVi": "nâng cốc, cạn ly",
+        "meaningVi": "Nâng cốc!/cạn chén",
         "meaningEn": "Cheers! / Toast"
       },
       "search": {
         "termNoAccent": "乾杯",
         "readingNoAccent": "かんはい",
-        "meaningViNoAccent": "nang coc, can ly",
+        "meaningViNoAccent": "Nang coc!/can chen",
         "hanVietNoAccent": "can boi"
       },
       "links": {
         "sourceVocabId": "n5_l19_v021",
-        "sourceSenseId": "n5_l19_s021"
+        "sourceSenseId": "n5_l19_s021",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "can bôi"

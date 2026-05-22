@@ -937,6 +937,7 @@
       "order": 18,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -958,18 +959,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s018",
-        "meaningVi": "cầu thang",
+        "meaningVi": "Cầu thang đi bộ",
         "meaningEn": "staircase"
       },
       "search": {
         "termNoAccent": "階段",
         "readingNoAccent": "かいたん",
-        "meaningViNoAccent": "cau thang",
+        "meaningViNoAccent": "Cau thang di bo",
         "hanVietNoAccent": "giai doan"
       },
       "links": {
         "sourceVocabId": "n5_l03_v018",
-        "sourceSenseId": "n5_l03_s018"
+        "sourceSenseId": "n5_l03_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giai đoạn"

@@ -409,6 +409,7 @@
       "order": 8,
       "tags": [
         "occupation",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -430,18 +431,23 @@
       },
       "sense": {
         "senseId": "n5_l01_s008",
-        "meaningVi": "giáo viên (nghề nghiệp)",
+        "meaningVi": "Giáo viên (nói đến nghề nghiệp)",
         "meaningEn": "teacher (profession)"
       },
       "search": {
         "termNoAccent": "教師",
         "readingNoAccent": "きょうし",
-        "meaningViNoAccent": "giao vien (nghe nghiep)",
+        "meaningViNoAccent": "Giao vien (noi den nghe nghiep)",
         "hanVietNoAccent": "giao su"
       },
       "links": {
         "sourceVocabId": "n5_l01_v008",
-        "sourceSenseId": "n5_l01_s008"
+        "sourceSenseId": "n5_l01_s008",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giáo sư"

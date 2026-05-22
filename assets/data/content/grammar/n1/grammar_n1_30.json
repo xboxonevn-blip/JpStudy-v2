@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + を踏まえて",
       "meaning": "Ý nghĩa: Dùng khi đưa ra quyết định, nhận xét hoặc hành động dựa trên Noun đã được xem xét",
-      "usage": "Cách dùng: Với Noun を踏まえて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun を踏まえて, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + を踏まえて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun を踏まえて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun là dữ kiện, kết quả, ý kiến, hoàn cảnh đã được cân nhắc. Vế sau là quyết định, kế hoạch, nhận xét hoặc hành động dựa trên đó.",
+      "etymology": "Gốc cấu trúc: 踏む là đặt chân/giẫm, 踏まえる là đứng vững trên một điểm đã nắm. を踏まえて vì vậy là “đặt chân lên căn cứ N rồi hành động/nhận định”.",
+      "hanVietBridge": "踏 có thể nhớ là “đạp/giẫm”. を踏まえて nối sang tiếng Việt: dựa trên, xét đến, lấy N làm nền.",
+      "humanMoment": "Lưu ý từ Dr. Linh: を踏まえて không chỉ là “theo”. Nó yêu cầu người nói đã cân nhắc N như nền quyết định: 結果を踏まえて計画を直す.",
       "crossLinks": [
         {
-          "pattern": "Noun と Noun を兼ねて",
-          "contrast": "Noun を踏まえて cần đọc theo chức năng riêng của mẫu; Noun と Noun を兼ねて có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜に基づいて",
+          "contrast": "Gần nghĩa dựa trên, nhưng に基づいて thiên về căn cứ chính thức; を踏まえて nhấn đã cân nhắc N trước khi quyết định."
+        },
+        {
+          "pattern": "〜を考慮して",
+          "contrast": "を考慮して là cân nhắc; を踏まえて thường đã cân nhắc xong và dùng N làm nền cho bước sau."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + つもりだ",
       "meaning": "Ý nghĩa: Dùng để diễn tả dự định hoặc ý định của người nói",
-      "usage": "Cách dùng: Với ～つもりだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～つもりだ, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + つもりだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～つもりだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Với động từ từ điển/phủ định để nói dự định. Ở sắc thái nâng cao, có thể nói “tự cho là/đinh ninh là” như 分かったつもりだ.",
+      "etymology": "Gốc cấu trúc: つもり liên hệ với 積もる “chồng chất/tích lại”, từ ý ước lượng trong đầu chuyển thành ý định hoặc nhận thức tự mình gom lại. だ chốt trạng thái ấy.",
+      "hanVietBridge": "積 là tích. つもりだ hãy nhớ “ý định đã tích lại trong đầu”, nên vừa là dự định, vừa có thể là tự cho là.",
+      "humanMoment": "Lưu ý từ Dr. Linh: つもりだ có hai mặt. 明日行くつもりだ là dự định; 分かったつもりだ là tưởng mình hiểu, nên phải đọc ngữ cảnh trước.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "～つもりだ cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜予定だ",
+          "contrast": "予定だ là kế hoạch/lịch trình khách quan hơn; つもりだ là ý định hoặc tự nhận thức của chủ thể."
+        },
+        {
+          "pattern": "〜ようと思う",
+          "contrast": "ようと思う diễn tả ý định vừa hình thành/đang nghĩ; つもりだ nghe đã quyết hơn."
         }
       ],
       "fallbackReference": {

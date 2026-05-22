@@ -2955,3 +2955,9 @@
 - Replaced generic filler with whole-group, concessive, emphatic-contrast, X-not-Y, and literary-simile guidance.
 - Global Directive E validator progress is now `275/1123`; next failure starts at `grammar:n1:grammar_n1_3:008`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 040
+- Re-authored N1 rows `Noun じゃあるまいし`, `Noun ずくめ`, `Noun だけではすまない`, `Noun を踏まえて`, and `〜つもりだ`.
+- Replaced topic/label filler with colloquial rebuttal, all-of-one-kind, unresolved-consequence, considered-basis, and intention/self-assumption guidance.
+- Global Directive E validator progress is now `280/1123`; next failure starts at `grammar:n1:grammar_n1_30:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

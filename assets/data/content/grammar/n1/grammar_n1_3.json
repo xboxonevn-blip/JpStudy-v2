@@ -342,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: じゃ là dạng nói của では, あるまい là phủ định suy đoán kiểu “không phải/chắc không phải”, し nối lý do. じゃあるまいし bác giả định X rồi kéo sang lời trách hoặc phản biện.",
+      "hanVietBridge": "ある là “có/là”; あるまい = chắc không phải. 子供じゃあるまいし = đâu phải trẻ con mà...",
       "form": "Hình thức: Noun or Na-Adjective + じゃあるまいし",
       "meaning": "Ý nghĩa: Dùng để bác bỏ một giả định: “đâu phải là Noun mà...”.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Nói thân mật khi người nói cho rằng hành vi/lo lắng không phù hợp với Noun bị bác bỏ. Bản trang trọng hơn là ではあるまいし.",
+      "humanMoment": "Dr. Linh lưu ý: じゃあるまいし có giọng “đâu phải X đâu mà...”. Nó không chỉ phủ định X, mà còn chê nhẹ hành động phía sau là không cần thiết.",
+      "crossLinks": [
+        {
+          "pattern": "〜ではあるまいし",
+          "contrast": "Cùng nghĩa nhưng ではあるまいし trang trọng hơn; じゃあるまいし thân mật/khẩu ngữ hơn."
+        },
+        {
+          "pattern": "〜わけではない",
+          "contrast": "わけではない phủ định kết luận; じゃあるまいし bác một giả định rồi dùng nó làm lý do phản biện."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -376,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: ずくめ là hậu tố nói một tình trạng bị lấp đầy bởi cùng một loại Noun. Nó gom bối cảnh thành “toàn là N”, từ màu sắc đến sự kiện tốt/xấu.",
+      "hanVietBridge": "Cầu nối tiếng Việt: “toàn là/toàn những”. 黒ずくめ = toàn màu đen; 失敗ずくめ = toàn thất bại.",
       "form": "Hình thức: Noun + ずくめ",
       "meaning": "Ý nghĩa: Dùng để nói một tình trạng toàn là Noun, thường là màu sắc, sự kiện hoặc cảm xúc cùng loại.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Sử dụng: Đi với danh từ màu sắc, sự kiện, trạng thái: 黒, いいこと, 失敗, 規則. Có thể tích cực hoặc tiêu cực tùy danh từ.",
+      "humanMoment": "Dr. Linh lưu ý: ずくめ không tự mang nghĩa xấu. いいことずくめ là toàn điều tốt; 失敗ずくめ mới là toàn thất bại.",
+      "crossLinks": [
+        {
+          "pattern": "〜だらけ",
+          "contrast": "Khác ずくめ: だらけ thường tiêu cực và rải đầy; ずくめ chỉ cùng một loại chiếm toàn cảnh, có thể tốt hoặc xấu."
+        },
+        {
+          "pattern": "〜まみれ",
+          "contrast": "まみれ là dính/bao phủ bởi chất bẩn, mồ hôi, máu; ずくめ là toàn cùng một loại sự vật/trạng thái."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -410,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
+      "etymology": "Gốc cấu trúc: だけ giới hạn “chỉ”, では đặt điều kiện, 済まない nghĩa là không xong/không được giải quyết. Noun だけではすまない nói chỉ N thì vấn đề chưa thể kết thúc.",
+      "hanVietBridge": "済む là “xong/ổn thỏa”. 謝罪だけではすまない = chỉ xin lỗi thì không xong chuyện.",
       "form": "Hình thức: Noun + だけではすまない",
       "meaning": "Ý nghĩa: Dùng để nói rằng chỉ Noun thôi thì chưa đủ để giải quyết, bù đắp hoặc kết thúc vấn đề.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Sử dụng: Hay dùng với 謝罪, 罰金, 努力, 資金調達 để nói còn cần trách nhiệm, hành động, điều kiện hoặc hậu quả khác.",
+      "humanMoment": "Dr. Linh lưu ý: だけではすまない là câu “chưa xong đâu”. Nó không chỉ nói thiếu, mà thường hàm ý còn phải trả giá hoặc làm thêm.",
+      "crossLinks": [
+        {
+          "pattern": "〜だけで済む",
+          "contrast": "Khác だけではすまない: だけで済む là chỉ thế là xong; だけではすまない là chỉ thế không xong."
+        },
+        {
+          "pattern": "〜だけでは足りない",
+          "contrast": "だけでは足りない nói chưa đủ về lượng/điều kiện; だけではすまない nhấn vấn đề không được giải quyết hoặc hậu quả chưa khép lại."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -342,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + がままに",
-      "meaning": "Ý nghĩa: Dùng để nói để một sự việc diễn ra tự nhiên theo đúng trạng thái hoặc dòng chảy của nó.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜がままに là mệnh đề động từ nối với まま, trạng thái nguyên như vậy, qua が. Mẫu này giữ sự việc đúng dòng nó diễn ra, không can thiệp hay chỉnh sửa.",
+      "hanVietBridge": "まま là nguyên trạng/cứ thế. Cầu tiếng Việt là cứ theo đúng A, mặc cho A diễn ra, theo dòng A; không phải mệnh lệnh hãy làm A.",
+      "form": "Hình thức: động từ từ điển + がままに + hành động/trạng thái sau. Ví dụ 感じるがままに, 流れるがままに.",
+      "meaning": "Ý nghĩa: Để hoặc làm theo đúng dòng/trạng thái A, không cưỡng lại hay thay đổi.",
+      "usage": "Sử dụng: Hợp với cảm xúc, dòng tự nhiên, hoặc sự việc tự trôi. Không dùng cho chỉ thị kiểm soát chặt.",
+      "humanMoment": "Dr. Linh lưu ý: 〜がままに khác 〜ままに. がままに nghe văn chương và nhấn buông theo dòng A; ままに rộng hơn với theo ý/đúng như.",
+      "crossLinks": [
+        {
+          "pattern": "〜ままに",
+          "contrast": "Khác 〜がままに: 〜ままに rộng hơn; 〜がままに nhấn để A tự diễn ra như nó vốn vậy."
+        },
+        {
+          "pattern": "〜通りに",
+          "contrast": "〜通りに là làm đúng theo chỉ dẫn/mẫu; 〜がままに là theo dòng tự nhiên/cảm xúc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -376,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + が早いか",
-      "meaning": "Ý nghĩa: Dùng để nói ngay khi hành động X xảy ra thì hành động Y xảy ra gần như lập tức.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc của 〜が早いか là mệnh đề A + が + 早い + か, như hỏi A vừa nhanh xong chưa thì B đã xảy ra. か ở đây không tạo câu hỏi thật mà đóng khung độ sát thời gian.",
+      "hanVietBridge": "早い là nhanh/sớm; が早いか kéo cảm giác vừa A là B ngay. Tiếng Việt tự nhiên: vừa mới A thì đã B, A xảy ra là B liền.",
+      "form": "Hình thức: động từ từ điển + が早いか + hành động B ở quá khứ. Ví dụ 入るが早いか, 乗るが早いか.",
+      "meaning": "Ý nghĩa: Ngay khi A xảy ra thì B xảy ra gần như lập tức.",
+      "usage": "Sử dụng: B thường là hành động bất ngờ/nhanh, không phải trạng thái kéo dài. Sắc thái văn viết hơn すぐ.",
+      "humanMoment": "Dr. Linh lưu ý: 〜が早いか khác 〜とすぐに. とすぐに trung tính; が早いか khiến tốc độ B như bật ngay sau A.",
+      "crossLinks": [
+        {
+          "pattern": "〜とすぐに",
+          "contrast": "Khác 〜が早いか: 〜とすぐに đời thường/trung tính; 〜が早いか văn viết hơn và nhấn tốc độ sát nút."
+        },
+        {
+          "pattern": "〜や否や",
+          "contrast": "〜や否や cũng là vừa A thì B; 〜が早いか có hình ảnh A vừa nhanh xong là B xảy ra."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

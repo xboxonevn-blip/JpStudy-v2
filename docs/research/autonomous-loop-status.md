@@ -2539,3 +2539,12 @@
 - Re-verified existing P2 layout/UX guards: full-width shell chrome,
   1600px desktop content cap, adaptive onboarding width, grammar level query
   chips, compact 2x2 grammar choices, and non-blocking foundations banner.
+
+## 2026-05-22 Urgent fix batch P3 evidence sweep
+
+- L1 review/continue label guard passed: Minna labels render as
+  `Minna no Nihongo I — Bài 1` / `Minna no Nihongo II — Bài 1` and do not
+  expose synthetic internal storage IDs such as `905014`.
+- L2 onboarding level guard passed: start is disabled before selection,
+  enabled after selecting a level, and selected level tiles show primary
+  border/check styling.

@@ -729,3 +729,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: The UI should not teach stale exam timing. Question counts remain approximate where the app already marks them approximate, but time labels now match the official published sections.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-074 - P3 low defects are covered by existing guards
+**Phase**: Urgent fix batch P3
+**Date**: 2026-05-22 15:35 (Asia/Saigon)
+**Context**: P3 listed an internal lesson ID leak and onboarding button/selection-state polish. Current main already had `continue_provider_test.dart` guarding against `905014` leaks and `level_select_screen_test.dart` guarding disabled/enabled start behavior plus visible selected styling.
+**Options considered**: rework the review/onboarding widgets anyway | skip P3 because it is low priority | run targeted guards and log P3 as evidence-only if green
+**Chosen**: Run targeted P3 tests and only log status because no failing P3 symptom remains in code.
+**Rationale**: Low-priority polish should not churn stable widgets without a failing symptom, especially before the full Playwright acceptance pass.
+**Reversible**: yes
+**Owner review**: pending

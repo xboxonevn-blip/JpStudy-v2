@@ -344,8 +344,20 @@
     "directiveE": {
       "form": "Hình thức: Noun1 にあるまじき Noun2",
       "meaning": "Ý nghĩa: Dùng để nói một hành vi hoặc thái độ không phù hợp với vị trí, tư cách hoặc vai trò Noun.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt vai trò/tư cách trước にあるまじき rồi đặt hành vi/thái độ bị phê phán ở Noun2. Mẫu trang trọng, mạnh, thường nói “không thể chấp nhận ở người có vị trí Noun1”.",
+      "etymology": "Gốc rễ: ある là “tồn tại/ở trong vai trò”; まじき là dạng cổ của ý “không nên/không được”. Noun1 にあるまじき Noun2 nghĩa là Noun2 không nên tồn tại nơi người thuộc vai Noun1.",
+      "hanVietBridge": "Cầu Hán-Việt: nghe như “bất ưng hữu” trong vai N. 教師にあるまじき言動 là lời nói/hành động không nên có ở một giáo viên.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にあるまじき Noun luôn cần một chuẩn vai trò. Khác ふさわしくない là “không phù hợp” chung, あるまじき có tiếng búa phê phán mạnh hơn.",
+      "crossLinks": [
+        {
+          "pattern": "Noun にふさわしくない",
+          "contrast": "Khác Noun にあるまじき Noun: ふさわしくない nhẹ hơn, còn あるまじき phê phán mạnh việc không được có ở vai trò đó."
+        },
+        {
+          "pattern": "Noun ともあろう Noun",
+          "contrast": "So với ともあろう nhấn kỳ vọng vào vai trò trước khi trách, あるまじき trực tiếp gọi hành vi là không xứng."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -378,8 +390,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + にして",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh “ngay cả ở mức Noun mà...” hoặc “chỉ đến Noun mới...”, tùy ngữ cảnh.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: đặt danh từ chỉ vai trò, tuổi, mức độ hoặc thời điểm trước にして để đánh giá điều sau là bất ngờ hoặc chỉ đạt ở ngưỡng ấy. Với ví dụ kiểu 医者にして, nghĩa là “ngay cả là bác sĩ mà...”.",
+      "etymology": "Gốc rễ: に đặt người/vật vào vị trí N; して là dạng て của する, biến N thành trạng thái được nêu trước đánh giá. Noun にして vì vậy nghe trang trọng hơn で và thường tạo điểm nhấn về mức/địa vị.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “ở địa vị N mà”. にして không phải thể て nối việc, mà là khung trạng thái: ngay tại mức N, kết luận sau vẫn đáng chú ý.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun にして cần một thước đo. Khác Nでさえ chỉ “ngay cả”, にして nghe văn viết hơn và thường đặt N như một cấp bậc để đo sự bất ngờ.",
+      "crossLinks": [
+        {
+          "pattern": "Noun でさえ",
+          "contrast": "Khác Noun にして: でさえ là “ngay cả” trực tiếp, còn にして đặt N như địa vị/ngưỡng trang trọng để đánh giá."
+        },
+        {
+          "pattern": "Noun にして初めて",
+          "contrast": "So với にして初めて nhấn ngưỡng mới dẫn tới nhận ra/làm được, にして bản thân nó chỉ dựng mức N để đánh giá."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -3099,3 +3099,9 @@
 - Replaced early lesson-6 generic filler with uniqueness, open alternatives, minimum-amount, layered-accumulation, and formal-circumstance teaching.
 - Global Directive E validator progress is now `395/1123`; next failure starts at `grammar:n1:grammar_n1_6:008`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 064
+- Re-authored N1 rows `Noun にあるまじき Noun`, `Noun にして`, `Verb ないではすまない`, `～なくもない`, and `Noun のいかんによらず`.
+- Repaired malformed `なくもない` examples and tightened `すまない`/policy examples around duty and non-dependence.
+- Global Directive E validator progress is now `400/1123`; next failure starts at `grammar:n1:grammar_n1_61:001`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

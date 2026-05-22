@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ない form + ではすまない",
       "meaning": "Ý nghĩa: Dùng để nói không thể không làm vì trách nhiệm, đạo lý hoặc áp lực xã hội",
-      "usage": "Cách dùng: Với Verb ないではすまない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ないではすまない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ない form + ではすまない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ないではすまない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng Verb ないではすまない khi không làm V thì chuyện không thể kết thúc ổn thỏa vì trách nhiệm, đạo lý, luật lệ hoặc áp lực xã hội. V thường là 謝る, 報告する, 弁償する.",
+      "etymology": "Gốc rễ: 済む/すむ là “xong, ổn, khép lại”. Verb-ないでは tạo trạng thái “không V”; すまない nói trạng thái ấy không thể được coi là xong. Vì vậy mẫu mang lực nghĩa vụ phải xử lý.",
+      "hanVietBridge": "済 gần ý “tế/xong việc” trong cảm giác hoàn tất. Verb ないではすまない là “không V thì không xong”, khác với một cảm xúc tự bật ra.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ないではすまない có xã hội đứng sau lưng câu. Khác ないではおかない ép phản ứng xảy ra, ないではすまない nói trách nhiệm chưa được thanh toán.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Verb ないではすまない cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ないではおかない",
+          "contrast": "Khác Verb ないではすまない: おかない là không để yên khiến V xảy ra, còn すまない là không làm V thì không xong về trách nhiệm."
+        },
+        {
+          "pattern": "Verb ずにはすまない",
+          "contrast": "So với ずにはすまない, ないではすまない cùng nghĩa nhưng hình thức hiện đại và dễ nhận dạng hơn."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ないform + なくもない, い-Adjective－い + くもない, な-Adjective + でもない, Noun + でもない",
       "meaning": "Ý nghĩa: Dùng để nói cũng không hẳn là không X, tức khả năng vẫn tồn tại nhưng không mạnh",
-      "usage": "Cách dùng: Với ～なくもない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～なくもない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ないform + なくもない, い-Adjective－い + くもない, な-Adjective + でもない, Noun + でもない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～なくもない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng ～なくもない để nói “không phải là hoàn toàn không X”, thường mở một khả năng nhỏ hoặc thái độ miễn cưỡng. Với động từ phải dùng gốc phủ định: 待たなくもない, 行かなくもない.",
+      "etymology": "Gốc rễ: なく là phần phủ định; も thêm sắc thái “cũng”; ない phủ định cả cụm. Phủ định kép này không thành khẳng định mạnh mà giữ một cửa nhỏ: cũng không hẳn là không.",
+      "hanVietBridge": "Cầu Hán-Việt: gần “vị tất bất”: chưa chắc là không. Tiếng Việt nên dịch mềm bằng “cũng không phải là không...”, tránh biến thành “chắc chắn có”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～なくもない là cái gật đầu dè dặt. Khác なくはない nhấn đối chiếu bằng は rõ hơn, なくもない nghe mềm và mở khả năng nhỏ hơn.",
       "crossLinks": [
         {
-          "pattern": "Verbる べくもない",
-          "contrast": "～なくもない cần đọc theo chức năng riêng của mẫu; Verbる べくもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "～なくはない",
+          "contrast": "Khác ～なくもない: なくはない đối chiếu rõ phần phủ định, còn なくもない mềm hơn và thường là khả năng nhỏ."
+        },
+        {
+          "pattern": "〜ないこともない",
+          "contrast": "So với ないこともない, なくもない cô đọng hơn nhưng cùng nhóm phủ định kép dè dặt."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + のいかんによらず",
       "meaning": "Ý nghĩa: Dùng để nói kết quả không thay đổi dù Noun ở trạng thái nào",
-      "usage": "Cách dùng: Với Noun のいかんによらず, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun のいかんによらず, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + のいかんによらず thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun のいかんによらず không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, điều kiện, tuổi tác, quốc tịch trước のいかんによらず để nói kết luận phía sau không phụ thuộc vào N ra sao. Mẫu trang trọng, hợp quy định/thông báo.",
+      "etymology": "Gốc rễ: いかん/如何 là “ra sao”; よる là “dựa vào/phụ thuộc”; よらず phủ định sự phụ thuộc. Cả cụm nghĩa là không dựa vào việc N như thế nào mà vẫn giữ kết luận sau.",
+      "hanVietBridge": "如何 là “như hà”; よらず gợi “bất y” - không dựa vào. Noun のいかんによらず nên dịch là “bất kể N ra sao”, không phải “tùy N”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんによらず khóa kết quả lại trước mọi biến thể của N. Khác のいかんによっては mở nhánh tùy N, によらず nói N không được quyền làm kết quả đổi.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun のいかんによらず cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Noun のいかんによっては",
+          "contrast": "Khác Noun のいかんによらず: によっては nói kết quả có thể đổi tùy N, còn によらず nói không đổi."
+        },
+        {
+          "pattern": "Noun のいかんにかかわらず",
+          "contrast": "So với にかかわらず, によらず ngắn hơn nhưng cùng phủ nhận sự phụ thuộc vào việc N ra sao."
         }
       ],
       "fallbackReference": {

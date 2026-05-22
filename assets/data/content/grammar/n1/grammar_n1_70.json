@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-volitional form + が + Verb-negative volitional form + が",
       "meaning": "Ý nghĩa: Dùng để nói dù có làm hay không làm X thì kết quả hoặc thái độ vẫn không thay đổi",
-      "usage": "Cách dùng: Với Verb ようが Verb るまいが, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ようが Verb るまいが, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-volitional form + が + Verb-negative volitional form + が thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ようが Verb るまいが không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: lặp cùng một động từ ở hai hướng làm/không làm với ようが...まいが để nói kết quả phía sau vẫn không đổi dù chọn hướng nào.",
+      "etymology": "Gốc rễ: よう là ý chí làm, まい là ý chí phủ định cổ “sẽ không làm”. が sau mỗi vế biến hai lựa chọn thành điều kiện nhượng bộ.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “khả hành hay bất hành đều bất biến”. Verb ようが Verbるまいが không hỏi chọn gì; nó xóa tác động của lựa chọn.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ようが Verbるまいが khác ようか...まいか. Một bên là “dù làm hay không”, bên kia là “có nên làm hay không”.",
       "crossLinks": [
         {
-          "pattern": "Verb よう",
-          "contrast": "Verb ようが Verb るまいが cần đọc theo chức năng riêng của mẫu; Verb よう có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ようか Verbるまいか",
+          "contrast": "Khác Verb ようが Verbるまいが: ようか...まいか diễn tả phân vân, còn ようが...まいが nói kết quả không đổi."
+        },
+        {
+          "pattern": "Verb ても Verb なくても",
+          "contrast": "So với ても/なくても đời thường hơn, ようが...まいが trang trọng và nhấn hai ý chí đối lập."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-ば + Verb-past + ものを, い-Adjective + ければ + ものを, な-Adjective/Noun + であれば + ものを, etc",
       "meaning": "Ý nghĩa: Dùng để bày tỏ tiếc nuối hoặc trách nhẹ: nếu đã làm X thì đã tốt hơn, vậy mà đã không làm",
-      "usage": "Cách dùng: Với ～ば～ものを, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ば～ものを, lõi もの là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ば + Verb-past + ものを, い-Adjective + ければ + ものを, な-Adjective/Noun + であれば + ものを, etc thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ば～ものを không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng điều kiện ば rồi kết quả đáng lẽ đã xảy ra trước ものを để tiếc hoặc trách nhẹ rằng thực tế đã không đi theo hướng đó.",
+      "etymology": "Gốc rễ: ば mở điều kiện giả định; もの đóng khung “việc/lẽ ra”; を để lại dư âm tiếc nuối như một đối tượng bị bỏ lỡ.",
+      "hanVietBridge": "Cầu Hán-Việt: nghĩ “nếu X thì đáng lẽ Y, tiếc thay”. ～ば～ものを luôn có bóng của kết quả trái thực tế.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～ば～ものを không phải điều kiện bình thường. Khác ばよかった chỉ tự tiếc, ものを thường có giọng trách ai đó đã không làm.",
       "crossLinks": [
         {
-          "pattern": "Verbる ものとする",
-          "contrast": "～ば～ものを cần đọc theo chức năng riêng của mẫu; Verbる ものとする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb ばよかった",
+          "contrast": "Khác ～ば～ものを: ばよかった chỉ nói giá mà, còn ものを thêm dư âm tiếc/trách vì thực tế trái lại."
+        },
+        {
+          "pattern": "Noun/Verb のに",
+          "contrast": "So với のに đời thường hơn, ～ば～ものを văn viết và tiếc nuối nặng hơn."
         }
       ],
       "fallbackReference": {

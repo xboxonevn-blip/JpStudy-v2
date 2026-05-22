@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb (masu stem) + ようがない",
       "meaning": "Ý nghĩa: Dùng để nói không có cách nào để làm việc đó, vì thiếu phương tiện, điều kiện hoặc khả năng",
-      "usage": "Cách dùng: Với Verb ようがない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ようがない, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách Verb (masu stem) + ようがない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ようがない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: gắn ようがない vào thân ます để nói không có phương cách thực hiện hành động: 直しようがない, 説明しようがない.",
+      "etymology": "Gốc rễ: よう ở đây gần 様, “cách/dạng làm”; がない phủ nhận sự tồn tại của cách ấy. Verb ようがない là “không có cách để V”.",
+      "hanVietBridge": "様 là Hán-Việt “dạng”. Verb ようがない nghĩa là không còn dạng/cách hành động nào để V, nên tiếng Việt tự nhiên là “không cách nào V”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verb ようがない nói bế tắc về phương pháp, không phải thiếu ý chí. Khác できない, nó nhấn không còn cách thực hiện.",
       "crossLinks": [
         {
-          "pattern": "Verb よう",
-          "contrast": "Verb ようがない cần đọc theo chức năng riêng của mẫu; Verb よう có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb できない",
+          "contrast": "Khác Verb ようがない: できない nói không thể làm nói chung, còn ようがない nhấn không có cách/phương tiện."
+        },
+        {
+          "pattern": "どうしようもない",
+          "contrast": "So với どうしようもない là bất lực toàn cảnh, Verb ようがない gắn trực tiếp với cách làm của một động từ."
         }
       ],
       "fallbackReference": {

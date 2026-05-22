@@ -3147,3 +3147,9 @@
 - Replaced template prose with contrast, benchmark, no-dependence, pioneering-order, and basis-fit explanations.
 - Global Directive E validator progress is now `435/1123`; next failure starts at `grammar:n1:grammar_n1_7:009`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 072
+- Re-authored N1 rows `Noun に即して Verb`, `Noun に言わせれば`, `Verb ようが Verbるまいが`, `～ば～ものを`, and `Verb ようがない`.
+- Repaired one `ようが...まいが` example that used adjectives and two `に言わせれば` attribution examples.
+- Global Directive E validator progress is now `440/1123`; next failure starts at `grammar:n1:grammar_n1_71:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

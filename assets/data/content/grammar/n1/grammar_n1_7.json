@@ -390,8 +390,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + に即して + Verb",
       "meaning": "Ý nghĩa: Dùng khi hành động được thực hiện dựa trên hoặc phù hợp với Noun.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "usage": "Cách dùng: đặt luật, thực tế, chính sách, nhu cầu, hoặc ý kiến trước に即して để nói hành động phía sau được làm bám sát cơ sở đó.",
+      "etymology": "Gốc rễ: 即す là bám sát/phù hợp ngay với một cơ sở. に đánh dấu cơ sở, して biến cụm này thành trạng ngữ cho động từ phía sau.",
+      "hanVietBridge": "即 là Hán-Việt “tức”, sát ngay với thực tế/cơ sở. Noun に即して Verb là hành động theo sát N, không xa rời nền tảng.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に即して Verb khác に即した Noun ở vai trò câu. に即して bổ nghĩa cho hành động; に即した bổ nghĩa cho danh từ.",
+      "crossLinks": [
+        {
+          "pattern": "Noun に即した Noun",
+          "contrast": "Khác Noun に即して Verb: に即した đứng trước danh từ, còn に即して đi với hành động phía sau."
+        },
+        {
+          "pattern": "Noun に沿って",
+          "contrast": "So với に沿って là đi theo đường hướng, に即して nhấn sát với cơ sở như luật, thực tế, nhu cầu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -424,8 +436,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + に言わせれば",
       "meaning": "Ý nghĩa: Dùng để nêu ý kiến theo cách nhìn của Noun: “nếu hỏi Noun thì”.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "usage": "Cách dùng: đặt người/nhóm có lập trường trước に言わせれば để dẫn nhận định theo góc nhìn của họ: 専門家に言わせれば...",
+      "etymology": "Gốc rễ: 言わせる là thể sai khiến của 言う, “để/cho ai nói”; ば là điều kiện. に言わせれば nghĩa đen là nếu để N nói ra.",
+      "hanVietBridge": "言 là Hán-Việt “ngôn”. Noun に言わせれば là “nếu cho N phát ngôn”, tức theo lời/nhìn từ phía N.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun に言わせれば luôn gắn với người có quan điểm. Khác によると chỉ dẫn nguồn tin, に言わせれば nghe như lập trường/đánh giá riêng.",
+      "crossLinks": [
+        {
+          "pattern": "Noun によると",
+          "contrast": "Khác Noun に言わせれば: によると dẫn nguồn thông tin, còn に言わせれば dẫn ý kiến/đánh giá theo góc nhìn N."
+        },
+        {
+          "pattern": "Noun から言えば",
+          "contrast": "So với から言えば là nhìn từ lập trường, に言わせれば nghe như nếu để chính N nói ra."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

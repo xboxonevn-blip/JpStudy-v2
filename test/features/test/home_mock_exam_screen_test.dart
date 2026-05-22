@@ -155,9 +155,30 @@ void main() {
     await tester.pump();
 
     expect(find.text('JLPT N2 exam practice'), findsOneWidget);
-    expect(find.text('N2 mock exam (105 min)'), findsOneWidget);
+    expect(find.text('N2 mock exam (155 min)'), findsOneWidget);
     expect(find.text('N2 reading practice'), findsOneWidget);
-    expect(find.text('N5 mock exam (105 min)'), findsNothing);
+    expect(find.text('N5 mock exam (90 min)'), findsNothing);
+  });
+
+  testWidgets('exam center uses per-level JLPT official timing labels', (
+    tester,
+  ) async {
+    const expected = {
+      StudyLevel.n5: 'N5 mock exam (90 min)',
+      StudyLevel.n4: 'N4 mock exam (115 min)',
+      StudyLevel.n3: 'N3 mock exam (140 min)',
+      StudyLevel.n2: 'N2 mock exam (155 min)',
+      StudyLevel.n1: 'N1 mock exam (165 min)',
+    };
+
+    for (final entry in expected.entries) {
+      await tester.pumpWidget(Container());
+      await tester.pump();
+      await tester.pumpWidget(buildExamCenter(level: entry.key));
+      await tester.pump();
+
+      expect(find.text(entry.value), findsOneWidget);
+    }
   });
 
   testWidgets('defaults to N5 mock exam when level is not selected', (
@@ -219,6 +240,72 @@ void main() {
       expect(find.text('Start exam'), findsOneWidget);
       expect(storage.lastLoadKey, 'mock_$level');
     }
+
+    await tester.pumpWidget(Container());
+    await tester.pump(const Duration(milliseconds: 100));
+    await db.close();
+    await cdb.close();
+  });
+
+  testWidgets('legacy exam route shows official JLPT timing metadata', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1200, 1600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final db = AppDatabase(executor: NativeDatabase.memory());
+    final cdb = ContentDatabase(executor: NativeDatabase.memory());
+    final repo = FakeMockLessonRepository(
+      db,
+      cdb,
+      itemsByLevel: const {
+        'N1': _sampleVocab,
+        'N2': _sampleVocab,
+        'N3': _sampleVocab,
+        'N4': _sampleVocab,
+        'N5': _sampleVocab,
+      },
+    );
+
+    await tester.pumpWidget(
+      buildLegacyExamScreen(
+        level: StudyLevel.n5,
+        repo: repo,
+        storage: _FakeSessionStorage(),
+      ),
+    );
+    await tester.pump();
+
+    expect(
+      find.text('90 min · 95 questions · vocabulary, reading, listening'),
+      findsOneWidget,
+    );
+    expect(
+      find.text(
+        '115 min · 105 questions · vocabulary, grammar, reading, listening',
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.text(
+        '140 min · ~95 questions · language knowledge, reading, listening',
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.text(
+        '155 min · ~105 questions · language knowledge, reading, listening',
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.text(
+        '165 min · ~110 questions · language knowledge, reading, listening',
+      ),
+      findsOneWidget,
+    );
 
     await tester.pumpWidget(Container());
     await tester.pump(const Duration(milliseconds: 100));

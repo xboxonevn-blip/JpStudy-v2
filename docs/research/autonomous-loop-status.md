@@ -2529,3 +2529,13 @@
   sessions open as 50-question checks.
 - H6 vocab catalog guard passed: textbook index renders 10 vocab programs from
   Hajimete, Minna, and Mimikara, with Mimikara restricted to N3/N2/N1.
+
+## 2026-05-22 Urgent fix batch P2 metadata/layout polish
+
+- Updated JLPT mock/exam timing labels from the official JLPT test-section
+  totals: N5=90, N4=115, N3=140, N2=155, N1=165 minutes.
+- Reused the per-level timing labels in the exam center instead of the old
+  hardcoded `105-min mock exam` copy.
+- Re-verified existing P2 layout/UX guards: full-width shell chrome,
+  1600px desktop content cap, adaptive onboarding width, grammar level query
+  chips, compact 2x2 grammar choices, and non-blocking foundations banner.

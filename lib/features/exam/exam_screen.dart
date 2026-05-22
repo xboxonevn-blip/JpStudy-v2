@@ -663,7 +663,7 @@ class _JlptExamMeta {
 _JlptExamMeta _examMeta(String level) {
   return switch (level.toUpperCase()) {
     'N5' => const _JlptExamMeta(
-      minutes: 60,
+      minutes: 90,
       officialQuestions: 95,
       approximate: false,
       viSections: 'từ vựng, đọc hiểu, nghe',
@@ -671,7 +671,7 @@ _JlptExamMeta _examMeta(String level) {
       jaSections: '語彙・読解・聴解',
     ),
     'N4' => const _JlptExamMeta(
-      minutes: 120,
+      minutes: 115,
       officialQuestions: 105,
       approximate: false,
       viSections: 'từ vựng, ngữ pháp, đọc hiểu, nghe',
@@ -695,7 +695,7 @@ _JlptExamMeta _examMeta(String level) {
       jaSections: '言語知識・読解・聴解',
     ),
     'N1' => const _JlptExamMeta(
-      minutes: 170,
+      minutes: 165,
       officialQuestions: 110,
       approximate: true,
       viSections: 'ngôn ngữ, đọc hiểu, nghe',

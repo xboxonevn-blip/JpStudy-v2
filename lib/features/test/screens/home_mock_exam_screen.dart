@@ -29,6 +29,7 @@ class ExamCenterHubScreen extends ConsumerWidget {
     final selectedLevel = ref.watch(studyLevelProvider);
     final level = selectedLevel ?? StudyLevel.n5;
     final levelLabel = level.shortLabel;
+    final mockMinutes = _jlptMockMinutes(levelLabel);
     final daysUntilJlpt = _daysUntilNextJlpt(DateTime.now());
 
     return Scaffold(
@@ -94,9 +95,9 @@ class ExamCenterHubScreen extends ConsumerWidget {
                       AppStatusChip(
                         label: _text(
                           language,
-                          '105-min mock exam',
-                          'Thi th\u1eed 105 ph\u00fat',
-                          '105\u5206\u6a21\u8a66',
+                          '$mockMinutes-min mock exam',
+                          'Thi th\u1eed $mockMinutes ph\u00fat',
+                          '$mockMinutes\u5206\u6a21\u8a66',
                         ),
                       ),
                     ],
@@ -113,9 +114,9 @@ class ExamCenterHubScreen extends ConsumerWidget {
                   icon: Icons.assignment_turned_in_rounded,
                   title: _text(
                     language,
-                    '$levelLabel mock exam (105 min)',
-                    'Thi th\u1eed $levelLabel (105 ph\u00fat)',
-                    '$levelLabel\u6a21\u8a66\uff08105\u5206\uff09',
+                    '$levelLabel mock exam ($mockMinutes min)',
+                    'Thi th\u1eed $levelLabel ($mockMinutes ph\u00fat)',
+                    '$levelLabel\u6a21\u8a66\uff08$mockMinutes\u5206\uff09',
                   ),
                   subtitle: _text(
                     language,
@@ -240,6 +241,17 @@ class ExamCenterHubScreen extends ConsumerWidget {
         ? second
         : DateTime(now.year + 1, 7, 12);
     return target.difference(DateTime(now.year, now.month, now.day)).inDays;
+  }
+
+  static int _jlptMockMinutes(String levelLabel) {
+    return switch (levelLabel.toUpperCase()) {
+      'N5' => 90,
+      'N4' => 115,
+      'N3' => 140,
+      'N2' => 155,
+      'N1' => 165,
+      _ => 90,
+    };
   }
 }
 

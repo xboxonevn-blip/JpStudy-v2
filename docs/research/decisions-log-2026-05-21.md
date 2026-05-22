@@ -719,3 +719,13 @@ Autonomous overnight mission log. Every decision below is owner-reviewable.
 **Rationale**: This avoids destabilizing already-correct surfaces while still respecting the audit. Any later Playwright mismatch becomes a concrete failing symptom with a targeted patch.
 **Reversible**: yes
 **Owner review**: pending
+
+## DECISION-073 - JLPT timing copy follows official section totals
+**Phase**: Urgent fix batch P2
+**Date**: 2026-05-22 15:20 (Asia/Saigon)
+**Context**: P2 M5 required differentiated JLPT level descriptions. The old exam center used one hardcoded `105-min mock exam` label, while `/exam` had outdated N5/N4/N1 timings. The official JLPT test-section page lists current section totals by level.
+**Options considered**: keep the owner's example timings verbatim | keep 105 minutes for all mock cards | align UI labels with official section-total minutes and keep current approximate question counts
+**Chosen**: Use official total minutes in both exam center and legacy `/exam`: N5=90, N4=115, N3=140, N2=155, N1=165.
+**Rationale**: The UI should not teach stale exam timing. Question counts remain approximate where the app already marks them approximate, but time labels now match the official published sections.
+**Reversible**: yes
+**Owner review**: pending

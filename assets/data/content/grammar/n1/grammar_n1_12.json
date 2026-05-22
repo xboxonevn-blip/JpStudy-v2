@@ -342,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ますstem + こそすれ、(絶対に)～ない",
-      "meaning": "Ý nghĩa: Dùng để nhấn mạnh “có thể làm X, nhưng tuyệt đối không làm Y”.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜こそすれ là こそ nhấn mạnh chính X, cộng với すれ như dạng nhượng bộ của する. Cả mẫu đặt X lên để nói nếu có thì chỉ X, còn Y thì tuyệt đối không.",
+      "hanVietBridge": "Mẫu này không dựa vào Hán tự chính. Cầu tiếng Việt là có X thì có, chứ không hề Y; chữ chứ giữ đúng lực đối lập của こそすれ.",
+      "form": "Hình thức: động từ gốc ます / danh từ suru + こそすれ、Y〜ない. Vế sau thường phủ định mạnh hoặc trái hẳn với X.",
+      "meaning": "Ý nghĩa: Có thể nói là X, nếu có thì X, nhưng tuyệt đối không Y. Mẫu này nhấn đối lập giữa việc được thừa nhận và việc bị phủ nhận.",
+      "usage": "Sử dụng: X và Y phải cùng trục để tạo tương phản: 感謝こそすれ、恨んではいない. Nếu chỉ liệt kê hai hành động, dùng たり hoặc し.",
+      "humanMoment": "Dr. Linh lưu ý: 〜こそすれ khác 〜はするが. こそすれ nâng X lên rất mạnh rồi đóng cửa Y; はするが chỉ tương phản nhẹ trong câu thường.",
+      "crossLinks": [
+        {
+          "pattern": "〜はするが",
+          "contrast": "Khác 〜こそすれ: 〜はするが chỉ nhượng bộ nhẹ; 〜こそすれ nhấn X mạnh và phủ định Y dứt khoát."
+        },
+        {
+          "pattern": "〜こそあれ",
+          "contrast": "〜こそあれ thường đi với danh từ/tính chất; 〜こそすれ đi với hành động hoặc danh từ suru."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -359,9 +371,9 @@
     "lessonId": 12,
     "title": "Verb させられる",
     "titleEn": "Expresses being forced to do something or being made to do something",
-    "structure": "Verb-casual (non-past) + させられる",
-    "structureEn": "Verb-casual (non-past) + させられる",
-    "explanation": "Dùng để diễn tả bị ép, bị bắt hoặc bị khiến phải làm một việc. Đây là dạng sai khiến bị động của động từ. Cấu trúc: Verb-casual (non-past) + させられる.",
+    "structure": "Verb causative-passive form + させられる / される",
+    "structureEn": "Verb causative-passive form + させられる / される",
+    "explanation": "Dùng để diễn tả bị ép, bị bắt hoặc bị khiến phải làm một việc. Đây là dạng sai khiến bị động của động từ. Cấu trúc: Verb causative-passive form + させられる / される.",
     "explanationEn": "The させられる grammar point is used to express the passive causative form in Japanese. This form is used when you are forced or made to do something by someone or something else. Its a combination of causative and passive form, and it often implies having been made to do something against ones will",
     "level": "N1",
     "tags": [
@@ -376,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual (non-past) + させられる",
-      "meaning": "Ý nghĩa: Dùng để diễn tả bị ép, bị bắt hoặc bị khiến phải làm một việc.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜させられる là sai khiến させる cộng bị động られる. Nghĩa hình thành rất cơ học: bị người/hoàn cảnh khiến cho phải làm một hành động.",
+      "hanVietBridge": "Không có Hán tự chính, nhưng có cầu tiếng Việt rõ: sai khiến + bị động = bị bắt làm. Hãy nghe hai lớp nghĩa chồng nhau, không chỉ dịch là bị.",
+      "form": "Hình thức: dạng sai khiến bị động của động từ: 食べさせられる, 飲ませられる/飲まされる, 勉強させられる.",
+      "meaning": "Ý nghĩa: Bị ép, bị bắt, bị khiến phải làm A. Thường mang sắc thái miễn cưỡng hoặc bị đặt vào tình thế không thích.",
+      "usage": "Sử dụng: Chủ thể là người bị bắt làm; tác nhân thường đi với に: 父に勉強させられた. Nếu chỉ bị một sự kiện ép vào kết quả danh từ, dùng を余儀なくされる.",
+      "humanMoment": "Dr. Linh lưu ý: 〜させられる khác 〜を余儀なくされる. させられる là bị bắt làm động tác; を余儀なくされる là bị buộc chấp nhận một kết quả danh từ.",
+      "crossLinks": [
+        {
+          "pattern": "〜を余儀なくされる",
+          "contrast": "Khác 〜させられる: 〜させられる chia trực tiếp trên động từ; 〜を余儀なくされる đi với danh từ kết quả như 中止, 退学."
+        },
+        {
+          "pattern": "〜させる",
+          "contrast": "〜させる là người khiến người khác làm; 〜させられる là người bị khiến phải làm."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -410,10 +434,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ざるを得ない (する → せざるを得ない)",
-      "meaning": "Ý nghĩa: Dùng để nói không còn lựa chọn nào khác ngoài việc phải làm.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ざるを得ない gồm ざる, dạng phủ định cổ của động từ, và 得ない: không thể đạt/không thể có. Nghĩa là không thể có lựa chọn không làm A.",
+      "hanVietBridge": "得 = đắc trong đắc thủ, đạt được. ざるを得ない là không đắc được phương án không làm: cuối cùng phải làm A.",
+      "form": "Hình thức: động từ gốc ない bỏ ない + ざるを得ない; riêng する thành せざるを得ない. Ví dụ 行かざるを得ない, 変更せざるを得ない.",
+      "meaning": "Ý nghĩa: Không còn cách nào khác ngoài phải làm A, buộc phải A vì tình thế. Trang trọng hơn しなければならない.",
+      "usage": "Sử dụng: Dùng khi lý do bên ngoài khiến lựa chọn bị thu hẹp: 台風で延期せざるを得ない. Không dùng để nói bị ai trực tiếp sai khiến; khi đó させられる hợp hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ざるを得ない khác 〜させられる. ざるを得ない là tự kết luận không còn lựa chọn; させられる là có lực khiến/bắt làm từ bên ngoài.",
+      "crossLinks": [
+        {
+          "pattern": "〜させられる",
+          "contrast": "Khác 〜ざるを得ない: 〜させられる là bị bắt làm; 〜ざるを得ない là không còn lựa chọn nên phải làm."
+        },
+        {
+          "pattern": "〜を余儀なくされる",
+          "contrast": "〜を余儀なくされる đi với danh từ kết quả; 〜ざるを得ない đi với động từ hành động."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

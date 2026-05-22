@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ない form (remove ない) + ずじまい",
-      "meaning": "Ý nghĩa: Dùng khi cuối cùng đã không làm được điều định làm hoặc lẽ ra nên làm, thường kèm cảm giác tiếc nuối.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ずじまい là ず, dạng phủ định cổ, cộng しまい/仕舞い: kết thúc, khép lại. Cả mẫu nói sự việc khép lại trong trạng thái chưa làm A.",
+      "hanVietBridge": "仕舞い có thể nhớ qua ý kết thúc/hạ màn; ず là phủ định. Hình ảnh tiếng Việt: hạ màn rồi mà việc A vẫn chưa xảy ra.",
+      "form": "Hình thức: động từ gốc ない bỏ ない + ずじまい. Ví dụ 見ずじまい, 会わずじまい, せずじまい.",
+      "meaning": "Ý nghĩa: Cuối cùng không làm được A, lỡ mất A, thường có tiếc nuối vì định làm hoặc có cơ hội mà không thành.",
+      "usage": "Sử dụng: Hay đi với 結局, 一度も, 〜てしまった. Nếu chỉ nói trạng thái không làm mà kéo dài, ないまま có thể hợp hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ずじまい khác 〜ないまま. ずじまい có cảm giác câu chuyện đã khép lại và để lại tiếc nuối; ないまま chỉ tả trạng thái vẫn chưa làm.",
+      "crossLinks": [
+        {
+          "pattern": "〜ないまま",
+          "contrast": "Khác 〜ずじまい: 〜ないまま là trạng thái chưa làm tiếp diễn; 〜ずじまい là cuối cùng không làm và thường tiếc."
+        },
+        {
+          "pattern": "〜ずに終わる",
+          "contrast": "〜ずに終わる gần nghĩa nhưng trung tính hơn; 〜ずじまい nhấn cảm giác lỡ mất/còn tiếc."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-negative stem + ずとも",
-      "meaning": "Ý nghĩa: Dùng để nói dù không làm X thì Y vẫn xảy ra hoặc vẫn có thể làm được.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc của 〜ずとも là ず, phủ định cổ, cộng とも: dù, cho dù. Mẫu này nén ý dù không làm A thì B vẫn có thể đúng hoặc vẫn xảy ra.",
+      "hanVietBridge": "Không có Hán tự chính; cầu tiếng Việt là dù không A cũng B. Chữ dù giữ phần とも, chữ không giữ phần ず.",
+      "form": "Hình thức: động từ gốc ない bỏ ない + ずとも + kết quả. Ví dụ 食べずとも, 言わずとも, 使わずとも.",
+      "meaning": "Ý nghĩa: Dù không làm A thì vẫn B, không cần A cũng B. Sắc thái trang trọng, văn viết hơn なくても.",
+      "usage": "Sử dụng: Vế sau thường nói khả năng/kết quả vẫn giữ: 説明せずとも分かる. Với danh từ/tính từ, dùng なくとも nhưng cần tránh trộn vào bài chỉ dạy ずとも.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ずとも khác 〜なくても. ずとも là phủ định cổ, gọn và trang trọng; なくても là dạng đời thường, dùng rộng cho cả động từ/tính từ/danh từ.",
+      "crossLinks": [
+        {
+          "pattern": "〜なくても",
+          "contrast": "Khác 〜ずとも: 〜なくても phổ thông và rộng hơn; 〜ずとも trang trọng hơn và chủ yếu bám vào động từ."
+        },
+        {
+          "pattern": "〜ずに",
+          "contrast": "〜ずに chỉ không làm A rồi làm B; 〜ずとも nhấn dù không A thì B vẫn đúng/đủ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

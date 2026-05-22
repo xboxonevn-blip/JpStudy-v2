@@ -390,8 +390,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + のいかんにかかわらず",
       "meaning": "Ý nghĩa: Dùng để nói không phụ thuộc vào Noun, bất kể Noun như thế nào.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "usage": "Cách dùng: đặt danh từ chỉ kết quả, tuổi tác, kinh nghiệm, điều kiện... trước のいかんにかかわらず để nói kết luận không thay đổi.",
+      "etymology": "Gốc rễ: 如何 nghĩa là “như thế nào”; かかわらず là “không liên quan/bất chấp”. Cả cụm nói dù trạng thái của N ra sao thì quyết định vẫn không đổi.",
+      "hanVietBridge": "如何 là Hán-Việt “như hà”. かかわらず mang ý “bất can dự”; Noun のいかんにかかわらず = bất kể N ra sao.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんにかかわらず đóng cửa mọi nhánh phụ thuộc. Khác のいかんでは, người nói không chờ N ra sao nữa; kết luận đã giữ nguyên.",
+      "crossLinks": [
+        {
+          "pattern": "Noun のいかんでは",
+          "contrast": "Đối lập với Noun のいかんにかかわらず: のいかんでは còn tùy N, còn にかかわらず bỏ qua N."
+        },
+        {
+          "pattern": "Noun にかかわらず",
+          "contrast": "So với にかかわらず ngắn hơn, のいかんにかかわらず trang trọng và nhấn “N ra sao cũng vậy”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -424,8 +436,20 @@
     "directiveE": {
       "form": "Hình thức: Noun + のいかんによっては",
       "meaning": "Ý nghĩa: Dùng để nói tùy vào Noun mà có thể xảy ra một kết quả khác, thường là kết quả đáng chú ý hoặc cần lưu ý.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "usage": "Cách dùng: dùng のいかんによっては khi một tình huống có thể rẽ sang phương án khác tùy mức độ/kết quả của N.",
+      "etymology": "Gốc rễ: 如何 là “như thế nào”; によって chỉ căn cứ thay đổi, còn は nêu một nhánh đặc biệt. Vì vậy のいかんによっては báo trước “tùy N, có khi...”.",
+      "hanVietBridge": "如何 = “như hà”; によっては = “tùy theo thì có trường hợp”. Noun のいかんによっては nên dịch là “tùy N mà có thể...”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Noun のいかんによっては thường mở cửa cho phương án ngoại lệ. Khác のいかんで trung tính hơn, によっては làm người nghe chờ một khả năng đặc biệt.",
+      "crossLinks": [
+        {
+          "pattern": "Noun のいかんで",
+          "contrast": "Khác Noun のいかんによっては: のいかんで nói phụ thuộc nói chung, còn によっては nhấn một nhánh có thể xảy ra."
+        },
+        {
+          "pattern": "Noun 次第では",
+          "contrast": "So với 次第では đời thường hơn, のいかんによっては trang trọng và hợp thông báo/đánh giá chính thức."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

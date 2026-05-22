@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + ことのないように",
       "meaning": "Ý nghĩa: Dùng để nói cố gắng hoặc chú ý để tránh xảy ra X",
-      "usage": "Cách dùng: Với Verbる ことのないように, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verbる ことのないように, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + ことのないように thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verbる ことのないように không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: đặt sự cố cần tránh trước ことのないように, rồi nêu hành động phòng ngừa phía sau: 忘れることのないようにメモする.",
+      "etymology": "Gốc rễ: こと danh từ hóa hành động, のない phủ định khả năng sự việc ấy xảy ra, ように chỉ mục tiêu/cách sắp xếp. Cấu trúc này dựng một hàng rào để X không xảy ra.",
+      "hanVietBridge": "こと = “việc”, ない = “không”, ように = “để sao cho”. Verbる ことのないように nghĩa sát là “để không có việc X xảy ra”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: Verbる ことのないように không chỉ là “để không”. Nó nghe như người nói đang chủ động phòng lỗi, khác Verbないように ngắn và đời thường hơn.",
       "crossLinks": [
         {
-          "pattern": "Noun もさることながら Noun も",
-          "contrast": "Verbる ことのないように cần đọc theo chức năng riêng của mẫu; Noun もさることながら Noun も có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verbないように",
+          "contrast": "Khác Verbる ことのないように: Verbないように gọn và đời thường, còn ことのないように trang trọng hơn và nhấn phòng sự việc xảy ra."
+        },
+        {
+          "pattern": "Verbる ことなく",
+          "contrast": "So với ことなく nói “không làm X rồi...”, ことのないように nói mục tiêu tránh X trước khi nó xảy ra."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-negative stem + んがために",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh mục đích mạnh mẽ “để làm X”, thường mang sắc thái trang trọng, quyết tâm",
-      "usage": "Cách dùng: Với ～んがために, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～んがために, lõi ため là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-negative stem + んがために thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～んがために không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: dùng thân phủ định cổ điển trước んがために: 勝たんがために, 守らんがために, 成功せんがために. Văn viết, trang trọng, quyết tâm cao.",
+      "etymology": "Gốc rễ: ん là dạng phủ định cổ/ý chí cổ tương ứng với ない-stem, が nối với ため “mục đích”. Cụm này giữ sắc thái văn chương: dốc sức vì mục tiêu X.",
+      "hanVietBridge": "ため là “vì/mục đích”. んがために không phải phủ định hiện đại, mà là dạng cổ tạo cảm giác “vì muốn đạt X bằng mọi giá”.",
+      "humanMoment": "Lưu ý nhỏ từ Dr. Linh: ～んがために nghe như câu khẩu hiệu trang trọng. Khác ために trung tính, んがために cho thấy ý chí mạnh, đôi khi hơi bi tráng.",
       "crossLinks": [
         {
-          "pattern": "A うが B うが",
-          "contrast": "～んがために cần đọc theo chức năng riêng của mẫu; A うが B うが có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-dictionary form + ために",
+          "contrast": "Khác ～んがために: ために trung tính, còn んがために trang trọng hơn và nhấn quyết tâm đạt mục đích."
+        },
+        {
+          "pattern": "Verbようとして",
+          "contrast": "So với ようとして nói cố làm X trong tình huống cụ thể, んがために nêu mục tiêu lớn/ý chí mạnh hơn."
         }
       ],
       "fallbackReference": {

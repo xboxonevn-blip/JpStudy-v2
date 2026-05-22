@@ -204,10 +204,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: どんなに + Verb-volitional + うが, どんなに + い-Adjective(～かろう) + が, どんなに + な-Adjective + だろうが",
-      "meaning": "Ý nghĩa: Dùng để nói dù mức độ X có lớn đến đâu thì kết quả phía sau vẫn không thay đổi.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: どんなに hỏi mức độ “dù đến đâu”, còn うが/かろうが/だろうが là nhượng bộ cổ-trang trọng gắn vào ý chí hoặc trạng thái. どんなに〜うが đặt mức độ A rất cao nhưng kết quả B vẫn không đổi.",
+      "hanVietBridge": "どんなに là “dù thế nào/bao nhiêu”; が ở đây không phải chủ ngữ mà là nhượng bộ. Tiếng Việt tự nhiên: dù A đến đâu thì B vẫn...",
+      "form": "Hình thức: どんなに + V-volitional + うが; どんなに + い-adj stem + かろうが; どんなに + な-adj + だろうが.",
+      "meaning": "Ý nghĩa: Dù mức độ A lớn đến đâu, kết quả hoặc lập trường B vẫn không thay đổi.",
+      "usage": "Sử dụng: Vế sau thường phủ định khả năng hoặc khẳng định lập trường bền: không thể, vẫn làm, không đổi, không bỏ cuộc.",
+      "humanMoment": "Dr. Linh lưu ý: どんなに〜うが khác どんなに〜ても. ても trung tính hơn; うが/かろうが nghe cứng, văn viết và nhấn “dù đến mức nào đi nữa”.",
+      "crossLinks": [
+        {
+          "pattern": "どんなに〜ても",
+          "contrast": "Khác どんなに〜うが: ても thông dụng hơn; うが/かろうが trang trọng và nhấn bất biến mạnh hơn."
+        },
+        {
+          "pattern": "〜ようが〜まいが",
+          "contrast": "〜ようが〜まいが đối lập làm/không làm; どんなに〜うが nhấn mức độ A dù cao đến đâu."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +250,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-volitional + と言わんばかりに, い-Adjective + と言わんばかりに, な-Adjective + だと言わんばかりに, Noun + だと言わんばかりに",
-      "meaning": "Ý nghĩa: Dùng để mô tả hành động, thái độ hoặc vẻ mặt như thể đang nói ra một thông điệp nào đó, dù không nói trực tiếp.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: と trích lời không nói ra, 言わん là dạng cổ của “言おう/như muốn nói”, ばかり là “gần như/chỉ còn”, に biến cả cụm thành trạng ngữ cho hành động. 〜と言わんばかりに mô tả hành vi như đang phát ra một câu thầm.",
+      "hanVietBridge": "言 là ngôn/nói. 言わんばかりに gần “như muốn nói rằng...”, rồi bổ nghĩa cho cách cười, nhìn, gật, lắc đầu.",
+      "form": "Hình thức: câu/lời muốn nói + と言わんばかりに + hành động/thái độ.",
+      "meaning": "Ý nghĩa: Làm A như thể đang muốn nói ra một thông điệp, dù không nói trực tiếp.",
+      "usage": "Sử dụng: Chủ yếu mô tả ánh mắt, vẻ mặt, thái độ, cử chỉ. Vế sau phải là hành động biểu lộ thông điệp ấy.",
+      "humanMoment": "Dr. Linh lưu ý: 〜と言わんばかりに khác 〜と言わんばかりの. Bản に bổ nghĩa hành động; bản の đóng thông điệp ấy vào một danh từ như 表情 hoặc 態度.",
+      "crossLinks": [
+        {
+          "pattern": "〜と言わんばかりのN",
+          "contrast": "Khác 〜と言わんばかりに: bản の bổ nghĩa danh từ; bản に bổ nghĩa động tác/thái độ xảy ra."
+        },
+        {
+          "pattern": "〜とばかりに",
+          "contrast": "〜とばかりに cũng mô tả hành động như nói thầm; 言わんばかりに giữ rõ sắc thái “như muốn nói”."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -272,10 +296,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-plain form + と言わんばかりの Noun",
-      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ theo nghĩa “như thể muốn nói rằng...”.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc: と trích thông điệp ngầm, 言わんばかり là “như sắp nói ra”, の nối cụm ấy với danh từ phía sau. 〜と言わんばかりのN biến ánh mắt/thái độ/vẻ mặt thành vật mang lời nói không phát âm.",
+      "hanVietBridge": "言 là ngôn/nói; の là mối nối định danh. と言わんばかりの表情 là “vẻ mặt như muốn nói rằng...”.",
+      "form": "Hình thức: câu/lời muốn nói + と言わんばかりの + N; N thường là 表情, 態度, 視線, 口調, 笑顔.",
+      "meaning": "Ý nghĩa: Một danh từ biểu hiện thông điệp ngầm “như muốn nói rằng A”.",
+      "usage": "Sử dụng: Dùng khi thông điệp nằm trong danh từ được mô tả. Nếu sau cụm là động từ hành động, dùng と言わんばかりに tự nhiên hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜と言わんばかりの không phải bản dài của の. Nó buộc người học tìm danh từ mang thông điệp: 視線, 表情, 態度; còn 〜と言わんばかりに đi với hành động.",
+      "crossLinks": [
+        {
+          "pattern": "〜と言わんばかりに",
+          "contrast": "Khác 〜と言わんばかりのN: bản に sửa động tác; bản の sửa danh từ biểu hiện."
+        },
+        {
+          "pattern": "〜そうなN",
+          "contrast": "〜そうなN chỉ vẻ có vẻ A; と言わんばかりのN thêm thông điệp ngầm như lời nói."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -306,10 +342,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Common set phrases: 生まれながらに, 涙ながらに, 昔ながらに, 子供ながらに, etc",
-      "meaning": "Ý nghĩa: Dùng để nói một trạng thái vẫn giữ nguyên từ trước đến nay hoặc xảy ra ngay trong trạng thái đó.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc: ながら giữ nghĩa “vừa/giữ nguyên trạng thái”, に biến cụm thành trạng ngữ. Trong 〜ながらに, nhiều cách dùng đã hóa thành cụm cố định như 生まれながらに, 涙ながらに, 昔ながらに.",
+      "hanVietBridge": "ながら gợi trạng thái đi kèm; に là hướng/trạng ngữ. Tiếng Việt tùy cụm: bẩm sinh, trong nước mắt, như xưa.",
+      "form": "Hình thức: cụm cố định + ながらに; thường gặp 生まれながらに, 涙ながらに, 昔ながらに, 子供ながらに.",
+      "meaning": "Ý nghĩa: Giữ nguyên trạng thái A hoặc xảy ra ngay trong trạng thái A.",
+      "usage": "Sử dụng: Học theo cụm cố định. Đừng áp máy móc mọi động từ với ながらに như mẫu “vừa làm vừa làm” thông thường.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ながらに khác Vながら. Vながら là hai hành động đồng thời; ながらに thường là trạng thái giữ nguyên hoặc cụm cố định như 生まれながらに.",
+      "crossLinks": [
+        {
+          "pattern": "Vながら",
+          "contrast": "Khác 〜ながらに: Vながら nối hai hành động; ながらに thường giữ trạng thái/cụm cố định."
+        },
+        {
+          "pattern": "〜ながらのN",
+          "contrast": "〜ながらのN đóng hành động song song vào danh từ; 〜ながらに làm trạng ngữ cho cả mệnh đề."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -340,10 +388,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ますstem (or plain minus る) + ながら + の + Noun",
-      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ bằng ý nghĩa hai việc hoặc hai trạng thái diễn ra đồng thời.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc: ながら nối hành động đang diễn ra song song, の biến cả cụm thành phần bổ nghĩa danh từ. 〜ながらのN vì vậy đóng “vừa A” vào một danh từ như 食事, 運転, 会話, 勉強.",
+      "hanVietBridge": "の là mối nối định danh. 見ながらの夕食 gần “bữa tối trong lúc vừa xem”, không phải một mệnh đề độc lập.",
+      "form": "Hình thức: Vます-stem + ながらの + N; cũng gặp cụm động tác ngắn như 見ながらの, 読みながらの, 聞きながらの.",
+      "meaning": "Ý nghĩa: Danh từ N diễn ra trong lúc đang làm A; N được mô tả bằng hành động song song.",
+      "usage": "Sử dụng: Dùng khi muốn biến “vừa A vừa N” thành cụm danh từ. Nếu câu cần hai vị ngữ đầy đủ, dùng Vながら + V chính.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ながらのN khác 〜ながらに. ながらの cần một danh từ phía sau; ながらに thường là trạng ngữ/cụm cố định cho trạng thái.",
+      "crossLinks": [
+        {
+          "pattern": "Vながら",
+          "contrast": "Khác 〜ながらのN: Vながら nối vào vị ngữ chính; ながらの đóng hành động vào danh từ."
+        },
+        {
+          "pattern": "〜ながらに",
+          "contrast": "〜ながらに làm trạng ngữ hoặc cụm cố định; 〜ながらのN bắt buộc bổ nghĩa cho danh từ."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

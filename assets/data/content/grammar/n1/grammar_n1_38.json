@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + ざるを得ない (する → せざるを得ない)",
       "meaning": "Ý nghĩa: Dùng để nói không còn lựa chọn nào khác ngoài việc phải làm",
-      "usage": "Cách dùng: Với Verb ざるを得ない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Verb ざるを得ない, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + ざるを得ない (する → せざるを得ない) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Verb ざるを得ない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng khi hoàn cảnh ép người nói phải làm V, không còn lựa chọn thực tế khác. Trang trọng hơn しなければならない; với する dùng せざるを得ない.",
+      "etymology": "Gốc cấu trúc: ざる là phủ định cổ “không làm”, を đánh dấu phần ấy như đối tượng, 得ない là “không thể có/đạt”. Không thể có phương án không làm V nên rốt cuộc phải làm V.",
+      "hanVietBridge": "得 = đắc/đạt được. せざるを得ない = không đạt được việc “không làm”, nên buộc phải làm.",
+      "humanMoment": "Lưu ý từ Dr. Linh: ざるを得ない không phải ý chí mạnh. Nó là câu của người bị hoàn cảnh dồn vào một cửa duy nhất.",
       "crossLinks": [
         {
-          "pattern": "Noun と Noun を兼ねて",
-          "contrast": "Verb ざるを得ない cần đọc theo chức năng riêng của mẫu; Noun と Noun を兼ねて có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なければならない",
+          "contrast": "Khác なければならない: mẫu kia nói nghĩa vụ chung; ざるを得ない nhấn hoàn cảnh ép và không còn lựa chọn."
+        },
+        {
+          "pattern": "〜しかない",
+          "contrast": "しかない nói chỉ còn một cách; ざるを得ない trang trọng hơn và giữ bóng phủ định cổ ざる."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: い-Adjective + といったらない / な-Adjective + だといったらない / Noun + だといったらない",
       "meaning": "Ý nghĩa: Dùng để nhấn mạnh một cảm xúc hoặc trạng thái đạt mức rất cao, gần như không gì hơn được",
-      "usage": "Cách dùng: Với ～といったらない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～といったらない, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách い-Adjective + といったらない / な-Adjective + だといったらない / Noun + だといったらない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～といったらない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Đặt sau tính từ hoặc danh từ hoá mức độ để nói cảm xúc/trạng thái cực mạnh, gần như vượt lời diễn tả. Có thể dùng khen hoặc than.",
+      "etymology": "Gốc cấu trúc: といったら là “nếu nói đến X”, ない lược từ ý “không có gì hơn/không còn lời”. といったらない vì vậy phóng đại X tới đỉnh của thang cảm xúc.",
+      "hanVietBridge": "言う = nói. 寒いといったらない = nói đến lạnh thì không gì bằng, lạnh không tả nổi.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といったらない đo cảm xúc bằng mức tràn. Nếu chỉ muốn nói “rất”, mẫu này dễ quá tay.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～といったらない cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜といったらありゃしない",
+          "contrast": "Khác ありゃしない: といったらない trung tính hơn, còn ありゃしない khẩu ngữ và cảm xúc bật mạnh."
+        },
+        {
+          "pattern": "〜極まりない",
+          "contrast": "極まりない là đánh giá cực điểm có màu văn viết; といったらない là cảm thán trực tiếp về mức độ."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun1 にあるまじき Noun2",
       "meaning": "Ý nghĩa: Dùng để nói một hành vi hoặc thái độ không phù hợp với vị trí, tư cách hoặc vai trò Noun",
-      "usage": "Cách dùng: Với Noun にあるまじき Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun にあるまじき Noun, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 にあるまじき Noun2 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun にあるまじき Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun1 là vai trò/tư cách/địa vị; Noun2 là hành vi hoặc thái độ bị chê là không xứng với vai trò ấy. Giọng phê phán mạnh, trang trọng.",
+      "etymology": "Gốc cấu trúc: にある nghĩa là đang ở vị trí/tư cách N, まじき là dạng cổ của まじ/まい mang nghĩa “không nên/không được”. にあるまじき nói hành vi không được có ở người thuộc vị trí N.",
+      "hanVietBridge": "ある = ở/có, まじ = không nên. 教師にあるまじき行為 = hành vi không nên có ở tư cách giáo viên.",
+      "humanMoment": "Lưu ý từ Dr. Linh: にあるまじき là câu phán xét về chuẩn vai trò. Người nói không chỉ chê hành vi sai; họ nói nó làm bẩn tư cách N.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun にあるまじき Noun cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜べきではない",
+          "contrast": "Khác べきではない: mẫu kia khuyên không nên làm; にあるまじき phê phán là không xứng với vai trò/tư cách N."
+        },
+        {
+          "pattern": "〜にふさわしくない",
+          "contrast": "ふさわしくない nói không phù hợp trung tính hơn; にあるまじき trang trọng và nặng phê phán hơn."
         }
       ],
       "fallbackReference": {

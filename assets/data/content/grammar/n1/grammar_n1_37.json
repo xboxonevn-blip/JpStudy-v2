@@ -76,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-casual + といったらありゃしない / い-Adjective + といったらありゃしない / な-Adjective + だ + といったらありゃしない / Noun + だ + といったらありゃしない",
       "meaning": "Ý nghĩa: Dùng trong văn nói để nhấn mạnh mức độ cực đoan: “khỏi phải nói là",
-      "usage": "Cách dùng: Với ～といったらありゃしない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～といったらありゃしない, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + といったらありゃしない / い-Adjective + といったらありゃしない / な-Adjective + だ + といったらありゃしない / Noun + だ + といったらありゃしない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～といったらありゃしない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Dùng trong văn nói để đẩy cảm xúc/trạng thái lên mức “không thể tả”. Hợp với lời than, khen, phàn nàn trực tiếp; sắc thái thân mật hơn ありはしない.",
+      "etymology": "Gốc cấu trúc: といったら là “nói đến X thì...”, ありゃ là dạng nói rút của ありは, しない phủ định nhấn mạnh. Cả cụm tạo cảm giác “nói đến mức X thì không còn lời nào nữa”.",
+      "hanVietBridge": "言う = nói, ある = có. 寒いといったらありゃしない = nói đến cái lạnh ấy thì không còn gì để tả.",
+      "humanMoment": "Lưu ý từ Dr. Linh: といったらありゃしない là giọng người thật đang bật cảm xúc. Nếu câu quá trang trọng, chọn ありはしない hoặc といったらない sẽ tự nhiên hơn.",
       "crossLinks": [
         {
-          "pattern": "A うと B うと",
-          "contrast": "～といったらありゃしない cần đọc theo chức năng riêng của mẫu; A うと B うと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜といったらありはしない",
+          "contrast": "Khác về register: ありゃしない là văn nói rút gọn, còn ありはしない trang trọng/viết hơn."
+        },
+        {
+          "pattern": "〜といったらない",
+          "contrast": "といったらない trung tính hơn; といったらありゃしない nghe mạnh và khẩu ngữ hơn."
         }
       ],
       "fallbackReference": {
@@ -121,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + にあっては",
       "meaning": "Ý nghĩa: Dùng để nêu một hoàn cảnh, môi trường hoặc lập trường đặc biệt, trong đó điều phía sau xảy ra hoặc được xem là đúng",
-      "usage": "Cách dùng: Với Noun にあっては, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun にあっては, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + にあっては thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun にあっては không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Danh từ trước là hoàn cảnh/môi trường đặc biệt; vế sau nêu điều xảy ra hoặc phải xét trong hoàn cảnh ấy. Sắc thái báo cáo, học thuật, trang trọng.",
+      "etymology": "Gốc cấu trúc: に đặt người/sự việc vào một nơi hay trạng thái, あって là “đang ở/có trong”, は đưa hoàn cảnh ấy lên làm chủ đề. にあっては nghĩa là “trong đúng bối cảnh N thì...”.",
+      "hanVietBridge": "ある = có/ở. 危機にあっては = trong lúc đang ở khủng hoảng.",
+      "humanMoment": "Lưu ý từ Dr. Linh: にあっては dựng sân khấu trước khi nói kết luận. Người viết muốn bạn đọc đánh giá B trong bối cảnh N, không ngoài đời thường.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun にあっては cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜において",
+          "contrast": "Khác において: において chỉ địa điểm/lĩnh vực trung tính; にあっては nhấn hoàn cảnh đặc biệt đang chi phối kết luận."
+        },
+        {
+          "pattern": "〜とあって",
+          "contrast": "とあって giải thích nguyên nhân vì có hoàn cảnh A; にあっては đặt A làm bối cảnh để xét B."
         }
       ],
       "fallbackReference": {

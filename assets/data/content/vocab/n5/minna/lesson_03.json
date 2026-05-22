@@ -1937,6 +1937,7 @@
       "order": 36,
       "tags": [
         "number",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1957,18 +1958,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s036",
-        "meaningVi": "nghìn",
+        "meaningVi": "Một nghìn",
         "meaningEn": "thousand"
       },
       "search": {
         "termNoAccent": "千",
         "readingNoAccent": "せん",
-        "meaningViNoAccent": "nghin",
+        "meaningViNoAccent": "Mot nghin",
         "hanVietNoAccent": "thien"
       },
       "links": {
         "sourceVocabId": "n5_l03_v036",
-        "sourceSenseId": "n5_l03_s036"
+        "sourceSenseId": "n5_l03_s036",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thiên"

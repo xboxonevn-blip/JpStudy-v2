@@ -1674,6 +1674,7 @@
       "order": 31,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1694,18 +1695,23 @@
       },
       "sense": {
         "senseId": "n5_l24_s031",
-        "meaningVi": "ngoài ra/ngoài ra",
+        "meaningVi": "Ngoài ra, bên cạnh đó",
         "meaningEn": "besides / in addition"
       },
       "search": {
         "termNoAccent": "他に",
         "readingNoAccent": "ほかに",
-        "meaningViNoAccent": "ngoai ra/ngoai ra",
+        "meaningViNoAccent": "Ngoai ra, ben canh do",
         "hanVietNoAccent": "tha"
       },
       "links": {
         "sourceVocabId": "n5_l24_v031",
-        "sourceSenseId": "n5_l24_s031"
+        "sourceSenseId": "n5_l24_s031",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tha"

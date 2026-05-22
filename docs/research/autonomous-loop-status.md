@@ -2630,3 +2630,9 @@
 - Skipped canonical typo candidates until their source rows are cleaned.
 - Bumped vocab seed revision to 14 so installed DBs refresh this eighth N5 meaning batch.
 - Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.
+
+## 2026-05-22 QA-A-030 N5 Minna vocab fix batch 010
+- Applied 5 curated consensus repairs for Minna N5 `新幹線`, `千`, `他に`, `大学`, and `着物`; report: `docs/research/canonical/vocab-fix-batch-n5-minna-wrong-meaning-010.md`.
+- Noted pre-existing `大学` reading/search drift for a separate wrong-reading pass; batch 010 remained meaning-only.
+- Bumped vocab seed revision to 15 so installed DBs refresh this ninth N5 meaning batch.
+- Gates passed: vocab diff/apply Node tests, example anti-template validator, example wiring validate-only, focused analyzer, DB/lesson reseed tests, and `git diff --check`.

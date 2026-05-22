@@ -573,6 +573,7 @@
       "order": 11,
       "tags": [
         "vehicle",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -595,18 +596,24 @@
       },
       "sense": {
         "senseId": "n5_l05_s011",
-        "meaningVi": "tàu Shinkansen",
+        "meaningVi": "Tàu shinkansen (tàu điện siêu tốc)",
         "meaningEn": "Shinkansen / Bullet Train"
       },
       "search": {
         "termNoAccent": "新幹線",
         "readingNoAccent": "しんかんせん",
-        "meaningViNoAccent": "tau shinkansen",
+        "meaningViNoAccent": "Tau shinkansen (tau dien sieu toc)",
         "hanVietNoAccent": "tan can tuyen"
       },
       "links": {
         "sourceVocabId": "n5_l05_v011",
-        "sourceSenseId": "n5_l05_s011"
+        "sourceSenseId": "n5_l05_s011",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tân cán tuyến"

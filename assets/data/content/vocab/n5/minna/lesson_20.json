@@ -729,6 +729,7 @@
       "order": 14,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -750,18 +751,24 @@
       },
       "sense": {
         "senseId": "n5_l20_s014",
-        "meaningVi": "Kimono",
+        "meaningVi": "Kimono (trang phục truyền thống của nhật bản)",
         "meaningEn": "Kimono"
       },
       "search": {
         "termNoAccent": "着物",
         "readingNoAccent": "きもの",
-        "meaningViNoAccent": "kimono",
+        "meaningViNoAccent": "Kimono (trang phuc truyen thong cua nhat ban)",
         "hanVietNoAccent": "truoc vat"
       },
       "links": {
         "sourceVocabId": "n5_l20_v014",
-        "sourceSenseId": "n5_l20_s014"
+        "sourceSenseId": "n5_l20_s014",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trước vật"

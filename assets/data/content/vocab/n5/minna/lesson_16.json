@@ -2811,6 +2811,7 @@
       "order": 52,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2832,18 +2833,23 @@
       },
       "sense": {
         "senseId": "n5_l16_s052",
-        "meaningVi": "đại học",
+        "meaningVi": "Trường đại học",
         "meaningEn": "university"
       },
       "search": {
         "termNoAccent": "大学",
         "readingNoAccent": "たいかく",
-        "meaningViNoAccent": "dai hoc",
+        "meaningViNoAccent": "Truong dai hoc",
         "hanVietNoAccent": "dai hoc"
       },
       "links": {
         "sourceVocabId": "n5_l16_v052",
-        "sourceSenseId": "n5_l16_s052"
+        "sourceSenseId": "n5_l16_s052",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đại học"

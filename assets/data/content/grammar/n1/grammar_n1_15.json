@@ -20,10 +20,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ない form + ではおかない",
-      "meaning": "Ý nghĩa: Dùng để nói điều gì chắc chắn sẽ khiến một hành động hoặc phản ứng xảy ra; không thể để yên mà không làm.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜ないではおかない là dạng phủ định ないで cộng は và 置かない: không để yên. Nghĩa là không để tình huống trôi qua mà không A.",
+      "hanVietBridge": "置 có âm Hán-Việt là trí/đặt. おかない là không đặt yên; ないではおかない là không để yên trong trạng thái chưa A.",
+      "form": "Hình thức: động từ thể ない + ではおかない. Ví dụ 注意しないではおかない, 泣かせないではおかない.",
+      "meaning": "Ý nghĩa: Chắc chắn sẽ A hoặc chắc chắn khiến A xảy ra; không thể để yên mà không A. Mạnh và trang trọng.",
+      "usage": "Sử dụng: Thường chủ thể là người/sự việc gây phản ứng: この映画は観客を泣かせないではおかない. Tránh biến bị động như 怒られないではおかない.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ないではおかない gần 〜ずにはおかない, nhưng ないではおかない rõ dạng hiện đại hơn; cả hai nhấn không để yên mà không A.",
+      "crossLinks": [
+        {
+          "pattern": "〜ずにはおかない",
+          "contrast": "Khác nhẹ với 〜ないではおかない: 〜ずにはおかない cổ/trang trọng hơn; 〜ないではおかない hiện đại và dễ nhận hình hơn."
+        },
+        {
+          "pattern": "〜ないではすまない",
+          "contrast": "〜ないではすまない nhấn trách nhiệm không làm thì không xong; 〜ないではおかない nhấn chắc chắn sẽ làm/gây A."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -54,10 +66,22 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ない form + ではすまない",
-      "meaning": "Ý nghĩa: Dùng để nói không thể không làm vì trách nhiệm, đạo lý hoặc áp lực xã hội.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc của 〜ないではすまない là ないで cộng は và 済まない/すまない: không xong, không ổn. Không A thì chuyện chưa thể kết thúc ổn thỏa.",
+      "hanVietBridge": "済 có thể nhớ qua nghĩa Nhật là xong việc/qua chuyện. すまない là không xong; ないではすまない là không làm A thì không thể xong.",
+      "form": "Hình thức: động từ thể ない + ではすまない. Ví dụ 謝らないではすまない, 弁償しないではすまない.",
+      "meaning": "Ý nghĩa: Không thể không A vì trách nhiệm, đạo lý, quy tắc hoặc áp lực xã hội; không A thì không ổn.",
+      "usage": "Sử dụng: Hợp với 謝る, 説明する, 報告する, 弁償する. Nếu là tác phẩm khiến người ta khóc, ないではおかない tự nhiên hơn.",
+      "humanMoment": "Dr. Linh lưu ý: 〜ないではすまない khác 〜ないではおかない. すまない là món nợ phải xử lý; おかない là lực chắc chắn làm/gây A.",
+      "crossLinks": [
+        {
+          "pattern": "〜ずにはすまない",
+          "contrast": "Khác nhẹ với 〜ないではすまない: 〜ずにはすまない cổ/trang trọng hơn; nghĩa trách nhiệm không làm thì không xong giống nhau."
+        },
+        {
+          "pattern": "〜ないではおかない",
+          "contrast": "〜ないではおかない nhấn chắc chắn làm/gây A; 〜ないではすまない nhấn nghĩa vụ không làm thì không ổn."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -2787,3 +2787,9 @@
 - Replaced pseudo `〜つ〜つ` examples with natural fixed alternation pairs and rewrote `〜てはVerb` examples as real repeated-action cycles.
 - Global Directive E validator progress is now `135/1123`; next failure starts at `grammar:n1:grammar_n1_14:008`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 012
+- Re-authored N1 rows `〜てまでも`, `〜てみせる`, `〜てやまない`, `〜ないではおかない`, and `〜ないではすまない`.
+- Repaired weak `〜てみせる` examples and corrected `〜ないではおかない`/`〜ないではすまない` examples so force vs obligation is no longer blurred.
+- Global Directive E validator progress is now `140/1123`; next failure starts at `grammar:n1:grammar_n1_15:003`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, and `git diff --check`.

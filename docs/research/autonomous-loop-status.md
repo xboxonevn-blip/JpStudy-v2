@@ -2961,3 +2961,9 @@
 - Replaced topic/label filler with colloquial rebuttal, all-of-one-kind, unresolved-consequence, considered-basis, and intention/self-assumption guidance.
 - Global Directive E validator progress is now `280/1123`; next failure starts at `grammar:n1:grammar_n1_30:003`.
 - Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.
+
+## 2026-05-22 Phase G Directive E redo batch 041
+- Re-authored N1 rows `Noun なしでは〜ない`, `Noun を限りに`, `〜つもりで`, `Noun なしには〜ない`, and `Noun 並み`.
+- Replaced generic labels with indispensable-absence, endpoint-limit, intention-stance, strong absence condition, and level-equivalence guidance.
+- Global Directive E validator progress is now `285/1123`; next failure starts at `grammar:n1:grammar_n1_32:002`.
+- Gates passed: 5 item-level Directive E validator checks, ranked Tier-1 validator `80/80`, global Directive E progress check, Directive E validator unit test, upper-JLPT/content grammar tests, grammar detail screen test, grammar example quality test, and `git diff --check`.

@@ -26,13 +26,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + を限りに",
       "meaning": "Ý nghĩa: Dùng để chỉ Noun là mốc kết thúc hoặc mốc thay đổi của một hoạt động, trạng thái hay quan hệ",
-      "usage": "Cách dùng: Với Noun を限りに, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun を限りに, lõi 限り là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + を限りに thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun を限りに không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun thường là ngày tháng, năm học, sự kiện cuối, hôm nay. Vế sau nói kết thúc, nghỉ, dừng, đổi trạng thái.",
+      "etymology": "Gốc cấu trúc: 限り là giới hạn/ranh cuối, を đánh dấu mốc được chọn, に biến mốc ấy thành điểm chuyển. Noun を限りに nghĩa là lấy N làm ranh cuối để kết thúc hoặc đổi hướng.",
+      "hanVietBridge": "限 là hạn. 今日を限りに = lấy hôm nay làm hạn cuối/từ hôm nay chấm dứt.",
+      "humanMoment": "Lưu ý từ Dr. Linh: を限りに nghe như vạch một đường ranh. 今日を限りにやめる là từ hôm nay cắt trạng thái cũ.",
       "crossLinks": [
         {
-          "pattern": "Verbる / Noun(である) + 限り(は) (kagiri (wa))",
-          "contrast": "Noun を限りに cần đọc theo chức năng riêng của mẫu; Verbる / Noun(である) + 限り(は) (kagiri (wa)) có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜限り",
+          "contrast": "Khác を限りに: 〜限り có thể là phạm vi/chừng nào; を限りに đặt một mốc kết thúc hoặc chuyển đổi."
+        },
+        {
+          "pattern": "〜を最後に",
+          "contrast": "〜を最後に cũng lấy A làm lần cuối; を限りに trang trọng hơn và hay dùng với ngày/sự kiện mốc."
         }
       ],
       "fallbackReference": {
@@ -71,13 +76,18 @@
     "directiveE": {
       "form": "Cấu trúc: Verb-dictionary form + つもりで",
       "meaning": "Ý nghĩa: Dùng để nói làm một việc với ý định, tâm thế hoặc giả định như X",
-      "usage": "Cách dùng: Với ～つもりで, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～つもりで, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + つもりで thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～つもりで không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Vế trước là ý định/tâm thế giả định, vế sau là hành động thực hiện trong tâm thế đó: 合格するつもりで勉強する.",
+      "etymology": "Gốc cấu trúc: つもり là ý định/tự nhận thức đã hình thành, で biến nó thành trạng thái/cách làm. 〜つもりで nghĩa là hành động sau được thực hiện trong tâm thế X.",
+      "hanVietBridge": "積 là tích trong つもり/積もり: ý nghĩ tích lại. つもりで = với ý định/tâm thế đã đặt sẵn.",
+      "humanMoment": "Lưu ý từ Dr. Linh: つもりで không chốt kế hoạch như つもりだ; nó đặt tâm thế cho hành động sau. 住むつもりで勉強する là học như thể sẽ sống ở đó.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "～つもりで cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜つもりだ",
+          "contrast": "Khác つもりで: つもりだ chốt ý định; つもりで dùng ý định/tâm thế đó làm cách thực hiện hành động sau."
+        },
+        {
+          "pattern": "〜ようと思って",
+          "contrast": "ようと思って là nghĩ định làm; つもりで có thể mạnh hơn, như nhập vai hoặc giả định mình đang ở trạng thái đó."
         }
       ],
       "fallbackReference": {
@@ -116,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + なしには + Verb-negative",
       "meaning": "Ý nghĩa: Dùng để nói rằng nếu không có Noun thì điều phía sau không thể xảy ra",
-      "usage": "Cách dùng: Với Noun なしには～ない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun なしには～ない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + なしには + Verb-negative thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun なしには～ない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun là điều kiện không thể thiếu: お金, 愛情, 協力, 彼. Vế sau phải phủ định khả năng xảy ra hoặc tiếp tục.",
+      "etymology": "Gốc cấu trúc: なし là thiếu/không có, に đặt thiếu vắng ấy làm điều kiện trọng tâm, は nêu chủ đề, vế sau phủ định. Noun なしには〜ない nhấn “thiếu N thì tuyệt đối không”.",
+      "hanVietBridge": "なし = không có; には đóng vai điều kiện nhấn mạnh. 水なしには生きていけない = thiếu nước thì không thể sống.",
+      "humanMoment": "Lưu ý từ Dr. Linh: なしには〜ない mạnh hơn cảm giác thiếu thông thường. Nó chỉ thứ nếu rút ra thì cả vế sau không vận hành.",
       "crossLinks": [
         {
-          "pattern": "A にしろ B にしろ",
-          "contrast": "Noun なしには～ない cần đọc theo chức năng riêng của mẫu; A にしろ B にしろ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なしでは〜ない",
+          "contrast": "Gần nghĩa, nhưng なしには nhấn điều kiện không thể thiếu hơn; なしでは đặt hoàn cảnh thiếu N tự nhiên hơn."
+        },
+        {
+          "pattern": "〜なくして〜ない",
+          "contrast": "なくして〜ない trang trọng/lập luận; なしには〜ない trực tiếp hơn trong điều kiện không có N."
         }
       ],
       "fallbackReference": {

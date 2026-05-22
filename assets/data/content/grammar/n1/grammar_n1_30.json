@@ -126,13 +126,18 @@
     "directiveE": {
       "form": "Cấu trúc: Noun + なしでは～ない",
       "meaning": "Ý nghĩa: Dùng để nói điều phía sau không thể xảy ra nếu thiếu Noun",
-      "usage": "Cách dùng: Với Noun なしでは～ない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun なしでは～ない, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + なしでは～ない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun なしでは～ない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "usage": "Cách dùng: Noun là điều kiện tối thiểu như 水, 助け, 許可, 資金. Vế sau phải phủ định khả năng/tồn tại/vận hành.",
+      "etymology": "Gốc cấu trúc: なし là “không có”, では đặt nó làm điều kiện, vế sau phủ định kết quả. Noun なしでは〜ない nghĩa là nếu thiếu N thì kết quả sau không đứng được.",
+      "hanVietBridge": "なし = không có. 彼の助けなしでは解決できない = không có sự giúp đỡ của anh ấy thì không giải quyết được.",
+      "humanMoment": "Lưu ý từ Dr. Linh: なしでは〜ない không chỉ dịch “without”. Hãy tìm thứ làm nền sống còn; thiếu nó thì vế sau sụp.",
       "crossLinks": [
         {
-          "pattern": "Verbる までもない",
-          "contrast": "Noun なしでは～ない cần đọc theo chức năng riêng của mẫu; Verbる までもない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜なしには〜ない",
+          "contrast": "Gần nghĩa, nhưng なしには thường nhấn điều kiện không thể thiếu mạnh hơn; なしでは đặt điều kiện thiếu N tự nhiên hơn trong câu."
+        },
+        {
+          "pattern": "〜なくして〜ない",
+          "contrast": "なくして〜ない trang trọng/lập luận hơn; なしでは〜ない trực tiếp và dễ dùng hơn."
         }
       ],
       "fallbackReference": {

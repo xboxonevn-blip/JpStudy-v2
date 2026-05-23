@@ -125,3 +125,6 @@ tmp/
 *-credentials.json
 jpstudy-v2-*.json
 .config/
+
+# QA local server PID (Codex live-proof tooling)
+.qa_http_server.pid

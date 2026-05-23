@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: Nの / V辞書 + ために",
-      "meaning": "Ý nghĩa: Diễn tả mục đích hoặc lý do theo văn phong trang trọng",
-      "usage": "Cách dùng: Với 〜ために, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜ために, lõi ため là mảnh giữ nhịp ngữ pháp. Hãy tách Nの / V辞書 + ために thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜ために không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Nの / V辞書 + ために: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Nの / V辞書 + ために, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 為 = vi, làm vì mục đích hoặc nguyên nhân; vì vậy ため thường nối lý do/mục tiêu. Khi mẫu Nの / V辞書 + ために không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Nの / V辞書 + ために. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả mục đích hoặc lý do theo văn phong trang trọng. Với Nの / V辞書 + ために, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Nの / V辞書 + ために xoay quanh mối nối nguyên nhân. Khác 〜ように, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang vẻ hoặc hướng.",
       "crossLinks": [
         {
-          "pattern": "〜ため（理由）",
-          "contrast": "〜ために cần đọc theo chức năng riêng của mẫu; 〜ため（理由） có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜ように",
+          "contrast": "Khác Nの / V辞書 + ために: 〜ように nghiêng về vẻ hoặc hướng, còn Nの / V辞書 + ために nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với よう giữ hình ảnh \"dáng như vậy\" trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

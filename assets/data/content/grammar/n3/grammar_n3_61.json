@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: N + にとって",
-      "meaning": "Ý nghĩa: Diễn tả ý nghĩa, giá trị hoặc đánh giá từ góc nhìn của một người, nhóm người hay lập trường cụ thể",
-      "usage": "Cách dùng: Với 〜にとって, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜にとって, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách N + にとって thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜にとって không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của N + にとって: nhóm lập trường đặt danh từ làm chủ đề, đối tượng, vai trò, phạm vi hoặc điều kiện trách nhiệm.. Trong công thức N + にとって, danh từ trước に/として/上; vì vậy phần 立場 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N + にとって không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lập trường/phạm vi - dấu hiệu\". Nhìn mẫu lập trường hỏi câu đang nhìn từ vị trí nào như ký hiệu chức năng báo phạm vi, vai trò, hoặc lập trường, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N + にとって. Dấu cần khóa là danh từ trước に/として/上; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả ý nghĩa, giá trị hoặc đánh giá từ góc nhìn của một người, nhóm người hay lập trường cụ thể. Với N + にとって, trọng tâm là phạm vi, vai trò, hoặc lập trường; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu là điểm nhìn chính; phân biệt đối tượng bàn luận, đối tượng đối diện, và vai trò được gán.. Nếu dạng đứng trước lệch khỏi 立場, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + にとって xoay quanh điểm nhìn danh từ. Khác 関連する近い文型, mẫu kia thường đổi từ chủ đề sang đối tượng đối diện hoặc vai trò; gặp mẫu lập trường hỏi câu đang nhìn từ vị trí nào thì giữ nghĩa lập trường/phạm vi, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜にとって cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác N + にとって: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N + にとって nghiêng về lập trường/phạm vi. So dấu mẫu lập trường hỏi câu đang nhìn từ vị trí nào với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

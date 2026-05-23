@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A。要するに B。",
-      "meaning": "Ý nghĩa: Dùng khi tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B",
-      "usage": "Cách dùng: Với A。要するに B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。要するに B。, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách A。要するに B。 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。要するに B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A。要するに B。: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. Trong công thức A。要するに B。, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A。要するに B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B - dấu hiệu\". Nhìn に như ký hiệu chức năng báo tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A。要するに B。. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. Với A。要するに B。, trọng tâm là tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A。要するに B。 khi muốn biểu thị tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A。要するに B。 xoay quanh に trong A。要するに B。 báo tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. Khác 関連する近い文型, A。要するに B。 giữ trọng tâm tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A。おまけに B。",
-          "contrast": "A。要するに B。 cần đọc theo chức năng riêng của mẫu; A。おまけに B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác A。要するに B。: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A。要するに B。 nghiêng về tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. So dấu に với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

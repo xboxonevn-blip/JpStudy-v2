@@ -215,6 +215,15 @@ const FALLBACK_FACTS = {
   ],
 };
 
+const PLACE_VI = {
+  '駅前のベンチ': 'ghế trước nhà ga',
+  '図書館の静かな席': 'chỗ ngồi yên tĩnh trong thư viện',
+  '教室の後ろ': 'cuối lớp học',
+  '地域センターの掲示板': 'bảng thông báo của trung tâm khu phố',
+  '会社の休憩室': 'phòng nghỉ ở công ty',
+  '公民館の入口': 'lối vào nhà văn hóa',
+};
+
 function buildReadingPassages({
   contentRoot = path.join(process.cwd(), 'assets', 'data', 'content'),
   generatedAt = DEFAULT_GENERATED_AT,
@@ -282,7 +291,7 @@ function buildPassage({ scope, lesson, passageIndex, theme, facts, generatedAt }
     passage_index: passageIndex,
     title,
     ja_text: jaText,
-    vi_translation: viTranslation({ scope, lesson, passageIndex, theme, conceptVi }),
+    vi_translation: viTranslation({ scope, lesson, passageIndex, theme, conceptVi, jaText }),
     grammars_used: concepts
       .filter((fact) => fact.kind === 'grammar')
       .map((fact) => fact.id),
@@ -358,13 +367,62 @@ function fitLength(level, paragraphs) {
   return fitted;
 }
 
-function viTranslation({ scope, lesson, passageIndex, theme, conceptVi }) {
-  return [
-    `Bài đọc gốc JpStudy cho ${scope.textbook} ${scope.lessonLabel(lesson)}, đoạn ${passageIndex}.`,
-    `Trọng tâm: ${theme.topicVi}.`,
-    `Từ/mẫu neo: ${conceptVi}.`,
-    'Mục tiêu đọc: nắm ý chính, chi tiết then chốt và suy luận bước tiếp theo.',
-  ].join(' ');
+function viTranslation({ scope, passageIndex, theme, conceptVi, jaText }) {
+  const actor = theme.actor;
+  const place = PLACE_VI[theme.place] || 'một địa điểm học tập';
+  const lessonLine = `Đây là bài luyện đọc hiểu số ${passageIndex} của bài này.`;
+  const slowRead = jaText.includes('もう一度')
+    ? ' Cuối cùng, bạn ấy đọc lại chậm thêm một lần nữa.'
+    : '';
+
+  if (scope.level === 'N5') {
+    return `${actor} đọc tiếng Nhật ở ${place}. Trong vở có ${conceptVi}. Sau khi ${theme.detailVi}, ${actor} viết một câu ngắn. Giáo viên nhắc: "Hãy nhìn thứ tự." ${lessonLine}${slowRead}`;
+  }
+  if (scope.level === 'N4') {
+    return `${actor} ở ${place}, xem lại lịch hôm nay và ghi chú tiếng Nhật. Ghi chú có ${conceptVi}; những từ dễ giống nhau được gạch riêng ra. Vì ${theme.detailVi}, sau đó bạn ấy có thể hành động mà không bị lúng túng. Giáo viên dặn đừng vội chọn đáp án, hãy tìm thời gian và lý do ngay trong bài. ${lessonLine}${slowRead}`;
+  }
+  if (scope.level === 'N3') {
+    return `${actor} ở ${place}, đọc một bản ghi ngắn về ${theme.topicVi}. Trong bản ghi xuất hiện ${conceptVi}. Ban đầu bạn ấy chỉ đuổi theo nghĩa từng từ, nhưng giữa chừng chuyển sang lập bảng "ai, khi nào, đã quyết định điều gì". Khi hiểu chi tiết ${theme.detailVi}, mạch toàn bài cũng rõ hơn. Giáo viên khuyên trước khi dịch hết từ khó, hãy nối lý do và kết quả thành một đường. ${lessonLine}${slowRead}`;
+  }
+  if (scope.level === 'N2') {
+    return `Tờ hướng dẫn được phát ở ${place} giải thích việc ${theme.topicVi}. ${actor} đánh dấu ${conceptVi}, rồi tách điều kiện ra khỏi ngoại lệ. Bài viết phân biệt phần người tham gia được tự do làm và phần cần xác nhận trước. Vì ${theme.detailVi}, căn cứ để chọn đáp án không nằm ở một câu riêng lẻ mà ở quan hệ trước sau. Ghi chú lớp của Dr. Linh-Phan-Tran nhắc rằng câu lịch sự trong tiếng Nhật đôi khi dồn kết luận về phía sau; đọc theo thứ tự điều kiện, lý do, kết luận sẽ chắc hơn. ${lessonLine}${slowRead}`;
+  }
+  return `${actor} ở ${place}, đọc một bài viết xoay quanh việc ${theme.topicVi}. Bài không chỉ thông báo sự việc, mà còn buộc người đọc cân nhắc thông tin nào cần ưu tiên. Những biểu thức như ${conceptVi} phải được đọc theo vai trò trong đoạn, không chỉ theo nghĩa từ điển. Phần đầu nêu bối cảnh, phần giữa giới thiệu một cách nhìn khác; sau đó chi tiết ${theme.detailVi} trở thành trục phán đoán. Nếu bỏ sót trục này, từng lựa chọn có thể nghe đúng nhưng vẫn lệch với ý bài. Ghi chú đọc hiểu của Dr. Linh-Phan-Tran nhấn mạnh: ở bài nâng cao, điều cần chọn không phải câu "đúng" chung chung mà là đáp án bài viết đang yêu cầu. ${lessonLine}${slowRead}`;
+}
+
+function populateReadingVocabsFromInterlinkGraph(readingPassages, graph, { maxPerPassage = 24 } = {}) {
+  const vocabNodes = (graph?.nodes || [])
+    .filter((node) => node[1] === 'vocab' && node[0] && node[3])
+    .map((node) => ({
+      id: shortVocabId(node[0]),
+      level: node[2],
+      term: String(node[3] || ''),
+    }))
+    .filter((node) => node.id && scannableTerm(node.term))
+    .sort((a, b) => b.term.length - a.term.length || a.id.localeCompare(b.id));
+
+  const passages = (readingPassages.passages || []).map((passage) => {
+    const seen = new Set(passage.vocabs_used || []);
+    const matches = [];
+    const cap = Math.min(levelRank(passage.level) + 1, levelRank('N1'));
+    for (const vocab of vocabNodes) {
+      if (levelRank(vocab.level) > cap) continue;
+      const index = String(passage.ja_text || '').indexOf(vocab.term);
+      if (index < 0 || seen.has(vocab.id)) continue;
+      seen.add(vocab.id);
+      matches.push({ id: vocab.id, index, length: vocab.term.length });
+    }
+    matches.sort((a, b) => a.index - b.index || b.length - a.length || a.id.localeCompare(b.id));
+    return {
+      ...passage,
+      vocabs_used: [
+        ...(passage.vocabs_used || []),
+        ...matches.map((match) => match.id),
+      ].slice(0, maxPerPassage),
+    };
+  });
+
+  return { ...readingPassages, passages };
 }
 
 function buildQuestions({ scope, theme, seed, passageIndex }) {
@@ -517,7 +575,11 @@ function writeReadingPassages({
   contentRoot = path.join(process.cwd(), 'assets', 'data', 'content'),
   generatedAt = DEFAULT_GENERATED_AT,
 } = {}) {
-  const payload = buildReadingPassages({ contentRoot, generatedAt });
+  let payload = buildReadingPassages({ contentRoot, generatedAt });
+  const graphPath = path.join(contentRoot, 'interlink_graph', 'interlink_graph.json');
+  if (fs.existsSync(graphPath)) {
+    payload = populateReadingVocabsFromInterlinkGraph(payload, readJson(graphPath));
+  }
   const target = path.join(contentRoot, 'reading_passages', 'reading_passages_corpus.json');
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
@@ -603,5 +665,20 @@ module.exports = {
   LEVEL_LENGTH_RANGES,
   TARGET_SCOPES,
   buildReadingPassages,
+  populateReadingVocabsFromInterlinkGraph,
   writeReadingPassages,
 };
+
+function shortVocabId(nodeId) {
+  return String(nodeId || '').replace(/^vocab:n[1-5]:/i, '');
+}
+
+function scannableTerm(term) {
+  if (!term || term.includes('～')) return false;
+  if (Array.from(term).length >= 2) return true;
+  return /[\u3040-\u30ff]/.test(term) && Array.from(term).length >= 3;
+}
+
+function levelRank(level) {
+  return ({ N5: 1, N4: 2, N3: 3, N2: 4, N1: 5 })[String(level || '').toUpperCase()] || 1;
+}

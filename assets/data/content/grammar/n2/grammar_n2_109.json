@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない",
-      "meaning": "Ý nghĩa: Dùng để phủ định mạnh khả năng xảy ra của một việc, dựa trên lý lẽ hoặc cảm giác chắc chắn",
-      "usage": "Cách dùng: Với ～わけがない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～わけがない, lõi わけ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～わけがない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない: わけ mang nghĩa lý do/lẽ; mẫu dùng nó để kết luận điều hợp logic hoặc phủ định một suy diễn.. Trong công thức Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない, mệnh đề thường trước わけ; vì vậy phần わけ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do logic - dấu hiệu\". Nhìn わけ hỏi \"vì lẽ nào kết luận này đúng\" như ký hiệu chức năng báo lý do, lẽ phải, hoặc suy luận, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない. Dấu cần khóa là mệnh đề thường trước わけ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để phủ định mạnh khả năng xảy ra của một việc, dựa trên lý lẽ hoặc cảm giác chắc chắn. Với Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない, trọng tâm là lý do, lẽ phải, hoặc suy luận; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu đang giải thích vì sao kết luận hợp lý, không hợp lý, hoặc không thể làm vì ràng buộc xã hội.. Nếu dạng đứng trước lệch khỏi わけ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない xoay quanh lẽ/suy luận của わけ. Khác 〜はずだ, mẫu kia thường nói kỳ vọng bằng はず hoặc quyết định bằng こと; gặp わけ hỏi \"vì lẽ nào kết luận này đúng\" thì giữ nghĩa lý do logic, đừng kéo sang kỳ vọng.",
       "crossLinks": [
         {
-          "pattern": "～わけだ",
-          "contrast": "～わけがない cần đọc theo chức năng riêng của mẫu; ～わけだ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜はずだ",
+          "contrast": "Khác Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない: 〜はずだ nghiêng về kỳ vọng, còn Verb-casual + わけがない, い-Adjective + わけがない, な-Adjective + なわけがない, Noun + な/であるわけがない nghiêng về lý do logic. So dấu わけ hỏi \"vì lẽ nào kết luận này đúng\" với はず cần một căn cứ trong đầu người nói trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

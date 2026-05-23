@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A (sentence) + なお + B (sentence)",
-      "meaning": "Ý nghĩa: Dùng để bổ sung thông tin sau nội dung chính, thường trong thông báo, văn bản trang trọng hoặc phần chú thích",
-      "usage": "Cách dùng: Với A。なおB。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。なおB。, lõi A。なおB。 là mảnh giữ nhịp ngữ pháp. Hãy tách A (sentence) + なお + B (sentence) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。なおB。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A (sentence) + なお + B (sentence): 尊敬語 nâng hành động của người trên hoặc khách lên; お/ご là tiền tố lịch sự, còn になる/ください gắn vào khung kính trọng.. Trong công thức A (sentence) + なお + B (sentence), お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; vì vậy phần 尊敬語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A (sentence) + なお + B (sentence) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"kính trọng - dấu hiệu\". Nhìn 尊敬語 hỏi hành động thuộc về ai để nâng người đó như ký hiệu chức năng báo nâng hành động của người khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A (sentence) + なお + B (sentence). Dấu cần khóa là お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để bổ sung thông tin sau nội dung chính, thường trong thông báo, văn bản trang trọng hoặc phần chú thích. Với A (sentence) + なお + B (sentence), trọng tâm là nâng hành động của người khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động của người nghe/người được kính trọng; không dùng để tự nâng hành động của mình.. Nếu dạng đứng trước lệch khỏi 尊敬語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A (sentence) + なお + B (sentence) xoay quanh đối tượng được nâng lên. Khác 謙譲語, mẫu kia có thể là khiêm nhường, tức hạ hành động của mình thay vì nâng người khác; gặp 尊敬語 hỏi hành động thuộc về ai để nâng người đó thì giữ nghĩa kính trọng, đừng kéo sang khiêm nhường.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "A。なおB。 cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "謙譲語",
+          "contrast": "Khác A (sentence) + なお + B (sentence): 謙譲語 nghiêng về khiêm nhường, còn A (sentence) + なお + B (sentence) nghiêng về kính trọng. So dấu 尊敬語 hỏi hành động thuộc về ai để nâng người đó với 謙譲語 không nâng mình mà hạ phía mình trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

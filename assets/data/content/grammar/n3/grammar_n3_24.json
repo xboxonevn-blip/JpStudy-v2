@@ -15,10 +15,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N + ほど + いAくない / なAではない / Vない",
-      "meaning": "Ý nghĩa: Diễn tả so sánh phủ định: không đến mức như.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của N + ほど + いAくない / なAではない / Vない: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức N + ほど + いAくない / なAではない / Vない, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N + ほど + いAくない / なAではない / Vない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N + ほど + いAくない / なAではない / Vない. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả so sánh phủ định: không đến mức như. Với N + ほど + いAくない / なAではない / Vない, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + ほど + いAくない / なAではない / Vない xoay quanh ranh giới lượng. Khác V普通形 / いA / なA(だ) / N(だ) + というより, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang nội dung/trích dẫn.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なA(だ) / N(だ) + というより",
+          "contrast": "Khác N + ほど + いAくない / なAではない / Vない: V普通形 / いA / なA(だ) / N(だ) + というより nghiêng về nội dung/trích dẫn, còn N + ほど + いAくない / なAではない / Vない nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -44,16 +52,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なA(だ) / N(だ) + というより",
-      "meaning": "Ý nghĩa: Dùng để chỉnh lại cách diễn đạt cho chính xác hơn.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なA(だ) / N(だ) + というより: nhóm trích dẫn/suy đoán dùng と hoặc か để đóng gói lời, ý nghĩ, câu hỏi, hoặc mức chắc chắn của người nói.. Trong công thức V普通形 / いA / なA(だ) / N(だ) + というより, mệnh đề thường trước と/か/でしょう; vì vậy phần 引用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なA(だ) / N(だ) + というより không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なA(だ) / N(だ) + というより. Dấu cần khóa là mệnh đề thường trước と/か/でしょう; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để chỉnh lại cách diễn đạt cho chính xác hơn. Với V普通形 / いA / なA(だ) / N(だ) + というより, trọng tâm là nội dung được trích, hỏi gián tiếp, hoặc phỏng đoán; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả câu trước mẫu là nội dung trong đầu/lời nói; kiểm tra だ với danh từ và tính từ na.. Nếu dạng đứng trước lệch khỏi 引用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なA(だ) / N(だ) + というより xoay quanh nội dung được đóng gói. Khác Nより Nのほうが + A, mẫu kia có thể là truyền văn từ nguồn khác hoặc phỏng đoán mức khác; gặp mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói thì giữ nghĩa nội dung/trích dẫn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Nより Nのほうが + A",
+          "contrast": "Khác V普通形 / いA / なA(だ) / N(だ) + というより: Nより Nのほうが + A nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn V普通形 / いA / なA(だ) / N(だ) + というより nghiêng về nội dung/trích dẫn. So dấu mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói với が trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -73,10 +89,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Nより Nのほうが + A",
-      "meaning": "Ý nghĩa: Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Nより Nのほうが + A: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. Trong công thức Nより Nのほうが + A, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Nより Nのほうが + A không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Nより Nのほうが + A. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. Với Nより Nのほうが + A, trọng tâm là Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Nより Nのほうが + A khi muốn biểu thị Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Nより Nのほうが + A xoay quanh が trong Nより Nのほうが + A báo Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. Khác N + に比べて, Nより Nのほうが + A giữ trọng tâm Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "N + に比べて",
+          "contrast": "Khác Nより Nのほうが + A: N + に比べて nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Nより Nのほうが + A nghiêng về Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. So dấu が với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -101,10 +125,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N + に比べて",
-      "meaning": "Ý nghĩa: Diễn tả so sánh với đối tượng khác.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của N + に比べて: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Diễn tả so sánh với đối tượng khác. Trong công thức N + に比べて, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N + に比べて không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Diễn tả so sánh với đối tượng khác - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Diễn tả so sánh với đối tượng khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N + に比べて. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả so sánh với đối tượng khác. Với N + に比べて, trọng tâm là Diễn tả so sánh với đối tượng khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng N + に比べて khi muốn biểu thị Diễn tả so sánh với đối tượng khác; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + に比べて xoay quanh に trong N + に比べて báo Diễn tả so sánh với đối tượng khác. Khác N + ほど + いAくない / なAではない / Vない, N + に比べて giữ trọng tâm Diễn tả so sánh với đối tượng khác, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Diễn tả so sánh với đối tượng khác, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "N + ほど + いAくない / なAではない / Vない",
+          "contrast": "Khác N + に比べて: N + ほど + いAくない / なAではない / Vない nghiêng về giới hạn, còn N + に比べて nghiêng về Diễn tả so sánh với đối tượng khác. So dấu に với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

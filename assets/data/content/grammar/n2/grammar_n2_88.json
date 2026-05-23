@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Sentence A +。それで+ Sentence B。",
-      "meaning": "Ý nghĩa: Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B",
-      "usage": "Cách dùng: Với A。それで B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。それで B。, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Sentence A +。それで+ Sentence B。 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。それで B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Sentence A +。それで+ Sentence B。: で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. Trong công thức Sentence A +。それで+ Sentence B。, dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A +。それで+ Sentence B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B - dấu hiệu\". Nhìn で như ký hiệu chức năng báo Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A +。それで+ Sentence B。. Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. Với Sentence A +。それで+ Sentence B。, trọng tâm là Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Sentence A +。それで+ Sentence B。 khi muốn biểu thị Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A +。それで+ Sentence B。 xoay quanh で trong Sentence A +。それで+ Sentence B。 báo Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. Khác 関連する近い文型, Sentence A +。それで+ Sentence B。 giữ trọng tâm Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～てからでないと",
-          "contrast": "A。それで B。 cần đọc theo chức năng riêng của mẫu; ～てからでないと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Sentence A +。それで+ Sentence B。: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Sentence A +。それで+ Sentence B。 nghiêng về Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. So dấu で với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

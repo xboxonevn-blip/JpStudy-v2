@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + 次第で",
-      "meaning": "Ý nghĩa: Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố",
-      "usage": "Cách dùng: Với ～次第で, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～次第で, lõi 次第 là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + 次第で thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～次第で không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun + 次第で: で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố. Trong công thức Noun + 次第で, dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + 次第で không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố - dấu hiệu\". Nhìn で như ký hiệu chức năng báo Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + 次第で. Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố. Với Noun + 次第で, trọng tâm là Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun + 次第で khi muốn biểu thị Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + 次第で xoay quanh で trong Noun + 次第で báo Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố. Khác 関連する近い文型, Noun + 次第で giữ trọng tâm Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～次第",
-          "contrast": "～次第で cần đọc theo chức năng riêng của mẫu; ～次第 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Noun + 次第で: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun + 次第で nghiêng về Dùng để nói kết quả hoặc quyết định thay đổi tùy theo một yếu tố. So dấu で với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

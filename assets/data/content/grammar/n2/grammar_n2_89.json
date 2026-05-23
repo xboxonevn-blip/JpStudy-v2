@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A (situation) + 。それでも + B (action or thought)",
-      "meaning": "Ý nghĩa: Dùng khi B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều",
-      "usage": "Cách dùng: Với A。それでも B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。それでも B。, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách A (situation) + 。それでも + B (action or thought) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。それでも B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A (situation) + 。それでも + B (action or thought): で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. Trong công thức A (situation) + 。それでも + B (action or thought), dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A (situation) + 。それでも + B (action or thought) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều - dấu hiệu\". Nhìn で như ký hiệu chức năng báo B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A (situation) + 。それでも + B (action or thought). Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. Với A (situation) + 。それでも + B (action or thought), trọng tâm là B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A (situation) + 。それでも + B (action or thought) khi muốn biểu thị B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A (situation) + 。それでも + B (action or thought) xoay quanh で trong A (situation) + 。それでも + B (action or thought) báo B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. Khác 関連する近い文型, A (situation) + 。それでも + B (action or thought) giữ trọng tâm B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～てからでないと",
-          "contrast": "A。それでも B。 cần đọc theo chức năng riêng của mẫu; ～てからでないと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác A (situation) + 。それでも + B (action or thought): 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A (situation) + 。それでも + B (action or thought) nghiêng về B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. So dấu で với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

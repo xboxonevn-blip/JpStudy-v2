@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + にほかならない",
-      "meaning": "Ý nghĩa: Dùng để nhấn mạnh rằng sự việc chính là điều được nêu, không gì khác",
-      "usage": "Cách dùng: Với ～にほかならない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～にほかならない, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + にほかならない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～にほかならない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun + にほかならない: nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức Noun + にほかならない, dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + にほかならない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"điều kiện - dấu hiệu\". Nhìn dấu điều kiện là bản lề giữa giả định và kết luận như ký hiệu chức năng báo điều kiện, nhượng bộ, hoặc giả định, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + にほかならない. Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nhấn mạnh rằng sự việc chính là điều được nêu, không gì khác. Với Noun + にほかならない, trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + にほかならない xoay quanh cửa điều kiện. Khác 〜たら, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang điều kiện.",
       "crossLinks": [
         {
-          "pattern": "A。おまけに B。",
-          "contrast": "～にほかならない cần đọc theo chức năng riêng của mẫu; A。おまけに B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たら",
+          "contrast": "Khác Noun + にほかならない: 〜たら nghiêng về điều kiện, còn Noun + にほかならない nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も)",
-      "meaning": "Ý nghĩa: Dùng để nói không chỉ A mà B cũng đúng hoặc cũng xảy ra",
-      "usage": "Cách dùng: Với ～のみならず～も, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～のみならず～も, lõi も là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も) thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～のみならず～も không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も): nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も), dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"điều kiện - dấu hiệu\". Nhìn dấu điều kiện là bản lề giữa giả định và kết luận như ký hiệu chức năng báo điều kiện, nhượng bộ, hoặc giả định, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も). Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói không chỉ A mà B cũng đúng hoặc cũng xảy ra. Với Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も), trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も) xoay quanh cửa điều kiện. Khác 〜たら, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang điều kiện.",
       "crossLinks": [
         {
-          "pattern": "～かいもなく",
-          "contrast": "～のみならず～も cần đọc theo chức năng riêng của mẫu; ～かいもなく có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たら",
+          "contrast": "Khác Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も): 〜たら nghiêng về điều kiện, còn Verb-casual + のみならず + (も), い-Adjective + のみならず + (も), な-Adjective + のみならず + (も), Noun + のみならず + (も) nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

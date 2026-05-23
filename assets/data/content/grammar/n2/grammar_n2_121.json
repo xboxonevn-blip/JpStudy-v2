@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-dictionary form + 一方だ",
-      "meaning": "Ý nghĩa: Dùng khi một xu hướng cứ tiếp tục theo một chiều, thường là tăng lên, giảm xuống hoặc xấu đi",
-      "usage": "Cách dùng: Với ～一方だ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～一方だ, lõi 一方 là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + 一方だ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～一方だ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + 一方だ: nhóm song song đặt hai ý cạnh nhau: đồng thời, đối lập hai mặt, hoặc một thay đổi kéo theo thay đổi khác.. Trong công thức Verb-dictionary form + 一方だ, hai vế cùng tiến hoặc đối chiếu nhau; vì vậy phần 並行 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary form + 一方だ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"song hành/đối chiếu - dấu hiệu\". Nhìn mẫu song song buộc đọc cả hai vế cùng lúc như ký hiệu chức năng báo diễn tiến song song hoặc đối lập hai mặt, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary form + 一方だ. Dấu cần khóa là hai vế cùng tiến hoặc đối chiếu nhau; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi một xu hướng cứ tiếp tục theo một chiều, thường là tăng lên, giảm xuống hoặc xấu đi. Với Verb-dictionary form + 一方だ, trọng tâm là diễn tiến song song hoặc đối lập hai mặt; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi hai vế cùng tồn tại; nếu một vế chỉ là lý do cho vế kia, chuyển sang mẫu nguyên nhân.. Nếu dạng đứng trước lệch khỏi 並行, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + 一方だ xoay quanh hai đường ý chạy song song. Khác 関連する近い文型, mẫu kia có thể là nguyên nhân-kết quả thay vì song hành; gặp mẫu song song buộc đọc cả hai vế cùng lúc thì giữ nghĩa song hành/đối chiếu, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～一方",
-          "contrast": "～一方だ cần đọc theo chức năng riêng của mẫu; ～一方 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-dictionary form + 一方だ: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-dictionary form + 一方だ nghiêng về song hành/đối chiếu. So dấu mẫu song song buộc đọc cả hai vế cùng lúc với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

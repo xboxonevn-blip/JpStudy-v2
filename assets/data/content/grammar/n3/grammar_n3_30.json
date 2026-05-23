@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: Vます語幹 + 続ける",
-      "meaning": "Ý nghĩa: Diễn tả tiếp tục duy trì hành động trong một khoảng thời gian",
-      "usage": "Cách dùng: Với 〜続ける, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜続ける, lõi 〜続ける là mảnh giữ nhịp ngữ pháp. Hãy tách Vます語幹 + 続ける thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜続ける không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Vます語幹 + 続ける: nhóm biến đổi gắn vào thân động từ/tính từ để nói quá mức, dễ/khó, trạng thái, chuẩn bị, hoàn tất hoặc kéo dài.. Trong công thức Vます語幹 + 続ける, thân từ, te-form, hoặc dạng biến đổi trước trợ động từ; vì vậy phần 変化 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vます語幹 + 続ける không có chữ Hán nổi bật để bám, nên mượn cặp ý \"biến đổi/trạng thái - dấu hiệu\". Nhìn mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì như ký hiệu chức năng báo trạng thái/kết quả/khả năng biến đổi, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vます語幹 + 続ける. Dấu cần khóa là thân từ, te-form, hoặc dạng biến đổi trước trợ động từ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả tiếp tục duy trì hành động trong một khoảng thời gian. Với Vます語幹 + 続ける, trọng tâm là trạng thái/kết quả/khả năng biến đổi; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi phần sau động từ không còn là hành động mới mà là cách nhìn kết quả hoặc mức độ của hành động trước.. Nếu dạng đứng trước lệch khỏi 変化, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vます語幹 + 続ける xoay quanh dấu biến đổi sau thân từ. Khác 関連する近い文型, mẫu kia thường đổi từ kết quả sang thói quen, chuẩn bị, hoặc cảm xúc; gặp mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì thì giữ nghĩa biến đổi/trạng thái, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜続ける cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Vます語幹 + 続ける: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Vます語幹 + 続ける nghiêng về biến đổi/trạng thái. So dấu mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

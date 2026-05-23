@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A (Statement)。それが B (Restatement or explanation of A)。",
-      "meaning": "Ý nghĩa: Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B",
-      "usage": "Cách dùng: Với A。それがB。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。それがB。, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách A (Statement)。それが B (Restatement or explanation of A)。 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。それがB。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A (Statement)。それが B (Restatement or explanation of A)。: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. Trong công thức A (Statement)。それが B (Restatement or explanation of A)。, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A (Statement)。それが B (Restatement or explanation of A)。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A (Statement)。それが B (Restatement or explanation of A)。. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. Với A (Statement)。それが B (Restatement or explanation of A)。, trọng tâm là Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A (Statement)。それが B (Restatement or explanation of A)。 khi muốn biểu thị Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A (Statement)。それが B (Restatement or explanation of A)。 xoay quanh が trong A (Statement)。それが B (Restatement or explanation of A)。 báo Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. Khác 関連する近い文型, A (Statement)。それが B (Restatement or explanation of A)。 giữ trọng tâm Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～がい",
-          "contrast": "A。それがB。 cần đọc theo chức năng riêng của mẫu; ～がい có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác A (Statement)。それが B (Restatement or explanation of A)。: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A (Statement)。それが B (Restatement or explanation of A)。 nghiêng về Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. So dấu が với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

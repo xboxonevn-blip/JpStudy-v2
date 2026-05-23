@@ -14,16 +14,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: 普通形 + んです（な形容詞 / 名詞 + なんです）",
-      "meaning": "Ý nghĩa: `んです` dùng khi muốn giải thích lý do, nói rõ tình huống phía sau câu chuyện, hoặc hỏi với sắc thái quan tâm.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 普通形 + んです（な形容詞 / 名詞 + なんです）: んです là のです rút gọn; の biến cả mệnh đề trước thành \"chuyện/điều\" để người nói giải thích.. Trong công thức 普通形 + んです（な形容詞 / 名詞 + なんです）, thể thường trước んです, danh từ và tính từ na đổi thành なんです; vì vậy phần んです không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu 普通形 + んです（な形容詞 / 名詞 + なんです） không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: 普通形 + んです（な形容詞 / 名詞 + なんです）. Dấu cần khóa là thể thường trước んです, danh từ và tính từ na đổi thành なんです; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `んです` dùng khi muốn giải thích lý do, nói rõ tình huống phía sau câu chuyện, hoặc hỏi với sắc thái quan tâm. Với 普通形 + んです（な形容詞 / 名詞 + なんです）, trọng tâm là giải thích, mở lời, hoặc nhấn nền thông tin; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu trả lời cần lý do ngầm hoặc lời dẫn mềm; không dùng như です lịch sự thông thường.. Nếu dạng đứng trước lệch khỏi んです, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: 普通形 + んです（な形容詞 / 名詞 + なんです） xoay quanh phần giải thích nằm trong ん. Khác Vて + いただけませんか, mẫu kia thường là yêu cầu/lời khuyên trực tiếp, không tạo lớp nền giải thích; gặp んです đặt một lớp giải thích phía sau câu thì giữ nghĩa giải thích, đừng kéo sang hướng lợi ích.",
+      "crossLinks": [
+        {
+          "pattern": "Vて + いただけませんか",
+          "contrast": "Khác 普通形 + んです（な形容詞 / 名詞 + なんです）: Vて + いただけませんか nghiêng về hướng lợi ích, còn 普通形 + んです（な形容詞 / 名詞 + なんです） nghiêng về giải thích. So dấu んです đặt một lớp giải thích phía sau câu với mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + いただけませんか",
-      "meaning": "Ý nghĩa: Mẫu nhờ vả rất lịch sự, mềm hơn `～てください`.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Vて + いただけませんか: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức Vて + いただけませんか, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vて + いただけませんか không có chữ Hán nổi bật để bám, nên mượn cặp ý \"hướng lợi ích - dấu hiệu\". Nhìn mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" như ký hiệu chức năng báo hướng lợi ích và độ lịch sự, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vて + いただけませんか. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Mẫu nhờ vả rất lịch sự, mềm hơn `～てください`. Với Vて + いただけませんか, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vて + いただけませんか xoay quanh hướng cho-nhận. Khác 疑問詞 + Vた + らいいですか, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang nội dung/trích dẫn.",
+      "crossLinks": [
+        {
+          "pattern": "疑問詞 + Vた + らいいですか",
+          "contrast": "Khác Vて + いただけませんか: 疑問詞 + Vた + らいいですか nghiêng về nội dung/trích dẫn, còn Vて + いただけませんか nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,16 +86,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: 疑問詞 + Vた + らいいですか",
-      "meaning": "Ý nghĩa: Dùng khi xin lời khuyên: nên làm gì, làm ở đâu, làm như thế nào thì tốt.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của 疑問詞 + Vた + らいいですか: nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức 疑問詞 + Vた + らいいですか, dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 問 = vấn/hỏi; trong 問わず, điều kiện bị gạt khỏi việc xét hỏi. Khi mẫu 疑問詞 + Vた + らいいですか không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: 疑問詞 + Vた + らいいですか. Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi xin lời khuyên: nên làm gì, làm ở đâu, làm như thế nào thì tốt. Với 疑問詞 + Vた + らいいですか, trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: 疑問詞 + Vた + らいいですか xoay quanh cửa điều kiện. Khác 普通形 + んですが（な形容詞 / 名詞 + なんですが）, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang giải thích.",
+      "crossLinks": [
+        {
+          "pattern": "普通形 + んですが（な形容詞 / 名詞 + なんですが）",
+          "contrast": "Khác 疑問詞 + Vた + らいいですか: 普通形 + んですが（な形容詞 / 名詞 + なんですが） nghiêng về giải thích, còn 疑問詞 + Vた + らいいですか nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với んです đặt một lớp giải thích phía sau câu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,16 +122,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: 普通形 + んですが（な形容詞 / 名詞 + なんですが）",
-      "meaning": "Ý nghĩa: `んですが` dùng để mở đầu phần giải thích, rồi dẫn sang lời nhờ vả, câu hỏi hoặc vấn đề muốn nói.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của 普通形 + んですが（な形容詞 / 名詞 + なんですが）: んです là のです rút gọn; の biến cả mệnh đề trước thành \"chuyện/điều\" để người nói giải thích.. Trong công thức 普通形 + んですが（な形容詞 / 名詞 + なんですが）, thể thường trước んです, danh từ và tính từ na đổi thành なんです; vì vậy phần んです không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu 普通形 + んですが（な形容詞 / 名詞 + なんですが） không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: 普通形 + んですが（な形容詞 / 名詞 + なんですが）. Dấu cần khóa là thể thường trước んです, danh từ và tính từ na đổi thành なんです; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `んですが` dùng để mở đầu phần giải thích, rồi dẫn sang lời nhờ vả, câu hỏi hoặc vấn đề muốn nói. Với 普通形 + んですが（な形容詞 / 名詞 + なんですが）, trọng tâm là giải thích, mở lời, hoặc nhấn nền thông tin; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu trả lời cần lý do ngầm hoặc lời dẫn mềm; không dùng như です lịch sự thông thường.. Nếu dạng đứng trước lệch khỏi んです, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: 普通形 + んですが（な形容詞 / 名詞 + なんですが） xoay quanh phần giải thích nằm trong ん. Khác 普通形 + んです（な形容詞 / 名詞 + なんです）, mẫu kia thường là yêu cầu/lời khuyên trực tiếp, không tạo lớp nền giải thích; gặp んです đặt một lớp giải thích phía sau câu thì giữ nghĩa giải thích, đừng kéo sang giải thích.",
+      "crossLinks": [
+        {
+          "pattern": "普通形 + んです（な形容詞 / 名詞 + なんです）",
+          "contrast": "Khác 普通形 + んですが（な形容詞 / 名詞 + なんですが）: 普通形 + んです（な形容詞 / 名詞 + なんです） nghiêng về giải thích, còn 普通形 + んですが（な形容詞 / 名詞 + なんですが） nghiêng về giải thích. So dấu んです đặt một lớp giải thích phía sau câu với んです đặt một lớp giải thích phía sau câu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

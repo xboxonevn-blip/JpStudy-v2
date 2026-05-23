@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V普通形 / いA / なAな + ものだ",
-      "meaning": "Ý nghĩa: Diễn tả cảm thán, tính chất chung, điều thường thấy hoặc hồi tưởng khi dùng với dạng quá khứ",
-      "usage": "Cách dùng: Với 〜ものだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜ものだ, lõi もの là mảnh giữ nhịp ngữ pháp. Hãy tách V普通形 / いA / なAな + ものだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜ものだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな + ものだ: もの/物 vốn là \"vật/điều\"; trong ngữ pháp nó kéo câu về bản chất, cảm xúc tự nhiên hoặc lý do mang tính con người.. Trong công thức V普通形 / いA / なAな + ものだ, cụm thường trước もの hoặc ものだ/ものだから; vì vậy phần もの không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな + ものだ không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな + ものだ. Dấu cần khóa là cụm thường trước もの hoặc ものだ/ものだから; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả cảm thán, tính chất chung, điều thường thấy hoặc hồi tưởng khi dùng với dạng quá khứ. Với V普通形 / いA / なAな + ものだ, trọng tâm là bản chất, cảm xúc hoặc lý do tự nhiên; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi muốn nêu điều vốn dĩ, cảm giác mạnh, hoặc lời giải thích mềm; tránh thay bằng こと khi cần sắc thái con người.. Nếu dạng đứng trước lệch khỏi もの, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな + ものだ xoay quanh bản chất của もの. Khác 〜こと, mẫu kia thường trung tính hơn hoặc chỉ đóng gói sự việc; gặp もの thường có hơi người và cảm xúc hơn こと thì giữ nghĩa bản chất/cảm xúc, đừng kéo sang sự việc.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜ものだ cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜こと",
+          "contrast": "Khác V普通形 / いA / なAな + ものだ: 〜こと nghiêng về sự việc, còn V普通形 / いA / なAな + ものだ nghiêng về bản chất/cảm xúc. So dấu もの thường có hơi người và cảm xúc hơn こと với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

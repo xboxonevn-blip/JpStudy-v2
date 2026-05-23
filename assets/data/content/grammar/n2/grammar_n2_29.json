@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-て form + 当然だ",
-      "meaning": "Ý nghĩa: Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó",
-      "usage": "Cách dùng: Với ～て当然だ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～て当然だ, lõi ～て当然だ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + 当然だ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～て当然だ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-て form + 当然だ: て là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó. Trong công thức Verb-て form + 当然だ, dấu て và dạng từ ngay trước nó; vì vậy phần て không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-て form + 当然だ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó - dấu hiệu\". Nhìn て như ký hiệu chức năng báo Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-て form + 当然だ. Dấu cần khóa là dấu て và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó. Với Verb-て form + 当然だ, trọng tâm là Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Verb-て form + 当然だ khi muốn biểu thị Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó; ưu tiên kiểm tra dấu て trong câu mẫu. Nếu dạng đứng trước lệch khỏi て, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-て form + 当然だ xoay quanh て trong Verb-て form + 当然だ báo Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó. Khác 関連する近い文型, Verb-て form + 当然だ giữ trọng tâm Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp て thì giữ nghĩa Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "～て当然だ cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-て form + 当然だ: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-て form + 当然だ nghiêng về Dùng để nói một kết quả, phản ứng hoặc đánh giá là tự nhiên, hiển nhiên trong hoàn cảnh đó. So dấu て với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

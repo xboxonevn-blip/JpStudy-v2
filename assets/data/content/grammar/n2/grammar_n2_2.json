@@ -22,16 +22,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A + そういえば + B",
-      "meaning": "Ý nghĩa: Dùng khi từ điều vừa nói ở A, người nói chợt nhớ hoặc chuyển sang một thông tin liên quan ở B.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của A + そういえば + B: そう trong dạng vẻ bám vào thân động từ hoặc thân tính từ để nói ấn tượng nhìn thấy trước khi sự việc xảy ra.. Trong công thức A + そういえば + B, Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; vì vậy phần そう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A + そういえば + B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dáng vẻ - dấu hiệu\". Nhìn そうだ dạng vẻ báo ấn tượng trực tiếp như ký hiệu chức năng báo dáng vẻ hoặc khả năng sắp xảy ra, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A + そういえば + B. Dấu cần khóa là Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi từ điều vừa nói ở A, người nói chợt nhớ hoặc chuyển sang một thông tin liên quan ở B. Với A + そういえば + B, trọng tâm là dáng vẻ hoặc khả năng sắp xảy ra; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi mắt thấy dấu hiệu như 雨が降りそう; tránh lẫn với そうです truyền tin theo nguồn.. Nếu dạng đứng trước lệch khỏi そう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A + そういえば + B xoay quanh dáng vẻ nhìn thấy. Khác A + そこで + B, mẫu kia thường kể lại thông tin hoặc suy đoán theo nguồn khác; gặp そうだ dạng vẻ báo ấn tượng trực tiếp thì giữ nghĩa dáng vẻ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "A + そこで + B",
+          "contrast": "Khác A + そういえば + B: A + そこで + B nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A + そういえば + B nghiêng về dáng vẻ. So dấu そうだ dạng vẻ báo ấn tượng trực tiếp với で trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "conditionals"
+        "guideSection": "particles"
       }
     }
   },
@@ -58,10 +66,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A + そこで + B",
-      "meaning": "Ý nghĩa: Dùng khi A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của A + そこで + B: で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. Trong công thức A + そこで + B, dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A + そこで + B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó - dấu hiệu\". Nhìn で như ký hiệu chức năng báo A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A + そこで + B. Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. Với A + そこで + B, trọng tâm là A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A + そこで + B khi muốn biểu thị A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A + そこで + B xoay quanh で trong A + そこで + B báo A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. Khác A (Statement)。それが B (Restatement or explanation of A)。, A + そこで + B giữ trọng tâm A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "A (Statement)。それが B (Restatement or explanation of A)。",
+          "contrast": "Khác A + そこで + B: A (Statement)。それが B (Restatement or explanation of A)。 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A + そこで + B nghiêng về A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. So dấu で với が trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -94,10 +110,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A (Statement)。それが B (Restatement or explanation of A)。",
-      "meaning": "Ý nghĩa: Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của A (Statement)。それが B (Restatement or explanation of A)。: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. Trong công thức A (Statement)。それが B (Restatement or explanation of A)。, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A (Statement)。それが B (Restatement or explanation of A)。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A (Statement)。それが B (Restatement or explanation of A)。. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. Với A (Statement)。それが B (Restatement or explanation of A)。, trọng tâm là Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A (Statement)。それが B (Restatement or explanation of A)。 khi muốn biểu thị Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A (Statement)。それが B (Restatement or explanation of A)。 xoay quanh が trong A (Statement)。それが B (Restatement or explanation of A)。 báo Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. Khác Sentence A +。それで+ Sentence B。, A (Statement)。それが B (Restatement or explanation of A)。 giữ trọng tâm Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Sentence A +。それで+ Sentence B。",
+          "contrast": "Khác A (Statement)。それが B (Restatement or explanation of A)。: Sentence A +。それで+ Sentence B。 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A (Statement)。それが B (Restatement or explanation of A)。 nghiêng về Dùng để làm rõ rằng điểm cốt lõi, thực chất hoặc điều đáng nói của A chính là B. So dấu が với で trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -130,10 +154,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Sentence A +。それで+ Sentence B。",
-      "meaning": "Ý nghĩa: Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Sentence A +。それで+ Sentence B。: で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. Trong công thức Sentence A +。それで+ Sentence B。, dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A +。それで+ Sentence B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B - dấu hiệu\". Nhìn で như ký hiệu chức năng báo Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A +。それで+ Sentence B。. Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. Với Sentence A +。それで+ Sentence B。, trọng tâm là Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Sentence A +。それで+ Sentence B。 khi muốn biểu thị Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A +。それで+ Sentence B。 xoay quanh で trong Sentence A +。それで+ Sentence B。 báo Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. Khác A (situation) + 。それでも + B (action or thought), Sentence A +。それで+ Sentence B。 giữ trọng tâm Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "A (situation) + 。それでも + B (action or thought)",
+          "contrast": "Khác Sentence A +。それで+ Sentence B。: A (situation) + 。それでも + B (action or thought) nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Sentence A +。それで+ Sentence B。 nghiêng về Dùng để nối hai sự việc theo trình tự hoặc quan hệ nguyên nhân-kết quả: A xảy ra, rồi B xảy ra; hoặc vì A nên B. So dấu で với で trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -166,10 +198,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A (situation) + 。それでも + B (action or thought)",
-      "meaning": "Ý nghĩa: Dùng khi B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của A (situation) + 。それでも + B (action or thought): で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. Trong công thức A (situation) + 。それでも + B (action or thought), dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A (situation) + 。それでも + B (action or thought) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều - dấu hiệu\". Nhìn で như ký hiệu chức năng báo B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A (situation) + 。それでも + B (action or thought). Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. Với A (situation) + 。それでも + B (action or thought), trọng tâm là B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A (situation) + 。それでも + B (action or thought) khi muốn biểu thị B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A (situation) + 。それでも + B (action or thought) xoay quanh で trong A (situation) + 。それでも + B (action or thought) báo B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. Khác A。それなのに B。, A (situation) + 。それでも + B (action or thought) giữ trọng tâm B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "A。それなのに B。",
+          "contrast": "Khác A (situation) + 。それでも + B (action or thought): A。それなのに B。 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A (situation) + 。それでも + B (action or thought) nghiêng về B vẫn xảy ra hoặc vẫn đúng dù A là một tình huống trái chiều. So dấu で với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,10 +242,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A。それなのに B。",
-      "meaning": "Ý nghĩa: Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của A。それなのに B。: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi. Trong công thức A。それなのに B。, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A。それなのに B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A。それなのに B。. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi. Với A。それなのに B。, trọng tâm là Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A。それなのに B。 khi muốn biểu thị Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A。それなのに B。 xoay quanh に trong A。それなのに B。 báo Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi. Khác Situation A (sentence) + 。それなら + Situation B (sentence), A。それなのに B。 giữ trọng tâm Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi, đừng kéo sang điều kiện.",
+      "crossLinks": [
+        {
+          "pattern": "Situation A (sentence) + 。それなら + Situation B (sentence)",
+          "contrast": "Khác A。それなのに B。: Situation A (sentence) + 。それなら + Situation B (sentence) nghiêng về điều kiện, còn A。それなのに B。 nghiêng về Dùng để chỉ sự trái ngược hoặc kết quả ngoài dự đoán: A là sự thật, thế mà B lại xảy ra khác với điều người nói mong đợi. So dấu に với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,16 +286,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Situation A (sentence) + 。それなら + Situation B (sentence)",
-      "meaning": "Ý nghĩa: Dùng khi dựa trên tình huống A để đưa ra quyết định, đề xuất hoặc kết luận B.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Situation A (sentence) + 。それなら + Situation B (sentence): nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức Situation A (sentence) + 。それなら + Situation B (sentence), dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Situation A (sentence) + 。それなら + Situation B (sentence) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"điều kiện - dấu hiệu\". Nhìn dấu điều kiện là bản lề giữa giả định và kết luận như ký hiệu chức năng báo điều kiện, nhượng bộ, hoặc giả định, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Situation A (sentence) + 。それなら + Situation B (sentence). Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi dựa trên tình huống A để đưa ra quyết định, đề xuất hoặc kết luận B. Với Situation A (sentence) + 。それなら + Situation B (sentence), trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Situation A (sentence) + 。それなら + Situation B (sentence) xoay quanh cửa điều kiện. Khác Sentence A + それはそうと + Sentence B, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang dáng vẻ.",
+      "crossLinks": [
+        {
+          "pattern": "Sentence A + それはそうと + Sentence B",
+          "contrast": "Khác Situation A (sentence) + 。それなら + Situation B (sentence): Sentence A + それはそうと + Sentence B nghiêng về dáng vẻ, còn Situation A (sentence) + 。それなら + Situation B (sentence) nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với そうだ dạng vẻ báo ấn tượng trực tiếp trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "conditionals"
+        "guideSection": "particles"
       }
     }
   },
@@ -274,10 +330,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Sentence A + それはそうと + Sentence B",
-      "meaning": "Ý nghĩa: Dùng để gác lại nội dung A và chuyển sang chủ đề B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Sentence A + それはそうと + Sentence B: そう trong dạng vẻ bám vào thân động từ hoặc thân tính từ để nói ấn tượng nhìn thấy trước khi sự việc xảy ra.. Trong công thức Sentence A + それはそうと + Sentence B, Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; vì vậy phần そう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A + それはそうと + Sentence B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dáng vẻ - dấu hiệu\". Nhìn そうだ dạng vẻ báo ấn tượng trực tiếp như ký hiệu chức năng báo dáng vẻ hoặc khả năng sắp xảy ra, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A + それはそうと + Sentence B. Dấu cần khóa là Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để gác lại nội dung A và chuyển sang chủ đề B. Với Sentence A + それはそうと + Sentence B, trọng tâm là dáng vẻ hoặc khả năng sắp xảy ra; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi mắt thấy dấu hiệu như 雨が降りそう; tránh lẫn với そうです truyền tin theo nguồn.. Nếu dạng đứng trước lệch khỏi そう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A + それはそうと + Sentence B xoay quanh dáng vẻ nhìn thấy. Khác A + そういえば + B, mẫu kia thường kể lại thông tin hoặc suy đoán theo nguồn khác; gặp そうだ dạng vẻ báo ấn tượng trực tiếp thì giữ nghĩa dáng vẻ, đừng kéo sang dáng vẻ.",
+      "crossLinks": [
+        {
+          "pattern": "A + そういえば + B",
+          "contrast": "Khác Sentence A + それはそうと + Sentence B: A + そういえば + B nghiêng về dáng vẻ, còn Sentence A + それはそうと + Sentence B nghiêng về dáng vẻ. So dấu そうだ dạng vẻ báo ấn tượng trực tiếp với そうだ dạng vẻ báo ấn tượng trực tiếp trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

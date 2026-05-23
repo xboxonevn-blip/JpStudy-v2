@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V普通形 / いA / なAな / Nな・Nである + わけだ",
-      "meaning": "Ý nghĩa: Diễn tả kết luận hợp lý sau khi hiểu lý do hoặc bối cảnh",
-      "usage": "Cách dùng: Với 〜わけだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜わけだ, lõi わけ là mảnh giữ nhịp ngữ pháp. Hãy tách V普通形 / いA / なAな / Nな・Nである + わけだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜わけだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな / Nな・Nである + わけだ: わけ mang nghĩa lý do/lẽ; mẫu dùng nó để kết luận điều hợp logic hoặc phủ định một suy diễn.. Trong công thức V普通形 / いA / なAな / Nな・Nである + わけだ, mệnh đề thường trước わけ; vì vậy phần わけ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな / Nな・Nである + わけだ không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな / Nな・Nである + わけだ. Dấu cần khóa là mệnh đề thường trước わけ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả kết luận hợp lý sau khi hiểu lý do hoặc bối cảnh. Với V普通形 / いA / なAな / Nな・Nである + わけだ, trọng tâm là lý do, lẽ phải, hoặc suy luận; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu đang giải thích vì sao kết luận hợp lý, không hợp lý, hoặc không thể làm vì ràng buộc xã hội.. Nếu dạng đứng trước lệch khỏi わけ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな / Nな・Nである + わけだ xoay quanh lẽ/suy luận của わけ. Khác 〜はずだ, mẫu kia thường nói kỳ vọng bằng はず hoặc quyết định bằng こと; gặp わけ hỏi \"vì lẽ nào kết luận này đúng\" thì giữ nghĩa lý do logic, đừng kéo sang kỳ vọng.",
       "crossLinks": [
         {
-          "pattern": "〜わけではない",
-          "contrast": "〜わけだ cần đọc theo chức năng riêng của mẫu; 〜わけではない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜はずだ",
+          "contrast": "Khác V普通形 / いA / なAな / Nな・Nである + わけだ: 〜はずだ nghiêng về kỳ vọng, còn V普通形 / いA / なAな / Nな・Nである + わけだ nghiêng về lý do logic. So dấu わけ hỏi \"vì lẽ nào kết luận này đúng\" với はず cần một căn cứ trong đầu người nói trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

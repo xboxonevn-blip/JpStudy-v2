@@ -22,16 +22,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A (sentence) + なお + B (sentence)",
-      "meaning": "Ý nghĩa: Dùng để bổ sung thông tin sau nội dung chính, thường trong thông báo, văn bản trang trọng hoặc phần chú thích.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của A (sentence) + なお + B (sentence): 尊敬語 nâng hành động của người trên hoặc khách lên; お/ご là tiền tố lịch sự, còn になる/ください gắn vào khung kính trọng.. Trong công thức A (sentence) + なお + B (sentence), お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; vì vậy phần 尊敬語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A (sentence) + なお + B (sentence) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"kính trọng - dấu hiệu\". Nhìn 尊敬語 hỏi hành động thuộc về ai để nâng người đó như ký hiệu chức năng báo nâng hành động của người khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A (sentence) + なお + B (sentence). Dấu cần khóa là お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để bổ sung thông tin sau nội dung chính, thường trong thông báo, văn bản trang trọng hoặc phần chú thích. Với A (sentence) + なお + B (sentence), trọng tâm là nâng hành động của người khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động của người nghe/người được kính trọng; không dùng để tự nâng hành động của mình.. Nếu dạng đứng trước lệch khỏi 尊敬語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A (sentence) + なお + B (sentence) xoay quanh đối tượng được nâng lên. Khác Clause A + もっとも + Clause B, mẫu kia có thể là khiêm nhường, tức hạ hành động của mình thay vì nâng người khác; gặp 尊敬語 hỏi hành động thuộc về ai để nâng người đó thì giữ nghĩa kính trọng, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Clause A + もっとも + Clause B",
+          "contrast": "Khác A (sentence) + なお + B (sentence): Clause A + もっとも + Clause B nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A (sentence) + なお + B (sentence) nghiêng về kính trọng. So dấu 尊敬語 hỏi hành động thuộc về ai để nâng người đó với と trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   },
@@ -58,10 +66,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Clause A + もっとも + Clause B",
-      "meaning": "Ý nghĩa: Dùng khi sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó.",
-      "usage": "Sử dụng: Xác định điều kiện trước, sau đó kiểm tra vế sau là kết quả tự nhiên, lời khuyên hay giả định.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Clause A + もっとも + Clause B: と là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó. Trong công thức Clause A + もっとも + Clause B, dấu と và dạng từ ngay trước nó; vì vậy phần と không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Clause A + もっとも + Clause B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó - dấu hiệu\". Nhìn と như ký hiệu chức năng báo sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Clause A + もっとも + Clause B. Dấu cần khóa là dấu と và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó. Với Clause A + もっとも + Clause B, trọng tâm là sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Clause A + もっとも + Clause B khi muốn biểu thị sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó; ưu tiên kiểm tra dấu と trong câu mẫu. Nếu dạng đứng trước lệch khỏi と, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Clause A + もっとも + Clause B xoay quanh と trong Clause A + もっとも + Clause B báo sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó. Khác A。要するに B。, Clause A + もっとも + Clause B giữ trọng tâm sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp と thì giữ nghĩa sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "A。要するに B。",
+          "contrast": "Khác Clause A + もっとも + Clause B: A。要するに B。 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Clause A + もっとも + Clause B nghiêng về sau khi nói A, người nói bổ sung một điểm đối lập hoặc giới hạn ở B để điều chỉnh nhận định trước đó. So dấu と với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -94,10 +110,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A。要するに B。",
-      "meaning": "Ý nghĩa: Dùng khi tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của A。要するに B。: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. Trong công thức A。要するに B。, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A。要するに B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B - dấu hiệu\". Nhìn に như ký hiệu chức năng báo tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A。要するに B。. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. Với A。要するに B。, trọng tâm là tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A。要するに B。 khi muốn biểu thị tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A。要するに B。 xoay quanh に trong A。要するに B。 báo tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. Khác Noun + につき, A。要するに B。 giữ trọng tâm tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B, đừng kéo sang lý do/mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + につき",
+          "contrast": "Khác A。要するに B。: Noun + につき nghiêng về lý do/mục đích, còn A。要するに B。 nghiêng về tóm tắt, rút gọn hoặc diễn đạt lại A thành kết luận B. So dấu に với dấu lý do hỏi kết quả sinh ra từ đâu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -130,10 +154,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + につき",
-      "meaning": "Ý nghĩa: Dùng với danh từ trong văn trang trọng để nêu lý do, điều kiện, phạm vi liên quan hoặc đơn vị tính.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Noun + につき: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Noun + につき, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + につき không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + につき. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng với danh từ trong văn trang trọng để nêu lý do, điều kiện, phạm vi liên quan hoặc đơn vị tính. Với Noun + につき, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + につき xoay quanh mối nối nguyên nhân. Khác Noun + にて, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + にて",
+          "contrast": "Khác Noun + につき: Noun + にて nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun + につき nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -166,10 +198,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + にて",
-      "meaning": "Ý nghĩa: Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Noun + にて: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức. Trong công thức Noun + にて, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + にて không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + にて. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức. Với Noun + にて, trọng tâm là Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun + にて khi muốn biểu thị Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + にて xoay quanh に trong Noun + にて báo Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức. Khác Noun + のことだから, Noun + にて giữ trọng tâm Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + のことだから",
+          "contrast": "Khác Noun + にて: Noun + のことだから nghiêng về sự việc, còn Noun + にて nghiêng về Dùng thay cho で trong văn viết hoặc ngữ cảnh trang trọng để chỉ nơi chốn, phương tiện, cách thức. So dấu に với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,16 +242,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + のことだから",
-      "meaning": "Ý nghĩa: Dùng khi đưa ra nhận định hoặc lý do dựa trên hiểu biết về người/vật được nêu.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Noun + のことだから: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức Noun + のことだから, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu Noun + のことだから không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Noun + のことだから. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi đưa ra nhận định hoặc lý do dựa trên hiểu biết về người/vật được nêu. Với Noun + のことだから, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + のことだから xoay quanh sự việc được danh từ hóa. Khác Noun + をはじめ, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang quan hệ chức năng.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + をはじめ",
+          "contrast": "Khác Noun + のことだから: Noun + をはじめ nghiêng về quan hệ chức năng, còn Noun + のことだから nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -238,10 +286,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + をはじめ",
-      "meaning": "Ý nghĩa: Dùng để nêu một ví dụ tiêu biểu rồi hàm ý còn nhiều đối tượng cùng nhóm.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun + をはじめ: nhóm quan hệ đặt danh từ làm tâm, nguồn khởi đầu, chỗ dựa, cảm xúc gửi vào, hoặc phản ứng theo yêu cầu.. Trong công thức Noun + をはじめ, danh từ quan hệ trước を/に; vì vậy phần 関係 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + をはじめ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"quan hệ chức năng - dấu hiệu\". Nhìn mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì như ký hiệu chức năng báo quan hệ chức năng giữa danh từ và hành động, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + をはじめ. Dấu cần khóa là danh từ quan hệ trước を/に; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nêu một ví dụ tiêu biểu rồi hàm ý còn nhiều đối tượng cùng nhóm. Với Noun + をはじめ, trọng tâm là quan hệ chức năng giữa danh từ và hành động; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu không phải tân ngữ thường mà là tâm điểm, căn cứ, cảm xúc, hoặc điều được đáp lại.. Nếu dạng đứng trước lệch khỏi 関係, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + をはじめ xoay quanh quan hệ với danh từ trước mẫu. Khác Noun + をはじめとして, mẫu kia có thể dùng cùng trợ từ nhưng đổi vai danh từ; gặp mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì thì giữ nghĩa quan hệ chức năng, đừng kéo sang lập trường/phạm vi.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + をはじめとして",
+          "contrast": "Khác Noun + をはじめ: Noun + をはじめとして nghiêng về lập trường/phạm vi, còn Noun + をはじめ nghiêng về quan hệ chức năng. So dấu mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì với mẫu lập trường hỏi câu đang nhìn từ vị trí nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -274,10 +330,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + をはじめとして",
-      "meaning": "Ý nghĩa: Dùng để nêu một đối tượng đại diện, rồi mở rộng sang các đối tượng liên quan khác.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun + をはじめとして: nhóm lập trường đặt danh từ làm chủ đề, đối tượng, vai trò, phạm vi hoặc điều kiện trách nhiệm.. Trong công thức Noun + をはじめとして, danh từ trước に/として/上; vì vậy phần 立場 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + をはじめとして không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lập trường/phạm vi - dấu hiệu\". Nhìn mẫu lập trường hỏi câu đang nhìn từ vị trí nào như ký hiệu chức năng báo phạm vi, vai trò, hoặc lập trường, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + をはじめとして. Dấu cần khóa là danh từ trước に/として/上; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nêu một đối tượng đại diện, rồi mở rộng sang các đối tượng liên quan khác. Với Noun + をはじめとして, trọng tâm là phạm vi, vai trò, hoặc lập trường; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu là điểm nhìn chính; phân biệt đối tượng bàn luận, đối tượng đối diện, và vai trò được gán.. Nếu dạng đứng trước lệch khỏi 立場, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + をはじめとして xoay quanh điểm nhìn danh từ. Khác A (sentence) + なお + B (sentence), mẫu kia thường đổi từ chủ đề sang đối tượng đối diện hoặc vai trò; gặp mẫu lập trường hỏi câu đang nhìn từ vị trí nào thì giữ nghĩa lập trường/phạm vi, đừng kéo sang kính trọng.",
+      "crossLinks": [
+        {
+          "pattern": "A (sentence) + なお + B (sentence)",
+          "contrast": "Khác Noun + をはじめとして: A (sentence) + なお + B (sentence) nghiêng về kính trọng, còn Noun + をはじめとして nghiêng về lập trường/phạm vi. So dấu mẫu lập trường hỏi câu đang nhìn từ vị trí nào với 尊敬語 hỏi hành động thuộc về ai để nâng người đó trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

@@ -22,16 +22,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ばかりだ",
-      "meaning": "Ý nghĩa: Dùng để nói một trạng thái cứ tiếp tục theo một hướng, thường là hướng xấu hoặc không mong muốn.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + ばかりだ: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức Verb-dictionary form + ばかりだ, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary form + ばかりだ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary form + ばかりだ. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một trạng thái cứ tiếp tục theo một hướng, thường là hướng xấu hoặc không mong muốn. Với Verb-dictionary form + ばかりだ, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + ばかりだ xoay quanh ranh giới lượng. Khác Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに",
+          "contrast": "Khác Verb-dictionary form + ばかりだ: Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに nghiêng về giới hạn, còn Verb-dictionary form + ばかりだ nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -58,10 +66,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに",
-      "meaning": "Ý nghĩa: Dùng khi chỉ vì một nguyên nhân A mà dẫn đến kết quả không mong muốn B.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi chỉ vì một nguyên nhân A mà dẫn đến kết quả không mong muốn B. Với Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに xoay quanh ranh giới lượng. Khác Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang bản chất/cảm xúc.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない",
+          "contrast": "Khác Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに: Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない nghiêng về bản chất/cảm xúc, còn Verb-casual + ばかりに, い-Adjective + ばかりに, な-Adjective + なばかりに, Noun + なばかりに nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với もの thường có hơi người và cảm xúc hơn こと trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -94,10 +110,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない",
-      "meaning": "Ý nghĩa: Dùng để nói rằng dù điều kiện A được đáp ứng thì B cũng không nhất thiết đúng.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない: もの/物 vốn là \"vật/điều\"; trong ngữ pháp nó kéo câu về bản chất, cảm xúc tự nhiên hoặc lý do mang tính con người.. Trong công thức Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない, cụm thường trước もの hoặc ものだ/ものだから; vì vậy phần もの không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". Khi mẫu Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない. Dấu cần khóa là cụm thường trước もの hoặc ものだ/ものだから; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói rằng dù điều kiện A được đáp ứng thì B cũng không nhất thiết đúng. Với Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない, trọng tâm là bản chất, cảm xúc hoặc lý do tự nhiên; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi muốn nêu điều vốn dĩ, cảm giác mạnh, hoặc lời giải thích mềm; tránh thay bằng こと khi cần sắc thái con người.. Nếu dạng đứng trước lệch khỏi もの, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない xoay quanh bản chất của もの. Khác Noun1 はともかく Noun2 は, mẫu kia thường trung tính hơn hoặc chỉ đóng gói sự việc; gặp もの thường có hơi người và cảm xúc hơn こと thì giữ nghĩa bản chất/cảm xúc, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Noun1 はともかく Noun2 は",
+          "contrast": "Khác Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない: Noun1 はともかく Noun2 は nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-ば form + というものでもない / い-Adjectiveければ + というものでもない / な-Adjectiveなら + というものでもない / Nounなら + というものでもない nghiêng về bản chất/cảm xúc. So dấu もの thường có hơi người và cảm xúc hơn こと với と trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -130,10 +154,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun1 はともかく Noun2 は",
-      "meaning": "Ý nghĩa: Dùng để tạm gác A sang một bên và tập trung đánh giá B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun1 はともかく Noun2 は: と là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để tạm gác A sang một bên và tập trung đánh giá B. Trong công thức Noun1 はともかく Noun2 は, dấu と và dạng từ ngay trước nó; vì vậy phần と không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun1 はともかく Noun2 は không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để tạm gác A sang một bên và tập trung đánh giá B - dấu hiệu\". Nhìn と như ký hiệu chức năng báo Dùng để tạm gác A sang một bên và tập trung đánh giá B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun1 はともかく Noun2 は. Dấu cần khóa là dấu と và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để tạm gác A sang một bên và tập trung đánh giá B. Với Noun1 はともかく Noun2 は, trọng tâm là Dùng để tạm gác A sang một bên và tập trung đánh giá B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun1 はともかく Noun2 は khi muốn biểu thị Dùng để tạm gác A sang một bên và tập trung đánh giá B; ưu tiên kiểm tra dấu と trong câu mẫu. Nếu dạng đứng trước lệch khỏi と, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun1 はともかく Noun2 は xoay quanh と trong Noun1 はともかく Noun2 は báo Dùng để tạm gác A sang một bên và tập trung đánh giá B. Khác Noun1 + はまだしも + Noun2, Noun1 はともかく Noun2 は giữ trọng tâm Dùng để tạm gác A sang một bên và tập trung đánh giá B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp と thì giữ nghĩa Dùng để tạm gác A sang một bên và tập trung đánh giá B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Noun1 + はまだしも + Noun2",
+          "contrast": "Khác Noun1 はともかく Noun2 は: Noun1 + はまだしも + Noun2 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun1 はともかく Noun2 は nghiêng về Dùng để tạm gác A sang một bên và tập trung đánh giá B. So dấu と với は trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -166,16 +198,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun1 + はまだしも + Noun2",
-      "meaning": "Ý nghĩa: Dùng khi A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun1 + はまだしも + Noun2: は là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. Trong công thức Noun1 + はまだしも + Noun2, dấu は và dạng từ ngay trước nó; vì vậy phần は không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun1 + はまだしも + Noun2 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn - dấu hiệu\". Nhìn は như ký hiệu chức năng báo A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun1 + はまだしも + Noun2. Dấu cần khóa là dấu は và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. Với Noun1 + はまだしも + Noun2, trọng tâm là A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun1 + はまだしも + Noun2 khi muốn biểu thị A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn; ưu tiên kiểm tra dấu は trong câu mẫu. Nếu dạng đứng trước lệch khỏi は, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun1 + はまだしも + Noun2 xoay quanh は trong Noun1 + はまだしも + Noun2 báo A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. Khác Noun1 + はもとより, Noun2 + も, Noun1 + はまだしも + Noun2 giữ trọng tâm A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp は thì giữ nghĩa A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn, đừng kéo sang căn cứ.",
+      "crossLinks": [
+        {
+          "pattern": "Noun1 + はもとより, Noun2 + も",
+          "contrast": "Khác Noun1 + はまだしも + Noun2: Noun1 + はもとより, Noun2 + も nghiêng về căn cứ, còn Noun1 + はまだしも + Noun2 nghiêng về A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. So dấu は với mẫu căn cứ hỏi người nói bám theo cái gì trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -202,10 +242,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun1 + はもとより, Noun2 + も",
-      "meaning": "Ý nghĩa: Dùng để nói A là điều hiển nhiên, và ngoài A ra còn có B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun1 + はもとより, Noun2 + も: nhóm căn cứ nói hành động đi theo một bản mẫu, quy tắc, dữ liệu hoặc nguồn đã có.. Trong công thức Noun1 + はもとより, Noun2 + も, danh từ hoặc mệnh đề nguồn trước dấu căn cứ; vì vậy phần 基準 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun1 + はもとより, Noun2 + も không có chữ Hán nổi bật để bám, nên mượn cặp ý \"căn cứ - dấu hiệu\". Nhìn mẫu căn cứ hỏi người nói bám theo cái gì như ký hiệu chức năng báo theo đúng nguồn/căn cứ, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun1 + はもとより, Noun2 + も. Dấu cần khóa là danh từ hoặc mệnh đề nguồn trước dấu căn cứ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói A là điều hiển nhiên, và ngoài A ra còn có B. Với Noun1 + はもとより, Noun2 + も, trọng tâm là theo đúng nguồn/căn cứ; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu cần bám vào hướng dẫn, kế hoạch, dữ liệu; đừng đọc như chỉ địa điểm.. Nếu dạng đứng trước lệch khỏi 基準, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun1 + はもとより, Noun2 + も xoay quanh nguồn căn cứ. Khác Noun + は抜きにして, mẫu kia có thể nói nguyên nhân hoặc phương tiện chứ không phải chuẩn để theo; gặp mẫu căn cứ hỏi người nói bám theo cái gì thì giữ nghĩa căn cứ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + は抜きにして",
+          "contrast": "Khác Noun1 + はもとより, Noun2 + も: Noun + は抜きにして nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun1 + はもとより, Noun2 + も nghiêng về căn cứ. So dấu mẫu căn cứ hỏi người nói bám theo cái gì với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +286,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + は抜きにして",
-      "meaning": "Ý nghĩa: Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun + は抜きにして: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác. Trong công thức Noun + は抜きにして, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + は抜きにして không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + は抜きにして. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác. Với Noun + は抜きにして, trọng tâm là Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun + は抜きにして khi muốn biểu thị Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + は抜きにして xoay quanh に trong Noun + は抜きにして báo Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác. Khác Verb-dictionary form + べき + ではない, Noun + は抜きにして giữ trọng tâm Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác, đừng kéo sang nghĩa vụ/giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-dictionary form + べき + ではない",
+          "contrast": "Khác Noun + は抜きにして: Verb-dictionary form + べき + ではない nghiêng về nghĩa vụ/giới hạn, còn Noun + は抜きにして nghiêng về Dùng để tạm loại một yếu tố khỏi cuộc bàn luận hoặc đánh giá, nhằm tập trung vào điều khác. So dấu に với mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -274,10 +330,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + べき + ではない",
-      "meaning": "Ý nghĩa: Dùng để nói một hành động không nên làm, không phù hợp hoặc không được khuyến khích.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + べき + ではない: nhóm nghĩa vụ/khả năng giới hạn lựa chọn của người nói: nên, không được, không thể, hoặc không còn cách khác.. Trong công thức Verb-dictionary form + べき + ではない, dạng động từ trước dấu nghĩa vụ/khả năng; vì vậy phần 義務 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary form + べき + ではない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nghĩa vụ/giới hạn - dấu hiệu\". Nhìn mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn như ký hiệu chức năng báo nghĩa vụ, cấm đoán, hoặc không còn lựa chọn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary form + べき + ではない. Dấu cần khóa là dạng động từ trước dấu nghĩa vụ/khả năng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một hành động không nên làm, không phù hợp hoặc không được khuyến khích. Với Verb-dictionary form + べき + ではない, trọng tâm là nghĩa vụ, cấm đoán, hoặc không còn lựa chọn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu nói về điều nên làm/không thể làm; xem nguồn ràng buộc là đạo lý, quy tắc hay hoàn cảnh.. Nếu dạng đứng trước lệch khỏi 義務, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + べき + ではない xoay quanh áp lực lựa chọn. Khác Verb-dictionary form + ばかりだ, mẫu kia có thể mềm hơn, khách quan hơn, hoặc chỉ là khả năng; gặp mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn thì giữ nghĩa nghĩa vụ/giới hạn, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-dictionary form + ばかりだ",
+          "contrast": "Khác Verb-dictionary form + べき + ではない: Verb-dictionary form + ばかりだ nghiêng về giới hạn, còn Verb-dictionary form + べき + ではない nghiêng về nghĩa vụ/giới hạn. So dấu mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

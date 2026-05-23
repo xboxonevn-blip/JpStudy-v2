@@ -158,11 +158,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v003-001",
-          "ja": "公園でやりますを見かけました。",
-          "vi": "Tôi đã bắt gặp cho ở công viên.",
+          "ja": "きょう、やりますつもりです。",
+          "vi": "Hôm nay tôi định cho.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored animal context for やります",
+          "source_detail": "JpStudy-authored level-capped verb context for やります",
           "license": "JpStudy authored"
         }
       ]
@@ -881,11 +881,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v016-001",
-          "ja": "公園で猿を見かけました。",
-          "vi": "Tôi đã bắt gặp con khỉ ở công viên.",
+          "ja": "これは猿です。",
+          "vi": "Đây là con khỉ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored animal context for 猿",
+          "source_detail": "JpStudy-authored level-capped noun context for 猿",
           "license": "JpStudy authored"
         }
       ]
@@ -936,11 +936,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v017-001",
-          "ja": "公園で餌を見かけました。",
-          "vi": "Tôi đã bắt gặp mồi ở công viên.",
+          "ja": "これは餌です。",
+          "vi": "Đây là mồi.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored animal context for 餌",
+          "source_detail": "JpStudy-authored level-capped noun context for 餌",
           "license": "JpStudy authored"
         }
       ]
@@ -1102,11 +1102,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v020-001",
-          "ja": "現場で聞いた絵葉書の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của bưu ảnh nghe được tại hiện trường.",
+          "ja": "これは絵葉書です。",
+          "vi": "Đây là bưu ảnh.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 絵葉書",
+          "source_detail": "JpStudy-authored level-capped noun context for 絵葉書",
           "license": "JpStudy authored"
         }
       ]
@@ -1155,11 +1155,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v021-001",
-          "ja": "公園でドライバーを見かけました。",
-          "vi": "Tôi đã bắt gặp cái tuốc nơ vít ở công viên.",
+          "ja": "これはドライバーです。",
+          "vi": "Đây là cái tuốc nơ vít.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored animal context for ドライバー",
+          "source_detail": "JpStudy-authored level-capped noun context for ドライバー",
           "license": "JpStudy authored"
         }
       ]
@@ -1263,13 +1263,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-108075-vie-10516095",
-          "ja": "彼は靴下を裏返しに履いていた。",
-          "vi": "Anh ấy đi tất ngược.",
+          "example_id": "ex-n4_l41_v023-001",
+          "ja": "棚に靴下を並べました。",
+          "vi": "Tôi đã xếp tất lên kệ.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 108075; translation 10516095",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored object context for 靴下",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1488,13 +1488,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-76567-vie-9735582",
-          "ja": "ちなみに、この部屋には冷房設備なんて物は何も無い。あるのはうちわだけ。",
-          "vi": "Ngoài ra, phòng này không có thiết bị làm lạnh hay gì hết, mà chỉ có một cái quạt giấy.",
+          "example_id": "ex-n4_l41_v027-001",
+          "ja": "これは冷房です。",
+          "vi": "Đây là máy lạnh.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 76567; translation 9735582",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored level-capped noun context for 冷房",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1545,11 +1545,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v028-001",
-          "ja": "現場で聞いた温度の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của nhiệt độ nghe được tại hiện trường.",
+          "ja": "これは温度です。",
+          "vi": "Đây là nhiệt độ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 温度",
+          "source_detail": "JpStudy-authored level-capped noun context for 温度",
           "license": "JpStudy authored"
         }
       ]
@@ -1600,13 +1600,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-116632-vie-8938530",
-          "ja": "彼の祖父は年の割にまだたいへん健康だ。",
-          "vi": "Ông anh ta vẫn trông rất khỏe mạnh cho dù đã có tuổi.",
+          "example_id": "ex-n4_l41_v029-001",
+          "ja": "これは祖父です。",
+          "vi": "Đây là ông.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 116632; translation 8938530",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored level-capped noun context for 祖父",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1712,11 +1712,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v031-001",
-          "ja": "現場で聞いた孫の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của cháu nghe được tại hiện trường.",
+          "ja": "これは孫です。",
+          "vi": "Đây là cháu.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 孫",
+          "source_detail": "JpStudy-authored level-capped noun context for 孫",
           "license": "JpStudy authored"
         }
       ]
@@ -2366,11 +2366,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v043-001",
-          "ja": "現場で聞いた昔話の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của truyện cổ tích nghe được tại hiện trường.",
+          "ja": "これは昔話です。",
+          "vi": "Đây là truyện cổ tích.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 昔話",
+          "source_detail": "JpStudy-authored level-capped noun context for 昔話",
           "license": "JpStudy authored"
         }
       ]
@@ -2419,11 +2419,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v044-001",
-          "ja": "現場で聞いたある～の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của có một ～ nọ nghe được tại hiện trường.",
+          "ja": "これはある～です。",
+          "vi": "Đây là có một ～ nọ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for ある～",
+          "source_detail": "JpStudy-authored level-capped noun context for ある～",
           "license": "JpStudy authored"
         }
       ]
@@ -2529,11 +2529,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v046-001",
-          "ja": "公園で亀を見かけました。",
-          "vi": "Tôi đã bắt gặp con rùa ở công viên.",
+          "ja": "これは亀です。",
+          "vi": "Đây là con rùa.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored animal context for 亀",
+          "source_detail": "JpStudy-authored level-capped noun context for 亀",
           "license": "JpStudy authored"
         }
       ]
@@ -2584,11 +2584,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v047-001",
-          "ja": "避難所で多くの人が助けますを求めていました。",
-          "vi": "Ở nơi sơ tán, nhiều người đang cần giúp đỡ.",
+          "ja": "きょう、助けますつもりです。",
+          "vi": "Hôm nay tôi định giúp đỡ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored help/rescue context for 助けます",
+          "source_detail": "JpStudy-authored level-capped verb context for 助けます",
           "license": "JpStudy authored"
         }
       ]
@@ -2694,13 +2694,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-137128-vie-8796197",
-          "ja": "誰がお姫様の役を演じるの。",
-          "vi": "Ai có thể đóng vai công chúa không?",
+          "example_id": "ex-n4_l41_v049-001",
+          "ja": "これはお姫様です。",
+          "vi": "Đây là công chúa.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 137128; translation 8796197",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored level-capped noun context for お姫様",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -2968,11 +2968,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v054-001",
-          "ja": "現場で聞いた煙の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của khói nghe được tại hiện trường.",
+          "ja": "これは煙です。",
+          "vi": "Đây là khói.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 煙",
+          "source_detail": "JpStudy-authored level-capped noun context for 煙",
           "license": "JpStudy authored"
         }
       ]
@@ -3024,11 +3024,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l41_v055-001",
-          "ja": "現場で聞いた真っ白の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của trắng toát nghe được tại hiện trường.",
+          "ja": "これは真っ白です。",
+          "vi": "Đây là trắng toát.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 真っ白",
+          "source_detail": "JpStudy-authored level-capped noun context for 真っ白",
           "license": "JpStudy authored"
         }
       ]

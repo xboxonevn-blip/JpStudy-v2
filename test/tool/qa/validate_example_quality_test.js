@@ -8,6 +8,7 @@ const {
   validateExample,
   validateAllContentTemplates,
   validateCorpus,
+  buildLevelTermIndex,
 } = require('../../../tool/qa/validate_example_quality');
 
 const watashiEntry = {
@@ -245,4 +246,36 @@ test('validateCorpus reports exact failing vocab ids', () => {
   assert.deepEqual(result.failures.map((failure) => failure.vocabId), [
     'n5_l01_v001',
   ]);
+});
+
+test('rejects examples with vocabulary more than one JLPT level above the word', () => {
+  const levelTermIndex = buildLevelTermIndex([
+    { vocabId: 'n3_imagination', level: 'N3', term: '想像力' },
+    { vocabId: 'n3_aspect', level: 'N3', term: '側面' },
+    { vocabId: 'n3_influence', level: 'N3', term: '影響' },
+  ]);
+
+  const result = validateExample(
+    {
+      example_id: 'tat-5007-vie-5787',
+      ja: '想像力は私たちの生活のどの側面にも影響を与える。',
+      vi: 'Sự tưởng tượng ảnh hưởng đến mọi khía cạnh cuộc sống của chúng ta.',
+      source: 'tatoeba-cc-by-2.0',
+      source_detail: 'Tatoeba sentence 5007; translation 5787',
+      license: 'CC-BY 2.0',
+    },
+    {
+      entry: {
+        entryId: 'n5_l01_s002',
+        level: 'N5',
+        lemma: { vocabId: 'n5_l01_v002', term: '私たち', reading: 'わたしたち' },
+        sense: { meaningVi: 'chúng tôi', meaningEn: 'we' },
+        tags: ['pronoun'],
+      },
+      levelTermIndex,
+    },
+  );
+
+  assert.equal(result.ok, false);
+  assert.match(result.errors.join('\n'), /above N5 cap/i);
 });

@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: Nより Nのほうが + A",
-      "meaning": "Ý nghĩa: Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn",
-      "usage": "Cách dùng: Với 〜より〜のほうが, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜より〜のほうが, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Nより Nのほうが + A thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜より〜のほうが không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Nより Nのほうが + A: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. Trong công thức Nより Nのほうが + A, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Nより Nのほうが + A không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Nより Nのほうが + A. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. Với Nより Nのほうが + A, trọng tâm là Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Nより Nのほうが + A khi muốn biểu thị Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Nより Nのほうが + A xoay quanh が trong Nより Nのほうが + A báo Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. Khác 関連する近い文型, Nより Nのほうが + A giữ trọng tâm Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜はずがない",
-          "contrast": "〜より〜のほうが cần đọc theo chức năng riêng của mẫu; 〜はずがない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Nより Nのほうが + A: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Nより Nのほうが + A nghiêng về Diễn tả so sánh và nhấn mạnh phương án được đánh giá cao hơn. So dấu が với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

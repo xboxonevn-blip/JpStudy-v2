@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: N + を通して",
-      "meaning": "Ý nghĩa: Diễn tả phương tiện, kênh hoặc quá trình thông qua đó một kinh nghiệm, ảnh hưởng hay sự kết nối được tạo ra",
-      "usage": "Cách dùng: Với 〜を通して, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜を通して, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách N + を通して thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜を通して không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của N + を通して: nhóm phạm vi trải nghĩa qua thời gian, không gian, phương tiện hoặc một quá trình trung gian.. Trong công thức N + を通して, danh từ phạm vi trước dấu trải rộng; vì vậy phần 範囲 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu N + を通して không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: N + を通して. Dấu cần khóa là danh từ phạm vi trước dấu trải rộng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả phương tiện, kênh hoặc quá trình thông qua đó một kinh nghiệm, ảnh hưởng hay sự kết nối được tạo ra. Với N + を通して, trọng tâm là xuyên qua hoặc trải khắp một phạm vi; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu là kênh, khoảng thời gian, khu vực hoặc quá trình; tránh đọc thành địa điểm đơn lẻ.. Nếu dạng đứng trước lệch khỏi 範囲, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + を通して xoay quanh phạm vi trải rộng. Khác 〜を経て, mẫu kia thường giới hạn vào điểm bắt đầu-kết thúc hoặc phương tiện khác; gặp mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào thì giữ nghĩa phạm vi/kênh, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜をめぐって",
-          "contrast": "〜を通して cần đọc theo chức năng riêng của mẫu; 〜をめぐって có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜を経て",
+          "contrast": "Khác N + を通して: 〜を経て nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N + を通して nghiêng về phạm vi/kênh. So dấu mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào với を trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

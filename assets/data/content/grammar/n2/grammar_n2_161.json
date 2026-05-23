@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-た + あげく / Noun + の + あげく",
-      "meaning": "Ý nghĩa: Dùng khi sau một quá trình dài, nhiều lần thử hoặc nhiều biến cố, cuối cùng dẫn đến một kết quả nào đó",
-      "usage": "Cách dùng: Với ～あげく, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～あげく, lõi ～あげく là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-た + あげく / Noun + の + あげく thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～あげく không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-た + あげく / Noun + の + あげく: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức Verb-た + あげく / Noun + の + あげく, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-た + あげく / Noun + の + あげく không có chữ Hán nổi bật để bám, nên mượn cặp ý \"hướng lợi ích - dấu hiệu\". Nhìn mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" như ký hiệu chức năng báo hướng lợi ích và độ lịch sự, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-た + あげく / Noun + の + あげく. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi sau một quá trình dài, nhiều lần thử hoặc nhiều biến cố, cuối cùng dẫn đến một kết quả nào đó. Với Verb-た + あげく / Noun + の + あげく, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-た + あげく / Noun + の + あげく xoay quanh hướng cho-nhận. Khác 関連する近い文型, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "～あげく cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-た + あげく / Noun + の + あげく: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-た + あげく / Noun + の + あげく nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

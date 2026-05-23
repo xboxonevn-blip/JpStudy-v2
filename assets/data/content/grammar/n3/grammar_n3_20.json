@@ -15,10 +15,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAな / Nの + 気がする",
-      "meaning": "Ý nghĩa: Diễn tả cảm giác, trực giác hoặc ấn tượng chủ quan.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな / Nの + 気がする: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức V普通形 / いA / なAな / Nの + 気がする, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな / Nの + 気がする không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな / Nの + 気がする. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả cảm giác, trực giác hoặc ấn tượng chủ quan. Với V普通形 / いA / なAな / Nの + 気がする, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな / Nの + 気がする xoay quanh đuôi chia thể. Khác V普通形 / いA / なAな + ものだ, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang bản chất/cảm xúc.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAな + ものだ",
+          "contrast": "Khác V普通形 / いA / なAな / Nの + 気がする: V普通形 / いA / なAな + ものだ nghiêng về bản chất/cảm xúc, còn V普通形 / いA / なAな / Nの + 気がする nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với もの thường có hơi người và cảm xúc hơn こと trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -44,16 +52,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAな + ものだ",
-      "meaning": "Ý nghĩa: Diễn tả cảm thán, tính chất chung, điều thường thấy hoặc hồi tưởng khi dùng với dạng quá khứ.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな + ものだ: もの/物 vốn là \"vật/điều\"; trong ngữ pháp nó kéo câu về bản chất, cảm xúc tự nhiên hoặc lý do mang tính con người.. Trong công thức V普通形 / いA / なAな + ものだ, cụm thường trước もの hoặc ものだ/ものだから; vì vậy phần もの không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな + ものだ không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな + ものだ. Dấu cần khóa là cụm thường trước もの hoặc ものだ/ものだから; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả cảm thán, tính chất chung, điều thường thấy hoặc hồi tưởng khi dùng với dạng quá khứ. Với V普通形 / いA / なAな + ものだ, trọng tâm là bản chất, cảm xúc hoặc lý do tự nhiên; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi muốn nêu điều vốn dĩ, cảm giác mạnh, hoặc lời giải thích mềm; tránh thay bằng こと khi cần sắc thái con người.. Nếu dạng đứng trước lệch khỏi もの, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな + ものだ xoay quanh bản chất của もの. Khác V普通形 / いA / なAな / Nな・Nである + わけだ, mẫu kia thường trung tính hơn hoặc chỉ đóng gói sự việc; gặp もの thường có hơi người và cảm xúc hơn こと thì giữ nghĩa bản chất/cảm xúc, đừng kéo sang lý do logic.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAな / Nな・Nである + わけだ",
+          "contrast": "Khác V普通形 / いA / なAな + ものだ: V普通形 / いA / なAな / Nな・Nである + わけだ nghiêng về lý do logic, còn V普通形 / いA / なAな + ものだ nghiêng về bản chất/cảm xúc. So dấu もの thường có hơi người và cảm xúc hơn こと với わけ hỏi \"vì lẽ nào kết luận này đúng\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -73,16 +89,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAな / Nな・Nである + わけだ",
-      "meaning": "Ý nghĩa: Diễn tả kết luận hợp lý sau khi hiểu lý do hoặc bối cảnh.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな / Nな・Nである + わけだ: わけ mang nghĩa lý do/lẽ; mẫu dùng nó để kết luận điều hợp logic hoặc phủ định một suy diễn.. Trong công thức V普通形 / いA / なAな / Nな・Nである + わけだ, mệnh đề thường trước わけ; vì vậy phần わけ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな / Nな・Nである + わけだ không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな / Nな・Nである + わけだ. Dấu cần khóa là mệnh đề thường trước わけ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả kết luận hợp lý sau khi hiểu lý do hoặc bối cảnh. Với V普通形 / いA / なAな / Nな・Nである + わけだ, trọng tâm là lý do, lẽ phải, hoặc suy luận; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu đang giải thích vì sao kết luận hợp lý, không hợp lý, hoặc không thể làm vì ràng buộc xã hội.. Nếu dạng đứng trước lệch khỏi わけ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな / Nな・Nである + わけだ xoay quanh lẽ/suy luận của わけ. Khác V普通形 / いA / なA語幹 / N + に決まっている, mẫu kia thường nói kỳ vọng bằng はず hoặc quyết định bằng こと; gặp わけ hỏi \"vì lẽ nào kết luận này đúng\" thì giữ nghĩa lý do logic, đừng kéo sang biến đổi/trạng thái.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なA語幹 / N + に決まっている",
+          "contrast": "Khác V普通形 / いA / なAな / Nな・Nである + わけだ: V普通形 / いA / なA語幹 / N + に決まっている nghiêng về biến đổi/trạng thái, còn V普通形 / いA / なAな / Nな・Nである + わけだ nghiêng về lý do logic. So dấu わけ hỏi \"vì lẽ nào kết luận này đúng\" với mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -101,10 +125,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なA語幹 / N + に決まっている",
-      "meaning": "Ý nghĩa: Diễn tả sự tin chắc mạnh, như người nói xem điều đó là hiển nhiên.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なA語幹 / N + に決まっている: nhóm biến đổi gắn vào thân động từ/tính từ để nói quá mức, dễ/khó, trạng thái, chuẩn bị, hoàn tất hoặc kéo dài.. Trong công thức V普通形 / いA / なA語幹 / N + に決まっている, thân từ, te-form, hoặc dạng biến đổi trước trợ động từ; vì vậy phần 変化 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なA語幹 / N + に決まっている không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なA語幹 / N + に決まっている. Dấu cần khóa là thân từ, te-form, hoặc dạng biến đổi trước trợ động từ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả sự tin chắc mạnh, như người nói xem điều đó là hiển nhiên. Với V普通形 / いA / なA語幹 / N + に決まっている, trọng tâm là trạng thái/kết quả/khả năng biến đổi; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi phần sau động từ không còn là hành động mới mà là cách nhìn kết quả hoặc mức độ của hành động trước.. Nếu dạng đứng trước lệch khỏi 変化, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なA語幹 / N + に決まっている xoay quanh dấu biến đổi sau thân từ. Khác V普通形 / いA / なAな / Nの + 気がする, mẫu kia thường đổi từ kết quả sang thói quen, chuẩn bị, hoặc cảm xúc; gặp mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì thì giữ nghĩa biến đổi/trạng thái, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAな / Nの + 気がする",
+          "contrast": "Khác V普通形 / いA / なA語幹 / N + に決まっている: V普通形 / いA / なAな / Nの + 気がする nghiêng về dạng chia, còn V普通形 / いA / なA語幹 / N + に決まっている nghiêng về biến đổi/trạng thái. So dấu mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

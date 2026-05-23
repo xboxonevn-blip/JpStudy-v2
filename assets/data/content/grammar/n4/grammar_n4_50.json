@@ -14,16 +14,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語",
-      "meaning": "Ý nghĩa: Khiêm nhường ngữ dùng để hạ hành động của mình hoặc nhóm mình khi hành động đó hướng đến người trên hay khách hàng.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語: 尊敬語 nâng hành động của người trên hoặc khách lên; お/ご là tiền tố lịch sự, còn になる/ください gắn vào khung kính trọng.. Trong công thức 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語, お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; vì vậy phần 尊敬語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"kính trọng - dấu hiệu\". Nhìn 尊敬語 hỏi hành động thuộc về ai để nâng người đó như ký hiệu chức năng báo nâng hành động của người khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語. Dấu cần khóa là お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Khiêm nhường ngữ dùng để hạ hành động của mình hoặc nhóm mình khi hành động đó hướng đến người trên hay khách hàng. Với 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語, trọng tâm là nâng hành động của người khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động của người nghe/người được kính trọng; không dùng để tự nâng hành động của mình.. Nếu dạng đứng trước lệch khỏi 尊敬語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語 xoay quanh đối tượng được nâng lên. Khác ございます / N・なA語幹 + でございます, mẫu kia có thể là khiêm nhường, tức hạ hành động của mình thay vì nâng người khác; gặp 尊敬語 hỏi hành động thuộc về ai để nâng người đó thì giữ nghĩa kính trọng, đừng kéo sang khiêm nhường.",
+      "crossLinks": [
+        {
+          "pattern": "ございます / N・なA語幹 + でございます",
+          "contrast": "Khác 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語: ございます / N・なA語幹 + でございます nghiêng về khiêm nhường, còn 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語 nghiêng về kính trọng. So dấu 尊敬語 hỏi hành động thuộc về ai để nâng người đó với 謙譲語 không nâng mình mà hạ phía mình trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,10 +50,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: ございます / N・なA語幹 + でございます",
-      "meaning": "Ý nghĩa: `ございます` là dạng trang trọng hơn `あります`, còn `でございます` trang trọng hơn `です`.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của ございます / N・なA語幹 + でございます: 謙譲語 hạ hành động của phía mình để tôn người đối diện; ございます là dạng lịch sự trang trọng của あります/です.. Trong công thức ございます / N・なA語幹 + でございます, お/ご + thân từ + します hoặc danh từ/tính từ na + でございます; vì vậy phần 謙譲語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: ございます / N・なA語幹 + でございます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"khiêm nhường - dấu hiệu\". Nhìn 謙譲語 không nâng mình mà hạ phía mình như ký hiệu chức năng báo hạ mình hoặc làm câu trang trọng, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: ございます / N・なA語幹 + でございます. Dấu cần khóa là お/ご + thân từ + します hoặc danh từ/tính từ na + でございます; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `ございます` là dạng trang trọng hơn `あります`, còn `でございます` trang trọng hơn `です`. Với ございます / N・なA語幹 + でございます, trọng tâm là hạ mình hoặc làm câu trang trọng; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động thuộc phía người nói; nếu hành động là của khách/người trên, chuyển sang 尊敬語.. Nếu dạng đứng trước lệch khỏi 謙譲語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: ございます / N・なA語幹 + でございます xoay quanh phía người nói được hạ xuống. Khác お + Vます語幹 / ご + 漢語名詞 + します, mẫu kia thường nâng người khác hoặc chỉ là lịch sự trung tính; gặp 謙譲語 không nâng mình mà hạ phía mình thì giữ nghĩa khiêm nhường, đừng kéo sang kính trọng.",
+      "crossLinks": [
+        {
+          "pattern": "お + Vます語幹 / ご + 漢語名詞 + します",
+          "contrast": "Khác ございます / N・なA語幹 + でございます: お + Vます語幹 / ご + 漢語名詞 + します nghiêng về kính trọng, còn ございます / N・なA語幹 + でございます nghiêng về khiêm nhường. So dấu 謙譲語 không nâng mình mà hạ phía mình với 尊敬語 hỏi hành động thuộc về ai để nâng người đó trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -70,16 +86,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: お + Vます語幹 / ご + 漢語名詞 + します",
-      "meaning": "Ý nghĩa: `お/ご〜します` là mẫu khiêm nhường để nói mình làm việc gì cho hoặc đối với người trên.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của お + Vます語幹 / ご + 漢語名詞 + します: 尊敬語 nâng hành động của người trên hoặc khách lên; お/ご là tiền tố lịch sự, còn になる/ください gắn vào khung kính trọng.. Trong công thức お + Vます語幹 / ご + 漢語名詞 + します, お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; vì vậy phần 尊敬語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: お + Vます語幹 / ご + 漢語名詞 + します không có chữ Hán nổi bật để bám, nên mượn cặp ý \"kính trọng - dấu hiệu\". Nhìn 尊敬語 hỏi hành động thuộc về ai để nâng người đó như ký hiệu chức năng báo nâng hành động của người khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: お + Vます語幹 / ご + 漢語名詞 + します. Dấu cần khóa là お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `お/ご〜します` là mẫu khiêm nhường để nói mình làm việc gì cho hoặc đối với người trên. Với お + Vます語幹 / ご + 漢語名詞 + します, trọng tâm là nâng hành động của người khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động của người nghe/người được kính trọng; không dùng để tự nâng hành động của mình.. Nếu dạng đứng trước lệch khỏi 尊敬語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: お + Vます語幹 / ご + 漢語名詞 + します xoay quanh đối tượng được nâng lên. Khác N / なA語幹 + でございます, mẫu kia có thể là khiêm nhường, tức hạ hành động của mình thay vì nâng người khác; gặp 尊敬語 hỏi hành động thuộc về ai để nâng người đó thì giữ nghĩa kính trọng, đừng kéo sang khiêm nhường.",
+      "crossLinks": [
+        {
+          "pattern": "N / なA語幹 + でございます",
+          "contrast": "Khác お + Vます語幹 / ご + 漢語名詞 + します: N / なA語幹 + でございます nghiêng về khiêm nhường, còn お + Vます語幹 / ご + 漢語名詞 + します nghiêng về kính trọng. So dấu 尊敬語 hỏi hành động thuộc về ai để nâng người đó với 謙譲語 không nâng mình mà hạ phía mình trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,10 +122,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N / なA語幹 + でございます",
-      "meaning": "Ý nghĩa: `〜でございます` là dạng rất trang trọng của `です`, dùng với danh từ hoặc tính từ na.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của N / なA語幹 + でございます: 謙譲語 hạ hành động của phía mình để tôn người đối diện; ございます là dạng lịch sự trang trọng của あります/です.. Trong công thức N / なA語幹 + でございます, お/ご + thân từ + します hoặc danh từ/tính từ na + でございます; vì vậy phần 謙譲語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N / なA語幹 + でございます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"khiêm nhường - dấu hiệu\". Nhìn 謙譲語 không nâng mình mà hạ phía mình như ký hiệu chức năng báo hạ mình hoặc làm câu trang trọng, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N / なA語幹 + でございます. Dấu cần khóa là お/ご + thân từ + します hoặc danh từ/tính từ na + でございます; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `〜でございます` là dạng rất trang trọng của `です`, dùng với danh từ hoặc tính từ na. Với N / なA語幹 + でございます, trọng tâm là hạ mình hoặc làm câu trang trọng; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động thuộc phía người nói; nếu hành động là của khách/người trên, chuyển sang 尊敬語.. Nếu dạng đứng trước lệch khỏi 謙譲語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N / なA語幹 + でございます xoay quanh phía người nói được hạ xuống. Khác 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語, mẫu kia thường nâng người khác hoặc chỉ là lịch sự trung tính; gặp 謙譲語 không nâng mình mà hạ phía mình thì giữ nghĩa khiêm nhường, đừng kéo sang kính trọng.",
+      "crossLinks": [
+        {
+          "pattern": "謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語",
+          "contrast": "Khác N / なA語幹 + でございます: 謙譲語: お + Vます語幹 / ご + 漢語名詞 + します・特別謙譲語 nghiêng về kính trọng, còn N / なA語幹 + でございます nghiêng về khiêm nhường. So dấu 謙譲語 không nâng mình mà hạ phía mình với 尊敬語 hỏi hành động thuộc về ai để nâng người đó trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

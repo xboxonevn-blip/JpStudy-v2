@@ -22,16 +22,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Sentence A + だが + Sentence B",
-      "meaning": "Ý nghĩa: Dùng để nối hai câu hoặc hai ý có nội dung đối lập.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Sentence A + だが + Sentence B: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nối hai câu hoặc hai ý có nội dung đối lập. Trong công thức Sentence A + だが + Sentence B, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A + だが + Sentence B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nối hai câu hoặc hai ý có nội dung đối lập - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Dùng để nối hai câu hoặc hai ý có nội dung đối lập, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A + だが + Sentence B. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nối hai câu hoặc hai ý có nội dung đối lập. Với Sentence A + だが + Sentence B, trọng tâm là Dùng để nối hai câu hoặc hai ý có nội dung đối lập; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Sentence A + だが + Sentence B khi muốn biểu thị Dùng để nối hai câu hoặc hai ý có nội dung đối lập; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A + だが + Sentence B xoay quanh が trong Sentence A + だが + Sentence B báo Dùng để nối hai câu hoặc hai ý có nội dung đối lập. Khác Sentence A + ただ + Sentence B, Sentence A + だが + Sentence B giữ trọng tâm Dùng để nối hai câu hoặc hai ý có nội dung đối lập, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Dùng để nối hai câu hoặc hai ý có nội dung đối lập, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Sentence A + ただ + Sentence B",
+          "contrast": "Khác Sentence A + だが + Sentence B: Sentence A + ただ + Sentence B nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Sentence A + だが + Sentence B nghiêng về Dùng để nối hai câu hoặc hai ý có nội dung đối lập. So dấu が với ただ trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -58,16 +66,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Sentence A + ただ + Sentence B",
-      "meaning": "Ý nghĩa: Dùng khi thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Sentence A + ただ + Sentence B: ただ là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B. Trong công thức Sentence A + ただ + Sentence B, dấu ただ và dạng từ ngay trước nó; vì vậy phần ただ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A + ただ + Sentence B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B - dấu hiệu\". Nhìn ただ như ký hiệu chức năng báo thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A + ただ + Sentence B. Dấu cần khóa là dấu ただ và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B. Với Sentence A + ただ + Sentence B, trọng tâm là thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Sentence A + ただ + Sentence B khi muốn biểu thị thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B; ưu tiên kiểm tra dấu ただ trong câu mẫu. Nếu dạng đứng trước lệch khỏi ただ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A + ただ + Sentence B xoay quanh ただ trong Sentence A + ただ + Sentence B báo thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B. Khác Statement A + ただし + Condition B, Sentence A + ただ + Sentence B giữ trọng tâm thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp ただ thì giữ nghĩa thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Statement A + ただし + Condition B",
+          "contrast": "Khác Sentence A + ただ + Sentence B: Statement A + ただし + Condition B nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Sentence A + ただ + Sentence B nghiêng về thừa nhận A nhưng bổ sung một điểm hạn chế, khác biệt hoặc trái chiều ở B. So dấu ただ với ただし trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -94,16 +110,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Statement A + ただし + Condition B",
-      "meaning": "Ý nghĩa: Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Statement A + ただし + Condition B: ただし là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. Trong công thức Statement A + ただし + Condition B, dấu ただし và dạng từ ngay trước nó; vì vậy phần ただし không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Statement A + ただし + Condition B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó - dấu hiệu\". Nhìn ただし như ký hiệu chức năng báo Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Statement A + ただし + Condition B. Dấu cần khóa là dấu ただし và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. Với Statement A + ただし + Condition B, trọng tâm là Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Statement A + ただし + Condition B khi muốn biểu thị Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó; ưu tiên kiểm tra dấu ただし trong câu mẫu. Nếu dạng đứng trước lệch khỏi ただし, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Statement A + ただし + Condition B xoay quanh ただし trong Statement A + ただし + Condition B báo Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. Khác Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって, Statement A + ただし + Condition B giữ trọng tâm Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp ただし thì giữ nghĩa Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって",
+          "contrast": "Khác Statement A + ただし + Condition B: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Statement A + ただし + Condition B nghiêng về Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. So dấu ただし với だって trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -130,16 +154,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって",
-      "meaning": "Ý nghĩa: Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって: だって là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. Trong công thức Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって, dấu だって và dạng từ ngay trước nó; vì vậy phần だって không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B - dấu hiệu\". Nhìn だって như ký hiệu chức năng báo Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって. Dấu cần khóa là dấu だって và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. Với Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって, trọng tâm là Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって khi muốn biểu thị Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B; ưu tiên kiểm tra dấu だって trong câu mẫu. Nếu dạng đứng trước lệch khỏi だって, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって xoay quanh だって trong Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって báo Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. Khác A。ちなみに B。, Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって giữ trọng tâm Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp だって thì giữ nghĩa Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "A。ちなみに B。",
+          "contrast": "Khác Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって: A。ちなみに B。 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって nghiêng về Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. So dấu だって với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -166,10 +198,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A。ちなみに B。",
-      "meaning": "Ý nghĩa: Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của A。ちなみに B。: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. Trong công thức A。ちなみに B。, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A。ちなみに B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là” - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A。ちなみに B。. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. Với A。ちなみに B。, trọng tâm là Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A。ちなみに B。 khi muốn biểu thị Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A。ちなみに B。 xoay quanh に trong A。ちなみに B。 báo Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. Khác A + ということは + B, A。ちなみに B。 giữ trọng tâm Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "A + ということは + B",
+          "contrast": "Khác A。ちなみに B。: A + ということは + B nghiêng về sự việc, còn A。ちなみに B。 nghiêng về Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. So dấu に với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,10 +242,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: A + ということは + B",
-      "meaning": "Ý nghĩa: Dùng khi từ thông tin A suy ra kết luận B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của A + ということは + B: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức A + ということは + B, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu A + ということは + B không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: A + ということは + B. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi từ thông tin A suy ra kết luận B. Với A + ということは + B, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A + ということは + B xoay quanh sự việc được danh từ hóa. Khác [Statement A]。というのは、[Statement B]。, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang nội dung/trích dẫn.",
+      "crossLinks": [
+        {
+          "pattern": "[Statement A]。というのは、[Statement B]。",
+          "contrast": "Khác A + ということは + B: [Statement A]。というのは、[Statement B]。 nghiêng về nội dung/trích dẫn, còn A + ということは + B nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +286,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: [Statement A]。というのは、[Statement B]。",
-      "meaning": "Ý nghĩa: Dùng để giải thích, định nghĩa hoặc nói rõ lý do cho A bằng phần B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của [Statement A]。というのは、[Statement B]。: nhóm trích dẫn/suy đoán dùng と hoặc か để đóng gói lời, ý nghĩ, câu hỏi, hoặc mức chắc chắn của người nói.. Trong công thức [Statement A]。というのは、[Statement B]。, mệnh đề thường trước と/か/でしょう; vì vậy phần 引用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: [Statement A]。というのは、[Statement B]。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nội dung/trích dẫn - dấu hiệu\". Nhìn mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói như ký hiệu chức năng báo nội dung được trích, hỏi gián tiếp, hoặc phỏng đoán, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: [Statement A]。というのは、[Statement B]。. Dấu cần khóa là mệnh đề thường trước と/か/でしょう; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để giải thích, định nghĩa hoặc nói rõ lý do cho A bằng phần B. Với [Statement A]。というのは、[Statement B]。, trọng tâm là nội dung được trích, hỏi gián tiếp, hoặc phỏng đoán; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả câu trước mẫu là nội dung trong đầu/lời nói; kiểm tra だ với danh từ và tính từ na.. Nếu dạng đứng trước lệch khỏi 引用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: [Statement A]。というのは、[Statement B]。 xoay quanh nội dung được đóng gói. Khác Sentence A + だが + Sentence B, mẫu kia có thể là truyền văn từ nguồn khác hoặc phỏng đoán mức khác; gặp mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói thì giữ nghĩa nội dung/trích dẫn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Sentence A + だが + Sentence B",
+          "contrast": "Khác [Statement A]。というのは、[Statement B]。: Sentence A + だが + Sentence B nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn [Statement A]。というのは、[Statement B]。 nghiêng về nội dung/trích dẫn. So dấu mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói với が trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

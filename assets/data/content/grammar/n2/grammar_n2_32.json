@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり",
-      "meaning": "Ý nghĩa: Dùng khi một hành động, kết quả hoặc tình trạng đúng như chỉ dẫn, thông tin, dự đoán hoặc mẫu đã nêu",
-      "usage": "Cách dùng: Với ～とおり, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～とおり, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～とおり không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり: nhóm căn cứ nói hành động đi theo một bản mẫu, quy tắc, dữ liệu hoặc nguồn đã có.. Trong công thức Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり, danh từ hoặc mệnh đề nguồn trước dấu căn cứ; vì vậy phần 基準 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり không có chữ Hán nổi bật để bám, nên mượn cặp ý \"căn cứ - dấu hiệu\". Nhìn mẫu căn cứ hỏi người nói bám theo cái gì như ký hiệu chức năng báo theo đúng nguồn/căn cứ, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり. Dấu cần khóa là danh từ hoặc mệnh đề nguồn trước dấu căn cứ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi một hành động, kết quả hoặc tình trạng đúng như chỉ dẫn, thông tin, dự đoán hoặc mẫu đã nêu. Với Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり, trọng tâm là theo đúng nguồn/căn cứ; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu cần bám vào hướng dẫn, kế hoạch, dữ liệu; đừng đọc như chỉ địa điểm.. Nếu dạng đứng trước lệch khỏi 基準, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり xoay quanh nguồn căn cứ. Khác 関連する近い文型, mẫu kia có thể nói nguyên nhân hoặc phương tiện chứ không phải chuẩn để theo; gặp mẫu căn cứ hỏi người nói bám theo cái gì thì giữ nghĩa căn cứ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A。すると B。",
-          "contrast": "～とおり cần đọc theo chức năng riêng của mẫu; A。すると B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-dictionary/past form + とおり, Noun + のとおり / Noun + どおり nghiêng về căn cứ. So dấu mẫu căn cứ hỏi người nói bám theo cái gì với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

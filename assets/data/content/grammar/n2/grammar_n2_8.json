@@ -22,16 +22,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって",
-      "meaning": "Ý nghĩa: Dùng khi phủ nhận suy luận quá đơn giản: chỉ vì A đúng không có nghĩa là B cũng đúng hoặc sẽ xảy ra.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi phủ nhận suy luận quá đơn giản: chỉ vì A đúng không có nghĩa là B cũng đúng hoặc sẽ xảy ra. Với Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって xoay quanh mối nối nguyên nhân. Khác Noun 1 + から + Noun 2 + にかけて, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang lý do/mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "Noun 1 + から + Noun 2 + にかけて",
+          "contrast": "Khác Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって: Noun 1 + から + Noun 2 + にかけて nghiêng về lý do/mục đích, còn Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với dấu lý do hỏi kết quả sinh ra từ đâu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -58,10 +66,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun 1 + から + Noun 2 + にかけて",
-      "meaning": "Ý nghĩa: Dùng để chỉ một phạm vi kéo dài từ điểm A đến khoảng B, thường là thời gian, địa điểm hoặc khu vực.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Noun 1 + から + Noun 2 + にかけて: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Noun 1 + から + Noun 2 + にかけて, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun 1 + から + Noun 2 + にかけて không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun 1 + から + Noun 2 + にかけて. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để chỉ một phạm vi kéo dài từ điểm A đến khoảng B, thường là thời gian, địa điểm hoặc khu vực. Với Noun 1 + から + Noun 2 + にかけて, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun 1 + から + Noun 2 + にかけて xoay quanh mối nối nguyên nhân. Khác Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang lý do/mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには",
+          "contrast": "Khác Noun 1 + から + Noun 2 + にかけて: Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには nghiêng về lý do/mục đích, còn Noun 1 + から + Noun 2 + にかけて nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với dấu lý do hỏi kết quả sinh ra từ đâu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -94,16 +110,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには",
-      "meaning": "Ý nghĩa: Dùng khi đã ở trong điều kiện A thì người nói cho rằng cần có trách nhiệm, quyết tâm hoặc kết quả tương ứng ở B.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi đã ở trong điều kiện A thì người nói cho rằng cần có trách nhiệm, quyết tâm hoặc kết quả tương ứng ở B. Với Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには xoay quanh mối nối nguyên nhân. Khác Noun + から見ると, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang lý do/mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + から見ると",
+          "contrast": "Khác Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには: Noun + から見ると nghiêng về lý do/mục đích, còn Noun + だ + からには, な-Adjective + だ + からには, い-Adjective + からには, Verb-casual + からには nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với dấu lý do hỏi kết quả sinh ra từ đâu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -130,10 +154,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + から見ると",
-      "meaning": "Ý nghĩa: Dùng để nêu nhận định từ một góc nhìn, lập trường hoặc phía quan sát cụ thể.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Noun + から見ると: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Noun + から見ると, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + から見ると không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + から見ると. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nêu nhận định từ một góc nhìn, lập trường hoặc phía quan sát cụ thể. Với Noun + から見ると, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + から見ると xoay quanh mối nối nguyên nhân. Khác Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common), mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang lý do/mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common)",
+          "contrast": "Khác Noun + から見ると: Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common) nghiêng về lý do/mục đích, còn Noun + から見ると nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với dấu lý do hỏi kết quả sinh ra từ đâu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -166,10 +198,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common)",
-      "meaning": "Ý nghĩa: Dùng để đánh giá hoặc nhận xét dựa trên một tiêu chí cụ thể.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common): nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common), cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common). Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để đánh giá hoặc nhận xét dựa trên một tiêu chí cụ thể. Với Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common), trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common) xoay quanh mối nối nguyên nhân. Khác Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに",
+          "contrast": "Khác Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common): Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun + から言うと (common), [Verb-casual / Adjective + から言って] (less common) nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,10 +242,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに",
-      "meaning": "Ý nghĩa: Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó. Trong công thức Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó. Với Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに, trọng tâm là Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに khi muốn biểu thị Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに xoay quanh に trong Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに báo Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó. Khác Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから, Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに giữ trọng tâm Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから",
+          "contrast": "Khác Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに: Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから nghiêng về sự việc, còn Verb (casual) + くせに / い-Adjective + くせに / な-Adjective + な(or の) + くせに / Noun + の + くせに nghiêng về Dùng để phê bình hoặc trách móc khi hành động/kết quả trái với điều đáng lẽ phải xảy ra theo tính chất, vai trò hoặc lời nói trước đó. So dấu に với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,10 +286,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから",
-      "meaning": "Ý nghĩa: Dùng để nêu căn cứ hoặc lý do dẫn đến kết luận, tên gọi hoặc sự việc phía sau.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nêu căn cứ hoặc lý do dẫn đến kết luận, tên gọi hoặc sự việc phía sau. Với Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから xoay quanh sự việc được danh từ hóa. Khác Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに",
+          "contrast": "Khác Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから: Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに nghiêng về sự việc, còn Verb-casual + ことから / い-Adjective + ことから / な-Adjective + なことから / Noun + のことから nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -274,10 +330,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに",
-      "meaning": "Ý nghĩa: Dùng để đưa cảm xúc hoặc đánh giá của người nói lên trước sự việc, như “đáng ngạc nhiên là”, “đáng tiếc là”, “may mắn là”.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để đưa cảm xúc hoặc đánh giá của người nói lên trước sự việc, như “đáng ngạc nhiên là”, “đáng tiếc là”, “may mắn là”. Với Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに xoay quanh sự việc được danh từ hóa. Khác Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang lý do/mục đích.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって",
+          "contrast": "Khác Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに: Verb-casual + からといって, い-Adjective + からといって, な-Adjective + だからといって, Noun + だからといって nghiêng về lý do/mục đích, còn Verb-casual + ことに / い-Adjective + ことに / な-Adjective + なことに / Noun + のことに nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với dấu lý do hỏi kết quả sinh ra từ đâu trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

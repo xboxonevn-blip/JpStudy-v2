@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Feeling/emotion/intention Noun + を + 込めて + Verb",
-      "meaning": "Ý nghĩa: Dùng khi hành động được thực hiện với một tình cảm, ý định hoặc lời chúc được gửi gắm bên trong",
-      "usage": "Cách dùng: Với ～を込めて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～を込めて, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Feeling/emotion/intention Noun + を + 込めて + Verb thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～を込めて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Feeling/emotion/intention Noun + を + 込めて + Verb: nhóm quan hệ đặt danh từ làm tâm, nguồn khởi đầu, chỗ dựa, cảm xúc gửi vào, hoặc phản ứng theo yêu cầu.. Trong công thức Feeling/emotion/intention Noun + を + 込めて + Verb, danh từ quan hệ trước を/に; vì vậy phần 関係 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 込 mang hình ảnh dồn vào bên trong; 込めて là gửi cảm xúc/ý định vào hành động. Khi mẫu Feeling/emotion/intention Noun + を + 込めて + Verb không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Feeling/emotion/intention Noun + を + 込めて + Verb. Dấu cần khóa là danh từ quan hệ trước を/に; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi hành động được thực hiện với một tình cảm, ý định hoặc lời chúc được gửi gắm bên trong. Với Feeling/emotion/intention Noun + を + 込めて + Verb, trọng tâm là quan hệ chức năng giữa danh từ và hành động; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu không phải tân ngữ thường mà là tâm điểm, căn cứ, cảm xúc, hoặc điều được đáp lại.. Nếu dạng đứng trước lệch khỏi 関係, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Feeling/emotion/intention Noun + を + 込めて + Verb xoay quanh quan hệ với danh từ trước mẫu. Khác 関連する近い文型, mẫu kia có thể dùng cùng trợ từ nhưng đổi vai danh từ; gặp mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì thì giữ nghĩa quan hệ chức năng, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～ざるを得ない",
-          "contrast": "～を込めて cần đọc theo chức năng riêng của mẫu; ～ざるを得ない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Feeling/emotion/intention Noun + を + 込めて + Verb: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Feeling/emotion/intention Noun + を + 込めて + Verb nghiêng về quan hệ chức năng. So dấu mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

@@ -9,6 +9,7 @@ const {
 } = require('../../../tool/research/generate_exercises');
 const {
   buildReadingPassages,
+  populateReadingVocabsFromInterlinkGraph,
 } = require('../../../tool/research/generate_reading_passages');
 const {
   validatePhase4Assets,
@@ -40,6 +41,43 @@ test('buildReadingPassages emits required per-level counts and questions', () =>
   assert.equal(byLevel.N2, 326);
   assert.equal(byLevel.N1, 176);
   assert.equal(passages.passages.length, 968);
+});
+
+test('buildReadingPassages writes actual Vietnamese translation, not metadata label', () => {
+  const readingPassages = buildReadingPassages({
+    generatedAt: '2026-05-21T08:00:00+07:00',
+  });
+
+  const first = readingPassages.passages[0];
+
+  assert.doesNotMatch(first.vi_translation, /^Bài đọc gốc JpStudy/);
+  assert.match(first.vi_translation, /đọc tiếng Nhật|ghi chú|giáo viên|đọc hiểu/i);
+  assert.equal(first.vi_translation.includes(first.title), false);
+});
+
+test('populateReadingVocabsFromInterlinkGraph tags vocab found in ja_text', () => {
+  const passages = {
+    passages: [
+      {
+        passage_id: 'rc-test',
+        level: 'N5',
+        ja_text: '私たちは学校へ行きます。',
+        vocabs_used: [],
+      },
+    ],
+  };
+  const graph = {
+    nodeFields: ['id', 'type', 'level', 'label', 'route'],
+    nodes: [
+      ['vocab:n5:n5_l01_v002', 'vocab', 'N5', '私たち', '/vocab'],
+      ['vocab:n5:n5_l02_v001', 'vocab', 'N5', '学校', '/vocab'],
+      ['grammar:n5:g001', 'grammar', 'N5', 'N は N です', '/grammar'],
+    ],
+  };
+
+  const result = populateReadingVocabsFromInterlinkGraph(passages, graph);
+
+  assert.deepEqual(result.passages[0].vocabs_used, ['n5_l01_v002', 'n5_l02_v001']);
 });
 
 test('buildPhoneticTrapCorpus keeps same-length near-kana traps', () => {

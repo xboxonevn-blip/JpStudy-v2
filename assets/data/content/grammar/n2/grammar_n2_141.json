@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Statement A + ただし + Condition B",
-      "meaning": "Ý nghĩa: Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó",
-      "usage": "Cách dùng: Với A。ただしB。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。ただしB。, lõi A。ただしB。 là mảnh giữ nhịp ngữ pháp. Hãy tách Statement A + ただし + Condition B thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。ただしB。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Statement A + ただし + Condition B: ただし là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. Trong công thức Statement A + ただし + Condition B, dấu ただし và dạng từ ngay trước nó; vì vậy phần ただし không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Statement A + ただし + Condition B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó - dấu hiệu\". Nhìn ただし như ký hiệu chức năng báo Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Statement A + ただし + Condition B. Dấu cần khóa là dấu ただし và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. Với Statement A + ただし + Condition B, trọng tâm là Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Statement A + ただし + Condition B khi muốn biểu thị Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó; ưu tiên kiểm tra dấu ただし trong câu mẫu. Nếu dạng đứng trước lệch khỏi ただし, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Statement A + ただし + Condition B xoay quanh ただし trong Statement A + ただし + Condition B báo Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. Khác 関連する近い文型, Statement A + ただし + Condition B giữ trọng tâm Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp ただし thì giữ nghĩa Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "A。ただしB。 cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Statement A + ただし + Condition B: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Statement A + ただし + Condition B nghiêng về Dùng để thêm điều kiện, ngoại lệ hoặc giới hạn cho phát biểu trước đó. So dấu ただし với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

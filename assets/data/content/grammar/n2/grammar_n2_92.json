@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Sentence A + それはそうと + Sentence B",
-      "meaning": "Ý nghĩa: Dùng để gác lại nội dung A và chuyển sang chủ đề B",
-      "usage": "Cách dùng: Với A それはそうと B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A それはそうと B。, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Sentence A + それはそうと + Sentence B thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A それはそうと B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Sentence A + それはそうと + Sentence B: そう trong dạng vẻ bám vào thân động từ hoặc thân tính từ để nói ấn tượng nhìn thấy trước khi sự việc xảy ra.. Trong công thức Sentence A + それはそうと + Sentence B, Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; vì vậy phần そう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A + それはそうと + Sentence B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dáng vẻ - dấu hiệu\". Nhìn そうだ dạng vẻ báo ấn tượng trực tiếp như ký hiệu chức năng báo dáng vẻ hoặc khả năng sắp xảy ra, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A + それはそうと + Sentence B. Dấu cần khóa là Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để gác lại nội dung A và chuyển sang chủ đề B. Với Sentence A + それはそうと + Sentence B, trọng tâm là dáng vẻ hoặc khả năng sắp xảy ra; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi mắt thấy dấu hiệu như 雨が降りそう; tránh lẫn với そうです truyền tin theo nguồn.. Nếu dạng đứng trước lệch khỏi そう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A + それはそうと + Sentence B xoay quanh dáng vẻ nhìn thấy. Khác 関連する近い文型, mẫu kia thường kể lại thông tin hoặc suy đoán theo nguồn khác; gặp そうだ dạng vẻ báo ấn tượng trực tiếp thì giữ nghĩa dáng vẻ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "A それはそうと B。 cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Sentence A + それはそうと + Sentence B: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Sentence A + それはそうと + Sentence B nghiêng về dáng vẻ. So dấu そうだ dạng vẻ báo ấn tượng trực tiếp với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

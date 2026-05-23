@@ -17,15 +17,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: N + における + N",
-      "meaning": "Ý nghĩa: Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh",
-      "usage": "Cách dùng: Với 〜における, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜における, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách N + における + N thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜における không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của N + における + N: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh. Trong công thức N + における + N, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N + における + N không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N + における + N. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh. Với N + における + N, trọng tâm là Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng N + における + N khi muốn biểu thị Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + における + N xoay quanh に trong N + における + N báo Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh. Khác 関連する近い文型, N + における + N giữ trọng tâm Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜における cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác N + における + N: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N + における + N nghiêng về Là cách viết trang trọng của での, dùng trong văn viết để nói “trong, ở, trong bối cảnh. So dấu に với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -33,7 +34,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

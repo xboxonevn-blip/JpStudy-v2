@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun1 + を + めぐる + Noun2",
-      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ phía sau, chỉ một sự việc, cuộc thảo luận hoặc vấn đề xoay quanh chủ đề được nêu",
-      "usage": "Cách dùng: Với Noun を めぐる Noun, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong Noun を めぐる Noun, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + を + めぐる + Noun2 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: Noun を めぐる Noun không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun1 + を + めぐる + Noun2: nhóm quan hệ đặt danh từ làm tâm, nguồn khởi đầu, chỗ dựa, cảm xúc gửi vào, hoặc phản ứng theo yêu cầu.. Trong công thức Noun1 + を + めぐる + Noun2, danh từ quan hệ trước を/に; vì vậy phần 関係 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun1 + を + めぐる + Noun2 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"quan hệ chức năng - dấu hiệu\". Nhìn mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì như ký hiệu chức năng báo quan hệ chức năng giữa danh từ và hành động, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun1 + を + めぐる + Noun2. Dấu cần khóa là danh từ quan hệ trước を/に; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để bổ nghĩa cho danh từ phía sau, chỉ một sự việc, cuộc thảo luận hoặc vấn đề xoay quanh chủ đề được nêu. Với Noun1 + を + めぐる + Noun2, trọng tâm là quan hệ chức năng giữa danh từ và hành động; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu không phải tân ngữ thường mà là tâm điểm, căn cứ, cảm xúc, hoặc điều được đáp lại.. Nếu dạng đứng trước lệch khỏi 関係, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun1 + を + めぐる + Noun2 xoay quanh quan hệ với danh từ trước mẫu. Khác 関連する近い文型, mẫu kia có thể dùng cùng trợ từ nhưng đổi vai danh từ; gặp mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì thì giữ nghĩa quan hệ chức năng, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～ざるを得ない",
-          "contrast": "Noun を めぐる Noun cần đọc theo chức năng riêng của mẫu; ～ざるを得ない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Noun1 + を + めぐる + Noun2: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun1 + を + めぐる + Noun2 nghiêng về quan hệ chức năng. So dấu mẫu quan hệ hỏi danh từ trước mẫu giữ vai gì với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

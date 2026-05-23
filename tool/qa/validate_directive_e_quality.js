@@ -7,6 +7,10 @@ const BANNED_HUMAN_MOMENT_PHRASES = [
   'nghĩa thường hiện rõ',
   'theo dõi dạng phủ định trước',
   'Khoảnh khắc người: Nếu',
+  'cần nhìn vào vai trò của cụm đứng trước',
+  'đừng dịch vội từng chữ',
+  'chốt quyết định, nối lý do, hay làm mềm câu',
+  'không thay thế máy móc; hãy so phần nối',
 ];
 
 const REQUIRED_FIELDS = [

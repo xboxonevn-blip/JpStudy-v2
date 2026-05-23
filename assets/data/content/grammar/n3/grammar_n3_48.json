@@ -17,15 +17,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V辞書 / Vない + ようになっている",
-      "meaning": "Ý nghĩa: Diễn tả cơ chế hoặc trạng thái được thiết kế sẵn",
-      "usage": "Cách dùng: Với 〜ようになっている, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜ようになっている, lõi よう là mảnh giữ nhịp ngữ pháp. Hãy tách V辞書 / Vない + ようになっている thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜ようになっている không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V辞書 / Vない + ようになっている: よう bắt nguồn từ 様, ý \"dạng/dáng\"; mẫu mượn hình ảnh cái gì đó có vẻ hoặc hướng về một trạng thái.. Trong công thức V辞書 / Vない + ようになっている, よう cùng の sau danh từ hoặc な sau tính từ na; vì vậy phần よう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 様 = dạng/dáng, gần \"hình dạng\", nên よう hay nói về cách, vẻ hoặc mục tiêu. Khi mẫu V辞書 / Vない + ようになっている không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V辞書 / Vない + ようになっている. Dấu cần khóa là よう cùng の sau danh từ hoặc な sau tính từ na; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả cơ chế hoặc trạng thái được thiết kế sẵn. Với V辞書 / Vない + ようになっている, trọng tâm là vẻ giống, mục tiêu, hoặc trạng thái hướng tới; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cần nói \"như/có vẻ/để sao cho\"; nhớ kiểm tra の, な, hoặc に sau よう.. Nếu dạng đứng trước lệch khỏi よう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 / Vない + ようになっている xoay quanh dáng/hướng của よう. Khác 〜みたいだ, mẫu kia thường trực tiếp hơn hoặc thân mật hơn, không cần bộ đệm 様/よう; gặp よう giữ hình ảnh \"dáng như vậy\" thì giữ nghĩa vẻ hoặc hướng, đừng kéo sang vẻ giống thân mật.",
       "crossLinks": [
         {
-          "pattern": "〜ようにする",
-          "contrast": "〜ようになっている cần đọc theo chức năng riêng của mẫu; 〜ようにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜みたいだ",
+          "contrast": "Khác V辞書 / Vない + ようになっている: 〜みたいだ nghiêng về vẻ giống thân mật, còn V辞書 / Vない + ようになっている nghiêng về vẻ hoặc hướng. So dấu よう giữ hình ảnh \"dáng như vậy\" với みたい kéo câu về văn nói trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -33,7 +34,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

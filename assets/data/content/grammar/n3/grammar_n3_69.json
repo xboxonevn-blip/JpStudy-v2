@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V辞書 + しかない",
-      "meaning": "Ý nghĩa: Diễn tả chỉ còn một lựa chọn duy nhất",
-      "usage": "Cách dùng: Với 〜しかない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜しかない, lõi しか là mảnh giữ nhịp ngữ pháp. Hãy tách V辞書 + しかない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜しかない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V辞書 + しかない: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức V辞書 + しかない, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 + しかない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 + しかない. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả chỉ còn một lựa chọn duy nhất. Với V辞書 + しかない, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + しかない xoay quanh ranh giới lượng. Khác 関連する近い文型, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜しかない cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác V辞書 + しかない: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn V辞書 + しかない nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A + そういえば + B",
-      "meaning": "Ý nghĩa: Dùng khi từ điều vừa nói ở A, người nói chợt nhớ hoặc chuyển sang một thông tin liên quan ở B",
-      "usage": "Cách dùng: Với A。そういえば B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。そういえば B。, lõi A。そういえば B。 là mảnh giữ nhịp ngữ pháp. Hãy tách A + そういえば + B thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。そういえば B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A + そういえば + B: そう trong dạng vẻ bám vào thân động từ hoặc thân tính từ để nói ấn tượng nhìn thấy trước khi sự việc xảy ra.. Trong công thức A + そういえば + B, Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; vì vậy phần そう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A + そういえば + B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dáng vẻ - dấu hiệu\". Nhìn そうだ dạng vẻ báo ấn tượng trực tiếp như ký hiệu chức năng báo dáng vẻ hoặc khả năng sắp xảy ra, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A + そういえば + B. Dấu cần khóa là Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi từ điều vừa nói ở A, người nói chợt nhớ hoặc chuyển sang một thông tin liên quan ở B. Với A + そういえば + B, trọng tâm là dáng vẻ hoặc khả năng sắp xảy ra; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi mắt thấy dấu hiệu như 雨が降りそう; tránh lẫn với そうです truyền tin theo nguồn.. Nếu dạng đứng trước lệch khỏi そう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A + そういえば + B xoay quanh dáng vẻ nhìn thấy. Khác 〜たら, mẫu kia thường kể lại thông tin hoặc suy đoán theo nguồn khác; gặp そうだ dạng vẻ báo ấn tượng trực tiếp thì giữ nghĩa dáng vẻ, đừng kéo sang điều kiện.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "A。そういえば B。 cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜たら",
+          "contrast": "Khác A + そういえば + B: 〜たら nghiêng về điều kiện, còn A + そういえば + B nghiêng về dáng vẻ. So dấu そうだ dạng vẻ báo ấn tượng trực tiếp với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

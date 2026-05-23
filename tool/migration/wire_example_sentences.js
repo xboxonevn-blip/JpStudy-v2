@@ -5,6 +5,7 @@ const {
   normalizeExample,
   validateExample,
   validateWiredVocabFiles: validateWiredExampleQuality,
+  buildLevelTermIndex,
 } = require('../qa/validate_example_quality');
 
 const DEFAULT_VOCAB_ROOT = path.join('assets', 'data', 'content', 'vocab');
@@ -49,12 +50,19 @@ function vocabIdForEntry(entry) {
 function buildExampleCorpus(vocabFiles, options = {}) {
   const tatoebaIndex = buildTatoebaIndex(options.tatoebaRows ?? []);
   const textbookIndex = buildTextbookIndex(options.textbookRows ?? []);
+  const allEntries = vocabFiles.flatMap((file) => file.payload.entries || []);
+  const levelTermIndex = options.levelTermIndex || buildLevelTermIndex(allEntries);
   const items = {};
   for (const file of vocabFiles) {
     const payload = file.payload;
     const entries = Array.isArray(payload.entries) ? payload.entries : [];
     for (const entry of entries) {
-      const example = buildExampleForEntry(entry, { tatoebaIndex, textbookIndex });
+      const example = buildExampleForEntry(entry, {
+        tatoebaIndex,
+        textbookIndex,
+        levelTermIndex,
+        enforceLevelCap: options.enforceLevelCap,
+      });
       if (!example) continue;
       items[example.vocabId] ||= [];
       if (items[example.vocabId].length === 0) {
@@ -87,43 +95,57 @@ function buildExampleForEntry(entry, options = {}) {
     options.tatoebaIndex,
   );
   if (tatoeba) {
-    return {
-      vocabId,
-      row: {
-        example_id:
-          tatoeba.example_id ||
-          `tat-${tatoeba.sentenceId}-vie-${tatoeba.translationId}`,
-        ja: tatoeba.ja,
-        vi: tatoeba.vi,
-        audio_url: '',
-        source: TATOEBA_SOURCE,
-        source_detail:
-          tatoeba.source_detail ||
-          `Tatoeba sentence ${tatoeba.sentenceId}; translation ${tatoeba.translationId}`,
-        license: 'CC-BY 2.0',
-      },
+    const row = {
+      example_id:
+        tatoeba.example_id ||
+        `tat-${tatoeba.sentenceId}-vie-${tatoeba.translationId}`,
+      ja: tatoeba.ja,
+      vi: tatoeba.vi,
+      audio_url: '',
+      source: TATOEBA_SOURCE,
+      source_detail:
+        tatoeba.source_detail ||
+        `Tatoeba sentence ${tatoeba.sentenceId}; translation ${tatoeba.translationId}`,
+      license: 'CC-BY 2.0',
     };
+    if (!options.enforceLevelCap || isValidExample(row, entry, options)) {
+      return { vocabId, row };
+    }
   }
 
   const textbook = findTextbookRow({ vocabId, term }, options.textbookIndex);
   if (textbook) {
-    return {
-      vocabId,
-      row: {
-        example_id: textbook.example_id || `txt-${vocabId}-001`,
-        ja: textbook.ja,
-        vi: textbook.vi,
-        audio_url: text(textbook.audio_url || textbook.audioUrl),
-        source: text(textbook.source) || 'owner-local-textbook-example',
-        source_detail:
-          text(textbook.source_detail || textbook.sourceDetail) ||
-          `Owner local textbook example cache for ${term}`,
-        license: text(textbook.license) || 'owner local source',
-      },
+    const row = {
+      example_id: textbook.example_id || `txt-${vocabId}-001`,
+      ja: textbook.ja,
+      vi: textbook.vi,
+      audio_url: text(textbook.audio_url || textbook.audioUrl),
+      source: text(textbook.source) || 'owner-local-textbook-example',
+      source_detail:
+        text(textbook.source_detail || textbook.sourceDetail) ||
+        `Owner local textbook example cache for ${term}`,
+      license: text(textbook.license) || 'owner local source',
     };
+    if (!options.enforceLevelCap || isValidExample(row, entry, options)) {
+      return { vocabId, row };
+    }
   }
 
-  const authored = authoredContextualExample(entry);
+  let authored = authoredContextualExample(entry);
+  if (options.enforceLevelCap) {
+    const row = {
+      example_id: `ex-${vocabId.replace(/[^A-Za-z0-9_-]+/g, '-')}-001`,
+      ja: authored.ja,
+      vi: authored.vi,
+      audio_url: '',
+      source: AUTHORED_SOURCE,
+      source_detail: authored.sourceDetail,
+      license: 'JpStudy authored',
+    };
+    if (!isValidExample(row, entry, options)) {
+      authored = levelCappedAuthoredExample(entry);
+    }
+  }
   return {
     vocabId,
     row: {
@@ -135,6 +157,56 @@ function buildExampleForEntry(entry, options = {}) {
       source_detail: authored.sourceDetail,
       license: 'JpStudy authored',
     },
+  };
+}
+
+function levelCappedAuthoredExample(entry) {
+  const lemma = asObject(entry.lemma);
+  const sense = asObject(entry.sense);
+  const term = text(lemma.term);
+  const meaningVi = text(sense.meaningVi || sense.meaning || entry.meaning_vi);
+  const meaningEn = text(sense.meaningEn || sense.meaning_en).toLowerCase();
+  const vi = primaryGloss(meaningVi);
+  const exact = exactContext(term);
+  if (exact) {
+    return {
+      ja: exact.ja,
+      vi: exact.vi,
+      sourceDetail: `JpStudy-authored level-capped exact context for ${term}`,
+    };
+  }
+  if (isPronounEntry(entry)) {
+    return {
+      ja: `${term}はここにいます。`,
+      vi: `${capitalizeVi(vi)} đang ở đây.`,
+      sourceDetail: `JpStudy-authored level-capped pronoun context for ${term}`,
+    };
+  }
+  if (meaningEn.startsWith('to ') && !/[うくぐすつぬぶむる]$/.test(term)) {
+    return {
+      ja: `きょう、${term}します。`,
+      vi: `Hôm nay tôi ${vi}.`,
+      sourceDetail: `JpStudy-authored level-capped suru context for ${term}`,
+    };
+  }
+  if (meaningEn.startsWith('to ') || /[うくぐすつぬぶむる]$/.test(term)) {
+    return {
+      ja: `きょう、${term}つもりです。`,
+      vi: `Hôm nay tôi định ${vi}.`,
+      sourceDetail: `JpStudy-authored level-capped verb context for ${term}`,
+    };
+  }
+  if (/い$/.test(term)) {
+    return {
+      ja: `これは${term}です。`,
+      vi: `Cái này ${vi}.`,
+      sourceDetail: `JpStudy-authored level-capped adjective context for ${term}`,
+    };
+  }
+  return {
+    ja: `これは${term}です。`,
+    vi: `Đây là ${vi}.`,
+    sourceDetail: `JpStudy-authored level-capped noun context for ${term}`,
   };
 }
 
@@ -857,7 +929,7 @@ function wireExamplesIntoVocabPayload(payload, corpus, options = {}) {
       continue;
     }
     const selected = examples
-      .filter((example) => isValidExample(example, entry))
+      .filter((example) => isValidExample(example, entry, options))
       .slice(0, limit)
       .map(normalizeExampleForWire);
     if (selected.length === 0) {
@@ -885,8 +957,11 @@ function normalizeExampleForWire(example) {
   };
 }
 
-function isValidExample(example, entry = null) {
-  return validateExample(example, { entry }).ok;
+function isValidExample(example, entry = null, options = {}) {
+  return validateExample(example, {
+    entry,
+    levelTermIndex: options.levelTermIndex || [],
+  }).ok;
 }
 
 function scanVocabFiles(root = DEFAULT_VOCAB_ROOT) {
@@ -920,8 +995,11 @@ function writeJson(filePath, payload) {
   fs.writeFileSync(filePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
 }
 
-function validateWiredFiles(vocabFiles) {
-  return validateWiredExampleQuality(vocabFiles).failures.map((failure) => {
+function validateWiredFiles(vocabFiles, options = {}) {
+  const levelTermIndex = options.levelTermIndex || buildLevelTermIndex(
+    vocabFiles.flatMap((file) => file.payload.entries || []),
+  );
+  return validateWiredExampleQuality(vocabFiles, { levelTermIndex }).failures.map((failure) => {
     return `${failure.filePath}:${failure.vocabId || failure.entryId}:${failure.errors.join('|')}`;
   });
 }
@@ -962,8 +1040,9 @@ function parseArgs(argv) {
 function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv);
   const vocabFiles = scanVocabFiles(args.vocabRoot);
+  const levelTermIndex = buildLevelTermIndex(vocabFiles.flatMap((file) => file.payload.entries || []));
   if (args.validateOnly) {
-    const missing = validateWiredFiles(vocabFiles);
+    const missing = validateWiredFiles(vocabFiles, { levelTermIndex });
     if (missing.length > 0) {
       console.error(`Missing/invalid example_sentences: ${missing.length}`);
       console.error(missing.slice(0, 20).join('\n'));
@@ -978,6 +1057,8 @@ function main(argv = process.argv.slice(2)) {
       ? buildExampleCorpus(vocabFiles, {
           tatoebaRows: loadTatoebaRows(args.tatoebaCachePath),
           textbookRows: loadTatoebaRows(args.textbookCachePath),
+          levelTermIndex,
+          enforceLevelCap: true,
         })
       : readJson(args.corpusPath);
 
@@ -988,7 +1069,7 @@ function main(argv = process.argv.slice(2)) {
   const allMissing = [];
   let changedFiles = 0;
   for (const file of vocabFiles) {
-    const result = wireExamplesIntoVocabPayload(file.payload, corpus);
+    const result = wireExamplesIntoVocabPayload(file.payload, corpus, { levelTermIndex });
     allMissing.push(...result.missing.map((id) => `${file.filePath}:${id}`));
     if (result.changed) {
       changedFiles += 1;
@@ -997,7 +1078,7 @@ function main(argv = process.argv.slice(2)) {
     }
   }
 
-  const invalid = validateWiredFiles(vocabFiles);
+  const invalid = validateWiredFiles(vocabFiles, { levelTermIndex });
   if (allMissing.length > 0 || invalid.length > 0) {
     console.error(`Missing corpus rows: ${allMissing.length}`);
     console.error(`Invalid wired rows: ${invalid.length}`);

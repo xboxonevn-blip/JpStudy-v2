@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって",
-      "meaning": "Ý nghĩa: Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B",
-      "usage": "Cách dùng: Với A。だって B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。だって B。, lõi A。だって B。 là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。だって B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって: だって là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. Trong công thức Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって, dấu だって và dạng từ ngay trước nó; vì vậy phần だって không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B - dấu hiệu\". Nhìn だって như ký hiệu chức năng báo Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって. Dấu cần khóa là dấu だって và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. Với Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって, trọng tâm là Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって khi muốn biểu thị Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B; ưu tiên kiểm tra dấu だって trong câu mẫu. Nếu dạng đứng trước lệch khỏi だって, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって xoay quanh だって trong Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって báo Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. Khác 関連する近い文型, Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって giữ trọng tâm Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp だって thì giữ nghĩa Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "A。だって B。 cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-casual + だって、い-Adjective + だって、な-Adjective + だって、Noun + だって nghiêng về Dùng trong văn nói thân mật để nêu lý do, biện minh hoặc giải thích cho B. So dấu だって với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

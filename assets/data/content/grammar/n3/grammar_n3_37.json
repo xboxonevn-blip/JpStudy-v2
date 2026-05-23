@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V辞書 + べきだ（する→するべき・すべき）",
-      "meaning": "Ý nghĩa: Diễn tả ý kiến mạnh về điều đúng đắn hoặc nên làm; với する có cả するべき và すべき",
-      "usage": "Cách dùng: Với 〜べきだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜べきだ, lõi 〜べきだ là mảnh giữ nhịp ngữ pháp. Hãy tách V辞書 + べきだ（する→するべき・すべき） thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜べきだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V辞書 + べきだ（する→するべき・すべき）: nhóm nghĩa vụ/khả năng giới hạn lựa chọn của người nói: nên, không được, không thể, hoặc không còn cách khác.. Trong công thức V辞書 + べきだ（する→するべき・すべき）, dạng động từ trước dấu nghĩa vụ/khả năng; vì vậy phần 義務 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 + べきだ（する→するべき・すべき） không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nghĩa vụ/giới hạn - dấu hiệu\". Nhìn mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn như ký hiệu chức năng báo nghĩa vụ, cấm đoán, hoặc không còn lựa chọn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 + べきだ（する→するべき・すべき）. Dấu cần khóa là dạng động từ trước dấu nghĩa vụ/khả năng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả ý kiến mạnh về điều đúng đắn hoặc nên làm; với する có cả するべき và すべき. Với V辞書 + べきだ（する→するべき・すべき）, trọng tâm là nghĩa vụ, cấm đoán, hoặc không còn lựa chọn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu nói về điều nên làm/không thể làm; xem nguồn ràng buộc là đạo lý, quy tắc hay hoàn cảnh.. Nếu dạng đứng trước lệch khỏi 義務, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + べきだ（する→するべき・すべき） xoay quanh áp lực lựa chọn. Khác 関連する近い文型, mẫu kia có thể mềm hơn, khách quan hơn, hoặc chỉ là khả năng; gặp mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn thì giữ nghĩa nghĩa vụ/giới hạn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜べきだ cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác V辞書 + べきだ（する→するべき・すべき）: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn V辞書 + べきだ（する→するべき・すべき） nghiêng về nghĩa vụ/giới hạn. So dấu mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

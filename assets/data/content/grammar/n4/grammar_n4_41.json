@@ -14,10 +14,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N(目下・動植物)に + Nを + やります",
-      "meaning": "Ý nghĩa: `やります` dùng khi nói mình cho/đưa đồ cho người dưới vai, trẻ nhỏ, động vật, hoặc chăm sóc cây cối.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của N(目下・動植物)に + Nを + やります: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức N(目下・動植物)に + Nを + やります, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". Khi mẫu N(目下・動植物)に + Nを + やります không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: N(目下・動植物)に + Nを + やります. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `やります` dùng khi nói mình cho/đưa đồ cho người dưới vai, trẻ nhỏ, động vật, hoặc chăm sóc cây cối. Với N(目下・動植物)に + Nを + やります, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N(目下・動植物)に + Nを + やります xoay quanh hướng cho-nhận. Khác N(目上)が + (私に) + Nを + くださいます, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang hướng lợi ích.",
+      "crossLinks": [
+        {
+          "pattern": "N(目上)が + (私に) + Nを + くださいます",
+          "contrast": "Khác N(目下・動植物)に + Nを + やります: N(目上)が + (私に) + Nを + くださいます nghiêng về hướng lợi ích, còn N(目下・動植物)に + Nを + やります nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N(目上)が + (私に) + Nを + くださいます",
-      "meaning": "Ý nghĩa: `くださいます/くださいました` là cách kính trọng để nói người trên hoặc người mình tôn kính cho mình vật gì.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của N(目上)が + (私に) + Nを + くださいます: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức N(目上)が + (私に) + Nを + くださいます, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N(目上)が + (私に) + Nを + くださいます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"hướng lợi ích - dấu hiệu\". Nhìn mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" như ký hiệu chức năng báo hướng lợi ích và độ lịch sự, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N(目上)が + (私に) + Nを + くださいます. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `くださいます/くださいました` là cách kính trọng để nói người trên hoặc người mình tôn kính cho mình vật gì. Với N(目上)が + (私に) + Nを + くださいます, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N(目上)が + (私に) + Nを + くださいます xoay quanh hướng cho-nhận. Khác (私が) + N(目上)に/から + Nを + いただきます, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang hướng lợi ích.",
+      "crossLinks": [
+        {
+          "pattern": "(私が) + N(目上)に/から + Nを + いただきます",
+          "contrast": "Khác N(目上)が + (私に) + Nを + くださいます: (私が) + N(目上)に/から + Nを + いただきます nghiêng về hướng lợi ích, còn N(目上)が + (私に) + Nを + くださいます nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,16 +86,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: (私が) + N(目上)に/から + Nを + いただきます",
-      "meaning": "Ý nghĩa: `いただきます/いただきました` là cách khiêm nhường khi nói mình nhận gì đó từ người trên hoặc người cần tôn kính.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của (私が) + N(目上)に/から + Nを + いただきます: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức (私が) + N(目上)に/から + Nを + いただきます, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: (私が) + N(目上)に/から + Nを + いただきます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"hướng lợi ích - dấu hiệu\". Nhìn mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" như ký hiệu chức năng báo hướng lợi ích và độ lịch sự, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: (私が) + N(目上)に/から + Nを + いただきます. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `いただきます/いただきました` là cách khiêm nhường khi nói mình nhận gì đó từ người trên hoặc người cần tôn kính. Với (私が) + N(目上)に/から + Nを + いただきます, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: (私が) + N(目上)に/から + Nを + いただきます xoay quanh hướng cho-nhận. Khác Vて + くださいます, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang hướng lợi ích.",
+      "crossLinks": [
+        {
+          "pattern": "Vて + くださいます",
+          "contrast": "Khác (私が) + N(目上)に/から + Nを + いただきます: Vて + くださいます nghiêng về hướng lợi ích, còn (私が) + N(目上)に/から + Nを + いただきます nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,16 +122,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + くださいます",
-      "meaning": "Ý nghĩa: `〜てくださる` diễn tả người trên hoặc người cần tôn kính làm gì đó cho mình.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vて + くださいます: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức Vて + くださいます, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vて + くださいます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"hướng lợi ích - dấu hiệu\". Nhìn mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" như ký hiệu chức năng báo hướng lợi ích và độ lịch sự, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vて + くださいます. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `〜てくださる` diễn tả người trên hoặc người cần tôn kính làm gì đó cho mình. Với Vて + くださいます, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vて + くださいます xoay quanh hướng cho-nhận. Khác N(目下・動植物)に + Nを + やります, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang hướng lợi ích.",
+      "crossLinks": [
+        {
+          "pattern": "N(目下・動植物)に + Nを + やります",
+          "contrast": "Khác Vて + くださいます: N(目下・動植物)に + Nを + やります nghiêng về hướng lợi ích, còn Vて + くださいます nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

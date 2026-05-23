@@ -14,16 +14,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V (Khả năng)",
-      "meaning": "Ý nghĩa: Thể khả năng dùng để nói “có thể làm gì”.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V (Khả năng): V (Khả năng) là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Thể khả năng dùng để nói “có thể làm gì”. Trong công thức V (Khả năng), dấu V (Khả năng) và dạng từ ngay trước nó; vì vậy phần V (Khả năng) không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V (Khả năng) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Thể khả năng dùng để nói “có thể làm gì” - dấu hiệu\". Nhìn V (Khả năng) như ký hiệu chức năng báo Thể khả năng dùng để nói “có thể làm gì”, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V (Khả năng). Dấu cần khóa là dấu V (Khả năng) và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Thể khả năng dùng để nói “có thể làm gì”. Với V (Khả năng), trọng tâm là Thể khả năng dùng để nói “có thể làm gì”; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng V (Khả năng) khi muốn biểu thị Thể khả năng dùng để nói “có thể làm gì”; ưu tiên kiểm tra dấu V (Khả năng) trong câu mẫu. Nếu dạng đứng trước lệch khỏi V (Khả năng), nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V (Khả năng) xoay quanh V (Khả năng) trong V (Khả năng) báo Thể khả năng dùng để nói “có thể làm gì”. Khác N + しか + Vない, V (Khả năng) giữ trọng tâm Thể khả năng dùng để nói “có thể làm gì”, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp V (Khả năng) thì giữ nghĩa Thể khả năng dùng để nói “có thể làm gì”, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "N + しか + Vない",
+          "contrast": "Khác V (Khả năng): N + しか + Vない nghiêng về giới hạn, còn V (Khả năng) nghiêng về Thể khả năng dùng để nói “có thể làm gì”. So dấu V (Khả năng) với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N + しか + Vない",
-      "meaning": "Ý nghĩa: `しか` luôn đi với phủ định, nghĩa là “chỉ ...",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của N + しか + Vない: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức N + しか + Vない, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N + しか + Vない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N + しか + Vない. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `しか` luôn đi với phủ định, nghĩa là “chỉ. Với N + しか + Vない, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + しか + Vない xoay quanh ranh giới lượng. Khác N が 見える, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "N が 見える",
+          "contrast": "Khác N + しか + Vない: N が 見える nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N + しか + Vない nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với が trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,10 +86,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N が 見える",
-      "meaning": "Ý nghĩa: `見える` diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của N が 見える: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn. Trong công thức N が 見える, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N が 見える không có chữ Hán nổi bật để bám, nên mượn cặp ý \"見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn - dấu hiệu\". Nhìn が như ký hiệu chức năng báo 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N が 見える. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `見える` diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn. Với N が 見える, trọng tâm là 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng N が 見える khi muốn biểu thị 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N が 見える xoay quanh が trong N が 見える báo 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn. Khác N が 聞こえる, N が 見える giữ trọng tâm 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "N が 聞こえる",
+          "contrast": "Khác N が 見える: N が 聞こえる nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N が 見える nghiêng về 見える diễn tả một thứ tự nhiên lọt vào tầm mắt, không nhấn mạnh nỗ lực nhìn. So dấu が với が trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -98,10 +122,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N が 聞こえる",
-      "meaning": "Ý nghĩa: `聞こえる` diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của N が 聞こえる: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe. Trong công thức N が 聞こえる, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N が 聞こえる không có chữ Hán nổi bật để bám, nên mượn cặp ý \"聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe - dấu hiệu\". Nhìn が như ký hiệu chức năng báo 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N が 聞こえる. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `聞こえる` diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe. Với N が 聞こえる, trọng tâm là 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng N が 聞こえる khi muốn biểu thị 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N が 聞こえる xoay quanh が trong N が 聞こえる báo 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe. Khác N + しか + Vない, N が 聞こえる giữ trọng tâm 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "N + しか + Vない",
+          "contrast": "Khác N が 聞こえる: N + しか + Vない nghiêng về giới hạn, còn N が 聞こえる nghiêng về 聞こえる diễn tả âm thanh tự nhiên lọt vào tai, không nhấn mạnh việc cố ý lắng nghe. So dấu が với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

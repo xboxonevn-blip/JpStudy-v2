@@ -14,16 +14,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vます語幹 / いA語幹 / なA語幹 + そうです",
-      "meaning": "Ý nghĩa: `そうです` diễn tả phỏng đoán dựa trên điều nhìn thấy: trông có vẻ..., có vẻ sắp...",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vます語幹 / いA語幹 / なA語幹 + そうです: そう trong dạng vẻ bám vào thân động từ hoặc thân tính từ để nói ấn tượng nhìn thấy trước khi sự việc xảy ra.. Trong công thức Vます語幹 / いA語幹 / なA語幹 + そうです, Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; vì vậy phần そう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vます語幹 / いA語幹 / なA語幹 + そうです không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dáng vẻ - dấu hiệu\". Nhìn そうだ dạng vẻ báo ấn tượng trực tiếp như ký hiệu chức năng báo dáng vẻ hoặc khả năng sắp xảy ra, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vます語幹 / いA語幹 / なA語幹 + そうです. Dấu cần khóa là Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `そうです` diễn tả phỏng đoán dựa trên điều nhìn thấy: trông có vẻ. Với Vます語幹 / いA語幹 / なA語幹 + そうです, trọng tâm là dáng vẻ hoặc khả năng sắp xảy ra; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi mắt thấy dấu hiệu như 雨が降りそう; tránh lẫn với そうです truyền tin theo nguồn.. Nếu dạng đứng trước lệch khỏi そう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vます語幹 / いA語幹 / なA語幹 + そうです xoay quanh dáng vẻ nhìn thấy. Khác Vて + きます, mẫu kia thường kể lại thông tin hoặc suy đoán theo nguồn khác; gặp そうだ dạng vẻ báo ấn tượng trực tiếp thì giữ nghĩa dáng vẻ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Vて + きます",
+          "contrast": "Khác Vます語幹 / いA語幹 / なA語幹 + そうです: Vて + きます nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Vます語幹 / いA語幹 / なA語幹 + そうです nghiêng về dáng vẻ. So dấu そうだ dạng vẻ báo ấn tượng trực tiếp với て trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + きます",
-      "meaning": "Ý nghĩa: `Vて来ます` nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vて + きます: て là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói. Trong công thức Vて + きます, dấu て và dạng từ ngay trước nó; vì vậy phần て không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vて + きます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói - dấu hiệu\". Nhìn て như ký hiệu chức năng báo Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vて + きます. Dấu cần khóa là dấu て và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `Vて来ます` nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói. Với Vて + きます, trọng tâm là Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Vて + きます khi muốn biểu thị Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói; ưu tiên kiểm tra dấu て trong câu mẫu. Nếu dạng đứng trước lệch khỏi て, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vて + きます xoay quanh て trong Vて + きます báo Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói. Khác Vて + いきます, Vて + きます giữ trọng tâm Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp て thì giữ nghĩa Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Vて + いきます",
+          "contrast": "Khác Vて + きます: Vて + いきます nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Vて + きます nghiêng về Vて来ます nghĩa là đi làm việc gì đó rồi quay lại nơi đang nói. So dấu て với て trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,16 +86,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + いきます",
-      "meaning": "Ý nghĩa: `ていく` diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vて + いきます: て là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói. Trong công thức Vて + いきます, dấu て và dạng từ ngay trước nó; vì vậy phần て không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vて + いきます không có chữ Hán nổi bật để bám, nên mượn cặp ý \"ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói - dấu hiệu\". Nhìn て như ký hiệu chức năng báo ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vて + いきます. Dấu cần khóa là dấu て và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `ていく` diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói. Với Vて + いきます, trọng tâm là ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Vて + いきます khi muốn biểu thị ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói; ưu tiên kiểm tra dấu て trong câu mẫu. Nếu dạng đứng trước lệch khỏi て, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vて + いきます xoay quanh て trong Vて + いきます báo ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói. Khác Vます語幹 / いA語幹 / なA語幹 + そうだ, Vて + いきます giữ trọng tâm ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp て thì giữ nghĩa ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói, đừng kéo sang dáng vẻ.",
+      "crossLinks": [
+        {
+          "pattern": "Vます語幹 / いA語幹 / なA語幹 + そうだ",
+          "contrast": "Khác Vて + いきます: Vます語幹 / いA語幹 / なA語幹 + そうだ nghiêng về dáng vẻ, còn Vて + いきます nghiêng về ていく diễn tả hành động hoặc sự thay đổi tiếp tục từ hiện tại về tương lai, hoặc di chuyển ra xa điểm nhìn của người nói. So dấu て với そうだ dạng vẻ báo ấn tượng trực tiếp trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,16 +122,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vます語幹 / いA語幹 / なA語幹 + そうだ",
-      "meaning": "Ý nghĩa: `そうだ` dạng dáng vẻ dùng khi nhìn bề ngoài rồi nhận xét “trông có vẻ...”.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Vます語幹 / いA語幹 / なA語幹 + そうだ: そう trong dạng vẻ bám vào thân động từ hoặc thân tính từ để nói ấn tượng nhìn thấy trước khi sự việc xảy ra.. Trong công thức Vます語幹 / いA語幹 / なA語幹 + そうだ, Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; vì vậy phần そう không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vます語幹 / いA語幹 / なA語幹 + そうだ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dáng vẻ - dấu hiệu\". Nhìn そうだ dạng vẻ báo ấn tượng trực tiếp như ký hiệu chức năng báo dáng vẻ hoặc khả năng sắp xảy ra, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vます語幹 / いA語幹 / なA語幹 + そうだ. Dấu cần khóa là Vます語幹 hoặc gốc tính từ trước そう, không đặt だ như truyền văn; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `そうだ` dạng dáng vẻ dùng khi nhìn bề ngoài rồi nhận xét “trông có vẻ. Với Vます語幹 / いA語幹 / なA語幹 + そうだ, trọng tâm là dáng vẻ hoặc khả năng sắp xảy ra; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi mắt thấy dấu hiệu như 雨が降りそう; tránh lẫn với そうです truyền tin theo nguồn.. Nếu dạng đứng trước lệch khỏi そう, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vます語幹 / いA語幹 / なA語幹 + そうだ xoay quanh dáng vẻ nhìn thấy. Khác Vます語幹 / いA語幹 / なA語幹 + そうです, mẫu kia thường kể lại thông tin hoặc suy đoán theo nguồn khác; gặp そうだ dạng vẻ báo ấn tượng trực tiếp thì giữ nghĩa dáng vẻ, đừng kéo sang dáng vẻ.",
+      "crossLinks": [
+        {
+          "pattern": "Vます語幹 / いA語幹 / なA語幹 + そうです",
+          "contrast": "Khác Vます語幹 / いA語幹 / なA語幹 + そうだ: Vます語幹 / いA語幹 / なA語幹 + そうです nghiêng về dáng vẻ, còn Vます語幹 / いA語幹 / なA語幹 + そうだ nghiêng về dáng vẻ. So dấu そうだ dạng vẻ báo ấn tượng trực tiếp với そうだ dạng vẻ báo ấn tượng trực tiếp trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

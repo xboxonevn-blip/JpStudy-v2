@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + を通じて",
-      "meaning": "Ý nghĩa: Dùng để nói điều gì xảy ra thông qua một phương tiện, trong suốt một khoảng thời gian hoặc qua một quá trình",
-      "usage": "Cách dùng: Với ～を通じて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～を通じて, lõi を là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + を通じて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～を通じて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun + を通じて: nhóm phạm vi trải nghĩa qua thời gian, không gian, phương tiện hoặc một quá trình trung gian.. Trong công thức Noun + を通じて, danh từ phạm vi trước dấu trải rộng; vì vậy phần 範囲 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu Noun + を通じて không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Noun + を通じて. Dấu cần khóa là danh từ phạm vi trước dấu trải rộng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói điều gì xảy ra thông qua một phương tiện, trong suốt một khoảng thời gian hoặc qua một quá trình. Với Noun + を通じて, trọng tâm là xuyên qua hoặc trải khắp một phạm vi; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu là kênh, khoảng thời gian, khu vực hoặc quá trình; tránh đọc thành địa điểm đơn lẻ.. Nếu dạng đứng trước lệch khỏi 範囲, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + を通じて xoay quanh phạm vi trải rộng. Khác 〜を経て, mẫu kia thường giới hạn vào điểm bắt đầu-kết thúc hoặc phương tiện khác; gặp mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào thì giữ nghĩa phạm vi/kênh, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～ざるを得ない",
-          "contrast": "～を通じて cần đọc theo chức năng riêng của mẫu; ～ざるを得ない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜を経て",
+          "contrast": "Khác Noun + を通じて: 〜を経て nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun + を通じて nghiêng về phạm vi/kênh. So dấu mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào với を trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

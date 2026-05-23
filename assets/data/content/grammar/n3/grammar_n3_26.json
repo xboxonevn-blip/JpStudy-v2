@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: 人に Vて + もらいたい",
-      "meaning": "Ý nghĩa: Diễn tả mong muốn ai đó làm gì cho mình, sắc thái mềm hơn",
-      "usage": "Cách dùng: Với 〜てもらいたい, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜てもらいたい, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách 人に Vて + もらいたい thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜てもらいたい không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của 人に Vて + もらいたい: nhóm cho-nhận trong tiếng Nhật mã hóa hướng lợi ích và thứ bậc xã hội, không chỉ hành động \"cho\".. Trong công thức 人に Vて + もらいたい, động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; vì vậy phần 授受 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 人に Vて + もらいたい không có chữ Hán nổi bật để bám, nên mượn cặp ý \"hướng lợi ích - dấu hiệu\". Nhìn mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" như ký hiệu chức năng báo hướng lợi ích và độ lịch sự, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: 人に Vて + もらいたい. Dấu cần khóa là động từ te-form hoặc danh từ quà tặng cộng người nhận/nguồn nhận; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả mong muốn ai đó làm gì cho mình, sắc thái mềm hơn. Với 人に Vて + もらいたい, trọng tâm là hướng lợi ích và độ lịch sự; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định ai được lợi và vị thế người nói; đổi あげる, もらう, くれる là đổi hướng mũi tên.. Nếu dạng đứng trước lệch khỏi 授受, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: 人に Vて + もらいたい xoay quanh hướng cho-nhận. Khác 関連する近い文型, mẫu kia đổi hướng lợi ích hoặc mức kính trọng; gặp mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" thì giữ nghĩa hướng lợi ích, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜つもりだ",
-          "contrast": "〜てもらいたい cần đọc theo chức năng riêng của mẫu; 〜つもりだ có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác 人に Vて + もらいたい: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn 人に Vて + もらいたい nghiêng về hướng lợi ích. So dấu mẫu cho-nhận hỏi \"lợi ích chạy về phía ai\" với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

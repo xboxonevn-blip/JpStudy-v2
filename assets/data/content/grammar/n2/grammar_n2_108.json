@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-dictionary form + よりほかない",
-      "meaning": "Ý nghĩa: Dùng khi trong tình huống đó không còn lựa chọn nào khác ngoài hành động được nêu",
-      "usage": "Cách dùng: Với ～よりほかない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～よりほかない, lõi ～よりほかない là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary form + よりほかない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～よりほかない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + よりほかない: nhóm nghĩa vụ/khả năng giới hạn lựa chọn của người nói: nên, không được, không thể, hoặc không còn cách khác.. Trong công thức Verb-dictionary form + よりほかない, dạng động từ trước dấu nghĩa vụ/khả năng; vì vậy phần 義務 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary form + よりほかない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nghĩa vụ/giới hạn - dấu hiệu\". Nhìn mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn như ký hiệu chức năng báo nghĩa vụ, cấm đoán, hoặc không còn lựa chọn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary form + よりほかない. Dấu cần khóa là dạng động từ trước dấu nghĩa vụ/khả năng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi trong tình huống đó không còn lựa chọn nào khác ngoài hành động được nêu. Với Verb-dictionary form + よりほかない, trọng tâm là nghĩa vụ, cấm đoán, hoặc không còn lựa chọn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu nói về điều nên làm/không thể làm; xem nguồn ràng buộc là đạo lý, quy tắc hay hoàn cảnh.. Nếu dạng đứng trước lệch khỏi 義務, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + よりほかない xoay quanh áp lực lựa chọn. Khác 関連する近い文型, mẫu kia có thể mềm hơn, khách quan hơn, hoặc chỉ là khả năng; gặp mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn thì giữ nghĩa nghĩa vụ/giới hạn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "～よりほかない cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-dictionary form + よりほかない: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-dictionary form + よりほかない nghiêng về nghĩa vụ/giới hạn. So dấu mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

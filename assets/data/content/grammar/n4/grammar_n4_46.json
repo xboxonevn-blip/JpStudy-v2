@@ -14,16 +14,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 / Vている / Vた + ところです",
-      "meaning": "Ý nghĩa: `ところです` nhấn đúng thời điểm của hành động: `Vるところ` là sắp làm, `Vているところ` là đang làm ngay lúc này, `Vたところ` là vừa mới làm xong.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của V辞書 / Vている / Vた + ところです: nhóm thời điểm neo câu vào một lát cắt của tiến trình: trước, sau, đúng lúc, mỗi lần, hoặc sau một quá trình.. Trong công thức V辞書 / Vている / Vた + ところです, dạng động từ trước dấu thời điểm; vì vậy phần 時点 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 所 = sở/chỗ, giúp nhớ ところ neo ý vào một điểm trong tiến trình. Khi mẫu V辞書 / Vている / Vた + ところです không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V辞書 / Vている / Vた + ところです. Dấu cần khóa là dạng động từ trước dấu thời điểm; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `ところです` nhấn đúng thời điểm của hành động: `Vるところ` là sắp làm, `Vているところ` là đang làm ngay lúc này, `Vたところ` là vừa mới làm xong. Với V辞書 / Vている / Vた + ところです, trọng tâm là mốc thời gian trong tiến trình; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi quan hệ thời gian là thông tin chính; kiểm tra Vる, Vた, Vている vì đổi dạng là đổi mốc nhìn.. Nếu dạng đứng trước lệch khỏi 時点, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 / Vている / Vた + ところです xoay quanh mốc thời gian. Khác Vた + ばかりです, mẫu kia thường đổi mốc trước/sau hoặc sắc thái đột ngột; gặp mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào thì giữ nghĩa thời điểm, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Vた + ばかりです",
+          "contrast": "Khác V辞書 / Vている / Vた + ところです: Vた + ばかりです nghiêng về giới hạn, còn V辞書 / Vている / Vた + ところです nghiêng về thời điểm. So dấu mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vた + ばかりです",
-      "meaning": "Ý nghĩa: `Vたばかり` nói việc vừa xảy ra theo cảm nhận của người nói.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Vた + ばかりです: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức Vた + ばかりです, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vた + ばかりです không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vた + ばかりです. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `Vたばかり` nói việc vừa xảy ra theo cảm nhận của người nói. Với Vた + ばかりです, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vた + ばかりです xoay quanh ranh giới lượng. Khác V普通形 / いA / なAな / Nの + はずです, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang kỳ vọng.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAな / Nの + はずです",
+          "contrast": "Khác Vた + ばかりです: V普通形 / いA / なAな / Nの + はずです nghiêng về kỳ vọng, còn Vた + ばかりです nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với はず cần một căn cứ trong đầu người nói trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,16 +86,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAな / Nの + はずです",
-      "meaning": "Ý nghĩa: `はずです` diễn tả suy đoán có căn cứ: theo thông tin mình biết thì chắc là hoặc đáng lẽ là như vậy.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな / Nの + はずです: はず diễn tả kỳ vọng hợp lý dựa trên dữ kiện; nó không phải cam kết chắc chắn tuyệt đối.. Trong công thức V普通形 / いA / なAな / Nの + はずです, cụm thường trước はず; vì vậy phần はず không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな / Nの + はずです không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな / Nの + はずです. Dấu cần khóa là cụm thường trước はず; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `はずです` diễn tả suy đoán có căn cứ: theo thông tin mình biết thì chắc là hoặc đáng lẽ là như vậy. Với V普通形 / いA / なAな / Nの + はずです, trọng tâm là điều đáng lẽ/logic phải đúng; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi có bằng chứng để dự đoán; nếu chỉ là cảm giác yếu, chuyển sang かもしれない hoặc でしょう.. Nếu dạng đứng trước lệch khỏi はず, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな / Nの + はずです xoay quanh kỳ vọng có căn cứ. Khác V辞書 + ところだった, mẫu kia thường giải thích lý do bằng わけ hoặc đoán mềm hơn; gặp はず cần một căn cứ trong đầu người nói thì giữ nghĩa kỳ vọng, đừng kéo sang thời điểm.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 + ところだった",
+          "contrast": "Khác V普通形 / いA / なAな / Nの + はずです: V辞書 + ところだった nghiêng về thời điểm, còn V普通形 / いA / なAな / Nの + はずです nghiêng về kỳ vọng. So dấu はず cần một căn cứ trong đầu người nói với mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,16 +122,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 + ところだった",
-      "meaning": "Ý nghĩa: `Vるところだった` nói “suýt nữa thì...” hoặc “vừa định làm...”, nhấn vào khoảnh khắc ngay trước khi hành động xảy ra.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V辞書 + ところだった: nhóm thời điểm neo câu vào một lát cắt của tiến trình: trước, sau, đúng lúc, mỗi lần, hoặc sau một quá trình.. Trong công thức V辞書 + ところだった, dạng động từ trước dấu thời điểm; vì vậy phần 時点 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 所 = sở/chỗ, giúp nhớ ところ neo ý vào một điểm trong tiến trình. Khi mẫu V辞書 + ところだった không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V辞書 + ところだった. Dấu cần khóa là dạng động từ trước dấu thời điểm; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `Vるところだった` nói “suýt nữa thì. Với V辞書 + ところだった, trọng tâm là mốc thời gian trong tiến trình; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi quan hệ thời gian là thông tin chính; kiểm tra Vる, Vた, Vている vì đổi dạng là đổi mốc nhìn.. Nếu dạng đứng trước lệch khỏi 時点, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + ところだった xoay quanh mốc thời gian. Khác V辞書 / Vている / Vた + ところです, mẫu kia thường đổi mốc trước/sau hoặc sắc thái đột ngột; gặp mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào thì giữ nghĩa thời điểm, đừng kéo sang thời điểm.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 / Vている / Vた + ところです",
+          "contrast": "Khác V辞書 + ところだった: V辞書 / Vている / Vた + ところです nghiêng về thời điểm, còn V辞書 + ところだった nghiêng về thời điểm. So dấu mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào với mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

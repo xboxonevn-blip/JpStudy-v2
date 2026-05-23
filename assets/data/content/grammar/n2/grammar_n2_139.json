@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Sentence A + だが + Sentence B",
-      "meaning": "Ý nghĩa: Dùng để nối hai câu hoặc hai ý có nội dung đối lập",
-      "usage": "Cách dùng: Với A。だが B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。だが B。, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Sentence A + だが + Sentence B thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。だが B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Sentence A + だが + Sentence B: が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nối hai câu hoặc hai ý có nội dung đối lập. Trong công thức Sentence A + だが + Sentence B, dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Sentence A + だが + Sentence B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nối hai câu hoặc hai ý có nội dung đối lập - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Dùng để nối hai câu hoặc hai ý có nội dung đối lập, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Sentence A + だが + Sentence B. Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nối hai câu hoặc hai ý có nội dung đối lập. Với Sentence A + だが + Sentence B, trọng tâm là Dùng để nối hai câu hoặc hai ý có nội dung đối lập; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Sentence A + だが + Sentence B khi muốn biểu thị Dùng để nối hai câu hoặc hai ý có nội dung đối lập; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Sentence A + だが + Sentence B xoay quanh が trong Sentence A + だが + Sentence B báo Dùng để nối hai câu hoặc hai ý có nội dung đối lập. Khác 関連する近い文型, Sentence A + だが + Sentence B giữ trọng tâm Dùng để nối hai câu hoặc hai ý có nội dung đối lập, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Dùng để nối hai câu hoặc hai ý có nội dung đối lập, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～がい",
-          "contrast": "A。だが B。 cần đọc theo chức năng riêng của mẫu; ～がい có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Sentence A + だが + Sentence B: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Sentence A + だが + Sentence B nghiêng về Dùng để nối hai câu hoặc hai ý có nội dung đối lập. So dấu が với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

@@ -46,6 +46,15 @@ const CONTENT_SCAN_PATTERNS = [
   /trong một câu ngắn/i,
 ];
 
+const LEVEL_RANK = {
+  N5: 1,
+  N4: 2,
+  N3: 3,
+  N2: 4,
+  N1: 5,
+};
+const LEVEL_CAP_STOP_TERMS = new Set(['所で', '彼の', '本の', '何て', '何と']);
+
 function text(value) {
   return `${value ?? ''}`.trim();
 }
@@ -80,6 +89,7 @@ function validateExample(example, options = {}) {
   const errors = [];
   const term = text(entry?.lemma?.term);
   const reading = text(entry?.lemma?.reading);
+  const levelTermIndex = options.levelTermIndex || [];
 
   if (!normalized.example_id) errors.push('missing example_id');
   if (!normalized.ja) errors.push('missing ja');
@@ -136,7 +146,55 @@ function validateExample(example, options = {}) {
     errors.push('substitution test failed: sentence is term-swap template');
   }
 
+  for (const violation of aboveLevelCapTerms(normalized.ja, entry, levelTermIndex)) {
+    errors.push(
+      `example uses ${violation.term} (${violation.level}) above ${violation.entryLevel} cap`,
+    );
+  }
+
   return { ok: errors.length === 0, errors, example: normalized };
+}
+
+function buildLevelTermIndex(entries) {
+  const byTerm = new Map();
+  for (const entry of entries || []) {
+    const term = text(entry.term || entry.lemma?.term);
+    const level = normalizeLevel(entry.level);
+    if (!isScannableJapaneseTerm(term) || !LEVEL_RANK[level]) continue;
+    const previous = byTerm.get(term);
+    if (!previous || LEVEL_RANK[level] < LEVEL_RANK[previous.level]) {
+      byTerm.set(term, {
+        vocabId: text(entry.vocabId || entry.lemma?.vocabId || entry.entryId),
+        level,
+        term,
+      });
+    }
+  }
+  return [...byTerm.values()].sort((a, b) => b.term.length - a.term.length || a.term.localeCompare(b.term));
+}
+
+function aboveLevelCapTerms(ja, entry, levelTermIndex) {
+  if (!entry || !Array.isArray(levelTermIndex) || levelTermIndex.length === 0) return [];
+  const entryLevel = normalizeLevel(entry.level || levelFromId(entry.entryId || entry.lemma?.vocabId));
+  const entryRank = LEVEL_RANK[entryLevel];
+  if (!entryRank) return [];
+  const capRank = Math.min(entryRank + 1, LEVEL_RANK.N1);
+  const entryTerm = text(entry.lemma?.term);
+  const entryReading = text(entry.lemma?.reading);
+  const out = [];
+  const seen = new Set();
+  for (const candidate of levelTermIndex) {
+    if (!candidate?.term || candidate.term === entryTerm || candidate.term === entryReading) continue;
+    if (LEVEL_CAP_STOP_TERMS.has(candidate.term)) continue;
+    if (entryTerm.includes(candidate.term) || candidate.term.includes(entryTerm)) continue;
+    if ((LEVEL_RANK[candidate.level] || 0) <= capRank) continue;
+    if (!ja.includes(candidate.term)) continue;
+    const key = `${candidate.term}:${candidate.level}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({ ...candidate, entryLevel });
+  }
+  return out.slice(0, 5);
 }
 
 function isPronounEntry(entry) {
@@ -216,6 +274,7 @@ function isSubstitutionTemplate(example, term) {
 
 function validateCorpus(corpus, options = {}) {
   const entriesByVocabId = options.entriesByVocabId ?? new Map();
+  const levelTermIndex = options.levelTermIndex ?? [];
   const failures = [];
   for (const [vocabId, rows] of Object.entries(corpus?.items ?? {})) {
     if (!Array.isArray(rows) || rows.length === 0) {
@@ -224,7 +283,7 @@ function validateCorpus(corpus, options = {}) {
     }
     const entry = entriesByVocabId.get(vocabId);
     for (const row of rows) {
-      const result = validateExample(row, { entry });
+      const result = validateExample(row, { entry, levelTermIndex });
       if (!result.ok) {
         failures.push({ vocabId, exampleId: row?.example_id, errors: result.errors });
       }
@@ -262,7 +321,8 @@ function entriesByVocabId(vocabFiles) {
   return map;
 }
 
-function validateWiredVocabFiles(vocabFiles) {
+function validateWiredVocabFiles(vocabFiles, options = {}) {
+  const levelTermIndex = options.levelTermIndex ?? [];
   const failures = [];
   for (const file of vocabFiles) {
     for (const entry of file.payload.entries ?? []) {
@@ -276,7 +336,7 @@ function validateWiredVocabFiles(vocabFiles) {
         continue;
       }
       for (const row of rows) {
-        const result = validateExample(row, { entry });
+        const result = validateExample(row, { entry, levelTermIndex });
         if (!result.ok) {
           failures.push({
             filePath: file.filePath,
@@ -344,11 +404,14 @@ function parseArgs(argv) {
 function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv);
   const vocabFiles = scanVocabFiles(args.vocabRoot);
+  const flatVocabEntries = vocabFiles.flatMap((file) => file.payload.entries || []);
+  const levelTermIndex = buildLevelTermIndex(flatVocabEntries);
   const failures = [];
 
   if (fs.existsSync(args.corpusPath)) {
     const corpusResult = validateCorpus(readJson(args.corpusPath), {
       entriesByVocabId: entriesByVocabId(vocabFiles),
+      levelTermIndex,
     });
     failures.push(...corpusResult.failures.map((failure) => ({
       scope: 'corpus',
@@ -358,7 +421,7 @@ function main(argv = process.argv.slice(2)) {
     failures.push({ scope: 'corpus', vocabId: '', errors: ['missing corpus'] });
   }
 
-  const wiredResult = validateWiredVocabFiles(vocabFiles);
+  const wiredResult = validateWiredVocabFiles(vocabFiles, { levelTermIndex });
   failures.push(...wiredResult.failures.map((failure) => ({
     scope: 'vocab',
     ...failure,
@@ -391,6 +454,7 @@ if (require.main === module) {
 module.exports = {
   BANNED_JA_PATTERNS,
   BANNED_VI_PATTERNS,
+  buildLevelTermIndex,
   entriesByVocabId,
   normalizeExample,
   isPronounEntry,
@@ -400,3 +464,21 @@ module.exports = {
   validateWiredVocabFiles,
   vocabIdForEntry,
 };
+
+function normalizeLevel(value) {
+  const raw = text(value).toUpperCase();
+  return /^N[1-5]$/.test(raw) ? raw : '';
+}
+
+function levelFromId(value) {
+  const match = text(value).match(/(?:^|_)(n[1-5])(?:_|$)/i) || text(value).match(/haj_(n[1-5])_/i);
+  return match ? match[1].toUpperCase() : '';
+}
+
+function isScannableJapaneseTerm(term) {
+  if (!/[\u3400-\u9fff]/.test(term)) return false;
+  if (term.includes('～')) return false;
+  const chars = Array.from(term);
+  if (chars.length >= 2) return true;
+  return false;
+}

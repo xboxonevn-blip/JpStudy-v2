@@ -17,15 +17,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V辞書 / Vている / いA / なAな / Nの + 間に",
-      "meaning": "Ý nghĩa: Diễn tả việc xảy ra trong khoảng thời gian một hành động hoặc trạng thái đang tiếp diễn",
-      "usage": "Cách dùng: Với 〜間に, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜間に, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách V辞書 / Vている / いA / なAな / Nの + 間に thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜間に không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V辞書 / Vている / いA / なAな / Nの + 間に: nhóm thời điểm neo câu vào một lát cắt của tiến trình: trước, sau, đúng lúc, mỗi lần, hoặc sau một quá trình.. Trong công thức V辞書 / Vている / いA / なAな / Nの + 間に, dạng động từ trước dấu thời điểm; vì vậy phần 時点 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 / Vている / いA / なAな / Nの + 間に không có chữ Hán nổi bật để bám, nên mượn cặp ý \"thời điểm - dấu hiệu\". Nhìn mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào như ký hiệu chức năng báo mốc thời gian trong tiến trình, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 / Vている / いA / なAな / Nの + 間に. Dấu cần khóa là dạng động từ trước dấu thời điểm; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả việc xảy ra trong khoảng thời gian một hành động hoặc trạng thái đang tiếp diễn. Với V辞書 / Vている / いA / なAな / Nの + 間に, trọng tâm là mốc thời gian trong tiến trình; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi quan hệ thời gian là thông tin chính; kiểm tra Vる, Vた, Vている vì đổi dạng là đổi mốc nhìn.. Nếu dạng đứng trước lệch khỏi 時点, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 / Vている / いA / なAな / Nの + 間に xoay quanh mốc thời gian. Khác 関連する近い文型, mẫu kia thường đổi mốc trước/sau hoặc sắc thái đột ngột; gặp mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào thì giữ nghĩa thời điểm, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜間に cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác V辞書 / Vている / いA / なAな / Nの + 間に: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn V辞書 / Vている / いA / なAな / Nの + 間に nghiêng về thời điểm. So dấu mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -33,7 +34,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

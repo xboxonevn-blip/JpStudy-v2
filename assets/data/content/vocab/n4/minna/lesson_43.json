@@ -488,11 +488,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l43_v009-001",
-          "ja": "現場で聞いた変の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của lạ nghe được tại hiện trường.",
+          "ja": "これは変です。",
+          "vi": "Đây là lạ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 変",
+          "source_detail": "JpStudy-authored level-capped noun context for 変",
           "license": "JpStudy authored"
         }
       ]
@@ -928,11 +928,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l43_v017-001",
-          "ja": "現場で聞いた火の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của lửa nghe được tại hiện trường.",
+          "ja": "これは火です。",
+          "vi": "Đây là lửa.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 火",
+          "source_detail": "JpStudy-authored level-capped noun context for 火",
           "license": "JpStudy authored"
         }
       ]
@@ -981,11 +981,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l43_v018-001",
-          "ja": "公園でパンフレットを見かけました。",
-          "vi": "Tôi đã bắt gặp tờ rơi quảng cáo ở công viên.",
+          "ja": "これはパンフレットです。",
+          "vi": "Đây là tờ rơi quảng cáo.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored animal context for パンフレット",
+          "source_detail": "JpStudy-authored level-capped noun context for パンフレット",
           "license": "JpStudy authored"
         }
       ]
@@ -1089,11 +1089,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l43_v020-001",
-          "ja": "現場で聞いたわあの背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của Ôi! nghe được tại hiện trường.",
+          "ja": "これはわあです。",
+          "vi": "Đây là Ôi!.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for わあ",
+          "source_detail": "JpStudy-authored level-capped noun context for わあ",
           "license": "JpStudy authored"
         }
       ]
@@ -1145,11 +1145,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l43_v021-001",
-          "ja": "現場で聞いた薔薇の背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của hoa hồng nghe được tại hiện trường.",
+          "ja": "これは薔薇です。",
+          "vi": "Đây là hoa hồng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for 薔薇",
+          "source_detail": "JpStudy-authored level-capped noun context for 薔薇",
           "license": "JpStudy authored"
         }
       ]
@@ -1197,13 +1197,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-183151-vie-9016862",
-          "ja": "気分転換に田舎にドライブに行かないかい。",
-          "vi": "Sao chúng ta không lái xe đến vùng nông thôn để thay đổi không khí một chút nhỉ?",
+          "example_id": "ex-n4_l43_v022-001",
+          "ja": "ドライブで学校へ行きます。",
+          "vi": "Tôi đi học bằng lái xe dạo chơi.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 183151; translation 9016862",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored transport context for ドライブ",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1253,13 +1253,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-74642-vie-8956961",
-          "ja": "サタンのこうした行いを神がなぜ許しているのか、その理由は聖書のヨブ記で説明されている。",
-          "vi": "Lý do vì sao Chúa tha thứ cho những hành động đó của Satan được lý giải trong sách Job của Kinh Thánh.",
+          "example_id": "ex-n4_l43_v023-001",
+          "ja": "これは理由です。",
+          "vi": "Đây là lý do.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 74642; translation 8956961",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored level-capped noun context for 理由",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1528,13 +1528,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-76567-vie-9735582",
-          "ja": "ちなみに、この部屋には冷房設備なんて物は何も無い。あるのはうちわだけ。",
-          "vi": "Ngoài ra, phòng này không có thiết bị làm lạnh hay gì hết, mà chỉ có một cái quạt giấy.",
+          "example_id": "ex-n4_l43_v028-001",
+          "ja": "これは冷房です。",
+          "vi": "Đây là lam mat.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 76567; translation 9735582",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored level-capped noun context for 冷房",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1805,13 +1805,13 @@
       },
       "example_sentences": [
         {
-          "example_id": "tat-115909-vie-8939618",
-          "ja": "彼の欲望は収入とつりあわない。",
-          "vi": "Thu nhập không thể đáp ứng những mong muốn của anh ta.",
+          "example_id": "ex-n4_l43_v033-001",
+          "ja": "これは収入です。",
+          "vi": "Đây là thu nhap.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 115909; translation 8939618",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored level-capped noun context for 収入",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -1859,11 +1859,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l43_v034-001",
-          "ja": "現場で聞いたぴったりの背景を、担当者にもう一度確認しました。",
-          "vi": "Tôi hỏi lại người phụ trách về bối cảnh của vua van nghe được tại hiện trường.",
+          "ja": "これはぴったりです。",
+          "vi": "Đây là vua van.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored contextual last-resort for ぴったり",
+          "source_detail": "JpStudy-authored level-capped noun context for ぴったり",
           "license": "JpStudy authored"
         }
       ]

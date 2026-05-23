@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない",
-      "meaning": "Ý nghĩa: Dùng để nói một việc không hoàn toàn bất khả thi, nhưng người nói còn do dự, miễn cưỡng hoặc không xem đó là lựa chọn tốt",
-      "usage": "Cách dùng: Với ～ないこともない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～ないこともない, lõi こと là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～ないこともない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một việc không hoàn toàn bất khả thi, nhưng người nói còn do dự, miễn cưỡng hoặc không xem đó là lựa chọn tốt. Với Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない xoay quanh sự việc được danh từ hóa. Khác 〜もの, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang bản chất/cảm xúc.",
       "crossLinks": [
         {
-          "pattern": "～ことから",
-          "contrast": "～ないこともない cần đọc theo chức năng riêng của mẫu; ～ことから có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜もの",
+          "contrast": "Khác Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない: 〜もの nghiêng về bản chất/cảm xúc, còn Verb-ない form + こともない / い-Adjectiveくない + こともない / な-Adjectiveではない + こともない / Nounではない + こともない nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với もの thường có hơi người và cảm xúc hơn こと trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

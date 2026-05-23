@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + に関わって",
-      "meaning": "Ý nghĩa: Dùng khi một việc có liên quan, bị ảnh hưởng hoặc gắn với một vấn đề/yếu tố nào đó",
-      "usage": "Cách dùng: Với ～に関わって, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に関わって, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に関わって thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に関わって không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun + に関わって: nhóm bất chấp loại điều kiện khỏi phép xét: có hay không, là ai, như thế nào thì kết luận vẫn chạy.. Trong công thức Noun + に関わって, danh từ hoặc mệnh đề điều kiện trước dấu bất chấp; vì vậy phần 無関係 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + に関わって không có chữ Hán nổi bật để bám, nên mượn cặp ý \"bất kể - dấu hiệu\". Nhìn mẫu bất chấp gạt điều kiện sang bên như ký hiệu chức năng báo không phụ thuộc vào điều kiện, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + に関わって. Dấu cần khóa là danh từ hoặc mệnh đề điều kiện trước dấu bất chấp; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi một việc có liên quan, bị ảnh hưởng hoặc gắn với một vấn đề/yếu tố nào đó. Với Noun + に関わって, trọng tâm là không phụ thuộc vào điều kiện; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng trong quy định, thông báo, lập luận; を問わず nghiêng về \"không xét\", にかかわらず nghiêng về \"không bị chi phối\".. Nếu dạng đứng trước lệch khỏi 無関係, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + に関わって xoay quanh điều kiện bị loại khỏi phép xét. Khác 関連する近い文型, mẫu kia có thể là nhượng bộ trong câu cụ thể hoặc phạm vi áp dụng rộng hơn; gặp mẫu bất chấp gạt điều kiện sang bên thì giữ nghĩa bất kể, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A。おまけに B。",
-          "contrast": "～に関わって cần đọc theo chức năng riêng của mẫu; A。おまけに B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Noun + に関わって: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun + に関わって nghiêng về bất kể. So dấu mẫu bất chấp gạt điều kiện sang bên với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

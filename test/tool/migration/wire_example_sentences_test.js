@@ -150,6 +150,60 @@ test('buildExampleCorpus keeps Tatoeba ahead of owner textbook rows', () => {
   assert.equal(corpus.items.n5_l01_v001[0].ja, '私の番？');
 });
 
+test('buildExampleCorpus skips over-level Tatoeba rows when level cap is enforced', () => {
+  const corpus = buildExampleCorpus([
+    {
+      filePath: 'assets/data/content/vocab/n5/minna/lesson_01.json',
+      payload: {
+        level: 'N5',
+        entries: [
+          {
+            entryId: 'n5_l01_s002',
+            level: 'N5',
+            lemma: { vocabId: 'n5_l01_v002', term: '私たち', reading: 'わたしたち' },
+            sense: { meaningVi: 'chúng tôi', meaningEn: 'we' },
+            tags: ['pronoun'],
+          },
+          {
+            entryId: 'n3_probe_001',
+            level: 'N3',
+            lemma: { vocabId: 'n3_probe_v001', term: '想像力', reading: 'そうぞうりょく' },
+            sense: { meaningVi: 'sự tưởng tượng', meaningEn: 'imagination' },
+          },
+          {
+            entryId: 'n3_probe_002',
+            level: 'N3',
+            lemma: { vocabId: 'n3_probe_v002', term: '側面', reading: 'そくめん' },
+            sense: { meaningVi: 'khía cạnh', meaningEn: 'aspect' },
+          },
+          {
+            entryId: 'n3_probe_003',
+            level: 'N3',
+            lemma: { vocabId: 'n3_probe_v003', term: '影響', reading: 'えいきょう' },
+            sense: { meaningVi: 'ảnh hưởng', meaningEn: 'influence' },
+          },
+        ],
+      },
+    },
+  ], {
+    enforceLevelCap: true,
+    tatoebaRows: [
+      {
+        vocabId: 'n5_l01_v002',
+        term: '私たち',
+        ja: '想像力は私たちの生活のどの側面にも影響を与える。',
+        vi: 'Sự tưởng tượng ảnh hưởng đến mọi khía cạnh cuộc sống của chúng ta.',
+        sentenceId: 5007,
+        translationId: 5787,
+      },
+    ],
+  });
+
+  const row = corpus.items.n5_l01_v002[0];
+  assert.equal(row.source, 'jpstudy-authored-contextual');
+  assert.equal(row.ja, '私たちは日本語を勉強しています。');
+});
+
 test('buildExampleCorpus fallback authors contextual examples, not templates', () => {
   const corpus = buildExampleCorpus([
     {

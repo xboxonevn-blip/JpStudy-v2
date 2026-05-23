@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A + そこで + B",
-      "meaning": "Ý nghĩa: Dùng khi A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó",
-      "usage": "Cách dùng: Với A。そこで B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。そこで B。, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách A + そこで + B thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。そこで B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A + そこで + B: で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. Trong công thức A + そこで + B, dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A + そこで + B không có chữ Hán nổi bật để bám, nên mượn cặp ý \"A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó - dấu hiệu\". Nhìn で như ký hiệu chức năng báo A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A + そこで + B. Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. Với A + そこで + B, trọng tâm là A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A + そこで + B khi muốn biểu thị A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A + そこで + B xoay quanh で trong A + そこで + B báo A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. Khác 関連する近い文型, A + そこで + B giữ trọng tâm A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～てからでないと",
-          "contrast": "A。そこで B。 cần đọc theo chức năng riêng của mẫu; ～てからでないと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác A + そこで + B: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A + そこで + B nghiêng về A nêu tình huống, vấn đề hoặc lý do, còn B là hành động, quyết định hoặc kết quả được đưa ra vì tình huống đó. So dấu で với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

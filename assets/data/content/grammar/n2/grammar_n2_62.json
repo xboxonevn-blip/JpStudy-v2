@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + に対して",
-      "meaning": "Ý nghĩa: Dùng để chỉ đối tượng, hướng tác động, thái độ hoặc phản ứng đối với một người/sự việc; cũng có thể dùng để đối chiếu hai tình huống",
-      "usage": "Cách dùng: Với ～に対して, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に対して, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に対して thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に対して không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun + に対して: nhóm lập trường đặt danh từ làm chủ đề, đối tượng, vai trò, phạm vi hoặc điều kiện trách nhiệm.. Trong công thức Noun + に対して, danh từ trước に/として/上; vì vậy phần 立場 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + に対して không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lập trường/phạm vi - dấu hiệu\". Nhìn mẫu lập trường hỏi câu đang nhìn từ vị trí nào như ký hiệu chức năng báo phạm vi, vai trò, hoặc lập trường, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + に対して. Dấu cần khóa là danh từ trước に/として/上; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để chỉ đối tượng, hướng tác động, thái độ hoặc phản ứng đối với một người/sự việc; cũng có thể dùng để đối chiếu hai tình huống. Với Noun + に対して, trọng tâm là phạm vi, vai trò, hoặc lập trường; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu là điểm nhìn chính; phân biệt đối tượng bàn luận, đối tượng đối diện, và vai trò được gán.. Nếu dạng đứng trước lệch khỏi 立場, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + に対して xoay quanh điểm nhìn danh từ. Khác 〜について, mẫu kia thường đổi từ chủ đề sang đối tượng đối diện hoặc vai trò; gặp mẫu lập trường hỏi câu đang nhìn từ vị trí nào thì giữ nghĩa lập trường/phạm vi, đừng kéo sang lập trường/phạm vi.",
       "crossLinks": [
         {
-          "pattern": "A。おまけに B。",
-          "contrast": "～に対して cần đọc theo chức năng riêng của mẫu; A。おまけに B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜について",
+          "contrast": "Khác Noun + に対して: 〜について nghiêng về lập trường/phạm vi, còn Noun + に対して nghiêng về lập trường/phạm vi. So dấu mẫu lập trường hỏi câu đang nhìn từ vị trí nào với mẫu lập trường hỏi câu đang nhìn từ vị trí nào trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

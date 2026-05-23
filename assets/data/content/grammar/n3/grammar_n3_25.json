@@ -15,16 +15,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 + しかない",
-      "meaning": "Ý nghĩa: Diễn tả chỉ còn một lựa chọn duy nhất.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của V辞書 + しかない: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức V辞書 + しかない, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 + しかない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"giới hạn - dấu hiệu\". Nhìn dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" như ký hiệu chức năng báo giới hạn số lượng, mức độ, hoặc thời điểm, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 + しかない. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả chỉ còn một lựa chọn duy nhất. Với V辞書 + しかない, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + しかない xoay quanh ranh giới lượng. Khác V普通形 / いA / なAな / N + ばかりでなく, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAな / N + ばかりでなく",
+          "contrast": "Khác V辞書 + しかない: V普通形 / いA / なAな / N + ばかりでなく nghiêng về giới hạn, còn V辞書 + しかない nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -44,10 +52,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAな / N + ばかりでなく",
-      "meaning": "Ý nghĩa: Diễn tả không chỉ A mà còn cả B.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAな / N + ばかりでなく: nhóm giới hạn đặt một ranh lượng: chỉ có, vừa mới, càng, hoặc mức độ so sánh.. Trong công thức V普通形 / いA / なAな / N + ばかりでなく, danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; vì vậy phần 限定 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAな / N + ばかりでなく không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAな / N + ばかりでなく. Dấu cần khóa là danh từ/động từ cộng dấu giới hạn như しか, だけ, ばかり, ほど; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả không chỉ A mà còn cả B. Với V普通形 / いA / なAな / N + ばかりでなく, trọng tâm là giới hạn số lượng, mức độ, hoặc thời điểm; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định mẫu có cần phủ định không; riêng しか phải đi với động từ phủ định.. Nếu dạng đứng trước lệch khỏi 限定, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAな / N + ばかりでなく xoay quanh ranh giới lượng. Khác どんなに + Vても / いAくても / なAでも / Nでも, mẫu kia có thể cùng nói ít/nhiều nhưng khác yêu cầu phủ định hoặc sắc thái; gặp dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" thì giữ nghĩa giới hạn, đừng kéo sang điều kiện.",
+      "crossLinks": [
+        {
+          "pattern": "どんなに + Vても / いAくても / なAでも / Nでも",
+          "contrast": "Khác V普通形 / いA / なAな / N + ばかりでなく: どんなに + Vても / いAくても / なAでも / Nでも nghiêng về điều kiện, còn V普通形 / いA / なAな / N + ばかりでなく nghiêng về giới hạn. So dấu dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -73,10 +89,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: どんなに + Vても / いAくても / なAでも / Nでも",
-      "meaning": "Ý nghĩa: Diễn tả kết quả không thay đổi dù mức độ thế nào đi nữa.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của どんなに + Vても / いAくても / なAでも / Nでも: nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức どんなに + Vても / いAくても / なAでも / Nでも, dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: どんなに + Vても / いAくても / なAでも / Nでも không có chữ Hán nổi bật để bám, nên mượn cặp ý \"điều kiện - dấu hiệu\". Nhìn dấu điều kiện là bản lề giữa giả định và kết luận như ký hiệu chức năng báo điều kiện, nhượng bộ, hoặc giả định, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: どんなに + Vても / いAくても / なAでも / Nでも. Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả kết quả không thay đổi dù mức độ thế nào đi nữa. Với どんなに + Vても / いAくても / なAでも / Nでも, trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: どんなに + Vても / いAくても / なAでも / Nでも xoay quanh cửa điều kiện. Khác N + を通して, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang phạm vi/kênh.",
+      "crossLinks": [
+        {
+          "pattern": "N + を通して",
+          "contrast": "Khác どんなに + Vても / いAくても / なAでも / Nでも: N + を通して nghiêng về phạm vi/kênh, còn どんなに + Vても / いAくても / なAでも / Nでも nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -102,10 +126,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: N + を通して",
-      "meaning": "Ý nghĩa: Diễn tả phương tiện, kênh hoặc quá trình thông qua đó một kinh nghiệm, ảnh hưởng hay sự kết nối được tạo ra.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của N + を通して: nhóm phạm vi trải nghĩa qua thời gian, không gian, phương tiện hoặc một quá trình trung gian.. Trong công thức N + を通して, danh từ phạm vi trước dấu trải rộng; vì vậy phần 範囲 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu N + を通して không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: N + を通して. Dấu cần khóa là danh từ phạm vi trước dấu trải rộng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả phương tiện, kênh hoặc quá trình thông qua đó một kinh nghiệm, ảnh hưởng hay sự kết nối được tạo ra. Với N + を通して, trọng tâm là xuyên qua hoặc trải khắp một phạm vi; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi danh từ trước mẫu là kênh, khoảng thời gian, khu vực hoặc quá trình; tránh đọc thành địa điểm đơn lẻ.. Nếu dạng đứng trước lệch khỏi 範囲, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + を通して xoay quanh phạm vi trải rộng. Khác V辞書 + しかない, mẫu kia thường giới hạn vào điểm bắt đầu-kết thúc hoặc phương tiện khác; gặp mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào thì giữ nghĩa phạm vi/kênh, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 + しかない",
+          "contrast": "Khác N + を通して: V辞書 + しかない nghiêng về giới hạn, còn N + を通して nghiêng về phạm vi/kênh. So dấu mẫu phạm vi hỏi ý nghĩa đi qua kênh/khoảng nào với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

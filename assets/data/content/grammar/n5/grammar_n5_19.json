@@ -14,16 +14,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vた",
-      "meaning": "Ý nghĩa: Thể `た` là dạng quá khứ ngắn.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Vた: た là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Thể た là dạng quá khứ ngắn. Trong công thức Vた, dấu た và dạng từ ngay trước nó; vì vậy phần た không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vた không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Thể た là dạng quá khứ ngắn - dấu hiệu\". Nhìn た như ký hiệu chức năng báo Thể た là dạng quá khứ ngắn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vた. Dấu cần khóa là dấu た và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Thể `た` là dạng quá khứ ngắn. Với Vた, trọng tâm là Thể た là dạng quá khứ ngắn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Vた khi muốn biểu thị Thể た là dạng quá khứ ngắn; ưu tiên kiểm tra dấu た trong câu mẫu. Nếu dạng đứng trước lệch khỏi た, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vた xoay quanh た trong Vた báo Thể た là dạng quá khứ ngắn. Khác Vた こと があります, Vた giữ trọng tâm Thể た là dạng quá khứ ngắn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp た thì giữ nghĩa Thể た là dạng quá khứ ngắn, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "Vた こと があります",
+          "contrast": "Khác Vた: Vた こと があります nghiêng về sự việc, còn Vた nghiêng về Thể た là dạng quá khứ ngắn. So dấu た với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,10 +50,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vた こと があります",
-      "meaning": "Ý nghĩa: Dùng để nói đã từng làm một việc gì đó trong quá khứ.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Vた こと があります: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức Vた こと があります, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu Vた こと があります không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Vた こと があります. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói đã từng làm một việc gì đó trong quá khứ. Với Vた こと があります, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vた こと があります xoay quanh sự việc được danh từ hóa. Khác V1たり、V2たり します, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "V1たり、V2たり します",
+          "contrast": "Khác Vた こと があります: V1たり、V2たり します nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Vた こと があります nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với たり trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -70,16 +86,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: V1たり、V2たり します",
-      "meaning": "Ý nghĩa: Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V1たり、V2たり します: たり là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó. Trong công thức V1たり、V2たり します, dấu たり và dạng từ ngay trước nó; vì vậy phần たり không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V1たり、V2たり します không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó - dấu hiệu\". Nhìn たり như ký hiệu chức năng báo Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V1たり、V2たり します. Dấu cần khóa là dấu たり và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó. Với V1たり、V2たり します, trọng tâm là Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng V1たり、V2たり します khi muốn biểu thị Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó; ưu tiên kiểm tra dấu たり trong câu mẫu. Nếu dạng đứng trước lệch khỏi たり, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V1たり、V2たり します xoay quanh たり trong V1たり、V2たり します báo Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó. Khác Aい->く / Aな->に / N->に + なります, V1たり、V2たり します giữ trọng tâm Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp たり thì giữ nghĩa Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Aい->く / Aな->に / N->に + なります",
+          "contrast": "Khác V1たり、V2たり します: Aい->く / Aな->に / N->に + なります nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn V1たり、V2たり します nghiêng về Dùng để liệt kê vài hành động tiêu biểu, không cần theo đúng thứ tự thời gian và không có nghĩa là chỉ làm các hành động đó. So dấu たり với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,10 +122,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Aい->く / Aな->に / N->に + なります",
-      "meaning": "Ý nghĩa: `なります` diễn tả sự thay đổi trạng thái.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Aい->く / Aな->に / N->に + なります: 尊敬語 nâng hành động của người trên hoặc khách lên; お/ご là tiền tố lịch sự, còn になる/ください gắn vào khung kính trọng.. Trong công thức Aい->く / Aな->に / N->に + なります, お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; vì vậy phần 尊敬語 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Aい->く / Aな->に / N->に + なります không có chữ Hán nổi bật để bám, nên mượn cặp ý \"kính trọng - dấu hiệu\". Nhìn 尊敬語 hỏi hành động thuộc về ai để nâng người đó như ký hiệu chức năng báo nâng hành động của người khác, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Aい->く / Aな->に / N->に + なります. Dấu cần khóa là お + Vます語幹 hoặc ご + Hán ngữ trước động từ kính trọng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `なります` diễn tả sự thay đổi trạng thái. Với Aい->く / Aな->に / N->に + なります, trọng tâm là nâng hành động của người khác; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng cho hành động của người nghe/người được kính trọng; không dùng để tự nâng hành động của mình.. Nếu dạng đứng trước lệch khỏi 尊敬語, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Aい->く / Aな->に / N->に + なります xoay quanh đối tượng được nâng lên. Khác Vた, mẫu kia có thể là khiêm nhường, tức hạ hành động của mình thay vì nâng người khác; gặp 尊敬語 hỏi hành động thuộc về ai để nâng người đó thì giữ nghĩa kính trọng, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Vた",
+          "contrast": "Khác Aい->く / Aな->に / N->に + なります: Vた nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Aい->く / Aな->に / N->に + なります nghiêng về kính trọng. So dấu 尊敬語 hỏi hành động thuộc về ai để nâng người đó với た trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

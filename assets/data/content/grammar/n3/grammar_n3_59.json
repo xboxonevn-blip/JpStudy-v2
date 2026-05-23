@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: N + に対する + N",
-      "meaning": "Ý nghĩa: Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng",
-      "usage": "Cách dùng: Với 〜に対する, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜に対する, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách N + に対する + N thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜に対する không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của N + に対する + N: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng. Trong công thức N + に対する + N, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N + に対する + N không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N + に対する + N. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng. Với N + に対する + N, trọng tâm là Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng N + に対する + N khi muốn biểu thị Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N + に対する + N xoay quanh に trong N + に対する + N báo Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng. Khác 関連する近い文型, N + に対する + N giữ trọng tâm Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜に対する cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác N + に対する + N: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N + に対する + N nghiêng về Bổ nghĩa cho danh từ phía sau, diễn tả thái độ, phản ứng, đánh giá hoặc tác động đối với một đối tượng. So dấu に với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない",
-      "meaning": "Ý nghĩa: Dùng để phủ nhận một hiểu lầm hoặc kết luận quá rộng: không có nghĩa là toàn bộ sự việc như vậy",
-      "usage": "Cách dùng: Với ～わけではない, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～わけではない, lõi わけ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～わけではない không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない: わけ mang nghĩa lý do/lẽ; mẫu dùng nó để kết luận điều hợp logic hoặc phủ định một suy diễn.. Trong công thức Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない, mệnh đề thường trước わけ; vì vậy phần わけ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do logic - dấu hiệu\". Nhìn わけ hỏi \"vì lẽ nào kết luận này đúng\" như ký hiệu chức năng báo lý do, lẽ phải, hoặc suy luận, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない. Dấu cần khóa là mệnh đề thường trước わけ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để phủ nhận một hiểu lầm hoặc kết luận quá rộng: không có nghĩa là toàn bộ sự việc như vậy. Với Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない, trọng tâm là lý do, lẽ phải, hoặc suy luận; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu đang giải thích vì sao kết luận hợp lý, không hợp lý, hoặc không thể làm vì ràng buộc xã hội.. Nếu dạng đứng trước lệch khỏi わけ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない xoay quanh lẽ/suy luận của わけ. Khác 〜はずだ, mẫu kia thường nói kỳ vọng bằng はず hoặc quyết định bằng こと; gặp わけ hỏi \"vì lẽ nào kết luận này đúng\" thì giữ nghĩa lý do logic, đừng kéo sang kỳ vọng.",
       "crossLinks": [
         {
-          "pattern": "～わけがない",
-          "contrast": "～わけではない cần đọc theo chức năng riêng của mẫu; ～わけがない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜はずだ",
+          "contrast": "Khác Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない: 〜はずだ nghiêng về kỳ vọng, còn Verb-plain + わけではない, い-Adjective + わけではない, な-Adjective + なわけではない, Noun + という/であるわけではない nghiêng về lý do logic. So dấu わけ hỏi \"vì lẽ nào kết luận này đúng\" với はず cần một căn cứ trong đầu người nói trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

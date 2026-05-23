@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ",
-      "meaning": "Ý nghĩa: Dùng để nêu kết luận logic sau khi biết một lý do hoặc hoàn cảnh",
-      "usage": "Cách dùng: Với ～わけだ, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～わけだ, lõi わけ là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～わけだ không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ: わけ mang nghĩa lý do/lẽ; mẫu dùng nó để kết luận điều hợp logic hoặc phủ định một suy diễn.. Trong công thức Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ, mệnh đề thường trước わけ; vì vậy phần わけ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do logic - dấu hiệu\". Nhìn わけ hỏi \"vì lẽ nào kết luận này đúng\" như ký hiệu chức năng báo lý do, lẽ phải, hoặc suy luận, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ. Dấu cần khóa là mệnh đề thường trước わけ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nêu kết luận logic sau khi biết một lý do hoặc hoàn cảnh. Với Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ, trọng tâm là lý do, lẽ phải, hoặc suy luận; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu đang giải thích vì sao kết luận hợp lý, không hợp lý, hoặc không thể làm vì ràng buộc xã hội.. Nếu dạng đứng trước lệch khỏi わけ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ xoay quanh lẽ/suy luận của わけ. Khác 〜はずだ, mẫu kia thường nói kỳ vọng bằng はず hoặc quyết định bằng こと; gặp わけ hỏi \"vì lẽ nào kết luận này đúng\" thì giữ nghĩa lý do logic, đừng kéo sang kỳ vọng.",
       "crossLinks": [
         {
-          "pattern": "～わけがない",
-          "contrast": "～わけだ cần đọc theo chức năng riêng của mẫu; ～わけがない có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "〜はずだ",
+          "contrast": "Khác Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ: 〜はずだ nghiêng về kỳ vọng, còn Verb-casual + わけだ, い-Adjective + わけだ, な-Adjective + なわけだ, Noun + な/であるわけだ nghiêng về lý do logic. So dấu わけ hỏi \"vì lẽ nào kết luận này đúng\" với はず cần một căn cứ trong đầu người nói trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

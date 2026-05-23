@@ -22,16 +22,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + まい",
-      "meaning": "Ý nghĩa: Dùng để diễn tả phỏng đoán phủ định hoặc quyết tâm không làm gì.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + まい: nhóm nghĩa vụ/khả năng giới hạn lựa chọn của người nói: nên, không được, không thể, hoặc không còn cách khác.. Trong công thức Verb-dictionary form + まい, dạng động từ trước dấu nghĩa vụ/khả năng; vì vậy phần 義務 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary form + まい không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nghĩa vụ/giới hạn - dấu hiệu\". Nhìn mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn như ký hiệu chức năng báo nghĩa vụ, cấm đoán, hoặc không còn lựa chọn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary form + まい. Dấu cần khóa là dạng động từ trước dấu nghĩa vụ/khả năng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để diễn tả phỏng đoán phủ định hoặc quyết tâm không làm gì. Với Verb-dictionary form + まい, trọng tâm là nghĩa vụ, cấm đoán, hoặc không còn lựa chọn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu nói về điều nên làm/không thể làm; xem nguồn ràng buộc là đạo lý, quy tắc hay hoàn cảnh.. Nếu dạng đứng trước lệch khỏi 義務, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + まい xoay quanh áp lực lựa chọn. Khác Time/Noun + まで + Verb(て-form), mẫu kia có thể mềm hơn, khách quan hơn, hoặc chỉ là khả năng; gặp mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn thì giữ nghĩa nghĩa vụ/giới hạn, đừng kéo sang thời điểm.",
+      "crossLinks": [
+        {
+          "pattern": "Time/Noun + まで + Verb(て-form)",
+          "contrast": "Khác Verb-dictionary form + まい: Time/Noun + まで + Verb(て-form) nghiêng về thời điểm, còn Verb-dictionary form + まい nghiêng về nghĩa vụ/giới hạn. So dấu mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn với mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -58,10 +66,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Time/Noun + まで + Verb(て-form)",
-      "meaning": "Ý nghĩa: Dùng để nói một hành động tiếp tục cho đến một thời điểm, giới hạn hoặc điều kiện nhất định.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Time/Noun + まで + Verb(て-form): nhóm thời điểm neo câu vào một lát cắt của tiến trình: trước, sau, đúng lúc, mỗi lần, hoặc sau một quá trình.. Trong công thức Time/Noun + まで + Verb(て-form), dạng động từ trước dấu thời điểm; vì vậy phần 時点 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Time/Noun + まで + Verb(て-form) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"thời điểm - dấu hiệu\". Nhìn mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào như ký hiệu chức năng báo mốc thời gian trong tiến trình, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Time/Noun + まで + Verb(て-form). Dấu cần khóa là dạng động từ trước dấu thời điểm; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một hành động tiếp tục cho đến một thời điểm, giới hạn hoặc điều kiện nhất định. Với Time/Noun + まで + Verb(て-form), trọng tâm là mốc thời gian trong tiến trình; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi quan hệ thời gian là thông tin chính; kiểm tra Vる, Vた, Vている vì đổi dạng là đổi mốc nhìn.. Nếu dạng đứng trước lệch khỏi 時点, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Time/Noun + まで + Verb(て-form) xoay quanh mốc thời gian. Khác Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに, mẫu kia thường đổi mốc trước/sau hoặc sắc thái đột ngột; gặp mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào thì giữ nghĩa thời điểm, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに",
+          "contrast": "Khác Time/Noun + まで + Verb(て-form): Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Time/Noun + まで + Verb(て-form) nghiêng về thời điểm. So dấu mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -94,10 +110,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに",
-      "meaning": "Ý nghĩa: Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có. Trong công thức Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có. Với Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに, trọng tâm là Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに khi muốn biểu thị Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに xoay quanh に trong Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに báo Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có. Khác Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず, Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに giữ trọng tâm Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có, đừng kéo sang bất kể.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず",
+          "contrast": "Khác Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに: Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず nghiêng về bất kể, còn Verb-dictionary form + ままに / Verb-passive form + ままに / Noun + のままに nghiêng về Dùng để nói làm theo đúng tình trạng, ý muốn, mệnh lệnh hoặc dòng diễn biến đang có. So dấu に với mẫu bất chấp gạt điều kiện sang bên trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -130,10 +154,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず",
-      "meaning": "Ý nghĩa: Dùng khi bất chấp hậu quả, ánh nhìn xung quanh hoặc điều kiện bên ngoài mà vẫn làm.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず: nhóm bất chấp loại điều kiện khỏi phép xét: có hay không, là ai, như thế nào thì kết luận vẫn chạy.. Trong công thức Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず, danh từ hoặc mệnh đề điều kiện trước dấu bất chấp; vì vậy phần 無関係 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず không có chữ Hán nổi bật để bám, nên mượn cặp ý \"bất kể - dấu hiệu\". Nhìn mẫu bất chấp gạt điều kiện sang bên như ký hiệu chức năng báo không phụ thuộc vào điều kiện, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず. Dấu cần khóa là danh từ hoặc mệnh đề điều kiện trước dấu bất chấp; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi bất chấp hậu quả, ánh nhìn xung quanh hoặc điều kiện bên ngoài mà vẫn làm. Với Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず, trọng tâm là không phụ thuộc vào điều kiện; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng trong quy định, thông báo, lập luận; を問わず nghiêng về \"không xét\", にかかわらず nghiêng về \"không bị chi phối\".. Nếu dạng đứng trước lệch khỏi 無関係, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず xoay quanh điều kiện bị loại khỏi phép xét. Khác Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか, mẫu kia có thể là nhượng bộ trong câu cụ thể hoặc phạm vi áp dụng rộng hơn; gặp mẫu bất chấp gạt điều kiện sang bên thì giữ nghĩa bất kể, đừng kéo sang bản chất/cảm xúc.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか",
+          "contrast": "Khác Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず: Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか nghiêng về bản chất/cảm xúc, còn Noun + もかまわず / Verb-dictionary form + もかまわず / Verb-plain form + のもかまわず nghiêng về bất kể. So dấu mẫu bất chấp gạt điều kiện sang bên với もの thường có hơi người và cảm xúc hơn こと trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -166,10 +198,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか",
-      "meaning": "Ý nghĩa: Dùng để phủ định hoặc từ chối rất mạnh, thường dưới dạng câu hỏi tu từ.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか: もの/物 vốn là \"vật/điều\"; trong ngữ pháp nó kéo câu về bản chất, cảm xúc tự nhiên hoặc lý do mang tính con người.. Trong công thức Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか, cụm thường trước もの hoặc ものだ/ものだから; vì vậy phần もの không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". Khi mẫu Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか. Dấu cần khóa là cụm thường trước もの hoặc ものだ/ものだから; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để phủ định hoặc từ chối rất mạnh, thường dưới dạng câu hỏi tu từ. Với Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか, trọng tâm là bản chất, cảm xúc hoặc lý do tự nhiên; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi muốn nêu điều vốn dĩ, cảm giác mạnh, hoặc lời giải thích mềm; tránh thay bằng こと khi cần sắc thái con người.. Nếu dạng đứng trước lệch khỏi もの, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか xoay quanh bản chất của もの. Khác Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある, mẫu kia thường trung tính hơn hoặc chỉ đóng gói sự việc; gặp もの thường có hơi người và cảm xúc hơn こと thì giữ nghĩa bản chất/cảm xúc, đừng kéo sang bản chất/cảm xúc.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある",
+          "contrast": "Khác Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか: Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある nghiêng về bản chất/cảm xúc, còn Verb-casual + ものか, い-Adjective + ものか, な-Adjective + (な)ものか, Noun + (な)ものか nghiêng về bản chất/cảm xúc. So dấu もの thường có hơi người và cảm xúc hơn こと với もの thường có hơi người và cảm xúc hơn こと trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,10 +242,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある",
-      "meaning": "Ý nghĩa: Dùng khi người nói cảm thấy có một ấn tượng, sức nặng hoặc đặc điểm khó bỏ qua trong sự việc.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある: もの/物 vốn là \"vật/điều\"; trong ngữ pháp nó kéo câu về bản chất, cảm xúc tự nhiên hoặc lý do mang tính con người.. Trong công thức Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある, cụm thường trước もの hoặc ものだ/ものだから; vì vậy phần もの không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". Khi mẫu Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある. Dấu cần khóa là cụm thường trước もの hoặc ものだ/ものだから; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi người nói cảm thấy có một ấn tượng, sức nặng hoặc đặc điểm khó bỏ qua trong sự việc. Với Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある, trọng tâm là bản chất, cảm xúc hoặc lý do tự nhiên; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi muốn nêu điều vốn dĩ, cảm giác mạnh, hoặc lời giải thích mềm; tránh thay bằng こと khi cần sắc thái con người.. Nếu dạng đứng trước lệch khỏi もの, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある xoay quanh bản chất của もの. Khác Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections), mẫu kia thường trung tính hơn hoặc chỉ đóng gói sự việc; gặp もの thường có hơi người và cảm xúc hơn こと thì giữ nghĩa bản chất/cảm xúc, đừng kéo sang bản chất/cảm xúc.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections)",
+          "contrast": "Khác Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある: Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections) nghiêng về bản chất/cảm xúc, còn Verb-casual + ものがある, い-Adjective + ものがある, な-Adjective + なものがある nghiêng về bản chất/cảm xúc. So dấu もの thường có hơi người và cảm xúc hơn こと với もの thường có hơi người và cảm xúc hơn こと trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -238,16 +286,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections)",
-      "meaning": "Ý nghĩa: Dùng để nói một chân lý thông thường, điều nên làm, cảm xúc mạnh, hoặc hồi tưởng khi đi với quá khứ.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections): もの/物 vốn là \"vật/điều\"; trong ngữ pháp nó kéo câu về bản chất, cảm xúc tự nhiên hoặc lý do mang tính con người.. Trong công thức Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections), cụm thường trước もの hoặc ものだ/ものだから; vì vậy phần もの không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 物 = vật, nhưng trong ngữ pháp thường mở rộng thành \"bản chất/điều\". Khi mẫu Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections) không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections). Dấu cần khóa là cụm thường trước もの hoặc ものだ/ものだから; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một chân lý thông thường, điều nên làm, cảm xúc mạnh, hoặc hồi tưởng khi đi với quá khứ. Với Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections), trọng tâm là bản chất, cảm xúc hoặc lý do tự nhiên; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi muốn nêu điều vốn dĩ, cảm giác mạnh, hoặc lời giải thích mềm; tránh thay bằng こと khi cần sắc thái con người.. Nếu dạng đứng trước lệch khỏi もの, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections) xoay quanh bản chất của もの. Khác Verb-dictionary form + まい, mẫu kia thường trung tính hơn hoặc chỉ đóng gói sự việc; gặp もの thường có hơi người và cảm xúc hơn こと thì giữ nghĩa bản chất/cảm xúc, đừng kéo sang nghĩa vụ/giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-dictionary form + まい",
+          "contrast": "Khác Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections): Verb-dictionary form + まい nghiêng về nghĩa vụ/giới hạn, còn Verb-dictionary form + ものだ, な-Adjective + なものだ, (Also: Verb-た form + ものだ for recollections) nghiêng về bản chất/cảm xúc. So dấu もの thường có hơi người và cảm xúc hơn こと với mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

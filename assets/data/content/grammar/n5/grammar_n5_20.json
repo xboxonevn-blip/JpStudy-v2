@@ -14,16 +14,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Thể thông thường vs Thể lịch sự",
-      "meaning": "Ý nghĩa: Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Thể thông thường vs Thể lịch sự: Thể thông thường vs Thể  là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ. Trong công thức Thể thông thường vs Thể lịch sự, dấu Thể thông thường vs Thể  và dạng từ ngay trước nó; vì vậy phần Thể thông thường vs Thể  không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Thể thông thường vs Thể lịch sự không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ - dấu hiệu\". Nhìn Thể thông thường vs Thể như ký hiệu chức năng báo Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Thể thông thường vs Thể lịch sự. Dấu cần khóa là dấu Thể thông thường vs Thể  và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ. Với Thể thông thường vs Thể lịch sự, trọng tâm là Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Thể thông thường vs Thể lịch sự khi muốn biểu thị Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ; ưu tiên kiểm tra dấu Thể thông thường vs Thể trong câu mẫu. Nếu dạng đứng trước lệch khỏi Thể thông thường vs Thể , nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Thể thông thường vs Thể lịch sự xoay quanh Thể thông thường vs Thể trong Thể thông thường vs Thể lịch sự báo Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ. Khác Bỏ `は`, `を`, `へ`..., Thể thông thường vs Thể lịch sự giữ trọng tâm Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp Thể thông thường vs Thể thì giữ nghĩa Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Bỏ `は`, `を`, `へ`...",
+          "contrast": "Khác Thể thông thường vs Thể lịch sự: Bỏ `は`, `を`, `へ`... nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Thể thông thường vs Thể lịch sự nghiêng về Thể thông thường dùng trong văn nói thân mật, nhật ký hoặc khi trích dẫn suy nghĩ. So dấu Thể thông thường vs Thể với を trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,16 +50,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S?",
-      "meaning": "Ý nghĩa: Trong hội thoại thân mật, thường bỏ `か` ở cuối câu hỏi và lên giọng ở cuối câu.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của S?: S? là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu. Trong công thức S?, dấu S? và dạng từ ngay trước nó; vì vậy phần S? không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: S? không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu - dấu hiệu\". Nhìn S? như ký hiệu chức năng báo Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: S?. Dấu cần khóa là dấu S? và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Trong hội thoại thân mật, thường bỏ `か` ở cuối câu hỏi và lên giọng ở cuối câu. Với S?, trọng tâm là Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng S? khi muốn biểu thị Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu; ưu tiên kiểm tra dấu S? trong câu mẫu. Nếu dạng đứng trước lệch khỏi S?, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: S? xoay quanh S? trong S? báo Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu. Khác Bỏ `は`, `を`, `へ`..., S? giữ trọng tâm Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp S? thì giữ nghĩa Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Bỏ `は`, `を`, `へ`...",
+          "contrast": "Khác S?: Bỏ `は`, `を`, `へ`... nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn S? nghiêng về Trong hội thoại thân mật, thường bỏ か ở cuối câu hỏi và lên giọng ở cuối câu. So dấu S? với を trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,10 +86,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Bỏ `は`, `を`, `へ`...",
-      "meaning": "Ý nghĩa: Trong hội thoại thân mật, các trợ từ như `は`, `を`, `へ` có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của Bỏ `は`, `を`, `へ`...: を là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh. Trong công thức Bỏ `は`, `を`, `へ`..., dấu を và dạng từ ngay trước nó; vì vậy phần を không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Bỏ `は`, `を`, `へ`... không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh - dấu hiệu\". Nhìn を như ký hiệu chức năng báo Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Bỏ `は`, `を`, `へ`.... Dấu cần khóa là dấu を và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Trong hội thoại thân mật, các trợ từ như `は`, `を`, `へ` có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh. Với Bỏ `は`, `を`, `へ`..., trọng tâm là Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Bỏ `は`, `を`, `へ`... khi muốn biểu thị Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh; ưu tiên kiểm tra dấu を trong câu mẫu. Nếu dạng đứng trước lệch khỏi を, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Bỏ `は`, `を`, `へ`... xoay quanh を trong Bỏ `は`, `を`, `へ`... báo Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh. Khác S1 けど、 S2, Bỏ `は`, `を`, `へ`... giữ trọng tâm Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp を thì giữ nghĩa Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "S1 けど、 S2",
+          "contrast": "Khác Bỏ `は`, `を`, `へ`...: S1 けど、 S2 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Bỏ `は`, `を`, `へ`... nghiêng về Trong hội thoại thân mật, các trợ từ như は, を, へ có thể bị lược bỏ khi nghĩa đã rõ từ ngữ cảnh. So dấu を với けど trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -98,16 +122,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: S1 けど、 S2",
-      "meaning": "Ý nghĩa: `けど` giống `が`, nghĩa là “nhưng”.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của S1 けど、 S2: けど là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị けど giống が, nghĩa là “nhưng”. Trong công thức S1 けど、 S2, dấu けど và dạng từ ngay trước nó; vì vậy phần けど không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: S1 けど、 S2 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"けど giống が, nghĩa là “nhưng” - dấu hiệu\". Nhìn けど như ký hiệu chức năng báo けど giống が, nghĩa là “nhưng”, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: S1 けど、 S2. Dấu cần khóa là dấu けど và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `けど` giống `が`, nghĩa là “nhưng”. Với S1 けど、 S2, trọng tâm là けど giống が, nghĩa là “nhưng”; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng S1 けど、 S2 khi muốn biểu thị けど giống が, nghĩa là “nhưng”; ưu tiên kiểm tra dấu けど trong câu mẫu. Nếu dạng đứng trước lệch khỏi けど, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: S1 けど、 S2 xoay quanh けど trong S1 けど、 S2 báo けど giống が, nghĩa là “nhưng”. Khác Bỏ `は`, `を`, `へ`..., S1 けど、 S2 giữ trọng tâm けど giống が, nghĩa là “nhưng”, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp けど thì giữ nghĩa けど giống が, nghĩa là “nhưng”, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Bỏ `は`, `を`, `へ`...",
+          "contrast": "Khác S1 けど、 S2: Bỏ `は`, `を`, `へ`... nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn S1 けど、 S2 nghiêng về けど giống が, nghĩa là “nhưng”. So dấu けど với を trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   }

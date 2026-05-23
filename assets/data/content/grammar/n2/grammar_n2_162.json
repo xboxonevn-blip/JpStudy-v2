@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり",
-      "meaning": "Ý nghĩa: Dùng khi một cảm xúc, hành động hoặc trạng thái vượt quá mức bình thường và dẫn đến kết quả, thường là kết quả không mong muốn",
-      "usage": "Cách dùng: Với ～あまり, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～あまり, lõi ～あまり là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～あまり không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり: nhóm lý do nối nguyên nhân với kết quả; mỗi dấu cho biết sắc thái khách quan, biết ơn, tiêu cực, hay quá mức.. Trong công thức Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり, cụm nguyên nhân trước dấu lý do; vì vậy phần 理由 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり không có chữ Hán nổi bật để bám, nên mượn cặp ý \"lý do/mục đích - dấu hiệu\". Nhìn dấu lý do hỏi kết quả sinh ra từ đâu như ký hiệu chức năng báo nguyên nhân hoặc mục đích, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり. Dấu cần khóa là cụm nguyên nhân trước dấu lý do; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi một cảm xúc, hành động hoặc trạng thái vượt quá mức bình thường và dẫn đến kết quả, thường là kết quả không mong muốn. Với Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり, trọng tâm là nguyên nhân hoặc mục đích; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi vế sau là kết quả tự nhiên hoặc mục tiêu; phân biệt ために mục đích với ために lý do bằng ý chí của vế trước.. Nếu dạng đứng trước lệch khỏi 理由, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり xoay quanh mối nối nguyên nhân. Khác 関連する近い文型, mẫu kia có thể cùng dịch là \"vì\" nhưng đổi sắc thái khách quan/chủ quan; gặp dấu lý do hỏi kết quả sinh ra từ đâu thì giữ nghĩa lý do/mục đích, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "～あまり cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-ます stem + あまり, い-Adjective + あまり, な-Adjective + のあまり, Noun + のあまり nghiêng về lý do/mục đích. So dấu dấu lý do hỏi kết quả sinh ra từ đâu với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

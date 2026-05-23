@@ -18,15 +18,16 @@
       "shinkanzen-manifest-generated"
     ],
     "directiveE": {
-      "form": "Cấu trúc: V普通形 / いA / なA(だ) / N(だ) + というより",
-      "meaning": "Ý nghĩa: Dùng để chỉnh lại cách diễn đạt cho chính xác hơn",
-      "usage": "Cách dùng: Với 〜というより, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong 〜というより, lõi と là mảnh giữ nhịp ngữ pháp. Hãy tách V普通形 / いA / なA(だ) / N(だ) + というより thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: 〜というより không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なA(だ) / N(だ) + というより: nhóm trích dẫn/suy đoán dùng と hoặc か để đóng gói lời, ý nghĩ, câu hỏi, hoặc mức chắc chắn của người nói.. Trong công thức V普通形 / いA / なA(だ) / N(だ) + というより, mệnh đề thường trước と/か/でしょう; vì vậy phần 引用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なA(だ) / N(だ) + というより không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なA(だ) / N(だ) + というより. Dấu cần khóa là mệnh đề thường trước と/か/でしょう; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để chỉnh lại cách diễn đạt cho chính xác hơn. Với V普通形 / いA / なA(だ) / N(だ) + というより, trọng tâm là nội dung được trích, hỏi gián tiếp, hoặc phỏng đoán; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả câu trước mẫu là nội dung trong đầu/lời nói; kiểm tra だ với danh từ và tính từ na.. Nếu dạng đứng trước lệch khỏi 引用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なA(だ) / N(だ) + というより xoay quanh nội dung được đóng gói. Khác 関連する近い文型, mẫu kia có thể là truyền văn từ nguồn khác hoặc phỏng đoán mức khác; gặp mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói thì giữ nghĩa nội dung/trích dẫn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "〜ことにする",
-          "contrast": "〜というより cần đọc theo chức năng riêng của mẫu; 〜ことにする có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác V普通形 / いA / なA(だ) / N(だ) + というより: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn V普通形 / いA / なA(だ) / N(だ) + というより nghiêng về nội dung/trích dẫn. So dấu mẫu trích dẫn hỏi câu nào là nội dung được đem ra nói với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -34,7 +35,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

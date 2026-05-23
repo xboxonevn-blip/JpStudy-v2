@@ -15,16 +15,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vたら + いい",
-      "meaning": "Ý nghĩa: Thường dùng để đưa lời khuyên hoặc gợi ý cho người khác: “nên làm thế thì tốt”.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Vたら + いい: nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức Vたら + いい, dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vたら + いい không có chữ Hán nổi bật để bám, nên mượn cặp ý \"điều kiện - dấu hiệu\". Nhìn dấu điều kiện là bản lề giữa giả định và kết luận như ký hiệu chức năng báo điều kiện, nhượng bộ, hoặc giả định, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vたら + いい. Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Thường dùng để đưa lời khuyên hoặc gợi ý cho người khác: “nên làm thế thì tốt”. Với Vたら + いい, trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vたら + いい xoay quanh cửa điều kiện. Khác V普通形 / いA / なAだ / Nだ + といい, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAだ / Nだ + といい",
+          "contrast": "Khác Vたら + いい: V普通形 / いA / なAだ / Nだ + といい nghiêng về dạng chia, còn Vたら + いい nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -44,16 +52,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAだ / Nだ + といい",
-      "meaning": "Ý nghĩa: Diễn tả hi vọng điều gì sẽ xảy ra theo cách trung tính hoặc lịch sự hơn.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAだ / Nだ + といい: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức V普通形 / いA / なAだ / Nだ + といい, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAだ / Nだ + といい không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAだ / Nだ + といい. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả hi vọng điều gì sẽ xảy ra theo cách trung tính hoặc lịch sự hơn. Với V普通形 / いA / なAだ / Nだ + といい, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAだ / Nだ + といい xoay quanh đuôi chia thể. Khác Vば / いAければ / なAなら / Nなら + よかった, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang điều kiện.",
+      "crossLinks": [
+        {
+          "pattern": "Vば / いAければ / なAなら / Nなら + よかった",
+          "contrast": "Khác V普通形 / いA / なAだ / Nだ + といい: Vば / いAければ / なAなら / Nなら + よかった nghiêng về điều kiện, còn V普通形 / いA / なAだ / Nだ + といい nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -73,16 +89,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vば / いAければ / なAなら / Nなら + よかった",
-      "meaning": "Ý nghĩa: Diễn tả hối tiếc về việc đáng lẽ nên làm hoặc nên để trạng thái khác trong quá khứ.",
-      "usage": "Sử dụng: Đưa か về cuối câu để biến câu đã đủ nghĩa thành câu hỏi lịch sự hoặc trung tính.",
-      "humanMoment": "Khoảnh khắc người: か ở cuối câu giống một cái gật hỏi lịch sự; câu trước nó vẫn cần đủ ý.",
+      "etymology": "Gốc cấu trúc của Vば / いAければ / なAなら / Nなら + よかった: nhóm điều kiện đặt một giả định trước rồi xem kết luận có xảy ra, đổi hướng hay vẫn giữ nguyên không.. Trong công thức Vば / いAければ / なAなら / Nなら + よかった, dạng điều kiện như ば, たら, なら, ても; vì vậy phần 条件 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vば / いAければ / なAなら / Nなら + よかった không có chữ Hán nổi bật để bám, nên mượn cặp ý \"điều kiện - dấu hiệu\". Nhìn dấu điều kiện là bản lề giữa giả định và kết luận như ký hiệu chức năng báo điều kiện, nhượng bộ, hoặc giả định, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vば / いAければ / なAなら / Nなら + よかった. Dấu cần khóa là dạng điều kiện như ば, たら, なら, ても; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Diễn tả hối tiếc về việc đáng lẽ nên làm hoặc nên để trạng thái khác trong quá khứ. Với Vば / いAければ / なAなら / Nなら + よかった, trọng tâm là điều kiện, nhượng bộ, hoặc giả định; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng sau khi xác định vế trước là điều kiện thật, giả định, hay nhượng bộ; ても thường giữ kết luận bất chấp điều kiện.. Nếu dạng đứng trước lệch khỏi 条件, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vば / いAければ / なAなら / Nなら + よかった xoay quanh cửa điều kiện. Khác V普通形 / いA / なAだ / Nだ + といいな, mẫu kia đổi mức chắc chắn hoặc đổi từ \"nếu\" sang \"dù\"; gặp dấu điều kiện là bản lề giữa giả định và kết luận thì giữ nghĩa điều kiện, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "V普通形 / いA / なAだ / Nだ + といいな",
+          "contrast": "Khác Vば / いAければ / なAなら / Nなら + よかった: V普通形 / いA / なAだ / Nだ + といいな nghiêng về dạng chia, còn Vば / いAければ / なAなら / Nなら + よかった nghiêng về điều kiện. So dấu dấu điều kiện là bản lề giữa giả định và kết luận với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -101,16 +125,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V普通形 / いA / なAだ / Nだ + といいな",
-      "meaning": "Ý nghĩa: Cách nói thân mật, giàu cảm xúc hơn của といい, thường dùng khi tự nói lên hi vọng của mình.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V普通形 / いA / なAだ / Nだ + といいな: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức V普通形 / いA / なAだ / Nだ + といいな, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 通 = thông/qua; 通じて・通して giữ cảm giác đi xuyên qua một kênh hoặc phạm vi. Khi mẫu V普通形 / いA / なAだ / Nだ + といいな không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V普通形 / いA / なAだ / Nだ + といいな. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Cách nói thân mật, giàu cảm xúc hơn của といい, thường dùng khi tự nói lên hi vọng của mình. Với V普通形 / いA / なAだ / Nだ + といいな, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V普通形 / いA / なAだ / Nだ + といいな xoay quanh đuôi chia thể. Khác Vたら + いい, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang điều kiện.",
+      "crossLinks": [
+        {
+          "pattern": "Vたら + いい",
+          "contrast": "Khác V普通形 / いA / なAだ / Nだ + といいな: Vたら + いい nghiêng về điều kiện, còn V普通形 / いA / なAだ / Nだ + といいな nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với dấu điều kiện là bản lề giữa giả định và kết luận trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun1 + はまだしも + Noun2",
-      "meaning": "Ý nghĩa: Dùng khi A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn",
-      "usage": "Cách dùng: Với ～はまだしも, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～はまだしも, lõi は là mảnh giữ nhịp ngữ pháp. Hãy tách Noun1 + はまだしも + Noun2 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～はまだしも không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun1 + はまだしも + Noun2: は là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. Trong công thức Noun1 + はまだしも + Noun2, dấu は và dạng từ ngay trước nó; vì vậy phần は không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun1 + はまだしも + Noun2 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn - dấu hiệu\". Nhìn は như ký hiệu chức năng báo A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun1 + はまだしも + Noun2. Dấu cần khóa là dấu は và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. Với Noun1 + はまだしも + Noun2, trọng tâm là A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun1 + はまだしも + Noun2 khi muốn biểu thị A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn; ưu tiên kiểm tra dấu は trong câu mẫu. Nếu dạng đứng trước lệch khỏi は, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun1 + はまだしも + Noun2 xoay quanh は trong Noun1 + はまだしも + Noun2 báo A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. Khác 関連する近い文型, Noun1 + はまだしも + Noun2 giữ trọng tâm A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp は thì giữ nghĩa A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "～はまだしも cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Noun1 + はまだしも + Noun2: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun1 + はまだしも + Noun2 nghiêng về A còn có thể chấp nhận hoặc hiểu được, nhưng B thì khó chấp nhận hơn. So dấu は với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

@@ -14,10 +14,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 + のは / のが / のを",
-      "meaning": "Ý nghĩa: `の` biến một hành động thành cụm danh từ để làm chủ ngữ, tân ngữ hoặc chủ đề trong câu.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của V辞書 + のは / のが / のを: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức V辞書 + のは / のが / のを, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 + のは / のが / のを không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dạng chia - dấu hiệu\". Nhìn mẫu chia thể hỏi từ đã được bẻ sang dạng nào như ký hiệu chức năng báo dạng chia làm nền nghĩa, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 + のは / のが / のを. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `の` biến một hành động thành cụm danh từ để làm chủ ngữ, tân ngữ hoặc chủ đề trong câu. Với V辞書 + のは / のが / のを, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + のは / のが / のを xoay quanh đuôi chia thể. Khác V辞書 + のは + Aです, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 + のは + Aです",
+          "contrast": "Khác V辞書 + のは / のが / のを: V辞書 + のは + Aです nghiêng về dạng chia, còn V辞書 + のは / のが / のを nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 + のは + Aです",
-      "meaning": "Ý nghĩa: Dùng để đánh giá một hành động hoặc việc làm nào đó.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của V辞書 + のは + Aです: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức V辞書 + のは + Aです, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 + のは + Aです không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dạng chia - dấu hiệu\". Nhìn mẫu chia thể hỏi từ đã được bẻ sang dạng nào như ký hiệu chức năng báo dạng chia làm nền nghĩa, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 + のは + Aです. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để đánh giá một hành động hoặc việc làm nào đó. Với V辞書 + のは + Aです, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + のは + Aです xoay quanh đuôi chia thể. Khác V辞書 + のを忘れました, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 + のを忘れました",
+          "contrast": "Khác V辞書 + のは + Aです: V辞書 + のを忘れました nghiêng về dạng chia, còn V辞書 + のは + Aです nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,10 +86,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 + のを忘れました",
-      "meaning": "Ý nghĩa: Dùng để nói quên làm một việc gì đó.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của V辞書 + のを忘れました: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức V辞書 + のを忘れました, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: V辞書 + のを忘れました không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dạng chia - dấu hiệu\". Nhìn mẫu chia thể hỏi từ đã được bẻ sang dạng nào như ký hiệu chức năng báo dạng chia làm nền nghĩa, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: V辞書 + のを忘れました. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói quên làm một việc gì đó. Với V辞書 + のを忘れました, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + のを忘れました xoay quanh đuôi chia thể. Khác V辞書 + こと, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 + こと",
+          "contrast": "Khác V辞書 + のを忘れました: V辞書 + こと nghiêng về sự việc, còn V辞書 + のを忘れました nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -98,10 +122,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: V辞書 + こと",
-      "meaning": "Ý nghĩa: `こと` cũng danh từ hóa động từ.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của V辞書 + こと: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức V辞書 + こと, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu V辞書 + こと không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: V辞書 + こと. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `こと` cũng danh từ hóa động từ. Với V辞書 + こと, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: V辞書 + こと xoay quanh sự việc được danh từ hóa. Khác V辞書 + のは / のが / のを, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "V辞書 + のは / のが / のを",
+          "contrast": "Khác V辞書 + こと: V辞書 + のは / のが / のを nghiêng về dạng chia, còn V辞書 + こと nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

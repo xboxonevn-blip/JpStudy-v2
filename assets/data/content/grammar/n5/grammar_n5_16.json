@@ -94,10 +94,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: N1 は N2 が A (Tính từ)",
-      "meaning": "Ý nghĩa: Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của N1 は N2 が A (Tính từ): が là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1. Trong công thức N1 は N2 が A (Tính từ), dấu が và dạng từ ngay trước nó; vì vậy phần が không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: N1 は N2 が A (Tính từ) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1 - dấu hiệu\". Nhìn が như ký hiệu chức năng báo Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: N1 は N2 が A (Tính từ). Dấu cần khóa là dấu が và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1. Với N1 は N2 が A (Tính từ), trọng tâm là Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng N1 は N2 が A (Tính từ) khi muốn biểu thị Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1; ưu tiên kiểm tra dấu が trong câu mẫu. Nếu dạng đứng trước lệch khỏi が, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: N1 は N2 が A (Tính từ) xoay quanh が trong N1 は N2 が A (Tính từ) báo Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1. Khác Aい -> Aくて / Aな -> Aで / N -> Nで, N1 は N2 が A (Tính từ) giữ trọng tâm Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp が thì giữ nghĩa Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Aい -> Aくて / Aな -> Aで / N -> Nで",
+          "contrast": "Khác N1 は N2 が A (Tính từ): Aい -> Aくて / Aな -> Aで / N -> Nで nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn N1 は N2 が A (Tính từ) nghiêng về Dùng để miêu tả một đặc điểm cụ thể của chủ đề lớn N1. So dấu が với で trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -122,10 +130,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Aい -> Aくて / Aな -> Aで / N -> Nで",
-      "meaning": "Ý nghĩa: Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Aい -> Aくて / Aな -> Aで / N -> Nで: で là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu. Trong công thức Aい -> Aくて / Aな -> Aで / N -> Nで, dấu で và dạng từ ngay trước nó; vì vậy phần で không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Aい -> Aくて / Aな -> Aで / N -> Nで không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu - dấu hiệu\". Nhìn で như ký hiệu chức năng báo Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Aい -> Aくて / Aな -> Aで / N -> Nで. Dấu cần khóa là dấu で và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu. Với Aい -> Aくて / Aな -> Aで / N -> Nで, trọng tâm là Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Aい -> Aくて / Aな -> Aで / N -> Nで khi muốn biểu thị Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu; ưu tiên kiểm tra dấu で trong câu mẫu. Nếu dạng đứng trước lệch khỏi で, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Aい -> Aくて / Aな -> Aで / N -> Nで xoay quanh で trong Aい -> Aくて / Aな -> Aで / N -> Nで báo Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu. Khác V1て、[V2て、] ～ ます, Aい -> Aくて / Aな -> Aで / N -> Nで giữ trọng tâm Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp で thì giữ nghĩa Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "V1て、[V2て、] ～ ます",
+          "contrast": "Khác Aい -> Aくて / Aな -> Aで / N -> Nで: V1て、[V2て、] ～ ます nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Aい -> Aくて / Aな -> Aで / N -> Nで nghiêng về Dùng để nối nhiều tính chất hoặc thông tin danh từ trong cùng một câu. So dấu で với て trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

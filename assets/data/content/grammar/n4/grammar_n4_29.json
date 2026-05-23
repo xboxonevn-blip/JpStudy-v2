@@ -14,10 +14,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Nが + 自動詞て形 + います",
-      "meaning": "Ý nghĩa: Dùng với tự động từ để nói trạng thái còn lại sau khi một việc đã xảy ra.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Nが + 自動詞て形 + います: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức Nが + 自動詞て形 + います, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Nが + 自動詞て形 + います không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dạng chia - dấu hiệu\". Nhìn mẫu chia thể hỏi từ đã được bẻ sang dạng nào như ký hiệu chức năng báo dạng chia làm nền nghĩa, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Nが + 自動詞て形 + います. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng với tự động từ để nói trạng thái còn lại sau khi một việc đã xảy ra. Với Nが + 自動詞て形 + います, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Nが + 自動詞て形 + います xoay quanh đuôi chia thể. Khác Vて + しまいました, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang nghĩa vụ/giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Vて + しまいました",
+          "contrast": "Khác Nが + 自動詞て形 + います: Vて + しまいました nghiêng về nghĩa vụ/giới hạn, còn Nが + 自動詞て形 + います nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -42,16 +50,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + しまいました",
-      "meaning": "Ý nghĩa: `てしまいました` có hai nghĩa chính: làm xong hẳn một việc, hoặc lỡ làm điều gì không mong muốn nên có sắc thái tiếc nuối.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vて + しまいました: nhóm nghĩa vụ/khả năng giới hạn lựa chọn của người nói: nên, không được, không thể, hoặc không còn cách khác.. Trong công thức Vて + しまいました, dạng động từ trước dấu nghĩa vụ/khả năng; vì vậy phần 義務 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vて + しまいました không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nghĩa vụ/giới hạn - dấu hiệu\". Nhìn mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn như ký hiệu chức năng báo nghĩa vụ, cấm đoán, hoặc không còn lựa chọn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vて + しまいました. Dấu cần khóa là dạng động từ trước dấu nghĩa vụ/khả năng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `てしまいました` có hai nghĩa chính: làm xong hẳn một việc, hoặc lỡ làm điều gì không mong muốn nên có sắc thái tiếc nuối. Với Vて + しまいました, trọng tâm là nghĩa vụ, cấm đoán, hoặc không còn lựa chọn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu nói về điều nên làm/không thể làm; xem nguồn ràng buộc là đạo lý, quy tắc hay hoàn cảnh.. Nếu dạng đứng trước lệch khỏi 義務, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vて + しまいました xoay quanh áp lực lựa chọn. Khác Vて + しまう → Vちゃう / Vで + しまう → Vじゃう, mẫu kia có thể mềm hơn, khách quan hơn, hoặc chỉ là khả năng; gặp mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn thì giữ nghĩa nghĩa vụ/giới hạn, đừng kéo sang biến đổi/trạng thái.",
+      "crossLinks": [
+        {
+          "pattern": "Vて + しまう → Vちゃう / Vで + しまう → Vじゃう",
+          "contrast": "Khác Vて + しまいました: Vて + しまう → Vちゃう / Vで + しまう → Vじゃう nghiêng về biến đổi/trạng thái, còn Vて + しまいました nghiêng về nghĩa vụ/giới hạn. So dấu mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn với mẫu biến đổi hỏi hành động đã đổi thành trạng thái gì trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -70,10 +86,18 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: Vて + しまう → Vちゃう / Vで + しまう → Vじゃう",
-      "meaning": "Ý nghĩa: `ちゃいました` là dạng nói thân mật của `てしまいました`; `でしまいました` thường thành `じゃいました`.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vて + しまう → Vちゃう / Vで + しまう → Vじゃう: nhóm nghĩa vụ/khả năng giới hạn lựa chọn của người nói: nên, không được, không thể, hoặc không còn cách khác.. Trong công thức Vて + しまう → Vちゃう / Vで + しまう → Vじゃう, dạng động từ trước dấu nghĩa vụ/khả năng; vì vậy phần 義務 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vて + しまう → Vちゃう / Vで + しまう → Vじゃう không có chữ Hán nổi bật để bám, nên mượn cặp ý \"nghĩa vụ/giới hạn - dấu hiệu\". Nhìn mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn như ký hiệu chức năng báo nghĩa vụ, cấm đoán, hoặc không còn lựa chọn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vて + しまう → Vちゃう / Vで + しまう → Vじゃう. Dấu cần khóa là dạng động từ trước dấu nghĩa vụ/khả năng; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `ちゃいました` là dạng nói thân mật của `てしまいました`; `でしまいました` thường thành `じゃいました`. Với Vて + しまう → Vちゃう / Vで + しまう → Vじゃう, trọng tâm là nghĩa vụ, cấm đoán, hoặc không còn lựa chọn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu nói về điều nên làm/không thể làm; xem nguồn ràng buộc là đạo lý, quy tắc hay hoàn cảnh.. Nếu dạng đứng trước lệch khỏi 義務, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vて + しまう → Vちゃう / Vで + しまう → Vじゃう xoay quanh áp lực lựa chọn. Khác まだ + Vています, mẫu kia có thể mềm hơn, khách quan hơn, hoặc chỉ là khả năng; gặp mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn thì giữ nghĩa nghĩa vụ/giới hạn, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "まだ + Vています",
+          "contrast": "Khác Vて + しまう → Vちゃう / Vで + しまう → Vじゃう: まだ + Vています nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Vて + しまう → Vちゃう / Vで + しまう → Vじゃう nghiêng về nghĩa vụ/giới hạn. So dấu mẫu nghĩa vụ hỏi điều gì đang ép lựa chọn với まだ trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -98,16 +122,24 @@
       "vi-source-verified"
     ],
     "directiveE": {
-      "form": "Hình thức: まだ + Vています",
-      "meaning": "Ý nghĩa: `まだ` đi với `Vています` để nói một hành động hoặc trạng thái vẫn còn tiếp diễn.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của まだ + Vています: まだ là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn. Trong công thức まだ + Vています, dấu まだ và dạng từ ngay trước nó; vì vậy phần まだ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: まだ + Vています không có chữ Hán nổi bật để bám, nên mượn cặp ý \"まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn - dấu hiệu\". Nhìn まだ như ký hiệu chức năng báo まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: まだ + Vています. Dấu cần khóa là dấu まだ và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: `まだ` đi với `Vています` để nói một hành động hoặc trạng thái vẫn còn tiếp diễn. Với まだ + Vています, trọng tâm là まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng まだ + Vています khi muốn biểu thị まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn; ưu tiên kiểm tra dấu まだ trong câu mẫu. Nếu dạng đứng trước lệch khỏi まだ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: まだ + Vています xoay quanh まだ trong まだ + Vています báo まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn. Khác Nが + 自動詞て形 + います, まだ + Vています giữ trọng tâm まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp まだ thì giữ nghĩa まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "Nが + 自動詞て形 + います",
+          "contrast": "Khác まだ + Vています: Nが + 自動詞て形 + います nghiêng về dạng chia, còn まだ + Vています nghiêng về まだ đi với Vています để nói một hành động hoặc trạng thái vẫn còn tiếp diễn. So dấu まだ với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   }

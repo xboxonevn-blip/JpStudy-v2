@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: A。ちなみに B。",
-      "meaning": "Ý nghĩa: Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”",
-      "usage": "Cách dùng: Với A。ちなみに B。, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong A。ちなみに B。, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách A。ちなみに B。 thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: A。ちなみに B。 không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của A。ちなみに B。: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. Trong công thức A。ちなみに B。, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: A。ちなみに B。 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là” - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: A。ちなみに B。. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. Với A。ちなみに B。, trọng tâm là Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng A。ちなみに B。 khi muốn biểu thị Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: A。ちなみに B。 xoay quanh に trong A。ちなみに B。 báo Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. Khác 関連する近い文型, A。ちなみに B。 giữ trọng tâm Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A。おまけに B。",
-          "contrast": "A。ちなみに B。 cần đọc theo chức năng riêng của mẫu; A。おまけに B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác A。ちなみに B。: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn A。ちなみに B。 nghiêng về Dùng để thêm thông tin phụ liên quan đến chủ đề đang nói, giống “nhân tiện”, “nói thêm là”. So dấu に với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

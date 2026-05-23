@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-て form + まで",
-      "meaning": "Ý nghĩa: Dùng để nhấn mạnh mức độ sẵn sàng làm đến cả A để đạt mục đích B, đôi khi hàm ý người nói thấy hành động đó quá mức",
-      "usage": "Cách dùng: Với ～てまで, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～てまで, lõi で là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-て form + まで thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～てまで không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-て form + まで: nhóm thời điểm neo câu vào một lát cắt của tiến trình: trước, sau, đúng lúc, mỗi lần, hoặc sau một quá trình.. Trong công thức Verb-て form + まで, dạng động từ trước dấu thời điểm; vì vậy phần 時点 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-て form + まで không có chữ Hán nổi bật để bám, nên mượn cặp ý \"thời điểm - dấu hiệu\". Nhìn mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào như ký hiệu chức năng báo mốc thời gian trong tiến trình, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-て form + まで. Dấu cần khóa là dạng động từ trước dấu thời điểm; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nhấn mạnh mức độ sẵn sàng làm đến cả A để đạt mục đích B, đôi khi hàm ý người nói thấy hành động đó quá mức. Với Verb-て form + まで, trọng tâm là mốc thời gian trong tiến trình; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi quan hệ thời gian là thông tin chính; kiểm tra Vる, Vた, Vている vì đổi dạng là đổi mốc nhìn.. Nếu dạng đứng trước lệch khỏi 時点, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-て form + まで xoay quanh mốc thời gian. Khác Verb-past + きり, mẫu kia thường đổi mốc trước/sau hoặc sắc thái đột ngột; gặp mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào thì giữ nghĩa thời điểm, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～てからでないと",
-          "contrast": "～てまで cần đọc theo chức năng riêng của mẫu; ～てからでないと có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-past + きり",
+          "contrast": "Khác Verb-て form + まで: Verb-past + きり nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-て form + まで nghiêng về thời điểm. So dấu mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào với きり trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   },
@@ -71,15 +72,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-past + きり",
-      "meaning": "Ý nghĩa: Dùng khi một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài",
-      "usage": "Cách dùng: Với ～たきり, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～たきり, lõi ～たきり là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-past + きり thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～たきり không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-past + きり: きり là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài. Trong công thức Verb-past + きり, dấu きり và dạng từ ngay trước nó; vì vậy phần きり không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-past + きり không có chữ Hán nổi bật để bám, nên mượn cặp ý \"một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài - dấu hiệu\". Nhìn きり như ký hiệu chức năng báo một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-past + きり. Dấu cần khóa là dấu きり và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài. Với Verb-past + きり, trọng tâm là một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Verb-past + きり khi muốn biểu thị một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài; ưu tiên kiểm tra dấu きり trong câu mẫu. Nếu dạng đứng trước lệch khỏi きり, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-past + きり xoay quanh きり trong Verb-past + きり báo một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài. Khác Verb-て form + まで, Verb-past + きり giữ trọng tâm một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp きり thì giữ nghĩa một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài, đừng kéo sang thời điểm.",
       "crossLinks": [
         {
-          "pattern": "A あるいは B",
-          "contrast": "～たきり cần đọc theo chức năng riêng của mẫu; A あるいは B có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "Verb-て form + まで",
+          "contrast": "Khác Verb-past + きり: Verb-て form + まで nghiêng về thời điểm, còn Verb-past + きり nghiêng về một hành động xảy ra một lần rồi không lặp lại nữa, hoặc từ sau thời điểm đó trạng thái vẫn kéo dài. So dấu きり với mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -87,7 +89,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

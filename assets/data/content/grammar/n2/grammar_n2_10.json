@@ -166,10 +166,18 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-past + たとたん",
-      "meaning": "Ý nghĩa: Dùng khi ngay khoảnh khắc A xảy ra thì B cũng xảy ra liền sau đó.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Verb-past + たとたん: nhóm thời điểm neo câu vào một lát cắt của tiến trình: trước, sau, đúng lúc, mỗi lần, hoặc sau một quá trình.. Trong công thức Verb-past + たとたん, dạng động từ trước dấu thời điểm; vì vậy phần 時点 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-past + たとたん không có chữ Hán nổi bật để bám, nên mượn cặp ý \"thời điểm - dấu hiệu\". Nhìn mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào như ký hiệu chức năng báo mốc thời gian trong tiến trình, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-past + たとたん. Dấu cần khóa là dạng động từ trước dấu thời điểm; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi ngay khoảnh khắc A xảy ra thì B cũng xảy ra liền sau đó. Với Verb-past + たとたん, trọng tâm là mốc thời gian trong tiến trình; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi quan hệ thời gian là thông tin chính; kiểm tra Vる, Vた, Vている vì đổi dạng là đổi mốc nhìn.. Nếu dạng đứng trước lệch khỏi 時点, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-past + たとたん xoay quanh mốc thời gian. Khác Noun + だらけ, mẫu kia thường đổi mốc trước/sau hoặc sắc thái đột ngột; gặp mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào thì giữ nghĩa thời điểm, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Noun + だらけ",
+          "contrast": "Khác Verb-past + たとたん: Noun + だらけ nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-past + たとたん nghiêng về thời điểm. So dấu mẫu thời điểm hỏi sự việc xảy ra ở lát cắt nào với だらけ trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -202,16 +210,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Noun + だらけ",
-      "meaning": "Ý nghĩa: Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương.",
-      "usage": "Sử dụng: Dạng quá khứ không chỉ nói thời gian; nó còn có thể đánh dấu trải nghiệm, hoàn tất hoặc phát hiện.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Noun + だらけ: だらけ là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương. Trong công thức Noun + だらけ, dấu だらけ và dạng từ ngay trước nó; vì vậy phần だらけ không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Noun + だらけ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương - dấu hiệu\". Nhìn だらけ như ký hiệu chức năng báo Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Noun + だらけ. Dấu cần khóa là dấu だらけ và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương. Với Noun + だらけ, trọng tâm là Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Noun + だらけ khi muốn biểu thị Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương; ưu tiên kiểm tra dấu だらけ trong câu mẫu. Nếu dạng đứng trước lệch khỏi だらけ, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + だらけ xoay quanh だらけ trong Noun + だらけ báo Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương. Khác Verb-ます stem + っこない, Noun + だらけ giữ trọng tâm Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp だらけ thì giữ nghĩa Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương, đừng kéo sang dạng chia.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-ます stem + っこない",
+          "contrast": "Khác Noun + だらけ: Verb-ます stem + っこない nghiêng về dạng chia, còn Noun + だらけ nghiêng về Dùng để nói một vật, nơi hoặc tình trạng đầy những thứ được nêu, thường là thứ không mong muốn như lỗi, bụi, bùn, vết thương. So dấu だらけ với mẫu chia thể hỏi từ đã được bẻ sang dạng nào trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -238,16 +254,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-ます stem + っこない",
-      "meaning": "Ý nghĩa: Dùng trong văn nói để khẳng định mạnh rằng một việc gần như không thể xảy ra hoặc không có khả năng làm được.",
-      "usage": "Sử dụng: Theo dõi dạng phủ định trước, rồi xem mẫu đang phủ định sự thật, nghĩa vụ hay khả năng.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Verb-ます stem + っこない: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức Verb-ます stem + っこない, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-ます stem + っこない không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dạng chia - dấu hiệu\". Nhìn mẫu chia thể hỏi từ đã được bẻ sang dạng nào như ký hiệu chức năng báo dạng chia làm nền nghĩa, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-ます stem + っこない. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng trong văn nói để khẳng định mạnh rằng một việc gần như không thể xảy ra hoặc không có khả năng làm được. Với Verb-ます stem + っこない, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-ます stem + っこない xoay quanh đuôi chia thể. Khác Verb-stem + つつ, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang song hành/đối chiếu.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-stem + つつ",
+          "contrast": "Khác Verb-ます stem + っこない: Verb-stem + つつ nghiêng về song hành/đối chiếu, còn Verb-ます stem + っこない nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với mẫu song song buộc đọc cả hai vế cùng lúc trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -274,16 +298,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-stem + つつ",
-      "meaning": "Ý nghĩa: Gắn sau thân động từ để nói hai hành động diễn ra song song, hoặc để nêu sự tương phản kiểu “dù biết/làm A nhưng vẫn B”.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Verb-stem + つつ: nhóm song song đặt hai ý cạnh nhau: đồng thời, đối lập hai mặt, hoặc một thay đổi kéo theo thay đổi khác.. Trong công thức Verb-stem + つつ, hai vế cùng tiến hoặc đối chiếu nhau; vì vậy phần 並行 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-stem + つつ không có chữ Hán nổi bật để bám, nên mượn cặp ý \"song hành/đối chiếu - dấu hiệu\". Nhìn mẫu song song buộc đọc cả hai vế cùng lúc như ký hiệu chức năng báo diễn tiến song song hoặc đối lập hai mặt, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-stem + つつ. Dấu cần khóa là hai vế cùng tiến hoặc đối chiếu nhau; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Gắn sau thân động từ để nói hai hành động diễn ra song song, hoặc để nêu sự tương phản kiểu “dù biết/làm A nhưng vẫn B”. Với Verb-stem + つつ, trọng tâm là diễn tiến song song hoặc đối lập hai mặt; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi hai vế cùng tồn tại; nếu một vế chỉ là lý do cho vế kia, chuyển sang mẫu nguyên nhân.. Nếu dạng đứng trước lệch khỏi 並行, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-stem + つつ xoay quanh hai đường ý chạy song song. Khác Verb-stem + つつある, mẫu kia có thể là nguyên nhân-kết quả thay vì song hành; gặp mẫu song song buộc đọc cả hai vế cùng lúc thì giữ nghĩa song hành/đối chiếu, đừng kéo sang song hành/đối chiếu.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-stem + つつある",
+          "contrast": "Khác Verb-stem + つつ: Verb-stem + つつある nghiêng về song hành/đối chiếu, còn Verb-stem + つつ nghiêng về song hành/đối chiếu. So dấu mẫu song song buộc đọc cả hai vế cùng lúc với mẫu song song buộc đọc cả hai vế cùng lúc trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   },
@@ -310,16 +342,24 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Hình thức: Verb-stem + つつある",
-      "meaning": "Ý nghĩa: Dùng để nói một sự thay đổi hoặc quá trình đang diễn ra dần dần.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Verb-stem + つつある: nhóm song song đặt hai ý cạnh nhau: đồng thời, đối lập hai mặt, hoặc một thay đổi kéo theo thay đổi khác.. Trong công thức Verb-stem + つつある, hai vế cùng tiến hoặc đối chiếu nhau; vì vậy phần 並行 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-stem + つつある không có chữ Hán nổi bật để bám, nên mượn cặp ý \"song hành/đối chiếu - dấu hiệu\". Nhìn mẫu song song buộc đọc cả hai vế cùng lúc như ký hiệu chức năng báo diễn tiến song song hoặc đối lập hai mặt, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-stem + つつある. Dấu cần khóa là hai vế cùng tiến hoặc đối chiếu nhau; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói một sự thay đổi hoặc quá trình đang diễn ra dần dần. Với Verb-stem + つつある, trọng tâm là diễn tiến song song hoặc đối lập hai mặt; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi hai vế cùng tồn tại; nếu một vế chỉ là lý do cho vế kia, chuyển sang mẫu nguyên nhân.. Nếu dạng đứng trước lệch khỏi 並行, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-stem + つつある xoay quanh hai đường ý chạy song song. Khác Verb-casual + だけあって, い-Adjective + だけあって, な-Adjective + なだけあって, Noun + だけあって, mẫu kia có thể là nguyên nhân-kết quả thay vì song hành; gặp mẫu song song buộc đọc cả hai vế cùng lúc thì giữ nghĩa song hành/đối chiếu, đừng kéo sang giới hạn.",
+      "crossLinks": [
+        {
+          "pattern": "Verb-casual + だけあって, い-Adjective + だけあって, な-Adjective + なだけあって, Noun + だけあって",
+          "contrast": "Khác Verb-stem + つつある: Verb-casual + だけあって, い-Adjective + だけあって, な-Adjective + なだけあって, Noun + だけあって nghiêng về giới hạn, còn Verb-stem + つつある nghiêng về song hành/đối chiếu. So dấu mẫu song song buộc đọc cả hai vế cùng lúc với dấu giới hạn quyết định câu là \"chỉ\", \"vừa\", hay \"đến mức\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "verbs"
+        "guideSection": "particles"
       }
     }
   }

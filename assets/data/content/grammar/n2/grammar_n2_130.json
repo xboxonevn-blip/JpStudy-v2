@@ -24,15 +24,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある",
-      "meaning": "Ý nghĩa: Dùng để nói có nguy cơ hoặc khả năng xảy ra điều không mong muốn",
-      "usage": "Cách dùng: Với ～恐れがある, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～恐れがある, lõi が là mảnh giữ nhịp ngữ pháp. Hãy tách Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～恐れがある không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある: nhóm chia thể đổi đuôi động từ/tính từ để tạo nền cho mẫu sau; bản thân đuôi đã mang phủ định, quá khứ, ý chí hoặc khả năng.. Trong công thức Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある, đuôi chia thể của từ đứng trước; vì vậy phần 活用 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある không có chữ Hán nổi bật để bám, nên mượn cặp ý \"dạng chia - dấu hiệu\". Nhìn mẫu chia thể hỏi từ đã được bẻ sang dạng nào như ký hiệu chức năng báo dạng chia làm nền nghĩa, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある. Dấu cần khóa là đuôi chia thể của từ đứng trước; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói có nguy cơ hoặc khả năng xảy ra điều không mong muốn. Với Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある, trọng tâm là dạng chia làm nền nghĩa; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng như bước kiểm tra hình thái trước khi dịch; sai nhóm động từ sẽ kéo sai toàn bộ mẫu phía sau.. Nếu dạng đứng trước lệch khỏi 活用, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある xoay quanh đuôi chia thể. Khác 関連する近い文型, mẫu kia có thể dùng cùng động từ nhưng đổi thời, phủ định hoặc thái độ; gặp mẫu chia thể hỏi từ đã được bẻ sang dạng nào thì giữ nghĩa dạng chia, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "～がい",
-          "contrast": "～恐れがある cần đọc theo chức năng riêng của mẫu; ～がい có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Verb-dictionary/ない form + 恐れがある, Noun + の恐れがある nghiêng về dạng chia. So dấu mẫu chia thể hỏi từ đã được bẻ sang dạng nào với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -40,7 +41,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

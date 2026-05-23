@@ -14,16 +14,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vる (Dictionary Form)",
-      "meaning": "Ý nghĩa: Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp.",
-      "usage": "Sử dụng: Nhìn hình thức trước, gắn nghĩa vào ngữ cảnh câu, rồi mới chọn bản dịch tự nhiên.",
-      "humanMoment": "Khoảnh khắc người: Nếu câu khó dịch, hãy tách mẫu ra khỏi từ vựng trước; nghĩa thường hiện rõ sau khi thấy vai trò của mẫu.",
+      "etymology": "Gốc cấu trúc của Vる (Dictionary Form): る là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp. Trong công thức Vる (Dictionary Form), dấu る và dạng từ ngay trước nó; vì vậy phần る không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vる (Dictionary Form) không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp - dấu hiệu\". Nhìn る như ký hiệu chức năng báo Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vる (Dictionary Form). Dấu cần khóa là dấu る và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp. Với Vる (Dictionary Form), trọng tâm là Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Vる (Dictionary Form) khi muốn biểu thị Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp; ưu tiên kiểm tra dấu る trong câu mẫu. Nếu dạng đứng trước lệch khỏi る, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vる (Dictionary Form) xoay quanh る trong Vる (Dictionary Form) báo Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp. Khác Vる こと ができます, Vる (Dictionary Form) giữ trọng tâm Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp る thì giữ nghĩa Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "Vる こと ができます",
+          "contrast": "Khác Vる (Dictionary Form): Vる こと ができます nghiêng về sự việc, còn Vる (Dictionary Form) nghiêng về Thể từ điển là dạng nguyên thể dùng trong từ điển và nhiều mẫu ngữ pháp. So dấu る với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "general-grammar-fallback"
+        "guideSection": "particles"
       }
     }
   },
@@ -42,10 +50,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vる こと ができます",
-      "meaning": "Ý nghĩa: Dùng để nói có thể làm một việc gì đó, vì có năng lực hoặc vì hoàn cảnh cho phép.",
-      "usage": "Sử dụng: Dùng để nối hành động, yêu cầu, trạng thái hoặc lý do; hãy đọc cả vế sau để chọn nghĩa đúng.",
-      "humanMoment": "Khoảnh khắc người: Khi nghe thể て, đừng dừng ở \"và\"; người Nhật thường dùng nó để nối cả mạch hành động.",
+      "etymology": "Gốc cấu trúc của Vる こと ができます: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức Vる こと ができます, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu Vる こと ができます không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Vる こと ができます. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói có thể làm một việc gì đó, vì có năng lực hoặc vì hoàn cảnh cho phép. Với Vる こと ができます, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vる こと ができます xoay quanh sự việc được danh từ hóa. Khác 趣味は N / Vる こと です, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang sự việc.",
+      "crossLinks": [
+        {
+          "pattern": "趣味は N / Vる こと です",
+          "contrast": "Khác Vる こと ができます: 趣味は N / Vる こと です nghiêng về sự việc, còn Vる こと ができます nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với こと đóng gói hành động thành \"việc\" trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
@@ -70,16 +86,24 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: 趣味は N / Vる こと です",
-      "meaning": "Ý nghĩa: Dùng để nói sở thích.",
-      "usage": "Sử dụng: Đặt chủ đề trước rồi nói điều quan trọng về chủ đề đó; đừng dịch は thành một từ cố định.",
-      "humanMoment": "Khoảnh khắc người: Khi tự giới thiệu, hãy coi は như đèn sân khấu đặt lên chủ đề, không phải chữ \"là\".",
+      "etymology": "Gốc cấu trúc của 趣味は N / Vる こと です: こと/事 biến động tác hoặc mệnh đề thành một danh từ trừu tượng để đem ra nói, đánh giá hoặc nối tiếp.. Trong công thức 趣味は N / Vる こと です, mệnh đề thường trước こと; vì vậy phần こと không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 事 = sự, như \"sự việc\", giúp nhớ こと là cách biến hành động thành một chuyện để bàn. Khi mẫu 趣味は N / Vる こと です không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: 趣味は N / Vる こと です. Dấu cần khóa là mệnh đề thường trước こと; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói sở thích. Với 趣味は N / Vる こと です, trọng tâm là danh từ hóa một sự việc; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi cả hành động cần đứng ở vị trí của danh từ như chủ ngữ, tân ngữ hoặc nội dung quy định.. Nếu dạng đứng trước lệch khỏi こと, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: 趣味は N / Vる こと です xoay quanh sự việc được danh từ hóa. Khác Vる / N の / Thời gian + まえに、V2, mẫu kia thường nói trải nghiệm, bản chất hoặc kết quả chứ không chỉ đóng gói sự việc; gặp こと đóng gói hành động thành \"việc\" thì giữ nghĩa sự việc, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Vる / N の / Thời gian + まえに、V2",
+          "contrast": "Khác 趣味は N / Vる こと です: Vる / N の / Thời gian + まえに、V2 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn 趣味は N / Vる こと です nghiêng về sự việc. So dấu こと đóng gói hành động thành \"việc\" với に trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "state-of-being"
+        "guideSection": "particles"
       }
     }
   },
@@ -98,10 +122,18 @@
       "vi-human-approved"
     ],
     "directiveE": {
-      "form": "Hình thức: Vる / N の / Thời gian + まえに、V2",
-      "meaning": "Ý nghĩa: Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện.",
-      "usage": "Sử dụng: Nối danh từ theo hướng danh từ trước làm rõ danh từ sau: sở hữu, loại, nguồn hoặc thuộc tính.",
-      "humanMoment": "Khoảnh khắc người: Với の, hãy hỏi \"cái sau thuộc về hoặc được làm rõ bởi cái trước như thế nào?\".",
+      "etymology": "Gốc cấu trúc của Vる / N の / Thời gian + まえに、V2: に là phần neo của mẫu; nó gom cụm đứng trước thành một đơn vị để biểu thị Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện. Trong công thức Vる / N の / Thời gian + まえに、V2, dấu に và dạng từ ngay trước nó; vì vậy phần に không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: Vる / N の / Thời gian + まえに、V2 không có chữ Hán nổi bật để bám, nên mượn cặp ý \"Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện - dấu hiệu\". Nhìn に như ký hiệu chức năng báo Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện, không phải từ vựng riêng lẻ.",
+      "form": "Hình thức: Vる / N の / Thời gian + まえに、V2. Dấu cần khóa là dấu に và dạng từ ngay trước nó; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện. Với Vる / N の / Thời gian + まえに、V2, trọng tâm là Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng Vる / N の / Thời gian + まえに、V2 khi muốn biểu thị Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện; ưu tiên kiểm tra dấu に trong câu mẫu. Nếu dạng đứng trước lệch khỏi に, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Vる / N の / Thời gian + まえに、V2 xoay quanh に trong Vる / N の / Thời gian + まえに、V2 báo Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện. Khác Vる (Dictionary Form), Vる / N の / Thời gian + まえに、V2 giữ trọng tâm Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện, còn mẫu kia đổi điểm neo hoặc sắc thái; gặp に thì giữ nghĩa Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
+      "crossLinks": [
+        {
+          "pattern": "Vる (Dictionary Form)",
+          "contrast": "Khác Vる / N の / Thời gian + まえに、V2: Vる (Dictionary Form) nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Vる / N の / Thời gian + まえに、V2 nghiêng về Dùng để nói làm V2 trước khi làm V1 hoặc trước một thời điểm/sự kiện. So dấu に với る trước khi chọn cách dịch."
+        }
+      ],
       "fallbackReference": {
         "sourceCredit": "Tae Kim's Guide to Japanese Grammar (CC-BY-NC-SA 3.0)",
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",

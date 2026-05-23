@@ -25,15 +25,16 @@
     ],
     "explanationViStatus": "vi-editorial-codex-pass",
     "directiveE": {
-      "form": "Cấu trúc: Noun + に基づいて",
-      "meaning": "Ý nghĩa: Dùng khi một hành động, quyết định hoặc nhận định dựa trên một cơ sở như dữ liệu, quy định, kinh nghiệm, nguyên tắc",
-      "usage": "Cách dùng: Với ～に基づいて, hãy nhìn vế đứng trước mẫu và vai của vế sau; chính quan hệ đó quyết định sắc thái, không phải dịch từng chữ.",
-      "etymology": "Gốc rễ: trong ～に基づいて, lõi に là mảnh giữ nhịp ngữ pháp. Hãy tách Noun + に基づいて thành phần đứng trước, lõi mẫu, rồi phần kết luận; cách tách này giúp người Việt không gom cả cụm thành một nghĩa mơ hồ.",
-      "humanMoment": "Lưu ý từ Dr. Linh: ～に基づいて không nên học như một nhãn dịch. Hãy hỏi người nói đang nêu quyết định, lý do, giới hạn hay đánh giá; câu sẽ tự sáng hơn.",
+      "etymology": "Gốc cấu trúc của Noun + に基づいて: nhóm căn cứ nói hành động đi theo một bản mẫu, quy tắc, dữ liệu hoặc nguồn đã có.. Trong công thức Noun + に基づいて, danh từ hoặc mệnh đề nguồn trước dấu căn cứ; vì vậy phần 基準 không được học như từ rời mà như dấu nối chức năng của cả cụm.",
+      "hanVietBridge": "Cầu Hán-Việt: 基 = cơ/nền; 基づいて là đặt lập luận trên nền căn cứ. Khi mẫu Noun + に基づいて không hiện chữ Hán, vẫn đọc theo logic chức năng này để giảm tải ghi nhớ.",
+      "form": "Hình thức: Noun + に基づいて. Dấu cần khóa là danh từ hoặc mệnh đề nguồn trước dấu căn cứ; sau đó kiểm tra phần trước có đúng dạng từ mà mẫu yêu cầu không.",
+      "meaning": "Ý nghĩa: Dùng khi một hành động, quyết định hoặc nhận định dựa trên một cơ sở như dữ liệu, quy định, kinh nghiệm, nguyên tắc. Với Noun + に基づいて, trọng tâm là theo đúng nguồn/căn cứ; đọc xong lõi này rồi mới chọn bản dịch tự nhiên cho cả câu.",
+      "usage": "Sử dụng: Dùng khi câu cần bám vào hướng dẫn, kế hoạch, dữ liệu; đừng đọc như chỉ địa điểm.. Nếu dạng đứng trước lệch khỏi 基準, nghĩa rất dễ trôi sang một mẫu gần âm hoặc gần chữ khác.",
+      "humanMoment": "Dr. Linh lưu ý: Noun + に基づいて xoay quanh nguồn căn cứ. Khác 関連する近い文型, mẫu kia có thể nói nguyên nhân hoặc phương tiện chứ không phải chuẩn để theo; gặp mẫu căn cứ hỏi người nói bám theo cái gì thì giữ nghĩa căn cứ, đừng kéo sang mối quan hệ ngữ pháp riêng của mẫu.",
       "crossLinks": [
         {
-          "pattern": "A。おまけに B。",
-          "contrast": "～に基づいて cần đọc theo chức năng riêng của mẫu; A。おまけに B。 có hình thức gần nhưng không được thay máy móc khi ngữ cảnh đổi."
+          "pattern": "関連する近い文型",
+          "contrast": "Khác Noun + に基づいて: 関連する近い文型 nghiêng về mối quan hệ ngữ pháp riêng của mẫu, còn Noun + に基づいて nghiêng về căn cứ. So dấu mẫu căn cứ hỏi người nói bám theo cái gì với 関連する近い文型 trước khi chọn cách dịch."
         }
       ],
       "fallbackReference": {
@@ -41,7 +42,7 @@
         "sourceUrl": "https://guidetojapanese.org/learn/grammar",
         "license": "CC-BY-NC-SA 3.0",
         "usePolicy": "Fallback reference only; JpStudy writes original Vietnamese guidance and does not copy source prose.",
-        "guideSection": "grammar"
+        "guideSection": "particles"
       }
     }
   }

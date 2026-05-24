@@ -497,7 +497,8 @@ class _LessonModePicker extends StatelessWidget {
         _PracticeButton(
           key: const ValueKey('lesson_mode_listening'),
           label: _modeLabel(language, 'Listening', 'Nghe', '聴解'),
-          onTap: () => context.openLessonTest(lessonId, title: lessonTitle),
+          onTap: () =>
+              context.openLessonListening(lessonId, title: lessonTitle),
         ),
         if (hasConjugation)
           _PracticeButton(
@@ -554,12 +555,7 @@ class _ConjugationAwareModeBlock extends ConsumerWidget {
     }
     final repo = ref.watch(conjugationRepositoryProvider);
     return FutureBuilder<List<ConjugationLemmaData>>(
-      future: repo.fetchByLesson(
-        levelCode,
-        lessonId,
-        series: series,
-        limit: 8,
-      ),
+      future: repo.fetchByLesson(levelCode, lessonId, series: series, limit: 8),
       builder: (context, snapshot) {
         final lemmas = snapshot.data ?? const <ConjugationLemmaData>[];
         final ids = lemmas
@@ -668,7 +664,7 @@ class _LessonTermList extends StatelessWidget {
   };
 }
 
-class _LessonTermCard extends StatelessWidget {
+class _LessonTermCard extends ConsumerWidget {
   const _LessonTermCard({
     required this.language,
     required this.term,
@@ -684,9 +680,10 @@ class _LessonTermCard extends StatelessWidget {
   final String lessonTitle;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final palette = context.appPalette;
     final hasKanji = RegExp(r'[\u4E00-\u9FFF]').hasMatch(term.term);
+    final audioText = japaneseTtsText(term: term.term, reading: term.reading);
     return Container(
       key: ValueKey('lesson_term_card_${term.id}'),
       padding: const EdgeInsets.all(12),
@@ -731,6 +728,13 @@ class _LessonTermCard extends StatelessWidget {
                   spacing: 8,
                   runSpacing: 6,
                   children: [
+                    if (audioText.isNotEmpty)
+                      ActionChip(
+                        label: Text(_audioLabel(language)),
+                        avatar: const Icon(Icons.volume_up_rounded, size: 16),
+                        onPressed: () =>
+                            _speakJapaneseAudio(context, ref, audioText),
+                      ),
                     if (hasKanji)
                       ActionChip(
                         label: Text(_kanjiLabel(language)),
@@ -776,6 +780,12 @@ class _LessonTermCard extends StatelessWidget {
     AppLanguage.en => 'Practice',
     AppLanguage.vi => 'Luyện',
     AppLanguage.ja => '練習',
+  };
+
+  String _audioLabel(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Audio',
+    AppLanguage.vi => 'Phát âm',
+    AppLanguage.ja => '音声',
   };
 }
 

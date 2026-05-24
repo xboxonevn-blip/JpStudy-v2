@@ -27,6 +27,12 @@ class TestConfig {
     final timeLimit = (count * 0.5).round().clamp(5, 30);
     return TestConfig(
       questionCount: count,
+      enabledTypes: const [
+        QuestionType.multipleChoice,
+        QuestionType.trueFalse,
+        QuestionType.fillBlank,
+        QuestionType.listening,
+      ],
       timeLimitMinutes: timeLimit,
       shuffleQuestions: true,
       showCorrectAfterWrong: false,

@@ -13,6 +13,12 @@ void main() {
       );
       expect(QuestionType.trueFalse.label(AppLanguage.en), 'True/False');
       expect(QuestionType.fillBlank.label(AppLanguage.en), 'Fill in the Blank');
+      expect(
+        QuestionType.values
+            .firstWhere((type) => type.name == 'listening')
+            .label(AppLanguage.en),
+        'Listening',
+      );
     });
 
     test('Vietnamese labels are non-empty and distinct per type', () {
@@ -48,6 +54,10 @@ void main() {
       expect(QuestionType.multipleChoice.icon, '🔘');
       expect(QuestionType.trueFalse.icon, '✓✗');
       expect(QuestionType.fillBlank.icon, '✏️');
+      expect(
+        QuestionType.values.firstWhere((type) => type.name == 'listening').icon,
+        '🔊',
+      );
     });
 
     test('every type returns a non-empty icon', () {
@@ -65,7 +75,7 @@ void main() {
   // ── difficulty (1-3) ──────────────────────────────────────────────────────
   //
   // Difficulty is used by the question planner to weight selection.
-  // The contract is "1 = easiest, 3 = hardest" — pin the exact mapping.
+  // The contract is "1 = easiest, 4 = hardest" — pin the exact mapping.
 
   group('QuestionType.difficulty', () {
     test('multipleChoice is easiest (1)', () {
@@ -80,15 +90,19 @@ void main() {
       expect(QuestionType.fillBlank.difficulty, 3);
     });
 
-    test('all difficulties fall within [1, 3]', () {
-      for (final type in QuestionType.values) {
-        expect(type.difficulty, inInclusiveRange(1, 3));
-      }
+    test('listening is audio-first recognition (2)', () {
+      expect(
+        QuestionType.values
+            .firstWhere((type) => type.name == 'listening')
+            .difficulty,
+        2,
+      );
     });
 
-    test('every type maps to a unique difficulty', () {
-      final difficulties = QuestionType.values.map((t) => t.difficulty).toSet();
-      expect(difficulties.length, QuestionType.values.length);
+    test('all difficulties fall within [1, 4]', () {
+      for (final type in QuestionType.values) {
+        expect(type.difficulty, inInclusiveRange(1, 4));
+      }
     });
   });
 }

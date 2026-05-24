@@ -96,4 +96,12 @@ void main() {
     );
     expect(find.text(AppLanguage.en.noTermsAvailableLabel), findsOneWidget);
   });
+
+  test('listening practice path maps to a dedicated listening mode', () {
+    expect(
+      LessonPracticeMode.values.map((mode) => mode.name),
+      contains('listening'),
+    );
+    expect(lessonPracticeModeFromPath('listening')?.name, 'listening');
+  });
 }

@@ -15,6 +15,7 @@ import '../models/question_type.dart';
 import '../providers/learn_session_provider.dart';
 import '../widgets/contextual_hint_card.dart';
 import '../widgets/fill_blank_widget.dart';
+import '../widgets/listening_audio_action.dart';
 import '../widgets/multiple_choice_widget.dart';
 import '../widgets/true_false_widget.dart';
 import 'learn_summary_screen.dart';
@@ -383,6 +384,14 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
         language: language,
         onSelect: _handleMultipleChoiceSelect,
       ),
+      QuestionType.listening => MultipleChoiceWidget(
+        question: question,
+        selectedAnswer: _selectedAnswer,
+        showResult: _showResult,
+        revealCorrectAnswer: revealCorrectAnswer,
+        language: language,
+        onSelect: _handleMultipleChoiceSelect,
+      ),
       QuestionType.trueFalse => TrueFalseWidget(
         question: question,
         selectedAnswer: _selectedTrueFalse,
@@ -407,6 +416,13 @@ class _LearnScreenState extends ConsumerState<LearnScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         content,
+        if (question.type == QuestionType.listening) ...[
+          const SizedBox(height: 12),
+          ListeningAudioAction(
+            audioText: question.audioText ?? '',
+            language: language,
+          ),
+        ],
         const SizedBox(height: 12),
         if (widget.config.enableHints) ...[
           Align(

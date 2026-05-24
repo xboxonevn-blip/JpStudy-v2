@@ -386,6 +386,7 @@ class QuestionSerializer {
       'isStatementTrue': question.isStatementTrue,
       'expectsReading': question.expectsReading,
       'hint': question.hint,
+      'audioText': question.audioText,
     };
   }
 
@@ -415,6 +416,7 @@ class QuestionSerializer {
       isStatementTrue: json['isStatementTrue'] as bool?,
       expectsReading: json['expectsReading'] as bool?,
       hint: json['hint']?.toString(),
+      audioText: json['audioText']?.toString(),
     );
   }
 
@@ -431,6 +433,7 @@ class QuestionSerializer {
       isStatementTrue: question.isStatementTrue,
       expectsReading: question.expectsReading,
       hint: question.hint,
+      audioText: question.audioText,
     );
   }
 }
@@ -447,6 +450,7 @@ class QuestionResultSerializer {
       'isStatementTrue': result.question.isStatementTrue,
       'expectsReading': result.question.expectsReading,
       'hint': result.question.hint,
+      'audioText': result.question.audioText,
       'userAnswer': result.userAnswer,
       'isCorrect': result.isCorrect,
       'timeTakenMs': result.timeTaken.inMilliseconds,

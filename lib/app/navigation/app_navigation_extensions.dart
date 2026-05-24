@@ -191,6 +191,8 @@ extension AppNavigationContext on BuildContext {
       openLessonPractice(lessonId, LessonPracticeMode.learn, title: title);
   void openLessonTest(Object? lessonId, {String? title}) =>
       openLessonPractice(lessonId, LessonPracticeMode.test, title: title);
+  void openLessonListening(Object? lessonId, {String? title}) =>
+      openLessonPractice(lessonId, LessonPracticeMode.listening, title: title);
   void openLessonTestHistory(Object? lessonId, {String? title}) =>
       push(AppRouteLocation.lessonTestHistory(lessonId, title: title));
   void openGrammarDetail(Object? grammarId) =>

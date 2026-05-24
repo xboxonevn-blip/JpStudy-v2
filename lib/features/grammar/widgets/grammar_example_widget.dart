@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/audio/tts_service.dart';
 import 'package:jpstudy/data/utils/grammar_english_notation.dart';
 
-class GrammarExampleWidget extends StatelessWidget {
+class GrammarExampleWidget extends ConsumerWidget {
   final AppLanguage language;
   final String japanese;
   final String translation;
@@ -22,7 +24,8 @@ class GrammarExampleWidget extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final audioText = japanese.trim();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -38,6 +41,12 @@ class GrammarExampleWidget extends StatelessWidget {
                 ),
               ),
             ),
+            if (audioText.isNotEmpty)
+              IconButton(
+                tooltip: 'Play Japanese audio',
+                icon: const Icon(Icons.volume_up_rounded),
+                onPressed: () => _speak(context, ref, audioText),
+              ),
           ],
         ),
         const SizedBox(height: 4),
@@ -51,6 +60,20 @@ class GrammarExampleWidget extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  Future<void> _speak(BuildContext context, WidgetRef ref, String text) async {
+    final result = await ref.read(ttsServiceProvider).speak(text);
+    if (!context.mounted) return;
+    final message = switch (result.status) {
+      TtsSpeakStatus.queued => 'Audio queued',
+      TtsSpeakStatus.empty => 'No Japanese text to read',
+      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
+      TtsSpeakStatus.error => 'Could not play Japanese audio.',
+    };
+    ScaffoldMessenger.maybeOf(
+      context,
+    )?.showSnackBar(SnackBar(content: Text(result.message ?? message)));
   }
 
   String _resolveTranslation() {

@@ -32,13 +32,20 @@ const double sidebarEstimatedContentHeightForTesting =
     (_sidebarItemHeight * 5) +
     (_sidebarGroupGap * 2);
 
-class AppShellScaffold extends ConsumerWidget {
+class AppShellScaffold extends ConsumerStatefulWidget {
   const AppShellScaffold({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<AppShellScaffold> createState() => _AppShellScaffoldState();
+}
+
+class _AppShellScaffoldState extends ConsumerState<AppShellScaffold> {
+  String? _lastRouteKey;
+
+  @override
+  Widget build(BuildContext context) {
     final language = ref.watch(appLanguageProvider);
     final level = ref.watch(studyLevelProvider);
     final allItems = _buildItems(language);
@@ -47,11 +54,22 @@ class AppShellScaffold extends ConsumerWidget {
         allItems[branchIndex],
     ];
     final palette = context.appPalette;
-    final selectedBranchIndex = shellBranchIndexForLocation(
-      GoRouterState.of(context).uri.path,
-    );
+    final uri = GoRouterState.of(context).uri;
+    final routeKey = uri.toString();
+    final selectedBranchIndex = shellBranchIndexForLocation(uri.path);
     final currentBranchIndex =
-        selectedBranchIndex ?? navigationShell.currentIndex;
+        selectedBranchIndex ?? widget.navigationShell.currentIndex;
+    if (_lastRouteKey != routeKey) {
+      final hadPreviousRoute = _lastRouteKey != null;
+      _lastRouteKey = routeKey;
+      if (hadPreviousRoute) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) {
+            _dismissActiveOverlay(context);
+          }
+        });
+      }
+    }
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -77,7 +95,9 @@ class AppShellScaffold extends ConsumerWidget {
                           ),
                           const SizedBox(width: 18),
                           Expanded(
-                            child: _ShellBody(navigationShell: navigationShell),
+                            child: _ShellBody(
+                              navigationShell: widget.navigationShell,
+                            ),
                           ),
                         ],
                       ),
@@ -114,7 +134,7 @@ class AppShellScaffold extends ConsumerWidget {
                     child: Stack(
                       fit: StackFit.expand,
                       children: [
-                        navigationShell,
+                        widget.navigationShell,
                         Positioned(
                           left: 0,
                           top: 0,
@@ -190,6 +210,7 @@ class AppShellScaffold extends ConsumerWidget {
   }
 
   void _goToBranch(BuildContext context, _ShellItem item) {
+    _dismissActiveOverlay(context);
     GoRouter.of(context).go(item.location);
   }
 
@@ -236,6 +257,17 @@ class AppShellScaffold extends ConsumerWidget {
         selectedIcon: Icons.person_rounded,
       ),
     ];
+  }
+}
+
+void _dismissActiveOverlay(BuildContext context) {
+  final route = ModalRoute.of(context);
+  if (route == null || route.isCurrent) {
+    return;
+  }
+  final navigator = Navigator.of(context);
+  if (navigator.canPop()) {
+    navigator.pop();
   }
 }
 
@@ -764,7 +796,7 @@ List<int> visibleShellBranchIndicesForLevel(StudyLevel? level) {
 
 @visibleForTesting
 List<int> bottomShellBranchIndicesForLevel(StudyLevel? level) {
-  return const [0, 1, 2, 3, 4];
+  return const [0, 1, 2, 3];
 }
 
 const _branchInitialLocations = <String>[

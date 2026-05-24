@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/audio/tts_service.dart';
 
 import '../../../data/models/vocab_item.dart';
 import '../models/question.dart';
@@ -116,6 +117,8 @@ class QuestionGenerator {
         return _generateTrueFalse(item, allItems, language, sequence);
       case QuestionType.fillBlank:
         return _generateFillBlank(item, language, sequence);
+      case QuestionType.listening:
+        return _generateListening(item, allItems, language, sequence);
     }
   }
 
@@ -231,6 +234,36 @@ class QuestionGenerator {
             : null,
       );
     }
+  }
+
+  Question _generateListening(
+    VocabItem item,
+    List<VocabItem> allItems,
+    AppLanguage language,
+    int? sequence,
+  ) {
+    final distractors = _selectDistractors(item, allItems, count: 3);
+    final correctMeaning = item.displayMeaning(language);
+    final options =
+        [
+            correctMeaning,
+            ...distractors.map((d) => d.displayMeaning(language)),
+          ].where((option) => option.trim().isNotEmpty).toSet().toList()
+          ..shuffle(_random);
+
+    return Question(
+      id: _questionId('listen', item.id, sequence),
+      type: QuestionType.listening,
+      targetItem: item,
+      questionText: switch (language) {
+        AppLanguage.en => 'Listen, then choose the meaning.',
+        AppLanguage.vi => 'Nghe âm thanh rồi chọn nghĩa đúng.',
+        AppLanguage.ja => '音声を聞いて意味を選んでください。',
+      },
+      correctAnswer: correctMeaning,
+      options: options,
+      audioText: japaneseTtsText(term: item.term, reading: item.reading),
+    );
   }
 
   String _questionId(String prefix, int itemId, int? sequence) {

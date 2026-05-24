@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/audio/tts_service.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/services/session_storage.dart';
 import 'package:jpstudy/core/services/session_storage_provider.dart';
@@ -35,6 +36,23 @@ class CapturingSessionStorage extends SessionStorage {
 
   @override
   Future<LearnSessionSnapshot?> loadLearnSession(int lessonId) async => null;
+}
+
+class TestTtsService implements TtsService {
+  final calls = <String>[];
+
+  @override
+  bool get isSupported => true;
+
+  @override
+  Future<TtsSpeakResult> speak(
+    String text, {
+    String lang = 'ja-JP',
+    double rate = 0.9,
+  }) async {
+    calls.add(text);
+    return TtsSpeakResult(status: TtsSpeakStatus.queued, spokenText: text);
+  }
 }
 
 class TestLearnSessionNotifier extends LearnSessionNotifier {
@@ -121,6 +139,7 @@ Question q(QuestionType type, int i) {
     QuestionType.trueFalse => 'This means water',
     QuestionType.fillBlank => 'Type meaning',
     QuestionType.multipleChoice => 'Choose meaning',
+    QuestionType.listening => 'Listen and choose meaning',
   };
   return Question(
     id: '${type.name}-$i',
@@ -130,9 +149,12 @@ Question q(QuestionType type, int i) {
     correctAnswer: type == QuestionType.trueFalse ? 'true' : 'water',
     options: type == QuestionType.multipleChoice
         ? const ['water', 'fire']
+        : type == QuestionType.listening
+        ? const ['water', 'fire']
         : null,
     isStatementTrue: type == QuestionType.trueFalse ? true : null,
     hint: type == QuestionType.fillBlank ? 'w___r' : null,
+    audioText: type == QuestionType.listening ? 'みず' : null,
   );
 }
 
@@ -159,6 +181,7 @@ Future<ProviderContainer> pumpLearnScreen(
   required LearnConfig config,
   LearnSessionSnapshot? resumeSnapshot,
   CapturingSessionStorage? storage,
+  TestTtsService? tts,
 }) async {
   final container = ProviderContainer(
     overrides: [
@@ -168,6 +191,7 @@ Future<ProviderContainer> pumpLearnScreen(
       sessionStorageProvider.overrideWithValue(
         storage ?? CapturingSessionStorage(),
       ),
+      ttsServiceProvider.overrideWithValue(tts ?? TestTtsService()),
       learnSessionProvider.overrideWith(TestLearnSessionNotifier.new),
       dashboardProvider.overrideWith((ref) => Stream.value(_emptyDashboard)),
     ],
@@ -290,6 +314,29 @@ void main() {
     await tester.enterText(find.byType(TextField), 'water');
     await tester.tap(find.text(AppLanguage.en.checkAnswerLabel));
     await tester.pumpAndSettle();
+    expect(find.text(AppLanguage.en.continueLabel), findsOneWidget);
+  });
+
+  testWidgets('Listening question plays audio and accepts a meaning answer', (
+    tester,
+  ) async {
+    final tts = TestTtsService();
+    await pumpLearnScreen(
+      tester,
+      config: cfg(QuestionType.listening),
+      tts: tts,
+    );
+    await tester.pumpAndSettle();
+
+    expect(
+      find.byKey(const ValueKey('listening_audio_action')),
+      findsOneWidget,
+    );
+    await tester.tap(find.byKey(const ValueKey('listening_play_audio')));
+    await tester.pumpAndSettle();
+    expect(tts.calls, ['みず']);
+
+    await tapMultipleChoiceAnswer(tester, 'water');
     expect(find.text(AppLanguage.en.continueLabel), findsOneWidget);
   });
 

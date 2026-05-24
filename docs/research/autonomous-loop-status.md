@@ -3238,3 +3238,11 @@
 - Rewired all vocab `example_sentences[]`; resulting corpus source mix is `19364 total / 5786 Tatoeba / 13578 authored`.
 - Live local verify: Minna N5 Bài 1 flashcard `私`, context mode, flipped card showed `私の番？ / Đến lượt tôi chưa?`, not template filler.
 - Gates passed: validator unit tests, `node tool/qa/validate_example_quality.js`, migration validate-only, research wrapper validate-only, hard banned-phrase scan, Flutter content DB/lesson repository tests, targeted analyze, `flutter build web`, and `git diff --check`.
+
+## 2026-05-24 Live-QA P0 beta blockers
+- Implemented runtime TTS for P0 audio: flashcards, lesson detail/examples, term list action chips, vocab detail, grammar examples, listening-only lesson practice, and mock-exam listening now call Web Speech on web.
+- Added `QuestionType.listening` persistence/generation support and listening audio panels for learn/test flows; mock exam configs now include listening.
+- Fixed mobile More: bottom nav keeps four primary tabs and moves profile into the More sheet instead of rendering an empty sheet.
+- Fixed stuck sheet cross-navigation by dismissing active overlays before shell branch navigation and again after route-key changes.
+- Live verified release build `http://127.0.0.1:5190`: desktop lesson listening played `しゃいん` and scored `Đã làm 1` / `Đúng 1`; desktop mock-exam `Nghe` question played `しゅっちょうします`; mobile More showed `Hồ sơ`; route change from open More sheet to vocab dismissed the dialog.
+- Artifacts: `docs/research/qa-live-2026-05-25-p0-desktop-listening.png`, `docs/research/qa-live-2026-05-25-p0-desktop-exam-listening.png`, `docs/research/qa-live-2026-05-25-p0-mobile-more.png`, `docs/research/qa-live-2026-05-25-p0-mobile-dismiss.png`.

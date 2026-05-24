@@ -29,6 +29,34 @@ void main() {
       containsAll(QuestionType.values),
     );
   });
+
+  test('listening questions use reading audio and ask for meaning', () {
+    final generator = QuestionGenerator();
+    final items = [
+      _item(1, '学校', 'がっこう', 'trường học'),
+      _item(2, '先生', 'せんせい', 'giáo viên'),
+      _item(3, '学生', 'がくせい', 'học sinh'),
+      _item(4, '水', 'みず', 'nước'),
+    ];
+    final listeningType = QuestionType.values.firstWhere(
+      (type) => type.name == 'listening',
+    );
+
+    final question = generator.generateQuestionForItem(
+      item: items.first,
+      type: listeningType,
+      allItems: items,
+      language: AppLanguage.vi,
+    );
+
+    expect(question, isNotNull);
+    expect(question!.type.name, 'listening');
+    expect(question.audioText, 'がっこう');
+    expect(question.questionText, contains('Nghe'));
+    expect(question.correctAnswer, 'trường học');
+    expect(question.options, contains('trường học'));
+    expect(question.checkAnswer('trường học'), isTrue);
+  });
 }
 
 VocabItem _item(int id, String term, String reading, String meaning) {

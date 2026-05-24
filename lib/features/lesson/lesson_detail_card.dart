@@ -138,7 +138,7 @@ class _LessonCard extends StatelessWidget {
   }
 }
 
-class _CardContent extends StatelessWidget {
+class _CardContent extends ConsumerWidget {
   static final _whitespaceRe = RegExp(r'\s+');
 
   const _CardContent({
@@ -166,7 +166,7 @@ class _CardContent extends StatelessWidget {
   final VoidCallback? onStartLearning;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final palette = context.appPalette;
     if (termsAsync.isLoading) {
       return const CircularProgressIndicator();
@@ -246,6 +246,14 @@ class _CardContent extends StatelessWidget {
             showReading: showReading,
             showHints: showHints,
             hint: frontHint,
+            onSpeak: () => _speakJapaneseAudio(
+              context,
+              ref,
+              japaneseTtsText(
+                term: resolvedTerm.term,
+                reading: resolvedTerm.reading,
+              ),
+            ),
           )
         : _meaningFace(
             key: ValueKey('front_meaning_$showExampleMode'),
@@ -254,6 +262,7 @@ class _CardContent extends StatelessWidget {
             meaning: frontHint,
             kanjiMeaning: resolvedTerm.kanjiMeaning,
             examples: contextExamples,
+            onSpeakExample: (text) => _speakJapaneseAudio(context, ref, text),
           );
 
     final back = frontShowsJapanese
@@ -264,6 +273,7 @@ class _CardContent extends StatelessWidget {
             meaning: backMeaning,
             kanjiMeaning: resolvedTerm.kanjiMeaning,
             examples: contextExamples,
+            onSpeakExample: (text) => _speakJapaneseAudio(context, ref, text),
           )
         : _japaneseFace(
             key: ValueKey('back_japanese_$showExampleMode'),
@@ -273,6 +283,14 @@ class _CardContent extends StatelessWidget {
             showReading: showReading,
             showHints: false,
             hint: '',
+            onSpeak: () => _speakJapaneseAudio(
+              context,
+              ref,
+              japaneseTtsText(
+                term: resolvedTerm.term,
+                reading: resolvedTerm.reading,
+              ),
+            ),
           );
 
     return AnimatedSwitcher(
@@ -322,12 +340,23 @@ class _CardContent extends StatelessWidget {
     required bool showReading,
     required bool showHints,
     required String hint,
+    required VoidCallback onSpeak,
   }) {
     return _CardFace(
       key: key,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: IconButton.filledTonal(
+              key: const ValueKey('lesson_flashcard_audio'),
+              tooltip: 'Play Japanese audio',
+              onPressed: onSpeak,
+              icon: const Icon(Icons.volume_up_rounded),
+            ),
+          ),
+          const SizedBox(height: 4),
           Text(
             language.termLabel,
             style: TextStyle(
@@ -398,6 +427,7 @@ class _CardContent extends StatelessWidget {
     required String meaning,
     required String kanjiMeaning,
     required List<VocabExampleSentence> examples,
+    required ValueChanged<String> onSpeakExample,
   }) {
     return _CardFace(
       key: key,
@@ -423,15 +453,31 @@ class _CardContent extends StatelessWidget {
           if (examples.isNotEmpty) ...[
             const SizedBox(height: 18),
             for (var index = 0; index < examples.length; index++) ...[
-              Text(
-                examples[index].ja,
-                style: TextStyle(
-                  fontSize: 17,
-                  color: palette.ink,
-                  fontWeight: FontWeight.w700,
-                  height: 1.35,
-                ),
-                textAlign: TextAlign.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Text(
+                      examples[index].ja,
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: palette.ink,
+                        fontWeight: FontWeight.w700,
+                        height: 1.35,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  if (examples[index].ja.trim().isNotEmpty) ...[
+                    const SizedBox(width: 8),
+                    IconButton(
+                      key: ValueKey('lesson_flashcard_example_audio_$index'),
+                      tooltip: 'Play Japanese audio',
+                      onPressed: () => onSpeakExample(examples[index].ja),
+                      icon: const Icon(Icons.volume_up_rounded),
+                    ),
+                  ],
+                ],
               ),
               const SizedBox(height: 6),
               Text(
@@ -511,6 +557,37 @@ class _CardContent extends StatelessWidget {
     final start = maxStart <= 0 ? 0 : ((seed.abs() ~/ 11) % (maxStart + 1));
     return compact.substring(start, start + take);
   }
+}
+
+Future<void> _speakJapaneseAudio(
+  BuildContext context,
+  WidgetRef ref,
+  String text,
+) async {
+  final result = await ref.read(ttsServiceProvider).speak(text);
+  if (!context.mounted) return;
+  final language = ref.read(appLanguageProvider);
+  final message = switch (result.status) {
+    TtsSpeakStatus.queued => switch (language) {
+      AppLanguage.en => 'Audio queued.',
+      AppLanguage.vi => 'Đã phát âm.',
+      AppLanguage.ja => '音声を再生しました。',
+    },
+    TtsSpeakStatus.empty => switch (language) {
+      AppLanguage.en => 'No Japanese text to read.',
+      AppLanguage.vi => 'Chưa có tiếng Nhật để phát âm.',
+      AppLanguage.ja => '読み上げる日本語がありません。',
+    },
+    TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
+    TtsSpeakStatus.error => switch (language) {
+      AppLanguage.en => 'Could not play Japanese audio.',
+      AppLanguage.vi => 'Chưa phát được âm thanh tiếng Nhật.',
+      AppLanguage.ja => '日本語音声を再生できませんでした。',
+    },
+  };
+  ScaffoldMessenger.of(
+    context,
+  ).showSnackBar(SnackBar(content: Text(result.message ?? message)));
 }
 
 class _CardFace extends StatelessWidget {

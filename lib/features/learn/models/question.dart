@@ -16,6 +16,7 @@ class Question {
   final bool? isStatementTrue; // For true/false
   final bool? expectsReading; // For fill-in-blank reading questions
   final String? hint; // For fill-in-blank
+  final String? audioText; // For listening questions
 
   const Question({
     required this.id,
@@ -27,12 +28,14 @@ class Question {
     this.isStatementTrue,
     this.expectsReading,
     this.hint,
+    this.audioText,
   });
 
   /// Check if user's answer is correct
   bool checkAnswer(String userAnswer) {
     switch (type) {
       case QuestionType.multipleChoice:
+      case QuestionType.listening:
         return userAnswer.toLowerCase().trim() ==
             correctAnswer.toLowerCase().trim();
       case QuestionType.trueFalse:

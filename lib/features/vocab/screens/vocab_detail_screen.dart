@@ -7,6 +7,7 @@ import 'package:jpstudy/app/navigation/app_navigation_extensions.dart';
 import 'package:jpstudy/app/navigation/app_route_locations.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/audio/tts_service.dart';
 import 'package:jpstudy/core/conjugation/conjugation_class.dart';
 import 'package:jpstudy/core/conjugation/conjugation_form.dart';
 import 'package:jpstudy/core/conjugation/japanese_conjugator.dart';
@@ -483,7 +484,7 @@ class _MeaningSection extends StatelessWidget {
 // Study usage helpers
 // ---------------------------------------------------------------------------
 
-class _StudyUsageSection extends StatelessWidget {
+class _StudyUsageSection extends ConsumerWidget {
   const _StudyUsageSection({
     required this.detail,
     required this.language,
@@ -495,7 +496,7 @@ class _StudyUsageSection extends StatelessWidget {
   final AppThemePalette palette;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final vocab = detail.vocab;
     final examples = _exampleLines(vocab, language);
     final conjugations = _conjugationLines(detail.conjugationLemma, language);
@@ -527,18 +528,7 @@ class _StudyUsageSection extends StatelessWidget {
                 icon: Icons.volume_up_rounded,
                 variant: AppButtonVariant.secondary,
                 compact: true,
-                onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      _tr(
-                        language,
-                        en: 'Audio is queued for this word.',
-                        vi: 'Đã đưa từ này vào hàng phát âm.',
-                        ja: 'この単語の音声を準備しました。',
-                      ),
-                    ),
-                  ),
-                ),
+                onPressed: () => _speakWord(context, ref, vocab),
               ),
               if (canPracticeConjugation)
                 AppButton(
@@ -586,6 +576,40 @@ class _StudyUsageSection extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _speakWord(
+    BuildContext context,
+    WidgetRef ref,
+    VocabData vocab,
+  ) async {
+    final text = japaneseTtsText(term: vocab.term, reading: vocab.reading);
+    final result = await ref.read(ttsServiceProvider).speak(text);
+    if (!context.mounted) return;
+    final message = switch (result.status) {
+      TtsSpeakStatus.queued => _tr(
+        language,
+        en: 'Audio is queued for this word.',
+        vi: 'Đã phát âm từ này.',
+        ja: 'この単語の音声を再生しました。',
+      ),
+      TtsSpeakStatus.empty => _tr(
+        language,
+        en: 'No Japanese text to read.',
+        vi: 'Chưa có tiếng Nhật để phát âm.',
+        ja: '読み上げる日本語がありません。',
+      ),
+      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
+      TtsSpeakStatus.error => _tr(
+        language,
+        en: 'Could not play Japanese audio.',
+        vi: 'Chưa phát được âm thanh tiếng Nhật.',
+        ja: '日本語音声を再生できませんでした。',
+      ),
+    };
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(result.message ?? message)));
   }
 }
 

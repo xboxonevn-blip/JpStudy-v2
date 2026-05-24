@@ -8,6 +8,7 @@ import '../../../app/theme/app_spacing.dart';
 import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/accessibility/reduced_motion.dart';
 import '../../../core/app_language.dart';
+import '../../../core/audio/tts_service.dart';
 import '../../../core/language_provider.dart';
 import '../../../core/services/recovery_pack_service.dart';
 import '../../../core/services/session_storage.dart';
@@ -436,6 +437,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
           SizedBox(height: compact ? AppSpacing.sm : AppSpacing.md),
         ],
         _buildQuestionContent(question, language, compact: compact),
+        if (question.type == QuestionType.listening) ...[
+          SizedBox(height: compact ? AppSpacing.sm : AppSpacing.md),
+          _buildListeningPanel(question, language),
+        ],
       ],
     );
   }
@@ -910,6 +915,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         'Điền chỗ trống',
         '穴埋め',
       ),
+      QuestionType.listening => _tr(language, 'Listening', 'Nghe', '聴解'),
     };
   }
 
@@ -922,6 +928,7 @@ class _TestScreenState extends ConsumerState<TestScreen> {
         _showResult && (_isCorrect || widget.config.showCorrectAfterWrong);
     switch (question.type) {
       case QuestionType.multipleChoice:
+      case QuestionType.listening:
         return MultipleChoiceWidget(
           question: question,
           selectedAnswer: _selectedAnswer,
@@ -954,6 +961,76 @@ class _TestScreenState extends ConsumerState<TestScreen> {
           onSubmit: _handleFillBlankSubmit,
         );
     }
+  }
+
+  Widget _buildListeningPanel(Question question, AppLanguage language) {
+    final audioText = question.audioText?.trim() ?? '';
+    if (audioText.isEmpty) return const SizedBox.shrink();
+    final palette = context.appPalette;
+    return Container(
+      key: const ValueKey('test_listening_audio_panel'),
+      width: double.infinity,
+      padding: const EdgeInsets.all(AppSpacing.md),
+      decoration: BoxDecoration(
+        color: palette.info.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(AppSpacing.radiusLg),
+        border: Border.all(color: palette.info.withValues(alpha: 0.22)),
+      ),
+      child: Row(
+        children: [
+          Icon(Icons.headphones_rounded, color: palette.info),
+          const SizedBox(width: AppSpacing.sm),
+          Expanded(
+            child: Text(
+              _tr(
+                language,
+                'Play the audio, then choose the meaning.',
+                'Bấm phát âm, rồi chọn nghĩa đúng.',
+                '音声を再生して、意味を選んでください。',
+              ),
+              style: TextStyle(color: palette.ink, fontWeight: FontWeight.w700),
+            ),
+          ),
+          const SizedBox(width: AppSpacing.sm),
+          FilledButton.icon(
+            key: const ValueKey('test_listening_play_audio'),
+            onPressed: () => _speakAudio(audioText),
+            icon: const Icon(Icons.volume_up_rounded),
+            label: Text(_tr(language, 'Play', 'Phát âm', '再生')),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _speakAudio(String text) async {
+    final result = await ref.read(ttsServiceProvider).speak(text);
+    if (!mounted) return;
+    final language = ref.read(appLanguageProvider);
+    final message = switch (result.status) {
+      TtsSpeakStatus.queued => _tr(
+        language,
+        'Audio queued.',
+        'Đã phát âm.',
+        '音声を再生しました。',
+      ),
+      TtsSpeakStatus.empty => _tr(
+        language,
+        'No Japanese text to read.',
+        'Chưa có tiếng Nhật để phát âm.',
+        '読み上げる日本語がありません。',
+      ),
+      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
+      TtsSpeakStatus.error => _tr(
+        language,
+        'Could not play Japanese audio.',
+        'Chưa phát được âm thanh tiếng Nhật.',
+        '日本語音声を再生できませんでした。',
+      ),
+    };
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(result.message ?? message)));
   }
 
   Widget _buildNavigationButtons(AppLanguage language) {

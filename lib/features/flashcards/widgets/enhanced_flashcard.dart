@@ -1,13 +1,15 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/accessibility/reduced_motion.dart';
 import '../../../core/app_language.dart';
+import '../../../core/audio/tts_service.dart';
 import '../../../data/models/vocab_item.dart';
 
-class EnhancedFlashcard extends StatefulWidget {
+class EnhancedFlashcard extends ConsumerStatefulWidget {
   const EnhancedFlashcard({
     super.key,
     required this.item,
@@ -32,10 +34,10 @@ class EnhancedFlashcard extends StatefulWidget {
   final double? retrievability;
 
   @override
-  State<EnhancedFlashcard> createState() => _EnhancedFlashcardState();
+  ConsumerState<EnhancedFlashcard> createState() => _EnhancedFlashcardState();
 }
 
-class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
+class _EnhancedFlashcardState extends ConsumerState<EnhancedFlashcard> {
   bool _isFlipped = false;
   bool _showExampleJapanese = true;
   double _dragDx = 0;
@@ -202,6 +204,7 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
     final term = widget.item.term.trim();
     final reading = (widget.item.reading ?? '').trim();
     final showReading = widget.item.hasDisplayReading;
+    final audioText = japaneseTtsText(term: term, reading: reading);
 
     return Center(
       child: Column(
@@ -217,27 +220,43 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
               borderRadius: BorderRadius.circular(24),
               border: Border.all(color: palette.outlineSoft),
             ),
-            child: Column(
+            child: Stack(
+              clipBehavior: Clip.none,
               children: [
-                Text(
-                  term.isEmpty ? '-' : term,
-                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 46,
-                    color: palette.ink,
-                    height: 1.1,
-                  ),
-                  textAlign: TextAlign.center,
+                Column(
+                  children: [
+                    Text(
+                      term.isEmpty ? '-' : term,
+                      style: Theme.of(context).textTheme.headlineLarge
+                          ?.copyWith(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 46,
+                            color: palette.ink,
+                            height: 1.1,
+                          ),
+                      textAlign: TextAlign.center,
+                    ),
+                    if (showReading) ...[
+                      const SizedBox(height: 18),
+                      _InfoPill(
+                        icon: Icons.record_voice_over_rounded,
+                        label: widget.language.readingLabel,
+                        value: reading,
+                        color: palette.primary,
+                      ),
+                    ],
+                  ],
                 ),
-                if (showReading) ...[
-                  const SizedBox(height: 18),
-                  _InfoPill(
-                    icon: Icons.record_voice_over_rounded,
-                    label: widget.language.readingLabel,
-                    value: reading,
-                    color: palette.primary,
+                if (audioText.isNotEmpty)
+                  Positioned(
+                    top: -14,
+                    right: -14,
+                    child: IconButton.filledTonal(
+                      tooltip: 'Play Japanese audio',
+                      icon: const Icon(Icons.volume_up_rounded),
+                      onPressed: () => _speak(audioText),
+                    ),
                   ),
-                ],
               ],
             ),
           ),
@@ -254,6 +273,20 @@ class _EnhancedFlashcardState extends State<EnhancedFlashcard> {
         ],
       ),
     );
+  }
+
+  Future<void> _speak(String text) async {
+    final result = await ref.read(ttsServiceProvider).speak(text);
+    if (!mounted) return;
+    final message = switch (result.status) {
+      TtsSpeakStatus.queued => 'Audio queued',
+      TtsSpeakStatus.empty => 'No Japanese text to read',
+      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
+      TtsSpeakStatus.error => 'Could not play Japanese audio.',
+    };
+    ScaffoldMessenger.maybeOf(
+      context,
+    )?.showSnackBar(SnackBar(content: Text(result.message ?? message)));
   }
 
   Widget _buildMeaningFace({required bool showExtras}) {
@@ -442,26 +475,38 @@ class _ExamplePanel extends StatelessWidget {
   }
 }
 
-class _ExampleRow extends StatelessWidget {
+class _ExampleRow extends ConsumerWidget {
   const _ExampleRow({required this.example, required this.showJapanese});
 
   final VocabExampleSentence example;
   final bool showJapanese;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final palette = context.appPalette;
+    final audioText = example.ja.trim();
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (example.hasAudio) ...[
+        if (audioText.isNotEmpty) ...[
           IconButton(
             icon: const Icon(Icons.volume_up_rounded),
             color: palette.secondary,
-            tooltip: 'Audio',
-            onPressed: () {
+            tooltip: 'Play Japanese audio',
+            onPressed: () async {
+              final result = await ref
+                  .read(ttsServiceProvider)
+                  .speak(audioText);
+              if (!context.mounted) return;
+              final message = switch (result.status) {
+                TtsSpeakStatus.queued => 'Audio queued',
+                TtsSpeakStatus.empty => 'No Japanese text to read',
+                TtsSpeakStatus.unavailable =>
+                  'Trình duyệt không có giọng tiếng Nhật.',
+                TtsSpeakStatus.error => 'Could not play Japanese audio.',
+              };
               ScaffoldMessenger.maybeOf(context)?.showSnackBar(
-                const SnackBar(content: Text('Audio example queued')),
+                SnackBar(content: Text(result.message ?? message)),
               );
             },
           ),

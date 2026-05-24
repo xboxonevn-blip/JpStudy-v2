@@ -9,7 +9,7 @@ import 'package:jpstudy/features/learn/integration/learn_mode_integration.dart';
 import 'package:jpstudy/features/test/integration/test_mode_integration.dart';
 import 'package:jpstudy/features/learn/integration/write_mode_integration.dart';
 
-enum LessonPracticeMode { learn, test, write }
+enum LessonPracticeMode { learn, test, write, listening }
 
 LessonPracticeMode? lessonPracticeModeFromPath(String value) {
   switch (value) {
@@ -21,6 +21,8 @@ LessonPracticeMode? lessonPracticeModeFromPath(String value) {
       return LessonPracticeMode.test;
     case 'write':
       return LessonPracticeMode.write;
+    case 'listening':
+      return LessonPracticeMode.listening;
   }
   return null;
 }
@@ -69,6 +71,12 @@ class LessonPracticeScreen extends ConsumerWidget {
         return TestModeIntegration(
           lessonId: storageLessonId,
           lessonTitle: lessonTitle,
+        );
+      case LessonPracticeMode.listening:
+        return TestModeIntegration(
+          lessonId: storageLessonId,
+          lessonTitle: lessonTitle,
+          listeningOnly: true,
         );
       case LessonPracticeMode.write:
         return WriteModeIntegration(

@@ -17,12 +17,12 @@ void main() {
     expect(source, contains('ExcludeSemantics('));
   });
 
-  test('N5 shell destinations use five primary branches', () {
+  test('N5 shell destinations expose overflow through More', () {
     expect(visibleShellBranchIndicesForLevel(StudyLevel.n5), [0, 1, 2, 3, 4]);
-    expect(bottomShellBranchIndicesForLevel(StudyLevel.n5), [0, 1, 2, 3, 4]);
+    expect(bottomShellBranchIndicesForLevel(StudyLevel.n5), [0, 1, 2, 3]);
   });
 
-  test('N4+ shell destinations use the same five primary branches', () {
+  test('N4+ shell destinations expose overflow through More', () {
     for (final level in [
       StudyLevel.n4,
       StudyLevel.n3,
@@ -31,7 +31,7 @@ void main() {
     ]) {
       final visible = visibleShellBranchIndicesForLevel(level);
       expect(visible, [0, 1, 2, 3, 4]);
-      expect(bottomShellBranchIndicesForLevel(level), [0, 1, 2, 3, 4]);
+      expect(bottomShellBranchIndicesForLevel(level), [0, 1, 2, 3]);
     }
   });
 
@@ -60,10 +60,23 @@ void main() {
       r'void _goToBranch[\s\S]*?\n  \}',
     ).firstMatch(source)!.group(0)!;
 
+    expect(goToBranchBody, contains('_dismissActiveOverlay(context)'));
     expect(goToBranchBody, contains('GoRouter.of(context).go'));
     expect(goToBranchBody, contains('item.location'));
     expect(goToBranchBody, isNot(contains('navigationShell.goBranch')));
     expect(source, contains('required this.location'));
     expect(source, contains('location: AppRoutePath.me'));
+  });
+
+  test('shell route changes dismiss active overlays', () {
+    final source = File(
+      'lib/app/navigation/app_shell_scaffold.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('_lastRouteKey'));
+    expect(source, contains('addPostFrameCallback'));
+    expect(source, contains('_dismissActiveOverlay(context)'));
+    expect(source, contains('route == null || route.isCurrent'));
+    expect(source, contains('navigator.pop()'));
   });
 }

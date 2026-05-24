@@ -5,6 +5,7 @@ import '../../../app/theme/app_theme_palette.dart';
 import '../../../core/app_language.dart';
 import '../../quiz/widgets/shared_answer_selection.dart';
 import '../models/question.dart';
+import '../models/question_type.dart';
 import 'question_surface.dart';
 
 /// Multiple choice question widget
@@ -47,18 +48,24 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
             ? null
             : options.indexOf(widget.selectedAnswer!);
         final correctIndex = options.indexOf(widget.question.correctAnswer);
+        final isListening = widget.question.type == QuestionType.listening;
 
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             QuestionPromptCard(
-              label: widget.language.multipleChoiceLabel,
-              title: widget.question.targetItem.term,
-              subtitle: widget.question.targetItem.hasDisplayReading
+              label: widget.question.type.label(widget.language),
+              title: isListening
+                  ? _listeningTitle(widget.language)
+                  : widget.question.targetItem.term,
+              subtitle:
+                  !isListening && widget.question.targetItem.hasDisplayReading
                   ? widget.question.targetItem.reading!.trim()
                   : null,
               prompt: widget.question.questionText,
-              icon: Icons.layers_rounded,
+              icon: isListening
+                  ? Icons.headphones_rounded
+                  : Icons.layers_rounded,
               accentColor: palette.info,
               compact: compact,
             ),
@@ -109,4 +116,10 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
         viewWidth < 700 ||
         viewHeight < 700;
   }
+
+  String _listeningTitle(AppLanguage language) => switch (language) {
+    AppLanguage.en => 'Listening question',
+    AppLanguage.vi => 'Câu nghe hiểu',
+    AppLanguage.ja => '聴解問題',
+  };
 }

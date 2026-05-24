@@ -60,6 +60,13 @@ void main() {
       expect(config.showCorrectAfterWrong, isFalse);
       expect(config.adaptiveTesting, isFalse);
     });
+
+    test('mock exams include a listening section powered by TTS', () {
+      final enabledNames = TestConfig.mockExam(
+        questionCount: 20,
+      ).enabledTypes.map((type) => type.name);
+      expect(enabledNames, contains('listening'));
+    });
   });
 
   // ── copyWith — clearTimeLimit semantics ───────────────────────────────────

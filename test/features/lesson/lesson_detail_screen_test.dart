@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
 import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/audio/tts_service.dart';
 import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/core/level_provider.dart';
 import 'package:jpstudy/core/study_level.dart';
@@ -39,6 +40,23 @@ UserLessonTermData _term(
   isLearned: false,
   orderIndex: id,
 );
+
+class _TestTtsService implements TtsService {
+  final calls = <String>[];
+
+  @override
+  bool get isSupported => true;
+
+  @override
+  Future<TtsSpeakResult> speak(
+    String text, {
+    String lang = 'ja-JP',
+    double rate = 0.9,
+  }) async {
+    calls.add(text);
+    return TtsSpeakResult(status: TtsSpeakStatus.queued, spokenText: text);
+  }
+}
 
 class _FakeConjugationRepository extends ConjugationRepository {
   _FakeConjugationRepository(this.lemmas, this._contentDb) : super(_contentDb);
@@ -115,6 +133,7 @@ Widget buildScreen(
   int lessonId = 1,
   String? expectedFallbackTitle,
   ConjugationRepository? conjugationRepository,
+  TtsService? ttsService,
 }) {
   final sourceLessonId = LessonRepository.curriculumSourceLessonId(
     level.shortLabel,
@@ -156,6 +175,7 @@ Widget buildScreen(
       srsStateProvider(1).overrideWith((ref) async => null),
       if (conjugationRepository != null)
         conjugationRepositoryProvider.overrideWithValue(conjugationRepository),
+      if (ttsService != null) ttsServiceProvider.overrideWithValue(ttsService),
     ],
     child: MaterialApp(
       home: LessonDetailScreen(lessonId: lessonId, levelCode: level.shortLabel),
@@ -332,6 +352,34 @@ void main() {
       findsOneWidget,
     );
     expect(find.text('Practice'), findsWidgets);
+  });
+
+  testWidgets('lesson flashcard and term list play Japanese TTS', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1000, 1200);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final tts = _TestTtsService();
+    await tester.pumpWidget(
+      buildScreen([_term(1, '学校', 'school', reading: 'がっこう')], ttsService: tts),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    final cardAudio = find.byKey(const ValueKey('lesson_flashcard_audio'));
+    await tester.ensureVisible(cardAudio);
+    await tester.tap(cardAudio);
+    await tester.pumpAndSettle();
+    expect(tts.calls, contains('がっこう'));
+
+    final termAudio = find.text('Audio').first;
+    await tester.ensureVisible(termAudio);
+    await tester.tap(termAudio);
+    await tester.pumpAndSettle();
+    expect(tts.calls.where((call) => call == 'がっこう'), hasLength(2));
   });
 
   testWidgets('mobile lesson mode picker opens practice modes in a sheet', (

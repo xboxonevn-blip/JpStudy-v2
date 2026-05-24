@@ -69,6 +69,17 @@ void main() {
     expect(find.text('食べる'), findsOneWidget);
   });
 
+  testWidgets('front side exposes TTS audio even when audioUrl is empty', (
+    tester,
+  ) async {
+    final items = [_item(1, '学校', 'school')];
+    await tester.pumpWidget(buildFlashcardScreen(items));
+    await tester.pumpAndSettle();
+
+    expect(find.byTooltip('Play Japanese audio'), findsOneWidget);
+    expect(find.byIcon(Icons.volume_up_rounded), findsOneWidget);
+  });
+
   testWidgets('shows progress bar', (tester) async {
     final items = [_item(1, '食べる', 'to eat'), _item(2, '飲む', 'to drink')];
     await tester.pumpWidget(buildFlashcardScreen(items));

@@ -10,18 +10,22 @@ import '../../../core/level_provider.dart';
 import '../../../core/study_level.dart';
 import '../screens/test_config_screen.dart';
 import '../screens/test_screen.dart';
+import '../models/test_config.dart';
 import '../../../core/services/session_storage_provider.dart';
 import '../../../core/services/session_storage.dart';
+import '../../learn/models/question_type.dart';
 
 /// Integration screen that shows config first, then navigates to test mode
 class TestModeIntegration extends ConsumerWidget {
   final int lessonId;
   final String lessonTitle;
+  final bool listeningOnly;
 
   const TestModeIntegration({
     super.key,
     required this.lessonId,
     required this.lessonTitle,
+    this.listeningOnly = false,
   });
 
   @override
@@ -49,12 +53,30 @@ class TestModeIntegration extends ConsumerWidget {
 
         // Convert to VocabItem
         final vocabItems = _convertToVocabItems(terms, level.shortLabel);
+        final initialConfig = listeningOnly
+            ? TestConfig(
+                questionCount: vocabItems.length.clamp(1, 20),
+                enabledTypes: const [QuestionType.listening],
+                shuffleQuestions: true,
+                showCorrectAfterWrong: true,
+              )
+            : null;
 
         final storage = ref.read(sessionStorageProvider);
         return FutureBuilder<TestSessionSnapshot?>(
           future: storage.loadTestSession(sessionKey),
           builder: (context, snapshot) {
             final resumeSnapshot = snapshot.data;
+            if (listeningOnly) {
+              return TestScreen(
+                lessonId: lessonId,
+                lessonTitle: lessonTitle,
+                items: vocabItems,
+                config: resumeSnapshot?.config ?? initialConfig!,
+                resumeSnapshot: resumeSnapshot,
+                sessionKey: sessionKey,
+              );
+            }
             return TestConfigScreen(
               lessonId: lessonId,
               lessonTitle: lessonTitle,
@@ -121,6 +143,9 @@ class TestModeIntegration extends ConsumerWidget {
             reading: term.reading,
             meaning: term.definition,
             meaningEn: term.definitionEn,
+            exampleSentences: parseVocabExampleSentences(
+              term.exampleSentencesJson,
+            ),
             level: levelLabel,
           ),
         )

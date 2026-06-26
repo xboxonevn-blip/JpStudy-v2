@@ -1061,6 +1061,7 @@
       "order": 20,
       "tags": [
         "body",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1081,18 +1082,23 @@
       },
       "sense": {
         "senseId": "n5_l16_s020",
-        "meaningVi": "cơ thể, người",
+        "meaningVi": "Người, cơ thể",
         "meaningEn": "body / health"
       },
       "search": {
         "termNoAccent": "体",
         "readingNoAccent": "からた",
-        "meaningViNoAccent": "co the, nguoi",
+        "meaningViNoAccent": "Nguoi, co the",
         "hanVietNoAccent": "the"
       },
       "links": {
         "sourceVocabId": "n5_l16_v020",
-        "sourceSenseId": "n5_l16_s020"
+        "sourceSenseId": "n5_l16_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thể"
@@ -1886,6 +1892,7 @@
       "order": 35,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1906,18 +1913,23 @@
       },
       "sense": {
         "senseId": "n5_l16_s035",
-        "meaningVi": "màu xanh lá cây, cây xanh",
+        "meaningVi": "Màu xanh lá cây",
         "meaningEn": "green / greenery"
       },
       "search": {
         "termNoAccent": "緑",
         "readingNoAccent": "みとり",
-        "meaningViNoAccent": "mau xanh la cay, cay xanh",
+        "meaningViNoAccent": "Mau xanh la cay",
         "hanVietNoAccent": "luc"
       },
       "links": {
         "sourceVocabId": "n5_l16_v035",
-        "sourceSenseId": "n5_l16_s035"
+        "sourceSenseId": "n5_l16_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lục"
@@ -2052,6 +2064,7 @@
       "order": 38,
       "tags": [
         "occupation",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2074,18 +2087,24 @@
       },
       "sense": {
         "senseId": "n5_l16_s038",
-        "meaningVi": "du học sinh",
+        "meaningVi": "Lưu học sinh, sinh viên nước ngoài",
         "meaningEn": "foreign student"
       },
       "search": {
         "termNoAccent": "留学生",
         "readingNoAccent": "りゅうかくせい",
-        "meaningViNoAccent": "du hoc sinh",
+        "meaningViNoAccent": "Luu hoc sinh, sinh vien nuoc ngoai",
         "hanVietNoAccent": "luu hoc sinh"
       },
       "links": {
         "sourceVocabId": "n5_l16_v038",
-        "sourceSenseId": "n5_l16_s038"
+        "sourceSenseId": "n5_l16_s038",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lưu học sinh"

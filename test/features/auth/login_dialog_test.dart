@@ -10,6 +10,7 @@ import 'package:jpstudy/core/auth/auth_service.dart';
 import 'package:jpstudy/core/auth/auth_user.dart';
 import 'package:jpstudy/core/shared_preferences_provider.dart';
 import 'package:jpstudy/features/auth/widgets/login_dialog.dart';
+import 'package:jpstudy/widgets/foundation/app_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FakeAuthService implements AuthService {
@@ -93,6 +94,11 @@ const _testUser = AuthUser(
   email: 'user@example.com',
   emailVerified: true,
   displayName: 'Test User',
+);
+
+Finder _loginSubmitButton() => find.byWidgetPredicate(
+  (widget) =>
+      widget is AppButton && widget.label == AppLanguage.vi.loginSubmitLabel,
 );
 
 Future<void> _pumpHost(
@@ -214,9 +220,7 @@ void main() {
       await _pumpHost(tester, authService: fake);
       await _openDialog(tester);
 
-      await tester.tap(
-        find.widgetWithText(ElevatedButton, AppLanguage.vi.loginSubmitLabel),
-      );
+      await tester.tap(_loginSubmitButton());
       await tester.pumpAndSettle();
       expect(find.text(AppLanguage.vi.loginEmptyFieldLabel), findsWidgets);
       expect(fake.emailCalls, 0);
@@ -235,9 +239,7 @@ void main() {
       final fields = find.byType(TextField);
       await tester.enterText(fields.at(0), 'user@example.com');
       await tester.enterText(fields.at(1), 'hunter2');
-      await tester.tap(
-        find.widgetWithText(ElevatedButton, AppLanguage.vi.loginSubmitLabel),
-      );
+      await tester.tap(_loginSubmitButton());
       await tester.pumpAndSettle();
 
       expect(fake.emailCalls, 1);
@@ -260,9 +262,7 @@ void main() {
     final fields = find.byType(TextField);
     await tester.enterText(fields.at(0), 'user@example.com');
     await tester.enterText(fields.at(1), 'wrong');
-    await tester.tap(
-      find.widgetWithText(ElevatedButton, AppLanguage.vi.loginSubmitLabel),
-    );
+    await tester.tap(_loginSubmitButton());
     await tester.pumpAndSettle();
 
     expect(find.text(AppLanguage.vi.authWrongPasswordLabel), findsWidgets);
@@ -282,9 +282,7 @@ void main() {
     final fields = find.byType(TextField);
     await tester.enterText(fields.at(0), 'missing@example.com');
     await tester.enterText(fields.at(1), 'hunter2');
-    await tester.tap(
-      find.widgetWithText(ElevatedButton, AppLanguage.vi.loginSubmitLabel),
-    );
+    await tester.tap(_loginSubmitButton());
     await tester.pumpAndSettle();
 
     expect(find.text(AppLanguage.vi.authUserNotFoundLabel), findsWidgets);
@@ -304,9 +302,7 @@ void main() {
       final fields = find.byType(TextField);
       await tester.enterText(fields.at(0), 'fake-test@example.com');
       await tester.enterText(fields.at(1), 'wrongpass');
-      await tester.tap(
-        find.widgetWithText(ElevatedButton, AppLanguage.vi.loginSubmitLabel),
-      );
+      await tester.tap(_loginSubmitButton());
       await tester.pumpAndSettle();
 
       expect(find.text(AppLanguage.vi.authUnknownErrorLabel), findsWidgets);
@@ -327,9 +323,7 @@ void main() {
       final fields = find.byType(TextField);
       await tester.enterText(fields.at(0), 'fake-test@example.com');
       await tester.enterText(fields.at(1), 'wrongpass');
-      await tester.tap(
-        find.widgetWithText(ElevatedButton, AppLanguage.vi.loginSubmitLabel),
-      );
+      await tester.tap(_loginSubmitButton());
       await tester.pumpAndSettle();
 
       expect(find.text(AppLanguage.vi.authUnknownErrorLabel), findsWidgets);

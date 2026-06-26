@@ -784,6 +784,7 @@
       "order": 15,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -805,18 +806,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s015",
-        "meaningVi": "căn phòng",
+        "meaningVi": "Phòng",
         "meaningEn": "room"
       },
       "search": {
         "termNoAccent": "部屋",
         "readingNoAccent": "へや",
-        "meaningViNoAccent": "can phong",
+        "meaningViNoAccent": "Phong",
         "hanVietNoAccent": "bo oc"
       },
       "links": {
         "sourceVocabId": "n5_l03_v015",
-        "sourceSenseId": "n5_l03_s015"
+        "sourceSenseId": "n5_l03_s015",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bộ ốc"
@@ -1117,6 +1123,7 @@
       "order": 21,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1137,18 +1144,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s021",
-        "meaningVi": "đất nước",
+        "meaningVi": "Nước",
         "meaningEn": "country"
       },
       "search": {
         "termNoAccent": "国",
         "readingNoAccent": "くに",
-        "meaningViNoAccent": "dat nuoc",
+        "meaningViNoAccent": "Nuoc",
         "hanVietNoAccent": "quoc"
       },
       "links": {
         "sourceVocabId": "n5_l03_v021",
-        "sourceSenseId": "n5_l03_s021"
+        "sourceSenseId": "n5_l03_s021",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "quốc"
@@ -1882,6 +1894,7 @@
       "order": 35,
       "tags": [
         "number",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1902,18 +1915,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s035",
-        "meaningVi": "trăm",
+        "meaningVi": "Một trăm",
         "meaningEn": "hundred"
       },
       "search": {
         "termNoAccent": "百",
         "readingNoAccent": "ひゃく",
-        "meaningViNoAccent": "tram",
+        "meaningViNoAccent": "Mot tram",
         "hanVietNoAccent": "bach"
       },
       "links": {
         "sourceVocabId": "n5_l03_v035",
-        "sourceSenseId": "n5_l03_s035"
+        "sourceSenseId": "n5_l03_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bách"
@@ -1998,6 +2016,7 @@
       "order": 37,
       "tags": [
         "number",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2018,18 +2037,23 @@
       },
       "sense": {
         "senseId": "n5_l03_s037",
-        "meaningVi": "vạn (mười nghìn)",
+        "meaningVi": "Mười nghìn",
         "meaningEn": "ten thousand"
       },
       "search": {
         "termNoAccent": "万",
         "readingNoAccent": "まん",
-        "meaningViNoAccent": "van (muoi nghin)",
+        "meaningViNoAccent": "Muoi nghin",
         "hanVietNoAccent": "van"
       },
       "links": {
         "sourceVocabId": "n5_l03_v037",
-        "sourceSenseId": "n5_l03_s037"
+        "sourceSenseId": "n5_l03_s037",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vạn"

@@ -1746,6 +1746,12 @@ class _KanjiDetailDialogState extends State<_KanjiDetailDialog> {
                 label: widget.language.kanjiDetailHanVietLabel(),
                 value: hanViet,
               ),
+              const SizedBox(height: 12),
+              _KanjiHanVietBridgePanel(
+                language: widget.language,
+                hanViet: hanViet,
+                examples: widget.item.examples,
+              ),
             ],
             if (mnemonic != null && mnemonic.isNotEmpty) ...[
               const SizedBox(height: 8),
@@ -1982,6 +1988,105 @@ class _KanjiDetailInfoRow extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class _KanjiHanVietBridgePanel extends StatelessWidget {
+  const _KanjiHanVietBridgePanel({
+    required this.language,
+    required this.hanViet,
+    required this.examples,
+  });
+
+  final AppLanguage language;
+  final String hanViet;
+  final List<KanjiExample> examples;
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = context.appPalette;
+    final exampleLabels = examples
+        .map(_formatBridgeExample)
+        .where((label) => label.isNotEmpty)
+        .take(3)
+        .toList();
+    return Container(
+      key: const ValueKey('kanji_detail_han_viet_bridge'),
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: palette.secondary.withValues(alpha: 0.10),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: palette.secondary.withValues(alpha: 0.32)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            language.hanVietBridgeTitle,
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: palette.secondary,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            language.hanVietBridgeBody(hanViet),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: palette.ink, height: 1.35),
+          ),
+          if (exampleLabels.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Text(
+              language.hanVietBridgeExamplesLabel,
+              style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                color: palette.ink.withValues(alpha: 0.68),
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            const SizedBox(height: 4),
+            for (final label in exampleLabels)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text(
+                  label,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: palette.ink,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  String _formatBridgeExample(KanjiExample example) {
+    final word = example.word.trim();
+    final reading = example.reading.trim();
+    final meaning = switch (language) {
+      AppLanguage.en =>
+        (example.meaningEn?.trim().isNotEmpty ?? false)
+            ? example.meaningEn!.trim()
+            : example.meaning.trim(),
+      AppLanguage.vi => example.meaning.trim(),
+      AppLanguage.ja => example.meaning.trim(),
+    };
+    if (word.isEmpty && meaning.isEmpty) return '';
+    final buffer = StringBuffer();
+    if (word.isNotEmpty) {
+      buffer.write(word);
+      if (reading.isNotEmpty) {
+        buffer.write(' ($reading)');
+      }
+    }
+    if (meaning.isNotEmpty) {
+      if (buffer.isNotEmpty) buffer.write(': ');
+      buffer.write(meaning);
+    }
+    return buffer.toString();
   }
 }
 

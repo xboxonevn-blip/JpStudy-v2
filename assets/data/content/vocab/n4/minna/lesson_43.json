@@ -1214,6 +1214,7 @@
       "order": 23,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1235,18 +1236,23 @@
       },
       "sense": {
         "senseId": "n4_l43_s023",
-        "meaningVi": "lý do",
+        "meaningVi": "Lí do",
         "meaningEn": "reason"
       },
       "search": {
         "termNoAccent": "理由",
         "readingNoAccent": "りゆう",
-        "meaningViNoAccent": "ly do",
+        "meaningViNoAccent": "Li do",
         "hanVietNoAccent": "li do"
       },
       "links": {
         "sourceVocabId": "n4_l43_v023",
-        "sourceSenseId": "n4_l43_s023"
+        "sourceSenseId": "n4_l43_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lí do"
@@ -1433,6 +1439,7 @@
       "order": 27,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1454,18 +1461,23 @@
       },
       "sense": {
         "senseId": "n4_l43_s027",
-        "meaningVi": "suoi am",
+        "meaningVi": "Thiết bị làm ấm, lò sưởi, máy điều hòa",
         "meaningEn": "heating"
       },
       "search": {
         "termNoAccent": "暖房",
         "readingNoAccent": "たんほう",
-        "meaningViNoAccent": "suoi am",
+        "meaningViNoAccent": "Thiet bi lam am, lo suoi, may dieu hoa",
         "hanVietNoAccent": "noan phong"
       },
       "links": {
         "sourceVocabId": "n4_l43_v027",
-        "sourceSenseId": "n4_l43_s027"
+        "sourceSenseId": "n4_l43_s027",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "noãn phòng"
@@ -1489,6 +1501,7 @@
       "order": 28,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1510,18 +1523,23 @@
       },
       "sense": {
         "senseId": "n4_l43_s028",
-        "meaningVi": "lam mat",
+        "meaningVi": "Thiết bị làm mát, máy điều hòa",
         "meaningEn": "air conditioning"
       },
       "search": {
         "termNoAccent": "冷房",
         "readingNoAccent": "れいほう",
-        "meaningViNoAccent": "lam mat",
+        "meaningViNoAccent": "Thiet bi lam mat, may dieu hoa",
         "hanVietNoAccent": "lanh phong"
       },
       "links": {
         "sourceVocabId": "n4_l43_v028",
-        "sourceSenseId": "n4_l43_s028"
+        "sourceSenseId": "n4_l43_s028",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lãnh phòng"
@@ -1710,6 +1728,7 @@
       "order": 32,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1731,18 +1750,24 @@
       },
       "sense": {
         "senseId": "n4_l43_s032",
-        "meaningVi": "tuoi tac",
+        "meaningVi": "Tuổi tác",
         "meaningEn": "age"
       },
       "search": {
         "termNoAccent": "年齢",
         "readingNoAccent": "ねんれい",
-        "meaningViNoAccent": "tuoi tac",
+        "meaningViNoAccent": "Tuoi tac",
         "hanVietNoAccent": "nen linh"
       },
       "links": {
         "sourceVocabId": "n4_l43_v032",
-        "sourceSenseId": "n4_l43_s032"
+        "sourceSenseId": "n4_l43_s032",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nên linh"
@@ -1766,6 +1791,7 @@
       "order": 33,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1787,18 +1813,23 @@
       },
       "sense": {
         "senseId": "n4_l43_s033",
-        "meaningVi": "thu nhap",
+        "meaningVi": "Thu nhập",
         "meaningEn": "income"
       },
       "search": {
         "termNoAccent": "収入",
         "readingNoAccent": "しゅうにゅう",
-        "meaningViNoAccent": "thu nhap",
+        "meaningViNoAccent": "Thu nhap",
         "hanVietNoAccent": "thu nhap"
       },
       "links": {
         "sourceVocabId": "n4_l43_v033",
-        "sourceSenseId": "n4_l43_s033"
+        "sourceSenseId": "n4_l43_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "mimikara-n2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thu nhập"
@@ -1807,7 +1838,7 @@
         {
           "example_id": "ex-n4_l43_v033-001",
           "ja": "これは収入です。",
-          "vi": "Đây là thu nhap.",
+          "vi": "Đây là thu nhập.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for 収入",

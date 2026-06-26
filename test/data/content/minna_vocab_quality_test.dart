@@ -108,6 +108,31 @@ void main() {
       }
     }
   });
+
+  test('Minna textbook index totals match current vocab assets', () {
+    final index =
+        jsonDecode(
+              File('lib/data/manifests/textbook_index.json').readAsStringSync(),
+            )
+            as Map<String, dynamic>;
+    final textbooks = (index['textbooks'] as List).cast<Map<String, dynamic>>();
+
+    for (final level in ['n5', 'n4']) {
+      final assetTotal =
+          _jsonFiles(
+            Directory('assets/data/content/vocab/$level/minna'),
+          ).fold<int>(0, (sum, file) {
+            final payload =
+                jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
+            return sum + ((payload['entries'] as List).length);
+          });
+      final textbook = textbooks.firstWhere(
+        (item) => item['textbook_id'] == 'minna_$level',
+      );
+
+      expect(textbook['item_count_total'], assetTotal, reason: 'minna_$level');
+    }
+  });
 }
 
 List<File> _jsonFiles(Directory dir) {

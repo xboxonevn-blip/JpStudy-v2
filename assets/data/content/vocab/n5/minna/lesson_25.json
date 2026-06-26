@@ -1560,6 +1560,7 @@
       "order": 29,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1581,18 +1582,23 @@
       },
       "sense": {
         "senseId": "n5_l25_s029",
-        "meaningVi": "khỏe mạnh/năng động",
+        "meaningVi": "Khỏe, khỏe mạnh",
         "meaningEn": "healthy / energetic"
       },
       "search": {
         "termNoAccent": "元気",
         "readingNoAccent": "けんき",
-        "meaningViNoAccent": "khoe manh/nang dong",
+        "meaningViNoAccent": "Khoe, khoe manh",
         "hanVietNoAccent": "nguyen khi"
       },
       "links": {
         "sourceVocabId": "n5_l25_v029",
-        "sourceSenseId": "n5_l25_s029"
+        "sourceSenseId": "n5_l25_s029",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nguyên khí"

@@ -286,7 +286,7 @@ void main() {
     await _pump(tester);
 
     expect(find.text('Lộ trình Shin Kanzen N1'), findsOneWidget);
-    expect(find.text('88 bài'), findsOneWidget);
+    expect(find.text(AppLanguage.vi.lessonCountLabel(88)), findsOneWidget);
     expect(find.text('Bài 01'), findsOneWidget);
     expect(find.text('Bài 88'), findsOneWidget);
   });

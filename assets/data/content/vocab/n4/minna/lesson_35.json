@@ -449,6 +449,7 @@
       "order": 9,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -469,18 +470,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s009",
-        "meaningVi": "hiếm",
+        "meaningVi": "Hiếm, hiếm có",
         "meaningEn": "rare / uncommon"
       },
       "search": {
         "termNoAccent": "珍しい",
         "readingNoAccent": "めすらしい",
-        "meaningViNoAccent": "hiem",
+        "meaningViNoAccent": "Hiem, hiem co",
         "hanVietNoAccent": "tran"
       },
       "links": {
         "sourceVocabId": "n4_l35_v009",
-        "sourceSenseId": "n4_l35_s009"
+        "sourceSenseId": "n4_l35_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trân"
@@ -559,6 +565,7 @@
       "order": 11,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -579,18 +586,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s011",
-        "meaningVi": "bên kia, phía bên kia",
+        "meaningVi": "Bên kia, bên đấy, phía đằng kia",
         "meaningEn": "over there / the other side"
       },
       "search": {
         "termNoAccent": "向こう",
         "readingNoAccent": "むこう",
-        "meaningViNoAccent": "ben kia, phia ben kia",
+        "meaningViNoAccent": "Ben kia, ben day, phia dang kia",
         "hanVietNoAccent": "huong"
       },
       "links": {
         "sourceVocabId": "n4_l35_v011",
-        "sourceSenseId": "n4_l35_s011"
+        "sourceSenseId": "n4_l35_s011",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hướng"
@@ -614,6 +626,7 @@
       "order": 12,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -634,18 +647,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s012",
-        "meaningVi": "hòn đảo",
+        "meaningVi": "Đảo, hòn đảo",
         "meaningEn": "island"
       },
       "search": {
         "termNoAccent": "島",
         "readingNoAccent": "しま",
-        "meaningViNoAccent": "hon dao",
+        "meaningViNoAccent": "Dao, hon dao",
         "hanVietNoAccent": "dao"
       },
       "links": {
         "sourceVocabId": "n4_l35_v012",
-        "sourceSenseId": "n4_l35_s012"
+        "sourceSenseId": "n4_l35_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đảo"
@@ -724,6 +742,7 @@
       "order": 14,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -744,18 +763,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s014",
-        "meaningVi": "cảng",
+        "meaningVi": "Cảng, bến cảng",
         "meaningEn": "harbor / port"
       },
       "search": {
         "termNoAccent": "港",
         "readingNoAccent": "みなと",
-        "meaningViNoAccent": "cang",
+        "meaningViNoAccent": "Cang, ben cang",
         "hanVietNoAccent": "cang"
       },
       "links": {
         "sourceVocabId": "n4_l35_v014",
-        "sourceSenseId": "n4_l35_s014"
+        "sourceSenseId": "n4_l35_s014",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cảng"
@@ -779,6 +803,7 @@
       "order": 15,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -800,18 +825,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s015",
-        "meaningVi": "hàng xóm, vùng lân cận",
+        "meaningVi": "Hàng xóm, khu vực lân cận",
         "meaningEn": "neighbor / neighborhood"
       },
       "search": {
         "termNoAccent": "近所",
         "readingNoAccent": "きんしょ",
-        "meaningViNoAccent": "hang xom, vung lan can",
+        "meaningViNoAccent": "Hang xom, khu vuc lan can",
         "hanVietNoAccent": "can so"
       },
       "links": {
         "sourceVocabId": "n4_l35_v015",
-        "sourceSenseId": "n4_l35_s015"
+        "sourceSenseId": "n4_l35_s015",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cận sở"
@@ -1112,6 +1142,7 @@
       "order": 21,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1133,18 +1164,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s021",
-        "meaningVi": "sự cho phép",
+        "meaningVi": "Phép, giấy phép",
         "meaningEn": "permission"
       },
       "search": {
         "termNoAccent": "許可",
         "readingNoAccent": "きょか",
-        "meaningViNoAccent": "su cho phep",
+        "meaningViNoAccent": "Phep, giay phep",
         "hanVietNoAccent": "hua kha"
       },
       "links": {
         "sourceVocabId": "n4_l35_v021",
-        "sourceSenseId": "n4_l35_s021"
+        "sourceSenseId": "n4_l35_s021",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hứa khả"
@@ -1168,6 +1204,7 @@
       "order": 22,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1188,18 +1225,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s022",
-        "meaningVi": "vòng tròn",
+        "meaningVi": "Tròn, vòng tròn",
         "meaningEn": "circle"
       },
       "search": {
         "termNoAccent": "丸",
         "readingNoAccent": "まる",
-        "meaningViNoAccent": "vong tron",
+        "meaningViNoAccent": "Tron, vong tron",
         "hanVietNoAccent": "hoan"
       },
       "links": {
         "sourceVocabId": "n4_l35_v022",
-        "sourceSenseId": "n4_l35_s022"
+        "sourceSenseId": "n4_l35_s022",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hoàn"
@@ -1223,6 +1265,7 @@
       "order": 23,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1244,18 +1287,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s023",
-        "meaningVi": "thao tác, vận hành",
+        "meaningVi": "Thao tác",
         "meaningEn": "operation"
       },
       "search": {
         "termNoAccent": "操作",
         "readingNoAccent": "そうさ",
-        "meaningViNoAccent": "thao tac, van hanh",
+        "meaningViNoAccent": "Thao tac",
         "hanVietNoAccent": "thao tac"
       },
       "links": {
         "sourceVocabId": "n4_l35_v023",
-        "sourceSenseId": "n4_l35_s023"
+        "sourceSenseId": "n4_l35_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thao tác"
@@ -1772,6 +1820,7 @@
       "order": 33,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1792,18 +1841,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s033",
-        "meaningVi": "đầu tiên",
+        "meaningVi": "Đầu tiên, trước hết",
         "meaningEn": "first"
       },
       "search": {
         "termNoAccent": "初めに",
         "readingNoAccent": "はしめに",
-        "meaningViNoAccent": "dau tien",
+        "meaningViNoAccent": "Dau tien, truoc het",
         "hanVietNoAccent": "so"
       },
       "links": {
         "sourceVocabId": "n4_l35_v033",
-        "sourceSenseId": "n4_l35_s033"
+        "sourceSenseId": "n4_l35_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "sơ"
@@ -2269,6 +2323,7 @@
       "order": 42,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2289,18 +2344,23 @@
       },
       "sense": {
         "senseId": "n4_l35_s042",
-        "meaningVi": "chi tiết, cụ thể, tường tận",
+        "meaningVi": "Cụ thể, chi tiết",
         "meaningEn": "detailed"
       },
       "search": {
         "termNoAccent": "詳しい",
         "readingNoAccent": "くわしい",
-        "meaningViNoAccent": "chi tiet, cu the, tuong tan",
+        "meaningViNoAccent": "Cu the, chi tiet",
         "hanVietNoAccent": "tuong"
       },
       "links": {
         "sourceVocabId": "n4_l35_v042",
-        "sourceSenseId": "n4_l35_s042"
+        "sourceSenseId": "n4_l35_s042",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tường"

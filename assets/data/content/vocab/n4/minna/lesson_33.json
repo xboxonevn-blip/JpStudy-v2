@@ -620,6 +620,7 @@
       "order": 12,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -640,18 +641,23 @@
       },
       "sense": {
         "senseId": "n4_l33_s012",
-        "meaningVi": "chỗ ngồi",
+        "meaningVi": "Chỗ ngồi, ghế",
         "meaningEn": "seat"
       },
       "search": {
         "termNoAccent": "席",
         "readingNoAccent": "せき",
-        "meaningViNoAccent": "cho ngoi",
+        "meaningViNoAccent": "Cho ngoi, ghe",
         "hanVietNoAccent": "tich"
       },
       "links": {
         "sourceVocabId": "n4_l33_v012",
-        "sourceSenseId": "n4_l33_s012"
+        "sourceSenseId": "n4_l33_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tịch"
@@ -946,6 +952,7 @@
       "order": 18,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -967,18 +974,23 @@
       },
       "sense": {
         "senseId": "n4_l33_s018",
-        "meaningVi": "quy tắc",
+        "meaningVi": "Quy tắc, kỷ luật",
         "meaningEn": "regulation / rule"
       },
       "search": {
         "termNoAccent": "規則",
         "readingNoAccent": "きそく",
-        "meaningViNoAccent": "quy tac",
+        "meaningViNoAccent": "Quy tac, ky luat",
         "hanVietNoAccent": "qui tac"
       },
       "links": {
         "sourceVocabId": "n4_l33_v018",
-        "sourceSenseId": "n4_l33_s018"
+        "sourceSenseId": "n4_l33_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "qui tắc"
@@ -2780,6 +2792,7 @@
       "order": 51,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2801,18 +2814,23 @@
       },
       "sense": {
         "senseId": "n4_l33_s051",
-        "meaningVi": "vắng nhà",
+        "meaningVi": "Đi vắng",
         "meaningEn": "absence"
       },
       "search": {
         "termNoAccent": "留守",
         "readingNoAccent": "るす",
-        "meaningViNoAccent": "vang nha",
+        "meaningViNoAccent": "Di vang",
         "hanVietNoAccent": "luu thu"
       },
       "links": {
         "sourceVocabId": "n4_l33_v051",
-        "sourceSenseId": "n4_l33_s051"
+        "sourceSenseId": "n4_l33_s051",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lưu thủ"
@@ -3223,6 +3241,7 @@
       "order": 59,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3243,18 +3262,23 @@
       },
       "sense": {
         "senseId": "n4_l33_s059",
-        "meaningVi": "buồn bã",
+        "meaningVi": "Buồn, đau thương",
         "meaningEn": "sad"
       },
       "search": {
         "termNoAccent": "悲しい",
         "readingNoAccent": "かなしい",
-        "meaningViNoAccent": "buon ba",
+        "meaningViNoAccent": "Buon, dau thuong",
         "hanVietNoAccent": "bi"
       },
       "links": {
         "sourceVocabId": "n4_l33_v059",
-        "sourceSenseId": "n4_l33_s059"
+        "sourceSenseId": "n4_l33_s059",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bi"

@@ -621,6 +621,7 @@
       "order": 12,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -641,18 +642,23 @@
       },
       "sense": {
         "senseId": "n4_l44_s012",
-        "meaningVi": "đậm (vị, màu)",
+        "meaningVi": "Nồng, đậm",
         "meaningEn": "strong (taste) / dark (color)"
       },
       "search": {
         "termNoAccent": "濃い",
         "readingNoAccent": "こい",
-        "meaningViNoAccent": "dam (vi, mau)",
+        "meaningViNoAccent": "Nong, dam",
         "hanVietNoAccent": "nong"
       },
       "links": {
         "sourceVocabId": "n4_l44_v012",
-        "sourceSenseId": "n4_l44_s012"
+        "sourceSenseId": "n4_l44_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nống"
@@ -1979,6 +1985,7 @@
       "order": 37,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2000,18 +2007,23 @@
       },
       "sense": {
         "senseId": "n4_l44_s037",
-        "meaningVi": "cách nói, biểu hiện",
+        "meaningVi": "Cách nói, cách diễn đạt",
         "meaningEn": "expression"
       },
       "search": {
         "termNoAccent": "表現",
         "readingNoAccent": "ひょうけん",
-        "meaningViNoAccent": "cach noi, bieu hien",
+        "meaningViNoAccent": "Cach noi, cach dien dat",
         "hanVietNoAccent": "bieu hien"
       },
       "links": {
         "sourceVocabId": "n4_l44_v037",
-        "sourceSenseId": "n4_l44_s037"
+        "sourceSenseId": "n4_l44_s037",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "biểu hiện"
@@ -2255,6 +2267,7 @@
       "order": 42,
       "tags": [
         "suffix",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2275,18 +2288,24 @@
       },
       "sense": {
         "senseId": "n4_l44_s042",
-        "meaningVi": "lan",
+        "meaningVi": "Lần",
         "meaningEn": "times (multiplier)"
       },
       "search": {
         "termNoAccent": "倍",
         "readingNoAccent": "はい",
-        "meaningViNoAccent": "lan",
+        "meaningViNoAccent": "Lan",
         "hanVietNoAccent": "boi"
       },
       "links": {
         "sourceVocabId": "n4_l44_v042",
-        "sourceSenseId": "n4_l44_s042"
+        "sourceSenseId": "n4_l44_s042",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "mimikara-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bội"
@@ -2294,8 +2313,8 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l44_v042-001",
-          "ja": "これは倍です。",
-          "vi": "Đây là lan.",
+          "ja": "値段は前の二倍です。",
+          "vi": "Giá gấp hai lần trước đây.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for 倍",
@@ -2363,6 +2382,7 @@
       "order": 44,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2384,18 +2404,23 @@
       },
       "sense": {
         "senseId": "n4_l44_s044",
-        "meaningVi": "ly do",
+        "meaningVi": "Lí do",
         "meaningEn": "reason"
       },
       "search": {
         "termNoAccent": "理由",
         "readingNoAccent": "りゆう",
-        "meaningViNoAccent": "ly do",
+        "meaningViNoAccent": "Li do",
         "hanVietNoAccent": "li do"
       },
       "links": {
         "sourceVocabId": "n4_l44_v044",
-        "sourceSenseId": "n4_l44_s044"
+        "sourceSenseId": "n4_l44_s044",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lí do"

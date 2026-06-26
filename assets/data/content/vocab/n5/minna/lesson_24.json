@@ -566,6 +566,7 @@
       "order": 11,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -587,18 +588,23 @@
       },
       "sense": {
         "senseId": "n5_l24_s011",
-        "meaningVi": "sự chuẩn bị",
+        "meaningVi": "Chuẩn bị",
         "meaningEn": "preparation"
       },
       "search": {
         "termNoAccent": "準備",
         "readingNoAccent": "しゅんひ",
-        "meaningViNoAccent": "su chuan bi",
+        "meaningViNoAccent": "Chuan bi",
         "hanVietNoAccent": "chuan bi"
       },
       "links": {
         "sourceVocabId": "n5_l24_v011",
-        "sourceSenseId": "n5_l24_s011"
+        "sourceSenseId": "n5_l24_s011",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "chuẩn bị"

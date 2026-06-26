@@ -61,9 +61,10 @@ function analyzeRouteResult(input) {
   const route = input.route || '/';
   const text = normalizeText(input.text);
   const routePreserved = routeTargetFromUrl(input.url) === route;
-  const foundFallbackMarkers = n5FallbackMarkers.filter((marker) =>
-    text.includes(marker),
-  );
+  const foundFallbackMarkers =
+    level === 'n5'
+      ? []
+      : n5FallbackMarkers.filter((marker) => text.includes(marker));
   const hasExpectedLevel = text.includes(upperLevel);
   const sparseAllowed = sparseAccessibleRoutes.has(route);
   const loadError = input.loadError || null;

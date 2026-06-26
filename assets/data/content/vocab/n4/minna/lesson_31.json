@@ -401,6 +401,7 @@
       "order": 8,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -422,18 +423,23 @@
       },
       "sense": {
         "senseId": "n4_l31_s008",
-        "meaningVi": "bài văn, bài luận",
+        "meaningVi": "Bài văn",
         "meaningEn": "essay / composition"
       },
       "search": {
         "termNoAccent": "作文",
         "readingNoAccent": "さくふん",
-        "meaningViNoAccent": "bai van, bai luan",
+        "meaningViNoAccent": "Bai van",
         "hanVietNoAccent": "tac van"
       },
       "links": {
         "sourceVocabId": "n4_l31_v008",
-        "sourceSenseId": "n4_l31_s008"
+        "sourceSenseId": "n4_l31_s008",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tác văn"
@@ -570,6 +576,7 @@
       "order": 11,
       "tags": [
         "event",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -592,18 +599,23 @@
       },
       "sense": {
         "senseId": "n4_l31_s011",
-        "meaningVi": "lễ cưới",
+        "meaningVi": "Lễ cưới, đám cưới",
         "meaningEn": "wedding ceremony"
       },
       "search": {
         "termNoAccent": "結婚式",
         "readingNoAccent": "けっこんしき",
-        "meaningViNoAccent": "le cuoi",
+        "meaningViNoAccent": "Le cuoi, dam cuoi",
         "hanVietNoAccent": "ket hon thuc"
       },
       "links": {
         "sourceVocabId": "n4_l31_v011",
-        "sourceSenseId": "n4_l31_s011"
+        "sourceSenseId": "n4_l31_s011",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "kết hôn thức"
@@ -683,6 +695,7 @@
       "order": 13,
       "tags": [
         "event",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -703,18 +716,23 @@
       },
       "sense": {
         "senseId": "n4_l31_s013",
-        "meaningVi": "lễ, đám (cưới, tang)",
+        "meaningVi": "Lễ, đám",
         "meaningEn": "ceremony"
       },
       "search": {
         "termNoAccent": "式",
         "readingNoAccent": "しき",
-        "meaningViNoAccent": "le, đam (cuoi, tang)",
+        "meaningViNoAccent": "Le, dam",
         "hanVietNoAccent": "thuc"
       },
       "links": {
         "sourceVocabId": "n4_l31_v013",
-        "sourceSenseId": "n4_l31_s013"
+        "sourceSenseId": "n4_l31_s013",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thức"
@@ -1685,6 +1703,7 @@
       "order": 31,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1705,18 +1724,23 @@
       },
       "sense": {
         "senseId": "n4_l31_s031",
-        "meaningVi": "chán, ghét",
+        "meaningVi": "Chán, ghét, không chấp nhận được",
         "meaningEn": "hateful / disagreeable"
       },
       "search": {
         "termNoAccent": "嫌",
         "readingNoAccent": "いや",
-        "meaningViNoAccent": "chan, ghet",
+        "meaningViNoAccent": "Chan, ghet, khong chap nhan duoc",
         "hanVietNoAccent": "hiem"
       },
       "links": {
         "sourceVocabId": "n4_l31_v031",
-        "sourceSenseId": "n4_l31_s031"
+        "sourceSenseId": "n4_l31_s031",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hiềm"
@@ -1724,11 +1748,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l31_v031-001",
-          "ja": "これは嫌です。",
-          "vi": "Đây là chán.",
+          "ja": "この仕事は嫌です。",
+          "vi": "Tôi không thích công việc này.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 嫌",
+          "source_detail": "JpStudy-authored adjective context for 嫌",
           "license": "JpStudy authored"
         }
       ]
@@ -1850,6 +1874,7 @@
       "order": 34,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1871,18 +1896,23 @@
       },
       "sense": {
         "senseId": "n4_l31_s034",
-        "meaningVi": "thành phố, đô hội",
+        "meaningVi": "Thành phố, nơi đô hội",
         "meaningEn": "city"
       },
       "search": {
         "termNoAccent": "都会",
         "readingNoAccent": "とかい",
-        "meaningViNoAccent": "thanh pho, đo hoi",
+        "meaningViNoAccent": "Thanh pho, noi do hoi",
         "hanVietNoAccent": "do hoi"
       },
       "links": {
         "sourceVocabId": "n4_l31_v034",
-        "sourceSenseId": "n4_l31_s034"
+        "sourceSenseId": "n4_l31_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đô hội"
@@ -1962,6 +1992,7 @@
       "order": 36,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1983,18 +2014,24 @@
       },
       "sense": {
         "senseId": "n4_l31_s036",
-        "meaningVi": "tự do",
+        "meaningVi": "Tự do, thoải mái",
         "meaningEn": "freely"
       },
       "search": {
         "termNoAccent": "自由に",
         "readingNoAccent": "しゆうに",
-        "meaningViNoAccent": "tu do",
+        "meaningViNoAccent": "Tu do, thoai mai",
         "hanVietNoAccent": "tu do"
       },
       "links": {
         "sourceVocabId": "n4_l31_v036",
-        "sourceSenseId": "n4_l31_s036"
+        "sourceSenseId": "n4_l31_s036",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự do"
@@ -2237,6 +2274,7 @@
       "order": 41,
       "tags": [
         "adjective",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2258,18 +2296,24 @@
       },
       "sense": {
         "senseId": "n4_l31_s041",
-        "meaningVi": "thường, thông thường",
+        "meaningVi": "Thông thường, bình thường",
         "meaningEn": "ordinary / normal"
       },
       "search": {
         "termNoAccent": "普通の",
         "readingNoAccent": "ふつうの",
-        "meaningViNoAccent": "thuong, thong thuong",
+        "meaningViNoAccent": "Thong thuong, binh thuong",
         "hanVietNoAccent": "pho thong"
       },
       "links": {
         "sourceVocabId": "n4_l31_v041",
-        "sourceSenseId": "n4_l31_s041"
+        "sourceSenseId": "n4_l31_s041",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phổ thông"
@@ -2513,6 +2557,7 @@
       "order": 46,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2534,18 +2579,24 @@
       },
       "sense": {
         "senseId": "n4_l31_s046",
-        "meaningVi": "thiên nhiên",
+        "meaningVi": "Tự nhiên, thiên nhiên",
         "meaningEn": "nature"
       },
       "search": {
         "termNoAccent": "自然",
         "readingNoAccent": "しせん",
-        "meaningViNoAccent": "thien nhien",
+        "meaningViNoAccent": "Tu nhien, thien nhien",
         "hanVietNoAccent": "tu nhien"
       },
       "links": {
         "sourceVocabId": "n4_l31_v046",
-        "sourceSenseId": "n4_l31_s046"
+        "sourceSenseId": "n4_l31_s046",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n4",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự nhiên"
@@ -2553,12 +2604,12 @@
       "example_sentences": [
         {
           "example_id": "tat-125019-vie-490725",
-          "ja": "天然自然が荒らされていくのは残念なことだ。",
-          "vi": "Lãng phí tài nguyên thiên nhiên lá một việc làm thật xấu hổ.",
+          "ja": "この島には美しい自然があります。",
+          "vi": "Trên hòn đảo này có thiên nhiên rất đẹp.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 125019; translation 490725",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored noun context for 自然",
+          "license": "JpStudy authored"
         }
       ]
     },

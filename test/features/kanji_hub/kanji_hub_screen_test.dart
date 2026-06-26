@@ -282,14 +282,20 @@ _FakeKanjiHubLessonRepository _buildRepo({
         mnemonicEn: 'Picture a student under a school roof.',
         examples: [
           KanjiExample(
-            word: '\u5b66\u6821',
-            reading: 'gakkou',
-            meaning: 'truong hoc',
-            meaningEn: 'school',
+            word: '\u5b66\u751f',
+            reading: 'gakusei',
+            meaning: 'học sinh',
+            meaningEn: 'student',
+          ),
+          KanjiExample(
+            word: '\u5927\u5b66',
+            reading: 'daigaku',
+            meaning: 'đại học',
+            meaningEn: 'university',
           ),
         ],
         jlptLevel: 'N5',
-        decomposition: KanjiDecomposition(hanViet: 'hoc'),
+        decomposition: KanjiDecomposition(hanViet: 'học'),
       ),
       KanjiItem(
         id: 2,
@@ -380,6 +386,18 @@ const _testHanVietRuleSetV2 = HanVietRuleSetV2(
       explanation:
           "Phụ âm đầu Hán-Việt H/K/Gi/C/Qu thường chuyển sang hàng K/G trong On'yomi.",
       examples: [
+        HanVietRuleExampleV2(
+          hanViet: 'Học',
+          kanji: '学',
+          kanjiId: 5,
+          assetKanjiId: 'test_kanji_5',
+          level: 'N5',
+          onyomi: 'がく',
+          romaji: 'GAKU',
+          compound: '学生',
+          compoundKana: 'がくせい',
+          compoundMeaning: 'học sinh',
+        ),
         HanVietRuleExampleV2(
           hanViet: 'Giáo',
           kanji: '校',
@@ -549,7 +567,15 @@ void main() {
 
     await _mockRadicalsAsset();
     await tester.pumpWidget(
-      _buildSubject(repo: _buildRepo(), language: AppLanguage.vi),
+      _buildSubject(
+        repo: _buildRepo(),
+        language: AppLanguage.vi,
+        overrides: [
+          hanVietRulesV2Provider.overrideWith(
+            (ref) async => _testHanVietRuleSetV2,
+          ),
+        ],
+      ),
     );
     await _pumpKanjiHub(tester);
 
@@ -819,6 +845,11 @@ void main() {
       find.byKey(const ValueKey('kanji_detail_han_viet_row')),
       findsOneWidget,
     );
+    expect(find.text('Cầu Hán-Việt'), findsOneWidget);
+    expect(find.text('học'), findsOneWidget);
+    expect(find.textContaining('Âm Hán-Việt: học'), findsOneWidget);
+    expect(find.textContaining('học sinh'), findsWidgets);
+    expect(find.textContaining('đại học'), findsWidgets);
     expect(find.text('Liên tưởng mái trường khi học chữ này.'), findsOneWidget);
   });
 
@@ -874,7 +905,7 @@ void main() {
       find.byKey(const ValueKey('kanji_detail_han_viet_rule_panel')),
       findsOneWidget,
     );
-    expect(find.text('Quy tắc Hán-Việt áp dụng'), findsOneWidget);
+    expect(find.text('Cầu Hán-Việt'), findsOneWidget);
     expect(find.text('1. Âm đầu là H/K/Gi/C/Qu'), findsOneWidget);
     expect(find.textContaining('90%'), findsOneWidget);
     expect(find.textContaining('K/G'), findsWidgets);

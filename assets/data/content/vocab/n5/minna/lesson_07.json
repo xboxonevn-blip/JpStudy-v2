@@ -1690,6 +1690,7 @@
       "order": 32,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1710,18 +1711,23 @@
       },
       "sense": {
         "senseId": "n5_l07_s032",
-        "meaningVi": "bố (của mình)",
+        "meaningVi": "Cha mình",
         "meaningEn": "father"
       },
       "search": {
         "termNoAccent": "父",
         "readingNoAccent": "ちち",
-        "meaningViNoAccent": "bo (cua minh)",
+        "meaningViNoAccent": "Cha minh",
         "hanVietNoAccent": "phu"
       },
       "links": {
         "sourceVocabId": "n5_l07_v032",
-        "sourceSenseId": "n5_l07_s032"
+        "sourceSenseId": "n5_l07_s032",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phụ"
@@ -1745,6 +1751,7 @@
       "order": 33,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1765,18 +1772,23 @@
       },
       "sense": {
         "senseId": "n5_l07_s033",
-        "meaningVi": "mẹ (của mình)",
+        "meaningVi": "Mẹ mình",
         "meaningEn": "mother"
       },
       "search": {
         "termNoAccent": "母",
         "readingNoAccent": "はは",
-        "meaningViNoAccent": "me (cua minh)",
+        "meaningViNoAccent": "Me minh",
         "hanVietNoAccent": "mau"
       },
       "links": {
         "sourceVocabId": "n5_l07_v033",
-        "sourceSenseId": "n5_l07_s033"
+        "sourceSenseId": "n5_l07_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mẫu"

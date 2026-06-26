@@ -43,7 +43,7 @@ class GrammarExampleWidget extends ConsumerWidget {
             ),
             if (audioText.isNotEmpty)
               IconButton(
-                tooltip: 'Play Japanese audio',
+                tooltip: language.playJapaneseAudioTooltip,
                 icon: const Icon(Icons.volume_up_rounded),
                 onPressed: () => _speak(context, ref, audioText),
               ),
@@ -66,10 +66,10 @@ class GrammarExampleWidget extends ConsumerWidget {
     final result = await ref.read(ttsServiceProvider).speak(text);
     if (!context.mounted) return;
     final message = switch (result.status) {
-      TtsSpeakStatus.queued => 'Audio queued',
-      TtsSpeakStatus.empty => 'No Japanese text to read',
-      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
-      TtsSpeakStatus.error => 'Could not play Japanese audio.',
+      TtsSpeakStatus.queued => language.audioQueuedMessage,
+      TtsSpeakStatus.empty => language.japaneseAudioEmptyMessage,
+      TtsSpeakStatus.unavailable => language.japaneseVoiceUnavailableMessage,
+      TtsSpeakStatus.error => language.japaneseAudioPlaybackErrorMessage,
     };
     ScaffoldMessenger.maybeOf(
       context,

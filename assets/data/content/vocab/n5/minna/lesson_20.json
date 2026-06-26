@@ -290,6 +290,7 @@
       "order": 6,
       "tags": [
         "pronoun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -310,18 +311,23 @@
       },
       "sense": {
         "senseId": "n5_l20_s006",
-        "meaningVi": "tớ, mình (nam giới dùng)",
+        "meaningVi": "Tớ (cách xưng thân mật của わたし, được dùng bởi nam giới)",
         "meaningEn": "I (male)"
       },
       "search": {
         "termNoAccent": "僕",
         "readingNoAccent": "ほく",
-        "meaningViNoAccent": "to, minh (nam gioi dung)",
+        "meaningViNoAccent": "To (cach xung than mat cua わたし, duoc dung boi nam gioi)",
         "hanVietNoAccent": "boc"
       },
       "links": {
         "sourceVocabId": "n5_l20_v006",
-        "sourceSenseId": "n5_l20_s006"
+        "sourceSenseId": "n5_l20_s006",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bộc"

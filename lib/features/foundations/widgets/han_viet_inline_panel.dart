@@ -126,13 +126,17 @@ class HanVietRuleMiniPanel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Quy tắc Hán-Việt áp dụng',
+            language.hanVietRuleMiniTitle,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
               color: palette.primary,
               fontWeight: FontWeight.w900,
             ),
           ),
           const SizedBox(height: 8),
+          if ((hanViet ?? '').trim().isNotEmpty) ...[
+            Text(language.hanVietBridgeBody(hanViet!.trim())),
+            const SizedBox(height: 8),
+          ],
           Text(
             '${primaryRule.section}. ${primaryRule.title}',
             style: Theme.of(

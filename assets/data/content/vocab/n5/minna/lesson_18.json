@@ -955,6 +955,7 @@
       "order": 18,
       "tags": [
         "occupation",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -976,18 +977,24 @@
       },
       "sense": {
         "senseId": "n5_l18_s018",
-        "meaningVi": "tổ trưởng, trưởng khoa",
+        "meaningVi": "Tổ trưởng",
         "meaningEn": "section chief"
       },
       "search": {
         "termNoAccent": "課長",
         "readingNoAccent": "かちょう",
-        "meaningViNoAccent": "to truong, truong khoa",
+        "meaningViNoAccent": "To truong",
         "hanVietNoAccent": "khoa truong"
       },
       "links": {
         "sourceVocabId": "n5_l18_v018",
-        "sourceSenseId": "n5_l18_s018"
+        "sourceSenseId": "n5_l18_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "khoá trường"
@@ -1179,6 +1186,7 @@
       "order": 22,
       "tags": [
         "animal",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1199,18 +1207,23 @@
       },
       "sense": {
         "senseId": "n5_l18_s022",
-        "meaningVi": "con ngựa",
+        "meaningVi": "Ngựa",
         "meaningEn": "horse"
       },
       "search": {
         "termNoAccent": "馬",
         "readingNoAccent": "うま",
-        "meaningViNoAccent": "con ngua",
+        "meaningViNoAccent": "Ngua",
         "hanVietNoAccent": "ma"
       },
       "links": {
         "sourceVocabId": "n5_l18_v022",
-        "sourceSenseId": "n5_l18_s022"
+        "sourceSenseId": "n5_l18_s022",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mã"

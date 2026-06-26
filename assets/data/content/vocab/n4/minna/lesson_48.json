@@ -235,6 +235,7 @@
       "order": 5,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -255,18 +256,22 @@
       },
       "sense": {
         "senseId": "n4_l48_s005",
-        "meaningVi": "ghét, không thích",
+        "meaningVi": "Ngán, không thích",
         "meaningEn": "unwilling / reluctant"
       },
       "search": {
         "termNoAccent": "嫌",
         "readingNoAccent": "いや",
-        "meaningViNoAccent": "ghet, khong thich",
+        "meaningViNoAccent": "Ngan, khong thich",
         "hanVietNoAccent": "hiem"
       },
       "links": {
         "sourceVocabId": "n4_l48_v005",
-        "sourceSenseId": "n4_l48_s005"
+        "sourceSenseId": "n4_l48_s005",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hiềm"
@@ -274,11 +279,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l48_v005-001",
-          "ja": "これは嫌です。",
-          "vi": "Đây là ghét.",
+          "ja": "この仕事は嫌です。",
+          "vi": "Tôi không thích công việc này.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 嫌",
+          "source_detail": "JpStudy-authored adjective context for 嫌",
           "license": "JpStudy authored"
         }
       ]
@@ -454,6 +459,7 @@
       "order": 9,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -475,18 +481,24 @@
       },
       "sense": {
         "senseId": "n4_l48_s009",
-        "meaningVi": "tự do",
+        "meaningVi": "Tự do, thoải mái",
         "meaningEn": "freely"
       },
       "search": {
         "termNoAccent": "自由に",
         "readingNoAccent": "しゆうに",
-        "meaningViNoAccent": "tu do",
+        "meaningViNoAccent": "Tu do, thoai mai",
         "hanVietNoAccent": "tu do"
       },
       "links": {
         "sourceVocabId": "n4_l48_v009",
-        "sourceSenseId": "n4_l48_s009"
+        "sourceSenseId": "n4_l48_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự do"
@@ -510,6 +522,7 @@
       "order": 10,
       "tags": [
         "suffix",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -530,18 +543,22 @@
       },
       "sense": {
         "senseId": "n4_l48_s010",
-        "meaningVi": "trong ～ (khoảng thời gian)",
+        "meaningVi": "Trong ~ (dùng để chỉ khoảng thời gian)",
         "meaningEn": "for ～ (duration)"
       },
       "search": {
         "termNoAccent": "～間",
         "readingNoAccent": "かん",
-        "meaningViNoAccent": "trong ～ (khoang thoi gian)",
+        "meaningViNoAccent": "Trong ~ (dung de chi khoang thoi gian)",
         "hanVietNoAccent": "gian"
       },
       "links": {
         "sourceVocabId": "n4_l48_v010",
-        "sourceSenseId": "n4_l48_s010"
+        "sourceSenseId": "n4_l48_s010",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "gian"
@@ -549,11 +566,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l48_v010-001",
-          "ja": "契約書では～間の形で前の内容を受けています。",
-          "vi": "Trong hợp đồng, trong ～ nối lại nội dung phía trước.",
+          "ja": "一週間、休みます。",
+          "vi": "Tôi sẽ nghỉ trong một tuần.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored function-word context for ～間",
+          "source_detail": "JpStudy-authored duration suffix context for ～間",
           "license": "JpStudy authored"
         }
       ]
@@ -892,6 +909,7 @@
       "order": 17,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -912,18 +930,23 @@
       },
       "sense": {
         "senseId": "n4_l48_s017",
-        "meaningVi": "cha mẹ",
+        "meaningVi": "Bố mẹ",
         "meaningEn": "parent"
       },
       "search": {
         "termNoAccent": "親",
         "readingNoAccent": "おや",
-        "meaningViNoAccent": "cha me",
+        "meaningViNoAccent": "Bo me",
         "hanVietNoAccent": "than"
       },
       "links": {
         "sourceVocabId": "n4_l48_v017",
-        "sourceSenseId": "n4_l48_s017"
+        "sourceSenseId": "n4_l48_s017",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thân"
@@ -1168,6 +1191,7 @@
       "order": 22,
       "tags": [
         "adj_no",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1189,18 +1213,24 @@
       },
       "sense": {
         "senseId": "n4_l48_s022",
-        "meaningVi": "thường, thông thường",
+        "meaningVi": "Thông thường, bình thường",
         "meaningEn": "ordinary / common"
       },
       "search": {
         "termNoAccent": "普通の",
         "readingNoAccent": "ふつうの",
-        "meaningViNoAccent": "thuong, thong thuong",
+        "meaningViNoAccent": "Thong thuong, binh thuong",
         "hanVietNoAccent": "pho thong"
       },
       "links": {
         "sourceVocabId": "n4_l48_v022",
-        "sourceSenseId": "n4_l48_s022"
+        "sourceSenseId": "n4_l48_s022",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phổ thông"
@@ -1279,6 +1309,7 @@
       "order": 24,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1299,18 +1330,23 @@
       },
       "sense": {
         "senseId": "n4_l48_s024",
-        "meaningVi": "nghiem khac",
+        "meaningVi": "Nghiêm, nghiêm khắc, nghiêm ngặt",
         "meaningEn": "strict / severe"
       },
       "search": {
         "termNoAccent": "厳しい",
         "readingNoAccent": "きひしい",
-        "meaningViNoAccent": "nghiem khac",
+        "meaningViNoAccent": "Nghiem, nghiem khac, nghiem ngat",
         "hanVietNoAccent": "nghiem"
       },
       "links": {
         "sourceVocabId": "n4_l48_v024",
-        "sourceSenseId": "n4_l48_s024"
+        "sourceSenseId": "n4_l48_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nghiêm"
@@ -1334,6 +1370,7 @@
       "order": 25,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1352,18 +1389,22 @@
       },
       "sense": {
         "senseId": "n4_l48_s025",
-        "meaningVi": "lich trinh",
+        "meaningVi": "Lịch, kế hoạch",
         "meaningEn": "schedule"
       },
       "search": {
         "termNoAccent": "スケシュール",
         "readingNoAccent": "すけしゅーる",
-        "meaningViNoAccent": "lich trinh",
+        "meaningViNoAccent": "Lich, ke hoach",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l48_v025",
-        "sourceSenseId": "n4_l48_s025"
+        "sourceSenseId": "n4_l48_s025",
+        "sourceConsensus": [
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1372,7 +1413,7 @@
         {
           "example_id": "ex-n4_l48_v025-001",
           "ja": "出発前に旅行のスケジュールを確認しました。",
-          "vi": "Trước khi xuất phát, tôi xác nhận lich trinh của chuyến đi.",
+          "vi": "Trước khi xuất phát, tôi xác nhận lịch trình của chuyến đi.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored arrangement context for スケジュール",
@@ -1498,6 +1539,7 @@
       "order": 28,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1518,18 +1560,22 @@
       },
       "sense": {
         "senseId": "n4_l48_s028",
-        "meaningVi": "lau roi khong gap",
+        "meaningVi": "Lâu rồi không gặp",
         "meaningEn": "after a long time"
       },
       "search": {
         "termNoAccent": "久しふり",
         "readingNoAccent": "ひさしふり",
-        "meaningViNoAccent": "lau roi khong gap",
+        "meaningViNoAccent": "Lau roi khong gap",
         "hanVietNoAccent": "cuu"
       },
       "links": {
         "sourceVocabId": "n4_l48_v028",
-        "sourceSenseId": "n4_l48_s028"
+        "sourceSenseId": "n4_l48_s028",
+        "sourceConsensus": [
+          "kanji-vocab-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cửu"

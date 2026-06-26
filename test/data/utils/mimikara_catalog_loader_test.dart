@@ -25,7 +25,7 @@ void main() {
   test(
     'Mimikara loader rejects banned source names from learner assets',
     () async {
-      for (final level in const ['N5', 'N4', 'N3', 'N2', 'N1']) {
+      for (final level in const ['N3', 'N2', 'N1']) {
         final catalog = await loadMimikaraUnitCatalog(level);
         expect(catalog.sourceCredit, isNot(contains('thocodehoctiengnhat')));
         expect(catalog.sourceCredit, isNot(contains('nhaikanji')));

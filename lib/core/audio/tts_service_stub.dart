@@ -21,7 +21,6 @@ class StubTtsService implements TtsService {
     return TtsSpeakResult(
       status: TtsSpeakStatus.unavailable,
       spokenText: normalized,
-      message: 'Trinh duyet hoac nen tang nay chua co giong tieng Nhat.',
     );
   }
 }

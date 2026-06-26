@@ -1994,6 +1994,7 @@
       "order": 37,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2014,18 +2015,23 @@
       },
       "sense": {
         "senseId": "n4_l29_s037",
-        "meaningVi": "cái kim (đồng hồ)",
+        "meaningVi": "Kim đồng hồ",
         "meaningEn": "hands (of a clock)"
       },
       "search": {
         "termNoAccent": "針",
         "readingNoAccent": "はり",
-        "meaningViNoAccent": "cai kim (dong ho)",
+        "meaningViNoAccent": "Kim dong ho",
         "hanVietNoAccent": "cham"
       },
       "links": {
         "sourceVocabId": "n4_l29_v037",
-        "sourceSenseId": "n4_l29_s037"
+        "sourceSenseId": "n4_l29_s037",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "châm"
@@ -2659,6 +2665,7 @@
       "order": 49,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2680,18 +2687,23 @@
       },
       "sense": {
         "senseId": "n4_l29_s049",
-        "meaningVi": "đồn cảnh sát",
+        "meaningVi": "Đồn cảnh sát, bốt cảnh sát",
         "meaningEn": "police box"
       },
       "search": {
         "termNoAccent": "交番",
         "readingNoAccent": "こうはん",
-        "meaningViNoAccent": "don canh sat",
+        "meaningViNoAccent": "Don canh sat, bot canh sat",
         "hanVietNoAccent": "giao deo"
       },
       "links": {
         "sourceVocabId": "n4_l29_v049",
-        "sourceSenseId": "n4_l29_s049"
+        "sourceSenseId": "n4_l29_s049",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giao dẻo"
@@ -2768,6 +2780,7 @@
       "order": 51,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2789,18 +2802,23 @@
       },
       "sense": {
         "senseId": "n4_l29_s051",
-        "meaningVi": "hồi âm, trả lời",
+        "meaningVi": "Trả lời, hồi âm",
         "meaningEn": "reply"
       },
       "search": {
         "termNoAccent": "返事",
         "readingNoAccent": "へんし",
-        "meaningViNoAccent": "hoi am, tra loi",
+        "meaningViNoAccent": "Tra loi, hoi am",
         "hanVietNoAccent": "phan su"
       },
       "links": {
         "sourceVocabId": "n4_l29_v051",
-        "sourceSenseId": "n4_l29_s051"
+        "sourceSenseId": "n4_l29_s051",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phản sự"

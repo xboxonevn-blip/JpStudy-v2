@@ -382,7 +382,10 @@ class _ExamStartCard extends StatelessWidget {
             spacing: AppSpacing.sm,
             runSpacing: AppSpacing.sm,
             children: [
-              AppStatusChip(label: 'JLPT $level', tone: AppStatusTone.primary),
+              AppStatusChip(
+                label: language.jlptLevelChipLabel(level),
+                tone: AppStatusTone.primary,
+              ),
               AppStatusChip(
                 label: meta.minutesLabel(language),
                 tone: AppStatusTone.warning,
@@ -719,11 +722,7 @@ _JlptExamMeta _examMeta(String level) {
 }
 
 String _questionLabel(AppLanguage language, int count) {
-  return switch (language) {
-    AppLanguage.en => '$count questions',
-    AppLanguage.vi => '$count câu',
-    AppLanguage.ja => '$count問',
-  };
+  return language.questionsCountLabel(count);
 }
 
 String _tr(

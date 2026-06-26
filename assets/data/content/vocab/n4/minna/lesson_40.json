@@ -1067,6 +1067,7 @@
       "order": 20,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1088,18 +1089,23 @@
       },
       "sense": {
         "senseId": "n4_l40_s020",
-        "meaningVi": "hồi âm, trả lời",
+        "meaningVi": "Trả lời, hồi âm",
         "meaningEn": "reply / answer"
       },
       "search": {
         "termNoAccent": "返事",
         "readingNoAccent": "へんし",
-        "meaningViNoAccent": "hoi am, tra loi",
+        "meaningViNoAccent": "Tra loi, hoi am",
         "hanVietNoAccent": "phan su"
       },
       "links": {
         "sourceVocabId": "n4_l40_v020",
-        "sourceSenseId": "n4_l40_s020"
+        "sourceSenseId": "n4_l40_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phản sự"
@@ -1291,6 +1297,7 @@
       "order": 24,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1311,18 +1318,23 @@
       },
       "sense": {
         "senseId": "n4_l40_s024",
-        "meaningVi": "vết thương, vết xước",
+        "meaningVi": "Vết thương",
         "meaningEn": "defect / wound / scratch"
       },
       "search": {
         "termNoAccent": "傷",
         "readingNoAccent": "きす",
-        "meaningViNoAccent": "vet thuong, vet xuoc",
+        "meaningViNoAccent": "Vet thuong",
         "hanVietNoAccent": "thuong"
       },
       "links": {
         "sourceVocabId": "n4_l40_v024",
-        "sourceSenseId": "n4_l40_s024"
+        "sourceSenseId": "n4_l40_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thương"
@@ -1454,6 +1466,7 @@
       "order": 27,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1474,18 +1487,23 @@
       },
       "sense": {
         "senseId": "n4_l40_s027",
-        "meaningVi": "cân nặng",
+        "meaningVi": "Cân nặng, trọng lượng",
         "meaningEn": "weight"
       },
       "search": {
         "termNoAccent": "重さ",
         "readingNoAccent": "おもさ",
-        "meaningViNoAccent": "can nang",
+        "meaningViNoAccent": "Can nang, trong luong",
         "hanVietNoAccent": "trong"
       },
       "links": {
         "sourceVocabId": "n4_l40_v027",
-        "sourceSenseId": "n4_l40_s027"
+        "sourceSenseId": "n4_l40_s027",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trọng"
@@ -2375,6 +2393,7 @@
       "order": 44,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2396,18 +2415,23 @@
       },
       "sense": {
         "senseId": "n4_l40_s044",
-        "meaningVi": "thành tích",
+        "meaningVi": "Kết quả, thành tích",
         "meaningEn": "performance / score"
       },
       "search": {
         "termNoAccent": "成績",
         "readingNoAccent": "せいせき",
-        "meaningViNoAccent": "thanh tich",
+        "meaningViNoAccent": "Ket qua, thanh tich",
         "hanVietNoAccent": "thanh tich"
       },
       "links": {
         "sourceVocabId": "n4_l40_v044",
-        "sourceSenseId": "n4_l40_s044"
+        "sourceSenseId": "n4_l40_s044",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thành tích"

@@ -30,7 +30,6 @@ class WebSpeechTtsService implements TtsService {
         return TtsSpeakResult(
           status: TtsSpeakStatus.unavailable,
           spokenText: normalized,
-          message: 'Trinh duyet khong co giong tieng Nhat.',
         );
       }
 

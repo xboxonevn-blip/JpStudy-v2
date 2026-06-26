@@ -2255,6 +2255,7 @@
       "order": 41,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2275,18 +2276,23 @@
       },
       "sense": {
         "senseId": "n5_l17_s041",
-        "meaningVi": "đau/đau",
+        "meaningVi": "Đau",
         "meaningEn": "painful / hurts"
       },
       "search": {
         "termNoAccent": "痛い",
         "readingNoAccent": "いたい",
-        "meaningViNoAccent": "dau/dau",
+        "meaningViNoAccent": "Dau",
         "hanVietNoAccent": "thong"
       },
       "links": {
         "sourceVocabId": "n5_l17_v041",
-        "sourceSenseId": "n5_l17_s041"
+        "sourceSenseId": "n5_l17_s041",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thống"

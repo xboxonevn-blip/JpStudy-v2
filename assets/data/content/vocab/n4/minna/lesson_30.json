@@ -1830,6 +1830,7 @@
       "order": 34,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1851,18 +1852,23 @@
       },
       "sense": {
         "senseId": "n4_l30_s034",
-        "meaningVi": "đồn cảnh sát",
+        "meaningVi": "Đồn cảnh sát, bốt cảnh sát",
         "meaningEn": "police box"
       },
       "search": {
         "termNoAccent": "交番",
         "readingNoAccent": "こうはん",
-        "meaningViNoAccent": "don canh sat",
+        "meaningViNoAccent": "Don canh sat, bot canh sat",
         "hanVietNoAccent": "giao deo"
       },
       "links": {
         "sourceVocabId": "n4_l30_v034",
-        "sourceSenseId": "n4_l30_s034"
+        "sourceSenseId": "n4_l30_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giao dẻo"
@@ -1886,6 +1892,7 @@
       "order": 35,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1907,18 +1914,23 @@
       },
       "sense": {
         "senseId": "n4_l30_s035",
-        "meaningVi": "địa điểm cũ, chỗ cũ",
+        "meaningVi": "Địa điểm ban đầu, địa điểm gốc",
         "meaningEn": "original place"
       },
       "search": {
         "termNoAccent": "元の所",
         "readingNoAccent": "もとのところ",
-        "meaningViNoAccent": "đia điem cu, cho cu",
+        "meaningViNoAccent": "Dia diem ban dau, dia diem goc",
         "hanVietNoAccent": "nguyen so"
       },
       "links": {
         "sourceVocabId": "n4_l30_v035",
-        "sourceSenseId": "n4_l30_s035"
+        "sourceSenseId": "n4_l30_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nguyên sở"
@@ -1942,6 +1954,7 @@
       "order": 36,
       "tags": [
         "position",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1962,18 +1975,23 @@
       },
       "sense": {
         "senseId": "n4_l30_s036",
-        "meaningVi": "xung quanh",
+        "meaningVi": "Xung quanh, vòng quanh",
         "meaningEn": "around / round"
       },
       "search": {
         "termNoAccent": "周り",
         "readingNoAccent": "まわり",
-        "meaningViNoAccent": "xung quanh",
+        "meaningViNoAccent": "Xung quanh, vong quanh",
         "hanVietNoAccent": "chu"
       },
       "links": {
         "sourceVocabId": "n4_l30_v036",
-        "sourceSenseId": "n4_l30_s036"
+        "sourceSenseId": "n4_l30_s036",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "chu"
@@ -2053,6 +2071,7 @@
       "order": 38,
       "tags": [
         "position",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2073,18 +2092,24 @@
       },
       "sense": {
         "senseId": "n4_l30_s038",
-        "meaningVi": "góc (trong phòng)",
+        "meaningVi": "Góc",
         "meaningEn": "corner"
       },
       "search": {
         "termNoAccent": "隅",
         "readingNoAccent": "すみ",
-        "meaningViNoAccent": "goc (trong phong)",
+        "meaningViNoAccent": "Goc",
         "hanVietNoAccent": "ngung"
       },
       "links": {
         "sourceVocabId": "n4_l30_v038",
-        "sourceSenseId": "n4_l30_s038"
+        "sourceSenseId": "n4_l30_s038",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "mimikara-n1",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ngung"
@@ -2763,6 +2788,7 @@
       "order": 51,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2783,18 +2809,22 @@
       },
       "sense": {
         "senseId": "n4_l30_s051",
-        "meaningVi": "vui",
+        "meaningVi": "Vui",
         "meaningEn": "glad / happy"
       },
       "search": {
         "termNoAccent": "嬉しい",
         "readingNoAccent": "うれしい",
-        "meaningViNoAccent": "vui",
+        "meaningViNoAccent": "Vui",
         "hanVietNoAccent": "hi"
       },
       "links": {
         "sourceVocabId": "n4_l30_v051",
-        "sourceSenseId": "n4_l30_s051"
+        "sourceSenseId": "n4_l30_s051",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hi"
@@ -2818,6 +2848,7 @@
       "order": 52,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2838,18 +2869,23 @@
       },
       "sense": {
         "senseId": "n4_l30_s052",
-        "meaningVi": "ghét, không thích",
+        "meaningVi": "Chán, ghét, không chấp nhận được",
         "meaningEn": "hateful / disagreeable"
       },
       "search": {
         "termNoAccent": "嫌",
         "readingNoAccent": "いや",
-        "meaningViNoAccent": "ghet, khong thich",
+        "meaningViNoAccent": "Chan, ghet, khong chap nhan duoc",
         "hanVietNoAccent": "hiem"
       },
       "links": {
         "sourceVocabId": "n4_l30_v052",
-        "sourceSenseId": "n4_l30_s052"
+        "sourceSenseId": "n4_l30_s052",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hiềm"
@@ -2857,11 +2893,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l30_v052-001",
-          "ja": "これは嫌です。",
-          "vi": "Đây là ghét.",
+          "ja": "この仕事は嫌です。",
+          "vi": "Tôi không thích công việc này.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 嫌",
+          "source_detail": "JpStudy-authored adjective context for 嫌",
           "license": "JpStudy authored"
         }
       ]

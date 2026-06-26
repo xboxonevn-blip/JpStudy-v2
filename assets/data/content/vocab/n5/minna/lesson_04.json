@@ -1080,6 +1080,7 @@
       "order": 20,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1100,18 +1101,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s020",
-        "meaningVi": "buổi sáng",
+        "meaningVi": "Sáng",
         "meaningEn": "morning"
       },
       "search": {
         "termNoAccent": "朝",
         "readingNoAccent": "あさ",
-        "meaningViNoAccent": "buoi sang",
+        "meaningViNoAccent": "Sang",
         "hanVietNoAccent": "trieu"
       },
       "links": {
         "sourceVocabId": "n5_l04_v020",
-        "sourceSenseId": "n5_l04_s020"
+        "sourceSenseId": "n5_l04_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "triều"
@@ -1135,6 +1141,7 @@
       "order": 21,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1155,18 +1162,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s021",
-        "meaningVi": "buổi trưa",
+        "meaningVi": "Trưa",
         "meaningEn": "daytime / noon"
       },
       "search": {
         "termNoAccent": "昼",
         "readingNoAccent": "ひる",
-        "meaningViNoAccent": "buoi trua",
+        "meaningViNoAccent": "Trua",
         "hanVietNoAccent": "tru"
       },
       "links": {
         "sourceVocabId": "n5_l04_v021",
-        "sourceSenseId": "n5_l04_s021"
+        "sourceSenseId": "n5_l04_s021",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trú"
@@ -1190,6 +1202,7 @@
       "order": 22,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1210,18 +1223,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s022",
-        "meaningVi": "buổi tối",
+        "meaningVi": "Tối",
         "meaningEn": "night / evening"
       },
       "search": {
         "termNoAccent": "晩",
         "readingNoAccent": "はん",
-        "meaningViNoAccent": "buoi toi",
+        "meaningViNoAccent": "Toi",
         "hanVietNoAccent": "van"
       },
       "links": {
         "sourceVocabId": "n5_l04_v022",
-        "sourceSenseId": "n5_l04_s022"
+        "sourceSenseId": "n5_l04_s022",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vãn"
@@ -1245,6 +1263,7 @@
       "order": 23,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1265,18 +1284,23 @@
       },
       "sense": {
         "senseId": "n5_l04_s023",
-        "meaningVi": "đêm, tối",
+        "meaningVi": "Tối, đêm",
         "meaningEn": "night"
       },
       "search": {
         "termNoAccent": "夜",
         "readingNoAccent": "よる",
-        "meaningViNoAccent": "đem, toi",
+        "meaningViNoAccent": "Toi, dem",
         "hanVietNoAccent": "da"
       },
       "links": {
         "sourceVocabId": "n5_l04_v023",
-        "sourceSenseId": "n5_l04_s023"
+        "sourceSenseId": "n5_l04_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dạ"
@@ -2105,6 +2129,7 @@
       "order": 38,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2126,18 +2151,24 @@
       },
       "sense": {
         "senseId": "n5_l04_s038",
-        "meaningVi": "hàng ngày",
+        "meaningVi": "Mỗi ngày",
         "meaningEn": "every day"
       },
       "search": {
         "termNoAccent": "毎日",
         "readingNoAccent": "まいにち",
-        "meaningViNoAccent": "hang ngay",
+        "meaningViNoAccent": "Moi ngay",
         "hanVietNoAccent": "moi nhat"
       },
       "links": {
         "sourceVocabId": "n5_l04_v038",
-        "sourceSenseId": "n5_l04_s038"
+        "sourceSenseId": "n5_l04_s038",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mỗi nhật"

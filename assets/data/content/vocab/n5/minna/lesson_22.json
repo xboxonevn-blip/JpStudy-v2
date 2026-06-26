@@ -447,6 +447,7 @@
       "order": 9,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -468,18 +469,24 @@
       },
       "sense": {
         "senseId": "n5_l22_s009",
-        "meaningVi": "mũ, nón",
+        "meaningVi": "Mũ",
         "meaningEn": "hat / cap"
       },
       "search": {
         "termNoAccent": "帽子",
         "readingNoAccent": "ほうし",
-        "meaningViNoAccent": "mu, non",
+        "meaningViNoAccent": "Mu",
         "hanVietNoAccent": "mao tu"
       },
       "links": {
         "sourceVocabId": "n5_l22_v009",
-        "sourceSenseId": "n5_l22_s009"
+        "sourceSenseId": "n5_l22_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mão tử"

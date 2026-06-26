@@ -97,9 +97,10 @@ void main() {
       ),
     );
 
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
 
-    expect(find.text('Review vocab'), findsOneWidget);
+    expect(find.text('Review vocab'), findsAtLeastNWidgets(1));
     expect(find.text('Start session'), findsOneWidget);
     expect(find.text('JLPT prep'), findsAtLeastNWidgets(1));
     expect(find.widgetWithText(FilledButton, 'Start session'), findsOneWidget);

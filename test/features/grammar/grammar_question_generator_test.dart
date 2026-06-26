@@ -727,6 +727,104 @@ void main() {
     );
 
     test(
+      'error correction does not label the unchanged correct sentence wrong',
+      () {
+        const point1 = GrammarPoint(
+          id: 47,
+          lessonId: 8,
+          grammarPoint: 'です',
+          titleEn: 'Copula',
+          meaning: 'là',
+          meaningEn: 'to be',
+          meaningVi: 'là',
+          connection: 'N は N です',
+          connectionEn: 'N は N です',
+          explanation: 'Câu khẳng định cơ bản.',
+          explanationEn: 'Basic copula sentence.',
+          explanationVi: 'Câu khẳng định cơ bản.',
+          jlptLevel: 'N5',
+          isLearned: false,
+        );
+        const duplicateSurface = GrammarPoint(
+          id: 48,
+          lessonId: 8,
+          grammarPoint: 'です',
+          titleEn: 'Duplicate copula',
+          meaning: 'là',
+          meaningEn: 'to be',
+          meaningVi: 'là',
+          connection: 'N は N です',
+          connectionEn: 'N は N です',
+          explanation: 'Duplicate surface pattern.',
+          explanationEn: 'Duplicate surface pattern.',
+          explanationVi: 'Mẫu trùng mặt chữ.',
+          jlptLevel: 'N5',
+          isLearned: false,
+        );
+        const point3 = GrammarPoint(
+          id: 49,
+          lessonId: 8,
+          grammarPoint: 'ます',
+          titleEn: 'Polite verb ending',
+          meaning: 'đuôi lịch sự',
+          meaningEn: 'polite verb ending',
+          meaningVi: 'đuôi lịch sự',
+          connection: 'V-ます',
+          connectionEn: 'V-ます',
+          explanation: 'Động từ lịch sự.',
+          explanationEn: 'Polite verb ending.',
+          explanationVi: 'Động từ lịch sự.',
+          jlptLevel: 'N5',
+          isLearned: false,
+        );
+        const point4 = GrammarPoint(
+          id: 50,
+          lessonId: 8,
+          grammarPoint: 'でした',
+          titleEn: 'Past copula',
+          meaning: 'đã là',
+          meaningEn: 'was / were',
+          meaningVi: 'đã là',
+          connection: 'N は N でした',
+          connectionEn: 'N は N でした',
+          explanation: 'Quá khứ của です.',
+          explanationEn: 'Past form of です.',
+          explanationVi: 'Quá khứ của です.',
+          jlptLevel: 'N5',
+          isLearned: false,
+        );
+
+        final questions = GrammarQuestionGenerator.generateQuestions(
+          const [
+            (
+              point: point1,
+              examples: [
+                GrammarExample(
+                  id: 47,
+                  grammarId: 47,
+                  japanese: 'わたしは学生です。',
+                  translation: 'Tôi là học sinh.',
+                  translationEn: 'I am a student.',
+                  translationVi: 'Tôi là học sinh.',
+                ),
+              ],
+            ),
+          ],
+          allPoints: const [point1, duplicateSurface, point3, point4],
+          language: AppLanguage.vi,
+        );
+
+        final errorCorrections = questions.where(
+          (q) => q.type == GrammarQuestionType.errorCorrection,
+        );
+        expect(
+          errorCorrections.every((q) => !q.question.contains('わたしは学生です。')),
+          isTrue,
+        );
+      },
+    );
+
+    test(
       'cloze options stay in the same answer family and avoid placeholders',
       () {
         const point1 = GrammarPoint(

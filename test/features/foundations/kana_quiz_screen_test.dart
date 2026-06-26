@@ -7,6 +7,7 @@ import 'package:jpstudy/data/db/app_database.dart';
 import 'package:jpstudy/data/db/database_provider.dart';
 import 'package:jpstudy/features/foundations/screens/kana_quiz_screen.dart';
 import 'package:jpstudy/features/foundations/screens/kana_table_screen.dart';
+import 'package:jpstudy/widgets/foundation/app_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -18,6 +19,13 @@ void main() {
     SharedPreferences.setMockInitialValues(values);
     return SharedPreferences.getInstance();
   }
+
+  Finder kanaChoiceButtons() => find.byWidgetPredicate((widget) {
+    final key = widget.key;
+    return widget is AppButton &&
+        key is ValueKey<String> &&
+        key.value.startsWith('kana_choice_');
+  });
 
   testWidgets('kana quiz answers ten questions and writes SRS rows', (
     tester,
@@ -46,10 +54,10 @@ void main() {
     await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.byKey(const ValueKey('kana_quiz_counter')), findsOneWidget);
-    expect(find.byType(FilledButton), findsWidgets);
+    expect(kanaChoiceButtons(), findsWidgets);
 
     for (var i = 0; i < 10; i++) {
-      await tester.tap(find.byType(FilledButton).first, warnIfMissed: false);
+      await tester.tap(kanaChoiceButtons().first, warnIfMissed: false);
       await tester.pump(const Duration(milliseconds: 250));
       final good = find.text('Good');
       if (good.evaluate().isNotEmpty) {
@@ -190,26 +198,15 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('kana_choice_wrong')));
     await tester.pump();
 
-    final correctButton = tester.widget<FilledButton>(
+    final correctButton = tester.widget<AppButton>(
       find.byKey(const ValueKey('kana_choice_correct')),
     );
-    final wrongButton = tester.widget<FilledButton>(
+    final wrongButton = tester.widget<AppButton>(
       find.byKey(const ValueKey('kana_choice_wrong')),
     );
 
-    expect(
-      correctButton.style?.backgroundColor?.resolve({}),
-      Colors.green.shade100,
-    );
-    expect(
-      correctButton.style?.side?.resolve({})?.color,
-      Colors.green.shade400,
-    );
-    expect(
-      wrongButton.style?.backgroundColor?.resolve({}),
-      Colors.red.shade100,
-    );
-    expect(wrongButton.style?.side?.resolve({})?.color, Colors.red.shade400);
+    expect(correctButton.variant, AppButtonVariant.primary);
+    expect(wrongButton.variant, AppButtonVariant.destructive);
     expect(
       find.byKey(const ValueKey('kana_auto_again_continue')),
       findsOneWidget,

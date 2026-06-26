@@ -282,6 +282,7 @@
       "order": 6,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -303,18 +304,23 @@
       },
       "sense": {
         "senseId": "n4_l50_s006",
-        "meaningVi": "xem, nhìn (khiêm nhường ngữ của mimasu)",
+        "meaningVi": "Xem, nhìn (khiêm nhường ngữ của みます)",
         "meaningEn": "see (humble)"
       },
       "search": {
         "termNoAccent": "拝見します",
         "readingNoAccent": "はいけんします",
-        "meaningViNoAccent": "xem, nhin (khiem nhuong ngu cua mimasu)",
+        "meaningViNoAccent": "Xem, nhin (khiem nhuong ngu cua みます)",
         "hanVietNoAccent": "bai kien"
       },
       "links": {
         "sourceVocabId": "n4_l50_v006",
-        "sourceSenseId": "n4_l50_s006"
+        "sourceSenseId": "n4_l50_s006",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bái kiến"
@@ -338,6 +344,7 @@
       "order": 7,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -358,18 +365,23 @@
       },
       "sense": {
         "senseId": "n4_l50_s007",
-        "meaningVi": "biết (khiêm nhường ngữ của shitte imasu)",
+        "meaningVi": "Biết (khiêm nhường ngữ của しります)",
         "meaningEn": "know (humble)"
       },
       "search": {
         "termNoAccent": "存します",
         "readingNoAccent": "そんします",
-        "meaningViNoAccent": "biet (khiem nhuong ngu cua shitte imasu)",
+        "meaningViNoAccent": "Biet (khiem nhuong ngu cua しります)",
         "hanVietNoAccent": "ton"
       },
       "links": {
         "sourceVocabId": "n4_l50_v007",
-        "sourceSenseId": "n4_l50_s007"
+        "sourceSenseId": "n4_l50_s007",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tồn"
@@ -718,6 +730,7 @@
       "order": 14,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -738,18 +751,23 @@
       },
       "sense": {
         "senseId": "n4_l50_s014",
-        "meaningVi": "nhà (người khác - kính ngữ)",
+        "meaningVi": "Nhà (kính ngữ của うち hoặc いえ)",
         "meaningEn": "someone's house (polite)"
       },
       "search": {
         "termNoAccent": "お宅",
         "readingNoAccent": "おたく",
-        "meaningViNoAccent": "nha (nguoi khac - kinh ngu)",
+        "meaningViNoAccent": "Nha (kinh ngu cua うち hoac いえ)",
         "hanVietNoAccent": "trach"
       },
       "links": {
         "sourceVocabId": "n4_l50_v014",
-        "sourceSenseId": "n4_l50_s014"
+        "sourceSenseId": "n4_l50_s014",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trạch"
@@ -1828,6 +1846,7 @@
       "order": 34,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1848,18 +1867,23 @@
       },
       "sense": {
         "senseId": "n4_l50_s034",
-        "meaningVi": "từ đáy lòng, chân thành",
+        "meaningVi": "Từ trái tim, từ đáy lòng",
         "meaningEn": "from the bottom of one's heart"
       },
       "search": {
         "termNoAccent": "心から",
         "readingNoAccent": "こころから",
-        "meaningViNoAccent": "tu đay long, chan thanh",
+        "meaningViNoAccent": "Tu trai tim, tu day long",
         "hanVietNoAccent": "tam"
       },
       "links": {
         "sourceVocabId": "n4_l50_v034",
-        "sourceSenseId": "n4_l50_s034"
+        "sourceSenseId": "n4_l50_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tâm"
@@ -2381,6 +2405,7 @@
       "order": 44,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2401,18 +2426,22 @@
       },
       "sense": {
         "senseId": "n4_l50_s044",
-        "meaningVi": "duoc gap (khiem nhuong)",
+        "meaningVi": "Gặp (khiêm nhường ngữ của あいます)",
         "meaningEn": "meet (humble)"
       },
       "search": {
         "termNoAccent": "お目にかかります",
         "readingNoAccent": "おめにかかります",
-        "meaningViNoAccent": "duoc gap (khiem nhuong)",
+        "meaningViNoAccent": "Gap (khiem nhuong ngu cua あいます)",
         "hanVietNoAccent": "muc"
       },
       "links": {
         "sourceVocabId": "n4_l50_v044",
-        "sourceSenseId": "n4_l50_s044"
+        "sourceSenseId": "n4_l50_s044",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mục"
@@ -2420,11 +2449,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l50_v044-001",
-          "ja": "お目にかかりますの前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước duoc gap.",
+          "ja": "先生にお目にかかります。",
+          "vi": "Tôi sẽ được gặp thầy cô.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for お目にかかります",
+          "source_detail": "JpStudy-authored humble verb context for お目にかかります",
           "license": "JpStudy authored"
         }
       ]
@@ -2436,6 +2465,7 @@
       "order": 45,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2457,18 +2487,24 @@
       },
       "sense": {
         "senseId": "n4_l50_s045",
-        "meaningVi": "tu nhien",
+        "meaningVi": "Tự nhiên, thiên nhiên",
         "meaningEn": "nature"
       },
       "search": {
         "termNoAccent": "自然",
         "readingNoAccent": "しせん",
-        "meaningViNoAccent": "tu nhien",
+        "meaningViNoAccent": "Tu nhien, thien nhien",
         "hanVietNoAccent": "tu nhien"
       },
       "links": {
         "sourceVocabId": "n4_l50_v045",
-        "sourceSenseId": "n4_l50_s045"
+        "sourceSenseId": "n4_l50_s045",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n4",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự nhiên"
@@ -2476,12 +2512,12 @@
       "example_sentences": [
         {
           "example_id": "tat-125019-vie-490725",
-          "ja": "天然自然が荒らされていくのは残念なことだ。",
-          "vi": "Lãng phí tài nguyên thiên nhiên lá một việc làm thật xấu hổ.",
+          "ja": "この島には美しい自然があります。",
+          "vi": "Trên hòn đảo này có thiên nhiên rất đẹp.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 125019; translation 490725",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored noun context for 自然",
+          "license": "JpStudy authored"
         }
       ]
     },

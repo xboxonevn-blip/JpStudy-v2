@@ -451,6 +451,7 @@
       "order": 9,
       "tags": [
         "animal",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -471,18 +472,23 @@
       },
       "sense": {
         "senseId": "n5_l10_s009",
-        "meaningVi": "con mèo",
+        "meaningVi": "Mèo",
         "meaningEn": "cat"
       },
       "search": {
         "termNoAccent": "猫",
         "readingNoAccent": "ねこ",
-        "meaningViNoAccent": "con meo",
+        "meaningViNoAccent": "Meo",
         "hanVietNoAccent": "meo"
       },
       "links": {
         "sourceVocabId": "n5_l10_v009",
-        "sourceSenseId": "n5_l10_s009"
+        "sourceSenseId": "n5_l10_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mèo"
@@ -614,6 +620,7 @@
       "order": 12,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -634,18 +641,23 @@
       },
       "sense": {
         "senseId": "n5_l10_s012",
-        "meaningVi": "cây",
+        "meaningVi": "Cây, gỗ",
         "meaningEn": "tree / wood"
       },
       "search": {
         "termNoAccent": "木",
         "readingNoAccent": "き",
-        "meaningViNoAccent": "cay",
+        "meaningViNoAccent": "Cay, go",
         "hanVietNoAccent": "moc"
       },
       "links": {
         "sourceVocabId": "n5_l10_v012",
-        "sourceSenseId": "n5_l10_s012"
+        "sourceSenseId": "n5_l10_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mộc"

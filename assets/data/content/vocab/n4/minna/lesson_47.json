@@ -289,6 +289,7 @@
       "order": 6,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -309,18 +310,23 @@
       },
       "sense": {
         "senseId": "n4_l47_s006",
-        "meaningVi": "mùi vị",
+        "meaningVi": "Vị",
         "meaningEn": "taste"
       },
       "search": {
         "termNoAccent": "味",
         "readingNoAccent": "あし",
-        "meaningViNoAccent": "mui vi",
+        "meaningViNoAccent": "Vi",
         "hanVietNoAccent": "vi"
       },
       "links": {
         "sourceVocabId": "n4_l47_v006",
-        "sourceSenseId": "n4_l47_s006"
+        "sourceSenseId": "n4_l47_s006",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vị"
@@ -452,6 +458,7 @@
       "order": 9,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -472,18 +479,23 @@
       },
       "sense": {
         "senseId": "n4_l47_s009",
-        "meaningVi": "nghiêm khắc",
+        "meaningVi": "Nghiêm, nghiêm khắc, nghiêm ngặt",
         "meaningEn": "strict / hard"
       },
       "search": {
         "termNoAccent": "厳しい",
         "readingNoAccent": "きひしい",
-        "meaningViNoAccent": "nghiem khac",
+        "meaningViNoAccent": "Nghiem, nghiem khac, nghiem ngat",
         "hanVietNoAccent": "nghiem"
       },
       "links": {
         "sourceVocabId": "n4_l47_v009",
-        "sourceSenseId": "n4_l47_s009"
+        "sourceSenseId": "n4_l47_s009",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nghiêm"
@@ -1892,6 +1904,7 @@
       "order": 35,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1913,18 +1926,23 @@
       },
       "sense": {
         "senseId": "n4_l47_s035",
-        "meaningVi": "lý do",
+        "meaningVi": "Lí do",
         "meaningEn": "reason"
       },
       "search": {
         "termNoAccent": "理由",
         "readingNoAccent": "りゆう",
-        "meaningViNoAccent": "ly do",
+        "meaningViNoAccent": "Li do",
         "hanVietNoAccent": "li do"
       },
       "links": {
         "sourceVocabId": "n4_l47_v035",
-        "sourceSenseId": "n4_l47_s035"
+        "sourceSenseId": "n4_l47_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lí do"
@@ -2059,6 +2077,7 @@
       "order": 38,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2079,18 +2098,23 @@
       },
       "sense": {
         "senseId": "n4_l47_s038",
-        "meaningVi": "o",
+        "meaningVi": "Cái ô",
         "meaningEn": "umbrella"
       },
       "search": {
         "termNoAccent": "傘",
         "readingNoAccent": "かさ",
-        "meaningViNoAccent": "o",
+        "meaningViNoAccent": "Cai o",
         "hanVietNoAccent": "tan"
       },
       "links": {
         "sourceVocabId": "n4_l47_v038",
-        "sourceSenseId": "n4_l47_s038"
+        "sourceSenseId": "n4_l47_s038",
+        "sourceConsensus": [
+          "minna-1",
+          "kanji-vocab-n2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tàn"
@@ -2098,11 +2122,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l47_v038-001",
-          "ja": "これは傘です。",
-          "vi": "Đây là o.",
+          "ja": "雨の日は傘を持って行きます。",
+          "vi": "Ngày mưa tôi mang theo ô.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 傘",
+          "source_detail": "JpStudy-authored object context for 傘",
           "license": "JpStudy authored"
         }
       ]
@@ -2114,6 +2138,7 @@
       "order": 39,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2134,18 +2159,23 @@
       },
       "sense": {
         "senseId": "n4_l47_s039",
-        "meaningVi": "dang so",
+        "meaningVi": "Sợ, khiếp",
         "meaningEn": "scary / frightening"
       },
       "search": {
         "termNoAccent": "怖い",
         "readingNoAccent": "こわい",
-        "meaningViNoAccent": "dang so",
+        "meaningViNoAccent": "So, khiep",
         "hanVietNoAccent": "bo"
       },
       "links": {
         "sourceVocabId": "n4_l47_v039",
-        "sourceSenseId": "n4_l47_s039"
+        "sourceSenseId": "n4_l47_s039",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bố"
@@ -2169,6 +2199,7 @@
       "order": 40,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2192,18 +2223,25 @@
       },
       "sense": {
         "senseId": "n4_l47_s040",
-        "meaningVi": "du bao thoi tiet",
+        "meaningVi": "Dự báo thời tiết",
         "meaningEn": "weather forecast"
       },
       "search": {
         "termNoAccent": "天気予報",
         "readingNoAccent": "てんきよほう",
-        "meaningViNoAccent": "du bao thoi tiet",
+        "meaningViNoAccent": "Du bao thoi tiet",
         "hanVietNoAccent": "thien khi du bao"
       },
       "links": {
         "sourceVocabId": "n4_l47_v040",
-        "sourceSenseId": "n4_l47_s040"
+        "sourceSenseId": "n4_l47_s040",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thiên khí dự báo"
@@ -2212,7 +2250,7 @@
         {
           "example_id": "ex-n4_l47_v040-001",
           "ja": "表の天気予報を見て、数値の変化を確認しました。",
-          "vi": "Tôi nhìn du bao thoi tiet trong bảng và kiểm tra sự thay đổi số liệu.",
+          "vi": "Tôi nhìn dự báo thời tiết trong bảng và kiểm tra sự thay đổi số liệu.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored numeric/table context for 天気予報",
@@ -2227,6 +2265,7 @@
       "order": 41,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2249,18 +2288,22 @@
       },
       "sense": {
         "senseId": "n4_l47_s041",
-        "meaningVi": "my pham",
+        "meaningVi": "Mỹ phẩm",
         "meaningEn": "cosmetics"
       },
       "search": {
         "termNoAccent": "化粧品",
         "readingNoAccent": "けしょうひん",
-        "meaningViNoAccent": "my pham",
+        "meaningViNoAccent": "My pham",
         "hanVietNoAccent": "hoa trang pham"
       },
       "links": {
         "sourceVocabId": "n4_l47_v041",
-        "sourceSenseId": "n4_l47_s041"
+        "sourceSenseId": "n4_l47_s041",
+        "sourceConsensus": [
+          "kanji-vocab-n2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hoá trang phẩm"

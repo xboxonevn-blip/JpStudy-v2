@@ -992,11 +992,12 @@ class _TestScreenState extends ConsumerState<TestScreen> {
             ),
           ),
           const SizedBox(width: AppSpacing.sm),
-          FilledButton.icon(
+          AppButton(
             key: const ValueKey('test_listening_play_audio'),
             onPressed: () => _speakAudio(audioText),
-            icon: const Icon(Icons.volume_up_rounded),
-            label: Text(_tr(language, 'Play', 'Phát âm', '再生')),
+            icon: Icons.volume_up_rounded,
+            label: _tr(language, 'Play', 'Phát âm', '再生'),
+            compact: true,
           ),
         ],
       ),
@@ -1008,25 +1009,10 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (!mounted) return;
     final language = ref.read(appLanguageProvider);
     final message = switch (result.status) {
-      TtsSpeakStatus.queued => _tr(
-        language,
-        'Audio queued.',
-        'Đã phát âm.',
-        '音声を再生しました。',
-      ),
-      TtsSpeakStatus.empty => _tr(
-        language,
-        'No Japanese text to read.',
-        'Chưa có tiếng Nhật để phát âm.',
-        '読み上げる日本語がありません。',
-      ),
-      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
-      TtsSpeakStatus.error => _tr(
-        language,
-        'Could not play Japanese audio.',
-        'Chưa phát được âm thanh tiếng Nhật.',
-        '日本語音声を再生できませんでした。',
-      ),
+      TtsSpeakStatus.queued => language.audioQueuedMessage,
+      TtsSpeakStatus.empty => language.japaneseAudioEmptyMessage,
+      TtsSpeakStatus.unavailable => language.japaneseVoiceUnavailableMessage,
+      TtsSpeakStatus.error => language.japaneseAudioPlaybackErrorMessage,
     };
     ScaffoldMessenger.of(
       context,

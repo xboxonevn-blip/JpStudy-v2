@@ -13,10 +13,13 @@ backend, content-source, or cost-control decisions for JpStudy.
   for Firebase Hosting through `firebase.json`.
 - Public content is bundled as JSON assets under `assets/data/content/`.
 - Current measured build shape:
-  - `build/web`: about 68.8 MB raw.
-  - `assets/data`: about 24.3 MB JSON.
+  - `build/web`: about 118.9 MB raw after the expanded local content corpus.
+  - `build/web/assets`: about 78.2 MB raw.
+  - JSON assets: about 75.3 MB raw.
   - `docs/research/D7-performance/web_perf_budget.json` caps total build raw
-    bytes at 72 MB and JSON raw bytes at 28 MB.
+    bytes at 125 MB and JSON raw bytes at 80 MB. The app-shell, CanvasKit, and
+    sqlite wasm budgets remain strict; the relaxed totals track bundled corpus
+    growth, not startup route fetches.
 - Cloud backup is intentionally off by default:
   `JPSTUDY_ENABLE_CLOUD_BACKUP=false`.
 - Firebase Storage rules only allow authenticated owners to access
@@ -56,7 +59,7 @@ Useful as the Firebase-native deployment path, but risky as the only public
 host once traffic grows.
 
 - The repo already targets `build/web` in `firebase.json`.
-- Spark transfer is small enough that a roughly 69 MB Flutter build can burn
+- Spark transfer is small enough that a roughly 119 MB Flutter build can burn
   quota quickly with new visitors, cache misses, or redeploys.
 - Keep it as a beta/mirror host unless quota proves sufficient.
 

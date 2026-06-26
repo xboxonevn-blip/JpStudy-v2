@@ -318,10 +318,13 @@ void main() {
       await repository.seedTermsIfEmpty(lessonId, 'N5');
 
       final terms = await repository.fetchTerms(lessonId);
-      expect(terms.single.exampleSentencesJson, contains('tatoeba-cc-by-2.0'));
-      expect(terms.single.exampleSentencesJson, contains('私の番？'));
-      expect(terms.single.exampleSentencesJson, isNot(contains('を使う文')));
-      expect(terms.single.isLearned, isTrue);
+      final matched = terms.singleWhere(
+        (term) => term.term == '私' && term.reading == 'わたし',
+      );
+      expect(matched.exampleSentencesJson, contains('tatoeba-cc-by-2.0'));
+      expect(matched.exampleSentencesJson, contains('私の番？'));
+      expect(matched.exampleSentencesJson, isNot(contains('を使う文')));
+      expect(matched.isLearned, isTrue);
     },
   );
 
@@ -495,6 +498,83 @@ void main() {
       expect(terms.single.definition, 'Vị kia');
       expect(terms.single.definitionEn, 'that person');
       expect(terms.single.isLearned, isTrue);
+    },
+  );
+
+  test(
+    'seedTermsIfEmpty removes stale lesson rows so card counts match canonical content',
+    () async {
+      const lessonId = 1;
+      await repository.ensureLesson(
+        lessonId: lessonId,
+        level: 'N5',
+        title: 'N5 stale count sync test',
+      );
+      await contentDb.batch((batch) {
+        batch.insertAll(contentDb.vocab, [
+          VocabCompanion.insert(
+            id: const Value(18001),
+            term: '学生',
+            reading: const Value('がくせい'),
+            meaning: 'học sinh',
+            meaningEn: const Value('student'),
+            series: const Value('minna'),
+            level: 'N5',
+            tags: const Value('minna_1,jlpt-vocab'),
+          ),
+          VocabCompanion.insert(
+            id: const Value(18002),
+            term: '会社員',
+            reading: const Value('かいしゃいん'),
+            meaning: 'nhân viên công ty',
+            meaningEn: const Value('company employee'),
+            series: const Value('minna'),
+            level: 'N5',
+            tags: const Value('minna_1,jlpt-vocab'),
+          ),
+        ]);
+      });
+      await db.batch((batch) {
+        batch.insertAll(db.userLessonTerm, [
+          UserLessonTermCompanion.insert(
+            id: const Value(8001),
+            lessonId: lessonId,
+            term: const Value('学生'),
+            reading: const Value('がくせい'),
+            definition: const Value('old student'),
+            orderIndex: const Value(1),
+            isLearned: const Value(true),
+          ),
+          UserLessonTermCompanion.insert(
+            id: const Value(8002),
+            lessonId: lessonId,
+            term: const Value('会社員'),
+            reading: const Value('かいしゃいん'),
+            definition: const Value('old employee'),
+            orderIndex: const Value(2),
+          ),
+          UserLessonTermCompanion.insert(
+            id: const Value(8003),
+            lessonId: lessonId,
+            term: const Value('社'),
+            reading: const Value('しゃ'),
+            definition: const Value('orphan kanji gloss'),
+            orderIndex: const Value(3),
+          ),
+        ]);
+      });
+
+      await repository.seedTermsIfEmpty(lessonId, 'N5');
+
+      final terms = await repository.fetchTerms(lessonId);
+      expect(terms.map((term) => term.term), ['会社員', '学生']);
+      expect(terms.map((term) => term.definition), [
+        'nhân viên công ty',
+        'học sinh',
+      ]);
+      expect(terms.singleWhere((term) => term.term == '学生').isLearned, isTrue);
+      final meta = await repository.fetchLessonMeta('N5');
+      expect(meta.singleWhere((lesson) => lesson.id == lessonId).termCount, 2);
     },
   );
 

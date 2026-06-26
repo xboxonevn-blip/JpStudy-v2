@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jpstudy/app/theme/app_theme_palette.dart';
+import 'package:jpstudy/core/app_language.dart';
+import 'package:jpstudy/core/language_provider.dart';
 import 'package:jpstudy/widgets/foundation/foundation.dart';
 
 import '../models/achievement.dart';
 
 /// Widget to display achievement popup
-class AchievementPopup extends StatelessWidget {
+class AchievementPopup extends ConsumerWidget {
   final Achievement achievement;
   final VoidCallback? onDismiss;
 
@@ -16,7 +19,8 @@ class AchievementPopup extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final language = ref.watch(appLanguageProvider);
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
@@ -97,7 +101,7 @@ class AchievementPopup extends StatelessWidget {
 
             // Dismiss button
             AppButton(
-              label: 'Awesome!',
+              label: language.achievementPopupConfirmLabel,
               variant: AppButtonVariant.secondary,
               expanded: true,
               onPressed: onDismiss ?? () => Navigator.of(context).pop(),

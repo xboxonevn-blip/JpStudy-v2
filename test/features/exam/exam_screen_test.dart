@@ -168,7 +168,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.text('JLPT N5 start screen'), findsOneWidget);
-    expect(find.text('1 questions'), findsWidgets);
+    expect(find.text(AppLanguage.en.questionsCountLabel(1)), findsWidgets);
     expect(find.byType(TestConfigScreen), findsNothing);
 
     await tester.drag(find.byType(ListView), const Offset(0, -260));

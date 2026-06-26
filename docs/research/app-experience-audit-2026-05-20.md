@@ -33,6 +33,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | P1 backlog live proof sweep | Audited slice | Rechecked old fixed-local P1 rows after the latest deploy: QA-A-002 Vocab copy/badges are learner-facing, QA-A-003 Review copy is natural and CTAs open target content, and QA-A-005 VI/N2 Home/Review no longer leaks `Minna No Nihongo 200001`. |
 | Grammar practice gate N5-N1 | Audited slice | QA-A-008 closeout live proof opened Grammar hub -> first detail -> examples -> `Luyện tập để hiểu` for VI N5/N4/N3/N2/N1; every level reached `Câu 1/5`, no empty due state, and no manual learned/self-attestation copy. |
 | Grammar transformation question quality | Audited slice | QA-A-008 live proof exposed punctuation-only duplicate options in generated transformation drills; QA-A-031 dedupes transformation choices by sentence shape and live proof confirms rendered option keys are unique. |
+| QA-A-030 vocab canonical cleanup | Audited slice | After the current dirty-batch gates were green, resumed Minna app-diff cleanup from owner-provided local canonical sources only. Batches 013-067 applied two hundred eighty-five curated N5/N4 repairs and skipped default candidates that would narrow learner nuance. Latest text-hygiene batch covered lesson-28 `娘`, `自分`, `それに`, `ちょっとお願いがあるんですが`, `日にち`, `土`, and `体育館`, replacing stale templates and a hidden broken connector example with learner-facing contexts. |
 | Full app sweep | Pending | Continue after the current dirty batch commit: Home, Học, Từ vựng, Kanji, Kana/Foundation, Hán-Việt, Review, Exams, Profile, Search, and all connected CTAs. |
 
 ## Defects Logged
@@ -63,6 +64,7 @@ Every defect found here must have a ticket in `docs/research/quality-backlog.md`
 | QA-A-008 | Grammar practice gate | Grammar detail needed a real practice gate/SRS path across N5-N1 instead of manual self-attestation. | Fixed + deployed |
 | QA-A-031 | Grammar question quality | Generated transformation drills could show options that differed only by sentence-final punctuation. | Fixed + deployed |
 | QA-B-003 | Grammar practice content | Authored grammar practice bank is empty; generated coverage is complete, but source-informed authored items are still content enrichment debt. | Queued |
+| QA-A-030 | Vocab content | Minna app vocab still has canonical app-diff rows pending after earlier batches; batches 013-067 continued with two hundred eighty-five safe N5/N4 repairs from local sources only. Remaining N5/N4 meaning rows are now mostly nuance-sensitive, malformed, absent from local canonical coverage, app-better-than-canonical, or hidden text-hygiene cases that need manual review rather than automatic apply. | Batches 013-067 applied locally |
 
 ## Live Proof Artifacts
 

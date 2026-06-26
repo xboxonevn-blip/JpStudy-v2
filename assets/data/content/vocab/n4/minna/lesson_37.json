@@ -1342,6 +1342,7 @@
       "order": 25,
       "tags": [
         "occupation",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1363,18 +1364,24 @@
       },
       "sense": {
         "senseId": "n4_l37_s025",
-        "meaningVi": "cảnh sát viên",
+        "meaningVi": "Cảnh sát",
         "meaningEn": "policeman"
       },
       "search": {
         "termNoAccent": "警官",
         "readingNoAccent": "けいかん",
-        "meaningViNoAccent": "canh sat vien",
+        "meaningViNoAccent": "Canh sat",
         "hanVietNoAccent": "khenh quan"
       },
       "links": {
         "sourceVocabId": "n4_l37_v025",
-        "sourceSenseId": "n4_l37_s025"
+        "sourceSenseId": "n4_l37_s025",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "khểnh quan"

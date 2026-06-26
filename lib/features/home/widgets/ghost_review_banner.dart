@@ -143,7 +143,7 @@ class GhostReviewBanner extends ConsumerWidget {
               if (grammarCount > 0)
                 Expanded(
                   child: AppButton(
-                    label: 'Grammar ($grammarCount)',
+                    label: language.grammarGhostButtonLabel(grammarCount),
                     icon: Icons.edit_note_rounded,
                     variant: AppButtonVariant.destructive,
                     compact: embedded,
@@ -158,7 +158,7 @@ class GhostReviewBanner extends ConsumerWidget {
               if (vocabCount > 0)
                 Expanded(
                   child: AppButton(
-                    label: 'Vocab ($vocabCount)',
+                    label: language.vocabGhostButtonLabel(vocabCount),
                     icon: Icons.translate_rounded,
                     compact: embedded,
                     expanded: true,

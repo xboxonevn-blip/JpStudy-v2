@@ -1724,6 +1724,7 @@
       "order": 32,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1745,18 +1746,22 @@
       },
       "sense": {
         "senseId": "n4_l49_s032",
-        "meaningVi": "gat tan",
+        "meaningVi": "Cái gạt tàn",
         "meaningEn": "ashtray"
       },
       "search": {
         "termNoAccent": "灰皿",
         "readingNoAccent": "はいさら",
-        "meaningViNoAccent": "gat tan",
+        "meaningViNoAccent": "Cai gat tan",
         "hanVietNoAccent": "hoi manh"
       },
       "links": {
         "sourceVocabId": "n4_l49_v032",
-        "sourceSenseId": "n4_l49_s032"
+        "sourceSenseId": "n4_l49_s032",
+        "sourceConsensus": [
+          "kanji-vocab-n2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hôi mãnh"
@@ -1764,11 +1769,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l49_v032-001",
-          "ja": "灰皿の前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước gat tan.",
+          "ja": "テーブルの上に灰皿があります。",
+          "vi": "Trên bàn có một cái gạt tàn.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 灰皿",
+          "source_detail": "JpStudy-authored object context for 灰皿",
           "license": "JpStudy authored"
         }
       ]

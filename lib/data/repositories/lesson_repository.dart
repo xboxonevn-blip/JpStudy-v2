@@ -1163,7 +1163,10 @@ class LessonRepository {
                 tbl.term.like('%?%').not() &
                 tbl.reading.like('%?%').not(),
           )
-          ..orderBy([(tbl) => OrderingTerm(expression: tbl.orderIndex)]))
+          ..orderBy([
+            (tbl) => OrderingTerm(expression: tbl.orderIndex),
+            (tbl) => OrderingTerm(expression: tbl.id),
+          ]))
         .get();
   }
 
@@ -1198,6 +1201,7 @@ class LessonRepository {
               ..orderBy([
                 (tbl) => OrderingTerm(expression: tbl.lessonId),
                 (tbl) => OrderingTerm(expression: tbl.orderIndex),
+                (tbl) => OrderingTerm(expression: tbl.id),
               ]))
             .get();
     return terms;
@@ -1300,12 +1304,23 @@ class LessonRepository {
         existing[1].term == '探します';
 
     if (existing.isNotEmpty && !isDummy) {
-      final refreshedDefinitions = await _syncLessonTermDefinitionsFromContent(
-        lessonId,
+      final canonicalVocabList = await _fetchLessonVocabFromContent(
+        sourceLessonId ?? lessonId,
         currentLevelLabel,
-        existing,
-        sourceLessonId: sourceLessonId,
       );
+      final reconciled = await _reconcileLessonTermsWithContent(
+        lessonId,
+        existing,
+        canonicalVocabList,
+      );
+      final refreshedDefinitions =
+          reconciled ||
+          await _syncLessonTermDefinitionsFromContent(
+            lessonId,
+            currentLevelLabel,
+            existing,
+            sourceLessonId: sourceLessonId,
+          );
       final current = refreshedDefinitions
           ? await fetchTerms(lessonId)
           : existing;
@@ -1479,6 +1494,119 @@ class LessonRepository {
     return changed;
   }
 
+  Future<bool> _reconcileLessonTermsWithContent(
+    int lessonId,
+    List<UserLessonTermData> existing,
+    List<VocabData> canonicalVocabList,
+  ) async {
+    if (existing.isEmpty || canonicalVocabList.isEmpty) {
+      return false;
+    }
+
+    final canonicalByKey = <String, ({VocabData vocab, int order})>{};
+    for (var index = 0; index < canonicalVocabList.length; index++) {
+      final vocab = canonicalVocabList[index];
+      final key = _vocabKey(vocab.term, vocab.reading);
+      if (key == '|') continue;
+      canonicalByKey.putIfAbsent(key, () => (vocab: vocab, order: index + 1));
+    }
+    if (canonicalByKey.isEmpty) return false;
+
+    final matchedKeys = <String>{};
+    final staleIds = <int>[];
+    final updates = <({int id, UserLessonTermCompanion companion})>[];
+
+    for (final term in existing) {
+      final key = _vocabKey(term.term, term.reading);
+      final canonical = canonicalByKey[key];
+      if (canonical == null || matchedKeys.contains(key)) {
+        staleIds.add(term.id);
+        continue;
+      }
+      matchedKeys.add(key);
+
+      final vocab = canonical.vocab;
+      final nextDefinition = vocab.meaning.trim();
+      final nextDefinitionEn = vocab.meaningEn?.trim() ?? '';
+      final nextExamplesJson = vocab.exampleSentencesJson.trim();
+      final shouldUpdateDefinition =
+          nextDefinition.isNotEmpty && nextDefinition != term.definition;
+      final shouldUpdateDefinitionEn =
+          nextDefinitionEn.isNotEmpty && nextDefinitionEn != term.definitionEn;
+      final shouldUpdateExamples =
+          nextExamplesJson.isNotEmpty &&
+          nextExamplesJson != '[]' &&
+          nextExamplesJson != term.exampleSentencesJson;
+      final shouldUpdateOrder = canonical.order != term.orderIndex;
+      final companion = UserLessonTermCompanion(
+        definition: shouldUpdateDefinition
+            ? Value(nextDefinition)
+            : const Value.absent(),
+        definitionEn: shouldUpdateDefinitionEn
+            ? Value(nextDefinitionEn)
+            : const Value.absent(),
+        exampleSentencesJson: shouldUpdateExamples
+            ? Value(nextExamplesJson)
+            : const Value.absent(),
+        orderIndex: shouldUpdateOrder
+            ? Value(canonical.order)
+            : const Value.absent(),
+      );
+      if (shouldUpdateDefinition ||
+          shouldUpdateDefinitionEn ||
+          shouldUpdateExamples ||
+          shouldUpdateOrder) {
+        updates.add((id: term.id, companion: companion));
+      }
+    }
+
+    final inserts = [
+      for (final entry in canonicalByKey.entries)
+        if (!matchedKeys.contains(entry.key)) entry.value,
+    ];
+    inserts.sort((a, b) => a.order.compareTo(b.order));
+
+    if (staleIds.isNotEmpty) {
+      await (_db.delete(
+        _db.srsState,
+      )..where((tbl) => tbl.vocabId.isIn(staleIds))).go();
+      await (_db.delete(
+        _db.userLessonTerm,
+      )..where((tbl) => tbl.id.isIn(staleIds))).go();
+    }
+
+    if (updates.isNotEmpty || inserts.isNotEmpty) {
+      await _db.batch((batch) {
+        for (final update in updates) {
+          batch.update(
+            _db.userLessonTerm,
+            update.companion,
+            where: (tbl) => tbl.id.equals(update.id),
+          );
+        }
+        for (final insert in inserts) {
+          final vocab = insert.vocab;
+          batch.insert(
+            _db.userLessonTerm,
+            UserLessonTermCompanion.insert(
+              lessonId: lessonId,
+              term: Value(vocab.term),
+              reading: Value(vocab.reading ?? ''),
+              definition: Value(vocab.meaning),
+              definitionEn: Value(vocab.meaningEn ?? ''),
+              mnemonicVi: const Value(''),
+              mnemonicEn: const Value(''),
+              exampleSentencesJson: Value(vocab.exampleSentencesJson),
+              orderIndex: Value(insert.order),
+            ),
+          );
+        }
+      });
+    }
+
+    return staleIds.isNotEmpty || updates.isNotEmpty || inserts.isNotEmpty;
+  }
+
   Future<void> _backfillEnglishDefinitions(
     int lessonId,
     String currentLevelLabel,
@@ -1598,6 +1726,8 @@ class LessonRepository {
         // Stable fallback for any items not present in the map.
         return a.id.compareTo(b.id);
       });
+    } else {
+      vocabList.sort((a, b) => a.id.compareTo(b.id));
     }
 
     // Last-resort fallback: load directly from lesson assets so Flashcards

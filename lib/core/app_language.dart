@@ -6635,6 +6635,103 @@ extension AppLanguageLabels on AppLanguage {
     }
   }
 
+  String get playJapaneseAudioTooltip {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Play Japanese audio';
+      case AppLanguage.vi:
+        return 'Phát âm tiếng Nhật';
+      case AppLanguage.ja:
+        return '日本語音声を再生';
+    }
+  }
+
+  String get audioQueuedMessage {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Audio queued.';
+      case AppLanguage.vi:
+        return 'Đã phát âm.';
+      case AppLanguage.ja:
+        return '音声を再生しました。';
+    }
+  }
+
+  String get japaneseAudioEmptyMessage {
+    switch (this) {
+      case AppLanguage.en:
+        return 'No Japanese text to read.';
+      case AppLanguage.vi:
+        return 'Chưa có tiếng Nhật để phát âm.';
+      case AppLanguage.ja:
+        return '読み上げる日本語がありません。';
+    }
+  }
+
+  String get japaneseVoiceUnavailableMessage {
+    switch (this) {
+      case AppLanguage.en:
+        return 'This browser or platform has no Japanese voice available.';
+      case AppLanguage.vi:
+        return 'Trình duyệt hoặc nền tảng này chưa có giọng tiếng Nhật.';
+      case AppLanguage.ja:
+        return 'このブラウザまたは環境では日本語音声を利用できません。';
+    }
+  }
+
+  String get japaneseAudioPlaybackErrorMessage {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Could not play Japanese audio.';
+      case AppLanguage.vi:
+        return 'Chưa phát được âm thanh tiếng Nhật.';
+      case AppLanguage.ja:
+        return '日本語音声を再生できませんでした。';
+    }
+  }
+
+  String grammarGhostButtonLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Grammar ($count)';
+      case AppLanguage.vi:
+        return 'Ngữ pháp ($count)';
+      case AppLanguage.ja:
+        return '文法 ($count)';
+    }
+  }
+
+  String vocabGhostButtonLabel(int count) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Vocab ($count)';
+      case AppLanguage.vi:
+        return 'Từ vựng ($count)';
+      case AppLanguage.ja:
+        return '語彙 ($count)';
+    }
+  }
+
+  String get achievementPopupConfirmLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Awesome!';
+      case AppLanguage.vi:
+        return 'Tuyệt!';
+      case AppLanguage.ja:
+        return 'すごい!';
+    }
+  }
+
+  String jlptLevelChipLabel(String level) {
+    switch (this) {
+      case AppLanguage.en:
+      case AppLanguage.vi:
+      case AppLanguage.ja:
+        return 'JLPT $level';
+    }
+  }
+
   // ===== New: Learn summary =====
   String get learnSummaryTitle {
     switch (this) {
@@ -7822,6 +7919,50 @@ extension AppLanguageLabels on AppLanguage {
         return 'Mẹo Hán Việt';
       case AppLanguage.ja:
         return '漢越音のヒント';
+    }
+  }
+
+  String get hanVietBridgeTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Han-Viet bridge';
+      case AppLanguage.vi:
+        return 'Cầu Hán-Việt';
+      case AppLanguage.ja:
+        return '漢越音ブリッジ';
+    }
+  }
+
+  String hanVietBridgeBody(String hanViet) {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Han-Viet sound: $hanViet. Use it as a bridge before memorizing the On reading.';
+      case AppLanguage.vi:
+        return 'Âm Hán-Việt: $hanViet. Dùng âm này làm móc nối trước khi nhớ âm On.';
+      case AppLanguage.ja:
+        return '漢越音: $hanViet。音読みを覚える前の手がかりとして使います。';
+    }
+  }
+
+  String get hanVietBridgeExamplesLabel {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Example words';
+      case AppLanguage.vi:
+        return 'Từ ví dụ';
+      case AppLanguage.ja:
+        return '例語';
+    }
+  }
+
+  String get hanVietRuleMiniTitle {
+    switch (this) {
+      case AppLanguage.en:
+        return 'Applied Han-Viet rule';
+      case AppLanguage.vi:
+        return 'Quy tắc Hán-Việt áp dụng';
+      case AppLanguage.ja:
+        return '適用される漢越音ルール';
     }
   }
 

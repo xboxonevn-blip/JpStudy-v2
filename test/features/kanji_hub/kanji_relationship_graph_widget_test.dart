@@ -62,11 +62,8 @@ void main() {
       findsOneWidget,
     );
 
-    tester
-        .widget<FilledButton>(
-          find.byKey(const ValueKey('kanji_graph_practice_cluster')),
-        )
-        .onPressed!();
+    await tester.tap(practiceButtonFinder);
+    await tester.pump();
     expect(tester.getTopLeft(practiceButtonFinder).dy, lessThan(40));
 
     final node = tester.widget<InkWell>(

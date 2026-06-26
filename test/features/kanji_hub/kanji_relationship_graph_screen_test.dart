@@ -91,11 +91,9 @@ void main() {
 
       expect(find.byKey(const ValueKey('kanji_graph_focus_学')), findsOneWidget);
 
-      tester
-          .widget<FilledButton>(
-            find.byKey(const ValueKey('kanji_graph_practice_cluster')),
-          )
-          .onPressed!();
+      await tester.tap(
+        find.byKey(const ValueKey('kanji_graph_practice_cluster')),
+      );
       await tester.pumpAndSettle();
 
       expect(

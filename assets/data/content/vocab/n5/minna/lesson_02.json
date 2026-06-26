@@ -1363,6 +1363,7 @@
       "order": 26,
       "tags": [
         "electronics",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1381,18 +1382,22 @@
       },
       "sense": {
         "senseId": "n5_l02_s026",
-        "meaningVi": "xđài radio",
+        "meaningVi": "Cái radio",
         "meaningEn": "radio"
       },
       "search": {
         "termNoAccent": "ラシオ",
         "readingNoAccent": "らしお",
-        "meaningViNoAccent": "xdai radio",
+        "meaningViNoAccent": "Cai radio",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n5_l02_v026",
-        "sourceSenseId": "n5_l02_s026"
+        "sourceSenseId": "n5_l02_s026",
+        "sourceConsensus": [
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1401,7 +1406,7 @@
         {
           "example_id": "ex-n5_l02_v026-001",
           "ja": "これはラジオです。",
-          "vi": "Đây là xđài radio.",
+          "vi": "Đây là cái radio.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for ラジオ",

@@ -894,6 +894,7 @@
       "order": 17,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -914,18 +915,22 @@
       },
       "sense": {
         "senseId": "n4_l39_s017",
-        "meaningVi": "vui mừng",
+        "meaningVi": "Vui, mừng",
         "meaningEn": "glad / happy"
       },
       "search": {
         "termNoAccent": "嬉しい",
         "readingNoAccent": "うれしい",
-        "meaningViNoAccent": "vui mung",
+        "meaningViNoAccent": "Vui, mung",
         "hanVietNoAccent": "hi"
       },
       "links": {
         "sourceVocabId": "n4_l39_v017",
-        "sourceSenseId": "n4_l39_s017"
+        "sourceSenseId": "n4_l39_s017",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hi"
@@ -949,6 +954,7 @@
       "order": 18,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -969,18 +975,23 @@
       },
       "sense": {
         "senseId": "n4_l39_s018",
-        "meaningVi": "buồn bã",
+        "meaningVi": "Buồn, đau thương",
         "meaningEn": "sad"
       },
       "search": {
         "termNoAccent": "悲しい",
         "readingNoAccent": "かなしい",
-        "meaningViNoAccent": "buon ba",
+        "meaningViNoAccent": "Buon, dau thuong",
         "hanVietNoAccent": "bi"
       },
       "links": {
         "sourceVocabId": "n4_l39_v018",
-        "sourceSenseId": "n4_l39_s018"
+        "sourceSenseId": "n4_l39_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bi"
@@ -1004,6 +1015,7 @@
       "order": 19,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1024,18 +1036,23 @@
       },
       "sense": {
         "senseId": "n4_l39_s019",
-        "meaningVi": "xấu hổ, ngượng",
+        "meaningVi": "Xấu hổ, thẹn, hổ thẹn",
         "meaningEn": "embarrassed / ashamed"
       },
       "search": {
         "termNoAccent": "恥すかしい",
         "readingNoAccent": "はすかしい",
-        "meaningViNoAccent": "xau ho, nguong",
+        "meaningViNoAccent": "Xau ho, then, ho then",
         "hanVietNoAccent": "si"
       },
       "links": {
         "sourceVocabId": "n4_l39_v019",
-        "sourceSenseId": "n4_l39_s019"
+        "sourceSenseId": "n4_l39_s019",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "sỉ"
@@ -1671,6 +1688,7 @@
       "order": 31,
       "tags": [
         "money",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1691,18 +1709,23 @@
       },
       "sense": {
         "senseId": "n4_l39_s031",
-        "meaningVi": "tiền phí, tiền",
+        "meaningVi": "Tiền ~, phí ~",
         "meaningEn": "charge / fee"
       },
       "search": {
         "termNoAccent": "代",
         "readingNoAccent": "たい",
-        "meaningViNoAccent": "tien phi, tien",
+        "meaningViNoAccent": "Tien ~, phi ~",
         "hanVietNoAccent": "dai"
       },
       "links": {
         "sourceVocabId": "n4_l39_v031",
-        "sourceSenseId": "n4_l39_s031"
+        "sourceSenseId": "n4_l39_s031",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đại"
@@ -2384,6 +2407,7 @@
       "order": 44,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2405,18 +2429,23 @@
       },
       "sense": {
         "senseId": "n4_l39_s044",
-        "meaningVi": "quần áo âu, quần áo tây",
+        "meaningVi": "Quần áo kiểu tây âu",
         "meaningEn": "Western clothes"
       },
       "search": {
         "termNoAccent": "洋服",
         "readingNoAccent": "ようふく",
-        "meaningViNoAccent": "quan ao au, quan ao tay",
+        "meaningViNoAccent": "Quan ao kieu tay au",
         "hanVietNoAccent": "duong phuc"
       },
       "links": {
         "sourceVocabId": "n4_l39_v044",
-        "sourceSenseId": "n4_l39_s044"
+        "sourceSenseId": "n4_l39_s044",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dương phục"

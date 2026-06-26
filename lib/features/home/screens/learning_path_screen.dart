@@ -1253,7 +1253,8 @@ String _featuredContinueSubtitle(AppLanguage language, ContinueAction action) {
     };
   }
   return switch (language) {
-    AppLanguage.en => '$count items are asking for attention now.',
+    AppLanguage.en =>
+      '${language.itemsCountLabel(count)} are asking for attention now.',
     AppLanguage.vi => '$count mục đang cần bạn xử lý ngay.',
     AppLanguage.ja => '$count件が今の優先項目です。',
   };
@@ -1292,11 +1293,7 @@ String _featuredMistakeSubtitle(AppLanguage language, int count) =>
     };
 
 String _featuredCountBadge(AppLanguage language, int count) =>
-    switch (language) {
-      AppLanguage.en => '$count items',
-      AppLanguage.vi => '$count mục',
-      AppLanguage.ja => '$count件',
-    };
+    language.itemsCountLabel(count);
 
 String _featuredJlptTitle(AppLanguage language) => switch (language) {
   AppLanguage.en => 'JLPT readiness',
@@ -1345,7 +1342,7 @@ String _sidebarToggleLabel(AppLanguage language, bool collapsed) =>
 
 String _lessonsDueChip(AppLanguage language, int dueCount) =>
     switch (language) {
-      AppLanguage.en => '$dueCount lessons due',
+      AppLanguage.en => '${language.lessonCountLabel(dueCount)} due',
       AppLanguage.vi => '$dueCount bài đến hạn',
       AppLanguage.ja => '$dueCount件期限',
     };

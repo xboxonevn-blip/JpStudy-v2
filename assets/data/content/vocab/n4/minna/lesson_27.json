@@ -13,6 +13,7 @@
       "order": 1,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -33,18 +34,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s001",
-        "meaningVi": "nuôi (động vật)",
+        "meaningVi": "Nuôi, chăn nuôi [động vật]",
         "meaningEn": "keep (a pet) / raise (an animal)"
       },
       "search": {
         "termNoAccent": "飼います",
         "readingNoAccent": "かいます",
-        "meaningViNoAccent": "nuoi (dong vat)",
+        "meaningViNoAccent": "Nuoi, chan nuoi [dong vat]",
         "hanVietNoAccent": "tu"
       },
       "links": {
         "sourceVocabId": "n4_l27_v001",
-        "sourceSenseId": "n4_l27_s001"
+        "sourceSenseId": "n4_l27_s001",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự"
@@ -52,11 +58,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v001-001",
-          "ja": "きょう、飼いますつもりです。",
-          "vi": "Hôm nay tôi định nuôi.",
+          "ja": "うちでは犬を飼っています。",
+          "vi": "Ở nhà tôi đang nuôi một con chó.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped verb context for 飼います",
+          "source_detail": "JpStudy-authored pet-keeping context for 飼います",
           "license": "JpStudy authored"
         }
       ]
@@ -68,6 +74,7 @@
       "order": 2,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -88,18 +95,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s002",
-        "meaningVi": "xây, xây dựng",
+        "meaningVi": "Xây, xây dựng",
         "meaningEn": "build"
       },
       "search": {
         "termNoAccent": "建てます",
         "readingNoAccent": "たてます",
-        "meaningViNoAccent": "xay, xay dung",
+        "meaningViNoAccent": "Xay, xay dung",
         "hanVietNoAccent": "kien"
       },
       "links": {
         "sourceVocabId": "n4_l27_v002",
-        "sourceSenseId": "n4_l27_s002"
+        "sourceSenseId": "n4_l27_s002",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "kiến"
@@ -107,11 +119,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v002-001",
-          "ja": "朝の準備が終わったら建てます。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi xây.",
+          "ja": "父は田舎に家を建てます。",
+          "vi": "Bố tôi sẽ xây một ngôi nhà ở quê.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 建てます",
+          "source_detail": "JpStudy-authored house-building context for 建てます",
           "license": "JpStudy authored"
         }
       ]
@@ -178,6 +190,7 @@
       "order": 4,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -198,18 +211,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s004",
-        "meaningVi": "xin (nghỉ)",
+        "meaningVi": "Xin [nghỉ]",
         "meaningEn": "take (a holiday)"
       },
       "search": {
         "termNoAccent": "取ります",
         "readingNoAccent": "とります",
-        "meaningViNoAccent": "xin (nghi)",
+        "meaningViNoAccent": "Xin [nghi]",
         "hanVietNoAccent": "thu"
       },
       "links": {
         "sourceVocabId": "n4_l27_v004",
-        "sourceSenseId": "n4_l27_s004"
+        "sourceSenseId": "n4_l27_s004",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thủ"
@@ -217,11 +235,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v004-001",
-          "ja": "朝の準備が終わったら取ります。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi xin.",
+          "ja": "来週、一日休みを取ります。",
+          "vi": "Tuần sau tôi sẽ xin nghỉ một ngày.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 取ります",
+          "source_detail": "JpStudy-authored leave-taking context for 取ります",
           "license": "JpStudy authored"
         }
       ]
@@ -288,6 +306,7 @@
       "order": 6,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -319,7 +338,12 @@
       },
       "links": {
         "sourceVocabId": "n4_l27_v006",
-        "sourceSenseId": "n4_l27_s006"
+        "sourceSenseId": "n4_l27_s006",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "văn"
@@ -327,11 +351,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v006-001",
-          "ja": "朝の準備が終わったら聞こえます。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi nghe thấy.",
+          "ja": "隣の部屋から音楽が聞こえます。",
+          "vi": "Tôi nghe thấy nhạc từ phòng bên cạnh.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 聞こえます",
+          "source_detail": "JpStudy-authored audible-sound context for 聞こえます",
           "license": "JpStudy authored"
         }
       ]
@@ -451,6 +475,7 @@
       "order": 9,
       "tags": [
         "animal",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -469,18 +494,22 @@
       },
       "sense": {
         "senseId": "n4_l27_s009",
-        "meaningVi": "thú cưng",
+        "meaningVi": "Thú cưng, động vật nuôi",
         "meaningEn": "pet"
       },
       "search": {
         "termNoAccent": "ヘット",
         "readingNoAccent": "へっと",
-        "meaningViNoAccent": "thu cung",
+        "meaningViNoAccent": "Thu cung, dong vat nuoi",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l27_v009",
-        "sourceSenseId": "n4_l27_s009"
+        "sourceSenseId": "n4_l27_s009",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -488,11 +517,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v009-001",
-          "ja": "これはペットです。",
-          "vi": "Đây là thú cưng.",
+          "ja": "このマンションではペットを飼えません。",
+          "vi": "Ở chung cư này không được nuôi thú cưng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for ペット",
+          "source_detail": "JpStudy-authored pet-policy context for ペット",
           "license": "JpStudy authored"
         }
       ]
@@ -504,6 +533,7 @@
       "order": 10,
       "tags": [
         "animal",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -524,18 +554,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s010",
-        "meaningVi": "chim",
+        "meaningVi": "Chim",
         "meaningEn": "bird"
       },
       "search": {
         "termNoAccent": "鳥",
         "readingNoAccent": "とり",
-        "meaningViNoAccent": "chim",
+        "meaningViNoAccent": "Chim",
         "hanVietNoAccent": "dieu"
       },
       "links": {
         "sourceVocabId": "n4_l27_v010",
-        "sourceSenseId": "n4_l27_s010"
+        "sourceSenseId": "n4_l27_s010",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "điểu"
@@ -543,11 +578,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v010-001",
-          "ja": "これは鳥です。",
-          "vi": "Đây là chim.",
+          "ja": "朝、庭で鳥が鳴いています。",
+          "vi": "Buổi sáng, chim đang hót trong vườn.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 鳥",
+          "source_detail": "JpStudy-authored bird-sound context for 鳥",
           "license": "JpStudy authored"
         }
       ]
@@ -559,6 +594,7 @@
       "order": 11,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -579,18 +615,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s011",
-        "meaningVi": "tiếng (người, động vật)",
+        "meaningVi": "Tiếng, giọng nói",
         "meaningEn": "voice"
       },
       "search": {
         "termNoAccent": "声",
         "readingNoAccent": "こえ",
-        "meaningViNoAccent": "tieng (nguoi, dong vat)",
+        "meaningViNoAccent": "Tieng, giong noi",
         "hanVietNoAccent": "thanh"
       },
       "links": {
         "sourceVocabId": "n4_l27_v011",
-        "sourceSenseId": "n4_l27_s011"
+        "sourceSenseId": "n4_l27_s011",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thanh"
@@ -598,11 +639,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v011-001",
-          "ja": "これは声です。",
-          "vi": "Đây là tiếng.",
+          "ja": "電話で母の声が聞こえました。",
+          "vi": "Qua điện thoại, tôi nghe thấy giọng của mẹ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 声",
+          "source_detail": "JpStudy-authored voice-on-phone context for 声",
           "license": "JpStudy authored"
         }
       ]
@@ -614,6 +655,7 @@
       "order": 12,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -634,18 +676,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s012",
-        "meaningVi": "sóng",
+        "meaningVi": "Sóng",
         "meaningEn": "wave"
       },
       "search": {
         "termNoAccent": "波",
         "readingNoAccent": "なみ",
-        "meaningViNoAccent": "song",
+        "meaningViNoAccent": "Song",
         "hanVietNoAccent": "ba"
       },
       "links": {
         "sourceVocabId": "n4_l27_v012",
-        "sourceSenseId": "n4_l27_s012"
+        "sourceSenseId": "n4_l27_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "ba"
@@ -653,11 +700,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v012-001",
-          "ja": "これは波です。",
-          "vi": "Đây là sóng.",
+          "ja": "今日は波が高いです。",
+          "vi": "Hôm nay sóng cao.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 波",
+          "source_detail": "JpStudy-authored sea-wave context for 波",
           "license": "JpStudy authored"
         }
       ]
@@ -669,6 +716,7 @@
       "order": 13,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -690,18 +738,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s013",
-        "meaningVi": "pháo hoa",
+        "meaningVi": "Pháo hoa",
         "meaningEn": "fireworks"
       },
       "search": {
         "termNoAccent": "花火",
         "readingNoAccent": "はなひ",
-        "meaningViNoAccent": "phao hoa",
+        "meaningViNoAccent": "Phao hoa",
         "hanVietNoAccent": "hoa hoa"
       },
       "links": {
         "sourceVocabId": "n4_l27_v013",
-        "sourceSenseId": "n4_l27_s013"
+        "sourceSenseId": "n4_l27_s013",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hoa hoả"
@@ -709,11 +762,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v013-001",
-          "ja": "これは花火です。",
-          "vi": "Đây là pháo hoa.",
+          "ja": "夏祭りで花火を見ました。",
+          "vi": "Tôi đã xem pháo hoa ở lễ hội mùa hè.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 花火",
+          "source_detail": "JpStudy-authored summer-festival context for 花火",
           "license": "JpStudy authored"
         }
       ]
@@ -781,6 +834,7 @@
       "order": 15,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -802,18 +856,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s015",
-        "meaningVi": "ban ngày",
+        "meaningVi": "Ban ngày",
         "meaningEn": "daytime"
       },
       "search": {
         "termNoAccent": "昼間",
         "readingNoAccent": "ひるま",
-        "meaningViNoAccent": "ban ngay",
+        "meaningViNoAccent": "Ban ngay",
         "hanVietNoAccent": "tru gian"
       },
       "links": {
         "sourceVocabId": "n4_l27_v015",
-        "sourceSenseId": "n4_l27_s015"
+        "sourceSenseId": "n4_l27_s015",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trú gian"
@@ -821,11 +880,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v015-001",
-          "ja": "昼間から授業が始まります。",
-          "vi": "Lớp học bắt đầu từ ban ngày.",
+          "ja": "昼間は電気をつけなくても明るいです。",
+          "vi": "Ban ngày thì không bật đèn cũng sáng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for 昼間",
+          "source_detail": "JpStudy-authored daytime-brightness context for 昼間",
           "license": "JpStudy authored"
         }
       ]
@@ -837,6 +896,7 @@
       "order": 16,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -857,18 +917,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s016",
-        "meaningVi": "ngày xưa",
+        "meaningVi": "Ngày xưa",
         "meaningEn": "old days / ancient times"
       },
       "search": {
         "termNoAccent": "昔",
         "readingNoAccent": "むかし",
-        "meaningViNoAccent": "ngay xua",
+        "meaningViNoAccent": "Ngay xua",
         "hanVietNoAccent": "tich"
       },
       "links": {
         "sourceVocabId": "n4_l27_v016",
-        "sourceSenseId": "n4_l27_s016"
+        "sourceSenseId": "n4_l27_s016",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tích"
@@ -876,11 +941,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v016-001",
-          "ja": "昔から授業が始まります。",
-          "vi": "Lớp học bắt đầu từ ngày xưa.",
+          "ja": "昔、この町はとても静かでした。",
+          "vi": "Ngày xưa, thị trấn này rất yên tĩnh.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for 昔",
+          "source_detail": "JpStudy-authored old-times context for 昔",
           "license": "JpStudy authored"
         }
       ]
@@ -892,6 +957,7 @@
       "order": 17,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -913,18 +979,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s017",
-        "meaningVi": "dụng cụ, công cụ",
+        "meaningVi": "Dụng cụ",
         "meaningEn": "tool / instrument"
       },
       "search": {
         "termNoAccent": "道具",
         "readingNoAccent": "とうく",
-        "meaningViNoAccent": "dung cu, cong cu",
+        "meaningViNoAccent": "Dung cu",
         "hanVietNoAccent": "dao cu"
       },
       "links": {
         "sourceVocabId": "n4_l27_v017",
-        "sourceSenseId": "n4_l27_s017"
+        "sourceSenseId": "n4_l27_s017",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đạo cụ"
@@ -932,11 +1004,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v017-001",
-          "ja": "これは道具です。",
-          "vi": "Đây là dụng cụ.",
+          "ja": "この道具は子どもでも使えます。",
+          "vi": "Dụng cụ này ngay cả trẻ con cũng có thể dùng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 道具",
+          "source_detail": "JpStudy-authored child-safe tool context for 道具",
           "license": "JpStudy authored"
         }
       ]
@@ -947,7 +1019,8 @@
       "level": "N4",
       "order": 18,
       "tags": [
-        "Things",
+        "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -972,18 +1045,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s018",
-        "meaningVi": "máy bán hàng tự động",
+        "meaningVi": "Máy bán hàng tự động",
         "meaningEn": "vending machine"
       },
       "search": {
         "termNoAccent": "自動販売機",
         "readingNoAccent": "しとうはんはいき",
-        "meaningViNoAccent": "may ban hang tu dong",
+        "meaningViNoAccent": "May ban hang tu dong",
         "hanVietNoAccent": "tu dong phien mai co"
       },
       "links": {
         "sourceVocabId": "n4_l27_v018",
-        "sourceSenseId": "n4_l27_s018"
+        "sourceSenseId": "n4_l27_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "kanji-vocab-n4"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự động phiến mại cơ"
@@ -991,11 +1070,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v018-001",
-          "ja": "これは自動販売機です。",
-          "vi": "Đây là máy bán hàng tự động.",
+          "ja": "自動販売機で冷たい飲み物が買えます。",
+          "vi": "Có thể mua đồ uống lạnh ở máy bán hàng tự động.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 自動販売機",
+          "source_detail": "JpStudy-authored cold-drink vending context for 自動販売機",
           "license": "JpStudy authored"
         }
       ]
@@ -1007,6 +1086,7 @@
       "order": 19,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1030,18 +1110,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s019",
-        "meaningVi": "thương mại viễn thông (mua bán qua bưu điện/internet)",
+        "meaningVi": "Thương mại viễn thông, mua bán qua bưu điện/internet",
         "meaningEn": "mail order / online shopping"
       },
       "search": {
         "termNoAccent": "通信販売",
         "readingNoAccent": "つうしんはんはい",
-        "meaningViNoAccent": "thuong mai vien thong (mua ban qua buu dien/internet)",
+        "meaningViNoAccent": "Thuong mai vien thong, mua ban qua buu dien/internet",
         "hanVietNoAccent": "thong tin phien mai"
       },
       "links": {
         "sourceVocabId": "n4_l27_v019",
-        "sourceSenseId": "n4_l27_s019"
+        "sourceSenseId": "n4_l27_s019",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "kanji-vocab-n4"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thông tín phiến mại"
@@ -1049,11 +1135,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v019-001",
-          "ja": "これは通信販売です。",
-          "vi": "Đây là thương mại viễn thông.",
+          "ja": "通信販売のコマーシャルが毎日聞こえます。",
+          "vi": "Ngày nào cũng nghe thấy quảng cáo mua hàng từ xa.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 通信販売",
+          "source_detail": "JpStudy-authored mail-order commercial context for 通信販売",
           "license": "JpStudy authored"
         }
       ]
@@ -1065,6 +1151,7 @@
       "order": 20,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1083,18 +1170,22 @@
       },
       "sense": {
         "senseId": "n4_l27_s020",
-        "meaningVi": "giặt ủi",
+        "meaningVi": "Giặt ủi",
         "meaningEn": "cleaning (dry cleaning)"
       },
       "search": {
         "termNoAccent": "クリーニンク",
         "readingNoAccent": "くりーにんく",
-        "meaningViNoAccent": "giat ui",
+        "meaningViNoAccent": "Giat ui",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l27_v020",
-        "sourceSenseId": "n4_l27_s020"
+        "sourceSenseId": "n4_l27_s020",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1102,11 +1193,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v020-001",
-          "ja": "これはクリーニングです。",
-          "vi": "Đây là giặt ủi.",
+          "ja": "週末にスーツをクリーニングに出しました。",
+          "vi": "Cuối tuần tôi đã đem bộ vest đi giặt ủi.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for クリーニング",
+          "source_detail": "JpStudy-authored dry-cleaning errand context for クリーニング",
           "license": "JpStudy authored"
         }
       ]
@@ -1118,6 +1209,7 @@
       "order": 21,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1136,18 +1228,22 @@
       },
       "sense": {
         "senseId": "n4_l27_s021",
-        "meaningVi": "chung cư cao cấp",
+        "meaningVi": "Chung cư",
         "meaningEn": "condominium"
       },
       "search": {
         "termNoAccent": "マンション",
         "readingNoAccent": "まんしょん",
-        "meaningViNoAccent": "chung cu cao cap",
+        "meaningViNoAccent": "Chung cu",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l27_v021",
-        "sourceSenseId": "n4_l27_s021"
+        "sourceSenseId": "n4_l27_s021",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1155,11 +1251,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v021-001",
-          "ja": "マンションの前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước chung cư cao cấp.",
+          "ja": "あのマンションの窓からきれいな景色が見えます。",
+          "vi": "Từ cửa sổ chung cư đó có thể thấy phong cảnh đẹp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for マンション",
+          "source_detail": "JpStudy-authored apartment-window scenery context for マンション",
           "license": "JpStudy authored"
         }
       ]
@@ -1171,6 +1267,7 @@
       "order": 22,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1192,18 +1289,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s022",
-        "meaningVi": "bếp",
+        "meaningVi": "Nhà bếp",
         "meaningEn": "kitchen"
       },
       "search": {
         "termNoAccent": "台所",
         "readingNoAccent": "たいところ",
-        "meaningViNoAccent": "bep",
+        "meaningViNoAccent": "Nha bep",
         "hanVietNoAccent": "thai so"
       },
       "links": {
         "sourceVocabId": "n4_l27_v022",
-        "sourceSenseId": "n4_l27_s022"
+        "sourceSenseId": "n4_l27_s022",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thai sở"
@@ -1283,6 +1385,7 @@
       "order": 24,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1301,18 +1404,22 @@
       },
       "sense": {
         "senseId": "n4_l27_s024",
-        "meaningVi": "phòng tiệc",
+        "meaningVi": "Phòng tiệc",
         "meaningEn": "party room"
       },
       "search": {
         "termNoAccent": "ハーティールーム",
         "readingNoAccent": "はーてぃーるーむ",
-        "meaningViNoAccent": "phong tiec",
+        "meaningViNoAccent": "Phong tiec",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l27_v024",
-        "sourceSenseId": "n4_l27_s024"
+        "sourceSenseId": "n4_l27_s024",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1320,11 +1427,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v024-001",
-          "ja": "パーティールームの前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước phòng tiệc.",
+          "ja": "このパーティールームはだれでも使えます。",
+          "vi": "Phòng tiệc này ai cũng có thể dùng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for パーティールーム",
+          "source_detail": "JpStudy-authored anyone-can-use context for パーティールーム",
           "license": "JpStudy authored"
         }
       ]
@@ -1336,6 +1443,7 @@
       "order": 25,
       "tags": [
         "suffix",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1367,7 +1475,11 @@
       },
       "links": {
         "sourceVocabId": "n4_l27_v025",
-        "sourceSenseId": "n4_l27_s025"
+        "sourceSenseId": "n4_l27_s025",
+        "sourceConsensus": [
+          "kanji-vocab-n4"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hậu"
@@ -1375,11 +1487,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v025-001",
-          "ja": "～後から授業が始まります。",
-          "vi": "Lớp học bắt đầu từ sau ～.",
+          "ja": "授業後、図書館へ行きます。",
+          "vi": "Sau giờ học, tôi đi đến thư viện.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for ～後",
+          "source_detail": "JpStudy-authored after-class suffix context for ～後",
           "license": "JpStudy authored"
         }
       ]
@@ -1391,6 +1503,7 @@
       "order": 26,
       "tags": [
         "particle",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1420,7 +1533,11 @@
       },
       "links": {
         "sourceVocabId": "n4_l27_v026",
-        "sourceSenseId": "n4_l27_s026"
+        "sourceSenseId": "n4_l27_s026",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1428,11 +1545,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v026-001",
-          "ja": "～しかの前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước chỉ ～.",
+          "ja": "財布には千円しかありません。",
+          "vi": "Trong ví chỉ có 1000 yên.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for ～しか",
+          "source_detail": "JpStudy-authored only-with-negative context for ～しか",
           "license": "JpStudy authored"
         }
       ]
@@ -1481,11 +1598,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v027-001",
-          "ja": "これはほかのです。",
-          "vi": "Đây là khác.",
+          "ja": "ほかの色もありますか。",
+          "vi": "Có màu khác không?",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for ほかの",
+          "source_detail": "JpStudy-authored alternative-choice context for ほかの",
           "license": "JpStudy authored"
         }
       ]
@@ -1603,6 +1720,7 @@
       "order": 30,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1632,12 +1750,19 @@
       "search": {
         "termNoAccent": "関西空港",
         "readingNoAccent": "かんさいくうこう",
-        "meaningViNoAccent": "san bay kansai",
+        "meaningViNoAccent": "San bay Kansai",
         "hanVietNoAccent": "quan tay khong cang"
       },
       "links": {
         "sourceVocabId": "n4_l27_v030",
-        "sourceSenseId": "n4_l27_s030"
+        "sourceSenseId": "n4_l27_s030",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "kanji-vocab-n5"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "quan tây không cảng"
@@ -1645,11 +1770,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v030-001",
-          "ja": "関西空港の前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước Sân bay Kansai.",
+          "ja": "関西空港で友だちを迎えました。",
+          "vi": "Tôi đã đón bạn ở sân bay Kansai.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 関西空港",
+          "source_detail": "JpStudy-authored airport pickup context for 関西空港",
           "license": "JpStudy authored"
         }
       ]
@@ -1702,11 +1827,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v031-001",
-          "ja": "秋葉原の前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước Akihabara.",
+          "ja": "秋葉原で電気製品を買いました。",
+          "vi": "Tôi đã mua đồ điện tử ở Akihabara.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 秋葉原",
+          "source_detail": "JpStudy-authored electronics shopping context for 秋葉原",
           "license": "JpStudy authored"
         }
       ]
@@ -1758,11 +1883,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v032-001",
-          "ja": "伊豆の前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước Bán đảo Izu.",
+          "ja": "週末に伊豆へ旅行に行きました。",
+          "vi": "Cuối tuần tôi đã đi du lịch Izu.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 伊豆",
+          "source_detail": "JpStudy-authored travel context for 伊豆",
           "license": "JpStudy authored"
         }
       ]
@@ -1797,13 +1922,13 @@
       },
       "sense": {
         "senseId": "n4_l27_s033",
-        "meaningVi": "thợ mộc chủ nhật (làm mộc vu vơ ngày nghỉ)",
+        "meaningVi": "Tự làm đồ mộc vào ngày nghỉ (DIY)",
         "meaningEn": "Sunday carpenter / do-it-yourself"
       },
       "search": {
         "termNoAccent": "日曜大工",
         "readingNoAccent": "にちようたいく",
-        "meaningViNoAccent": "tho moc chu nhat (lam moc vu vo ngay nghi)",
+        "meaningViNoAccent": "Tu lam do moc vao ngay nghi (DIY)",
         "hanVietNoAccent": "nhat dieu dai cong"
       },
       "links": {
@@ -1816,11 +1941,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v033-001",
-          "ja": "これは日曜大工です。",
-          "vi": "Đây là thợ mộc chủ nhật.",
+          "ja": "父は日曜大工で本棚を作りました。",
+          "vi": "Bố tôi tự làm một giá sách vào ngày nghỉ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 日曜大工",
+          "source_detail": "JpStudy-authored weekend-DIY context for 日曜大工",
           "license": "JpStudy authored"
         }
       ]
@@ -1888,6 +2013,7 @@
       "order": 35,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1908,18 +2034,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s035",
-        "meaningVi": "giấc mơ",
+        "meaningVi": "Giấc mơ",
         "meaningEn": "dream"
       },
       "search": {
         "termNoAccent": "夢",
         "readingNoAccent": "ゆめ",
-        "meaningViNoAccent": "giac mo",
+        "meaningViNoAccent": "Giac mo",
         "hanVietNoAccent": "mong"
       },
       "links": {
         "sourceVocabId": "n4_l27_v035",
-        "sourceSenseId": "n4_l27_s035"
+        "sourceSenseId": "n4_l27_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "mimikara-n3",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mộng"
@@ -1927,11 +2059,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v035-001",
-          "ja": "これは夢です。",
-          "vi": "Đây là giấc mơ.",
+          "ja": "昨夜、楽しい夢を見ました。",
+          "vi": "Tối qua tôi đã mơ một giấc mơ vui.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 夢",
+          "source_detail": "JpStudy-authored pleasant-dream context for 夢",
           "license": "JpStudy authored"
         }
       ]
@@ -1996,6 +2128,7 @@
       "order": 37,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2016,18 +2149,22 @@
       },
       "sense": {
         "senseId": "n4_l27_s037",
-        "meaningVi": "ngôi nhà",
+        "meaningVi": "Nhà",
         "meaningEn": "house"
       },
       "search": {
         "termNoAccent": "家",
         "readingNoAccent": "いえ",
-        "meaningViNoAccent": "ngoi nha",
+        "meaningViNoAccent": "Nha",
         "hanVietNoAccent": "gia"
       },
       "links": {
         "sourceVocabId": "n4_l27_v037",
-        "sourceSenseId": "n4_l27_s037"
+        "sourceSenseId": "n4_l27_s037",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "gia"
@@ -2035,11 +2172,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v037-001",
-          "ja": "家の前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước ngôi nhà.",
+          "ja": "将来、自分の家を建てたいです。",
+          "vi": "Trong tương lai, tôi muốn xây nhà của mình.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 家",
+          "source_detail": "JpStudy-authored future house-building context for 家",
           "license": "JpStudy authored"
         }
       ]
@@ -2128,13 +2265,13 @@
       },
       "sense": {
         "senseId": "n4_l27_s039",
-        "meaningVi": "trẻ con, bọn trẻ",
+        "meaningVi": "Trẻ con, bọn trẻ",
         "meaningEn": "children"
       },
       "search": {
         "termNoAccent": "子供たち",
         "readingNoAccent": "こともたち",
-        "meaningViNoAccent": "tre con, bon tre",
+        "meaningViNoAccent": "Tre con, bon tre",
         "hanVietNoAccent": "tu cung"
       },
       "links": {
@@ -2147,12 +2284,12 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v039-001",
-          "ja": "これは子供たちです。",
-          "vi": "Đây là trẻ con.",
+          "ja": "子供たちがおもちゃで遊んでいる。",
+          "vi": "Bọn trẻ đang chơi với đồ chơi.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 子供たち",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 168806; translation 8943031",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -2275,6 +2412,7 @@
       "order": 42,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2295,18 +2433,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s042",
-        "meaningVi": "hình dáng",
+        "meaningVi": "Hình, hình dáng",
         "meaningEn": "shape"
       },
       "search": {
         "termNoAccent": "形",
         "readingNoAccent": "かたち",
-        "meaningViNoAccent": "hinh dang",
+        "meaningViNoAccent": "Hinh, hinh dang",
         "hanVietNoAccent": "hinh"
       },
       "links": {
         "sourceVocabId": "n4_l27_v042",
-        "sourceSenseId": "n4_l27_s042"
+        "sourceSenseId": "n4_l27_s042",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hình"
@@ -2314,11 +2457,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v042-001",
-          "ja": "これは形です。",
-          "vi": "Đây là hình dáng.",
+          "ja": "この皿は丸い形をしています。",
+          "vi": "Cái đĩa này có hình tròn.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 形",
+          "source_detail": "JpStudy-authored round-shape context for 形",
           "license": "JpStudy authored"
         }
       ]
@@ -2330,6 +2473,7 @@
       "order": 43,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2348,18 +2492,22 @@
       },
       "sense": {
         "senseId": "n4_l27_s043",
-        "meaningVi": "người máy",
+        "meaningVi": "Robot, người máy",
         "meaningEn": "robot"
       },
       "search": {
         "termNoAccent": "ロホット",
         "readingNoAccent": "ろほっと",
-        "meaningViNoAccent": "nguoi may",
+        "meaningViNoAccent": "Robot, nguoi may",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l27_v043",
-        "sourceSenseId": "n4_l27_s043"
+        "sourceSenseId": "n4_l27_s043",
+        "sourceConsensus": [
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -2367,12 +2515,12 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v043-001",
-          "ja": "これはロボットです。",
-          "vi": "Đây là người máy.",
+          "ja": "ロボットなら危険な状態になっても切り抜けられる。",
+          "vi": "Robot có thể hoạt động trong điều kiện nguy hiểm.",
           "audio_url": "",
-          "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for ロボット",
-          "license": "JpStudy authored"
+          "source": "tatoeba-cc-by-2.0",
+          "source_detail": "Tatoeba sentence 192162; translation 1573232",
+          "license": "CC-BY 2.0"
         }
       ]
     },
@@ -2383,6 +2531,7 @@
       "order": 44,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2405,18 +2554,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s044",
-        "meaningVi": "kỳ lạ, bí ẩn",
+        "meaningVi": "Kì lạ, thần bí",
         "meaningEn": "mysterious / strange"
       },
       "search": {
         "termNoAccent": "不思議",
         "readingNoAccent": "ふしき",
-        "meaningViNoAccent": "ky la, bi an",
+        "meaningViNoAccent": "Ki la, than bi",
         "hanVietNoAccent": "bat tu nghi"
       },
       "links": {
         "sourceVocabId": "n4_l27_v044",
-        "sourceSenseId": "n4_l27_s044"
+        "sourceSenseId": "n4_l27_s044",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bất tư nghị"
@@ -2424,11 +2579,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v044-001",
-          "ja": "これは不思議です。",
-          "vi": "Đây là kỳ lạ.",
+          "ja": "この話は少し不思議です。",
+          "vi": "Câu chuyện này hơi kỳ lạ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 不思議",
+          "source_detail": "JpStudy-authored mysterious-story context for 不思議",
           "license": "JpStudy authored"
         }
       ]
@@ -2493,6 +2648,7 @@
       "order": 46,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2513,18 +2669,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s046",
-        "meaningVi": "ví dụ",
+        "meaningVi": "Ví dụ",
         "meaningEn": "for example"
       },
       "search": {
         "termNoAccent": "例えは",
         "readingNoAccent": "たとえは",
-        "meaningViNoAccent": "vi du",
+        "meaningViNoAccent": "Vi du",
         "hanVietNoAccent": "le"
       },
       "links": {
         "sourceVocabId": "n4_l27_v046",
-        "sourceSenseId": "n4_l27_s046"
+        "sourceSenseId": "n4_l27_s046",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lề"
@@ -2532,11 +2693,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v046-001",
-          "ja": "これは例えばです。",
-          "vi": "Đây là ví dụ.",
+          "ja": "例えば、雨の日は家で本を読みます。",
+          "vi": "Ví dụ, ngày mưa thì tôi đọc sách ở nhà.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 例えば",
+          "source_detail": "JpStudy-authored example-marker context for 例えば",
           "license": "JpStudy authored"
         }
       ]
@@ -2548,6 +2709,7 @@
       "order": 47,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2568,18 +2730,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s047",
-        "meaningVi": "lắp, gắn",
+        "meaningVi": "Lắp, gắn",
         "meaningEn": "attach / put on"
       },
       "search": {
         "termNoAccent": "付けます",
         "readingNoAccent": "つけます",
-        "meaningViNoAccent": "lap, gan",
+        "meaningViNoAccent": "Lap, gan",
         "hanVietNoAccent": "pho"
       },
       "links": {
         "sourceVocabId": "n4_l27_v047",
-        "sourceSenseId": "n4_l27_s047"
+        "sourceSenseId": "n4_l27_s047",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "mimikara-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phó"
@@ -2587,11 +2755,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v047-001",
-          "ja": "朝の準備が終わったら付けます。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi lắp.",
+          "ja": "かばんに名前の札を付けます。",
+          "vi": "Tôi gắn thẻ tên vào cặp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 付けます",
+          "source_detail": "JpStudy-authored name-tag attachment context for 付けます",
           "license": "JpStudy authored"
         }
       ]
@@ -2603,6 +2771,7 @@
       "order": 48,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2624,18 +2793,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s048",
-        "meaningVi": "tự do",
+        "meaningVi": "Tự do, thoải mái",
         "meaningEn": "freely"
       },
       "search": {
         "termNoAccent": "自由に",
         "readingNoAccent": "しゆうに",
-        "meaningViNoAccent": "tu do",
+        "meaningViNoAccent": "Tu do, thoai mai",
         "hanVietNoAccent": "tu do"
       },
       "links": {
         "sourceVocabId": "n4_l27_v048",
-        "sourceSenseId": "n4_l27_s048"
+        "sourceSenseId": "n4_l27_s048",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự do"
@@ -2659,6 +2834,7 @@
       "order": 49,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2679,18 +2855,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s049",
-        "meaningVi": "bầu trời",
+        "meaningVi": "Bầu trời",
         "meaningEn": "sky"
       },
       "search": {
         "termNoAccent": "空",
         "readingNoAccent": "そら",
-        "meaningViNoAccent": "bau troi",
+        "meaningViNoAccent": "Bau troi",
         "hanVietNoAccent": "khong"
       },
       "links": {
         "sourceVocabId": "n4_l27_v049",
-        "sourceSenseId": "n4_l27_s049"
+        "sourceSenseId": "n4_l27_s049",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "không"
@@ -2698,11 +2879,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v049-001",
-          "ja": "これは空です。",
-          "vi": "Đây là bầu trời.",
+          "ja": "今日は空がとても青いです。",
+          "vi": "Hôm nay bầu trời rất xanh.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 空",
+          "source_detail": "JpStudy-authored blue-sky context for 空",
           "license": "JpStudy authored"
         }
       ]
@@ -2769,6 +2950,7 @@
       "order": 51,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2790,18 +2972,23 @@
       },
       "sense": {
         "senseId": "n4_l27_s051",
-        "meaningVi": "bản thân",
+        "meaningVi": "Bản thân, mình",
         "meaningEn": "oneself"
       },
       "search": {
         "termNoAccent": "自分",
         "readingNoAccent": "しふん",
-        "meaningViNoAccent": "ban than",
+        "meaningViNoAccent": "Ban than, minh",
         "hanVietNoAccent": "tu phan"
       },
       "links": {
         "sourceVocabId": "n4_l27_v051",
-        "sourceSenseId": "n4_l27_s051"
+        "sourceSenseId": "n4_l27_s051",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự phần"
@@ -2809,11 +2996,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v051-001",
-          "ja": "これは自分です。",
-          "vi": "Đây là bản thân.",
+          "ja": "自分の名前をここに書いてください。",
+          "vi": "Hãy viết tên của mình vào đây.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 自分",
+          "source_detail": "JpStudy-authored write-own-name context for 自分",
           "license": "JpStudy authored"
         }
       ]
@@ -2975,11 +3162,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v054-001",
-          "ja": "これはドラえもんです。",
-          "vi": "Đây là Doraemon.",
+          "ja": "子供たちはドラえもんの漫画が大好きです。",
+          "vi": "Bọn trẻ rất thích truyện tranh Doraemon.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for ドラえもん",
+          "source_detail": "JpStudy-authored manga-character context for ドラえもん",
           "license": "JpStudy authored"
         }
       ]
@@ -3046,6 +3233,7 @@
       "order": 56,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3068,18 +3256,24 @@
       },
       "sense": {
         "senseId": "n4_l27_s056",
-        "meaningVi": "bí ẩn",
+        "meaningVi": "Kì lạ, thần bí",
         "meaningEn": "mysterious"
       },
       "search": {
         "termNoAccent": "不思議な",
         "readingNoAccent": "ふしきな",
-        "meaningViNoAccent": "bi an",
+        "meaningViNoAccent": "Ki la, than bi",
         "hanVietNoAccent": "bat tu nghi"
       },
       "links": {
         "sourceVocabId": "n4_l27_v056",
-        "sourceSenseId": "n4_l27_s056"
+        "sourceSenseId": "n4_l27_s056",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bất tư nghị"
@@ -3087,11 +3281,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v056-001",
-          "ja": "これは不思議なです。",
-          "vi": "Đây là bí ẩn.",
+          "ja": "昨日、不思議な話を聞きました。",
+          "vi": "Hôm qua tôi nghe một câu chuyện kỳ lạ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 不思議な",
+          "source_detail": "JpStudy-authored mysterious-story attributive context for 不思議な",
           "license": "JpStudy authored"
         }
       ]
@@ -3146,11 +3340,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l27_v057-001",
-          "ja": "日曜日大工から授業が始まります。",
-          "vi": "Lớp học bắt đầu từ thợ mộc cuối tuần.",
+          "ja": "父は日曜日大工で本棚を作りました。",
+          "vi": "Bố tôi tự làm một giá sách vào ngày nghỉ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for 日曜日大工",
+          "source_detail": "JpStudy-authored weekend-DIY context for 日曜日大工",
           "license": "JpStudy authored"
         }
       ]

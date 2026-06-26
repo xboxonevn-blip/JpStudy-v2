@@ -539,11 +539,7 @@ class _ShinkanzenGrammarRoadmap extends StatelessWidget {
   }
 
   String _lessonCountLabel(AppLanguage language, int count) {
-    return switch (language) {
-      AppLanguage.en => '$count lessons',
-      AppLanguage.vi => '$count bài',
-      AppLanguage.ja => '$count課',
-    };
+    return language.lessonCountLabel(count);
   }
 
   String _populatedCountLabel(AppLanguage language, int count) {

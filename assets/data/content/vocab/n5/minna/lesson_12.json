@@ -2513,6 +2513,7 @@
       "order": 46,
       "tags": [
         "phrase",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2533,18 +2534,23 @@
       },
       "sense": {
         "senseId": "n5_l12_s046",
-        "meaningVi": "mệt rồi",
+        "meaningVi": "Tôi mệt rồi",
         "meaningEn": "I'm tired"
       },
       "search": {
         "termNoAccent": "疲れました",
         "readingNoAccent": "つかれました",
-        "meaningViNoAccent": "met roi",
+        "meaningViNoAccent": "Toi met roi",
         "hanVietNoAccent": "bi"
       },
       "links": {
         "sourceVocabId": "n5_l12_v046",
-        "sourceSenseId": "n5_l12_s046"
+        "sourceSenseId": "n5_l12_s046",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bì"
@@ -2729,6 +2735,7 @@
       "order": 50,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2749,18 +2756,23 @@
       },
       "sense": {
         "senseId": "n5_l12_s050",
-        "meaningVi": "mệt",
+        "meaningVi": "Tôi mệt rồi",
         "meaningEn": "get tired"
       },
       "search": {
         "termNoAccent": "疲れました",
         "readingNoAccent": "つかれました",
-        "meaningViNoAccent": "met",
+        "meaningViNoAccent": "Toi met roi",
         "hanVietNoAccent": "bi"
       },
       "links": {
         "sourceVocabId": "n5_l12_v050",
-        "sourceSenseId": "n5_l12_s050"
+        "sourceSenseId": "n5_l12_s050",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bì"

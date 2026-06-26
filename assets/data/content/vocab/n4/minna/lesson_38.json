@@ -2012,6 +2012,7 @@
       "order": 37,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2033,18 +2034,23 @@
       },
       "sense": {
         "senseId": "n4_l38_s037",
-        "meaningVi": "tính cách",
+        "meaningVi": "Tính cách, tính tình",
         "meaningEn": "character / personality"
       },
       "search": {
         "termNoAccent": "性格",
         "readingNoAccent": "せいかく",
-        "meaningViNoAccent": "tinh cach",
+        "meaningViNoAccent": "Tinh cach, tinh tinh",
         "hanVietNoAccent": "tinh cach"
       },
       "links": {
         "sourceVocabId": "n4_l38_v037",
-        "sourceSenseId": "n4_l38_s037"
+        "sourceSenseId": "n4_l38_s037",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tính cách"

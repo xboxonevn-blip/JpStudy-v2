@@ -2238,6 +2238,7 @@
       "order": 41,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2258,18 +2259,23 @@
       },
       "sense": {
         "senseId": "n5_l11_s041",
-        "meaningVi": "em trai (người khác)",
+        "meaningVi": "Em trai (dùng cho người khác)",
         "meaningEn": "younger brother (someone else's)"
       },
       "search": {
         "termNoAccent": "弟さん",
         "readingNoAccent": "おとうとさん",
-        "meaningViNoAccent": "em trai (nguoi khac)",
+        "meaningViNoAccent": "Em trai (dung cho nguoi khac)",
         "hanVietNoAccent": "de"
       },
       "links": {
         "sourceVocabId": "n5_l11_v041",
-        "sourceSenseId": "n5_l11_s041"
+        "sourceSenseId": "n5_l11_s041",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đệ"
@@ -2348,6 +2354,7 @@
       "order": 43,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2368,18 +2375,23 @@
       },
       "sense": {
         "senseId": "n5_l11_s043",
-        "meaningVi": "em gái (người khác)",
+        "meaningVi": "Em gái (dùng cho người khác)",
         "meaningEn": "younger sister (someone else's)"
       },
       "search": {
         "termNoAccent": "妹さん",
         "readingNoAccent": "いもうとさん",
-        "meaningViNoAccent": "em gai (nguoi khac)",
+        "meaningViNoAccent": "Em gai (dung cho nguoi khac)",
         "hanVietNoAccent": "muoi"
       },
       "links": {
         "sourceVocabId": "n5_l11_v043",
-        "sourceSenseId": "n5_l11_s043"
+        "sourceSenseId": "n5_l11_s043",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "muội"

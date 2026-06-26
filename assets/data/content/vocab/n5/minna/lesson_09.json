@@ -1668,6 +1668,7 @@
       "order": 31,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1688,18 +1689,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s031",
-        "meaningVi": "chồng (mình)",
+        "meaningVi": "Chồng (dùng khi nói về chồng mình)",
         "meaningEn": "husband (one's own)"
       },
       "search": {
         "termNoAccent": "夫",
         "readingNoAccent": "おっと",
-        "meaningViNoAccent": "chong (minh)",
+        "meaningViNoAccent": "Chong (dung khi noi ve chong minh)",
         "hanVietNoAccent": "phu"
       },
       "links": {
         "sourceVocabId": "n5_l09_v031",
-        "sourceSenseId": "n5_l09_s031"
+        "sourceSenseId": "n5_l09_s031",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phu"
@@ -2303,6 +2309,7 @@
       "order": 42,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2323,18 +2330,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s042",
-        "meaningVi": "sớm, nhanh",
+        "meaningVi": "Sớm",
         "meaningEn": "early / quickly"
       },
       "search": {
         "termNoAccent": "早く",
         "readingNoAccent": "はやく",
-        "meaningViNoAccent": "som, nhanh",
+        "meaningViNoAccent": "Som",
         "hanVietNoAccent": "tao"
       },
       "links": {
         "sourceVocabId": "n5_l09_v042",
-        "sourceSenseId": "n5_l09_s042"
+        "sourceSenseId": "n5_l09_s042",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tảo"
@@ -2358,6 +2370,7 @@
       "order": 43,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2378,18 +2391,23 @@
       },
       "sense": {
         "senseId": "n5_l09_s043",
-        "meaningVi": "nhanh (tốc độ)",
+        "meaningVi": "Nhanh",
         "meaningEn": "fast"
       },
       "search": {
         "termNoAccent": "速く",
         "readingNoAccent": "はやく",
-        "meaningViNoAccent": "nhanh (toc do)",
+        "meaningViNoAccent": "Nhanh",
         "hanVietNoAccent": "toc"
       },
       "links": {
         "sourceVocabId": "n5_l09_v043",
-        "sourceSenseId": "n5_l09_s043"
+        "sourceSenseId": "n5_l09_s043",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tốc"

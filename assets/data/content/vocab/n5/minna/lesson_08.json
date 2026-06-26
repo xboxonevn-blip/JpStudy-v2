@@ -341,6 +341,7 @@
       "order": 7,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -362,18 +363,23 @@
       },
       "sense": {
         "senseId": "n5_l08_s007",
-        "meaningVi": "khỏe mạnh",
+        "meaningVi": "Khỏe, khỏe mạnh",
         "meaningEn": "healthy / energetic"
       },
       "search": {
         "termNoAccent": "元気",
         "readingNoAccent": "けんき",
-        "meaningViNoAccent": "khoe manh",
+        "meaningViNoAccent": "Khoe, khoe manh",
         "hanVietNoAccent": "nguyen khi"
       },
       "links": {
         "sourceVocabId": "n5_l08_v007",
-        "sourceSenseId": "n5_l08_s007"
+        "sourceSenseId": "n5_l08_s007",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nguyên khí"
@@ -948,6 +954,7 @@
       "order": 18,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -968,18 +975,23 @@
       },
       "sense": {
         "senseId": "n5_l08_s018",
-        "meaningVi": "nóng (thời tiết)",
+        "meaningVi": "(trời) nóng",
         "meaningEn": "hot (weather)"
       },
       "search": {
         "termNoAccent": "暑い",
         "readingNoAccent": "あつい",
-        "meaningViNoAccent": "nong (thoi tiet)",
+        "meaningViNoAccent": "(troi) nong",
         "hanVietNoAccent": "thu"
       },
       "links": {
         "sourceVocabId": "n5_l08_v018",
-        "sourceSenseId": "n5_l08_s018"
+        "sourceSenseId": "n5_l08_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thử"
@@ -1058,6 +1070,7 @@
       "order": 20,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1078,18 +1091,23 @@
       },
       "sense": {
         "senseId": "n5_l08_s020",
-        "meaningVi": "lạnh (thời tiết)",
+        "meaningVi": "(trời) lạnh",
         "meaningEn": "cold (weather)"
       },
       "search": {
         "termNoAccent": "寒い",
         "readingNoAccent": "さむい",
-        "meaningViNoAccent": "lanh (thoi tiet)",
+        "meaningViNoAccent": "(troi) lanh",
         "hanVietNoAccent": "han"
       },
       "links": {
         "sourceVocabId": "n5_l08_v020",
-        "sourceSenseId": "n5_l08_s020"
+        "sourceSenseId": "n5_l08_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hàn"
@@ -2216,6 +2234,7 @@
       "order": 41,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2237,18 +2256,23 @@
       },
       "sense": {
         "senseId": "n5_l08_s041",
-        "meaningVi": "việc học",
+        "meaningVi": "Học tập (danh từ)",
         "meaningEn": "study"
       },
       "search": {
         "termNoAccent": "勉強",
         "readingNoAccent": "へんきょう",
-        "meaningViNoAccent": "viec hoc",
+        "meaningViNoAccent": "Hoc tap (danh tu)",
         "hanVietNoAccent": "mien cang"
       },
       "links": {
         "sourceVocabId": "n5_l08_v041",
-        "sourceSenseId": "n5_l08_s041"
+        "sourceSenseId": "n5_l08_s041",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "miễn càng"
@@ -3251,6 +3275,7 @@
       "order": 60,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3272,18 +3297,24 @@
       },
       "sense": {
         "senseId": "n5_l08_s060",
-        "meaningVi": "đầy, nhiều",
+        "meaningVi": "Nhiều",
         "meaningEn": "full / a lot"
       },
       "search": {
         "termNoAccent": "沢山",
         "readingNoAccent": "たくさん",
-        "meaningViNoAccent": "đay, nhieu",
+        "meaningViNoAccent": "Nhieu",
         "hanVietNoAccent": "trach son"
       },
       "links": {
         "sourceVocabId": "n5_l08_v060",
-        "sourceSenseId": "n5_l08_s060"
+        "sourceSenseId": "n5_l08_s060",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trạch sơn"

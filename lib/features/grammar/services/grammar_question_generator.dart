@@ -879,7 +879,14 @@ class GrammarQuestionGenerator {
     String? replacement;
     for (final value in alternatives.map((p) => p.grammarPoint)) {
       final candidate = value.trim();
+      if (candidate == targetPattern) {
+        continue;
+      }
       if (!_isEmbeddableSurfacePattern(candidate)) {
+        continue;
+      }
+      if (example.japanese.replaceFirst(targetPattern, candidate) ==
+          example.japanese) {
         continue;
       }
       replacement = candidate;
@@ -891,8 +898,14 @@ class GrammarQuestionGenerator {
       (item) => item.grammarPoint == replacement,
     );
 
+    final wrongSentence = example.japanese.replaceFirst(
+      targetPattern,
+      replacement,
+    );
+    if (wrongSentence == example.japanese) return null;
+
     return _CorruptedSentence(
-      wrongSentence: example.japanese.replaceFirst(targetPattern, replacement),
+      wrongSentence: wrongSentence,
       correctSentence: example.japanese,
       replacement: replacement,
       replacementPoint: replacementPoint,

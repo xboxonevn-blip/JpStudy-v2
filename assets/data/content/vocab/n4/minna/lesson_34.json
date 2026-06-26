@@ -889,6 +889,7 @@
       "order": 17,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -909,18 +910,23 @@
       },
       "sense": {
         "senseId": "n4_l34_s017",
-        "meaningVi": "hình vẽ, biểu đồ",
+        "meaningVi": "Sơ đồ, hình vẽ",
         "meaningEn": "figure / drawing"
       },
       "search": {
         "termNoAccent": "図",
         "readingNoAccent": "す",
-        "meaningViNoAccent": "hinh ve, bieu đo",
+        "meaningViNoAccent": "So do, hinh ve",
         "hanVietNoAccent": "do"
       },
       "links": {
         "sourceVocabId": "n4_l34_v017",
-        "sourceSenseId": "n4_l34_s017"
+        "sourceSenseId": "n4_l34_s017",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đồ"
@@ -1220,6 +1226,7 @@
       "order": 23,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1240,18 +1247,23 @@
       },
       "sense": {
         "senseId": "n4_l34_s023",
-        "meaningVi": "màu xanh",
+        "meaningVi": "Màu xanh da trời",
         "meaningEn": "blue"
       },
       "search": {
         "termNoAccent": "青",
         "readingNoAccent": "あお",
-        "meaningViNoAccent": "mau xanh",
+        "meaningViNoAccent": "Mau xanh da troi",
         "hanVietNoAccent": "thanh"
       },
       "links": {
         "sourceVocabId": "n4_l34_v023",
-        "sourceSenseId": "n4_l34_s023"
+        "sourceSenseId": "n4_l34_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thanh"
@@ -1275,6 +1287,7 @@
       "order": 24,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1295,18 +1308,23 @@
       },
       "sense": {
         "senseId": "n4_l34_s024",
-        "meaningVi": "màu xanh lam, màu chàm",
+        "meaningVi": "Màu xanh lam",
         "meaningEn": "navy blue"
       },
       "search": {
         "termNoAccent": "紺",
         "readingNoAccent": "こん",
-        "meaningViNoAccent": "mau xanh lam, mau cham",
+        "meaningViNoAccent": "Mau xanh lam",
         "hanVietNoAccent": "cam"
       },
       "links": {
         "sourceVocabId": "n4_l34_v024",
-        "sourceSenseId": "n4_l34_s024"
+        "sourceSenseId": "n4_l34_s024",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cám"

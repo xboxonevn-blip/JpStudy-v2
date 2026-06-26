@@ -234,6 +234,7 @@
       "order": 5,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -255,18 +256,23 @@
       },
       "sense": {
         "senseId": "n4_l46_s005",
-        "meaningVi": "vắng nhà",
+        "meaningVi": "Đi vắng",
         "meaningEn": "absence"
       },
       "search": {
         "termNoAccent": "留守",
         "readingNoAccent": "るす",
-        "meaningViNoAccent": "vang nha",
+        "meaningViNoAccent": "Di vang",
         "hanVietNoAccent": "luu thu"
       },
       "links": {
         "sourceVocabId": "n4_l46_v005",
-        "sourceSenseId": "n4_l46_s005"
+        "sourceSenseId": "n4_l46_s005",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lưu thủ"
@@ -729,6 +735,7 @@
       "order": 14,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -750,18 +757,24 @@
       },
       "sense": {
         "senseId": "n4_l46_s014",
-        "meaningVi": "vừa đúng, y hệt",
+        "meaningVi": "Vừa đúng",
         "meaningEn": "just / exactly"
       },
       "search": {
         "termNoAccent": "丁度",
         "readingNoAccent": "ちょうと",
-        "meaningViNoAccent": "vua đung, y het",
+        "meaningViNoAccent": "Vua dung",
         "hanVietNoAccent": "dinh do"
       },
       "links": {
         "sourceVocabId": "n4_l46_v014",
-        "sourceSenseId": "n4_l46_s014"
+        "sourceSenseId": "n4_l46_s014",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đinh độ"
@@ -840,6 +853,7 @@
       "order": 16,
       "tags": [
         "phrase",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -860,18 +874,22 @@
       },
       "sense": {
         "senseId": "n4_l46_s016",
-        "meaningVi": "Bây giờ nói chuyện có tiện không?",
+        "meaningVi": "Bây giờ nói chuyện có được không ạ?",
         "meaningEn": "Have you got a moment?"
       },
       "search": {
-        "termNoAccent": "今いいてすか",
-        "readingNoAccent": "いまいいてすか",
-        "meaningViNoAccent": "bay gio noi chuyen duoc khong?",
+        "termNoAccent": "今いいですか",
+        "readingNoAccent": "いまいいですか",
+        "meaningViNoAccent": "Bay gio noi chuyen co duoc khong a?",
         "hanVietNoAccent": "kim"
       },
       "links": {
         "sourceVocabId": "n4_l46_v016",
-        "sourceSenseId": "n4_l46_s016"
+        "sourceSenseId": "n4_l46_s016",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "kim"
@@ -879,11 +897,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l46_v016-001",
-          "ja": "今いいですかから授業が始まります。",
-          "vi": "Lớp học bắt đầu từ Bây giờ nói chuyện có tiện không?.",
+          "ja": "先生、今いいですか。",
+          "vi": "Thưa thầy cô, bây giờ nói chuyện có được không ạ?",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for 今いいですか",
+          "source_detail": "JpStudy-authored phrase context for 今いいですか",
           "license": "JpStudy authored"
         }
       ]
@@ -1001,6 +1019,7 @@
       "order": 19,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1022,18 +1041,24 @@
       },
       "sense": {
         "senseId": "n4_l46_s019",
-        "meaningVi": "tình trạng (sức khỏe, máy móc)",
+        "meaningVi": "Trạng thái, tình hình",
         "meaningEn": "condition"
       },
       "search": {
         "termNoAccent": "具合",
         "readingNoAccent": "くあい",
-        "meaningViNoAccent": "tinh trang (suc khoe, may moc)",
+        "meaningViNoAccent": "Trang thai, tinh hinh",
         "hanVietNoAccent": "cu hop"
       },
       "links": {
         "sourceVocabId": "n4_l46_v019",
-        "sourceSenseId": "n4_l46_s019"
+        "sourceSenseId": "n4_l46_s019",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n4",
+          "kanji-vocab-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cụ hợp"
@@ -1041,11 +1066,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l46_v019-001",
-          "ja": "これは具合です。",
-          "vi": "Đây là tình trạng.",
+          "ja": "今日は体の具合が悪いです。",
+          "vi": "Hôm nay tình trạng sức khỏe của tôi không tốt.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 具合",
+          "source_detail": "JpStudy-authored condition context for 具合",
           "license": "JpStudy authored"
         }
       ]
@@ -1220,6 +1245,7 @@
       "order": 23,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1241,18 +1267,24 @@
       },
       "sense": {
         "senseId": "n4_l46_s023",
-        "meaningVi": "tri thức, kiến thức",
+        "meaningVi": "Kiến thức",
         "meaningEn": "knowledge"
       },
       "search": {
         "termNoAccent": "知識",
         "readingNoAccent": "ちしき",
-        "meaningViNoAccent": "tri thuc, kien thuc",
+        "meaningViNoAccent": "Kien thuc",
         "hanVietNoAccent": "tri thuc"
       },
       "links": {
         "sourceVocabId": "n4_l46_v023",
-        "sourceSenseId": "n4_l46_s023"
+        "sourceSenseId": "n4_l46_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tri thức"
@@ -1883,6 +1915,7 @@
       "order": 35,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1905,18 +1938,24 @@
       },
       "sense": {
         "senseId": "n4_l46_s035",
-        "meaningVi": "dich vu giao hang tan noi",
+        "meaningVi": "Dịch vụ chuyển đồ đến nhà",
         "meaningEn": "home delivery service"
       },
       "search": {
         "termNoAccent": "宅配便",
         "readingNoAccent": "たくはいひん",
-        "meaningViNoAccent": "dich vu giao hang tan noi",
+        "meaningViNoAccent": "Dich vu chuyen do den nha",
         "hanVietNoAccent": "trach phoi tien"
       },
       "links": {
         "sourceVocabId": "n4_l46_v035",
-        "sourceSenseId": "n4_l46_s035"
+        "sourceSenseId": "n4_l46_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trạch phối tiện"
@@ -1925,7 +1964,7 @@
         {
           "example_id": "ex-n4_l46_v035-001",
           "ja": "これは宅配便です。",
-          "vi": "Đây là dich vu giao hang tan noi.",
+          "vi": "Đây là dịch vụ chuyển đồ đến nhà.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for 宅配便",
@@ -2048,6 +2087,7 @@
       "order": 38,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2068,18 +2108,23 @@
       },
       "sense": {
         "senseId": "n4_l46_s038",
-        "meaningVi": "noi lo",
+        "meaningVi": "Điều lo nghĩ, trăn trở, phiền muộn",
         "meaningEn": "worry / trouble"
       },
       "search": {
         "termNoAccent": "悩み",
         "readingNoAccent": "なやみ",
-        "meaningViNoAccent": "noi lo",
+        "meaningViNoAccent": "Dieu lo nghi, tran tro, phien muon",
         "hanVietNoAccent": "nao"
       },
       "links": {
         "sourceVocabId": "n4_l46_v038",
-        "sourceSenseId": "n4_l46_s038"
+        "sourceSenseId": "n4_l46_s038",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "não"

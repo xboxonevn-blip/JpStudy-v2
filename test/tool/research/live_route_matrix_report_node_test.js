@@ -34,6 +34,19 @@ test('analyzeRouteResult passes a level-visible direct route without N5 fallback
   assert.equal(result.routePreserved, true);
 });
 
+test('analyzeRouteResult treats N5 labels as expected content while testing N5', () => {
+  const result = analyzeRouteResult({
+    level: 'n5',
+    route: '/#/grammar',
+    url: 'https://jpstudy.web.app/#/grammar',
+    text: 'Ngữ pháp (N5) 自己紹介 私の家族',
+  });
+
+  assert.equal(result.pass, true);
+  assert.equal(result.hasExpectedLevel, true);
+  assert.deepEqual(result.n5FallbackMarkers, []);
+});
+
 test('analyzeRouteResult fails when a direct route falls back to N5', () => {
   const result = analyzeRouteResult({
     level: 'n1',

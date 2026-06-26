@@ -252,7 +252,7 @@ class _EnhancedFlashcardState extends ConsumerState<EnhancedFlashcard> {
                     top: -14,
                     right: -14,
                     child: IconButton.filledTonal(
-                      tooltip: 'Play Japanese audio',
+                      tooltip: widget.language.playJapaneseAudioTooltip,
                       icon: const Icon(Icons.volume_up_rounded),
                       onPressed: () => _speak(audioText),
                     ),
@@ -279,10 +279,11 @@ class _EnhancedFlashcardState extends ConsumerState<EnhancedFlashcard> {
     final result = await ref.read(ttsServiceProvider).speak(text);
     if (!mounted) return;
     final message = switch (result.status) {
-      TtsSpeakStatus.queued => 'Audio queued',
-      TtsSpeakStatus.empty => 'No Japanese text to read',
-      TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
-      TtsSpeakStatus.error => 'Could not play Japanese audio.',
+      TtsSpeakStatus.queued => widget.language.audioQueuedMessage,
+      TtsSpeakStatus.empty => widget.language.japaneseAudioEmptyMessage,
+      TtsSpeakStatus.unavailable =>
+        widget.language.japaneseVoiceUnavailableMessage,
+      TtsSpeakStatus.error => widget.language.japaneseAudioPlaybackErrorMessage,
     };
     ScaffoldMessenger.maybeOf(
       context,
@@ -396,6 +397,7 @@ class _EnhancedFlashcardState extends ConsumerState<EnhancedFlashcard> {
             if (examples.isNotEmpty) ...[
               const SizedBox(height: 16),
               _ExamplePanel(
+                language: widget.language,
                 examples: examples,
                 showJapanese: _showExampleJapanese,
                 onToggleLanguage: () {
@@ -420,11 +422,13 @@ class _EnhancedFlashcardState extends ConsumerState<EnhancedFlashcard> {
 
 class _ExamplePanel extends StatelessWidget {
   const _ExamplePanel({
+    required this.language,
     required this.examples,
     required this.showJapanese,
     required this.onToggleLanguage,
   });
 
+  final AppLanguage language;
   final List<VocabExampleSentence> examples;
   final bool showJapanese;
   final VoidCallback onToggleLanguage;
@@ -466,7 +470,11 @@ class _ExamplePanel extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           for (var index = 0; index < examples.length; index++) ...[
-            _ExampleRow(example: examples[index], showJapanese: showJapanese),
+            _ExampleRow(
+              language: language,
+              example: examples[index],
+              showJapanese: showJapanese,
+            ),
             if (index < examples.length - 1) const SizedBox(height: 8),
           ],
         ],
@@ -476,8 +484,13 @@ class _ExamplePanel extends StatelessWidget {
 }
 
 class _ExampleRow extends ConsumerWidget {
-  const _ExampleRow({required this.example, required this.showJapanese});
+  const _ExampleRow({
+    required this.language,
+    required this.example,
+    required this.showJapanese,
+  });
 
+  final AppLanguage language;
   final VocabExampleSentence example;
   final bool showJapanese;
 
@@ -492,18 +505,19 @@ class _ExampleRow extends ConsumerWidget {
           IconButton(
             icon: const Icon(Icons.volume_up_rounded),
             color: palette.secondary,
-            tooltip: 'Play Japanese audio',
+            tooltip: language.playJapaneseAudioTooltip,
             onPressed: () async {
               final result = await ref
                   .read(ttsServiceProvider)
                   .speak(audioText);
               if (!context.mounted) return;
               final message = switch (result.status) {
-                TtsSpeakStatus.queued => 'Audio queued',
-                TtsSpeakStatus.empty => 'No Japanese text to read',
+                TtsSpeakStatus.queued => language.audioQueuedMessage,
+                TtsSpeakStatus.empty => language.japaneseAudioEmptyMessage,
                 TtsSpeakStatus.unavailable =>
-                  'Trình duyệt không có giọng tiếng Nhật.',
-                TtsSpeakStatus.error => 'Could not play Japanese audio.',
+                  language.japaneseVoiceUnavailableMessage,
+                TtsSpeakStatus.error =>
+                  language.japaneseAudioPlaybackErrorMessage,
               };
               ScaffoldMessenger.maybeOf(context)?.showSnackBar(
                 SnackBar(content: Text(result.message ?? message)),

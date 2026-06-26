@@ -2396,6 +2396,7 @@
       "order": 44,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2417,18 +2418,24 @@
       },
       "sense": {
         "senseId": "n5_l23_s044",
-        "meaningVi": "đồng hồ/đồng hồ đeo tay",
+        "meaningVi": "Đồng hồ",
         "meaningEn": "clock / watch"
       },
       "search": {
         "termNoAccent": "時計",
         "readingNoAccent": "とけい",
-        "meaningViNoAccent": "dong ho/dong ho deo tay",
+        "meaningViNoAccent": "Dong ho",
         "hanVietNoAccent": "thi ke"
       },
       "links": {
         "sourceVocabId": "n5_l23_v044",
-        "sourceSenseId": "n5_l23_s044"
+        "sourceSenseId": "n5_l23_s044",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thì kể"

@@ -13,6 +13,7 @@
       "order": 1,
       "tags": [
         "pronoun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -33,18 +34,23 @@
       },
       "sense": {
         "senseId": "n5_l01_s001",
-        "meaningVi": "tôi",
+        "meaningVi": "Tôi (đại từ nhân xưng ngôi thứ nhất)",
         "meaningEn": "I"
       },
       "search": {
         "termNoAccent": "私",
         "readingNoAccent": "わたし",
-        "meaningViNoAccent": "toi",
+        "meaningViNoAccent": "Toi (dai tu nhan xung ngoi thu nhat)",
         "hanVietNoAccent": "tu"
       },
       "links": {
         "sourceVocabId": "n5_l01_v001",
-        "sourceSenseId": "n5_l01_s001"
+        "sourceSenseId": "n5_l01_s001",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-1"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tư"

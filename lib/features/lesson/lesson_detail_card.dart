@@ -351,7 +351,7 @@ class _CardContent extends ConsumerWidget {
             alignment: Alignment.centerRight,
             child: IconButton.filledTonal(
               key: const ValueKey('lesson_flashcard_audio'),
-              tooltip: 'Play Japanese audio',
+              tooltip: language.playJapaneseAudioTooltip,
               onPressed: onSpeak,
               icon: const Icon(Icons.volume_up_rounded),
             ),
@@ -472,7 +472,7 @@ class _CardContent extends ConsumerWidget {
                     const SizedBox(width: 8),
                     IconButton(
                       key: ValueKey('lesson_flashcard_example_audio_$index'),
-                      tooltip: 'Play Japanese audio',
+                      tooltip: language.playJapaneseAudioTooltip,
                       onPressed: () => onSpeakExample(examples[index].ja),
                       icon: const Icon(Icons.volume_up_rounded),
                     ),
@@ -568,22 +568,10 @@ Future<void> _speakJapaneseAudio(
   if (!context.mounted) return;
   final language = ref.read(appLanguageProvider);
   final message = switch (result.status) {
-    TtsSpeakStatus.queued => switch (language) {
-      AppLanguage.en => 'Audio queued.',
-      AppLanguage.vi => 'Đã phát âm.',
-      AppLanguage.ja => '音声を再生しました。',
-    },
-    TtsSpeakStatus.empty => switch (language) {
-      AppLanguage.en => 'No Japanese text to read.',
-      AppLanguage.vi => 'Chưa có tiếng Nhật để phát âm.',
-      AppLanguage.ja => '読み上げる日本語がありません。',
-    },
-    TtsSpeakStatus.unavailable => 'Trình duyệt không có giọng tiếng Nhật.',
-    TtsSpeakStatus.error => switch (language) {
-      AppLanguage.en => 'Could not play Japanese audio.',
-      AppLanguage.vi => 'Chưa phát được âm thanh tiếng Nhật.',
-      AppLanguage.ja => '日本語音声を再生できませんでした。',
-    },
+    TtsSpeakStatus.queued => language.audioQueuedMessage,
+    TtsSpeakStatus.empty => language.japaneseAudioEmptyMessage,
+    TtsSpeakStatus.unavailable => language.japaneseVoiceUnavailableMessage,
+    TtsSpeakStatus.error => language.japaneseAudioPlaybackErrorMessage,
   };
   ScaffoldMessenger.of(
     context,

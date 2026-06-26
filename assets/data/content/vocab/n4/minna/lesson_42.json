@@ -568,6 +568,7 @@
       "order": 11,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -589,18 +590,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s011",
-        "meaningVi": "tự nhiên, thiên nhiên",
+        "meaningVi": "Tự nhiên, thiên nhiên",
         "meaningEn": "nature"
       },
       "search": {
         "termNoAccent": "自然",
         "readingNoAccent": "しせん",
-        "meaningViNoAccent": "tu nhien, thien nhien",
+        "meaningViNoAccent": "Tu nhien, thien nhien",
         "hanVietNoAccent": "tu nhien"
       },
       "links": {
         "sourceVocabId": "n4_l42_v011",
-        "sourceSenseId": "n4_l42_s011"
+        "sourceSenseId": "n4_l42_s011",
+        "sourceConsensus": [
+          "minna-2",
+          "kanji-vocab-n4",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự nhiên"
@@ -608,12 +615,12 @@
       "example_sentences": [
         {
           "example_id": "tat-125019-vie-490725",
-          "ja": "天然自然が荒らされていくのは残念なことだ。",
-          "vi": "Lãng phí tài nguyên thiên nhiên lá một việc làm thật xấu hổ.",
+          "ja": "この島には美しい自然があります。",
+          "vi": "Trên hòn đảo này có thiên nhiên rất đẹp.",
           "audio_url": "",
-          "source": "tatoeba-cc-by-2.0",
-          "source_detail": "Tatoeba sentence 125019; translation 490725",
-          "license": "CC-BY 2.0"
+          "source": "jpstudy-authored-contextual",
+          "source_detail": "JpStudy-authored noun context for 自然",
+          "license": "JpStudy authored"
         }
       ]
     },
@@ -624,6 +631,7 @@
       "order": 12,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -645,18 +653,23 @@
       },
       "sense": {
         "senseId": "n4_l42_s012",
-        "meaningVi": "giáo dục",
+        "meaningVi": "Giáo dục, việc học hành",
         "meaningEn": "education"
       },
       "search": {
         "termNoAccent": "教育",
         "readingNoAccent": "きょういく",
-        "meaningViNoAccent": "giao duc",
+        "meaningViNoAccent": "Giao duc, viec hoc hanh",
         "hanVietNoAccent": "giao duc"
       },
       "links": {
         "sourceVocabId": "n4_l42_v012",
-        "sourceSenseId": "n4_l42_s012"
+        "sourceSenseId": "n4_l42_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giáo dục"
@@ -1072,6 +1085,7 @@
       "order": 20,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1093,18 +1107,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s020",
-        "meaningVi": "luận văn",
+        "meaningVi": "Luận văn, bài báo học thuật",
         "meaningEn": "thesis / dissertation"
       },
       "search": {
         "termNoAccent": "論文",
         "readingNoAccent": "ろんふん",
-        "meaningViNoAccent": "luan van",
+        "meaningViNoAccent": "Luan van, bai bao hoc thuat",
         "hanVietNoAccent": "luan van"
       },
       "links": {
         "sourceVocabId": "n4_l42_v020",
-        "sourceSenseId": "n4_l42_s020"
+        "sourceSenseId": "n4_l42_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "luận văn"
@@ -1236,6 +1256,7 @@
       "order": 23,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1257,18 +1278,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s023",
-        "meaningVi": "ấm nước",
+        "meaningVi": "Cái ấm nước",
         "meaningEn": "kettle"
       },
       "search": {
         "termNoAccent": "薬缶",
         "readingNoAccent": "やかん",
-        "meaningViNoAccent": "am nuoc",
+        "meaningViNoAccent": "Cai am nuoc",
         "hanVietNoAccent": "duoc phau"
       },
       "links": {
         "sourceVocabId": "n4_l42_v023",
-        "sourceSenseId": "n4_l42_s023"
+        "sourceSenseId": "n4_l42_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dược phẫu"
@@ -1515,6 +1542,7 @@
       "order": 28,
       "tags": [
         "things",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1537,18 +1565,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s028",
-        "meaningVi": "khăn gói đồ kiểu Nhật",
+        "meaningVi": "Tấm vải để gói đồ",
         "meaningEn": "wrapping cloth"
       },
       "search": {
         "termNoAccent": "風呂敷",
         "readingNoAccent": "ふろしき",
-        "meaningViNoAccent": "khan goi do kieu nhat",
+        "meaningViNoAccent": "Tam vai de goi do",
         "hanVietNoAccent": "phong la phu"
       },
       "links": {
         "sourceVocabId": "n4_l42_v028",
-        "sourceSenseId": "n4_l42_s028"
+        "sourceSenseId": "n4_l42_s028",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "phong lã phu"
@@ -2676,6 +2710,7 @@
       "order": 49,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2696,18 +2731,23 @@
       },
       "sense": {
         "senseId": "n4_l42_s049",
-        "meaningVi": "day",
+        "meaningVi": "Dày",
         "meaningEn": "thick"
       },
       "search": {
         "termNoAccent": "厚い",
         "readingNoAccent": "あつい",
-        "meaningViNoAccent": "day",
+        "meaningViNoAccent": "Day",
         "hanVietNoAccent": "hau"
       },
       "links": {
         "sourceVocabId": "n4_l42_v049",
-        "sourceSenseId": "n4_l42_s049"
+        "sourceSenseId": "n4_l42_s049",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hậu"
@@ -2715,8 +2755,8 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l42_v049-001",
-          "ja": "その態度は少し厚いと感じました。",
-          "vi": "Tôi cảm thấy thái độ đó hơi day.",
+          "ja": "この本は少し厚いです。",
+          "vi": "Cuốn sách này hơi dày.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored adjective context for 厚い",
@@ -2731,6 +2771,7 @@
       "order": 50,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2751,18 +2792,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s050",
-        "meaningVi": "mong, nhat",
+        "meaningVi": "Mỏng, nhạt, loãng",
         "meaningEn": "thin / light"
       },
       "search": {
         "termNoAccent": "薄い",
         "readingNoAccent": "うすい",
-        "meaningViNoAccent": "mong, nhat",
+        "meaningViNoAccent": "Mong, nhat, loang",
         "hanVietNoAccent": "bac"
       },
       "links": {
         "sourceVocabId": "n4_l42_v050",
-        "sourceSenseId": "n4_l42_s050"
+        "sourceSenseId": "n4_l42_s050",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "mimikara-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "bạc"
@@ -2770,8 +2817,8 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l42_v050-001",
-          "ja": "その態度は少し薄いと感じました。",
-          "vi": "Tôi cảm thấy thái độ đó hơi mong.",
+          "ja": "このスープは少し味が薄いです。",
+          "vi": "Món súp này vị hơi nhạt.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored adjective context for 薄い",
@@ -2786,6 +2833,7 @@
       "order": 51,
       "tags": [
         "counter",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2807,18 +2855,23 @@
       },
       "sense": {
         "senseId": "n4_l42_s051",
-        "meaningVi": "hai nguoi",
+        "meaningVi": "Hai người",
         "meaningEn": "two people"
       },
       "search": {
         "termNoAccent": "二人",
         "readingNoAccent": "ふたり",
-        "meaningViNoAccent": "hai nguoi",
+        "meaningViNoAccent": "Hai nguoi",
         "hanVietNoAccent": "hai nhan"
       },
       "links": {
         "sourceVocabId": "n4_l42_v051",
-        "sourceSenseId": "n4_l42_s051"
+        "sourceSenseId": "n4_l42_s051",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hai nhân"
@@ -2842,6 +2895,7 @@
       "order": 52,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2863,18 +2917,23 @@
       },
       "sense": {
         "senseId": "n4_l42_s052",
-        "meaningVi": "lich su",
+        "meaningVi": "Lịch sử",
         "meaningEn": "history"
       },
       "search": {
         "termNoAccent": "歴史",
         "readingNoAccent": "れきし",
-        "meaningViNoAccent": "lich su",
+        "meaningViNoAccent": "Lich su",
         "hanVietNoAccent": "lich su"
       },
       "links": {
         "sourceVocabId": "n4_l42_v052",
-        "sourceSenseId": "n4_l42_s052"
+        "sourceSenseId": "n4_l42_s052",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "lịch sử"
@@ -2883,7 +2942,7 @@
         {
           "example_id": "ex-n4_l42_v052-001",
           "ja": "これは歴史です。",
-          "vi": "Đây là lich su.",
+          "vi": "Đây là lịch sử.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for 歴史",
@@ -2898,6 +2957,7 @@
       "order": 53,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2919,18 +2979,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s053",
-        "meaningVi": "an toan",
+        "meaningVi": "An toàn",
         "meaningEn": "safe"
       },
       "search": {
         "termNoAccent": "安全",
         "readingNoAccent": "あんせん",
-        "meaningViNoAccent": "an toan",
+        "meaningViNoAccent": "An toan",
         "hanVietNoAccent": "an toan"
       },
       "links": {
         "sourceVocabId": "n4_l42_v053",
-        "sourceSenseId": "n4_l42_s053"
+        "sourceSenseId": "n4_l42_s053",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "an toàn"
@@ -2954,6 +3020,7 @@
       "order": 54,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2975,18 +3042,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s054",
-        "meaningVi": "quan he",
+        "meaningVi": "Quan hệ",
         "meaningEn": "relationship"
       },
       "search": {
         "termNoAccent": "関係",
         "readingNoAccent": "かんけい",
-        "meaningViNoAccent": "quan he",
+        "meaningViNoAccent": "Quan he",
         "hanVietNoAccent": "quan he"
       },
       "links": {
         "sourceVocabId": "n4_l42_v054",
-        "sourceSenseId": "n4_l42_s054"
+        "sourceSenseId": "n4_l42_s054",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "mimikara-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "quan hệ"
@@ -2995,7 +3068,7 @@
         {
           "example_id": "ex-n4_l42_v054-001",
           "ja": "二つの資料の関係を表にまとめました。",
-          "vi": "Tôi tóm tắt quan he của hai tài liệu thành bảng.",
+          "vi": "Tôi tóm tắt quan hệ của hai tài liệu thành bảng.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored relation/contrast context for 関係",
@@ -3010,6 +3083,7 @@
       "order": 55,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3030,18 +3104,24 @@
       },
       "sense": {
         "senseId": "n4_l42_s055",
-        "meaningVi": "da",
+        "meaningVi": "Hòn đá, viên đá",
         "meaningEn": "stone"
       },
       "search": {
         "termNoAccent": "石",
         "readingNoAccent": "いし",
-        "meaningViNoAccent": "da",
+        "meaningViNoAccent": "Hon da, vien da",
         "hanVietNoAccent": "thach"
       },
       "links": {
         "sourceVocabId": "n4_l42_v055",
-        "sourceSenseId": "n4_l42_s055"
+        "sourceSenseId": "n4_l42_s055",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "mimikara-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thạch"
@@ -3049,8 +3129,8 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l42_v055-001",
-          "ja": "これは石です。",
-          "vi": "Đây là da.",
+          "ja": "庭に大きな石があります。",
+          "vi": "Trong vườn có một hòn đá lớn.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for 石",
@@ -3118,6 +3198,7 @@
       "order": 57,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3136,18 +3217,22 @@
       },
       "sense": {
         "senseId": "n4_l42_s057",
-        "meaningVi": "du lieu",
+        "meaningVi": "Số liệu, dữ liệu",
         "meaningEn": "data"
       },
       "search": {
         "termNoAccent": "テータ",
         "readingNoAccent": "てーた",
-        "meaningViNoAccent": "du lieu",
+        "meaningViNoAccent": "So lieu, du lieu",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l42_v057",
-        "sourceSenseId": "n4_l42_s057"
+        "sourceSenseId": "n4_l42_s057",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -3156,7 +3241,7 @@
         {
           "example_id": "ex-n4_l42_v057-001",
           "ja": "これはデータです。",
-          "vi": "Đây là du lieu.",
+          "vi": "Đây là dữ liệu.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for データ",
@@ -3171,6 +3256,7 @@
       "order": 58,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3189,18 +3275,22 @@
       },
       "sense": {
         "senseId": "n4_l42_s058",
-        "meaningVi": "tep, file",
+        "meaningVi": "Kẹp tài liệu, file tài liệu",
         "meaningEn": "file"
       },
       "search": {
         "termNoAccent": "ファイル",
         "readingNoAccent": "ふぁいる",
-        "meaningViNoAccent": "tep, file",
+        "meaningViNoAccent": "Kep tai lieu, file tai lieu",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l42_v058",
-        "sourceSenseId": "n4_l42_s058"
+        "sourceSenseId": "n4_l42_s058",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -3209,7 +3299,7 @@
         {
           "example_id": "ex-n4_l42_v058-001",
           "ja": "これはファイルです。",
-          "vi": "Đây là tep.",
+          "vi": "Đây là kẹp tài liệu.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored level-capped noun context for ファイル",
@@ -3282,6 +3372,7 @@
       "order": 60,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3300,18 +3391,23 @@
       },
       "sense": {
         "senseId": "n4_l42_s060",
-        "meaningVi": "bo, set",
+        "meaningVi": "Cài, đặt",
         "meaningEn": "set"
       },
       "search": {
         "termNoAccent": "セット",
         "readingNoAccent": "せっと",
-        "meaningViNoAccent": "bo, set",
+        "meaningViNoAccent": "Cai, dat",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l42_v060",
-        "sourceSenseId": "n4_l42_s060"
+        "sourceSenseId": "n4_l42_s060",
+        "sourceConsensus": [
+          "mimikara-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -3441,6 +3537,7 @@
       "order": 63,
       "tags": [
         "food",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3459,18 +3556,22 @@
       },
       "sense": {
         "senseId": "n4_l42_s063",
-        "meaningVi": "mi an lien",
+        "meaningVi": "Mỳ ăn liền, mỳ gói",
         "meaningEn": "instant noodles"
       },
       "search": {
         "termNoAccent": "インスタントラーメン",
         "readingNoAccent": "いんすたんとらーめん",
-        "meaningViNoAccent": "mi an lien",
+        "meaningViNoAccent": "My an lien, my goi",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l42_v063",
-        "sourceSenseId": "n4_l42_s063"
+        "sourceSenseId": "n4_l42_s063",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -3479,7 +3580,7 @@
         {
           "example_id": "ex-n4_l42_v063-001",
           "ja": "昼休みにインスタントラーメンを注文しました。",
-          "vi": "Giờ nghỉ trưa tôi đã gọi mi an lien.",
+          "vi": "Giờ nghỉ trưa tôi đã gọi mỳ ăn liền.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored food context for インスタントラーメン",
@@ -3767,6 +3868,7 @@
       "order": 69,
       "tags": [
         "adverb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -3787,18 +3889,23 @@
       },
       "sense": {
         "senseId": "n4_l42_s069",
-        "meaningVi": "bay gio thi",
+        "meaningVi": "Bây giờ thì",
         "meaningEn": "nowadays"
       },
       "search": {
         "termNoAccent": "今ては",
         "readingNoAccent": "いまては",
-        "meaningViNoAccent": "bay gio thi",
+        "meaningViNoAccent": "Bay gio thi",
         "hanVietNoAccent": "kim"
       },
       "links": {
         "sourceVocabId": "n4_l42_v069",
-        "sourceSenseId": "n4_l42_s069"
+        "sourceSenseId": "n4_l42_s069",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "kim"
@@ -3806,8 +3913,8 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l42_v069-001",
-          "ja": "表の今ではを見て、数値の変化を確認しました。",
-          "vi": "Tôi nhìn bay gio thi trong bảng và kiểm tra sự thay đổi số liệu.",
+          "ja": "今では、駅の周りはとても便利です。",
+          "vi": "Bây giờ thì khu vực quanh nhà ga rất tiện lợi.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
           "source_detail": "JpStudy-authored numeric/table context for 今では",

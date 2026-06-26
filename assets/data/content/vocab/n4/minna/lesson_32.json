@@ -1061,6 +1061,7 @@
       "order": 20,
       "tags": [
         "body",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1082,18 +1083,24 @@
       },
       "sense": {
         "senseId": "n4_l32_s020",
-        "meaningVi": "thương tích, vết thương",
+        "meaningVi": "Vết thương",
         "meaningEn": "injury"
       },
       "search": {
         "termNoAccent": "怪我",
         "readingNoAccent": "けか",
-        "meaningViNoAccent": "thuong tich, vet thuong",
+        "meaningViNoAccent": "Vet thuong",
         "hanVietNoAccent": "quai nga"
       },
       "links": {
         "sourceVocabId": "n4_l32_v020",
-        "sourceSenseId": "n4_l32_s020"
+        "sourceSenseId": "n4_l32_s020",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "mimikara-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "quái ngã"
@@ -1336,6 +1343,7 @@
       "order": 25,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1356,18 +1364,23 @@
       },
       "sense": {
         "senseId": "n4_l32_s025",
-        "meaningVi": "ngôi sao",
+        "meaningVi": "Sao, ngôi sao",
         "meaningEn": "star"
       },
       "search": {
         "termNoAccent": "星",
         "readingNoAccent": "ほし",
-        "meaningViNoAccent": "ngoi sao",
+        "meaningViNoAccent": "Sao, ngoi sao",
         "hanVietNoAccent": "tinh"
       },
       "links": {
         "sourceVocabId": "n4_l32_v025",
-        "sourceSenseId": "n4_l32_s025"
+        "sourceSenseId": "n4_l32_s025",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tinh"
@@ -2050,6 +2063,7 @@
       "order": 38,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2070,18 +2084,23 @@
       },
       "sense": {
         "senseId": "n4_l32_s038",
-        "meaningVi": "muộn",
+        "meaningVi": "Muộn, khuya",
         "meaningEn": "late (time)"
       },
       "search": {
         "termNoAccent": "遅く",
         "readingNoAccent": "おそく",
-        "meaningViNoAccent": "muon",
+        "meaningViNoAccent": "Muon, khuya",
         "hanVietNoAccent": "tri"
       },
       "links": {
         "sourceVocabId": "n4_l32_v038",
-        "sourceSenseId": "n4_l32_s038"
+        "sourceSenseId": "n4_l32_s038",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trì"
@@ -2653,6 +2672,7 @@
       "order": 49,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2673,18 +2693,23 @@
       },
       "sense": {
         "senseId": "n4_l32_s049",
-        "meaningVi": "làm việc quá sức",
+        "meaningVi": "Làm việc quá sức, làm việc nhiều quá",
         "meaningEn": "overworking"
       },
       "search": {
         "termNoAccent": "働きすき",
         "readingNoAccent": "はたらきすき",
-        "meaningViNoAccent": "lam viec qua suc",
+        "meaningViNoAccent": "Lam viec qua suc, lam viec nhieu qua",
         "hanVietNoAccent": "dong"
       },
       "links": {
         "sourceVocabId": "n4_l32_v049",
-        "sourceSenseId": "n4_l32_s049"
+        "sourceSenseId": "n4_l32_s049",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "động"
@@ -2873,6 +2898,7 @@
       "order": 53,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2894,18 +2920,23 @@
       },
       "sense": {
         "senseId": "n4_l32_s053",
-        "meaningVi": "sức khỏe",
+        "meaningVi": "Sức khỏe, khỏe mạnh, an khang",
         "meaningEn": "health"
       },
       "search": {
         "termNoAccent": "健康",
         "readingNoAccent": "けんこう",
-        "meaningViNoAccent": "suc khoe",
+        "meaningViNoAccent": "Suc khoe, khoe manh, an khang",
         "hanVietNoAccent": "kien khang"
       },
       "links": {
         "sourceVocabId": "n4_l32_v053",
-        "sourceSenseId": "n4_l32_s053"
+        "sourceSenseId": "n4_l32_s053",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "kiện khang"

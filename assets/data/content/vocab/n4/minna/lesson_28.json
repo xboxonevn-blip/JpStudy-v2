@@ -68,6 +68,7 @@
       "order": 2,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -88,18 +89,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s002",
-        "meaningVi": "nhảy, khiêu vũ",
+        "meaningVi": "Nhảy, khiêu vũ",
         "meaningEn": "dance"
       },
       "search": {
         "termNoAccent": "踊ります",
         "readingNoAccent": "おとります",
-        "meaningViNoAccent": "nhay, khieu vu",
+        "meaningViNoAccent": "Nhay, khieu vu",
         "hanVietNoAccent": "dung"
       },
       "links": {
         "sourceVocabId": "n4_l28_v002",
-        "sourceSenseId": "n4_l28_s002"
+        "sourceSenseId": "n4_l28_s002",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dũng"
@@ -107,11 +113,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v002-001",
-          "ja": "朝の準備が終わったら踊ります。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi nhảy.",
+          "ja": "夏祭りで友達と踊ります。",
+          "vi": "Tôi sẽ nhảy múa với bạn ở lễ hội mùa hè.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 踊ります",
+          "source_detail": "JpStudy-authored summer-festival dance context for 踊ります",
           "license": "JpStudy authored"
         }
       ]
@@ -123,6 +129,7 @@
       "order": 3,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -143,18 +150,22 @@
       },
       "sense": {
         "senseId": "n4_l28_s003",
-        "meaningVi": "nhai, cắn",
+        "meaningVi": "Nhai",
         "meaningEn": "chew / bite"
       },
       "search": {
         "termNoAccent": "噛みます",
         "readingNoAccent": "かみます",
-        "meaningViNoAccent": "nhai, can",
+        "meaningViNoAccent": "Nhai",
         "hanVietNoAccent": "giao"
       },
       "links": {
         "sourceVocabId": "n4_l28_v003",
-        "sourceSenseId": "n4_l28_s003"
+        "sourceSenseId": "n4_l28_s003",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "giảo"
@@ -162,11 +173,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v003-001",
-          "ja": "朝の準備が終わったら噛みます。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi nhai.",
+          "ja": "雑誌を読みながら、ガムを噛みます。",
+          "vi": "Tôi vừa đọc tạp chí vừa nhai kẹo cao su.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 噛みます",
+          "source_detail": "JpStudy-authored gum-chewing context for 噛みます",
           "license": "JpStudy authored"
         }
       ]
@@ -178,6 +189,7 @@
       "order": 4,
       "tags": [
         "verb",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -198,18 +210,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s004",
-        "meaningVi": "chọn",
+        "meaningVi": "Chọn",
         "meaningEn": "choose"
       },
       "search": {
         "termNoAccent": "選ひます",
         "readingNoAccent": "えらひます",
-        "meaningViNoAccent": "chon",
+        "meaningViNoAccent": "Chon",
         "hanVietNoAccent": "tuyen"
       },
       "links": {
         "sourceVocabId": "n4_l28_v004",
-        "sourceSenseId": "n4_l28_s004"
+        "sourceSenseId": "n4_l28_s004",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tuyển"
@@ -217,11 +234,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v004-001",
-          "ja": "朝の準備が終わったら選びます。",
-          "vi": "Khi chuẩn bị buổi sáng xong, tôi chọn.",
+          "ja": "旅行の前にホテルを選びます。",
+          "vi": "Trước chuyến du lịch, tôi chọn khách sạn.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored verb context for 選びます",
+          "source_detail": "JpStudy-authored hotel-selection context for 選びます",
           "license": "JpStudy authored"
         }
       ]
@@ -341,6 +358,7 @@
       "order": 7,
       "tags": [
         "adj_na",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -363,18 +381,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s007",
-        "meaningVi": "nghiêm túc, chăm chỉ",
+        "meaningVi": "Nghiêm túc, nghiêm chỉnh",
         "meaningEn": "serious / earnest"
       },
       "search": {
         "termNoAccent": "真面目",
         "readingNoAccent": "ましめ",
-        "meaningViNoAccent": "nghiem tuc, cham chi",
+        "meaningViNoAccent": "Nghiem tuc, nghiem chinh",
         "hanVietNoAccent": "chan dien muc"
       },
       "links": {
         "sourceVocabId": "n4_l28_v007",
-        "sourceSenseId": "n4_l28_s007"
+        "sourceSenseId": "n4_l28_s007",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "chân diện mục"
@@ -382,11 +405,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v007-001",
-          "ja": "これは真面目です。",
-          "vi": "Đây là nghiêm túc.",
+          "ja": "ワット先生は真面目で、熱心です。",
+          "vi": "Thầy Watt nghiêm túc và nhiệt tình.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 真面目",
+          "source_detail": "JpStudy-authored teacher-character context for 真面目",
           "license": "JpStudy authored"
         }
       ]
@@ -618,6 +641,7 @@
       "order": 12,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -640,18 +664,25 @@
       },
       "sense": {
         "senseId": "n4_l28_s012",
-        "meaningVi": "thẩm mỹ viện, hiệu làm đẹp",
+        "meaningVi": "Hiệu làm đẹp",
         "meaningEn": "hair salon / beauty salon"
       },
       "search": {
         "termNoAccent": "美容院",
         "readingNoAccent": "ひよういん",
-        "meaningViNoAccent": "tham my vien, hieu lam đep",
+        "meaningViNoAccent": "Hieu lam dep",
         "hanVietNoAccent": "mi dung vien"
       },
       "links": {
         "sourceVocabId": "n4_l28_v012",
-        "sourceSenseId": "n4_l28_s012"
+        "sourceSenseId": "n4_l28_s012",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "mỉ dung viện"
@@ -675,6 +706,7 @@
       "order": 13,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -696,18 +728,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s013",
-        "meaningVi": "bếp (nhà bếp)",
+        "meaningVi": "Nhà bếp",
         "meaningEn": "kitchen"
       },
       "search": {
         "termNoAccent": "台所",
         "readingNoAccent": "たいところ",
-        "meaningViNoAccent": "bep (nha bep)",
+        "meaningViNoAccent": "Nha bep",
         "hanVietNoAccent": "thai so"
       },
       "links": {
         "sourceVocabId": "n4_l28_v013",
-        "sourceSenseId": "n4_l28_s013"
+        "sourceSenseId": "n4_l28_s013",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thai sở"
@@ -898,6 +935,7 @@
       "order": 17,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -918,18 +956,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s017",
-        "meaningVi": "hình dáng",
+        "meaningVi": "Hình, hình dáng",
         "meaningEn": "shape / form"
       },
       "search": {
         "termNoAccent": "形",
         "readingNoAccent": "かたち",
-        "meaningViNoAccent": "hinh dang",
+        "meaningViNoAccent": "Hinh, hinh dang",
         "hanVietNoAccent": "hinh"
       },
       "links": {
         "sourceVocabId": "n4_l28_v017",
-        "sourceSenseId": "n4_l28_s017"
+        "sourceSenseId": "n4_l28_s017",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "hình"
@@ -937,11 +980,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v017-001",
-          "ja": "これは形です。",
-          "vi": "Đây là hình dáng.",
+          "ja": "このかばんは形がいいです。",
+          "vi": "Cái túi này có dáng đẹp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 形",
+          "source_detail": "JpStudy-authored bag-shape context for 形",
           "license": "JpStudy authored"
         }
       ]
@@ -953,6 +996,7 @@
       "order": 18,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -973,18 +1017,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s018",
-        "meaningVi": "màu sắc",
+        "meaningVi": "Màu",
         "meaningEn": "color"
       },
       "search": {
         "termNoAccent": "色",
         "readingNoAccent": "いろ",
-        "meaningViNoAccent": "mau sac",
+        "meaningViNoAccent": "Mau",
         "hanVietNoAccent": "sac"
       },
       "links": {
         "sourceVocabId": "n4_l28_v018",
-        "sourceSenseId": "n4_l28_s018"
+        "sourceSenseId": "n4_l28_s018",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "sắc"
@@ -992,11 +1041,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v018-001",
-          "ja": "これは色です。",
-          "vi": "Đây là màu sắc.",
+          "ja": "このシャツは色がきれいです。",
+          "vi": "Cái áo này có màu đẹp.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 色",
+          "source_detail": "JpStudy-authored shirt-color context for 色",
           "license": "JpStudy authored"
         }
       ]
@@ -1008,6 +1057,7 @@
       "order": 19,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1028,18 +1078,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s019",
-        "meaningVi": "vị (ngọt, chua...)",
+        "meaningVi": "Vị",
         "meaningEn": "taste"
       },
       "search": {
         "termNoAccent": "味",
         "readingNoAccent": "あし",
-        "meaningViNoAccent": "vi (ngot, chua...)",
+        "meaningViNoAccent": "Vi",
         "hanVietNoAccent": "vi"
       },
       "links": {
         "sourceVocabId": "n4_l28_v019",
-        "sourceSenseId": "n4_l28_s019"
+        "sourceSenseId": "n4_l28_s019",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "vị"
@@ -1047,11 +1102,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v019-001",
-          "ja": "これは味です。",
-          "vi": "Đây là vị.",
+          "ja": "このガムは味がいいです。",
+          "vi": "Kẹo cao su này có vị ngon.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 味",
+          "source_detail": "JpStudy-authored gum-taste context for 味",
           "license": "JpStudy authored"
         }
       ]
@@ -1172,6 +1227,7 @@
       "order": 22,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1193,18 +1249,24 @@
       },
       "sense": {
         "senseId": "n4_l28_s022",
-        "meaningVi": "giá cả",
+        "meaningVi": "Giá",
         "meaningEn": "price"
       },
       "search": {
         "termNoAccent": "値段",
         "readingNoAccent": "ねたん",
-        "meaningViNoAccent": "gia ca",
+        "meaningViNoAccent": "Gia",
         "hanVietNoAccent": "tri doan"
       },
       "links": {
         "sourceVocabId": "n4_l28_v022",
-        "sourceSenseId": "n4_l28_s022"
+        "sourceSenseId": "n4_l28_s022",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "trị đoạn"
@@ -1228,6 +1290,7 @@
       "order": 23,
       "tags": [
         "money",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1249,18 +1312,24 @@
       },
       "sense": {
         "senseId": "n4_l28_s023",
-        "meaningVi": "lương",
+        "meaningVi": "Tiền lương",
         "meaningEn": "salary"
       },
       "search": {
         "termNoAccent": "給料",
         "readingNoAccent": "きゅうりょう",
-        "meaningViNoAccent": "luong",
+        "meaningViNoAccent": "Tien luong",
         "hanVietNoAccent": "cap lieu"
       },
       "links": {
         "sourceVocabId": "n4_l28_v023",
-        "sourceSenseId": "n4_l28_s023"
+        "sourceSenseId": "n4_l28_s023",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "mimikara-n3"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "cấp liệu"
@@ -1337,6 +1406,7 @@
       "order": 25,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1358,18 +1428,24 @@
       },
       "sense": {
         "senseId": "n4_l28_s025",
-        "meaningVi": "chương trình (truyền hình/phát thanh)",
+        "meaningVi": "Chương trình (phát thanh, truyền hình)",
         "meaningEn": "program (TV)"
       },
       "search": {
         "termNoAccent": "番組",
         "readingNoAccent": "はんくみ",
-        "meaningViNoAccent": "chuong trinh (truyen hinh/phat thanh)",
+        "meaningViNoAccent": "Chuong trinh (phat thanh, truyen hinh)",
         "hanVietNoAccent": "deo to"
       },
       "links": {
         "sourceVocabId": "n4_l28_v025",
-        "sourceSenseId": "n4_l28_s025"
+        "sourceSenseId": "n4_l28_s025",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "dẻo tổ"
@@ -1393,6 +1469,7 @@
       "order": 26,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1411,18 +1488,22 @@
       },
       "sense": {
         "senseId": "n4_l28_s026",
-        "meaningVi": "phim truyền hình (drama)",
+        "meaningVi": "Kịch, phim truyền hình",
         "meaningEn": "drama"
       },
       "search": {
         "termNoAccent": "トラマ",
         "readingNoAccent": "とらま",
-        "meaningViNoAccent": "phim truyen hinh (drama)",
+        "meaningViNoAccent": "Kich, phim truyen hinh",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l28_v026",
-        "sourceSenseId": "n4_l28_s026"
+        "sourceSenseId": "n4_l28_s026",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -1430,11 +1511,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v026-001",
-          "ja": "これはドラマです。",
-          "vi": "Đây là phim truyền hình.",
+          "ja": "週末に日本のドラマを見ました。",
+          "vi": "Cuối tuần tôi đã xem phim truyền hình Nhật.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for ドラマ",
+          "source_detail": "JpStudy-authored weekend Japanese-drama context for ドラマ",
           "license": "JpStudy authored"
         }
       ]
@@ -1784,6 +1865,7 @@
       "order": 33,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1804,18 +1886,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s033",
-        "meaningVi": "con gái (mình)",
+        "meaningVi": "Con gái (dùng cho mình)",
         "meaningEn": "daughter"
       },
       "search": {
         "termNoAccent": "娘",
         "readingNoAccent": "むすめ",
-        "meaningViNoAccent": "con gai (minh)",
+        "meaningViNoAccent": "Con gai (dung cho minh)",
         "hanVietNoAccent": "nuong"
       },
       "links": {
         "sourceVocabId": "n4_l28_v033",
-        "sourceSenseId": "n4_l28_s033"
+        "sourceSenseId": "n4_l28_s033",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nương"
@@ -1823,11 +1910,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v033-001",
-          "ja": "これは娘です。",
-          "vi": "Đây là con gái.",
+          "ja": "娘は大学で日本語を勉強しています。",
+          "vi": "Con gái tôi đang học tiếng Nhật ở đại học.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 娘",
+          "source_detail": "JpStudy-authored family-study context for 娘",
           "license": "JpStudy authored"
         }
       ]
@@ -1839,6 +1926,7 @@
       "order": 34,
       "tags": [
         "family",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1859,18 +1947,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s034",
-        "meaningVi": "con gái (người khác)",
+        "meaningVi": "Con gái (dùng cho người khác)",
         "meaningEn": "daughter (someone else's)"
       },
       "search": {
         "termNoAccent": "娘さん",
         "readingNoAccent": "むすめさん",
-        "meaningViNoAccent": "con gai (nguoi khac)",
+        "meaningViNoAccent": "Con gai (dung cho nguoi khac)",
         "hanVietNoAccent": "nuong"
       },
       "links": {
         "sourceVocabId": "n4_l28_v034",
-        "sourceSenseId": "n4_l28_s034"
+        "sourceSenseId": "n4_l28_s034",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nương"
@@ -1894,6 +1987,7 @@
       "order": 35,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -1915,18 +2009,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s035",
-        "meaningVi": "bản thân",
+        "meaningVi": "Bản thân, mình",
         "meaningEn": "oneself"
       },
       "search": {
         "termNoAccent": "自分",
         "readingNoAccent": "しふん",
-        "meaningViNoAccent": "ban than",
+        "meaningViNoAccent": "Ban than, minh",
         "hanVietNoAccent": "tu phan"
       },
       "links": {
         "sourceVocabId": "n4_l28_v035",
-        "sourceSenseId": "n4_l28_s035"
+        "sourceSenseId": "n4_l28_s035",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tự phần"
@@ -1934,11 +2033,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v035-001",
-          "ja": "これは自分です。",
-          "vi": "Đây là bản thân.",
+          "ja": "自分の意見をノートに書きました。",
+          "vi": "Tôi đã viết ý kiến của mình vào vở.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 自分",
+          "source_detail": "JpStudy-authored own-opinion context for 自分",
           "license": "JpStudy authored"
         }
       ]
@@ -2112,6 +2211,7 @@
       "order": 39,
       "tags": [
         "conjunction",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2130,18 +2230,22 @@
       },
       "sense": {
         "senseId": "n4_l28_s039",
-        "meaningVi": "hơn nữa, thêm vào đó",
+        "meaningVi": "Thêm nữa là, thêm vào đó là",
         "meaningEn": "in addition / moreover"
       },
       "search": {
         "termNoAccent": "それに",
         "readingNoAccent": "それに",
-        "meaningViNoAccent": "hon nua, them vao đo",
+        "meaningViNoAccent": "Them nua la, them vao do la",
         "hanVietNoAccent": ""
       },
       "links": {
         "sourceVocabId": "n4_l28_v039",
-        "sourceSenseId": "n4_l28_s039"
+        "sourceSenseId": "n4_l28_s039",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": null
@@ -2149,11 +2253,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v039-001",
-          "ja": "契約書ではそれにの形で前の内容を受けています。",
-          "vi": "Trong hợp đồng, hơn nữa nối lại nội dung phía trước.",
+          "ja": "この店は安いです。それに、駅から近いです。",
+          "vi": "Cửa hàng này rẻ. Hơn nữa, nó gần ga.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored function-word context for それに",
+          "source_detail": "JpStudy-authored addition connector context for それに",
           "license": "JpStudy authored"
         }
       ]
@@ -2238,13 +2342,13 @@
       },
       "sense": {
         "senseId": "n4_l28_s041",
-        "meaningVi": "tôi có chút việc muốn nhờ",
+        "meaningVi": "Tôi có chút việc muốn nhờ",
         "meaningEn": "I have a favor to ask"
       },
       "search": {
         "termNoAccent": "ちょっとお願いかあるんてすか",
         "readingNoAccent": "ちょっとおねかいかあるんてすか",
-        "meaningViNoAccent": "toi co chut viec muon nho",
+        "meaningViNoAccent": "Toi co chut viec muon nho",
         "hanVietNoAccent": "nguyen"
       },
       "links": {
@@ -2257,11 +2361,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v041-001",
-          "ja": "これはちょっとお願いがあるんですがです。",
-          "vi": "Đây là tôi có chút việc muốn nhờ.",
+          "ja": "すみません、ちょっとお願いがあるんですが。",
+          "vi": "Xin lỗi, tôi có chút việc muốn nhờ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for ちょっとお願いがあるんですが",
+          "source_detail": "JpStudy-authored favor-request opener context for ちょっとお願いがあるんですが",
           "license": "JpStudy authored"
         }
       ]
@@ -2437,6 +2541,7 @@
       "order": 45,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2457,18 +2562,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s045",
-        "meaningVi": "thông báo",
+        "meaningVi": "Bản thông báo",
         "meaningEn": "notice"
       },
       "search": {
         "termNoAccent": "お知らせ",
         "readingNoAccent": "おしらせ",
-        "meaningViNoAccent": "thong bao",
+        "meaningViNoAccent": "Ban thong bao",
         "hanVietNoAccent": "tri"
       },
       "links": {
         "sourceVocabId": "n4_l28_v045",
-        "sourceSenseId": "n4_l28_s045"
+        "sourceSenseId": "n4_l28_s045",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tri"
@@ -2492,6 +2602,7 @@
       "order": 46,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2512,18 +2623,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s046",
-        "meaningVi": "ngày",
+        "meaningVi": "Ngày",
         "meaningEn": "date"
       },
       "search": {
         "termNoAccent": "日にち",
         "readingNoAccent": "ひにち",
-        "meaningViNoAccent": "ngay",
+        "meaningViNoAccent": "Ngay",
         "hanVietNoAccent": "nhat"
       },
       "links": {
         "sourceVocabId": "n4_l28_v046",
-        "sourceSenseId": "n4_l28_s046"
+        "sourceSenseId": "n4_l28_s046",
+        "sourceConsensus": [
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "nhật"
@@ -2531,11 +2647,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v046-001",
-          "ja": "これは日にちです。",
-          "vi": "Đây là ngày.",
+          "ja": "旅行の日にちを決めました。",
+          "vi": "Tôi đã quyết định ngày đi du lịch.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored level-capped noun context for 日にち",
+          "source_detail": "JpStudy-authored travel-date context for 日にち",
           "license": "JpStudy authored"
         }
       ]
@@ -2547,6 +2663,7 @@
       "order": 47,
       "tags": [
         "time",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2567,18 +2684,22 @@
       },
       "sense": {
         "senseId": "n4_l28_s047",
-        "meaningVi": "thứ bảy",
+        "meaningVi": "Thứ bảy",
         "meaningEn": "Saturday"
       },
       "search": {
         "termNoAccent": "土",
         "readingNoAccent": "と",
-        "meaningViNoAccent": "thu bay",
+        "meaningViNoAccent": "Thu bay",
         "hanVietNoAccent": "tho"
       },
       "links": {
         "sourceVocabId": "n4_l28_v047",
-        "sourceSenseId": "n4_l28_s047"
+        "sourceSenseId": "n4_l28_s047",
+        "sourceConsensus": [
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thổ"
@@ -2586,11 +2707,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v047-001",
-          "ja": "土から授業が始まります。",
-          "vi": "Lớp học bắt đầu từ thứ bảy.",
+          "ja": "予定表では、土は休みです。",
+          "vi": "Trong lịch trình, thứ bảy là ngày nghỉ.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored time context for 土",
+          "source_detail": "JpStudy-authored schedule-abbreviation context for 土",
           "license": "JpStudy authored"
         }
       ]
@@ -2602,6 +2723,7 @@
       "order": 48,
       "tags": [
         "place",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2624,18 +2746,24 @@
       },
       "sense": {
         "senseId": "n4_l28_s048",
-        "meaningVi": "nhà thi đấu, phòng tập thể dục",
+        "meaningVi": "Nhà tập, nhà thi đấu thể thao",
         "meaningEn": "gymnasium"
       },
       "search": {
         "termNoAccent": "体育館",
         "readingNoAccent": "たいいくかん",
-        "meaningViNoAccent": "nha thi đau, phong tap the duc",
+        "meaningViNoAccent": "Nha tap, nha thi dau the thao",
         "hanVietNoAccent": "the duc quan"
       },
       "links": {
         "sourceVocabId": "n4_l28_v048",
-        "sourceSenseId": "n4_l28_s048"
+        "sourceSenseId": "n4_l28_s048",
+        "sourceConsensus": [
+          "kanji-vocab-n4",
+          "kanji-vocab-n5",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "thể dục quán"
@@ -2643,11 +2771,11 @@
       "example_sentences": [
         {
           "example_id": "ex-n4_l28_v048-001",
-          "ja": "体育館の前で友だちを待ちました。",
-          "vi": "Tôi đã đợi bạn trước nhà thi đấu.",
+          "ja": "体育館でバスケットボールをしました。",
+          "vi": "Tôi đã chơi bóng rổ ở nhà thi đấu.",
           "audio_url": "",
           "source": "jpstudy-authored-contextual",
-          "source_detail": "JpStudy-authored place context for 体育館",
+          "source_detail": "JpStudy-authored gymnasium-sports context for 体育館",
           "license": "JpStudy authored"
         }
       ]
@@ -2715,6 +2843,7 @@
       "order": 50,
       "tags": [
         "adj_i",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2736,18 +2865,23 @@
       },
       "sense": {
         "senseId": "n4_l28_s050",
-        "meaningVi": "vừa phải",
+        "meaningVi": "Vừa đủ, vừa đúng",
         "meaningEn": "just right"
       },
       "search": {
         "termNoAccent": "丁度いい",
         "readingNoAccent": "ちょうといい",
-        "meaningViNoAccent": "vua phai",
+        "meaningViNoAccent": "Vua du, vua dung",
         "hanVietNoAccent": "dinh do"
       },
       "links": {
         "sourceVocabId": "n4_l28_v050",
-        "sourceSenseId": "n4_l28_s050"
+        "sourceSenseId": "n4_l28_s050",
+        "sourceConsensus": [
+          "kanji-vocab-n3",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "đinh độ"
@@ -2826,6 +2960,7 @@
       "order": 52,
       "tags": [
         "noun",
+        "vi-source-verified",
         "vi-human-approved"
       ],
       "classification": {
@@ -2847,18 +2982,24 @@
       },
       "sense": {
         "senseId": "n4_l28_s052",
-        "meaningVi": "thói quen",
+        "meaningVi": "Tập quán, thói quen",
         "meaningEn": "habit"
       },
       "search": {
         "termNoAccent": "習慣",
         "readingNoAccent": "しゅうかん",
-        "meaningViNoAccent": "thoi quen",
+        "meaningViNoAccent": "Tap quan, thoi quen",
         "hanVietNoAccent": "tap quen"
       },
       "links": {
         "sourceVocabId": "n4_l28_v052",
-        "sourceSenseId": "n4_l28_s052"
+        "sourceSenseId": "n4_l28_s052",
+        "sourceConsensus": [
+          "kanji-vocab-n2",
+          "kanji-vocab-n4",
+          "minna-2"
+        ],
+        "sourceVerificationTicket": "QA-A-030"
       },
       "legacy": {
         "kanjiMeaning": "tập quen"
